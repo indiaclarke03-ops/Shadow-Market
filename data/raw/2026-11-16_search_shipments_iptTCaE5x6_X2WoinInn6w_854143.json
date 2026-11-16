@@ -1,0 +1,1435 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Jaya Electrical Energy",
+  "shipper_name": "PT. JAYA ELECTRICAL ENERGY",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:25:42+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 3,
+  "items": [
+   {
+    "supplier": {
+     "name": "PT. JAYA ELECTRICAL ENERGY",
+     "names": [
+      "PT. JAYA ELECTRICAL ENERGY",
+      "JAYA ELECTRICAL ENERGY"
+     ],
+     "entity_id": "iptTCaE5x6_X2WoinInn6w",
+     "countries": [
+      "IDN",
+      "KOR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "iptTCaE5x6_X2WoinInn6w",
+       "entity_url": "https://graph.sayari.com/resource/entity/iptTCaE5x6_X2WoinInn6w"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/iptTCaE5x6_X2WoinInn6w"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "D4B97qyZLQqaP9SsvkSiRA",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-585NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 115200.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 341907.84,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-06-30']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "country": "USA",
+        "value": "SAVANNAH"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA 91107"
+       },
+       "identifiers": [
+        {
+         "value": "17154409386129793LQVBO854143001858351",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "kdUr6o1eFSMySxGpDD_Y3Q",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-590NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 115200.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 323404.92,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-06-30']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "country": "USA",
+        "value": "SAVANNAH"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA 91107"
+       },
+       "identifiers": [
+        {
+         "value": "16814625982731959LQVBO85414300313881",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "UeVdOlLLORwtIzUTbFcPWg",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-585NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 115200.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 341907.84,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-06-30']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "country": "USA",
+        "value": "SAVANNAH"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA 91107"
+       },
+       "identifiers": [
+        {
+         "value": "16825309182838791LQVBO85414300362441",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "-xBVojZm-O8uJXWXQqY9Ug",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-585NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 115200.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 341907.84,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-06-30']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "country": "USA",
+        "value": "SAVANNAH"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA 91107"
+       },
+       "identifiers": [
+        {
+         "value": "17357491388160613LQVBO854143002781451",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "bDQ-JOqtmscKAo23bCpxSQ",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-590NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 230400.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 646809.84,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-06-30']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "country": "USA",
+        "value": "SAVANNAH"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA 91107"
+       },
+       "identifiers": [
+        {
+         "value": "17192191086507610LQVBO854143002030086",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "FwSU98aRxr5bAh3zXHRiQA",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-585NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 115200.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 341907.84,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-06-30']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "country": "USA",
+        "value": "SAVANNAH"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA 91107"
+       },
+       "identifiers": [
+        {
+         "value": "17198651386572213LQVBO854143002059451",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "NmWyBvUHDPCulPy-7p5Zog",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-585NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 230400.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 641327.76,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-06-23']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "country": "USA",
+        "value": "SAVANNAH"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA 91107"
+       },
+       "identifiers": [
+        {
+         "value": "17380403288389732LQVBO854143002885596",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "ZB9lLZ_LlyvaspxOGdgoBw",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-585NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 230400.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 683815.68,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-06-23']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "country": "USA",
+        "value": "SAVANNAH"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA 91107"
+       },
+       "identifiers": [
+        {
+         "value": "17481577989401479LQVBO854143003345481",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "6xz3w9YK-OR233PGjtry1w",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-585NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 230400.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 641327.76,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-06-22']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "country": "USA",
+        "value": "SAVANNAH"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA 91107"
+       },
+       "identifiers": [
+        {
+         "value": "17292566087511360LQVBO854143002486336",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "ml-FIUfzGXpRNWt5v2X9GA",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-580NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138240.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 403492.32,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-06-06']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "country": "USA",
+        "value": "CHICAGO"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA91107"
+       },
+       "identifiers": [
+        {
+         "value": "16781806382403763LQVBO85414300164701",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "JLuO9pA_Apu6IZmykt726A",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-575NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 69120.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 200006.93,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-06-06']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "country": "USA",
+        "value": "CHICAGO"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA91107"
+       },
+       "identifiers": [
+        {
+         "value": "17239597786981677LQVBO854143002245571",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "P6J9ZjN6_B3zc1yp3k8daw",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-580NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 230400.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 672487.2,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-06-04']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "country": "USA",
+        "value": "CHICAGO"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA91107"
+       },
+       "identifiers": [
+        {
+         "value": "17327639587862095LQVBO854143002645761",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "RFgOFVkDMU9nnqE-cs4Y4w",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-575NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 69120.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 200006.93,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-05-30']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "country": "USA",
+        "value": "CHICAGO"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA91107"
+       },
+       "identifiers": [
+        {
+         "value": "10662283521162363PXCR46172",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "XigDNdYkdK17f2h0JhYojw",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-580NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 23040.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 67248.72,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-05-30']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "country": "USA",
+        "value": "CHICAGO"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA91107"
+       },
+       "identifiers": [
+        {
+         "value": "10663965521179183PXCR46172",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "G_LK9qt3zSE9RBqZixvBhg",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-575NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 69120.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 200006.93,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-05-30']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "country": "USA",
+        "value": "CHICAGO"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA91107"
+       },
+       "identifiers": [
+        {
+         "value": "10662393521163463PXCR46172",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "xidImIXv3ESVplRXpfEiPg",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL BYD-580NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 23040.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 67248.72,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-05-30']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "country": "USA",
+        "value": "CHICAGO"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA91107"
+       },
+       "identifiers": [
+        {
+         "value": "10662377521163303PXCR46172",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "ONrss2FjATCAh12QXTCB1w",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, BYD-570NLBK-36 SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 92160.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 264356.93,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-05-23']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "country": "USA",
+        "value": "CHICAGO"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA91107"
+       },
+       "identifiers": [
+        {
+         "value": "10184034816379883PXCR46165",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "OMu8_9lYGoacuP1CrCc5rQ",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BYD-575NLBK-36-M-T-9ED-P-DA SOLAR CELL MADE IN DJIBOUTI",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 230400.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 666689.76,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-05-23']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "country": "USA",
+        "value": "CHICAGO"
+       },
+       "receiver_address": {
+        "city": "Pasadena",
+        "value": "3465 E. FOOTHILL BLVD, 2ND FLOOR, PASADENA, CA91107"
+       },
+       "identifiers": [
+        {
+         "value": "10182302816362563PXCR46165",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "BYD AMERICA LLC",
+     "names": [
+      "BYD AMERICA LLC",
+      "BYD AMERICA",
+      "BYD AMERICA CORPORATION"
+     ],
+     "entity_id": "uT2SkI0s9UksgdUAgcw-sw",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "uT2SkI0s9UksgdUAgcw-sw",
+       "entity_url": "https://graph.sayari.com/resource/entity/uT2SkI0s9UksgdUAgcw-sw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/uT2SkI0s9UksgdUAgcw-sw"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "iptTCaE5x6_X2WoinInn6w",
+      "entity_url": "https://graph.sayari.com/resource/entity/iptTCaE5x6_X2WoinInn6w"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "PT. JAYA ELECTRICAL ENERGY",
+     "names": [
+      "PT. JAYA ELECTRICAL ENERGY",
+      "JAYA ELECTRICAL ENERGY"
+     ],
+     "entity_id": "iptTCaE5x6_X2WoinInn6w",
+     "countries": [
+      "IDN",
+      "KOR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "iptTCaE5x6_X2WoinInn6w",
+       "entity_url": "https://graph.sayari.com/resource/entity/iptTCaE5x6_X2WoinInn6w"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/iptTCaE5x6_X2WoinInn6w"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "GfaEFhZ4C4WFdyt-8XkNmg",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL 80 WATT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 17.08,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 80.0,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-06-10']",
+       "departure_address": {
+        "city": "Sekupang",
+        "country": "IDN",
+        "value": "SEKUPANG"
+       },
+       "arrival_address": {
+        "country": "USA",
+        "value": "EL PASO"
+       },
+       "receiver_address": {
+        "city": "El Paso",
+        "state": "US-TX",
+        "value": "11601 PELLICANO DRIVE DR SUITE B7 EL PASO TX 79936"
+       },
+       "identifiers": [
+        {
+         "value": "17048187885067578LQVBO854143001375526",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "GAME CHANGE SOLAR",
+     "entity_id": "bfcyI1uZy0dvkoGHcnT36g",
+     "countries": [
+      "USA"
+     ],
+     "quality_flags": [],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "bfcyI1uZy0dvkoGHcnT36g",
+       "entity_url": "https://graph.sayari.com/resource/entity/bfcyI1uZy0dvkoGHcnT36g"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/bfcyI1uZy0dvkoGHcnT36g"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "iptTCaE5x6_X2WoinInn6w",
+      "entity_url": "https://graph.sayari.com/resource/entity/iptTCaE5x6_X2WoinInn6w"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "PT. JAYA ELECTRICAL ENERGY",
+     "names": [
+      "PT. JAYA ELECTRICAL ENERGY",
+      "JAYA ELECTRICAL ENERGY"
+     ],
+     "entity_id": "iptTCaE5x6_X2WoinInn6w",
+     "countries": [
+      "IDN",
+      "KOR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "iptTCaE5x6_X2WoinInn6w",
+       "entity_url": "https://graph.sayari.com/resource/entity/iptTCaE5x6_X2WoinInn6w"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/iptTCaE5x6_X2WoinInn6w"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "1OmC4XjTHtFcILGIlnzG_Q",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL - 630W",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 116600.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 419580.0,
+        "currency": "USD"
+       },
+       "departure_date": "['2026-06-06']",
+       "departure_address": {
+        "city": "Batu Ampar",
+        "country": "IDN",
+        "value": "BATU AMPAR"
+       },
+       "arrival_address": {
+        "state": "US-NY",
+        "country": "USA",
+        "value": "NEW YORK"
+       },
+       "receiver_address": {
+        "city": "Humboldt",
+        "state": "US-IA",
+        "country": "USA",
+        "value": "701 SUMNER AVE STE 210 HUMBOLDT,IA 50548"
+       },
+       "identifiers": [
+        {
+         "value": "17261350287199202LQVBO854143002344446",
+         "type": "idn_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "b1d2f50f163413806366618fed7cfac4",
+         "label": "Indonesia Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "MICRON SOLAR ENERGY INC",
+     "entity_id": "S6yial5sPdAGgXhScjhXaQ",
+     "countries": [
+      "USA"
+     ],
+     "quality_flags": [],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "S6yial5sPdAGgXhScjhXaQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/S6yial5sPdAGgXhScjhXaQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/S6yial5sPdAGgXhScjhXaQ"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "iptTCaE5x6_X2WoinInn6w",
+      "entity_url": "https://graph.sayari.com/resource/entity/iptTCaE5x6_X2WoinInn6w"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 607,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Jaya Electrical Energy",
+    "shipper_name": "PT. JAYA ELECTRICAL ENERGY",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6ImMxZDc5NWJlNzMxNDg4NWE3MmVjODZhNDE0MjM0ZDQ3YTFkYWEyNGU1ODRkN2YyYmQ4MzBmYWU0YTkyYTljZWYiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving US entities, include the state of incorporation if known — many companies share similar names across different states.",
+   "Delaware incorporation is normal for large companies and not inherently suspicious, but Nevada/Wyoming incorporation combined with operations elsewhere can indicate a desire for opacity.",
+   "FinCEN BOI data is not publicly accessible — Sayari's US ownership data comes from state filings, SEC filings, and other public sources."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

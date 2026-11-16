@@ -1,0 +1,1972 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Seoul Semiconductor Vina",
+  "shipper_name": "CôNG TY TNHH SEOUL SEMICONDUCTOR VINA",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:24:27+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 4,
+  "items": [
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH SEOUL SEMICONDUCTOR VINA",
+     "names": [
+      "CôNG TY TNHH SEOUL SEMICONDUCTOR VINA",
+      "SEOUL SEMICONDUCTOR VINA COMPANY LIMITED",
+      "SEOUL SEMICONDUCTOR VINA CO ., LTD.",
+      "SSCVN"
+     ],
+     "entity_id": "3GBgqAL1TNnov7pndrAQ9g",
+     "countries": [
+      "VNM",
+      "KOR",
+      "CHN",
+      "TWN",
+      "JPN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "exports_bis_high_priority_items_indirect",
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_from_usa_bis_entity",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_bis_high_priority_items_indirect",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_from_usa_bis_entity",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "3GBgqAL1TNnov7pndrAQ9g",
+       "entity_url": "https://graph.sayari.com/resource/entity/3GBgqAL1TNnov7pndrAQ9g"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/3GBgqAL1TNnov7pndrAQ9g"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "mIn_1ot8A8SbhYPRYPN2-g",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "LED:LIGHT EMITTING DIODE, INV NO: XXXXXXXXXXXXXXX, 51 BOXES = 4 PALLETS, HS CODE: 85414300, HBL NO.: USCV26102003 SCAC CODE: CH, KM",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 801.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-25']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Dong Van",
+        "state": "Ninh Binh Province",
+        "country": "Vietnam Vi",
+        "value": "DONG VAN I I.P., DONG VAN WARD, NINH BINH PROVINCE, VIETNAM VI"
+       },
+       "receiver_address": {
+        "city": "Commerce",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5424 E SLAUSON AVE COMMERCE, CA 90040 LOS ANGELES 26812"
+       },
+       "identifiers": [
+        {
+         "value": "CHKMUSCV26102003",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "4RNlj17APC4a57j9wog72g",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "LED:LIGHT EMITTING DIODE, INV NO: XXXXXXXXXXXXXXX, 45 BOXES = 3 PALLETS, HS CODE: 85414300, HBL NO.: USCV26082025 SCAC CODE: CH, KM",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 706.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-09-15']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Dong Van",
+        "state": "Ninh Binh Province",
+        "country": "VNM",
+        "value": "DONG VAN I I.P., DONG VAN WARD, NINH BINH PROVINCE, VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Commerce",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5424 E SLAUSON AVE COMMERCE, CA 90040 LOS ANGELES 26812"
+       },
+       "identifiers": [
+        {
+         "value": "CHKMUSCV26082025",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "7rpslb18amYsML-dJSWf0A",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "LED: LIGHT EMITTING DIODE, 18 BOXES = 2 PALLETS, HS CODE: 85414300, HBL NO.: USCV26082006 SCAC CODE: CH, KM",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 275.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-08-25']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Dong Van",
+        "state": "Ninh Binh Province",
+        "country": "VNM",
+        "value": "DONG VAN I I.P., DONG VAN WARD, NINH BINH PROVINCE, VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Commerce",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5424 E SLAUSON AVE COMMERCE, CA 90040 LOS ANGELES 26812"
+       },
+       "identifiers": [
+        {
+         "value": "CHKMUSCV26082006",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "DIXGbcyvmGoxpyoDM4ZClA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "LED:LIGHT EMITTING DIODE, 32 BOXES = 2 PALLETS, HS CODE: 85414300, HBL NO.: USCV26052008 SCAC CODE: CH, KM",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 459.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-05-26']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Dong Van",
+        "state": "Ninh Binh Province",
+        "country": "Vietnam.",
+        "value": "DONG VAN I INDUSTRIAL PARK, DONG VAN WARD, NINH BINH PROVINCE, VIETNAM."
+       },
+       "receiver_address": {
+        "city": "Commerce",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5424 E SLAUSON AVE COMMERCE, CA 90040 LOS ANGELES 26812"
+       },
+       "identifiers": [
+        {
+         "value": "CHKMUSCV26052008",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "ELITE LIGHTING USA",
+     "names": [
+      "ELITE LIGHTING USA",
+      "ELITE LIGHTING U.S.A",
+      "ELITE LIGTHTING USA"
+     ],
+     "entity_id": "8WZBcrKPh_UHQHnpKmYhsA",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "8WZBcrKPh_UHQHnpKmYhsA",
+       "entity_url": "https://graph.sayari.com/resource/entity/8WZBcrKPh_UHQHnpKmYhsA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/8WZBcrKPh_UHQHnpKmYhsA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "3GBgqAL1TNnov7pndrAQ9g",
+      "entity_url": "https://graph.sayari.com/resource/entity/3GBgqAL1TNnov7pndrAQ9g"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH SEOUL SEMICONDUCTOR VINA",
+     "names": [
+      "CôNG TY TNHH SEOUL SEMICONDUCTOR VINA",
+      "SEOUL SEMICONDUCTOR VINA COMPANY LIMITED",
+      "SEOUL SEMICONDUCTOR VINA CO ., LTD.",
+      "SSCVN"
+     ],
+     "entity_id": "3GBgqAL1TNnov7pndrAQ9g",
+     "countries": [
+      "VNM",
+      "KOR",
+      "CHN",
+      "TWN",
+      "JPN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "exports_bis_high_priority_items_indirect",
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_from_usa_bis_entity",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_bis_high_priority_items_indirect",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_from_usa_bis_entity",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "3GBgqAL1TNnov7pndrAQ9g",
+       "entity_url": "https://graph.sayari.com/resource/entity/3GBgqAL1TNnov7pndrAQ9g"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/3GBgqAL1TNnov7pndrAQ9g"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "faCdQL0ElaqW5tXrevM1ZA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "LED MODULE"
+       ],
+       "weight": {
+        "value": 1414.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-13']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Ninh Binh",
+        "country": "VNM",
+        "value": "DONG VAN I INDUSTRIAL PARK, DONG VA N WARD NINH BINH VN"
+       },
+       "receiver_address": {
+        "city": "Southaven",
+        "country": "USA",
+        "value": "4150 OLD AIRWAYS BLVD SOUTHAVEN MS38671 US"
+       },
+       "identifiers": [
+        {
+         "value": "DMALHANA84245",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "FUTURE ELECTRONICS DISTRIBUTION CEN",
+     "entity_id": "Ff0RkoU_2NccRy5jbAVG3Q",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Ff0RkoU_2NccRy5jbAVG3Q",
+       "entity_url": "https://graph.sayari.com/resource/entity/Ff0RkoU_2NccRy5jbAVG3Q"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Ff0RkoU_2NccRy5jbAVG3Q"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "3GBgqAL1TNnov7pndrAQ9g",
+      "entity_url": "https://graph.sayari.com/resource/entity/3GBgqAL1TNnov7pndrAQ9g"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH SEOUL SEMICONDUCTOR VINA",
+     "names": [
+      "CôNG TY TNHH SEOUL SEMICONDUCTOR VINA",
+      "SEOUL SEMICONDUCTOR VINA COMPANY LIMITED",
+      "SEOUL SEMICONDUCTOR VINA CO ., LTD.",
+      "SSCVN"
+     ],
+     "entity_id": "3GBgqAL1TNnov7pndrAQ9g",
+     "countries": [
+      "VNM",
+      "KOR",
+      "CHN",
+      "TWN",
+      "JPN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "exports_bis_high_priority_items_indirect",
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_from_usa_bis_entity",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_bis_high_priority_items_indirect",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_from_usa_bis_entity",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "3GBgqAL1TNnov7pndrAQ9g",
+       "entity_url": "https://graph.sayari.com/resource/entity/3GBgqAL1TNnov7pndrAQ9g"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/3GBgqAL1TNnov7pndrAQ9g"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "AlF_pmOlxFy-JeGV06NmrQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "LED:LIGHT EMITTING DIODE"
+       ],
+       "weight": {
+        "value": 547.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-07-21']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Ninh Binh",
+        "country": "VNM",
+        "value": "DONG VAN I INDUSTRIAL PARK, DONG VA N WARD NINH BINH VN"
+       },
+       "receiver_address": {
+        "city": "Southaven",
+        "country": "USA",
+        "value": "4150 OLD AIRWAYS BLVD SOUTHAVEN MS38671 US"
+       },
+       "identifiers": [
+        {
+         "value": "DMALHANA75689",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "n4vzt6FeRwtjr_nz9fSq_A",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "LED MODULE"
+       ],
+       "weight": {
+        "value": 674.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-10']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Ninh Binh",
+        "country": "VNM",
+        "value": "DONG VAN I INDUSTRIAL PARK, DONG VA N WARD DUY TIEN DISTRICT NINH BINH VN"
+       },
+       "receiver_address": {
+        "city": "Southaven",
+        "country": "USA",
+        "value": "4150 OLD AIRWAYS BLVD SOUTHAVEN MS38671 US"
+       },
+       "identifiers": [
+        {
+         "value": "DMALHANA61084",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "5JEYmCj58kI0GUu2sJzbSg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "LED MODULE"
+       ],
+       "weight": {
+        "value": 489.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-10']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Ninh Binh",
+        "country": "VNM",
+        "value": "DONG VAN I INDUSTRIAL PARK, DONG VA N WARD DUY TIEN DISTRICT NINH BINH VN"
+       },
+       "receiver_address": {
+        "city": "Southaven",
+        "country": "USA",
+        "value": "4150 OLD AIRWAYS BLVD SOUTHAVEN MS38671 US"
+       },
+       "identifiers": [
+        {
+         "value": "DMALHANA61082",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "e4aI0_Bf4S2RhWnsHyLZXQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "LED MODULE"
+       ],
+       "weight": {
+        "value": 1498.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-10']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Ninh Binh",
+        "country": "VNM",
+        "value": "DONG VAN I INDUSTRIAL PARK, DONG VA N WARD DUY TIEN DISTRICT NINH BINH VN"
+       },
+       "receiver_address": {
+        "city": "Southaven",
+        "country": "USA",
+        "value": "4150 OLD AIRWAYS BLVD SOUTHAVEN MS38671 US"
+       },
+       "identifiers": [
+        {
+         "value": "DMALHANA61071",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "FUTURE ELECTRONICS INC",
+     "names": [
+      "FUTURE ELECTRONICS INC",
+      "FUTURE ELECTRONICS CORP.",
+      "FUTURE ELECTRONICS",
+      "FUTURE ELECTRONICS (US) LLC",
+      "Future Electronics",
+      "FUTURE ELECTRONICS, INC.",
+      "FUTURE ELECTRONICS.,",
+      "FUTURE ELECTRONICS CORP",
+      "MASSACHUSETTS FUTURE ELECTRONICS CORP.",
+      "Future Electronics Co., Ltd.",
+      "FUTURE ELECTRONICS CORP. OF MASSACHUSETTS",
+      "퓨쳐일렉트로닉스 주식회사",
+      "퓨쳐일렉트로닉스",
+      "Future Electronics Corp",
+      "フューチャーエレクトロニクス株式会社",
+      "フューチャーエレクトロニクス",
+      "FUTURE ELECTRONIQUE INC.",
+      "FUTURE ELECTRONICS INC.",
+      "Future Electronics Worldwide",
+      "FUTURE ELECTRONICS CORP. WHICH WILL DO BUSINESS IN CALIFORNIA AS MASSACHUSETTS FUTURE ELECTRONICS CORP.",
+      "Future Electronique",
+      "FUTURE ELECTRONICS (USA) LLC"
+     ],
+     "entity_id": "PxsPWPRMSEu4X9COMy7Jhg",
+     "countries": [
+      "USA",
+      "JPN",
+      "CHN",
+      "SGP",
+      "KOR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "controlled_by_mass_business_registration",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "export_to_soe",
+       "exports_bis_high_priority_items_critical_components_direct",
+       "exports_bis_high_priority_items_critical_components_indirect",
+       "exports_bis_high_priority_items_direct",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "exports_to_bis_addresses_high_diversion_risk",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_direct",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_uflpa_adjacent",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "mass_address_usage",
+       "psa_export_to_soe",
+       "psa_exports_bis_high_priority_items_critical_components_direct",
+       "psa_exports_bis_high_priority_items_critical_components_indirect",
+       "psa_exports_bis_high_priority_items_direct",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_exports_to_bis_addresses_high_diversion_risk",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_direct",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_regulatory_action",
+       "sanctioned_adjacent",
+       "sanctioned_other_adjacent",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "PxsPWPRMSEu4X9COMy7Jhg",
+       "entity_url": "https://graph.sayari.com/resource/entity/PxsPWPRMSEu4X9COMy7Jhg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/PxsPWPRMSEu4X9COMy7Jhg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "3GBgqAL1TNnov7pndrAQ9g",
+      "entity_url": "https://graph.sayari.com/resource/entity/3GBgqAL1TNnov7pndrAQ9g"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH SEOUL SEMICONDUCTOR VINA",
+     "names": [
+      "CôNG TY TNHH SEOUL SEMICONDUCTOR VINA",
+      "SEOUL SEMICONDUCTOR VINA COMPANY LIMITED",
+      "SEOUL SEMICONDUCTOR VINA CO ., LTD.",
+      "SSCVN"
+     ],
+     "entity_id": "3GBgqAL1TNnov7pndrAQ9g",
+     "countries": [
+      "VNM",
+      "KOR",
+      "CHN",
+      "TWN",
+      "JPN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "exports_bis_high_priority_items_indirect",
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_from_usa_bis_entity",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_bis_high_priority_items_indirect",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_from_usa_bis_entity",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "3GBgqAL1TNnov7pndrAQ9g",
+       "entity_url": "https://graph.sayari.com/resource/entity/3GBgqAL1TNnov7pndrAQ9g"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/3GBgqAL1TNnov7pndrAQ9g"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "8rR-W73Ab5TFchAPTYDu8A",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "7105952-G28C038Y1X.SP#&LED Module SMJD-4234180C-4SC8 (belongs to light-emitting diode)(a bar of diodes (photovoltaic cells) with blocking layer assembled on circuit boards)#&VN , 7105952-G28C038Y1X.SP#&Mô-đun LED SMJD-4234180C-4SC8 (thuộc đi ốt phát sáng)(một thanh gồm các điốt (tế bào quang điện) có lớp chặn được lắp ráp trên các bảng mạch)#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 4414.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 12950.29,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-30']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG NAM DINH VU"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Hà Nam",
+        "country": "VNM",
+        "value": "Khu công nghiệp Đồng Văn I, Phường Bạch Thượng, Thị xã Duy Tiên, tỉnh Hà Nam, Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "Korea",
+        "country": "KOR",
+        "value": "97-11, SANDAN-RO, DANWON-GU, ANSAN-SI, GYEONGGI-DO, KOREA, KR"
+       },
+       "identifiers": [
+        {
+         "value": "{D9CF8007-4306-496C-BA76D9D8DCD3D88A}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "AMZ64za6ctiHTKfaN-h66w",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "7106211-F26E039Y1X.SP#&SMJD-4234180C-4SE9 Module (of light-emitting diodes)(a bar of diodes (photovoltaic cells) with blocking layer assembled on circuit boards)#&VN , 7106211-F26E039Y1X.SP#&Mô-đun SMJD-4234180C-4SE9 (thuộc đi ốt phát sáng)(một thanh gồm các điốt (tế bào quang điện) có lớp chặn được lắp ráp trên các bảng mạch)#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 4414.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 2516.87,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-30']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG NAM DINH VU"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Hà Nam",
+        "country": "VNM",
+        "value": "Khu công nghiệp Đồng Văn I, Phường Bạch Thượng, Thị xã Duy Tiên, tỉnh Hà Nam, Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "Korea",
+        "country": "KOR",
+        "value": "97-11, SANDAN-RO, DANWON-GU, ANSAN-SI, GYEONGGI-DO, KOREA, KR"
+       },
+       "identifiers": [
+        {
+         "value": "{9134C4AF-CAFA-48DB-99EAE5431B4FFFA0}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "lF6yShcfKaCBTbuNA7Nzww",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "7105848-D14E038Y1X.SP#&LED module SMJD-4217090C-4SE8 (belongs to light-emitting diode)(a bar of diodes (photovoltaic cells) with blocking layer assembled on circuit boards)#&VN , 7105848-D14E038Y1X.SP#&Mô-đun LED SMJD-4217090C-4SE8 (thuộc đi ốt phát sáng)(một thanh gồm các điốt (tế bào quang điện) có lớp chặn được lắp ráp trên các bảng mạch)#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 4414.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 32833.81,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-30']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG NAM DINH VU"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Hà Nam",
+        "country": "VNM",
+        "value": "Khu công nghiệp Đồng Văn I, Phường Bạch Thượng, Thị xã Duy Tiên, tỉnh Hà Nam, Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "Korea",
+        "country": "KOR",
+        "value": "97-11, SANDAN-RO, DANWON-GU, ANSAN-SI, GYEONGGI-DO, KOREA, KR"
+       },
+       "identifiers": [
+        {
+         "value": "{57C3A629-4906-45A2-B56ABC78F07DBA0A}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "txYgEe3OlF2JtJPAhcJkLA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "7103620-D00E048ALL.SP#&SMJD-4816064C-EL Module (of light-emitting diodes)(a bar of diodes (photovoltaic cells) with blocking layer assembled on circuit boards)#&VN , 7103620-D00E048ALL.SP#&Mô-đun SMJD-4816064C-EL (thuộc đi ốt phát sáng)(một thanh gồm các điốt (tế bào quang điện) có lớp chặn được lắp ráp trên các bảng mạch)#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 2779.5,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 22367.16,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-30']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG TAN VU - HP"
+       },
+       "arrival_address": {
+        "city": "Angels",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELS CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Hà Nam",
+        "country": "VNM",
+        "value": "Khu công nghiệp Đồng Văn I, Phường Bạch Thượng, Thị xã Duy Tiên, tỉnh Hà Nam, Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "Korea",
+        "country": "KOR",
+        "value": "97-11, SANDAN-RO, DANWON-GU, ANSAN-SI, GYEONGGI-DO, KOREA, KR"
+       },
+       "identifiers": [
+        {
+         "value": "{6D8BDC8E-E236-4CF9-9A53A6A145F77863}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "jZLm-0i3jmfc8NeAuG3WlA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "7104650-C35F039ALL.SP#&SMJD-4816064C-ELX9 Module (of light-emitting diodes)(a bar of diodes (photovoltaic cells) with blocking layer assembled on circuit boards)#&VN , 7104650-C35F039ALL.SP#&Mô-đun SMJD-4816064C-ELX9 (thuộc đi ốt phát sáng)(một thanh gồm các điốt (tế bào quang điện) có lớp chặn được lắp ráp trên các bảng mạch)#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 2779.5,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 3627.16,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-30']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG TAN VU - HP"
+       },
+       "arrival_address": {
+        "city": "Angels",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELS CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Hà Nam",
+        "country": "VNM",
+        "value": "Khu công nghiệp Đồng Văn I, Phường Bạch Thượng, Thị xã Duy Tiên, tỉnh Hà Nam, Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "Korea",
+        "country": "KOR",
+        "value": "97-11, SANDAN-RO, DANWON-GU, ANSAN-SI, GYEONGGI-DO, KOREA, KR"
+       },
+       "identifiers": [
+        {
+         "value": "{1FD9670E-C387-47BF-947545E9AAED111F}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "gJSHo59mfwvbS2nppSFwSA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "7105951-F92G038Y1X.SP#&LED module SMJD-4234180C-4SG8 (belongs to light-emitting diode)(a bar of diodes (photovoltaic cells) with blocking layer assembled on circuit boards)#&VN , 7105951-F92G038Y1X.SP#&Mô-đun LED SMJD-4234180C-4SG8 (thuộc đi ốt phát sáng)(một thanh gồm các điốt (tế bào quang điện) có lớp chặn được lắp ráp trên các bảng mạch)#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 4414.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 2360.5,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-30']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG NAM DINH VU"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Hà Nam",
+        "country": "VNM",
+        "value": "Khu công nghiệp Đồng Văn I, Phường Bạch Thượng, Thị xã Duy Tiên, tỉnh Hà Nam, Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "Korea",
+        "country": "KOR",
+        "value": "97-11, SANDAN-RO, DANWON-GU, ANSAN-SI, GYEONGGI-DO, KOREA, KR"
+       },
+       "identifiers": [
+        {
+         "value": "{7463402E-C897-4C2D-BBE090520600B3EA}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "b0Gxe8jJ_JoR1CcchIk6Rg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "7103620-C80F048ALL.SP#&SMJD-4816064C-EL Module (of light-emitting diodes)(a bar of diodes (photovoltaic cells) with blocking layer assembled on circuit boards)#&VN , 7103620-C80F048ALL.SP#&Mô-đun SMJD-4816064C-EL (thuộc đi ốt phát sáng)(một thanh gồm các điốt (tế bào quang điện) có lớp chặn được lắp ráp trên các bảng mạch)#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 2779.5,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 23387.9,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-30']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG TAN VU - HP"
+       },
+       "arrival_address": {
+        "city": "Angels",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELS CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Hà Nam",
+        "country": "VNM",
+        "value": "Khu công nghiệp Đồng Văn I, Phường Bạch Thượng, Thị xã Duy Tiên, tỉnh Hà Nam, Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "Korea",
+        "country": "KOR",
+        "value": "97-11, SANDAN-RO, DANWON-GU, ANSAN-SI, GYEONGGI-DO, KOREA, KR"
+       },
+       "identifiers": [
+        {
+         "value": "{D48B7A0B-F2F4-4BC6-B1BF8FF4DAFC2E3D}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "6yr2m7SY_0hMZF2q1BuAlg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "7103619-B30F048ALL.SP#&SMJD-4508045C-EL Module (of light-emitting diodes)(a bar of diodes (photovoltaic cells) with blocking layer assembled on circuit boards)#&VN , 7103619-B30F048ALL.SP#&Mô-đun SMJD-4508045C-EL (thuộc đi ốt phát sáng)(một thanh gồm các điốt (tế bào quang điện) có lớp chặn được lắp ráp trên các bảng mạch)#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 2779.5,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 16224.4,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-30']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG TAN VU - HP"
+       },
+       "arrival_address": {
+        "city": "Angels",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELS CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Hà Nam",
+        "country": "VNM",
+        "value": "Khu công nghiệp Đồng Văn I, Phường Bạch Thượng, Thị xã Duy Tiên, tỉnh Hà Nam, Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "Korea",
+        "country": "KOR",
+        "value": "97-11, SANDAN-RO, DANWON-GU, ANSAN-SI, GYEONGGI-DO, KOREA, KR"
+       },
+       "identifiers": [
+        {
+         "value": "{6E266C33-0B1A-4EE4-84035306D134AE64}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "-pvIBCVlgYF2k8sCRBElDw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "7105847-D05F038Y1X.SP#&LED module SMJD-4217090C-4SF8 (belongs to light-emitting diode)(a bar of diodes (photovoltaic cells) with blocking layer assembled on circuit boards)#&VN , 7105847-D05F038Y1X.SP#&Mô-đun LED SMJD-4217090C-4SF8 (thuộc đi ốt phát sáng)(một thanh gồm các điốt (tế bào quang điện) có lớp chặn được lắp ráp trên các bảng mạch)#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 4414.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 2691.3,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-30']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG NAM DINH VU"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Hà Nam",
+        "country": "VNM",
+        "value": "Khu công nghiệp Đồng Văn I, Phường Bạch Thượng, Thị xã Duy Tiên, tỉnh Hà Nam, Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "Korea",
+        "country": "KOR",
+        "value": "97-11, SANDAN-RO, DANWON-GU, ANSAN-SI, GYEONGGI-DO, KOREA, KR"
+       },
+       "identifiers": [
+        {
+         "value": "{7BCE3E12-F792-4972-A3A35457C90FB9B3}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "vvhEyfbay2ckTqVb-njC3Q",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "7105832-G18FC38Y1X.SP#&LED module SMJD-4234180C-SFC8 (belongs to light-emitting diode)(a bar of diodes (photovoltaic cells) with blocking layer assembled on circuit boards)#&VN , 7105832-G18FC38Y1X.SP#&Mô-đun LED SMJD-4234180C-SFC8 (thuộc đi ốt phát sáng)(một thanh gồm các điốt (tế bào quang điện) có lớp chặn được lắp ráp trên các bảng mạch)#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 4414.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 10993.77,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-30']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG NAM DINH VU"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Hà Nam",
+        "country": "VNM",
+        "value": "Khu công nghiệp Đồng Văn I, Phường Bạch Thượng, Thị xã Duy Tiên, tỉnh Hà Nam, Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "Korea",
+        "country": "KOR",
+        "value": "97-11, SANDAN-RO, DANWON-GU, ANSAN-SI, GYEONGGI-DO, KOREA, KR"
+       },
+       "identifiers": [
+        {
+         "value": "{96346C13-4E89-4D49-BCF94648F710A1CB}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "LFR_sK79ksw8brt8V0ST-A",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "7104595-F90F038ALL.SP#&LED Module SMJD-4832128C-EL (belongs to light-emitting diode)(a bar of diodes (photovoltaic cells) with blocking layer assembled on circuit boards)#&VN , 7104595-F90F038ALL.SP#&Mô-đun LED SMJD-4832128C-EL (thuộc đi ốt phát sáng)(một thanh gồm các điốt (tế bào quang điện) có lớp chặn được lắp ráp trên các bảng mạch)#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 2779.5,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 3815.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-30']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG TAN VU - HP"
+       },
+       "arrival_address": {
+        "city": "Angels",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELS CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Hà Nam",
+        "country": "VNM",
+        "value": "Khu công nghiệp Đồng Văn I, Phường Bạch Thượng, Thị xã Duy Tiên, tỉnh Hà Nam, Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "Korea",
+        "country": "KOR",
+        "value": "97-11, SANDAN-RO, DANWON-GU, ANSAN-SI, GYEONGGI-DO, KOREA, KR"
+       },
+       "identifiers": [
+        {
+         "value": "{B84BB845-50E8-4669-A61F927B72343789}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "SEOUL SEMICONDUCTOR CO., LTD",
+     "names": [
+      "SEOUL SEMICONDUCTOR CO., LTD",
+      "SEOUL SEMICONDUCTOR",
+      "Seoul Semiconductor Co., Ltd.",
+      "汉城半导体(株) 韩国",
+      "Seoul Semiconductor Co., Ltd. South Korea",
+      "서울반도체(주)",
+      "서울반도체",
+      "Seoul Semiconductor",
+      "汉城半导体（株）",
+      "Han Cheng Ban Dao Ti （ Zhu ）",
+      "SEOUL SEMICONDUCTOR CO LTD",
+      "Han Cheng Ban Dao Ti ( Zhu ) Han Guo",
+      "Seoul Semiconductor Co., Ltd. Korea",
+      "首尔半导体株式会社",
+      "Seoul Semiconductor Corporation",
+      "SEOUL SEMICONDUCTOR CO.,LTD",
+      "Shou Er Ban Dao Ti Zhu Shi Hui She"
+     ],
+     "entity_id": "0TZmbfEEjflNfNFmGXb5Zg",
+     "countries": [
+      "KOR",
+      "JPN",
+      "CHN",
+      "VNM",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "esg_score_medium",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "exports_bis_high_priority_items_critical_components_direct",
+       "exports_bis_high_priority_items_indirect",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_bis_high_priority_items_critical_components_direct",
+       "psa_exports_bis_high_priority_items_indirect",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "sanctioned_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "0TZmbfEEjflNfNFmGXb5Zg",
+       "entity_url": "https://graph.sayari.com/resource/entity/0TZmbfEEjflNfNFmGXb5Zg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/0TZmbfEEjflNfNFmGXb5Zg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "3GBgqAL1TNnov7pndrAQ9g",
+      "entity_url": "https://graph.sayari.com/resource/entity/3GBgqAL1TNnov7pndrAQ9g"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 2583,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Seoul Semiconductor Vina",
+    "shipper_name": "CôNG TY TNHH SEOUL SEMICONDUCTOR VINA",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6IjM1NjJiNDcwODBjNDAzYjEyMThlMTViYTNhMDg2MjQ3NmQyMjU1YmE4YmI1ZmFmMzYwNGRjMDJjNjMyM2VkYzMiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "Singapore ACRA data is generally high quality — Sayari typically has good coverage of Singapore corporate data. Use the Sayari API to retrieve company profiles, directors, and shareholder information.",
+   "Every Singapore company must have at least one resident director — for foreign-owned companies, this director is often a nominee and not the true decision-maker.",
+   "The RORC is not public, so UBO data relies on filed shareholder information and cross-references from other jurisdictions."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

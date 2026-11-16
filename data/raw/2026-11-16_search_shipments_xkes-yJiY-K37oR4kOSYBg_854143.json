@@ -1,0 +1,1508 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Thornova Solar Indonesia",
+  "shipper_name": "PT. THORNOVA SOLAR INDONESIA",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:25:42+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 4,
+  "items": [
+   {
+    "supplier": {
+     "name": "PT. THORNOVA SOLAR INDONESIA",
+     "names": [
+      "PT. THORNOVA SOLAR INDONESIA",
+      "PT BIG TIME ENERGY",
+      "BIG TIME ENERGY",
+      "THORNOVA SOLAR INDONESIA"
+     ],
+     "entity_id": "xkes-yJiY-K37oR4kOSYBg",
+     "countries": [
+      "IDN",
+      "VNM"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "xkes-yJiY-K37oR4kOSYBg",
+       "entity_url": "https://graph.sayari.com/resource/entity/xkes-yJiY-K37oR4kOSYBg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/xkes-yJiY-K37oR4kOSYBg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "2kLxiTAZ3dtJjYyZT05Wog",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 92824.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-11-03']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Tanjung Uncang",
+        "state": "ID-KR",
+        "country": "IDN",
+        "value": "JALAN BRIGJEN KATAMSO, DESA/ KELURAHAN TANJUNG UNCANG KEPULAUAN RIAU ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE R SHERIDAN WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "DWSDJKT49402771",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "DVf46AQLlBx0lnYYqfIj2Q",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 69618.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-11-03']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Tanjung Uncang",
+        "state": "ID-KR",
+        "country": "IDN",
+        "value": "JALAN BRIGJEN KATAMSO, DESA/ KELURAHAN TANJUNG UNCANG KEPULAUAN RIAU ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE R SHERIDAN WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "DWSDJKT59403121",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "yiObmq_r9rmzjqooiCPYQQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 69618.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-11-03']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Tanjung Uncang",
+        "state": "ID-KR",
+        "country": "IDN",
+        "value": "JALAN BRIGJEN KATAMSO, DESA/ KELURAHAN TANJUNG UNCANG KEPULAUAN RIAU ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE R SHERIDAN WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "DWSDJKT59403231",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "HORIZON SOLAR INC",
+     "entity_id": "gW6jWGPgUCqWC3rUx5I1zA",
+     "countries": [
+      "USA",
+      "HKG"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "gW6jWGPgUCqWC3rUx5I1zA",
+       "entity_url": "https://graph.sayari.com/resource/entity/gW6jWGPgUCqWC3rUx5I1zA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/gW6jWGPgUCqWC3rUx5I1zA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "xkes-yJiY-K37oR4kOSYBg",
+      "entity_url": "https://graph.sayari.com/resource/entity/xkes-yJiY-K37oR4kOSYBg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "SILVER V LIMITED",
+     "entity_id": "C_hY_HULPVz0GuUYhW8bOg",
+     "countries": [
+      "IDN",
+      "CHN"
+     ],
+     "quality_flags": [],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "C_hY_HULPVz0GuUYhW8bOg",
+       "entity_url": "https://graph.sayari.com/resource/entity/C_hY_HULPVz0GuUYhW8bOg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/C_hY_HULPVz0GuUYhW8bOg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "ny4GZspelBCT_IZ-BvVZLw",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310C-46",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 23206.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-26']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY 8280 1 WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60907694",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Wz5ad2eVlGHzKniYaO6XsQ",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310C-29",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 116030.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-23']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "JALAN BRIGJEN KATAMSO BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60824260",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "pzdTI0YZXjxz8F7UPYD4Iw",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310C-32",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 116030.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY 8280 1 WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60820061",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "xUCxpXNky4XzFh5S4FMsPQ",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310E-8",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 116030.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "JALAN BRIGJEN KATAMSO BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY 8280 1 WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60821639",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "1m6LrWoAAD7q1JHwzlEB-Q",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310E-9",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 23206.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "JALAN BRIGJEN KATAMSO BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60824245",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "mbU8wsLCtqjaXcNYgDNILg",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310C-22",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 116030.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY 8280 1 WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60821649",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "45uHXGKrIdRjGK4AerKYpQ",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310C-10",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 116030.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60817770",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "ZxZ8uoV6wAb4kRypg6dd8g",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310C-19",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 46412.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY 8280 1 WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60821658",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "miyz_28AiyiOfMqF_yFbQw",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310F-13",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 116030.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60819950",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "GIMfFCIUDckFSB6Sxhch6Q",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310P-4",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 116030.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "JALAN BRIGJEN KATAMSO, BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY 8280 1 WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60913749",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "HnyGO4JsBk8-8LUtZyxUgQ",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310F-9",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 116030.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY 8280 1 WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60819945",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "GlqcwCssuMtwwSLCnOfZ3Q",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310E-7",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 23206.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "JALAN BRIGJEN KATAMSO BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY 8280 1 WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60817829",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "YtQIbTmrwa-XduNJBCGbTg",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310C-17",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 116030.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "JALAN BRIGJEN KATAMSO BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60817827",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "HORIZON SOLAR INC",
+     "entity_id": "gW6jWGPgUCqWC3rUx5I1zA",
+     "countries": [
+      "USA",
+      "HKG"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "gW6jWGPgUCqWC3rUx5I1zA",
+       "entity_url": "https://graph.sayari.com/resource/entity/gW6jWGPgUCqWC3rUx5I1zA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/gW6jWGPgUCqWC3rUx5I1zA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "C_hY_HULPVz0GuUYhW8bOg",
+      "entity_url": "https://graph.sayari.com/resource/entity/C_hY_HULPVz0GuUYhW8bOg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "SILV LIMITED",
+     "entity_id": "qoMuEAyILbQPC5_ztkBREw",
+     "countries": [
+      "IDN"
+     ],
+     "quality_flags": [],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "qoMuEAyILbQPC5_ztkBREw",
+       "entity_url": "https://graph.sayari.com/resource/entity/qoMuEAyILbQPC5_ztkBREw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/qoMuEAyILbQPC5_ztkBREw"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "fva_Dz1Jng_WIVtXCcxspw",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310C-13",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 116030.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "JALAN BRIGJEN KATAMSO, DE SA/KELURAHAN TANJUNG UNCANG, KEC. BATU AJI,KOTA BATAM BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY 8280 1 WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60817794",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "VlSyQOYkNN-kEKvb9KNkYg",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310E-6",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 23206.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "JALAN BRIGJEN KATAMSO, DE SA/KELURAHAN TANJUNG UNCANG, KEC. BATU AJI,KOTA BATAM BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY 8280 1 WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60817804",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "HORIZON SOLAR INC",
+     "entity_id": "gW6jWGPgUCqWC3rUx5I1zA",
+     "countries": [
+      "USA",
+      "HKG"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "gW6jWGPgUCqWC3rUx5I1zA",
+       "entity_url": "https://graph.sayari.com/resource/entity/gW6jWGPgUCqWC3rUx5I1zA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/gW6jWGPgUCqWC3rUx5I1zA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "qoMuEAyILbQPC5_ztkBREw",
+      "entity_url": "https://graph.sayari.com/resource/entity/qoMuEAyILbQPC5_ztkBREw"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "SILLIMITED",
+     "entity_id": "LlredWsHCqw3opPYPvPOAw",
+     "countries": [
+      "IDN"
+     ],
+     "quality_flags": [],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "LlredWsHCqw3opPYPvPOAw",
+       "entity_url": "https://graph.sayari.com/resource/entity/LlredWsHCqw3opPYPvPOAw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/LlredWsHCqw3opPYPvPOAw"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "zS3dLc984cYP1egylGTRJg",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310F-8",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 116030.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "JALAN BRIGJEN KATAMSO, DESA /KELURAHAN TANJUNUNCANG, KEC. BATU AJI,KOTA BA TAM BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY 82801"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60819937",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "fYd7rM-QvtQphgTr0dM6Iw",
+       "departure_country": [
+        "IDN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE 854143000 INVO, ICE NUMBE R YN260310C-12",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 116030.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "IDN",
+        "value": "Tanjunguban"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "JALAN BRIGJEN KATAMSO, DESA /KELURAHAN TANJUNG UNCANG, KEC. BATU AJI,KOTA BATAM BATAM ID"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "30 N GOULD ST STE RSHERIDAN,WY 8280 1 WYOMING WY82801 US"
+       },
+       "identifiers": [
+        {
+         "value": "WWLLWLC60817791",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "HORIZON SOLAR INC",
+     "entity_id": "gW6jWGPgUCqWC3rUx5I1zA",
+     "countries": [
+      "USA",
+      "HKG"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "gW6jWGPgUCqWC3rUx5I1zA",
+       "entity_url": "https://graph.sayari.com/resource/entity/gW6jWGPgUCqWC3rUx5I1zA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/gW6jWGPgUCqWC3rUx5I1zA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "LlredWsHCqw3opPYPvPOAw",
+      "entity_url": "https://graph.sayari.com/resource/entity/LlredWsHCqw3opPYPvPOAw"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 1080,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Thornova Solar Indonesia",
+    "shipper_name": "PT. THORNOVA SOLAR INDONESIA",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6Ijk4Yjc2YWE2MGI1M2M0Y2E1ZmZmZDBiZjc3MTQ1Mzg1NGQzMGMxMTA5MGMwNDFiYjc5MmE0ODdiNzMzMTI0MDMiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving Chinese entities, try both the Chinese name and known English/trade names in the Sayari API — there is no standardized Romanization.",
+   "The administrative division prefix in a Chinese company name indicates registration level, not headquarters location.",
+   "National-level companies (no geographic prefix or parenthetical prefix) are typically large SOEs or nationally significant enterprises."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

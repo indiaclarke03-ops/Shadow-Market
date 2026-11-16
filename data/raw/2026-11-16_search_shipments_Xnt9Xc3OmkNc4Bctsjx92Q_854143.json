@@ -1,0 +1,1572 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "CRC Solar Cell",
+  "shipper_name": "CôNG TY Cổ PHầN CRC SOLAR CELL",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:25:26+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 2,
+  "items": [
+   {
+    "supplier": {
+     "name": "CôNG TY Cổ PHầN CRC SOLAR CELL",
+     "names": [
+      "CôNG TY Cổ PHầN CRC SOLAR CELL",
+      "CRC SOLAR CELL JOINT STOCK COMPANY",
+      "CRC SOLAR CELL CORPORATION"
+     ],
+     "entity_id": "Xnt9Xc3OmkNc4Bctsjx92Q",
+     "countries": [
+      "VNM",
+      "CHN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Xnt9Xc3OmkNc4Bctsjx92Q",
+       "entity_url": "https://graph.sayari.com/resource/entity/Xnt9Xc3OmkNc4Bctsjx92Q"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Xnt9Xc3OmkNc4Bctsjx92Q"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "xJ_IGOb-D7wDiqGN8_wkGg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MONO MODULES"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-07-15']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Hoa Son Luong Son Hoa Binh",
+        "country": "VNM",
+        "value": "LUONG SON INDUSTRIAL ZONE, HOA SON LUONG SON HOA BINH VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 420 5000 HOPYARD ROAD PLEASANTON CA 94588 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6387397750",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "UY8KIU1IiIqnvQ0PF-qsSg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MONO MODULES"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-07-15']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Hoa Son Luong Son Hoa Binh",
+        "country": "VNM",
+        "value": "LUONG SON INDUSTRIAL ZONE, HOA SON LUONG SON HOA BINH VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 420 5000 HOPYARD ROAD PLEASANTON CA 94588 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6387397660",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "pC-NATK2MB8hShV7ZeTRDg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MONO MODULES 2279 11, 34 33MM ET-M772BH550TW MODULE WATTAGE: 550W S, OLAR CELLSFROM VIETNAM HS CODE: 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-06-26']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Son District",
+        "country": "VNM",
+        "value": "LOT 9, NO.1 ROAD, LUONG SON INDUSTR IAL ZONE,HOA SON COMMUNE,LUONG SON DISTRICT,VN"
+       },
+       "receiver_address": {
+        "city": "Ton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5000 HOPYARD ROAD SUITE 420,PLEASAN TON,CALIFORNIA 94588,US"
+       },
+       "identifiers": [
+        {
+         "value": "TWWM3WSGN0524517",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "vgOYKDXpoEroUnpgxv7K-g",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MONO MODULES 2279 11, 34 33MM ET-M772BH550TW MODULE WATTAGE: 550W S, OLAR CELLSFROM VIETNAM HS CODE: 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-06-26']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Son District",
+        "country": "VNM",
+        "value": "LOT 9, NO.1 ROAD, LUONG SON INDUSTR IAL ZONE,HOA SON COMMUNE,LUONG SON DISTRICT,VN"
+       },
+       "receiver_address": {
+        "city": "Ton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5000 HOPYARD ROAD SUITE 420,PLEASAN TON,CALIFORNIA 94588,US"
+       },
+       "identifiers": [
+        {
+         "value": "TWWM3WSGN0524519",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "LqsmjPM5HwTSN_mU2XIUWw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MONO MODULES 2279 11, 34 33MM ET-M772BH550TW MODULE WATTAGE: 550W S, OLAR CELLSFROM VIETNAM HS CODE: 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-06-26']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Son District",
+        "country": "VNM",
+        "value": "LOT 9, NO.1 ROAD, LUONG SON INDUSTR IAL ZONE,HOA SON COMMUNE,LUONG SON DISTRICT,VN"
+       },
+       "receiver_address": {
+        "city": "Ton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5000 HOPYARD ROAD SUITE 420,PLEASAN TON,CALIFORNIA 94588,US"
+       },
+       "identifiers": [
+        {
+         "value": "TWWM3WSGN0524516",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "ET SOLAR INC.",
+     "entity_id": "o9Mzgczg0GGSJI-O8NrkUQ",
+     "countries": [
+      "USA",
+      "SGP",
+      "AUT"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "o9Mzgczg0GGSJI-O8NrkUQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/o9Mzgczg0GGSJI-O8NrkUQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/o9Mzgczg0GGSJI-O8NrkUQ"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "Xnt9Xc3OmkNc4Bctsjx92Q",
+      "entity_url": "https://graph.sayari.com/resource/entity/Xnt9Xc3OmkNc4Bctsjx92Q"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY Cổ PHầN CRC SOLAR CELL",
+     "names": [
+      "CôNG TY Cổ PHầN CRC SOLAR CELL",
+      "CRC SOLAR CELL JOINT STOCK COMPANY",
+      "CRC SOLAR CELL CORPORATION"
+     ],
+     "entity_id": "Xnt9Xc3OmkNc4Bctsjx92Q",
+     "countries": [
+      "VNM",
+      "CHN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Xnt9Xc3OmkNc4Bctsjx92Q",
+       "entity_url": "https://graph.sayari.com/resource/entity/Xnt9Xc3OmkNc4Bctsjx92Q"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Xnt9Xc3OmkNc4Bctsjx92Q"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "7vvrrRK57yM8oJas0RPgCg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#&Monocrystalline solar panel, single glass, model: ET-M772BH540TW, capacity: 540W. Dimensions: 2279*1134*33mm (Solar Cells from Vietnam). 100% new product#&VN , CRCSG-01#&Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH540TW, công suất: 540W. kích thước : 2279*1134*33mm (Solar Cells from Vietnam). Hàng mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 181764.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{8C4E3464-FF3C-4E08-BA43A2069D4C45A1}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "rvjJIUFi77-06rQKVf7Wxw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#&Monocrystalline solar panel, single glass, model: ET-M772BH540TW, capacity: 540W. Dimensions: 2279*1134*33mm (Solar Cells from Vietnam). 100% new product#&VN , CRCSG-01#&Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH540TW, công suất: 540W. kích thước : 2279*1134*33mm (Solar Cells from Vietnam). Hàng mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 118146.6,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{3A496D5D-8C9A-4EF8-9D171710F978BB30}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "2_LhVtnc4HrElalZFHCGaQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#&Monocrystalline solar panel, single glass, model: ET-M772BH540TW, capacity: 540W. Dimensions: 2279*1134*33mm (Solar Cells from Vietnam). 100% new product#&VN , CRCSG-01#&Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH540TW, công suất: 540W. kích thước : 2279*1134*33mm (Solar Cells from Vietnam). Hàng mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 181764.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-26']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{7ED64863-30BB-4DED-A39340777AF2A4A5}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "7YmBF4hfL58N2xM_yHQelA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#&Monocrystalline solar panel, single glass, model: ET-M772BH540TW, capacity: 540W. Dimensions: 2279*1134*33mm (Solar Cells from Vietnam). 100% new product#&VN , CRCSG-01#&Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH540TW, công suất: 540W. kích thước : 2279*1134*33mm (Solar Cells from Vietnam). Hàng mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 181764.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-26']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{B9E41772-46AA-4496-84E5910FC35A8F12}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "5jS_94FacTSIDeviBhop4w",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#&Monocrystalline solar panel, single glass, model: ET-M772BH540TW, capacity: 540W. Dimensions: 2279*1134*33mm (Solar Cells from Vietnam). 100% new product#&VN , CRCSG-01#&Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH540TW, công suất: 540W. kích thước : 2279*1134*33mm (Solar Cells from Vietnam). Hàng mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 181764.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-26']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{CB6A6E60-6B73-4D5F-A4B65080DB2158A0}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "X2fIS2YWfcc_ZNy7FSaoRw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#&Monocrystalline solar panel, single glass, model: ET-M772BH550TW, capacity: 550W. Dimensions: 2279*1134*33mm (Solar Cells from Cambodia). 100% new item#&KXD , CRCSG-01#&Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH550TW, công suất: 550W. kích thước : 2279*1134*33mm (Solar Cells from Cambodia). Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 18990.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 61710.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-20']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG CAI LAN (QNINH)"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{59B80888-1EF7-4F51-89B63AD25A288E68}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "N1Q4Qxvn32ugezSb-NGqrg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#&Monocrystalline solar panel, single glass, model: ET-M772BH550TW, capacity: 550W. Dimensions: 2279*1134*33mm (Solar Cells from Cambodia). 100% new item#&KXD , CRCSG-01#&Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH550TW, công suất: 550W. kích thước : 2279*1134*33mm (Solar Cells from Cambodia). Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 185130.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-20']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG CAI LAN (QNINH)"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{565E8834-B76B-449F-A42EE8AAFB430880}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "tWvwDjoyl2X9cwlr-nf4NA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#&Monocrystalline solar panel, single glass, model: ET-M772BH550TW, capacity: 550W. Dimensions: 2279*1134*33mm (Solar Cells from Cambodia). 100% new item#&KXD , CRCSG-01#&Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH550TW, công suất: 550W. kích thước : 2279*1134*33mm (Solar Cells from Cambodia). Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 185130.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-18']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG CAI LAN (QNINH)"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{2E737F30-A488-4C83-9BF2389696F3DDAA}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "e5849d84WxVKfvB_1wWcGA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#&Monocrystalline solar panel, single glass, model: ET-M772BH550TW, capacity: 550W. Dimensions: 2279*1134*33mm (Solar Cells from Cambodia). 100% new item#&KXD , CRCSG-01#&Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH550TW, công suất: 550W. kích thước : 2279*1134*33mm (Solar Cells from Cambodia). Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 185130.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-18']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG CAI LAN (QNINH)"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{E7F967B3-06C3-4F26-90F51FE69B769BBE}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "5F6WsTnT9SmDzcwvt3x08g",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#&Monocrystalline solar panel, single glass, model: ET-M772BH550TW, capacity: 550W. Dimensions: 2279*1134*33mm (Solar Cells from Cambodia). 100% new item#&KXD , CRCSG-01#&Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH550TW, công suất: 550W. kích thước : 2279*1134*33mm (Solar Cells from Cambodia). Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 185130.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-18']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG CAI LAN (QNINH)"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{55844243-2AFE-4AFC-ACED82C5E1DB80D6}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "t6MyJlCVfvWAYBG0PDQM8A",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#& Monocrystalline solar panel, single glass, model: ET-M772BH550TW, capacity: 550W. Dimensions: 2279*1134*33mm (Solar Cells from Vietnam). 100% new product#&VN , CRCSG-01#& Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH550TW, công suất: 550W. kích thước : 2279*1134*33mm (Solar Cells from Vietnam). Hàng mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 185130.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-17']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{E3A30DE8-0D5F-4E15-93C1F053ABD021BA}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "RB10D1BYB11NdPAc1Bg0dw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#& Monocrystalline solar panel, single glass, model: ET-M772BH550TW, capacity: 550W. Dimensions: 2279*1134*33mm (Solar Cells from Vietnam). 100% new product#&VN , CRCSG-01#& Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH550TW, công suất: 550W. kích thước : 2279*1134*33mm (Solar Cells from Vietnam). Hàng mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 185130.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-17']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{502C4573-A8B1-4B55-8E652FE4673F9591}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "i-rC-QWsVaw_DxkOy0ZRdQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#& Monocrystalline solar panel, single glass, model: ET-M772BH550TW, capacity: 550W. Dimensions: 2279*1134*33mm (Solar Cells from Cambodia). 100% new product #&KXD , CRCSG-01#& Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH550TW, công suất: 550W. kích thước : 2279*1134*33mm (Solar Cells from Cambodia ). Hàng mới 100% #&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 185130.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-17']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{82D400FB-1265-4D32-BF243965598D5291}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "yYY8kQhm2fY0mqq3ufrV8g",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#& Monocrystalline solar panel, single glass, model: ET-M772BH550TW, capacity: 550W. Dimensions: 2279*1134*33mm (Solar Cells from Vietnam). 100% new product#&VN , CRCSG-01#& Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH550TW, công suất: 550W. kích thước : 2279*1134*33mm (Solar Cells from Vietnam). Hàng mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 185130.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-14']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{D5B313C1-CFC0-400D-814077B4563808CD}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "-6SMLtH7e9d95qbjD9a4Ow",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "CRCSG-01#& Monocrystalline solar panel, single glass, model: ET-M772BH550TW, capacity: 550W. Dimensions: 2279*1134*33mm (Solar Cells from Vietnam). 100% new product#&VN , CRCSG-01#& Tấm pin năng lượng mặt trời đơn tinh, kính đơn,model:ET-M772BH550TW, công suất: 550W. kích thước : 2279*1134*33mm (Solar Cells from Vietnam). Hàng mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 185130.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-06-14']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Lương Sơn",
+        "state": "Tỉnh Hòa Bình",
+        "country": "VNM",
+        "value": "Lô 9, đường số 1, Khu công nghiệp Lương Sơn,xã Hòa Sơn, Huyện Lương Sơn, tỉnh Hòa Bình, Việt Nam , 984268997"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "14 ROBINSON, ROAD #02-01, FAR EAST FINANCE BUILDING, SINGAPORE (048545), SG"
+       },
+       "identifiers": [
+        {
+         "value": "{8331DA1F-D951-4167-AFE02EFDB620714E}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "ELITE SOLAR POWER HOLDING PTE. LTD/ ET SOLAR INC",
+     "entity_id": "tExpRWK3X_HHh0xNrFENiw",
+     "countries": [
+      "SGP"
+     ],
+     "quality_flags": [],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "tExpRWK3X_HHh0xNrFENiw",
+       "entity_url": "https://graph.sayari.com/resource/entity/tExpRWK3X_HHh0xNrFENiw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/tExpRWK3X_HHh0xNrFENiw"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "Xnt9Xc3OmkNc4Bctsjx92Q",
+      "entity_url": "https://graph.sayari.com/resource/entity/Xnt9Xc3OmkNc4Bctsjx92Q"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 743,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "CRC Solar Cell",
+    "shipper_name": "CôNG TY Cổ PHầN CRC SOLAR CELL",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6IjY3Nzc1MmM3MTRiYjNkYTE3YmY2ZmE4NTJhNTE5MzNlMDBkYzFjM2RjYWZhZmQ5M2Q0MDgwZTU5MWFkNjlkZDAiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving Chinese entities, try both the Chinese name and known English/trade names in the Sayari API — there is no standardized Romanization.",
+   "The administrative division prefix in a Chinese company name indicates registration level, not headquarters location.",
+   "National-level companies (no geographic prefix or parenthetical prefix) are typically large SOEs or nationally significant enterprises."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

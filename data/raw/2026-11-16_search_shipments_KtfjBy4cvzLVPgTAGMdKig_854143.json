@@ -1,0 +1,1727 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Mundra Solar Energy",
+  "shipper_name": "MUNDRA SOLAR ENERGY LIMITED",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:23:56+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 4,
+  "items": [
+   {
+    "supplier": {
+     "name": "MUNDRA SOLAR ENERGY LIMITED",
+     "names": [
+      "MUNDRA SOLAR ENERGY LIMITED",
+      "MUNDRA SOLAR ENERGY"
+     ],
+     "entity_id": "KtfjBy4cvzLVPgTAGMdKig",
+     "countries": [
+      "IND",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owned_by_regulatory_action_entity",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "psa_owner_of_regulatory_action_entity",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "KtfjBy4cvzLVPgTAGMdKig",
+       "entity_url": "https://graph.sayari.com/resource/entity/KtfjBy4cvzLVPgTAGMdKig"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/KtfjBy4cvzLVPgTAGMdKig"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "3h4ERZcOfUk5hRQZnTBF6g",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PV MODULE - SOLAR PV MODULE (, BI-FACIAL)",
+        "SOLAR PV MODULE (BI-FACIAL)",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 51200.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-10-30']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "country": "IND",
+        "value": "SURVEY NO. 180/P, APSEZ, VILLAGE TU KACHCHH GJ 370435 INDIA"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BLVD JUNO BEACH FL 33408 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUKD538915",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "9z2tJFsixj4ZVGeTJON8FQ",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PV MODULE - SOLAR PV MODULE (, BI-FACIAL)",
+        "SOLAR PV MODULE (BI-FACIAL)",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 128000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-10-30']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "country": "IND",
+        "value": "SURVEY NO. 180/P, APSEZ, VILLAGE TU KACHCHH GJ 370435 INDIA"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BLVD JUNO BEACH FL 33408 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUKD539467",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "DurnKnaDxGLOlH2wwsDxeQ",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PV MODULE (BI-FACIAL) - SOLAR, PV MODULE (BI-FACIAL)",
+        "SOLAR PV MODULE (BI-FACIAL)",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 128000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-10-30']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "country": "IND",
+        "value": "SURVEY NO. 180/P, APSEZ, VILLAGE TU KACHCHH GJ 370435 INDIA"
+       },
+       "receiver_address": {
+        "country": "IND",
+        "value": "SURVEY NO. 180/P, APSEZ, VILLAGE TU KACHCHH GJ 370435 INDIA"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUKD538808",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": [
+     {
+      "name": "MUNDRA SOLAR ENERGY LIMITED",
+      "names": [
+       "MUNDRA SOLAR ENERGY LIMITED",
+       "MUNDRA SOLAR ENERGY"
+      ],
+      "entity_id": "KtfjBy4cvzLVPgTAGMdKig",
+      "countries": [
+       "IND",
+       "USA"
+      ],
+      "risks": {
+       "sanctioned": false,
+       "pep": false,
+       "risk_levels": [
+        "exports_ilab_child_labor",
+        "exports_ilab_forced_labor",
+        "forced_labor_sheffield_hallam_university_reports_origin_direct",
+        "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+        "imports_eudr_shipment_wood",
+        "imports_ilab_child_labor",
+        "imports_ilab_forced_labor",
+        "owned_by_regulatory_action_entity",
+        "psa_exports_ilab_child_labor",
+        "psa_exports_ilab_forced_labor",
+        "psa_forced_labor_sheffield_hallam_university_reports_origin_direct",
+        "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+        "psa_forced_labor_uflpa_origin_subtier",
+        "psa_forced_labor_xinjiang_origin_subtier",
+        "psa_imports_eudr_shipment_wood",
+        "psa_imports_ilab_child_labor",
+        "psa_imports_ilab_forced_labor",
+        "psa_owned_by_regulatory_action_entity",
+        "psa_owner_of_regulatory_action_entity",
+        "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+       ]
+      },
+      "quality_flags": [
+       "risky"
+      ],
+      "next_action": {
+       "tool": "get_entity_summary",
+       "args": {
+        "entity_id": "KtfjBy4cvzLVPgTAGMdKig",
+        "entity_url": "https://graph.sayari.com/resource/entity/KtfjBy4cvzLVPgTAGMdKig"
+       }
+      },
+      "entity_url": "https://graph.sayari.com/resource/entity/KtfjBy4cvzLVPgTAGMdKig"
+     },
+     {
+      "name": "WILMOT ENERGY CENTER II LLC",
+      "entity_id": "LSnfVEnVWkzWC1q0_1LV4g",
+      "countries": [
+       "USA"
+      ],
+      "risks": {
+       "sanctioned": false,
+       "pep": false,
+       "risk_levels": [
+        "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+        "imports_ilab_child_labor",
+        "imports_ilab_forced_labor",
+        "mass_address_usage",
+        "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+        "psa_forced_labor_uflpa_origin_subtier",
+        "psa_forced_labor_xinjiang_origin_subtier",
+        "psa_imports_ilab_child_labor",
+        "psa_imports_ilab_forced_labor"
+       ]
+      },
+      "quality_flags": [
+       "risky"
+      ],
+      "next_action": {
+       "tool": "get_entity_summary",
+       "args": {
+        "entity_id": "LSnfVEnVWkzWC1q0_1LV4g",
+        "entity_url": "https://graph.sayari.com/resource/entity/LSnfVEnVWkzWC1q0_1LV4g"
+       }
+      },
+      "entity_url": "https://graph.sayari.com/resource/entity/LSnfVEnVWkzWC1q0_1LV4g"
+     }
+    ],
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "KtfjBy4cvzLVPgTAGMdKig",
+      "entity_url": "https://graph.sayari.com/resource/entity/KtfjBy4cvzLVPgTAGMdKig"
+     }
+    },
+    "quality_flags": [
+     "multiple_parties",
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "MUNDRA SOLAR ENERGY LIMITED",
+     "names": [
+      "MUNDRA SOLAR ENERGY LIMITED",
+      "MUNDRA SOLAR ENERGY"
+     ],
+     "entity_id": "KtfjBy4cvzLVPgTAGMdKig",
+     "countries": [
+      "IND",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owned_by_regulatory_action_entity",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "psa_owner_of_regulatory_action_entity",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "KtfjBy4cvzLVPgTAGMdKig",
+       "entity_url": "https://graph.sayari.com/resource/entity/KtfjBy4cvzLVPgTAGMdKig"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/KtfjBy4cvzLVPgTAGMdKig"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "eQ3KZdJ-4qgh-qREAolfVw",
+       "departure_country": [
+        "OMN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 M540 SOLAR PV MODU, LES BI FACIAL",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 212800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-03']",
+       "departure_address": {
+        "city": "Salalah",
+        "country": "OMN",
+        "value": "Salalah"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mundra",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVAY NO 180 P & OTHERS VLG TUNDA TALUKA MUNDRA GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Childress",
+        "country": "USA",
+        "value": "MISAE SOLAR PARK II PROJECT SITE 385 FM1033 CHILDRESS TX79201 US"
+       },
+       "identifiers": [
+        {
+         "value": "AIPJ440975000056",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "tBL7m4Twb-AdRVK6H7i5iw",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 M540 SOLAR PV MODU, LES BI FACIAL",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 170240.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-03']",
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mundra",
+        "country": "IND",
+        "value": "SURVAY NO 180 P & OTHERS VLG TUNDA TALUKA DIST KACHCHH GUJARAT MUNDRA 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Childress",
+        "country": "USA",
+        "value": "MISAE SOLAR PARK II PROJECT SITE 385 FM1033 CHILDRESS TX79201 US"
+       },
+       "identifiers": [
+        {
+         "value": "AIPJ440975000049",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "D3ssKw-xWsmpR1eamThZvw",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 M540 SOLAR PV MODU, LES BI FACIAL",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 21280.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-03']",
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mundra",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVAY NO 180 P & OTHERS VLLG TUNDA TALUKA MUNDRA KACHCHH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Childress",
+        "country": "USA",
+        "value": "MISAE SOLAR PARK II PROJECT SITE 385 FM1033 CHILDRESS TX79201 US"
+       },
+       "identifiers": [
+        {
+         "value": "AIPJ440975000058",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "bGVqy6SS55KiIYglTBiZig",
+       "departure_country": [
+        "OMN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE-85414300 M540 SOLAR PV MODU, LES (BI-FACIAL)",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 68908.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-03']",
+       "departure_address": {
+        "city": "Salalah",
+        "country": "OMN",
+        "value": "Salalah"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mundra",
+        "country": "IND",
+        "value": "SUR 180/P & OTHERS VLG TUNDA TALUKA MUNDRA MUNDRA 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Childress",
+        "country": "USA",
+        "value": "MISAE SOLAR PARK II PROJECT SITE 385 FM1033 CHILDRESS TX79201 US"
+       },
+       "identifiers": [
+        {
+         "value": "AIPJ440975000069",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "PybQYwPJs9J5kKn3f-r6YA",
+       "departure_country": [
+        "OMN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 M540 SOLAR PV MODU, LES BI FACIAL",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 85120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-03']",
+       "departure_address": {
+        "city": "Salalah",
+        "country": "OMN",
+        "value": "Salalah"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVAY NO 180 P & OTHERS VLG TUNDA TALUKA MUNDRA DIST KACHCHH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Childress",
+        "country": "USA",
+        "value": "MISAE SOLAR PARK II PROJECT SITE 385 FM1033 CHILDRESS TX79201 US"
+       },
+       "identifiers": [
+        {
+         "value": "AIPJ440975000054",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "K4Vx-Cxtde8oQ0nKQX0WGA",
+       "departure_country": [
+        "OMN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 M540 SOLAR PV MODU, LES BI FACIAL",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 127680.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-25']",
+       "departure_address": {
+        "city": "Salalah",
+        "country": "OMN",
+        "value": "Salalah"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mundra",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVAY NO 180 P & OTHERS VLG TUNDA TALUKA MUNDRA GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Childress",
+        "country": "USA",
+        "value": "MISAE SOLAR PARK II PROJECT SITE 385 FM1033 CHILDRESS TX79201 US"
+       },
+       "identifiers": [
+        {
+         "value": "AIPJ440975000068",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "td8ExACpGc-i9OXc1JTwAA",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 M540 SOLAR PV MODU, LES BI FACIAL",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 191520.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-12']",
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mundra",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVAY NO 180 P & OTHERS VILLAGE TUNDA TALUKA MUNDRA KACHCHH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Childress",
+        "country": "USA",
+        "value": "MISAE SOLAR PARK II PROJECT SITE 385 FM1033 CHILDRESS TX79201 US"
+       },
+       "identifiers": [
+        {
+         "value": "AIPJ440975000036",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "6GlKWsDlJ3hsyjKdqNX5RA",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "720 PACKAGE PACKED IN 20 PALLETS SO, LAR PV MODULES (BI-FACIAL) INVOICE NO.: 19240, 0000006 S.B. NO.: 9601394 HS CODE: 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 21280.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-09']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "country": "IND",
+        "value": "SURVEY NO. 180/P, APSEZ, VILLAGE TU KACHCHH GJ 370435 INDIA"
+       },
+       "receiver_address": {
+        "city": "Mcallen",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "5712 N CYNTHIA ST MCALLEN TX 78504 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUJB267303",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "PNo00GiIefW7cGRc8z480w",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "720 PACKAGE PACKED IN 20 PALLETS SO, LAR PV MODULES (BI-FACIAL) INVOICE NO.: 19240, 0000090 S.B. NO.: 9912632 HS CODE: 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 21280.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-09']",
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "country": "IND",
+        "value": "SURVEY NO. 180/P, APSEZ, VILLAGE TU KACHCHH GJ 370435 INDIA"
+       },
+       "receiver_address": {
+        "city": "Mcallen",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "5712 N CYNTHIA ST MCALLEN TX 78504 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUJB399536",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "YMOBwYYFvmH5GRSMmq9vhQ",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "1440 PACKAGE PACKED IN 40 PALLETS S, OLAR PV MODULES (BI-FACIAL) INVOICE NO.: 1924, 00000063 S.B. NO.: 9687402 HS CODE: 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 21280.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-09']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "country": "IND",
+        "value": "SURVEY NO. 180/P, APSEZ, VILLAGE TU KACHCHH GJ 370435 INDIA"
+       },
+       "receiver_address": {
+        "city": "Mcallen",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "5712 N CYNTHIA ST MCALLEN TX 78504 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUJB363193",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "2kQbO7_iW26ESnVjt_hSCA",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "720 PACKAGE PACKED IN 20 PALLETS SO, LAR PV MODULES (BI-FACIAL) INVOICE NO.: 19240, 0000045 S.B. NO.: 9661583 HS CODE: 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 21280.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-09']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "country": "IND",
+        "value": "SURVEY NO. 180/P, APSEZ, VILLAGE TU KACHCHH GJ 370435 INDIA"
+       },
+       "receiver_address": {
+        "city": "Mcallen",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "5712 N CYNTHIA ST MCALLEN TX 78504 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUJB342536",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "28Z931K_RYiAHHLu2hAsVA",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "720 PACKAGE PACKED IN 20 PALLETS SO, LAR PV MODULES (BI-FACIAL) INVOICE NO.: 19240, 0000081 S.B. NO.: 9615955 HS CODE: 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 21280.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-09']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "country": "IND",
+        "value": "SURVEY NO. 180/P, APSEZ, VILLAGE TU KACHCHH GJ 370435 INDIA"
+       },
+       "receiver_address": {
+        "city": "Mcallen",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "5712 N CYNTHIA ST MCALLEN TX 78504 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUJB310764",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "EXCEL ADVANTAGE SERVICES LLC",
+     "entity_id": "S-rxiPVnG6nnTlc8d1_zyw",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "S-rxiPVnG6nnTlc8d1_zyw",
+       "entity_url": "https://graph.sayari.com/resource/entity/S-rxiPVnG6nnTlc8d1_zyw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/S-rxiPVnG6nnTlc8d1_zyw"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "KtfjBy4cvzLVPgTAGMdKig",
+      "entity_url": "https://graph.sayari.com/resource/entity/KtfjBy4cvzLVPgTAGMdKig"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "MUNDRA SOLAR ENERGY LIMITED",
+     "names": [
+      "MUNDRA SOLAR ENERGY LIMITED",
+      "MUNDRA SOLAR ENERGY"
+     ],
+     "entity_id": "KtfjBy4cvzLVPgTAGMdKig",
+     "countries": [
+      "IND",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owned_by_regulatory_action_entity",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "psa_owner_of_regulatory_action_entity",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "KtfjBy4cvzLVPgTAGMdKig",
+       "entity_url": "https://graph.sayari.com/resource/entity/KtfjBy4cvzLVPgTAGMdKig"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/KtfjBy4cvzLVPgTAGMdKig"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "DMlGJ3ZvVODgrzB4zrxzNg",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 M550 SOLAR PV MODU, LES BI FACIAL & M545 SOLAR PV MODULES BI FACI, AL",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 6344.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-30']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVAY NO 180 P & OTHERS VILL TUNDA TAL MUNDRA DIST KACHCHH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Wheatland",
+        "country": "USA",
+        "value": "1090 N GHOST HOLLOW RD WHEATLAND IN47597 US"
+       },
+       "identifiers": [
+        {
+         "value": "AIPJ440975000071",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "A1mL9u_VqBjTECcK0t-_OQ",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 M545 SOLAR PV MODU, LES (BI-FACIAL)",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 48320.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-30']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "city": "Mundra",
+        "country": "IND",
+        "value": "SURVAY 180 P & OTHERS VLG TUNDA TALUKA MUNDRA KACHCHH MUNDRA 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Wheatland",
+        "country": "USA",
+        "value": "1090 N GHOST HOLLOW RD WHEATLAND IN47597 US"
+       },
+       "identifiers": [
+        {
+         "value": "AIPJ440975000076",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "58AbO0Fo8UY1M02ApSodqA",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "02X40HC CONTAINERTOTAL 1440 PIECESM, 545 SOLAR PV MODULES BI-FACIALINVOICE NO.: 19, 2400011161DT. 30-MAR-25INVOICE NO.: 192400011, 196DT. 31-MAR-25SB NO: 9596786 DATE: 02042025, HS CODE: 85414300NET WEIGHT: 46,080.000 KGSGR, OSS WEIGHT: 48,320.000 KGS",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 48320.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-05-24']",
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "country": "IND",
+        "value": "SURVEY NO.180P, SECTOR I, NEAR MEBR KACHCHH 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Wheatland",
+        "country": "USA",
+        "value": "1090 N GHOST HOLLOW RD WHEATLAND, 47597 US"
+       },
+       "identifiers": [
+        {
+         "value": "SYXOSH00001968",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Ms3CjhhPKOHYOHU1R8R7GA",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "M550 SOLAR PV MODULES (BI-FACIAL) M, ODEL NO. ASB-M10-144-AAA HS CODE: 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 24160.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-05-24']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "city": "Mundra",
+        "state": "In",
+        "country": "IND",
+        "value": "SURVEY NO.180P AND OTHERS, VILLAGE TUNDA, TUNDA, MUNDRA IN"
+       },
+       "receiver_address": {
+        "city": "Wheatland",
+        "state": "Indiana Wheatland",
+        "country": "USA",
+        "value": "1090 N GHOST HOLLOW RD WHEATLAND INDIANA WHEATLAND IN47597 US"
+       },
+       "identifiers": [
+        {
+         "value": "SYXOS00110941",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "ORIGIS PROCUREMENT LLC",
+     "names": [
+      "ORIGIS PROCUREMENT LLC",
+      "Origis Procurement, LLC"
+     ],
+     "entity_id": "Mma_MdKr66D6R6LQu7lp-A",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "controlled_by_mass_business_registration",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "mass_address_usage",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Mma_MdKr66D6R6LQu7lp-A",
+       "entity_url": "https://graph.sayari.com/resource/entity/Mma_MdKr66D6R6LQu7lp-A"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Mma_MdKr66D6R6LQu7lp-A"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "KtfjBy4cvzLVPgTAGMdKig",
+      "entity_url": "https://graph.sayari.com/resource/entity/KtfjBy4cvzLVPgTAGMdKig"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "MUNDRA SOLAR ENERGY LIMITED",
+     "names": [
+      "MUNDRA SOLAR ENERGY LIMITED",
+      "MUNDRA SOLAR ENERGY"
+     ],
+     "entity_id": "KtfjBy4cvzLVPgTAGMdKig",
+     "countries": [
+      "IND",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owned_by_regulatory_action_entity",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "psa_owner_of_regulatory_action_entity",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "KtfjBy4cvzLVPgTAGMdKig",
+       "entity_url": "https://graph.sayari.com/resource/entity/KtfjBy4cvzLVPgTAGMdKig"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/KtfjBy4cvzLVPgTAGMdKig"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "5k6gRYJJibVaG9j2DicCRg",
+       "departure_country": [
+        "IND",
+        "LKA"
+       ],
+       "arrival_country": [
+        "SWE",
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PV MODULES (BI-FACIAL),SOLAR PV MODULES (BI-FACIAL) INVOICE NO.: 192400000065, 192400000060 S.B. NO.: 9624093 HS CODE: 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "1440 PACKAGE PACKED IN 40 PALLETS S, OLAR PV MODULES (BI-FACIAL) INVOICE NO.: 1924, 00000065, 192400000060 S.B. NO.: 9624093 HS C, ODE: 85414300"
+       ],
+       "weight": {
+        "value": 21280.0,
+        "unit": "kilogram"
+       },
+       "departure_date": "['2025-04-07']",
+       "arrival_date": "['2025-06-09', '2025-05-28']",
+       "departure_address": {
+        "city": "Tuticorin",
+        "country": "IND",
+        "value": "TUTICORIN"
+       },
+       "arrival_address": {
+        "city": "Goteborg",
+        "country": "SWE",
+        "value": "GOTEBORG"
+       },
+       "shipper_address": {
+        "country": "IND",
+        "value": "SURVEY NO. 180/P, APSEZ, VILLAGE TU KACHCHH GJ 370435 INDIA"
+       },
+       "receiver_address": {
+        "city": "Mcallen",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "5712 N CYNTHIA ST MCALLEN TX 78504 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUJB310657",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e713fd44ec67352f3502391733963e97",
+         "label": "Sweden Imports & Exports (January 2023 - Present)"
+        },
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": [
+     {
+      "name": "EXCEL ADVANTAGE SERVICES LLC",
+      "entity_id": "S-rxiPVnG6nnTlc8d1_zyw",
+      "countries": [
+       "USA"
+      ],
+      "risks": {
+       "sanctioned": false,
+       "pep": false,
+       "risk_levels": [
+        "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+        "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+        "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+        "psa_forced_labor_uflpa_origin_subtier",
+        "psa_forced_labor_xinjiang_origin_subtier"
+       ]
+      },
+      "quality_flags": [
+       "risky"
+      ],
+      "next_action": {
+       "tool": "get_entity_summary",
+       "args": {
+        "entity_id": "S-rxiPVnG6nnTlc8d1_zyw",
+        "entity_url": "https://graph.sayari.com/resource/entity/S-rxiPVnG6nnTlc8d1_zyw"
+       }
+      },
+      "entity_url": "https://graph.sayari.com/resource/entity/S-rxiPVnG6nnTlc8d1_zyw"
+     },
+     {
+      "name": "EAGLE TRANS SHIPPING & LOGISTICS LLC",
+      "names": [
+       "EAGLE TRANS SHIPPING & LOGISTICS LLC",
+       "EAGLE TRANS SHIPPING & LOGISTICS",
+       "EAGLE TRANS SHIPPING AND LOGISTICS",
+       "EAGLE TRANS SHIPPING & LOGISTICS LL",
+       "EAGLE TRANS SHIPPING LOGISTICS LLC",
+       "EAGLE TRANS SHIPPING &LOGISTICS LLC",
+       "EAGLE TRANS SHIPPING LOGISTICS HOB",
+       "EAGLE TRANS SHIPPING LOGISTICS HOBO",
+       "EAGLE TRANS SHIPPING & LOGISTICS LLC*",
+       "EAGLE TRANS SHIPPING & LOGISTIC"
+      ],
+      "entity_id": "PXeh3r2xvGYfksnICMZf1w",
+      "countries": [
+       "USA",
+       "GBR",
+       "ARE",
+       "NLD",
+       "BEL"
+      ],
+      "risks": {
+       "sanctioned": false,
+       "pep": false,
+       "risk_levels": [
+        "soe_adjacent"
+       ]
+      },
+      "quality_flags": [
+       "risky"
+      ],
+      "next_action": {
+       "tool": "get_entity_summary",
+       "args": {
+        "entity_id": "PXeh3r2xvGYfksnICMZf1w",
+        "entity_url": "https://graph.sayari.com/resource/entity/PXeh3r2xvGYfksnICMZf1w"
+       }
+      },
+      "entity_url": "https://graph.sayari.com/resource/entity/PXeh3r2xvGYfksnICMZf1w"
+     }
+    ],
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "KtfjBy4cvzLVPgTAGMdKig",
+      "entity_url": "https://graph.sayari.com/resource/entity/KtfjBy4cvzLVPgTAGMdKig"
+     }
+    },
+    "quality_flags": [
+     "multiple_parties",
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 5544,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Mundra Solar Energy",
+    "shipper_name": "MUNDRA SOLAR ENERGY LIMITED",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6IjQ0YjNhYjI1MjZkZjNhNjI4NTM5MjdkYzNmMmY1YWUyNDVlYTVlODE2MjgwZWIzYmQ5YjQ3MGQ2YWJhNWNlYWIiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "Do not treat incorporation date as evidence of legitimate operational history — always verify actual commercial activity timelines against the registration date",
+   "When a counterparty has an aged incorporation but thin commercial footprint, escalate for enhanced due diligence before onboarding or transacting",
+   "Build formation agent clustering into automated screening workflows to identify shelf company factories that supply illicit networks"
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

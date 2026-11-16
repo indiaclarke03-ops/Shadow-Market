@@ -1,0 +1,1890 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Letsolar Vietnam",
+  "shipper_name": "CôNG TY TNHH LETSOLAR VIệT NAM",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:25:26+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 6,
+  "items": [
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH LETSOLAR VIệT NAM",
+     "names": [
+      "CôNG TY TNHH LETSOLAR VIệT NAM",
+      "LETSOLAR VIETNAM COMPANY LIMITED",
+      "YIYIN SOLAR VIETNAM COMPANY LIMITED",
+      "LETSOLAR VIETNAM COMPANY LTD",
+      "YIYIN SOLAR VIETNAM CO., LTD.",
+      "CôNG TY TNHH YIYIN SOLAR VIệT NAM",
+      "LETSOLAR VIETNAM",
+      "LETSOLAR VIETNAM COMPANY"
+     ],
+     "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+     "countries": [
+      "VNM",
+      "CHN",
+      "HKG",
+      "CHE",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+       "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "QV2Onm8o7GV6PwowhsE9og",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HTS CODE 854143, .",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 14240.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-09-28']",
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Bac Ninh",
+        "country": "VNM",
+        "value": "PART OF LOT CN-01, VIET NHAT INDUST RIAL CLUSTER XUAN CAM COMMUNE BAC NINH VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "6565 W SUNSET BLVD, 4TH FLOOR SUITE 410 LOS ANGELES CA90028 US"
+       },
+       "identifiers": [
+        {
+         "value": "LCGMLGLAX264237",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "k_6LcMXuWURrZSRsgXgCeQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HTS CODE 854143, .",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 15586.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-09-24']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Bac Ninh",
+        "country": "VNM",
+        "value": "PART OF LOT CN-01, VIET NHAT INDUST RIAL CLUSTER XUAN CAM COMMUNE, BAC NINH VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "6565 W SUNSET BLVD, 4TH FLOOR, SUITE 410 LOS ANGELES CA90028 US"
+       },
+       "identifiers": [
+        {
+         "value": "LCGMLGLAX264381",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "MATERKRYO LTD",
+     "entity_id": "kUjRS3oE6D0XS3FT-kNEeA",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "psa_forced_labor_aspi_origin_subtier"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "kUjRS3oE6D0XS3FT-kNEeA",
+       "entity_url": "https://graph.sayari.com/resource/entity/kUjRS3oE6D0XS3FT-kNEeA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/kUjRS3oE6D0XS3FT-kNEeA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+      "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH LETSOLAR VIệT NAM",
+     "names": [
+      "CôNG TY TNHH LETSOLAR VIệT NAM",
+      "LETSOLAR VIETNAM COMPANY LIMITED",
+      "YIYIN SOLAR VIETNAM COMPANY LIMITED",
+      "LETSOLAR VIETNAM COMPANY LTD",
+      "YIYIN SOLAR VIETNAM CO., LTD.",
+      "CôNG TY TNHH YIYIN SOLAR VIệT NAM",
+      "LETSOLAR VIETNAM",
+      "LETSOLAR VIETNAM COMPANY"
+     ],
+     "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+     "countries": [
+      "VNM",
+      "CHN",
+      "HKG",
+      "CHE",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+       "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "Feew9lOFRf1N8O5M3toaqA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HTS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 14240.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-09-24']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Bac Ninh",
+        "country": "VNM",
+        "value": "PART OF LOT CN-01, VIET NHAT INDUST RIAL CLUSTER XUAN CAM COMMUNE BAC NINH VN"
+       },
+       "receiver_address": {
+        "city": "Sacramento",
+        "country": "USA",
+        "value": "3540 LA GRANDE BLVD SACRAMENTO CA95823 US"
+       },
+       "identifiers": [
+        {
+         "value": "LCGMLGLAX264378",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "APEXSTRENGTH SYSTEMS LLC",
+     "entity_id": "PhcNsgRjOsT__JnS3nflpw",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_imports_eudr_shipment_wood"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "PhcNsgRjOsT__JnS3nflpw",
+       "entity_url": "https://graph.sayari.com/resource/entity/PhcNsgRjOsT__JnS3nflpw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/PhcNsgRjOsT__JnS3nflpw"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+      "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH LETSOLAR VIệT NAM",
+     "names": [
+      "CôNG TY TNHH LETSOLAR VIệT NAM",
+      "LETSOLAR VIETNAM COMPANY LIMITED",
+      "YIYIN SOLAR VIETNAM COMPANY LIMITED",
+      "LETSOLAR VIETNAM COMPANY LTD",
+      "YIYIN SOLAR VIETNAM CO., LTD.",
+      "CôNG TY TNHH YIYIN SOLAR VIệT NAM",
+      "LETSOLAR VIETNAM",
+      "LETSOLAR VIETNAM COMPANY"
+     ],
+     "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+     "countries": [
+      "VNM",
+      "CHN",
+      "HKG",
+      "CHE",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+       "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "Gx1M92xwpHrVz3whX2RwZQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE : 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 586.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-09-11']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Ni",
+        "state": "Nh",
+        "country": "VNM",
+        "value": "PART OF LOT CN-01, VIET NHAT INDUST RIAL CLUSTERXUAN CAM COMMUNE,BAC NI NH,VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "700 HENRIETTA CREEK ROAD,ROANOKE,TE XAS 76262,US"
+       },
+       "identifiers": [
+        {
+         "value": "SXCOHPHOE260842A",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "7jG4oYFUPnvLPMfv4lF63g",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8477.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-09-01']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Ni",
+        "state": "Nh",
+        "country": "VNM",
+        "value": "PART OF LOT CN-01, VIET NHAT INDUST RIAL CLUSTERXUAN CAM COMMUNE,BAC NI NH,VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "700 HENRIETTA CREEK ROAD,ROANOKE,TE XAS 76262,US"
+       },
+       "identifiers": [
+        {
+         "value": "SXCOHPHOE2608422",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "3HPhc-md2ly98rKFiLpTSw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE: 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 577.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-08-06']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Ni",
+        "state": "Nh",
+        "country": "VNM",
+        "value": "PART OF LOT CN-01, VIET NHAT INDUST RIAL CLUSTERXUAN CAM COMMUNE,BAC NI NH,VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "700 HENRIETTA CREEK ROAD,ROANOKE,TE XAS 76262,US"
+       },
+       "identifiers": [
+        {
+         "value": "SXCOHPHOE260748B",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "delvNUo7KFdnppiu2_uuIQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE: 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 1400.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-07-15']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Bac Ni",
+        "state": "Nh",
+        "country": "VNM",
+        "value": "PART OF LOT CN-01, VIET NHAT INDUST RIAL CLUSTERXUAN CAM COMMUNE,BAC NI NH,VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "700 HENRIETTA CREEK ROAD,ROANOKE,TE XAS 76262,US"
+       },
+       "identifiers": [
+        {
+         "value": "SXCOHPHOE2606417",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "7s00UZcha5F-2Tiln-GzCw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE: 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 1400.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-06-01']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Bac Ni",
+        "state": "Nh",
+        "country": "VNM",
+        "value": "PART OF LOT CN-01, VIET NHAT INDUST RIAL CLUSTERXUAN CAM COMMUNE,BAC NI NH,VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "700 HENRIETTA CREEK ROAD,ROANOKE,TE XAS 76262,US"
+       },
+       "identifiers": [
+        {
+         "value": "SXCOHPHOE2605405",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "ALLIANCE SPORTS GROUP,L.P",
+     "names": [
+      "ALLIANCE SPORTS GROUP,L.P",
+      "ALLIA",
+      "ALLIANCE CONSUMER GROUP"
+     ],
+     "entity_id": "rR_jwT7QD356Vewn3VaJqA",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "psa_forced_labor_aspi_origin_subtier"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "rR_jwT7QD356Vewn3VaJqA",
+       "entity_url": "https://graph.sayari.com/resource/entity/rR_jwT7QD356Vewn3VaJqA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/rR_jwT7QD356Vewn3VaJqA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+      "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH LETSOLAR VIệT NAM",
+     "names": [
+      "CôNG TY TNHH LETSOLAR VIệT NAM",
+      "LETSOLAR VIETNAM COMPANY LIMITED",
+      "YIYIN SOLAR VIETNAM COMPANY LIMITED",
+      "LETSOLAR VIETNAM COMPANY LTD",
+      "YIYIN SOLAR VIETNAM CO., LTD.",
+      "CôNG TY TNHH YIYIN SOLAR VIệT NAM",
+      "LETSOLAR VIETNAM",
+      "LETSOLAR VIETNAM COMPANY"
+     ],
+     "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+     "countries": [
+      "VNM",
+      "CHN",
+      "HKG",
+      "CHE",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+       "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "0t6xyGSgYgFKsNrfZdVkSw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HTS CODE 854143, .",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 13166.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-07-30']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Bac Ninh",
+        "country": "VNM",
+        "value": "PART OF LOT CN-01, VIET NHAT INDUST RIAL CLUSTER XUAN CAM COMMUNE BAC NINH VN"
+       },
+       "receiver_address": {
+        "city": "San Francisco",
+        "country": "USA",
+        "value": "2160 PALOU AVE SAN FRANCISCO CA94124 US"
+       },
+       "identifiers": [
+        {
+         "value": "LCGMLGLAX263083",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "BRIGHTHAVEN ESSENTIALS LLC",
+     "entity_id": "4EWjl7pRIhD39AWq8kTzmg",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_imports_eudr_shipment_wood"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "4EWjl7pRIhD39AWq8kTzmg",
+       "entity_url": "https://graph.sayari.com/resource/entity/4EWjl7pRIhD39AWq8kTzmg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/4EWjl7pRIhD39AWq8kTzmg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+      "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH LETSOLAR VIệT NAM",
+     "names": [
+      "CôNG TY TNHH LETSOLAR VIệT NAM",
+      "LETSOLAR VIETNAM COMPANY LIMITED",
+      "YIYIN SOLAR VIETNAM COMPANY LIMITED",
+      "LETSOLAR VIETNAM COMPANY LTD",
+      "YIYIN SOLAR VIETNAM CO., LTD.",
+      "CôNG TY TNHH YIYIN SOLAR VIệT NAM",
+      "LETSOLAR VIETNAM",
+      "LETSOLAR VIETNAM COMPANY"
+     ],
+     "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+     "countries": [
+      "VNM",
+      "CHN",
+      "HKG",
+      "CHE",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+       "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "Il-gjCPJO1qQgvNzGDPDAA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 6929.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-05-12']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "PART OF LOT CN-01, VIET NHAT INDUST RIAL CLUSTER,XUAN CAM,BAC NINH,VN Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Diamond Bar",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "1470 VALLEY VISTA DR SUITE 111DIAMO ND BAR,CA 91765 DIAMOND BAR CA91765 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL260422",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "nz_ghX-w70aqxkBLI70Tgg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8917.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-05-06']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "PART OF LOT CN-01,VIET NHAT INDUSTR IAL CLUSTER,XUAN CAM, BAC NINH, VN Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Diamond Bar",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "1470 VALLEY VISTA DR SUITE 111 DIAM OND BAR,CA 91765 DIAMOND BAR CA91765 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL260415",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "vEXlMilgjMmAALVq69JurQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 2816.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-28']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "state": "Bac Ninh Province",
+        "country": "VNM",
+        "value": "PART OF LOT CN-01, VIET NHAT INDUST RIAL CLUSTER, XUAN CAM COMMUNE, BAC NINH PROVINCE, VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Nd Bar",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "1470 VALLEY VISTA DR SUITE 111DIAMO ND BAR,CA 91765 ."
+       },
+       "identifiers": [
+        {
+         "value": "SWMKWSGNS2604015",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "xykJxcrWrTR2h5m7hpEhZQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 10347.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-21']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "value": "LOT B1 (FACTORY RENTAL FROM PHUONG BAC STEEL JSC), SONG KHE NOI HOANG INDUSTRIAL PARK BAC GIANG VNVIVI WEI"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "1470 VALLEY VISTA DR SUITE 111DIAMO ND BAR, CA DIAMOND BAR CA91764 USCHERRY XIAO"
+       },
+       "identifiers": [
+        {
+         "value": "MFGTVNLAX5368172",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "vuB1O2O8_mOow6OLa-lOqg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 7248.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-21']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "value": "LOT B1 (FACTORY RENTAL FROM PHUONG BAC STEEL JSC), SONG KHE NOI HOANG INDUSTRIAL PARK BAC GIANG VNVIVI WEI"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "1470 VALLEY VISTA DR SUITE 111DIAMO ND BAR, CA DIAMOND BAR CA91764 USCHERRY XIAO"
+       },
+       "identifiers": [
+        {
+         "value": "MFGTVNLAX5368160",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "2vmiDSaU3gN6jPoLWkj7mw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 14651.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-03-03']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "value": "LOT B1 (FACTORY RENTAL FROM PHUONG BAC STEEL JSC), SONG KHE NOI HOANG INDUSTRIAL PARK BAC GIANG VNVIVI WEI"
+       },
+       "receiver_address": {
+        "city": "West Hollywood",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD # 30327 WEST HOLLYWOOD CA90069-410 USVIVI WEI"
+       },
+       "identifiers": [
+        {
+         "value": "MFGTVNCHI5320064",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "c0uhZFFVsdMP9nKgBlTmrA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 14651.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-01-27']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "value": "LOT B1 (FACTORY RENTAL FROM PHUONG BAC STEEL JSC), SONG KHE NOI HOANG INDUSTRIAL PARK BAC GIANG VNVIVI WEI"
+       },
+       "receiver_address": {
+        "city": "West Hollywood",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD # 30327 WEST HOLLYWOOD CA90069-410 USVIVI WEI"
+       },
+       "identifiers": [
+        {
+         "value": "MFGTVNCHI5300094",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "cpJTAMUk_1o4WvHkCiEzqg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 12586.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-01-26']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "value": "LOT B1 (FACTORY RENTAL FROM PHUONG BAC STEEL JSC), SONG KHE NOI HOANG INDUSTRIAL PARK BAC GIANG VNVIVI WEI"
+       },
+       "receiver_address": {
+        "city": "West Hollywood",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD # 30327 WEST HOLLYWOOD CA90069-410 USVIVI WEI"
+       },
+       "identifiers": [
+        {
+         "value": "MFGTVNCHI5296200",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "1mw36gbXGOeG5iklrPZhkg",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 14651.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-01-14']",
+       "departure_address": {
+        "value": "Hsia Men"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "value": "LOT B1 (FACTORY RENTAL FROM PHUONG BAC STEEL JSC), SONG KHE NOI HOANG INDUSTRIAL PARK BAC GIANG VNVIVI WEI"
+       },
+       "receiver_address": {
+        "city": "West Hollywood",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD # 30327 WEST HOLLYWOOD CA90069-410 USVIVI WEI"
+       },
+       "identifiers": [
+        {
+         "value": "MFGTVNCHI5286807",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Cl8zct5WcP2CCCbhpVl51w",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 12586.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-01-06']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "value": "LOT B1 (FACTORY RENTAL FROM PHUONG BAC STEEL JSC), SONG KHE NOI HOANG INDUSTRIAL PARK BAC GIANG VNVIVI WEI"
+       },
+       "receiver_address": {
+        "city": "West Hollywood",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD # 30327 WEST HOLLYWOOD CA90069-410 USVIVI WEI"
+       },
+       "identifiers": [
+        {
+         "value": "MFGTVNCHI5282627",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "ALFA SOLAR ENERGY INC.",
+     "names": [
+      "ALFA SOLAR ENERGY INC.",
+      "GoSolar Energy Inc."
+     ],
+     "entity_id": "1ZEisyViZbhl41CHKx7Ffw",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "1ZEisyViZbhl41CHKx7Ffw",
+       "entity_url": "https://graph.sayari.com/resource/entity/1ZEisyViZbhl41CHKx7Ffw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/1ZEisyViZbhl41CHKx7Ffw"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+      "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH LETSOLAR VIệT NAM",
+     "names": [
+      "CôNG TY TNHH LETSOLAR VIệT NAM",
+      "LETSOLAR VIETNAM COMPANY LIMITED",
+      "YIYIN SOLAR VIETNAM COMPANY LIMITED",
+      "LETSOLAR VIETNAM COMPANY LTD",
+      "YIYIN SOLAR VIETNAM CO., LTD.",
+      "CôNG TY TNHH YIYIN SOLAR VIệT NAM",
+      "LETSOLAR VIETNAM",
+      "LETSOLAR VIETNAM COMPANY"
+     ],
+     "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+     "countries": [
+      "VNM",
+      "CHN",
+      "HKG",
+      "CHE",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+       "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "oNXOVaUlgAofESQ8wIbvKA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, HTS: 8541430010",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8025.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-08-12']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LOT B1 , SONG KHE - NOI HOANG INDUSTRIAL PARK (NORTHERN AREA), SO BAC GIANG VN"
+       },
+       "receiver_address": {
+        "city": "Roanoke",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "700 HENRIETTA CREEK RD. ROANOKE TX 76262 US"
+       },
+       "identifiers": [
+        {
+         "value": "EXDO65T0076653",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "ALLIANCE SPORTS GROUP LP",
+     "names": [
+      "ALLIANCE SPORTS GROUP LP",
+      "ALLIANCE CONSUMER GROUP",
+      "ALLIANCE CONSUMER GROUP LLC",
+      "ALLIANCE CONSUMER GROUP INTERNATIONAL",
+      "Alliance Sports Group L P",
+      "ALLIANCE SPORTS GROUP",
+      "Bollinger Industries, L.P.",
+      "ALLIAN",
+      "Lure Eyes",
+      "ALLIANCE CONSUMER GROUP, L.P.",
+      "ACG brands",
+      "ASG BRANDS",
+      "BOLLINGER FITNESS",
+      "Mammoth Cargo Management",
+      "Southwest Creative",
+      "KEYPOINT DESIGN",
+      "iPROTEC",
+      "NEBO",
+      "WEATHER-RITE OUTDOOR",
+      "QUARROW",
+      "WEATHER-RITE",
+      "SOLAIRE",
+      "TRUE UTILITY",
+      "THE SKY",
+      "ALLIANCE SPORTS GROUP, L. P. DIV BOLLINGER INDUSTRIES"
+     ],
+     "entity_id": "dgaHZWx70pWde86OotM2Kw",
+     "countries": [
+      "USA",
+      "GBR",
+      "MEX",
+      "AUS",
+      "CAN"
+     ],
+     "quality_flags": [],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "dgaHZWx70pWde86OotM2Kw",
+       "entity_url": "https://graph.sayari.com/resource/entity/dgaHZWx70pWde86OotM2Kw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/dgaHZWx70pWde86OotM2Kw"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "vXIK4Y2GxB3kpOr7GofDNA",
+      "entity_url": "https://graph.sayari.com/resource/entity/vXIK4Y2GxB3kpOr7GofDNA"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 1055,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Letsolar Vietnam",
+    "shipper_name": "CôNG TY TNHH LETSOLAR VIệT NAM",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6ImUxMDUxMmU5OTA4MDFhMjBhZjFlZjZkNjc2OGYxOTc2MDgwNjRlNGNjOGY2MGNkNmFmODdjYjI0NjA3N2ZjNWUiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving Chinese entities, try both the Chinese name and known English/trade names in the Sayari API — there is no standardized Romanization.",
+   "The administrative division prefix in a Chinese company name indicates registration level, not headquarters location.",
+   "National-level companies (no geographic prefix or parenthetical prefix) are typically large SOEs or nationally significant enterprises."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

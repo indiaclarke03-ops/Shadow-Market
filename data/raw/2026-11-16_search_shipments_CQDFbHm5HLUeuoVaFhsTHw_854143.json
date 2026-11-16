@@ -1,0 +1,1975 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Newway Vietnam",
+  "shipper_name": "CôNG TY TNHH CôNG NGHệ NăNG LượNG NEWWAY VIệT NAM",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:25:02+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 4,
+  "items": [
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH CôNG NGHệ NăNG LượNG NEWWAY VIệT NAM",
+     "names": [
+      "CôNG TY TNHH CôNG NGHệ NăNG LượNG NEWWAY VIệT NAM",
+      "NEWWAY VIETNAM ENERGY TECHNOLOGY COMPANY LIMITED",
+      "NEWWAY POWER TECHNOLOGY VIETNAM COMPANY LIMITED",
+      "Newway Vietnam Energy Technology Company Limited"
+     ],
+     "entity_id": "CQDFbHm5HLUeuoVaFhsTHw",
+     "countries": [
+      "VNM",
+      "CHN",
+      "HKG",
+      "TWN",
+      "CHE"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "CQDFbHm5HLUeuoVaFhsTHw",
+       "entity_url": "https://graph.sayari.com/resource/entity/CQDFbHm5HLUeuoVaFhsTHw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/CQDFbHm5HLUeuoVaFhsTHw"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "C_2pumuGk0mfPDO5w4XqnQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES OR MA100W FOLDING SOLAR PANEL TIEN DU D, ISTRICT BAC NINH PROVINCE,VIETNAM VIA NITEO, LIMITED"
+       ],
+       "weight": {
+        "value": 17463.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-01-15']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "value": "FACTORY NO.3 LOT F TAN HONG - HOAN SON INDUSTRIAL TEPARK CLUSTER HOAN SON COMMUNE"
+       },
+       "receiver_address": {
+        "city": "Nashville",
+        "state": "US-TN",
+        "country": "USA",
+        "value": "2920 BERRY HILL DR. SUITE 300 NASHVILLE TN 37204 USA"
+       },
+       "identifiers": [
+        {
+         "value": "YMJAE491310950A",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "4PATRIOTS, LLC",
+     "names": [
+      "4PATRIOTS, LLC",
+      "4PATRIOTS LLC",
+      "REBOOT MARKETING LLC",
+      "4PATRIOTS",
+      "4Patriots, LLC, LLC",
+      "PatriotPowerGenerator.com",
+      "Water4Patriots.com",
+      "REBOOT MARKETING, LLC",
+      "SurvivalSeeds4Patriots.com",
+      "PATRIOT ALLIANCE",
+      "ULTIMATE-TATTOO-BIBLE.COM",
+      "HARD COPY WAREHOUSE",
+      "DIETSOLUTIONHARDCOPY.COM",
+      "FATBURNINGFURNACEHARDCOPY.COM",
+      "FLATBELLYSOLUTIONHARDCOPY.COM",
+      "FOOD4PATRIOTS.COM",
+      "FOODLAYAWAY.COM",
+      "HOMEMADEENERGYDVD.COM",
+      "LIBERTYSEEDVAULT.COM",
+      "PATRIOTPOWERGENERATOR.COM",
+      "POWER4PATRIOTS.COM",
+      "SURVIVALSEEDS4PATRIOTS.COM",
+      "WATER4PATRIOTS.COM"
+     ],
+     "entity_id": "2SNRub6NuziMoMSTwJIpSQ",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "mass_address_usage",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "2SNRub6NuziMoMSTwJIpSQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/2SNRub6NuziMoMSTwJIpSQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/2SNRub6NuziMoMSTwJIpSQ"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "CQDFbHm5HLUeuoVaFhsTHw",
+      "entity_url": "https://graph.sayari.com/resource/entity/CQDFbHm5HLUeuoVaFhsTHw"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH CôNG NGHệ NăNG LượNG NEWWAY VIệT NAM",
+     "names": [
+      "CôNG TY TNHH CôNG NGHệ NăNG LượNG NEWWAY VIệT NAM",
+      "NEWWAY VIETNAM ENERGY TECHNOLOGY COMPANY LIMITED",
+      "NEWWAY POWER TECHNOLOGY VIETNAM COMPANY LIMITED",
+      "Newway Vietnam Energy Technology Company Limited"
+     ],
+     "entity_id": "CQDFbHm5HLUeuoVaFhsTHw",
+     "countries": [
+      "VNM",
+      "CHN",
+      "HKG",
+      "TWN",
+      "CHE"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "CQDFbHm5HLUeuoVaFhsTHw",
+       "entity_url": "https://graph.sayari.com/resource/entity/CQDFbHm5HLUeuoVaFhsTHw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/CQDFbHm5HLUeuoVaFhsTHw"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "L1R7dujsDb4NKo_KbclJFw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP06#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel 2nd Gen (Stingray), size 204.89*168.5*107.16mm. 100% new#&KXĐ , SP06#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel 2nd Gen (Stingray), kích thước 204.89*168.5*107.16mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 4628.8,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 64982.4,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-28']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG HAI PHONG"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{95BE923A-B6DF-4849-99636CEC6EF54CE8}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "O7fJEoSPBhVPRWRXIMs-UA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP39#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel Mini (Sea Urchin), size 175.43*111.11*11.2mm. 100% new#&KXĐ , SP39#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel Mini (Sea Urchin), kích thước 175.43*111.11*11.2mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 1237.8,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 14202.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-28']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG HAI PHONG"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{5F5191F9-7A69-45F4-B72FE96286982ABD}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "kHmBpJMnSLimLYe53D9i0g",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP13#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel Mini (Sea Urchin), size 175.43*111.11*107.16mm. 100% new#&KXĐ , SP13#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel Mini (Sea Urchin), kích thước 175.43*111.11*107.16mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 4628.8,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 14175.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-28']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG HAI PHONG"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{FAC62C88-5BA4-46E2-BDF6726997593FE2}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "3WSW-UCf61mkpQYhB3H75w",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP15#&Solar panel (Photovoltaic cells assembled into modules), size 152.1*97.5*13.25mm, 100% new#&KXĐ , SP15#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), kích thước 152.1*97.5*13.25mm, hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 4628.8,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 22895.6,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-28']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG HAI PHONG"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{4F817788-3E56-413F-A1BDE99F80A53D99}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "wZds_F3E1XV1et1ntpuHog",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP38#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel Mini (Sea Urchin), size 175.43*111.11*11.2mm. 100% new#&KXĐ , SP38#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel Mini (Sea Urchin), kích thước 175.43*111.11*11.2mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 1237.8,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 14202.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-28']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG HAI PHONG"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{605B6AEF-82F9-418B-A6ADB40A0C0CA9B3}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "X_-obnIenP1LiQjHnFaVdQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP06#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel 2nd Gen (Stingray), size 204.89*168.5*107.16mm. 100% new#&KXĐ , SP06#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel 2nd Gen (Stingray), kích thước 204.89*168.5*107.16mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 3207.9,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 64982.4,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG HAI PHONG"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{0BA9499A-67CB-4EE1-BA4404B32A138B18}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "dImqk8z-_sopjWx3u1FLnw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP13#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel Mini (Sea Urchin), size 175.43*111.11*107.16mm. 100% new#&KXĐ , SP13#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel Mini (Sea Urchin), kích thước 175.43*111.11*107.16mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 621.9,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 14175.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG HAI PHONG"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{CF1D2C62-27AF-465E-93F51985C621C49E}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "gjc-OJid2z94jMHqz6dXbw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP13#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel Mini (Sea Urchin), size 175.43*111.11*107.16mm. 100% new#&KXĐ , SP13#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel Mini (Sea Urchin), kích thước 175.43*111.11*107.16mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 8785.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 33075.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-15']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{96DC80D2-96E9-4602-A39C3C95DB2E8B17}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "MR6zx17YBNrP40Ys7SGrsA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP14#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel Mini (Sea Urchin), size 175.43*111.11*107.16mm. 100% new#&KXĐ , SP14#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel Mini (Sea Urchin), kích thước 175.43*111.11*107.16mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 8785.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 47250.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-15']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{699538EF-D5BB-4EA0-B49D32B4624B988B}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "fE-d0rkfSs45jJsX_ufCOQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP06#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel 2nd Gen (Stingray), size 204.89*168.5*107.16mm. 100% new#&KXĐ , SP06#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel 2nd Gen (Stingray), kích thước 204.89*168.5*107.16mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 8785.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 64982.4,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-15']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{FD9E17EA-FEBA-4E0D-A783C1B20D12C9A3}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "oOX9lUtjGCYniOMZ11lO6w",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP05#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel 2nd Gen (Stingray), size 204.89*168.5*107.16mm. 100% new#&KXĐ , SP05#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel 2nd Gen (Stingray), kích thước 204.89*168.5*107.16mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 641.58,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 12996.48,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-14']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG HAI PHONG"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{2A2FA8EB-69BC-4F3E-B280AE32E22F6E98}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "K_sLgThPvgK-CslYbP3syw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP10#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel 2nd Gen (Stingray), size 204.89*168.5*107.16mm. 100% new#&KXĐ , SP10#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel 2nd Gen (Stingray), kích thước 204.89*168.5*107.16mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 1069.3,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 21884.8,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-14']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG HAI PHONG"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{43314056-43CB-4E4C-AF115E36B3FA2243}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "hbs4MUIUlNKk_dNZjdqQag",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP14#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel Mini (Sea Urchin), size 175.43*111.11*107.16mm. 100% new#&KXĐ , SP14#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel Mini (Sea Urchin), kích thước 175.43*111.11*107.16mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 8403.2,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 47250.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-08']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{C5A0A5B5-EB47-476D-87B8201440EA06B5}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "xdDmdBkAh-ljslzftXdjbw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP06#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel 2nd Gen (Stingray), size 204.89*168.5*107.16mm. 100% new#&KXĐ , SP06#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel 2nd Gen (Stingray), kích thước 204.89*168.5*107.16mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 8403.2,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 43321.6,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-08']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{C4D45F81-F54E-4F5D-9959ECB796F44D9B}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "H4OO5Wvgyb3gWKinNhYP7w",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP05#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel 2nd Gen (Stingray), size 204.89*168.5*107.16mm. 100% new#&KXĐ , SP05#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel 2nd Gen (Stingray), kích thước 204.89*168.5*107.16mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 1041.08,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 12996.48,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-07']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG HAI PHONG"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{8C9EAE29-927D-49A5-94F9E50F24C8ACC6}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "LhEMV_vDbvxnLQbdvVsbNw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP13#&Solar Panel (Photovoltaic Cells Assembled into Modules), Solar Panel Mini (Sea Urchin), size 175.43*111.11*107.16mm. 100% new#&KXĐ , SP13#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), Solar Panel Mini (Sea Urchin), kích thước 175.43*111.11*107.16mm. hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 2983.3,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 33075.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-07']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG HAI PHONG"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{5BA5F0BF-A1BA-4824-959F1114AEE96A7D}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "iSH3r0oyZ7lRG5OGDx36KA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "SP32#&Solar panels (Photovoltaic cells assembled into modules), size 154*25*117mm, 100% new#&KXĐ , SP32#&Tấm pin năng lượng mặt trời (Tế bào quang điện đã lắp ráp thành các mô-đun), kích thước 154*25*117mm, hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 2983.3,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 44892.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-07']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG HAI PHONG"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tỉnh Bắc Ninh",
+        "country": "VNM",
+        "value": "Nhà xưởng số 3, Lô F, cụm công nghiệp Tân Hồng- Hoàn Sơn, xã Hoàn Sơn, huyện Tiên Du, tỉnh Bắc Ninh , 988520306"
+       },
+       "receiver_address": {
+        "city": "Seattle",
+        "state": "US-WA",
+        "country": "United States Of America Us",
+        "value": "410 TERRY AVENUE N, SEATTLE, WA 98109-5210., UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{C521C983-90CD-434E-80D1ADBDE7475F85}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "Amazon.com Services, Inc",
+     "names": [
+      "Amazon.com Services, Inc",
+      "GOLDEN STATE FC LLC",
+      "AMAZON COM SERVICES INC",
+      "AMAZON.COM.DEDC LLC",
+      "AMAZON COM DEDC LLC",
+      "AMAZON.COM SERVICES LLC",
+      "AMAZON.COM.KYDC LLC",
+      "MAXLEAD INTERNATIONAL LIMITED",
+      "HANGZHOU SENBO APPAREL CO.,LTD",
+      "AMAZON.COM.INDC LLC",
+      "MEI ZHOU JIA JIN KE JI YOU XIAN GONG SI",
+      "AMAZON.COM.SERVICES.INC",
+      "FBA: AMAZON.COM SERVICES, INC.",
+      "JI NAN LITTLE BEE SCM CO., LTD",
+      "FUZHOU FEIWO TRADING CO., LTD",
+      "SOLAR OUTDOORS INVESTMENT LIMITED",
+      "SLEEP INTERNATIONNAL CO., LTD",
+      "OCTAVE TECHNOLOGY LIMITED",
+      "AMAZON.COM INDC LLC",
+      "SPIRICH (HONGKONG) INDUSTRIAL CO., LTD",
+      "SCS DIRECT INC",
+      "GUANGDONG EAGLE GIFTS CO.LTD",
+      "SHENZHEN BUXIANG TECHNOLOGY CO., LTD",
+      "HANGZHOU MANFENG TRADING CO.,LTD",
+      "AMAZON.COM.SERVICES LLC",
+      "HANGZHOU SICHEN NETWORK TECHNOLOGY CO.,LTD",
+      "AMAZON.COM DEDC LLC",
+      "GOLDENSTATE FC LLC",
+      "CLEVA HONG KONG LIMITED",
+      "GUANGDONG EAGLE GIFTS CO., LTD.",
+      "AMAZON.COM.KSDC LLC",
+      "SUNKISS HEALTHCARE ZHEJIANG CO",
+      "AMAZON COM SERVICES, INC",
+      "RUNFORWARD INTERNATIONAL LIMITED",
+      "SHENZHEN MEIYA TECHNOLOGY CO.,LTD",
+      "SHANDONG JINGSHEN TECHNOLOGY CO., LTD",
+      "CS GROUP HOLDINGS LIMITED",
+      "HONG KONG COMFORT ZONE CO., LIMITED",
+      "HAONUO TECHNOLOGY (HONGKONG) CO., LIMITED",
+      "DONGGUAN LONGITE INDUSTRIAL CO., LTD.",
+      "ZHEJIANG JIAHE TOYS CO., LTD.",
+      "YIWU FEIYUAN IMPORT & EXPORT CO.,LTD",
+      "AMAZON.COM.DEDC.LLC",
+      "AMAZON.COM.DEDC, LLC",
+      "SHAOXING VERSAILTEX CO.,LTD.",
+      "WIRE KING HONG KONG LIMITED",
+      "GUANGDONG ICECO ENTERPRISE CO LTD",
+      "Fuzhou Feiwo Trading Co Ltd",
+      "BAYEAGLEEYES (HK) TECHNOLOGY LIMITED",
+      "MAGICASE MFG.CO.,LTD.",
+      "POWERGRAND FURNITURE CO., LTD",
+      "SHENZHEN BUXIANG TECHNOLOGY CO., LTD.",
+      "PARMEDU CO LIMITED",
+      "TRADEFORCE INC.",
+      "GOLDEN STATEFC LLC",
+      "AMAZON .COM SERVICES INC",
+      "WUXI HAITU INTERNATIONAL TRADING CO.,LTD",
+      "XINZE ELECTRONIC LIMITED",
+      "MAX LEAD INTERNATIONAL LIMITED",
+      "CUNFANG TRADING CO., LTD OF YIWU CITY",
+      "SUNSHINE GLOBAL LTD",
+      "SHAOXING VERSAILTEX CO.,LTD",
+      "SHENZHEN NAZIYA E COMMERCE CO.,LTD",
+      "HONG KONG COMFORT ZONE CO LTD",
+      "JIANGSU HOLLY YONGCHANG CO LTD",
+      "ETAKIN E-COMMERCE CO. LIMITED",
+      "HUIZHOU UBC PACKAGE PRODUCTS CO.,LTD",
+      "GUANGDONG EAGLE GIFTS CO., LTD",
+      "TAIYUAN PUXI TECHNOLOGY CO., LTD",
+      "AMAZON .COM.SERVICES,INC.",
+      "AMAZON.COM.DEDC, INC",
+      "Amazon Com Dedc Llc",
+      "SHANGHAI HOMAX CO.,LTD",
+      "DOUBLE TREE TRADING LIMITED",
+      "ZESHENGHUA CO., LIMITED",
+      "GOLDEN STATE FC LLC,",
+      "ZENUO TECHNOLOGY (HONGKONG) CO., LIMITED",
+      "HANGZHOU CHAKME COMMODITY CO., LTD.",
+      "FBAAMAZON.COM SERVICES INC.",
+      "GOLDEN STATE FC LLC.",
+      "GREEN PACKAGING CO.,LTD",
+      "AMAZON .COM SERVICES, INC",
+      "GLOBEGOU WZ CO.,LTD",
+      "EUROPE PAPER ASIA CO LTD",
+      "ANSJER ELECTRONICS CO., LTD",
+      "SHANDONG JINGSHEN TECHNOLOGY CO.,LTD",
+      "CE COMPASS INC",
+      "HANDAN LESI IMP&EXP TRADING CO",
+      "AMAZON ,COM SERVICES INC",
+      "CIXI DESA ECOMMERCE CO.,LTD",
+      "TRADEFORCE INC",
+      "AMAZON.COH DEDC LLC",
+      "FOSHAN CITY KAI YU FENG TRADE CO., LTD.",
+      "ROCKWATER LIMITED",
+      "HANGZHOU SENBO APPAREL CO., LTD",
+      "BOTENSH (HK) TRADING LIMITED",
+      "ASAN NEW CENTURY TRADING LIMITED",
+      "HANGZHOU YONGFENG DOWN PRODUCTS CO., LTD"
+     ],
+     "entity_id": "nsOQk-UW5ekxgKAkHXcgMA",
+     "countries": [
+      "USA",
+      "JPN",
+      "CHN",
+      "KOR",
+      "GBR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "bis_addresses_high_diversion_risk",
+       "chinese_soe_adjacent",
+       "controlled_by_mass_business_registration",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "exports_bis_high_priority_items_direct",
+       "exports_conflict_minerals",
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_coffee",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "mass_address_usage",
+       "ofac_sdn_mex_dto_sanctioned_adjacent",
+       "psa_exports_bis_high_priority_items_direct",
+       "psa_exports_conflict_minerals",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_coffee",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_ofac_sdn_mex_dto_sanctioned_adjacent",
+       "sanctioned_adjacent",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "nsOQk-UW5ekxgKAkHXcgMA",
+       "entity_url": "https://graph.sayari.com/resource/entity/nsOQk-UW5ekxgKAkHXcgMA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/nsOQk-UW5ekxgKAkHXcgMA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "CQDFbHm5HLUeuoVaFhsTHw",
+      "entity_url": "https://graph.sayari.com/resource/entity/CQDFbHm5HLUeuoVaFhsTHw"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH CôNG NGHệ NăNG LượNG NEWWAY VIệT NAM",
+     "names": [
+      "CôNG TY TNHH CôNG NGHệ NăNG LượNG NEWWAY VIệT NAM",
+      "NEWWAY VIETNAM ENERGY TECHNOLOGY COMPANY LIMITED",
+      "NEWWAY POWER TECHNOLOGY VIETNAM COMPANY LIMITED",
+      "Newway Vietnam Energy Technology Company Limited"
+     ],
+     "entity_id": "CQDFbHm5HLUeuoVaFhsTHw",
+     "countries": [
+      "VNM",
+      "CHN",
+      "HKG",
+      "TWN",
+      "CHE"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "CQDFbHm5HLUeuoVaFhsTHw",
+       "entity_url": "https://graph.sayari.com/resource/entity/CQDFbHm5HLUeuoVaFhsTHw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/CQDFbHm5HLUeuoVaFhsTHw"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "yRzvr8YNUdO4Wd8Ti__iBg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "FY385#&Solar panel, (Photovoltaic cells assembled into modules with bracket), Model: VMA6600; size:89.89*132.01*9.30mm,VMA6600-10000Z",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 97.2,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 2883.76,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-28']",
+       "departure_address": {
+        "city": "Newway",
+        "country": "VNM",
+        "value": "CONG TY TNHH CNLN NEWWAY VIET NAM"
+       },
+       "arrival_address": {
+        "country": "USA",
+        "value": "FUYU PRECISION COMPONENT CO.,LTD"
+       },
+       "shipper_address": {
+        "city": "Du",
+        "state": "Tinh Bac Ninh",
+        "country": "VNM",
+        "value": "NHA XUONG SO 3 LO F CUM CONG NGHIEP TAN HONG-HOAN SON XA HOAN SON HUYEN TIEN DU TINH BAC NINH VIET NAM VN"
+       },
+       "receiver_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô M1, Lô F và Lô T1, KCN Quang Châu, Phường Vân Trung, Thị xã Việt Yên, tỉnh Bắc Giang, Việt Nam"
+       },
+       "identifiers": [
+        {
+         "value": "106760333520",
+         "type": "vnm_shipment_declaration_number"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "CôNG TY TNHH CôNG NGHệ CHíNH XáC FUYU",
+     "names": [
+      "CôNG TY TNHH CôNG NGHệ CHíNH XáC FUYU",
+      "FUYU PRECISION TECHNOLOGY CO., LTD",
+      "FUYU PRECISION COMPONENT COMPANY LIMITED",
+      "FUYU PRECISION COMPONENT CO.,LTD.",
+      "FUYU PRECISION COMPONENT CO.,LTD",
+      "FUYU FACTURITION TECHNOLOGY CO., LTD",
+      "FUYU PRECISION COMPONENT CO LTD",
+      "FUYU PRECISION TECHNOLOGY COMPANY LIMITED",
+      "FUYU PRECISION COMPONENT COMPANY LI",
+      "FUYU PRECISION COMPONENT COMPANY",
+      "FUYU PRECISION COMPONENTS CO LTD",
+      "FUYU PRECISION COMPONENT LIMITED",
+      "FUYU PRECISION COMPONENT CO. LTD.",
+      "FUYU PRECISION COMPONENT CO.LTD",
+      "FUYU PREC COMPOCO.LTD",
+      "FUYU PRECISION COMPONENT CO., LTD",
+      "FUYU PRECISION COMPONENT CO. LTD",
+      "FUYU PRECISION COMPONENT COMPANY LIFUYU PRECISION COMPONENTCOMPANY",
+      "FUYU PRECISION COMPONENT LIMITE D LT M1,LT F & LT"
+     ],
+     "entity_id": "XWuekmaCwifqcxTIGwpWSQ",
+     "countries": [
+      "VNM",
+      "HKG",
+      "CHN",
+      "MYS",
+      "JPN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "aspi_uyghur_forced_labor_report_entity_adjacent",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "exports_bis_high_priority_items_critical_components_indirect",
+       "exports_bis_high_priority_items_indirect",
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "exports_to_bis_addresses_high_diversion_risk",
+       "forced_labor_aspi_origin_direct",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_from_usa_bis_entity",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_bis_high_priority_items_critical_components_indirect",
+       "psa_exports_bis_high_priority_items_indirect",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_exports_to_bis_addresses_high_diversion_risk",
+       "psa_forced_labor_aspi_origin_direct",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_from_bis_addresses_high_diversion_risk",
+       "psa_imports_from_usa_bis_entity",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "XWuekmaCwifqcxTIGwpWSQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/XWuekmaCwifqcxTIGwpWSQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/XWuekmaCwifqcxTIGwpWSQ"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "CQDFbHm5HLUeuoVaFhsTHw",
+      "entity_url": "https://graph.sayari.com/resource/entity/CQDFbHm5HLUeuoVaFhsTHw"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "NEWWAY POWER TECHNOLOGY VIETNAM LTD",
+     "entity_id": "W9dF7DjGTFjaY0vMPbt4cg",
+     "quality_flags": [
+      "missing_country"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "W9dF7DjGTFjaY0vMPbt4cg",
+       "entity_url": "https://graph.sayari.com/resource/entity/W9dF7DjGTFjaY0vMPbt4cg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/W9dF7DjGTFjaY0vMPbt4cg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "B1mkgJ3zpsdbPbUZToAoJw",
+       "departure_country": [
+        "TWN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "60W FOLDING SOLAR PANEL",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 6604.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-11-27']",
+       "departure_address": {
+        "city": "Kaohsiung",
+        "country": "TWN",
+        "value": "Kaohsiung"
+       },
+       "arrival_address": {
+        "city": "Oakland",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Oakland, California"
+       },
+       "shipper_address": {
+        "value": "FACTORY NO.3, LOT F,TAN HONG HOAN SON INDUSTRIAL PARK CLUSTER, TIEN DU BA16000 VNDANA"
+       },
+       "receiver_address": {
+        "city": "Nashville",
+        "country": "USA",
+        "value": "2920 BERRY HILL DR., SUITE 300 NASHVILLE TN37204 USLESLEY HERMANN"
+       },
+       "identifiers": [
+        {
+         "value": "LGWDHPHK24100073",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "4PATRIOTS,LLC",
+     "entity_id": "Q-bvlW_EAZIR3EbYyomKDA",
+     "countries": [
+      "USA"
+     ],
+     "quality_flags": [],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Q-bvlW_EAZIR3EbYyomKDA",
+       "entity_url": "https://graph.sayari.com/resource/entity/Q-bvlW_EAZIR3EbYyomKDA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Q-bvlW_EAZIR3EbYyomKDA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "W9dF7DjGTFjaY0vMPbt4cg",
+      "entity_url": "https://graph.sayari.com/resource/entity/W9dF7DjGTFjaY0vMPbt4cg"
+     }
+    },
+    "quality_flags": []
+   }
+  ],
+  "total_available": 1448,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Newway Vietnam",
+    "shipper_name": "CôNG TY TNHH CôNG NGHệ NăNG LượNG NEWWAY VIệT NAM",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6IjkyMDMyM2RkZWRkMzI3NWIwNzk1NmE3MjhmZTcwODVlZGM5YWU5YzhkMjIwNTk5NTY0ZmMxMWJjOWJiZGY0ZjkiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "Always search Sayari Graph for all linguistic variants of Swiss legal form suffixes (AG/SA, GmbH/Sàrl/Sagl) to avoid missing entity matches",
+   "Be aware that Swiss foundations (Stiftungen) are frequently used for wealth structuring and may appear in UBO chains — they are legal persons registered in the commercial register",
+   "Sole proprietorships below CHF 100,000 revenue may not appear in any registry"
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

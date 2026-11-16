@@ -1,0 +1,1785 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Vietnam Sunergy Joint Stock",
+  "shipper_name": "VIETNAM SUNERGY JOINT STOCK",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:24:27+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 4,
+  "items": [
+   {
+    "supplier": {
+     "name": "CôNG TY Cổ PHầN VIETNAM SUNERGY",
+     "names": [
+      "CôNG TY Cổ PHầN VIETNAM SUNERGY",
+      "VIETNAM SUNERGY JOINT STOCK COMPANY",
+      "VSUN",
+      "CÔNG TY TNHH VIETNAM SUNERGY",
+      "VIETNAM SUNERGY COMPANY LIMITED",
+      "VIETNAM SUNERGY"
+     ],
+     "entity_id": "awSZoF3bH2sGFY69M7jDxA",
+     "countries": [
+      "VNM",
+      "USA",
+      "CHN",
+      "IDN",
+      "CHE"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "awSZoF3bH2sGFY69M7jDxA",
+       "entity_url": "https://graph.sayari.com/resource/entity/awSZoF3bH2sGFY69M7jDxA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/awSZoF3bH2sGFY69M7jDxA"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "VfqcaI10DBAyaz-nibxCfg",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE HS CODE : 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 38376.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-06-25']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Honolulu",
+        "state": "US-HI",
+        "country": "USA",
+        "value": "Honolulu, Hawaii"
+       },
+       "shipper_address": {
+        "city": "Bac",
+        "state": "Ninh",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM INDU STRIAL PARKNENH WARD,BAC NINH,VN"
+       },
+       "receiver_address": {
+        "city": "Fremont",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "909 CORPORATE WAY, FREMONT,CA 94539 , UNITED STATES,FREMONT,CALIFORNIA 94539,US"
+       },
+       "identifiers": [
+        {
+         "value": "MLILMSG26051953",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "TOYO AMERICA LLC",
+     "entity_id": "6iXx96N7sT8jrZf1lT11TQ",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "mass_address_usage",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "6iXx96N7sT8jrZf1lT11TQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/6iXx96N7sT8jrZf1lT11TQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/6iXx96N7sT8jrZf1lT11TQ"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "awSZoF3bH2sGFY69M7jDxA",
+      "entity_url": "https://graph.sayari.com/resource/entity/awSZoF3bH2sGFY69M7jDxA"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY Cổ PHầN VIETNAM SUNERGY",
+     "names": [
+      "CôNG TY Cổ PHầN VIETNAM SUNERGY",
+      "VIETNAM SUNERGY JOINT STOCK COMPANY",
+      "VSUN",
+      "CÔNG TY TNHH VIETNAM SUNERGY",
+      "VIETNAM SUNERGY COMPANY LIMITED",
+      "VIETNAM SUNERGY"
+     ],
+     "entity_id": "awSZoF3bH2sGFY69M7jDxA",
+     "countries": [
+      "VNM",
+      "USA",
+      "CHN",
+      "IDN",
+      "CHE"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "awSZoF3bH2sGFY69M7jDxA",
+       "entity_url": "https://graph.sayari.com/resource/entity/awSZoF3bH2sGFY69M7jDxA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/awSZoF3bH2sGFY69M7jDxA"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "65dFqrYg_TqWmVGU1pMPXQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE VSUNN-BMH-DG (MONO)"
+       ],
+       "weight": {
+        "value": 298080.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-03-10']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "city": "Nenh",
+        "state": "Bac Ninh Pr Ovince",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM INDU STRIAL PARK, NENH WARD, BAC NINH PR OVINCE, VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Newark",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "39899 BALENTINE DR STE 315, NEWARK, CA 94560 ."
+       },
+       "identifiers": [
+        {
+         "value": "SYLC3AS2601019",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "2OHb2tWpnzvC85JuHvkgiA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 298080.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-26']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "city": "Bac Ninh",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM IND BAC NINH BAC NINH VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Newark",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 315 39899 BALENTINE DRIVE NEWARK CA 94560 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6440294590",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "8TbjO0MO3eBZZoqi1ZcAfw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 298080.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-26']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "city": "Bac Ninh",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM IND BAC NINH BAC NINH VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Newark",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 315 39899 BALENTINE DRIVE NEWARK CA 94560 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6440495130",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "KaNCsXk1_BjTLbW6R3bUVg",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 298080.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-22']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "city": "Bac Ninh",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM IND BAC NINH BAC NINH VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Newark",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 315 39899 BALENTINE DRIVE NEWARK CA 94560 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6438897510",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "POkczmtBY7cQiQkchsTHKw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 298080.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-22']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "city": "Bac Ninh",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM IND BAC NINH BAC NINH VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Newark",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 315 39899 BALENTINE DRIVE NEWARK CA 94560 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6438897519",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "7XLgwhdHwQ6qrVyrgXIoLA",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 298080.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-20']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "city": "Bac Ninh",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM IND BAC NINH BAC NINH VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Newark",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 315 39899 BALENTINE DRIVE NEWARK CA 94560 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6439071820",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "mXNcSCRQ4juwBw32jO2Jsw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 298080.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-20']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "city": "Bac Ninh",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM IND BAC NINH BAC NINH VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Newark",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 315 39899 BALENTINE DRIVE NEWARK CA 94560 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6439072090",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "YLjq_bNHz_cZZs45aUdPCQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE VSUNN-BMH-DG (MONO)"
+       ],
+       "weight": {
+        "value": 298080.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-17']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "city": "Nenh",
+        "state": "Bac Ninh Pr Ovince",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM INDU STRIAL PARK, NENH WARD, BAC NINH PR OVINCE, VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Newark",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "39899 BALENTINE DR STE 315, NEWARK, CA 94560 ."
+       },
+       "identifiers": [
+        {
+         "value": "SYLC3AS2512048",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "8QpKS6dPQ_UBdDYot5SBSw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE VSUNN-BMH-DG (MONO)"
+       ],
+       "weight": {
+        "value": 298080.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-17']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "city": "Nenh",
+        "state": "Bac Ninh Pr Ovince",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM INDU STRIAL PARK, NENH WARD, BAC NINH PR OVINCE, VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Newark",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "39899 BALENTINE DR STE 315, NEWARK, CA 94560 ."
+       },
+       "identifiers": [
+        {
+         "value": "SYLC3AS2512043",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "adDXRA4EPgLBJxCBznNxHQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 300608.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-13']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Bac Ninh",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM IND BAC NINH BAC NINH VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Newark",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 315 39899 BALENTINE DRIVE NEWARK CA 94560 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6440228980",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "vE1-XL39jf_5Ga5-8jXvJw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE VSUNN-BMHR-DG (MONO)"
+       ],
+       "weight": {
+        "value": 93909.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-13']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Bac Ninh",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM IND BAC NINH BAC NINH VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Newark",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 315 39899 BALENTINE DRIVE NEWARK CA 94560 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6440211910",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "CôNG TY Cổ PHầN VIETNAM SUNERGY",
+     "names": [
+      "CôNG TY Cổ PHầN VIETNAM SUNERGY",
+      "VIETNAM SUNERGY JOINT STOCK COMPANY",
+      "VSUN",
+      "CÔNG TY TNHH VIETNAM SUNERGY",
+      "VIETNAM SUNERGY COMPANY LIMITED",
+      "VIETNAM SUNERGY"
+     ],
+     "entity_id": "awSZoF3bH2sGFY69M7jDxA",
+     "countries": [
+      "VNM",
+      "USA",
+      "CHN",
+      "IDN",
+      "CHE"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "awSZoF3bH2sGFY69M7jDxA",
+       "entity_url": "https://graph.sayari.com/resource/entity/awSZoF3bH2sGFY69M7jDxA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/awSZoF3bH2sGFY69M7jDxA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "awSZoF3bH2sGFY69M7jDxA",
+      "entity_url": "https://graph.sayari.com/resource/entity/awSZoF3bH2sGFY69M7jDxA"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "VSUN SOLAR USA INC",
+     "entity_id": "djCmE3u60JENdxarigI7fg",
+     "countries": [
+      "USA",
+      "CHN",
+      "CAN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "djCmE3u60JENdxarigI7fg",
+       "entity_url": "https://graph.sayari.com/resource/entity/djCmE3u60JENdxarigI7fg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/djCmE3u60JENdxarigI7fg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "B1o7wC3uwoi_s6mqNG-Syw",
+       "departure_country": [
+        "TWN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 307008.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-28']",
+       "departure_address": {
+        "city": "Kaohsiung",
+        "country": "TWN",
+        "value": "Kaohsiung"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Fremont",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "909 CORPORATE WAY, FREMONT, CA 94539"
+       },
+       "receiver_address": {
+        "city": "Nenh",
+        "state": "Bac Ninh Province",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM INDUSTRIAL PARK, NENH WARD, BAC NINH PROVINCE, VIETNAM"
+       },
+       "identifiers": [
+        {
+         "value": "EGLV236600058543",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "c_2h_Gf8r5B-suLrMrGl2Q",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 307008.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-28']",
+       "departure_address": {
+        "city": "Yantian",
+        "country": "CHN",
+        "value": "Yantian"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Fremont",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "909 CORPORATE WAY, FREMONT, CA 94539"
+       },
+       "receiver_address": {
+        "city": "Nenh",
+        "state": "Bac Ninh Province",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM INDUSTRIAL PARK, NENH WARD, BAC NINH PROVINCE, VIETNAM"
+       },
+       "identifiers": [
+        {
+         "value": "EGLV236500659863",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "n1B-Wewi-Rft_Olic7unXQ",
+       "departure_country": [
+        "TWN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 307008.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-28']",
+       "departure_address": {
+        "city": "Kaohsiung",
+        "country": "TWN",
+        "value": "Kaohsiung"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Fremont",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "909 CORPORATE WAY, FREMONT, CA 94539"
+       },
+       "receiver_address": {
+        "city": "Nenh",
+        "state": "Bac Ninh Province",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM INDUSTRIAL PARK, NENH WARD, BAC NINH PROVINCE, VIETNAM"
+       },
+       "identifiers": [
+        {
+         "value": "EGLV236500662945",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "-8Es1l6nxadh2AeZtXuhEw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 307008.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-28']",
+       "departure_address": {
+        "city": "Yantian",
+        "country": "CHN",
+        "value": "Yantian"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Fremont",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "909 CORPORATE WAY, FREMONT, CA 94539"
+       },
+       "receiver_address": {
+        "city": "Nenh",
+        "state": "Bac Ninh Province",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM INDUSTRIAL PARK, NENH WARD, BAC NINH PROVINCE, VIETNAM"
+       },
+       "identifiers": [
+        {
+         "value": "EGLV236500661451",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "CôNG TY Cổ PHầN VIETNAM SUNERGY",
+     "names": [
+      "CôNG TY Cổ PHầN VIETNAM SUNERGY",
+      "VIETNAM SUNERGY JOINT STOCK COMPANY",
+      "VSUN",
+      "CÔNG TY TNHH VIETNAM SUNERGY",
+      "VIETNAM SUNERGY COMPANY LIMITED",
+      "VIETNAM SUNERGY"
+     ],
+     "entity_id": "awSZoF3bH2sGFY69M7jDxA",
+     "countries": [
+      "VNM",
+      "USA",
+      "CHN",
+      "IDN",
+      "CHE"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "awSZoF3bH2sGFY69M7jDxA",
+       "entity_url": "https://graph.sayari.com/resource/entity/awSZoF3bH2sGFY69M7jDxA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/awSZoF3bH2sGFY69M7jDxA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "djCmE3u60JENdxarigI7fg",
+      "entity_url": "https://graph.sayari.com/resource/entity/djCmE3u60JENdxarigI7fg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY Cổ PHầN VIETNAM SUNERGY",
+     "names": [
+      "CôNG TY Cổ PHầN VIETNAM SUNERGY",
+      "VIETNAM SUNERGY JOINT STOCK COMPANY",
+      "VSUN",
+      "CÔNG TY TNHH VIETNAM SUNERGY",
+      "VIETNAM SUNERGY COMPANY LIMITED",
+      "VIETNAM SUNERGY"
+     ],
+     "entity_id": "awSZoF3bH2sGFY69M7jDxA",
+     "countries": [
+      "VNM",
+      "USA",
+      "CHN",
+      "IDN",
+      "CHE"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "awSZoF3bH2sGFY69M7jDxA",
+       "entity_url": "https://graph.sayari.com/resource/entity/awSZoF3bH2sGFY69M7jDxA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/awSZoF3bH2sGFY69M7jDxA"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "xL0LrgXv49_ruHgtjY5K0g",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 307008.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-24']",
+       "departure_address": {
+        "city": "Yantian",
+        "country": "CHN",
+        "value": "Yantian"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Nenh",
+        "state": "Bac Ninh Province",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM INDUSTRIAL PARK, NENH WARD, BAC NINH PROVINCE, VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Fremont",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "909 CORPORATE WAY, FREMONT, CA 94539"
+       },
+       "identifiers": [
+        {
+         "value": "EGLV236500606531",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "VD6h4DM7vynKCBrs9jso3g",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE VSUNN-BMH-DG (MONO)"
+       ],
+       "weight": {
+        "value": 307008.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Nenh",
+        "state": "Bac Ninh Pr Ovince",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM INDU STRIAL PARK, NENH WARD, BAC NINH PR OVINCE, VIETNAM"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "909 CORPORATE WAY, FREMONT, CA 9453  ."
+       },
+       "identifiers": [
+        {
+         "value": "SYLC3AS2601002",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "sBIXj3BqZjJ64m7NV58Uxg",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 307008.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-19']",
+       "departure_address": {
+        "value": "Hsia Men"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Bac Ninh",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM IND BAC NINH BAC NINH VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Fremont",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "909 CORPORATE WAY FREMONT CA 94539 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6438404670",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "wiQm8jo64XCmOZovnmxstg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 307008.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-17']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Bac Ninh",
+        "country": "VNM",
+        "value": "LOT III - DONG VANG, DINH TRAM IND BAC NINH BAC NINH VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Fremont",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "909 CORPORATE WAY FREMONT CA 94539 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6437811240",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "VSUN SOLAR USA INC",
+     "entity_id": "djCmE3u60JENdxarigI7fg",
+     "countries": [
+      "USA",
+      "CHN",
+      "CAN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "djCmE3u60JENdxarigI7fg",
+       "entity_url": "https://graph.sayari.com/resource/entity/djCmE3u60JENdxarigI7fg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/djCmE3u60JENdxarigI7fg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "awSZoF3bH2sGFY69M7jDxA",
+      "entity_url": "https://graph.sayari.com/resource/entity/awSZoF3bH2sGFY69M7jDxA"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 4038,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Vietnam Sunergy Joint Stock",
+    "shipper_name": "VIETNAM SUNERGY JOINT STOCK",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6IjFjNGQyNWM3ZDliNzVmOGExMDM1M2VlZTVhYTc1Mjk2ZGE5MDc0YTQ4YjJhNmE5NDI3OGQyYmRjNmNjYTQ4YmIiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving Chinese entities, try both the Chinese name and known English/trade names in the Sayari API — there is no standardized Romanization.",
+   "The administrative division prefix in a Chinese company name indicates registration level, not headquarters location.",
+   "National-level companies (no geographic prefix or parenthetical prefix) are typically large SOEs or nationally significant enterprises."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

@@ -1,0 +1,1723 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Hanwha Solutions",
+  "shipper_name": "HANWHA SOLUTIONS CORPORATION",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:24:27+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 3,
+  "items": [
+   {
+    "supplier": {
+     "name": "HANWHA SOLUTIONS CORPORATION",
+     "names": [
+      "HANWHA SOLUTIONS CORPORATION",
+      "HANWHA SOLUTION CORPORATION",
+      "HANWHA SOLUTIONS CORPORATION.",
+      "Hanwha Chemical",
+      "HANWHA SOLUTIONS",
+      "Hanwha Solutions Co., Ltd.",
+      "한화솔루션(주)",
+      "HANWHA SOLUTIONS CORPORATION.,",
+      "Hanwha Solutions Corp",
+      "Hanwha Solutions",
+      "HANWHA SOLUTIONS CORP.",
+      "한화솔루션",
+      "\"HANWHA SOLUTIONS CORPORATION\"",
+      "HANWHA SOLUTIONS CORPORATION .",
+      "HANWHA SOLUTIONS CORPORATION ,",
+      "HANWHA SOLUTIONS. CORPORATION",
+      "韩华化学株式会社",
+      "Hanwha Chemical Co., Ltd.",
+      "HANWHA SOLUTIONS CO LTD",
+      "HANWA SOLUTIONS CORPORATION 86",
+      "HANWHA CHEMICAL CORPORATION",
+      "HANWHA SOLUTIONS COORPORATION",
+      "HANWHA SOLUTIONS CORPORATION. ,",
+      "HANWHA SOLUTIONS CORPORATION86 CHEONGGYECHEON-RO JUNGGU",
+      "Han Hua Hua Xue Zhu Shi Hui She"
+     ],
+     "entity_id": "pdzYNl_klgGC09od3prCNg",
+     "countries": [
+      "KOR",
+      "JPN",
+      "ITA",
+      "USA",
+      "CAN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owner_of_regulatory_action_entity",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_soe",
+       "psa_owner_of_regulatory_action_entity",
+       "regulatory_action",
+       "sanctioned_adjacent",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "pdzYNl_klgGC09od3prCNg",
+       "entity_url": "https://graph.sayari.com/resource/entity/pdzYNl_klgGC09od3prCNg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/pdzYNl_klgGC09od3prCNg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "2-q-8Jugzts8EQ0lqYkV0Q",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES"
+       ],
+       "weight": {
+        "value": 72889.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-05-08']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEJINCHEON PLANT 202, SANSUSANDAN-RO JINCHEON-GUN CHUNGCHEONGBUK-DO SOUTH KOREA"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 1400 400 SPECTRUM CENTER DRIV IRVINE CA 92618 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6380762270",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "9TGYutKW_lWTAWhQOqwZ-w",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES Q.PEAK DUO XL-G11S.3/595/ BFG/X/069 INVO, ICE NO. HQJC-USA-240322-01 P/O NO. 7000002477, HS CODE: 8541.43",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 49014.0,
+        "unit": "pound"
+       },
+       "arrival_date": "['2024-04-27']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Lwol-myeon",
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEON PLANT 202, SANSUSANDAN 2-RO, LWOL-MYEON JINCHEON-GUN, CHUNGCHEONGBUK-DO, REPUBLIC OF KOREA, 27632"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "400 SPECTRUM CENTER DRIVE, SUITE 1400, IRVINE, CA 92618"
+       },
+       "identifiers": [
+        {
+         "value": "ZIMUSEL71096731",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "7OQ9b7yQ5YAuYXpYUaufEA",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES"
+       ],
+       "weight": {
+        "value": 38889.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-04-26']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEJINCHEON PLANT 202, SANSUSANDAN-RO JINCHEON-GUN CHUNGCHEONGBUK-DO SOUTH KOREA"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 1400 400 SPECTRUM CENTER DRIV IRVINE CA 92618 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6381255251",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "JWgTq2b-fciIUTdV2eEDqw",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES"
+       ],
+       "weight": {
+        "value": 97224.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-04-26']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEJINCHEON PLANT 202, SANSUSANDAN-RO JINCHEON-GUN CHUNGCHEONGBUK-DO SOUTH KOREA"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 1400 400 SPECTRUM CENTER DRIV IRVINE CA 92618 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6381255250",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "w2n108b30hnzHni3FgU-Kw",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES Q.PEAK DUO XL-G11S.3/595/ BFG/X/069 INVO, ICE NO. HQJC-USA-240311-01 P/O NO. 7000002477, HS CODE: 8541.43",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 49014.0,
+        "unit": "pound"
+       },
+       "arrival_date": "['2024-04-24']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Lwol-myeon",
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEON PLANT 202, SANSUSANDAN 2-RO, LWOL-MYEON JINCHEON-GUN, CHUNGCHEONGBUK-DO, REPUBLIC OF KOREA, 27632"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "400 SPECTRUM CENTER DRIVE, SUITE 1400, IRVINE, CA 92618"
+       },
+       "identifiers": [
+        {
+         "value": "ZIMUSEL71095299",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "6ErMYV0iKpxtkO-tEvAQwQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES Q.PEAK DUO XL-G11S.3/590/ BFG/X/069 INVO, ICE NO. HQJC-USA-240304-01 P/O NO. 7000002477, HS CODE: 8541.43",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 343095.0,
+        "unit": "pound"
+       },
+       "arrival_date": "['2024-04-07']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Lwol-myeon",
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEON PLANT 202, SANSUSANDAN 2-RO, LWOL-MYEON JINCHEON-GUN, CHUNGCHEONGBUK-DO, REPUBLIC OF KOREA, 27632"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "400 SPECTRUM CENTER DRIVE, SUITE 1400, IRVINE, CA 92618"
+       },
+       "identifiers": [
+        {
+         "value": "ZIMUSEL71093228",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "lxODV-b5kFFviHFHUdSpSw",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES Q.PEAK DUO XL-G11S.3/590/ BFG/X/069 INVO, ICE NO. HQJC-USA-240226-05 P/O NO. 7000002529, HS CODE: 8541.43",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 98027.0,
+        "unit": "pound"
+       },
+       "arrival_date": "['2024-04-07']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Lwol-myeon",
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEON PLANT 202, SANSUSANDAN 2-RO, LWOL-MYEON JINCHEON-GUN, CHUNGCHEONGBUK-DO, REPUBLIC OF KOREA, 27632"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "400 SPECTRUM CENTER DRIVE, SUITE 1400, IRVINE, CA 92618"
+       },
+       "identifiers": [
+        {
+         "value": "ZIMUSEL71092032",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "d83i-hEqBCV7KSsBAYB_lw",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES Q.PEAK DUO XL-G11S.3/590/ BFG/X/069 INVO, ICE NO. HQJC-USA-240226-06 P/O NO. 7000002477, HS CODE: 8541.43",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 49014.0,
+        "unit": "pound"
+       },
+       "arrival_date": "['2024-04-01']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Lwol-myeon",
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEON PLANT 202, SANSUSANDAN 2-RO, LWOL-MYEON JINCHEON-GUN, CHUNGCHEONGBUK-DO, REPUBLIC OF KOREA, 27632"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "400 SPECTRUM CENTER DRIVE, SUITE 1400, IRVINE, CA 92618"
+       },
+       "identifiers": [
+        {
+         "value": "ZIMUSEL71092956",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "vg9qZRA5d_uaG3zooDe3CA",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES Q.PEAK DUO XL-G11S.3/590/ BFG/X/069 INVO, ICE NO. HQJC-USA-240226-02 P/O NO. 7000002477, HS CODE: 8541.43",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 147041.0,
+        "unit": "pound"
+       },
+       "arrival_date": "['2024-04-01']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Lwol-myeon",
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEON PLANT 202, SANSUSANDAN 2-RO, LWOL-MYEON JINCHEON-GUN, CHUNGCHEONGBUK-DO, REPUBLIC OF KOREA, 27632"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "400 SPECTRUM CENTER DRIVE, SUITE 1400, IRVINE, CA 92618"
+       },
+       "identifiers": [
+        {
+         "value": "ZIMUSEL71092168",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "4gncgqVmUAKhoQWD6HWZiA",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES Q.PEAK DUO XL-G11S.3/595/ BFG/X/069 INVO, ICE NO. HQJC-USA-240226-07 P/O NO. 7000002477, HS CODE: 8541.43",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 98027.0,
+        "unit": "pound"
+       },
+       "arrival_date": "['2024-04-01']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Lwol-myeon",
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEON PLANT 202, SANSUSANDAN 2-RO, LWOL-MYEON JINCHEON-GUN, CHUNGCHEONGBUK-DO, REPUBLIC OF KOREA, 27632"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "400 SPECTRUM CENTER DRIVE, SUITE 1400, IRVINE, CA 92618"
+       },
+       "identifiers": [
+        {
+         "value": "ZIMUSEL71092955",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Nrf37XeBzb_oE3_HmUlyXA",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES Q.PEAK DUO XL-G11S.3/595/ BFG/X/069 INVO, ICE NO. HQJC-USA-240226-04 P/O NO. 7000002477, HS CODE: 8541.43",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 392108.0,
+        "unit": "pound"
+       },
+       "arrival_date": "['2024-04-01']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Lwol-myeon",
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEON PLANT 202, SANSUSANDAN 2-RO, LWOL-MYEON JINCHEON-GUN, CHUNGCHEONGBUK-DO, REPUBLIC OF KOREA, 27632"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "400 SPECTRUM CENTER DRIVE, SUITE 1400, IRVINE, CA 92618"
+       },
+       "identifiers": [
+        {
+         "value": "ZIMUSEL71092029",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "sfGtbl7fQh1pLGnoycxrDg",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES Q.PEAK DUO XL-G11S.3/595/ BFG/X/069 INVO, ICE NO. HQJC-USA-240226-03 P/O NO. 7000002477, HS CODE: 8541.43",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 588163.0,
+        "unit": "pound"
+       },
+       "arrival_date": "['2024-04-01']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Lwol-myeon",
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEON PLANT 202, SANSUSANDAN 2-RO, LWOL-MYEON JINCHEON-GUN, CHUNGCHEONGBUK-DO, REPUBLIC OF KOREA, 27632"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "400 SPECTRUM CENTER DRIVE, SUITE 1400, IRVINE, CA 92618"
+       },
+       "identifiers": [
+        {
+         "value": "ZIMUSEL71091044",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "8n2qp2ff4XWA7_aCWyLKIw",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES Q.PEAK DUO XL-G11S.3/585/ BFG/X/069 INVO, ICE NO. HQJC-USA-240226-01 P/O NO. 7000002387, HS CODE: 8541.43",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 49014.0,
+        "unit": "pound"
+       },
+       "arrival_date": "['2024-04-01']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Lwol-myeon",
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEON PLANT 202, SANSUSANDAN 2-RO, LWOL-MYEON JINCHEON-GUN, CHUNGCHEONGBUK-DO, REPUBLIC OF KOREA, 27632"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "400 SPECTRUM CENTER DRIVE, SUITE 1400, IRVINE, CA 92618"
+       },
+       "identifiers": [
+        {
+         "value": "ZIMUSEL71092030",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "X3zqB1s1Y17hfdJX9Ykp3w",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES"
+       ],
+       "weight": {
+        "value": 91112.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-03-18']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEJINCHEON PLANT 202, SANSUSANDAN-RO JINCHEON-GUN CHUNGCHEONGBUK-DO SOUTH KOREA"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 1400 400 SPECTRUM CENTER DRIV IRVINE CA 92618 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6374764570",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "HANWHA Q CELLS AMERICA INC.",
+     "names": [
+      "HANWHA Q CELLS AMERICA INC.",
+      "Hanwha Q CELLS Americas Holdings Corp",
+      "Hanwha Q Cells America",
+      "HANWHA SOLARONE USA, INC.",
+      "HANWAH Q CELLS AMERICA INC",
+      "HAN WHA Q CELLS AMERICA INC",
+      "HANWHA SOLAR ENERGY AMERICA HOLDINGS CORP.",
+      "HANWHA Q CELLS AMERICAINC.",
+      "HAN WA Q CELLS AMERICA INC."
+     ],
+     "entity_id": "ilgdeqVUTM3GZNxlc-Qb3Q",
+     "countries": [
+      "USA",
+      "KOR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "mass_address_usage",
+       "owned_by_regulatory_action_entity",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "psa_owned_by_soe"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "ilgdeqVUTM3GZNxlc-Qb3Q",
+       "entity_url": "https://graph.sayari.com/resource/entity/ilgdeqVUTM3GZNxlc-Qb3Q"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/ilgdeqVUTM3GZNxlc-Qb3Q"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "pdzYNl_klgGC09od3prCNg",
+      "entity_url": "https://graph.sayari.com/resource/entity/pdzYNl_klgGC09od3prCNg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "HANWHA SOLUTIONS CORPORATION",
+     "names": [
+      "HANWHA SOLUTIONS CORPORATION",
+      "HANWHA SOLUTION CORPORATION",
+      "HANWHA SOLUTIONS CORPORATION.",
+      "Hanwha Chemical",
+      "HANWHA SOLUTIONS",
+      "Hanwha Solutions Co., Ltd.",
+      "한화솔루션(주)",
+      "HANWHA SOLUTIONS CORPORATION.,",
+      "Hanwha Solutions Corp",
+      "Hanwha Solutions",
+      "HANWHA SOLUTIONS CORP.",
+      "한화솔루션",
+      "\"HANWHA SOLUTIONS CORPORATION\"",
+      "HANWHA SOLUTIONS CORPORATION .",
+      "HANWHA SOLUTIONS CORPORATION ,",
+      "HANWHA SOLUTIONS. CORPORATION",
+      "韩华化学株式会社",
+      "Hanwha Chemical Co., Ltd.",
+      "HANWHA SOLUTIONS CO LTD",
+      "HANWA SOLUTIONS CORPORATION 86",
+      "HANWHA CHEMICAL CORPORATION",
+      "HANWHA SOLUTIONS COORPORATION",
+      "HANWHA SOLUTIONS CORPORATION. ,",
+      "HANWHA SOLUTIONS CORPORATION86 CHEONGGYECHEON-RO JUNGGU",
+      "Han Hua Hua Xue Zhu Shi Hui She"
+     ],
+     "entity_id": "pdzYNl_klgGC09od3prCNg",
+     "countries": [
+      "KOR",
+      "JPN",
+      "ITA",
+      "USA",
+      "CAN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owner_of_regulatory_action_entity",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_soe",
+       "psa_owner_of_regulatory_action_entity",
+       "regulatory_action",
+       "sanctioned_adjacent",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "pdzYNl_klgGC09od3prCNg",
+       "entity_url": "https://graph.sayari.com/resource/entity/pdzYNl_klgGC09od3prCNg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/pdzYNl_klgGC09od3prCNg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "w1gEspN2d_iUp-tPKXG1gQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES"
+       ],
+       "weight": {
+        "value": 36444.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-03-18']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEJINCHEON PLANT 202, SANSUSANDAN-RO JINCHEON-GUN CHUNGCHEONGBUK-DO SOUTH KOREA"
+       },
+       "receiver_address": {
+        "city": "New York",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "12TH FLOOR 9 EAST 37TH STREET NEW YORK NY 10016 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6374068171",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "w3dTT-w3VSVTQWo0GuUZQQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MO, DULES"
+       ],
+       "weight": {
+        "value": 2277.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-03-18']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEJINCHEON PLANT 202, SANSUSANDAN-RO JINCHEON-GUN CHUNGCHEONGBUK-DO SOUTH KOREA"
+       },
+       "receiver_address": {
+        "city": "New York",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "12TH FLOOR 9 EAST 37TH STREET NEW YORK NY 10016 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6376089940",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "QCELLS ENABLE LLC",
+     "names": [
+      "QCELLS ENABLE LLC",
+      "174 POWER GLOBAL NORTHEAST, LLC"
+     ],
+     "entity_id": "mbA2c_aHhk2cH0TxaeYXMw",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "controlled_by_mass_business_registration",
+       "forced_labor_xinjiang_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "mbA2c_aHhk2cH0TxaeYXMw",
+       "entity_url": "https://graph.sayari.com/resource/entity/mbA2c_aHhk2cH0TxaeYXMw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/mbA2c_aHhk2cH0TxaeYXMw"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "pdzYNl_klgGC09od3prCNg",
+      "entity_url": "https://graph.sayari.com/resource/entity/pdzYNl_klgGC09od3prCNg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "HANWHA SOLUTIONS CORPORATION",
+     "names": [
+      "HANWHA SOLUTIONS CORPORATION",
+      "HANWHA SOLUTION CORPORATION",
+      "HANWHA SOLUTIONS CORPORATION.",
+      "Hanwha Chemical",
+      "HANWHA SOLUTIONS",
+      "Hanwha Solutions Co., Ltd.",
+      "한화솔루션(주)",
+      "HANWHA SOLUTIONS CORPORATION.,",
+      "Hanwha Solutions Corp",
+      "Hanwha Solutions",
+      "HANWHA SOLUTIONS CORP.",
+      "한화솔루션",
+      "\"HANWHA SOLUTIONS CORPORATION\"",
+      "HANWHA SOLUTIONS CORPORATION .",
+      "HANWHA SOLUTIONS CORPORATION ,",
+      "HANWHA SOLUTIONS. CORPORATION",
+      "韩华化学株式会社",
+      "Hanwha Chemical Co., Ltd.",
+      "HANWHA SOLUTIONS CO LTD",
+      "HANWA SOLUTIONS CORPORATION 86",
+      "HANWHA CHEMICAL CORPORATION",
+      "HANWHA SOLUTIONS COORPORATION",
+      "HANWHA SOLUTIONS CORPORATION. ,",
+      "HANWHA SOLUTIONS CORPORATION86 CHEONGGYECHEON-RO JUNGGU",
+      "Han Hua Hua Xue Zhu Shi Hui She"
+     ],
+     "entity_id": "pdzYNl_klgGC09od3prCNg",
+     "countries": [
+      "KOR",
+      "JPN",
+      "ITA",
+      "USA",
+      "CAN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owner_of_regulatory_action_entity",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_soe",
+       "psa_owner_of_regulatory_action_entity",
+       "regulatory_action",
+       "sanctioned_adjacent",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "pdzYNl_klgGC09od3prCNg",
+       "entity_url": "https://graph.sayari.com/resource/entity/pdzYNl_klgGC09od3prCNg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/pdzYNl_klgGC09od3prCNg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "Qp0s9N6e4zDy6O38R-neug",
+       "departure_country": [
+        "KOR"
+       ],
+       "arrival_country": [
+        "CHN",
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "854143",
+         "description": "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES Q.PEAK DUO XL-G11S.3 /595/BFG/X/069 INVO, ICE NO. HQJC-USA-240123-06 P/O NO. 7000002477, HS CODE: 8541.43",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MODULES Q.PEAK DUOXL-G11S.3 /595/BFG/X/069 INVOICE NO. HQJC-USA-240123-06 P/O NO. 7000002477 HS CODE 8541.43",
+        "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+       ],
+       "weight": {
+        "value": 182224.0,
+        "unit": "kilogram"
+       },
+       "departure_date": "['2024-01-31']",
+       "arrival_date": "['2024-03-07']",
+       "departure_address": {
+        "country": "KOR",
+        "value": "KRPUS"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Iwol-myeon",
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEON PLANT 202, SANSUSANDAN 2-RO, IWOL-MYEON JINCHEON-GUN, CHUNGCHEONGBUK-DO, KOREA"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "400 SPECTRUM CENTER DR. SUITE 1400, IRVINE, CA 92618"
+       },
+       "identifiers": [
+        {
+         "value": "ZIMUSEL71087235",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "faa9caafcfabcee04ef2f0b21dd9197a",
+         "label": "South Korea Imports & Exports (January 2021 - April 2024)"
+        },
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Ap6MiElTm7DvTEDbrYALTw",
+       "departure_country": [
+        "KOR"
+       ],
+       "arrival_country": [
+        "CHN",
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "854143",
+         "description": "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES Q.PEAK DUO XL-G11S.3 /595/BFG/X/069 INVO, ICE NO. HQJC-USA-240123-08 P/O NO. 7000002477, HS CODE: 8541.43",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MODULES Q.PEAK DUOXL-G11S.3 /595/BFG/X/069 INVOICE NO. HQJC-USA-240123-08 P/O NO. 7000002477 HS CODE 8541.43",
+        "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+       ],
+       "weight": {
+        "value": 98027.0,
+        "unit": "pound"
+       },
+       "departure_date": "['2024-01-31']",
+       "arrival_date": "['2024-03-07']",
+       "departure_address": {
+        "country": "KOR",
+        "value": "KRPUS"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Iwol-myeon",
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEON PLANT 202, SANSUSANDAN 2-RO, IWOL-MYEON JINCHEON-GUN, CHUNGCHEONGBUK-DO, KOREA"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "400 SPECTRUM CENTER DR. SUITE 1400, IRVINE, CA 92618"
+       },
+       "identifiers": [
+        {
+         "value": "ZIMUSEL71087232",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "faa9caafcfabcee04ef2f0b21dd9197a",
+         "label": "South Korea Imports & Exports (January 2021 - April 2024)"
+        },
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "gQEleUEIj7xLIfHqNVk8LA",
+       "departure_country": [
+        "KOR"
+       ],
+       "arrival_country": [
+        "CHN",
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "854143",
+         "description": "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES Q.PEAK DUO XL-G11S.3 /595/BFG/X/069 INVO, ICE NO. HQJC-USA-240123-07 P/O NO. 7000002477, HS CODE: 8541.43",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MODULES Q.PEAK DUOXL-G11S.3 /595/BFG/X/069 INVOICE NO. HQJC-USA-240123-07 P/O NO. 7000002477 HS CODE 8541.43",
+        "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+       ],
+       "weight": {
+        "value": 245068.0,
+        "unit": "pound"
+       },
+       "departure_date": "['2024-01-31']",
+       "arrival_date": "['2024-03-07']",
+       "departure_address": {
+        "country": "KOR",
+        "value": "KRPUS"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Iwol-myeon",
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEON PLANT 202, SANSUSANDAN 2-RO, IWOL-MYEON JINCHEON-GUN, CHUNGCHEONGBUK-DO, KOREA"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "400 SPECTRUM CENTER DR. SUITE 1400, IRVINE, CA 92618"
+       },
+       "identifiers": [
+        {
+         "value": "ZIMUSEL71087231",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "faa9caafcfabcee04ef2f0b21dd9197a",
+         "label": "South Korea Imports & Exports (January 2021 - April 2024)"
+        },
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "3gMZVE1YPsO6Vx5j16HiVw",
+       "departure_country": [
+        "KOR"
+       ],
+       "arrival_country": [
+        "CHN",
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "854143",
+         "description": "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES Q.PEAK DUO XL-G11S.3 /595/BFG/X/069 INVO, ICE NO. HQJC-USA-240123-05 P/O NO. 7000002477, HS CODE: 8541.43",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MODULES Q.PEAK DUOXL-G11S.3 /595/BFG/X/069 INVOICE NO. HQJC-USA-240123-05 P/O NO. 7000002477 HS CODE 8541.43",
+        "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+       ],
+       "weight": {
+        "value": 182224.0,
+        "unit": "kilogram"
+       },
+       "departure_date": "['2024-01-31']",
+       "arrival_date": "['2024-03-07']",
+       "departure_address": {
+        "country": "KOR",
+        "value": "KRPUS"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Iwol-myeon",
+        "state": "KR-43",
+        "country": "KOR",
+        "value": "JINCHEON PLANT 202, SANSUSANDAN 2-RO, IWOL-MYEON JINCHEON-GUN, CHUNGCHEONGBUK-DO, KOREA"
+       },
+       "receiver_address": {
+        "city": "Irvine",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "400 SPECTRUM CENTER DR. SUITE 1400, IRVINE, CA 92618"
+       },
+       "identifiers": [
+        {
+         "value": "ZIMUSEL71087234",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "faa9caafcfabcee04ef2f0b21dd9197a",
+         "label": "South Korea Imports & Exports (January 2021 - April 2024)"
+        },
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "HANWHA QCELLS AMERICA INC.",
+     "entity_id": "diDn0Zuua_gwwpl4Rm9GnA",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "diDn0Zuua_gwwpl4Rm9GnA",
+       "entity_url": "https://graph.sayari.com/resource/entity/diDn0Zuua_gwwpl4Rm9GnA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/diDn0Zuua_gwwpl4Rm9GnA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "pdzYNl_klgGC09od3prCNg",
+      "entity_url": "https://graph.sayari.com/resource/entity/pdzYNl_klgGC09od3prCNg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 2519,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Hanwha Solutions",
+    "shipper_name": "HANWHA SOLUTIONS CORPORATION",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6ImFiMDM4OTY1YWIwMThiZmUyZDJmMmU1NDA4ZjE2ZjUzNjdlMzZlYzQ2OTYxYWE0YzdhMWUzMzdmZGVmYWUxNDIiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving Chinese entities, try both the Chinese name and known English/trade names in the Sayari API — there is no standardized Romanization.",
+   "The administrative division prefix in a Chinese company name indicates registration level, not headquarters location.",
+   "National-level companies (no geographic prefix or parenthetical prefix) are typically large SOEs or nationally significant enterprises."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

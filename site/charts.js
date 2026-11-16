@@ -211,7 +211,7 @@
     const narrow = w < 560;
     const rh = narrow ? 64 : 52, m = { t: 4, r: 64, b: 22, l: narrow ? 0 : 230 };
     const h = m.t + m.b + rows.length * rh;
-    const s = SM.svg("svg", { width: w, height: h, viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "Where the supply goes" }, container);
+    const s = SM.svg("svg", { width: w, height: h, viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "Where the supply goes, typical future: " + rows.map((r) => `${r.label} ${r.p50.toFixed(1)}% (9 in 10 futures ${r.p5.toFixed(1)} to ${r.p95.toFixed(1)}%)`).join("; ") }, container);
     const iw = w - m.l - m.r, X = (v) => m.l + (Math.max(0, Math.min(100, v)) / 100) * iw;
     const g = SM.svg("g", { class: "grid" }, s);
     [0, 25, 50, 75, 100].forEach((v) => {
@@ -258,7 +258,7 @@
     container.innerHTML = "";
     const { w } = size(container), h = opts.height || 220;
     const m = { t: 26, r: 14, b: 40, l: 14 };
-    const s = SM.svg("svg", { width: w, height: h, viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": opts.title || "Spread of outcomes" }, container);
+    const s = SM.svg("svg", { width: w, height: h, viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": `Spread of supply lost across futures: median ${SM.quantile(values, 0.5).toFixed(1)}%, 9 in 10 futures between ${SM.quantile(values, 0.05).toFixed(1)}% and ${SM.quantile(values, 0.95).toFixed(1)}%` }, container);
     const xMax = opts.xMax || 100, bins = 50, bwv = xMax / bins;
     const count = (arr) => { const c = new Array(bins).fill(0); arr.forEach((v) => c[Math.min(bins - 1, Math.max(0, Math.floor(v / bwv)))]++); return c.map((x) => x / arr.length); };
     const cur = count(values), pv = prev ? count(prev) : null;
@@ -295,7 +295,7 @@
     container.innerHTML = "";
     const { w } = size(container), h = opts.height || 250;
     const m = { t: 22, r: 8, b: 46, l: 38 };
-    const s = SM.svg("svg", { width: w, height: h, viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "Supply lost at each reach" }, container);
+    const s = SM.svg("svg", { width: w, height: h, viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "Typical supply lost at each reach: " + pts.map((p) => `${p.short} ${p.p50.toFixed(1)}%`).join("; ") }, container);
     const iw = w - m.l - m.r, ih = h - m.t - m.b, n = pts.length, bw = iw / n;
     const yMax = opts.yMax || 100, Y = (v) => m.t + ih - (Math.min(v, yMax) / yMax) * ih;
     const g = SM.svg("g", { class: "grid" }, s);
@@ -327,7 +327,7 @@
     const narrow = w < 520;
     const rh = narrow ? 50 : 34, m = { t: 8, r: 56, b: 30, l: narrow ? 8 : Math.min(250, w * 0.42) };
     const h = m.t + m.b + rows.length * rh;
-    const s = SM.svg("svg", { width: w, height: h, viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "What changes the result most" }, container);
+    const s = SM.svg("svg", { width: w, height: h, viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "What changes the result most, largest first: " + rows.map((r) => `${r.label} ±${(Math.abs(r.hi - r.lo) / 2).toFixed(1)} points`).join("; ") }, container);
     const lo = Math.min(base, ...rows.map((r) => Math.min(r.lo, r.hi))), hi = Math.max(base, ...rows.map((r) => Math.max(r.lo, r.hi)));
     const pad = (hi - lo) * 0.06 || 1;
     const X = (v) => m.l + ((v - (lo - pad)) / (hi - lo + 2 * pad)) * (w - m.l - m.r);

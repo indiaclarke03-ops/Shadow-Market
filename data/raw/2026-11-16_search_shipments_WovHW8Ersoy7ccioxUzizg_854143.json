@@ -1,0 +1,1655 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "JA Solar Vietnam",
+  "shipper_name": "CôNG TY TNHH JA SOLAR VIệT NAM",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:23:56+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 2,
+  "items": [
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH JA SOLAR VIệT NAM",
+     "names": [
+      "CôNG TY TNHH JA SOLAR VIệT NAM",
+      "JA SOLAR VIETNAM CO., LTD",
+      "JAVN",
+      "JA SOLAR VIET NAM COMPANY LIMITED",
+      "CONG TY TNHH JA SOLAR VIETNAM",
+      "JA SOLAR VIETNAM CO LTD",
+      "JA SOLAR VIETNAM COMPANY LIMITED",
+      "晶澳太阳能越南有限公司",
+      "JA Solar Vietnam Co., Ltd."
+     ],
+     "entity_id": "WovHW8Ersoy7ccioxUzizg",
+     "countries": [
+      "VNM",
+      "CHN",
+      "LAO",
+      "KOR",
+      "JPN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_uflpa_adjacent",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "WovHW8Ersoy7ccioxUzizg",
+       "entity_url": "https://graph.sayari.com/resource/entity/WovHW8Ersoy7ccioxUzizg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/WovHW8Ersoy7ccioxUzizg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "kP8aBox0lJRATxtJt73MFw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES OR MABIFACIAL SOLAR MODULE INVOICE NO US, A JAVNIND GROUP JASOLAR E, MAIL OPERATIONSJASOLAR.US, TAX ID -, OPERATIONSJASOLAR.US SHELBY WEBER,, + - - - )",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 79200.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-01-20']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Nenh",
+        "state": "Bac Ninh Province",
+        "country": "VNM",
+        "value": "LOT G QUANG CHAU INDUSTRIAL PARK NENH WARD BAC NINH PROVINCE VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "2570 N FIRST STREET STE 360 SAN JOSE CA 95131 USA CONTACT NAME MAURICIO AGUIRRE CONTACT PHONE TENUMBER"
+       },
+       "identifiers": [
+        {
+         "value": "YMJAW491343141A",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "JK5AIpAn1j8DcUf3ziQniw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES OR MABIFACIAL SOLAR MODULE INVOICE NO US, A JAVNIND GROUP JASOLAR C, ONTACT PHONE NUMBER + - - - EMAIL, OPERATIONSJASOLAR.US TAX ID -, OPERATIONSJASOLAR.US SHELBY WEBER,",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 99000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-01-07']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Nenh",
+        "state": "Bac Ninh Province",
+        "country": "VNM",
+        "value": "LOT G QUANG CHAU INDUSTRIAL PARK NENH WARD BAC NINH PROVINCE VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "2570 N FIRST STREET STE 360 SAN JOSE CA 95131 USA CONTACT NAME MAURICIO AGUIRRE"
+       },
+       "identifiers": [
+        {
+         "value": "YMJAW491342961A",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "D7F1FmHsDZnnIc-lFvphVA",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE INVOICE NO US, A: JAVNIND FREE TIME AT DESTINATIO, N: DEM WORKING DAYS + DET CALENDAR DAYS",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 99000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-02']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Ward",
+        "state": "Bac Ninh Province Vietna M",
+        "value": "LOT G, QUANG CHAU INDUSTRIAL PARK,N ENH WARD, BAC NINH PROVINCE, VIETNA M"
+       },
+       "receiver_address": {
+        "city": "Ose",
+        "state": "US-CA",
+        "value": "2570 N FIRST STREET, STE 360, SAN J OSE, CA 95131, USA CONTACT NAME: MA URICIO AGUIRRE"
+       },
+       "identifiers": [
+        {
+         "value": "SYLC3AS2510032",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "mpL6DONFgDvdxFogHis2vw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 139783.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-08-25']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "value": "LOT G, QUANG CHAU INDUSTRIAL PARK,Q UANG CHAU WARD, VIET YEN TOWN, BACG IANG PROVINCE, VIETNAM"
+       },
+       "receiver_address": {
+        "city": "Usa1-408-586-0000",
+        "state": "US-CA",
+        "value": "2570 N FIRST STREET, STE 360, SAN J OSE, CA 95131, USA ."
+       },
+       "identifiers": [
+        {
+         "value": "SYLCJWCQ25070751",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "JA SOLAR USA TRADING CO.",
+     "entity_id": "1gJRw4AnLe9kK_KAZWNeTg",
+     "countries": [
+      "USA",
+      "GBR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "1gJRw4AnLe9kK_KAZWNeTg",
+       "entity_url": "https://graph.sayari.com/resource/entity/1gJRw4AnLe9kK_KAZWNeTg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/1gJRw4AnLe9kK_KAZWNeTg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "WovHW8Ersoy7ccioxUzizg",
+      "entity_url": "https://graph.sayari.com/resource/entity/WovHW8Ersoy7ccioxUzizg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH JA SOLAR VIệT NAM",
+     "names": [
+      "CôNG TY TNHH JA SOLAR VIệT NAM",
+      "JA SOLAR VIETNAM CO., LTD",
+      "JAVN",
+      "JA SOLAR VIET NAM COMPANY LIMITED",
+      "CONG TY TNHH JA SOLAR VIETNAM",
+      "JA SOLAR VIETNAM CO LTD",
+      "JA SOLAR VIETNAM COMPANY LIMITED",
+      "晶澳太阳能越南有限公司",
+      "JA Solar Vietnam Co., Ltd."
+     ],
+     "entity_id": "WovHW8Ersoy7ccioxUzizg",
+     "countries": [
+      "VNM",
+      "CHN",
+      "LAO",
+      "KOR",
+      "JPN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_uflpa_adjacent",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "WovHW8Ersoy7ccioxUzizg",
+       "entity_url": "https://graph.sayari.com/resource/entity/WovHW8Ersoy7ccioxUzizg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/WovHW8Ersoy7ccioxUzizg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "fJO6j_SPuCj7GY3O805C5g",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP62#&Solar module JAM66D45-610/LB Dimensions: 2382x1134x35 (mm) 100% new /31.085.11.610.MB179#&VN , JAMD-24SP62#&Tấm module năng lượng mặt trời JAM66D45-610/LB KT: 2382x1134x35 (mm) hàng mới 100% /31.085.11.610.MB179#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 1065.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 3403.8,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-07']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "country": "USA",
+        "value": "JOHN F. KENNEDY APT/"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu, Thị Xã Việt Yên, Tỉnh Bắc Giang, Việt Nam , 0240 3669696"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{DD5CD4C0-9644-4E69-9F07100ABAE7D1FF}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "249rjVpckMwqCcRLKxzkzQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP01#&Solar module JAM72D30-545/MB Dimensions: 2278 x 1134 x 35 (mm) 100% new /31.026.11.545.MB114#&VN , JAMD-24SP01#&Tấm module năng lượng mặt trời JAM72D30-545/MB KT: 2278 x 1134 x 35 (mm) hàng mới 100% /31.026.11.545.MB114#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 117354.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 346685.4,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu,Thị xã Việt Yên,tỉnh Bắc Giang,Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{61ED8FFD-30DB-45FB-AEA21C55F9ECE37B}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "scr1Bh24iGwy9q65gF6Nlw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP02#&Solar module JAM72D30-550/MB Dimensions: 2278 x 1134 x 35 (mm) 100% new /31.026.11.550.MB114#&VN , JAMD-24SP02#&Tấm module năng lượng mặt trời JAM72D30-550/MB KT: 2278 x 1134 x 35 (mm) hàng mới 100% /31.026.11.550.MB114#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 195590.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 583110.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu,Thị xã Việt Yên,tỉnh Bắc Giang,Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{103945F6-8ABE-4714-B61BB2C646344CC1}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "_tQpUaM7UUY8DdawKFQEgg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP02#&Solar module JAM72D30-550/MB Dimensions: 2278 x 1134 x 35 (mm) 100% new /31.026.11.550.MB114#&VN , JAMD-24SP02#&Tấm module năng lượng mặt trời JAM72D30-550/MB KT: 2278 x 1134 x 35 (mm) hàng mới 100% /31.026.11.550.MB114#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 97795.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 291555.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu,Thị xã Việt Yên,tỉnh Bắc Giang,Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{B4C68EDD-CB93-4E77-88B5E085DFDD2F53}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "hRh1-flipl2NeOYbOzVxpA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP02#&Solar module JAM72D30-550/MB Dimensions: 2278 x 1134 x 35 (mm) 100% new /31.026.11.550.MB114#&VN , JAMD-24SP02#&Tấm module năng lượng mặt trời JAM72D30-550/MB KT: 2278 x 1134 x 35 (mm) hàng mới 100% /31.026.11.550.MB114#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 19559.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 58311.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu,Thị xã Việt Yên,tỉnh Bắc Giang,Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{CCB95EAA-E895-4046-8A5F4E9BA66B24CC}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "4bCp1IinZkytALb2iMOFYw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP02#&Solar module JAM72D30-550/MB Dimensions: 2278 x 1134 x 35 (mm) 100% new /31.026.11.550.MB114#&VN , JAMD-24SP02#&Tấm module năng lượng mặt trời JAM72D30-550/MB KT: 2278 x 1134 x 35 (mm) hàng mới 100% /31.026.11.550.MB114#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 39118.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 116622.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu,Thị xã Việt Yên,tỉnh Bắc Giang,Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{37BD048C-D5E3-4D15-977782D990248CF1}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "veGNqRhRG_AKRD17eOjFDQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP02#&Solar module JAM72D30-550/MB Dimensions: 2278 x 1134 x 35 (mm) 100% new /31.026.11.550.MB114#&VN , JAMD-24SP02#&Tấm module năng lượng mặt trời JAM72D30-550/MB KT: 2278 x 1134 x 35 (mm) hàng mới 100% /31.026.11.550.MB114#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 19559.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 58311.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu,Thị xã Việt Yên,tỉnh Bắc Giang,Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{15C15E5F-0D2E-44C4-805CA08AE8256244}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "NLrL-irN7YgamN2a3tLQNA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP02#&Solar module JAM72D30-550/MB Dimensions: 2278 x 1134 x 35 (mm) 100% new /31.026.11.550.MB114#&VN , JAMD-24SP02#&Tấm module năng lượng mặt trời JAM72D30-550/MB KT: 2278 x 1134 x 35 (mm) hàng mới 100% /31.026.11.550.MB114#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 39118.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 116622.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu,Thị xã Việt Yên,tỉnh Bắc Giang,Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{B9576879-F8D4-4043-BC4AB0725DFABF84}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "NU2m6XhxFE13vAWF-LFpWg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP23#&Solar module JAM54S31-405/MR Dimensions: 1722 x 1134 x 30 (mm) 100% new /31.037.11.405.MB115#&VN , JAMD-24SP23#&Tấm module năng lượng mặt trời JAM54S31-405/MR KT: 1722 x 1134 x 30 (mm) hàng mới 100% /31.037.11.405.MB115#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 19800.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 62985.6,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu, Thị Xã Việt Yên, Tỉnh Bắc Giang, Việt Nam , 0240 3669696"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{FD6442C6-1085-4D02-875BCC33DA22DF61}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "V0K4sXHyQhZ02e1kDVkGdg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP02#&Solar module JAM72D30-550/MB Dimensions: 2278 x 1134 x 35 (mm) 100% new /31.026.11.550.MB114#&VN , JAMD-24SP02#&Tấm module năng lượng mặt trời JAM72D30-550/MB KT: 2278 x 1134 x 35 (mm) hàng mới 100% /31.026.11.550.MB114#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 136913.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 33759.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu,Thị xã Việt Yên,tỉnh Bắc Giang,Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{472C7DF8-0764-4FE3-BBBA164DBEB0AC4E}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "0RxwLAQSXxgRrYOtrEOjjA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP23#&Solar module JAM54S31-405/MR Dimensions: 1722 x 1134 x 30 (mm) 100% new /31.037.11.405.MB115#&VN , JAMD-24SP23#&Tấm module năng lượng mặt trời JAM54S31-405/MR KT: 1722 x 1134 x 30 (mm) hàng mới 100% /31.037.11.405.MB115#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 79200.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 251942.4,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu, Thị Xã Việt Yên, Tỉnh Bắc Giang, Việt Nam , 0240 3669696"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{37C4B5DA-53E5-456C-8C8EC41509D9DA71}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "5RW9YW4UKQ3Anlsc34IKsQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP02#&Solar module JAM72D30-550/MB Dimensions: 2278 x 1134 x 35 (mm) 100% new /31.026.11.550.MB114#&VN , JAMD-24SP02#&Tấm module năng lượng mặt trời JAM72D30-550/MB KT: 2278 x 1134 x 35 (mm) hàng mới 100% /31.026.11.550.MB114#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 39118.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 116622.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu,Thị xã Việt Yên,tỉnh Bắc Giang,Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{DDF0E981-5CE4-4DF8-9A36A36BD9B77320}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "iX1zzZCngUwagtnvG9efPQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP02#&Solar module JAM72D30-550/MB Dimensions: 2278 x 1134 x 35 (mm) 100% new /31.026.11.550.MB114#&VN , JAMD-24SP02#&Tấm module năng lượng mặt trời JAM72D30-550/MB KT: 2278 x 1134 x 35 (mm) hàng mới 100% /31.026.11.550.MB114#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 117354.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 349866.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu,Thị xã Việt Yên,tỉnh Bắc Giang,Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{E66EE457-D38D-4CD5-98C0FE02E595FA61}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "TPRdwXuhElRjGqwldtSFRA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP02#&Solar module JAM72D30-550/MB Dimensions: 2278 x 1134 x 35 (mm) 100% new /31.026.11.550.MB114#&VN , JAMD-24SP02#&Tấm module năng lượng mặt trời JAM72D30-550/MB KT: 2278 x 1134 x 35 (mm) hàng mới 100% /31.026.11.550.MB114#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 19559.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 58311.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu,Thị xã Việt Yên,tỉnh Bắc Giang,Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{1780EAD9-86E9-473D-B01FB430379F8001}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "nj5EmCd_dB2GtLNmQAij8g",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP01#&Solar module JAM72D30-545/MB Dimensions: 2278 x 1134 x 35 (mm) 100% new /31.026.11.545.MB114#&VN , JAMD-24SP01#&Tấm module năng lượng mặt trời JAM72D30-545/MB KT: 2278 x 1134 x 35 (mm) hàng mới 100% /31.026.11.545.MB114#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 136913.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 24328.8,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu,Thị xã Việt Yên,tỉnh Bắc Giang,Việt Nam ,"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{2872A409-3A18-4E7C-98C16CC16F5EDC8C}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "TxhTtiT0ufTQllsEcYb37Q",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "JAMD-24SP23#&Solar module JAM54S31-405/MR Dimensions: 1722 x 1134 x 30 (mm) 100% new /31.037.11.405.MB115#&VN , JAMD-24SP23#&Tấm module năng lượng mặt trời JAM54S31-405/MR KT: 1722 x 1134 x 30 (mm) hàng mới 100% /31.037.11.405.MB115#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 118800.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 125971.2,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-10-21']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Lô G, Khu công nghiệp Quang Châu, Phường Quang Châu, Thị Xã Việt Yên, Tỉnh Bắc Giang, Việt Nam , 0240 3669696"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "Usa Us",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE, CA 95131, USA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{927AAB5A-6868-4C58-9B5221E3FDDDD279}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "JA SOLAR USA. INC.",
+     "names": [
+      "JA SOLAR USA. INC.",
+      "JA SOLAR USA INC"
+     ],
+     "entity_id": "Rw6OcLcoxlGfH7yb7GoHpA",
+     "countries": [
+      "USA",
+      "AUS"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Rw6OcLcoxlGfH7yb7GoHpA",
+       "entity_url": "https://graph.sayari.com/resource/entity/Rw6OcLcoxlGfH7yb7GoHpA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Rw6OcLcoxlGfH7yb7GoHpA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "WovHW8Ersoy7ccioxUzizg",
+      "entity_url": "https://graph.sayari.com/resource/entity/WovHW8Ersoy7ccioxUzizg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 5728,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "JA Solar Vietnam",
+    "shipper_name": "CôNG TY TNHH JA SOLAR VIệT NAM",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6IjdiMmY1YmQyZThhNmMxZjdlYzIxNDFlZTVkMmNiNzdlNTA0ZWEwOWRmZWU3MGIwM2QzZWViN2Y0Y2YzN2YyMmEiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving Chinese entities, try both the Chinese name and known English/trade names in the Sayari API — there is no standardized Romanization.",
+   "The administrative division prefix in a Chinese company name indicates registration level, not headquarters location.",
+   "National-level companies (no geographic prefix or parenthetical prefix) are typically large SOEs or nationally significant enterprises."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

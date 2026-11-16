@@ -1,0 +1,1376 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "REC Solar Pte",
+  "shipper_name": "REC SOLAR PTE LTD",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:25:26+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 1,
+  "items": [
+   {
+    "supplier": {
+     "name": "REC SOLAR PTE LTD",
+     "names": [
+      "REC SOLAR PTE LTD",
+      "REC MODULES PTE. LTD.",
+      "REC SOLAR PTE LIMITED",
+      "REC MODULES",
+      "REC SOLAR PTE. LTD."
+     ],
+     "entity_id": "Vi6n-EN8zXpYC_ctVQNJwg",
+     "countries": [
+      "SGP",
+      "KOR",
+      "CHN",
+      "NLD",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owned_by_sheffield_hallam_university_reports_forced_labor_entity",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_sheffield_hallam_university_reports_forced_labor_entity",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Vi6n-EN8zXpYC_ctVQNJwg",
+       "entity_url": "https://graph.sayari.com/resource/entity/Vi6n-EN8zXpYC_ctVQNJwg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Vi6n-EN8zXpYC_ctVQNJwg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "boDjm-sTVpABkWtcH-fSMA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "2376 PIECES IN 72 PALLETS ??OF SOLA, R PANELS ????HS CODE : 85414300 ??SHIPMENT RE, F : 6200005145?? ??SCAC CODE : MOXR ??AMS NO, : SINS2601390",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 57089.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-11-03']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "MODULES DIVISION 20 TUAS SOUTH AVENUE 14 SINGAPORE SG"
+       },
+       "receiver_address": {
+        "city": "Pismo Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "330 JAMES WAY, STE. 150. PISMO BEAC H CA 93449 USA PISMO BEACH CA93449 US"
+       },
+       "identifiers": [
+        {
+         "value": "MOXRSINS2601390",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "n9tFV-QWasxYKxDjc9X5pw",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "XXXXXXXXXXXXX SHIPMENT REF. 6200005, 156 AMS H BL 76030176642 SCAC CODE KWLD TLI N, O 1019 -26-0915 FMC REGISTRATION NUMBER 01, 9750 HS CODE 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 14272.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-11-01']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "20 TUAS SOUTH AVENUE 14 SINGAPORE 637312 SG"
+       },
+       "receiver_address": {
+        "city": "Dublin",
+        "country": "USA",
+        "value": "11501 DUBLIN BLVD STE 310 DUBLIN CA94568 US"
+       },
+       "identifiers": [
+        {
+         "value": "KWLD76030176642",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "XedIumP6WDppK25U6Bg75Q",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "2970 PIECES IN 90 PALLETS ??OF SOLA, R PANELS ????HS CODE : 85414300 ??SHIPMENT RE, F : 6200005136?? ??SCAC CODE : MOXR ??AMS NO, : SINS2601369",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 71361.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-30']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "MODULES DIVISION 20 TUAS SOUTH AVENUE 14 SINGAPORE SG"
+       },
+       "receiver_address": {
+        "city": "Pismo Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "330 JAMES WAY, STE. 150. PISMO BEAC H CA 93449 USA PISMO BEACH CA93449 US"
+       },
+       "identifiers": [
+        {
+         "value": "MOXRSINS2601369",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "XVilhYmLLjP9nHQzNW9SOg",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "2970 PIECES IN 90 PALLETS ??OF SOLA, R PANELS ????HS CODE : 85414300 ??SHIPMENT RE, F : 6200005138?? ??SCAC CODE : MOXR ??AMS NO, : SINS2601367",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 71361.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-29']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "MODULES DIVISION 20 TUAS SOUTH AVENUE 14 SINGAPORE SG"
+       },
+       "receiver_address": {
+        "city": "Pismo Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "330 JAMES WAY, STE. 150. PISMO BEAC H CA 93449 USA PISMO BEACH CA93449 US"
+       },
+       "identifiers": [
+        {
+         "value": "MOXRSINS2601367",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "3rwgLfQJt-NBKBxNkoealg",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "XXXXXXXXXXXXX SHIPMENT REF. 6200005, 128 AMS H BL 76030176655 SCAC CODE KWLD TLI N, O 1000 -26-0922 FMC REGISTRATION NUMBER 01, 9750 HS CODE 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 14272.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-28']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "New York",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "New York, New York"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "20 TUAS SOUTH AVENUE 14 SINGAPORE 637312 SG"
+       },
+       "receiver_address": {
+        "city": "Dublin",
+        "country": "USA",
+        "value": "11501 DUBLIN BLVD STE 310 DUBLIN CA94568 US"
+       },
+       "identifiers": [
+        {
+         "value": "KWLD76030176655",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "b8wxwYaMTxzN1uM10H4LQQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "2376 PIECES IN 72 PALLETS ??OF SOLA, R PANELS ????HS CODE : 85414300 ??SHIPMENT RE, F : 6200005139?? ??SCAC CODE : MOXR ??AMS NO, : SINS2601366",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 57089.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-28']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "MODULES DIVISION 20 TUAS SOUTH AVENUE 14 SINGAPORE SG"
+       },
+       "receiver_address": {
+        "city": "Pismo Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "330 JAMES WAY, STE. 150. PISMO BEAC H CA 93449 USA PISMO BEACH CA93449 US"
+       },
+       "identifiers": [
+        {
+         "value": "MOXRSINS2601366",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "la3gJ1ufJWi5GbuMN5I5_w",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "1782 PIECES IN 54 PALLETS ??OF SOLA, R PANELS ????HS CODE : 85414300 ??SHIPMENT RE, F : 6200005137?? ??SCAC CODE : MOXR ??AMS NO, : SINS2601368",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 42817.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-25']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "MODULES DIVISION 20 TUAS SOUTH AVENUE 14 SINGAPORE SG"
+       },
+       "receiver_address": {
+        "city": "Pismo Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "330 JAMES WAY, STE. 150. PISMO BEAC H CA 93449 USA PISMO BEACH CA93449 US"
+       },
+       "identifiers": [
+        {
+         "value": "MOXRSINS2601368",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "fXq0TfM-bskGBGw_T4ZzUA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "594 PIECES IN 18 PALLETS ??OF SOLAR, PANELS ????HS CODE : 85414300 ??SHIPMENT REF, : 6200005070?? ??SCAC CODE : MOXR ??AMS NO :, SINS2601293",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 14272.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-23']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "MODULES DIVISION 20 TUAS SOUTH AVENUE 14 SINGAPORE SG"
+       },
+       "receiver_address": {
+        "city": "Pismo Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "330 JAMES WAY, STE. 150. PISMO BEAC H CA 93449 USA PISMO BEACH CA93449 US"
+       },
+       "identifiers": [
+        {
+         "value": "MOXRSINS2601293",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "P9A_gIxQUBhOGpRMUP8Pgg",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "594 PIECES IN 18 PALLETS ??OF SOLAR, PANELS ????HS CODE : 85414300 ??SHIPMENT REF, : 6200005071?? ??SCAC CODE : MOXR ??AMS NO :, SINS2601292",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 14272.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-23']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "MODULES DIVISION 20 TUAS SOUTH AVENUE 14 SINGAPORE SG"
+       },
+       "receiver_address": {
+        "city": "Pismo Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "330 JAMES WAY, STE. 150. PISMO BEAC H CA 93449 USA PISMO BEACH CA93449 US"
+       },
+       "identifiers": [
+        {
+         "value": "MOXRSINS2601292",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "2zM_ndpC7J887AwOnrUEzg",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "1782 PCS IN 54 PALLETS??OF SOLAR PA, NELS ????HS CODE : 85414300 ??SHIPMENT REF :, 6200004988?? ??SCAC CODE : MOXR ??AMS NO : SI, NS2601214",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 42817.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-22']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Jacksonville",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "Jacksonville, Florida"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "MODULES DIVISION 20 TUAS SOUTH AVENUE 14 SINGAPORE SG"
+       },
+       "receiver_address": {
+        "city": "Pismo Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "330 JAMES WAY, STE. 150. PISMO BEAC H CA 93449 USA PISMO BEACH CA93449 US"
+       },
+       "identifiers": [
+        {
+         "value": "MOXRSINS2601214",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "8uh9U5XvCMooc70j-E1dNg",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "1188 PIECES IN 36 PALLETS ??OF SOLA, R PANELS ????HS CODE : 85414300 ??SHIPMENT RE, F : 6200005060?? ??SCAC CODE : MOXR ??AMS NO, : SINS2601286",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 28544.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-21']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "MODULES DIVISION 20 TUAS SOUTH AVENUE 14 SINGAPORE SG"
+       },
+       "receiver_address": {
+        "city": "Pismo Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "330 JAMES WAY, STE. 150. PISMO BEAC H CA 93449 USA PISMO BEACH CA93449 US"
+       },
+       "identifiers": [
+        {
+         "value": "MOXRSINS2601286",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "xedDswf_Rtgj8Qx_AL-DJA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "594 PIECES IN 18 PALLETS ??OF SOLAR, PANELS ????HS CODE : 85414300 ??SHIPMENT REF, : 6200005105?? ??SCAC CODE : MOXR ??AMS NO :, SINS2601250",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 14272.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-20']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "MODULES DIVISION 20 TUAS SOUTH AVENUE 14 SINGAPORE SG"
+       },
+       "receiver_address": {
+        "city": "Pismo Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "330 JAMES WAY, STE. 150. PISMO BEAC H CA 93449 USA PISMO BEACH CA93449 US"
+       },
+       "identifiers": [
+        {
+         "value": "MOXRSINS2601250",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "M-IWG8qZ8xis0ltqbK-W7Q",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULES, FREIGHT BOOKING NO.:, 610000 6200005130, HS CODE : 85414300, 1188 PIECES LOADED ON 36 PALLETS",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 28544.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-20']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "DIVISION OF MODULES 20 TUAS SOUTH AVENUE 14 SINGAPORE 637312 SG"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "735 TANK FARM RD STE 130 SAN LUIS 93401 US"
+       },
+       "identifiers": [
+        {
+         "value": "BANQ1077239638",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "hlmSI7KIz9LtjP0VLmApwg",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULES, FREIGHT BOOKING NO.:, 610000 6200005131, HS CODE : 85414300, 2376 PIECES LOADED ON, 72 PALLETS, 4 DAYS FREE DEMURRAGE &",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 57088.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-20']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "DIVISION OF MODULES 20 TUAS SOUTH AVENUE 14 SINGAPORE 637312 SG"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "735 TANK FARM RD STE 130 SAN LUIS 93401 US"
+       },
+       "identifiers": [
+        {
+         "value": "BANQ1076650787",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "49NiZ3XcRX-VkY3oYpdu5w",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "XXXXXXXXXXXXX SHIPMENT REF. 6200005, 069 AMS H BL 76030176671 SCAC CODE KWLD TLI N, O 1018 -26-0907 FMC REGISTRATION NUMBER 01, 9750 HS CODE 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 28544.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-20']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "20 TUAS SOUTH AVENUE 14 SINGAPORE 637312 SG"
+       },
+       "receiver_address": {
+        "city": "Dublin",
+        "country": "USA",
+        "value": "11501 DUBLIN BLVD STE 310 DUBLIN CA94568 US"
+       },
+       "identifiers": [
+        {
+         "value": "KWLD76030176671",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "eShiPja1qgoehDOLdaFvuw",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULES, FREIGHT BOOKING NO.:, 610000 6200005095, HS CODE : 85414300, 1188 PIECES LOADED ON, 36 PALLETS, 4 DAYS FREE DEMURRAGE &",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 28544.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-19']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "DIVISION OF MODULES 20 TUAS SOUTH AVENUE 14 SINGAPORE 637312 SG"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "735 TANK FARM RD STE 130 SAN LUIS 93401 US"
+       },
+       "identifiers": [
+        {
+         "value": "BANQ1076650220",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "QggGqng9JLy3O0nLmWs0ew",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULES, FREIGHT BOOKING NO.:, 610000 6200005094, HS CODE : 85414300, 1782 PIECES LOADED ON, 54 PALLETS, 4 DAYS FREE DEMURRAGE &",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 42816.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-19']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "DIVISION OF MODULES 20 TUAS SOUTH AVENUE 14 SINGAPORE 637312 SG"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "735 TANK FARM RD STE 130 SAN LUIS 93401 US"
+       },
+       "identifiers": [
+        {
+         "value": "BANQ1076650204",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "02egOERywzDX50lbn_IcLA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "2376 PIECES IN 72 PALLETS ??OF SOLA, R PANELS ????HS CODE : 85414300 ??SHIPMENT RE, F : 6200005080?? ??SCAC CODE : MOXR ??AMS NO, : SINS2601314",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 57089.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-19']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "MODULES DIVISION 20 TUAS SOUTH AVENUE 14 SINGAPORE SG"
+       },
+       "receiver_address": {
+        "city": "Pismo Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "330 JAMES WAY, STE. 150. PISMO BEAC H CA 93449 USA PISMO BEACH CA93449 US"
+       },
+       "identifiers": [
+        {
+         "value": "MOXRSINS2601314",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "q0joCV0hK69GMNshujy6nQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "594 PIECES IN 18 PALLETS ??OF SOLAR, PANELS ????HS CODE : 85414300 ??SHIPMENT REF, : 6200005106?? ??SCAC CODE : MOXR ??AMS NO :, SINS2601249",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 14272.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-18']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "MODULES DIVISION 20 TUAS SOUTH AVENUE 14 SINGAPORE SG"
+       },
+       "receiver_address": {
+        "city": "Pismo Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "330 JAMES WAY, STE. 150. PISMO BEAC H CA 93449 USA PISMO BEACH CA93449 US"
+       },
+       "identifiers": [
+        {
+         "value": "MOXRSINS2601249",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "ZmKRv-q2ZRbbxkE3rfh8QA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULES, FREIGHT BOOKING NO.:, 610000 6200005081, HS CODE : 85414300, 594 PIECES LOADED ON, 18 PALLETS, 4 DAYS FREE DEMURRAGE &",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 14272.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-15']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "DIVISION OF MODULES 20 TUAS SOUTH AVENUE 14 SINGAPORE 637312 SG"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "735 TANK FARM RD STE 130 SAN LUIS 93401 US"
+       },
+       "identifiers": [
+        {
+         "value": "BANQ1076650319",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "REC AMERICAS LLC",
+     "names": [
+      "REC AMERICAS LLC",
+      "REC AMERICAS, LLC"
+     ],
+     "entity_id": "ZFJ2IehaFOhjxixkMghjyA",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "ZFJ2IehaFOhjxixkMghjyA",
+       "entity_url": "https://graph.sayari.com/resource/entity/ZFJ2IehaFOhjxixkMghjyA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/ZFJ2IehaFOhjxixkMghjyA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "Vi6n-EN8zXpYC_ctVQNJwg",
+      "entity_url": "https://graph.sayari.com/resource/entity/Vi6n-EN8zXpYC_ctVQNJwg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 1069,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "REC Solar Pte",
+    "shipper_name": "REC SOLAR PTE LTD",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6ImU2MDRmNzA2ZWVkN2FjMTA2ODFhYzZhZWNmMjlkOGUyMjgyNDJjZDZkOGE5Nzc3YmExOTU4MWE0NGI5NDE4NDkiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving Chinese entities, try both the Chinese name and known English/trade names in the Sayari API — there is no standardized Romanization.",
+   "The administrative division prefix in a Chinese company name indicates registration level, not headquarters location.",
+   "National-level companies (no geographic prefix or parenthetical prefix) are typically large SOEs or nationally significant enterprises."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

@@ -1,0 +1,1365 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "REC Solar Energy Indonesia",
+  "shipper_name": "REC SOLAR ENERGY INDONESIA",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:25:02+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 1,
+  "items": [
+   {
+    "supplier": {
+     "name": "PT. REC SOLAR ENERGY INDONESIA",
+     "names": [
+      "PT. REC SOLAR ENERGY INDONESIA",
+      "REC SOLAR ENERGY INDONESIA"
+     ],
+     "entity_id": "3aS9os5ZvTAOTzFSQ7w-8A",
+     "countries": [
+      "IDN",
+      "KOR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "3aS9os5ZvTAOTzFSQ7w-8A",
+       "entity_url": "https://graph.sayari.com/resource/entity/3aS9os5ZvTAOTzFSQ7w-8A"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/3aS9os5ZvTAOTzFSQ7w-8A"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "2kbGb2ec0ZIehk92xyNRqg",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 41244.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-08-27']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6388368500",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "SIULEFe5mPwxxEK-DHiHxQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 23040.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-08-27']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6388368750",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "9h2V8zxke24jh4d7lLjOIQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 138240.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-08-27']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6388237520",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "cWx1j1pw1XbHgIX8oHljiA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 102765.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-08-12']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6388372660",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "fvR0TtEWCTba3OVKC2Euzg",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 205530.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-08-12']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6388236200",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "hBkDrYeTh35u4mqbrj7Qow",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 138240.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-07-12']",
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6382886430",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Jmjcs08kAFmkTOKgzep-cQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 230400.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-07-12']",
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6382886270",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "KvJ04JKg0e6uPJUu_C3rxA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 230400.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-07-09']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6383912040",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "phIK9F-P5luj9H3gDZpCoQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 207360.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-07-09']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6383911490",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "e0RyALUOHXkZ0ecYYclcIA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 184320.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-07-09']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6383911690",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "GtbnBiRDvx1LfDJinysxJQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 184320.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-07-09']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6383910330",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "NNXoZdlFgcO9BnFakXglDQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 184320.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-07-03']",
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6382317380",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "yaQamIp7wJnsTGBkARWzoQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 161280.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-07-03']",
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6382886660",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "621ftSZNNcRWZ9GFGZCMBw",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 230400.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-07-03']",
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6382941930",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Jf6nXtAouuKwOiiXr8HMIg",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 138240.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-06-28']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6383805240",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "sBhZsdd80d5kxzLkwLYsWQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 69120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-06-28']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6382317260",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "wWoEMgAb-POxmgKedk1_iQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 104640.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-06-22']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6381637100",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "N60I_90ik1NF0sGzH6ai_A",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 230400.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-06-22']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6381637050",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "n8352ImedB3NpN6R1b19oQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 230400.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-06-22']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6381636940",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "vF24TTtO4vNU3AFuwNQJ7g",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 69120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-06-22']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Kabil K",
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. PATTIMURA NO.33, KEL. KABIL, K PULAU BATAM RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Chino",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "4411 SCHAEFER AVENUE CHINO CA 91710 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6381334090",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "NOVA SOLAR AMERICA INC",
+     "names": [
+      "NOVA SOLAR AMERICA INC",
+      "PALUOPO SOLAR AMERICA INC",
+      "NOVA SOLAR AMERICAV INC"
+     ],
+     "entity_id": "GXbblQ1i0-xad_rnTzEz8w",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "GXbblQ1i0-xad_rnTzEz8w",
+       "entity_url": "https://graph.sayari.com/resource/entity/GXbblQ1i0-xad_rnTzEz8w"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/GXbblQ1i0-xad_rnTzEz8w"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "3aS9os5ZvTAOTzFSQ7w-8A",
+      "entity_url": "https://graph.sayari.com/resource/entity/3aS9os5ZvTAOTzFSQ7w-8A"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 1421,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "REC Solar Energy Indonesia",
+    "shipper_name": "REC SOLAR ENERGY INDONESIA",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6IjA1Nzg5MzZjMjE5NDg2ODk5YTU1ZjBhNGIwMGM1YWFjZmM1M2M5NTU0ZjYwYmVhM2M0YmFjNTU3ZWE1OTNmM2QiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving US entities, include the state of incorporation if known — many companies share similar names across different states.",
+   "Delaware incorporation is normal for large companies and not inherently suspicious, but Nevada/Wyoming incorporation combined with operations elsewhere can indicate a desire for opacity.",
+   "FinCEN BOI data is not publicly accessible — Sayari's US ownership data comes from state filings, SEC filings, and other public sources."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

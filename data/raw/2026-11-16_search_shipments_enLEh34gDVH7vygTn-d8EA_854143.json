@@ -1,0 +1,1685 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Vina Solar Technology",
+  "shipper_name": "Công ty TNHH Vina Solar Technology",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:25:42+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 2,
+  "items": [
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH JA SOLAR VIệT NAM",
+     "names": [
+      "CôNG TY TNHH JA SOLAR VIệT NAM",
+      "JA SOLAR VIETNAM CO., LTD",
+      "JAVN",
+      "JA SOLAR VIET NAM COMPANY LIMITED",
+      "CONG TY TNHH JA SOLAR VIETNAM",
+      "JA SOLAR VIETNAM CO LTD",
+      "JA SOLAR VIETNAM COMPANY LIMITED",
+      "晶澳太阳能越南有限公司",
+      "JA Solar Vietnam Co., Ltd."
+     ],
+     "entity_id": "WovHW8Ersoy7ccioxUzizg",
+     "countries": [
+      "VNM",
+      "CHN",
+      "LAO",
+      "KOR",
+      "JPN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_uflpa_adjacent",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "WovHW8Ersoy7ccioxUzizg",
+       "entity_url": "https://graph.sayari.com/resource/entity/WovHW8Ersoy7ccioxUzizg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/WovHW8Ersoy7ccioxUzizg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "tMvfkcIB67tZ_iupEoWgJQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "854143",
+         "description": "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+        }
+       ],
+       "product_descriptions": [
+        "FREIGHT PREPAID BIFACIAL S OLAR MOD, ULE INVOICE NO USA : JAVN20240105059 11 WORKI, NG DAYS FREE TIME OF DETEN TION AND 4 WORKIN, G DAYS FR EE TIME OF DEMURRAGE AT DE STINATIO, N NAC VINA SOLAR T ECHNOLOGY CO., LTD S/C 23-, 595TPC-151",
+        "FREIGHT PREPAID BIFACIAL SOLAR MODULE INVOICE NO USA: JAVN20240105059 11 WORKING DAYS FREE TIME OFDETENTION AND 4 WORKING DAYS FREE TIME OF DEMURRAGE AT DESTINATION NAC VINA SOLAR TECHNOLOGY CO",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+       ],
+       "weight": {
+        "value": 19559.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-02-06', '2024-01-17']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "VNHPH"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "state": "Bac Giang Province",
+        "country": "VNM",
+        "value": "ADDRESS: LOT G,QUANG CHAU INDUSTRIAL ZONE,QUANG CHAU COMMUNE, VIET YENDIST,BAC GIANG PROVINCE,VIET NAM"
+       },
+       "receiver_address": {
+        "city": "360san Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE CA 95131 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUF2027987",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "faa9caafcfabcee04ef2f0b21dd9197a",
+         "label": "South Korea Imports & Exports (January 2021 - April 2024)"
+        },
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "KOR",
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "16TdTrXDHtNexPyzlmR8zw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "854143",
+         "description": "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+        }
+       ],
+       "product_descriptions": [
+        "FREIGHT PREPAID BIFACIAL S OLAR MOD, ULE INVOICE NO USA : JAVN20240105056 11 WORKI, NG DAYS FREE TIME OF DETEN TION AND 4 WORKIN, G DAYS FR EE TIME OF DEMURRAGE AT DE STINATIO, N NAC VINA SOLAR T ECHNOLOGY CO., LTD S/C 23-, 595TPC-151",
+        "FREIGHT PREPAID BIFACIAL SOLAR MODULE INVOICE NO USA: JAVN20240105056 11 WORKING DAYS FREE TIME OFDETENTION AND 4 WORKING DAYS FREE TIME OF DEMURRAGE AT DESTINATION NAC VINA SOLAR TECHNOLOGY CO",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+       ],
+       "weight": {
+        "value": 195590.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-02-06', '2024-01-17']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "VNHPH"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "state": "Bac Giang Province",
+        "country": "VNM",
+        "value": "ADDRESS: LOT G,QUANG CHAU INDUSTRIAL ZONE,QUANG CHAU COMMUNE, VIET YENDIST,BAC GIANG PROVINCE,VIET NAM"
+       },
+       "receiver_address": {
+        "city": "360san Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE CA 95131 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUF2000083",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "faa9caafcfabcee04ef2f0b21dd9197a",
+         "label": "South Korea Imports & Exports (January 2021 - April 2024)"
+        },
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "KOR",
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "wOFGTUjXakkZa3vYyj_r9A",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "854143",
+         "description": "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+        }
+       ],
+       "product_descriptions": [
+        "FREIGHT PREPAID BIFACIAL S OLAR MOD, ULE INVOICE NO USA : JAVN20240105057 11 WORKI, NG DAYS FREE TIME OF DETEN TION AND 4 WORKIN, G DAYS FR EE TIME OF DEMURRAGE AT DE STINATIO, N NAC VINA SOLAR T ECHNOLOGY CO., LTD S/C 23-, 595TPC-151",
+        "FREIGHT PREPAID BIFACIAL SOLAR MODULE INVOICE NO USA: JAVN20240105057 11 WORKING DAYS FREE TIME OFDETENTION AND 4 WORKING DAYS FREE TIME OF DEMURRAGE AT DESTINATION NAC VINA SOLAR TECHNOLOGY CO",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+       ],
+       "weight": {
+        "value": 195590.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-02-06', '2024-01-17']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "VNHPH"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "state": "Bac Giang Province",
+        "country": "VNM",
+        "value": "ADDRESS: LOT G,QUANG CHAU INDUSTRIAL ZONE,QUANG CHAU COMMUNE, VIET YENDIST,BAC GIANG PROVINCE,VIET NAM"
+       },
+       "receiver_address": {
+        "city": "360san Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE CA 95131 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUF2000109",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "faa9caafcfabcee04ef2f0b21dd9197a",
+         "label": "South Korea Imports & Exports (January 2021 - April 2024)"
+        },
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "KOR",
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "3P-W7OQuOE6AN724KT2oug",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "854143",
+         "description": "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+        }
+       ],
+       "product_descriptions": [
+        "FREIGHT PREPAID BIFACIAL S OLAR MOD, ULE INVOICE NO USA : JAVN20240105023 11 WORKI, NG DAYS FREE TIME OF DETEN TION AND 4 WORKIN, G DAYS FR EE TIME OF DEMURRAGE AT DE STINATIO, N NAC VINA SOLAR T ECHNOLOGY CO., LTD S/C 23-, 595TPC-151",
+        "FREIGHT PREPAID BIFACIAL SOLAR MODULE INVOICE NO USA: JAVN20240105023 11 WORKING DAYS FREE TIME OFDETENTION AND 4 WORKING DAYS FREE TIME OF DEMURRAGE AT DESTINATION NAC VINA SOLAR TECHNOLOGY CO",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+       ],
+       "weight": {
+        "value": 195590.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-02-06', '2024-01-17']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "VNHPH"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "state": "Bac Giang Province",
+        "country": "VNM",
+        "value": "ADDRESS: LOT G,QUANG CHAU INDUSTRIAL ZONE,QUANG CHAU COMMUNE, VIET YENDIST,BAC GIANG PROVINCE,VIET NAM"
+       },
+       "receiver_address": {
+        "city": "360san Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE CA 95131 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUF2000042",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "faa9caafcfabcee04ef2f0b21dd9197a",
+         "label": "South Korea Imports & Exports (January 2021 - April 2024)"
+        },
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "KOR",
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "30nvYm0kHEVoecw7-MVmiQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "854143",
+         "description": "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+        }
+       ],
+       "product_descriptions": [
+        "FREIGHT PREPAID BIFACIAL S OLAR MOD, ULE INVOICE NO USA : JAVN20240105058 11 WORKI, NG DAYS FREE TIME OF DETEN TION AND 4 WORKIN, G DAYS FR EE TIME OF DEMURRAGE AT DE STINATIO, N NAC VINA SOLAR T ECHNOLOGY CO., LTD S/C 23-, 595TPC-151",
+        "FREIGHT PREPAID BIFACIAL SOLAR MODULE INVOICE NO USA: JAVN20240105058 11 WORKING DAYS FREE TIME OFDETENTION AND 4 WORKING DAYS FREE TIME OF DEMURRAGE AT DESTINATION NAC VINA SOLAR TECHNOLOGY CO",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+       ],
+       "weight": {
+        "value": 195590.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-02-06', '2024-01-17']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "VNHPH"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "state": "Bac Giang Province",
+        "country": "VNM",
+        "value": "ADDRESS: LOT G,QUANG CHAU INDUSTRIAL ZONE,QUANG CHAU COMMUNE, VIET YENDIST,BAC GIANG PROVINCE,VIET NAM"
+       },
+       "receiver_address": {
+        "city": "360san Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE CA 95131 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUF2000117",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "faa9caafcfabcee04ef2f0b21dd9197a",
+         "label": "South Korea Imports & Exports (January 2021 - April 2024)"
+        },
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "KOR",
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "J-Mgdb4xdqX0IgQ1NlLTBA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "854143",
+         "description": "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+        }
+       ],
+       "product_descriptions": [
+        "FREIGHT PREPAID BIFACIAL S OLAR MOD, ULE INVOICE NO USA : JAVN20240105024 11 WORKI, NG DAYS FREE TIME OF DETEN TION AND 4 WORKIN, G DAYS FR EE TIME OF DEMURRAGE AT DE STINATIO, N NAC VINA SOLAR T ECHNOLOGY CO., LTD S/C 23-, 595TPC-151",
+        "FREIGHT PREPAID BIFACIAL SOLAR MODULE INVOICE NO USA: JAVN20240105024 11 WORKING DAYS FREE TIME OFDETENTION AND 4 WORKING DAYS FREE TIME OF DEMURRAGE AT DESTINATION NAC VINA SOLAR TECHNOLOGY CO",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+       ],
+       "weight": {
+        "value": 94707.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-02-06', '2024-01-17']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "VNHPH"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "state": "Bac Giang Province",
+        "country": "VNM",
+        "value": "ADDRESS: LOT G,QUANG CHAU INDUSTRIAL ZONE,QUANG CHAU COMMUNE, VIET YENDIST,BAC GIANG PROVINCE,VIET NAM"
+       },
+       "receiver_address": {
+        "city": "360san Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "2570 NORTH FIRST STREET, SUITE 360 SAN JOSE CA 95131 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUF2000018",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "faa9caafcfabcee04ef2f0b21dd9197a",
+         "label": "South Korea Imports & Exports (January 2021 - April 2024)"
+        },
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "KOR",
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": [
+     {
+      "name": "JA SOLAR USA,INC.",
+      "entity_id": "ATHSMjsklRWTQR-N_WWXfA",
+      "countries": [
+       "USA",
+       "VNM"
+      ],
+      "quality_flags": [],
+      "next_action": {
+       "tool": "get_entity_summary",
+       "args": {
+        "entity_id": "ATHSMjsklRWTQR-N_WWXfA",
+        "entity_url": "https://graph.sayari.com/resource/entity/ATHSMjsklRWTQR-N_WWXfA"
+       }
+      },
+      "entity_url": "https://graph.sayari.com/resource/entity/ATHSMjsklRWTQR-N_WWXfA"
+     },
+     {
+      "name": "JA SOLAR USA. INC.",
+      "names": [
+       "JA SOLAR USA. INC.",
+       "JA SOLAR USA INC"
+      ],
+      "entity_id": "Rw6OcLcoxlGfH7yb7GoHpA",
+      "countries": [
+       "USA",
+       "AUS"
+      ],
+      "risks": {
+       "sanctioned": false,
+       "pep": false,
+       "risk_levels": [
+        "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+        "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+        "imports_eudr_shipment_wood",
+        "imports_ilab_child_labor",
+        "imports_ilab_forced_labor",
+        "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+        "psa_imports_eudr_shipment_wood",
+        "psa_imports_ilab_child_labor",
+        "psa_imports_ilab_forced_labor"
+       ]
+      },
+      "quality_flags": [
+       "risky"
+      ],
+      "next_action": {
+       "tool": "get_entity_summary",
+       "args": {
+        "entity_id": "Rw6OcLcoxlGfH7yb7GoHpA",
+        "entity_url": "https://graph.sayari.com/resource/entity/Rw6OcLcoxlGfH7yb7GoHpA"
+       }
+      },
+      "entity_url": "https://graph.sayari.com/resource/entity/Rw6OcLcoxlGfH7yb7GoHpA"
+     }
+    ],
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "WovHW8Ersoy7ccioxUzizg",
+      "entity_url": "https://graph.sayari.com/resource/entity/WovHW8Ersoy7ccioxUzizg"
+     }
+    },
+    "quality_flags": [
+     "multiple_parties",
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "Công ty TNHH Vina Solar Technology",
+     "names": [
+      "Công ty TNHH Vina Solar Technology",
+      "Vina Solar Technology Company Limited",
+      "VINA SOLAR TECHNOLOGY CO.,LTD",
+      "VINA SOLAR TECHNOLOGY CO., LTD.",
+      "VINA SOLAR TECHNOLOGY",
+      "VINA SOLAR TECHNOLOGY CO.,LTD."
+     ],
+     "entity_id": "enLEh34gDVH7vygTn-d8EA",
+     "countries": [
+      "VNM",
+      "CHN",
+      "MYS",
+      "VIR",
+      "PRT"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "export_to_soe",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_export_to_soe",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "enLEh34gDVH7vygTn-d8EA",
+       "entity_url": "https://graph.sayari.com/resource/entity/enLEh34gDVH7vygTn-d8EA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/enLEh34gDVH7vygTn-d8EA"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "G3vgON-6LqkWH7Da7s99yg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "LONGI-MODULE54-2GLASS#&Solar module panel LONGI Solar module LR5-54HABB-395M 2 GLASS MONO 1722*1134*30 mm, finished product code: 80A79US001271, (Cell from Malaysia), 100% new item#&KXĐ , LONGI-MODULE54-2GLASS#&Tấm module năng lượng mặt trời LONGI Solar module LR5-54HABB-395M 2 GLASS MONO 1722*1134*30 mm, mã thành phẩm: 80A79US001271, (Cell from Malaysia), hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 114180.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 107616.96,
+        "currency": "USD"
+       },
+       "departure_date": "['2024-01']",
+       "arrival_date": "['2024-01-31']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Xưởng E12, Lô CN-03, Khu công nghiệp Vân Trung, Xã Vân Trung, Huyện Việt Yên,Tỉnh Bắc Giang,Việt nam , 277557-CHL"
+       },
+       "receiver_address": {
+        "city": "Kl",
+        "country": "HKG",
+        "value": "RM D 10/F TOWER A BILLION, CTR 1 WANG KWONG RD, KOWLOON BAY KL, HK"
+       },
+       "identifiers": [
+        {
+         "value": "{5E9B8A25-AF27-4180-B52301A8A4862566}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "SSLWWoDOgkzDEd--rF7oyw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "LONGI-MODULE54-2GLASS#&Solar module panel LONGI Solar module LR5-54HABB-405M 2 GLASS MONO 1722*1134*30 mm, finished product code: 80A79US001291, (Cell from Malaysia), 100% new item#&KXĐ , LONGI-MODULE54-2GLASS#&Tấm module năng lượng mặt trời LONGI Solar module LR5-54HABB-405M 2 GLASS MONO 1722*1134*30 mm, mã thành phẩm: 80A79US001291, (Cell from Malaysia), hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 114180.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 165512.16,
+        "currency": "USD"
+       },
+       "departure_date": "['2024-01']",
+       "arrival_date": "['2024-01-31']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Xưởng E12, Lô CN-03, Khu công nghiệp Vân Trung, Xã Vân Trung, Huyện Việt Yên,Tỉnh Bắc Giang,Việt nam , 277557-CHL"
+       },
+       "receiver_address": {
+        "city": "Kl",
+        "country": "HKG",
+        "value": "RM D 10/F TOWER A BILLION, CTR 1 WANG KWONG RD, KOWLOON BAY KL, HK"
+       },
+       "identifiers": [
+        {
+         "value": "{BBB8621E-643E-4840-98C9D09E1160CFBE}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Mq80GMG0BS6k31F0Gj_hLA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "LONGI-MODULE54-2GLASS#&Solar module panel LONGI Solar module LR5-54HABB-400M 2 GLASS MONO 1722*1134*30 mm, finished product code: 80A79US001281, (Cell from Malaysia), 100% new item#&KXĐ , LONGI-MODULE54-2GLASS#&Tấm module năng lượng mặt trời LONGI Solar module LR5-54HABB-400M 2 GLASS MONO 1722*1134*30 mm, mã thành phẩm: 80A79US001281, (Cell from Malaysia), hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 114180.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 54489.6,
+        "currency": "USD"
+       },
+       "departure_date": "['2024-01']",
+       "arrival_date": "['2024-01-31']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Xưởng E12, Lô CN-03, Khu công nghiệp Vân Trung, Xã Vân Trung, Huyện Việt Yên,Tỉnh Bắc Giang,Việt nam , 277557-CHL"
+       },
+       "receiver_address": {
+        "city": "Kl",
+        "country": "HKG",
+        "value": "RM D 10/F TOWER A BILLION, CTR 1 WANG KWONG RD, KOWLOON BAY KL, HK"
+       },
+       "identifiers": [
+        {
+         "value": "{02A05E70-095C-4C15-B52F1AA190D09347}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "tCYKrZhP0fCueRW--k3aNw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "LONGI-MODULE54-2GLASS#&Solar module panel LONGI Solar module LR5-54HABB-395M 2 GLASS MONO 1722*1134*30 mm, finished product code: 80A79US001271, (Cell from Malaysia), 100% new item#&KXĐ , LONGI-MODULE54-2GLASS#&Tấm module năng lượng mặt trời LONGI Solar module LR5-54HABB-395M 2 GLASS MONO 1722*1134*30 mm, mã thành phẩm: 80A79US001271, (Cell from Malaysia), hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 19030.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 17120.88,
+        "currency": "USD"
+       },
+       "departure_date": "['2024-01']",
+       "arrival_date": "['2024-01-31']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Xưởng E12, Lô CN-03, Khu công nghiệp Vân Trung, Xã Vân Trung, Huyện Việt Yên,Tỉnh Bắc Giang,Việt nam , 277557-CHL"
+       },
+       "receiver_address": {
+        "city": "Kl",
+        "country": "HKG",
+        "value": "RM D 10/F TOWER A BILLION, CTR 1 WANG KWONG RD, KOWLOON BAY KL, HK"
+       },
+       "identifiers": [
+        {
+         "value": "{EC4C5A38-93BF-4B8A-8EBA709688700898}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "V8jwqjT2EwHldurnlk5fTQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "LONGI-MODULE54-2GLASS#&Solar module panel LONGI Solar module LR5-54HABB-405M 2 GLASS MONO 1722*1134*30 mm, finished product code: 80A79US001291, (Cell from Malaysia), 100% new item#&KXĐ , LONGI-MODULE54-2GLASS#&Tấm module năng lượng mặt trời LONGI Solar module LR5-54HABB-405M 2 GLASS MONO 1722*1134*30 mm, mã thành phẩm: 80A79US001291, (Cell from Malaysia), hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 19030.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 37616.4,
+        "currency": "USD"
+       },
+       "departure_date": "['2024-01']",
+       "arrival_date": "['2024-01-31']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Xưởng E12, Lô CN-03, Khu công nghiệp Vân Trung, Xã Vân Trung, Huyện Việt Yên,Tỉnh Bắc Giang,Việt nam , 277557-CHL"
+       },
+       "receiver_address": {
+        "city": "Kl",
+        "country": "HKG",
+        "value": "RM D 10/F TOWER A BILLION, CTR 1 WANG KWONG RD, KOWLOON BAY KL, HK"
+       },
+       "identifiers": [
+        {
+         "value": "{9C937746-A3FC-440B-8E7D576C4D847D8D}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "vlRaTcgrtIEdxpexJL8bIg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "LONGI-MODULE54-2GLASS#&Solar module panel LONGI Solar module LR5-54HABB-400M 2 GLASS MONO 1722*1134*30 mm, finished product code: 80A79US001281, (Cell from Malaysia), 100% new item#&KXĐ , LONGI-MODULE54-2GLASS#&Tấm module năng lượng mặt trời LONGI Solar module LR5-54HABB-400M 2 GLASS MONO 1722*1134*30 mm, mã thành phẩm: 80A79US001281, (Cell from Malaysia), hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 247390.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 653875.2,
+        "currency": "USD"
+       },
+       "departure_date": "['2024-01']",
+       "arrival_date": "['2024-01-29']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Xưởng E12, Lô CN-03, Khu công nghiệp Vân Trung, Xã Vân Trung, Huyện Việt Yên,Tỉnh Bắc Giang,Việt nam , 277557-CHL"
+       },
+       "receiver_address": {
+        "city": "Kl",
+        "country": "HKG",
+        "value": "RM D 10/F TOWER A BILLION, CTR 1 WANG KWONG RD, KOWLOON BAY KL, HK"
+       },
+       "identifiers": [
+        {
+         "value": "{3911CFB6-9DF3-4085-9BCD624B84AF85A8}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "9-ZlnbnmOsGZqzlkMPJMtg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "LONGI-MODULE54-2GLASS#&Solar module panel LONGI Solar module LR5-54HABB-405M 2 GLASS MONO 1722*1134*30 mm, finished product code: 80A79US001291, (Cell from Malaysia), 100% new item#&KXĐ , LONGI-MODULE54-2GLASS#&Tấm module năng lượng mặt trời LONGI Solar module LR5-54HABB-405M 2 GLASS MONO 1722*1134*30 mm, mã thành phẩm: 80A79US001291, (Cell from Malaysia), hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 247390.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 55170.72,
+        "currency": "USD"
+       },
+       "departure_date": "['2024-01']",
+       "arrival_date": "['2024-01-29']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Xưởng E12, Lô CN-03, Khu công nghiệp Vân Trung, Xã Vân Trung, Huyện Việt Yên,Tỉnh Bắc Giang,Việt nam , 277557-CHL"
+       },
+       "receiver_address": {
+        "city": "Kl",
+        "country": "HKG",
+        "value": "RM D 10/F TOWER A BILLION, CTR 1 WANG KWONG RD, KOWLOON BAY KL, HK"
+       },
+       "identifiers": [
+        {
+         "value": "{400629D9-5914-4C48-853FB52F319A5920}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "mOnApnVVnuXD0kzZLCYf_g",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "LONGI-MODULE54-2GLASS#&Solar module panel LONGI Solar module LR5-54HABB-400M 2 GLASS MONO 1722*1134*30 mm, finished product code: 80A79US001281, (Cell from Malaysia), 100% new item#&KXĐ , LONGI-MODULE54-2GLASS#&Tấm module năng lượng mặt trời LONGI Solar module LR5-54HABB-400M 2 GLASS MONO 1722*1134*30 mm, mã thành phẩm: 80A79US001281, (Cell from Malaysia), hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 247390.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 708364.8,
+        "currency": "USD"
+       },
+       "departure_date": "['2024-01']",
+       "arrival_date": "['2024-01-26']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Xưởng E12, Lô CN-03, Khu công nghiệp Vân Trung, Xã Vân Trung, Huyện Việt Yên,Tỉnh Bắc Giang,Việt nam , 277557-CHL"
+       },
+       "receiver_address": {
+        "city": "Kl",
+        "country": "HKG",
+        "value": "RM D 10/F TOWER A BILLION, CTR 1 WANG KWONG RD, KOWLOON BAY KL, HK"
+       },
+       "identifiers": [
+        {
+         "value": "{21143D1A-0559-45F3-B3FC7E190AD83833}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "ggsrdyMYikPi3hWlyNhzOA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "LONGI-MODULE72-2GLASS#&Solar module panel LONGI Solar module LR4-72HBD-445M 2 GLASS MONO 2094*1038*35 mm, finished product code: 80A05US0A3371, (Cell from Malaysia), 100% new item#&KXD , LONGI-MODULE72-2GLASS#&Tấm module năng lượng mặt trời LONGI Solar module LR4-72HBD-445M 2 GLASS MONO 2094*1038*35 mm, mã thành phẩm: 80A05US0A3371, (Cell from Malaysia), hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 397320.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1001517.0,
+        "currency": "USD"
+       },
+       "departure_date": "['2024-01']",
+       "arrival_date": "['2024-01-22']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Xưởng E12, Lô CN-03, Khu công nghiệp Vân Trung, Xã Vân Trung, Huyện Việt Yên,Tỉnh Bắc Giang,Việt nam , 277557-CHL"
+       },
+       "receiver_address": {
+        "city": "Kl",
+        "country": "HKG",
+        "value": "RM D 10/F TOWER A BILLION, CTR 1 WANG KWONG RD, KOWLOON BAY KL, HK"
+       },
+       "identifiers": [
+        {
+         "value": "{2C01C572-3B4A-47BA-891067A3294B16A3}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "VMzug7mU-rPq3CdjuV33vw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "LONGI-MODULE72-2GLASS#&Solar module panel LONGI Solar module LR4-72HBD-450M 2 GLASS MONO 2094*1038*35 mm, finished product code: 80A05US020381, (Cell from Malaysia), 100% new item#&KXĐ , LONGI-MODULE72-2GLASS#&Tấm module năng lượng mặt trời LONGI Solar module LR4-72HBD-450M 2 GLASS MONO 2094*1038*35 mm, mã thành phẩm: 80A05US020381, (Cell from Malaysia), hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 19866.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 52786.8,
+        "currency": "USD"
+       },
+       "departure_date": "['2024-01']",
+       "arrival_date": "['2024-01-20']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Xưởng E12, Lô CN-03, Khu công nghiệp Vân Trung, Xã Vân Trung, Huyện Việt Yên,Tỉnh Bắc Giang,Việt nam , 277557-CHL"
+       },
+       "receiver_address": {
+        "city": "Kl",
+        "country": "HKG",
+        "value": "RM D 10/F TOWER A BILLION, CTR 1 WANG KWONG RD, KOWLOON BAY KL, HK"
+       },
+       "identifiers": [
+        {
+         "value": "{2150ED82-14D3-4550-94AB5C1AAEAEC0AA}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "YNdtF_Hj32tk5iAUEaWovw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "LONGI-MODULE72-2GLASS#&Solar module panel LONGI Solar module LR4-72HBD-455M 2 GLASS MONO 2094*1038*35 mm, finished product code: 80A05US0AB391, (Cell from Malaysia), 100% new item#&KXD , LONGI-MODULE72-2GLASS#&Tấm module năng lượng mặt trời LONGI Solar module LR4-72HBD-455M 2 GLASS MONO 2094*1038*35 mm, mã thành phẩm: 80A05US0AB391, (Cell from Malaysia), hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 113801.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 52777.73,
+        "currency": "USD"
+       },
+       "departure_date": "['2024-01']",
+       "arrival_date": "['2024-01-20']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Xưởng E12, Lô CN-03, Khu công nghiệp Vân Trung, Xã Vân Trung, Huyện Việt Yên,Tỉnh Bắc Giang,Việt nam , 277557-CHL"
+       },
+       "receiver_address": {
+        "city": "Kl",
+        "country": "HKG",
+        "value": "RM D 10/F TOWER A BILLION, CTR 1 WANG KWONG RD, KOWLOON BAY KL, HK"
+       },
+       "identifiers": [
+        {
+         "value": "{CFDA4A57-AC0A-42DA-9422011439F7575B}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "WR5Zr4ltDmJj4r5AnYu0sw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "LONGI-MODULE72-2GLASS#&Solar module panel LONGI Solar module LR4-72HBD-445M 2 GLASS MONO 2094*1038*35 mm, finished product code: 80A05US0AB371, (Cell from Malaysia), 100% new item#&KXD , LONGI-MODULE72-2GLASS#&Tấm module năng lượng mặt trời LONGI Solar module LR4-72HBD-445M 2 GLASS MONO 2094*1038*35 mm, mã thành phẩm: 80A05US0AB371, (Cell from Malaysia), hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 113801.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 44642.4,
+        "currency": "USD"
+       },
+       "departure_date": "['2024-01']",
+       "arrival_date": "['2024-01-20']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Xưởng E12, Lô CN-03, Khu công nghiệp Vân Trung, Xã Vân Trung, Huyện Việt Yên,Tỉnh Bắc Giang,Việt nam , 277557-CHL"
+       },
+       "receiver_address": {
+        "city": "Kl",
+        "country": "HKG",
+        "value": "RM D 10/F TOWER A BILLION, CTR 1 WANG KWONG RD, KOWLOON BAY KL, HK"
+       },
+       "identifiers": [
+        {
+         "value": "{A93C98C6-A130-4671-AFCD15C808FC41CF}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "ORxDOGPZP7_mVz4ErAdFOA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "LONGI-MODULE72-2GLASS#&Solar module panel LONGI Solar module LR4-72HBD-450M 2 GLASS MONO 2094*1038*35 mm, finished product code: 80A05US0AB381, (Cell from Malaysia), 100% new item#&KXĐ , LONGI-MODULE72-2GLASS#&Tấm module năng lượng mặt trời LONGI Solar module LR4-72HBD-450M 2 GLASS MONO 2094*1038*35 mm, mã thành phẩm: 80A05US0AB381, (Cell from Malaysia), hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 113801.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 192604.5,
+        "currency": "USD"
+       },
+       "departure_date": "['2024-01']",
+       "arrival_date": "['2024-01-20']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Xưởng E12, Lô CN-03, Khu công nghiệp Vân Trung, Xã Vân Trung, Huyện Việt Yên,Tỉnh Bắc Giang,Việt nam , 277557-CHL"
+       },
+       "receiver_address": {
+        "city": "Kl",
+        "country": "HKG",
+        "value": "RM D 10/F TOWER A BILLION, CTR 1 WANG KWONG RD, KOWLOON BAY KL, HK"
+       },
+       "identifiers": [
+        {
+         "value": "{7AF02248-3286-4689-A804CBA5404782B9}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "boVa2pp1HMBaZ-aP58d7sw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "LONGI-MODULE72-2GLASS#&Solar module panel LONGI Solar module LR4-72HBD-450M 2 GLASS MONO 2094*1038*35 mm, finished product code: 80A05US0A3381, (Cell from Malaysia), 100% new item#&KXD , LONGI-MODULE72-2GLASS#&Tấm module năng lượng mặt trời LONGI Solar module LR4-72HBD-450M 2 GLASS MONO 2094*1038*35 mm, mã thành phẩm: 80A05US0A3381, (Cell from Malaysia), hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 39732.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 7198.2,
+        "currency": "USD"
+       },
+       "departure_date": "['2024-01']",
+       "arrival_date": "['2024-01-19']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LONG BEACH - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Bắc Giang",
+        "country": "VNM",
+        "value": "Xưởng E12, Lô CN-03, Khu công nghiệp Vân Trung, Xã Vân Trung, Huyện Việt Yên,Tỉnh Bắc Giang,Việt nam , 277557-CHL"
+       },
+       "receiver_address": {
+        "city": "Kl",
+        "country": "HKG",
+        "value": "RM D 10/F TOWER A BILLION, CTR 1 WANG KWONG RD, KOWLOON BAY KL, HK"
+       },
+       "identifiers": [
+        {
+         "value": "{841093B9-1A86-4221-A7A87C7912619449}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "LONGI SOLAR TECHNOLOGY (HK) LIMITED",
+     "names": [
+      "LONGI SOLAR TECHNOLOGY (HK) LIMITED",
+      "LONGI SOLAR TECHNOLOGY(H.K.)LIMITED",
+      "隆基光伏科技（香港）有限公司",
+      "LONGi Solar Technology (Hong Kong) Co., Ltd.",
+      "LONGI SOLAR TECHNOLOGY (H.K.) LIMITED",
+      "LONGI SOLAR TECHNOLOGY (HK) CO.,LTD"
+     ],
+     "entity_id": "nKmRS-vu7k6WjtwGR_3i5A",
+     "countries": [
+      "HKG",
+      "CHN",
+      "USA",
+      "ESP"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "mass_address_usage",
+       "owned_by_sheffield_hallam_university_reports_forced_labor_entity",
+       "psa_owned_by_sheffield_hallam_university_reports_forced_labor_entity",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "nKmRS-vu7k6WjtwGR_3i5A",
+       "entity_url": "https://graph.sayari.com/resource/entity/nKmRS-vu7k6WjtwGR_3i5A"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/nKmRS-vu7k6WjtwGR_3i5A"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "enLEh34gDVH7vygTn-d8EA",
+      "entity_url": "https://graph.sayari.com/resource/entity/enLEh34gDVH7vygTn-d8EA"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 674,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Vina Solar Technology",
+    "shipper_name": "Công ty TNHH Vina Solar Technology",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6ImQ2MjNlY2RlYWMxODc2NzFkMzA1ZTJmOGYyOTVjZWI0ZTVjZTZkNTY5MjUwMzlhMDdhM2Q2NmU5MTYwMmQ3MGIiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving Chinese entities, try both the Chinese name and known English/trade names in the Sayari API — there is no standardized Romanization.",
+   "The administrative division prefix in a Chinese company name indicates registration level, not headquarters location.",
+   "National-level companies (no geographic prefix or parenthetical prefix) are typically large SOEs or nationally significant enterprises."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

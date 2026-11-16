@@ -1,0 +1,1361 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Boviet Solar Technology",
+  "shipper_name": "BOVIET SOLAR TECHNOLOGY CO",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:25:02+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 1,
+  "items": [
+   {
+    "supplier": {
+     "name": "BOVIET SOLAR TECHNOLOGY COMPANY",
+     "entity_id": "s_XCzJfAlg4JGMtbJ2HWQA",
+     "countries": [
+      "VNM",
+      "KOR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "s_XCzJfAlg4JGMtbJ2HWQA",
+       "entity_url": "https://graph.sayari.com/resource/entity/s_XCzJfAlg4JGMtbJ2HWQA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/s_XCzJfAlg4JGMtbJ2HWQA"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "7Fw5-mxGwwvGF-t9dO8vgg",
+       "departure_country": [
+        "HKG"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 280050.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-30']",
+       "departure_address": {
+        "country": "HKG",
+        "value": "Hong Kong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6418106340",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "OQ2agdKIlx-DJpaLRyvMJQ",
+       "departure_country": [
+        "HKG"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 280050.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-30']",
+       "departure_address": {
+        "country": "HKG",
+        "value": "Hong Kong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6418106000",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "zoknFqx9omuqHsCSvwAOGA",
+       "departure_country": [
+        "HKG"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 252558.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-30']",
+       "departure_address": {
+        "country": "HKG",
+        "value": "Hong Kong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6418108100",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "1u30Cg-_MpwYjb-K8-NDvw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 280050.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-27']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6418107670",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "j0CaukiTVZcHmySQ60eLUw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 130690.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-27']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6418436270",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "bbYHmwdLcVFUSirVeGJTaQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 186700.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-23']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6417260080",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "h9wul4n-b_CSY_UTNMSINQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 280050.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-23']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6417259310",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "yFwXzX-W16oYBC90mZFFnw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 280050.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-23']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6417258790",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Am9o8LTjdrYbT6R0-jb8cA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 149360.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-23']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6418385360",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "dK9NayC61_b5sdGNcBmbMw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 280050.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-23']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6417706320",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "reNsZ1yzeT165Kyys0wFvA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 280050.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-23']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6417259620",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "DRwUDYNhk3c25oA2r3MdlA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 280050.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-23']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6417259020",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "S9jy6zj4snAX2PjuA-kGmw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 280050.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-17']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6415937310",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "PLVcfgZRowbmlxFx9iVSIQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 280050.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-17']",
+       "departure_address": {
+        "value": "Hsia Men"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6415376960",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "_cAhcRSg4yWGEEfKk1onRg",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 186700.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-17']",
+       "departure_address": {
+        "value": "Hsia Men"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6415256580",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "7snABNZhwTEJXZajlYN5jg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 186700.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-17']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6417248090",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "UJgfGdKexXnOXeOsJyu-JA",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 373400.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-17']",
+       "departure_address": {
+        "value": "Hsia Men"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6415255820",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "sU890YXkm0IY9ekHeIrSAQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 186700.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-17']",
+       "departure_address": {
+        "value": "Hsia Men"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6414971460",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "GPGxGjwyV98Z3lq_eW9T5A",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 186700.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-17']",
+       "departure_address": {
+        "value": "Hsia Men"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6415256890",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "0uOTyx2xXuUPn8I1TF7I3g",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 5513.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-17']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Bac Giang",
+        "country": "VNM",
+        "value": "LIMB5,B6 SONG KHE-NOI HOANG INDUSTRIAL BAC GIANG BAC GIANG VIETNAM"
+       },
+       "receiver_address": {
+        "city": "San Jose",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 203 2880 ZANKER ROAD SAN JOSE CA 95134 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6418776000",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "BOVIET SOLAR USA LTD.",
+     "names": [
+      "BOVIET SOLAR USA LTD.",
+      "BOVIET SOLAR USA",
+      "BOVIET SOLAR USA CO LTD"
+     ],
+     "entity_id": "f0YtCwwIzqSVckxlGMNnRA",
+     "countries": [
+      "USA",
+      "MEX",
+      "IRL",
+      "CAN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "f0YtCwwIzqSVckxlGMNnRA",
+       "entity_url": "https://graph.sayari.com/resource/entity/f0YtCwwIzqSVckxlGMNnRA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/f0YtCwwIzqSVckxlGMNnRA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "s_XCzJfAlg4JGMtbJ2HWQA",
+      "entity_url": "https://graph.sayari.com/resource/entity/s_XCzJfAlg4JGMtbJ2HWQA"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 3749,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Boviet Solar Technology",
+    "shipper_name": "BOVIET SOLAR TECHNOLOGY CO",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6ImIwMmNhNDViMTI4MzM5NjAwZjZkZDNmNDY3NzIzMTc2OTcyZDlhYjI3OWNlMDM1YTY1NThlMjRjYjY2MTNiMzkiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "Hong Kong entities connecting mainland Chinese operations to international markets is a normal and common structure.",
+   "The Significant Controllers Register exists but is not publicly accessible — Sayari's UBO data for HK companies comes from filed shareholder data and cross-border references.",
+   "Corporate service providers in Hong Kong manage large numbers of entities — shared registered addresses are common and not always suspicious."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

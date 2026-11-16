@@ -68,7 +68,7 @@
    * Per simulated future and per reach step j:
    *   flagged = F_j + untraced × (F_j / traced) × hidden
    *   stopped = flagged × p_enf;  keptOut = stopped × (1 − release);  lost = keptOut × (1 − reroute)
-   *   shortage = max(0, ramp + lost / capacity − buffer × 100 / lost)
+   *   shortage = max( ramp + lost/capacity − buffer×100/lost ,  detention − buffer×100/stopped , 0 )
    */
   SM.simulate = function (cfg) {
     const rng = mulberry32(cfg.seed);
@@ -84,12 +84,15 @@
       const hidden = get("hidden", phi(z1)), reroute = get("reroute", phi(z2));
       const pEnf = get("p_enf"), rel = get("release");
       const cap = Math.max(0.1, get("capacity")), ramp = get("ramp"), buf = get("buffer");
+      const det = cfg.inputs.detention ? get("detention") : 0;
       for (let j = 0; j < nT; j++) {
         const f = typeof F[j] === "number" ? F[j] : draw(rng, F[j]);
         const fl = Math.min(100, f + (traced ? untraced * (f / traced) * hidden : 0));
         const st = fl * pEnf, ko = st * (1 - rel), lost = ko * (1 - reroute);
         out.flagged[j][r] = fl; out.stopped[j][r] = st; out.keptOut[j][r] = ko; out.lost[j][r] = lost;
-        out.short[j][r] = lost > 0.05 ? Math.max(0, ramp + lost / cap - (buf * 100) / lost) : 0;
+        const perm = lost > 0.05 ? Math.max(0, ramp + lost / cap - (buf * 100) / lost) : 0;
+        const held = st > 0.05 ? Math.max(0, det - (buf * 100) / st) : 0; // stopped supply waits at the border
+        out.short[j][r] = Math.max(perm, held);
       }
     }
     return out;

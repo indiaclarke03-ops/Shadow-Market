@@ -75,11 +75,21 @@
       ],
       "default": "off"
     },
+    "product_check": {
+      "label": "Product check",
+      "question": "Count links for products that don't use polysilicon (thin-film panels)?",
+      "positions": [
+        {"id": "on", "label": "Polysilicon-route products only"},
+        {"id": "off", "label": "All flags as given"}
+      ],
+      "default": "on"
+    },
     "value_basis": {
       "label": "Value basis",
       "question": "What do we count?",
       "positions": [
         {"id": "value", "label": "Share of US imports"},
+        {"id": "weight", "label": "Estimated weight"},
         {"id": "count", "label": "Count of exporters"}
       ],
       "default": "value"

@@ -1,0 +1,1681 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Mexus 4PL",
+  "shipper_name": "MEXUS 4PL SA DE CV",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:26:07+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 5,
+  "items": [
+   {
+    "supplier": {
+     "name": "HONG KONG ECOFLOW INNOVATION TECHNOLOGY LIMITED",
+     "names": [
+      "HONG KONG ECOFLOW INNOVATION TECHNOLOGY LIMITED",
+      "HONG KONG ECOFLOW INNOVATION TECHNOLOGY",
+      "香港正浩創新科技有限公司",
+      "Hong Kong Zhenghao Innovation Technology Co., Ltd.",
+      "香港正浩创新科技有限公司"
+     ],
+     "entity_id": "31y9XyNfYytbOpoxL6s6ng",
+     "countries": [
+      "HKG",
+      "CHN",
+      "GBR",
+      "CZE",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "31y9XyNfYytbOpoxL6s6ng",
+       "entity_url": "https://graph.sayari.com/resource/entity/31y9XyNfYytbOpoxL6s6ng"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/31y9XyNfYytbOpoxL6s6ng"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "7O-qgm4PE8fb7S7vL2gvtw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "85",
+         "description": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles"
+        },
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PORTABLE POWER STATION LITHIUM ION, BATTERIES CONTAINED IN EQUIPMENT(INCLUDING LI, THIUM ION POLYMER BATTERIES), 1422CTNS 11827.1KGS 42.38CBM HS 850, 7.60.0090 NON DG PORTABLE SOLAR PANEL, 50CTNS 912KGS 3.81CBM HS 8541430000",
+        "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 12739.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-12-11']",
+       "departure_address": {
+        "city": "Yantian",
+        "country": "CHN",
+        "value": "Yantian"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Point",
+        "country": "HKG",
+        "value": "ADDRESS: RM 707 FORTRESS TOWER 250 KING'S RD NORTH POINT HONGKONG"
+       },
+       "receiver_address": {
+        "city": "Tecate",
+        "state": "Baja California",
+        "country": "USA",
+        "value": "PASEO MORELOS NO 10 TECATE, BAJA CALIFORNIA MX 21430 USA"
+       },
+       "identifiers": [
+        {
+         "value": "HYSLFSZX11241763",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "MEXUS 4PL SA DE CV",
+     "names": [
+      "MEXUS 4PL SA DE CV",
+      "MEXUS 4 PL S.A. DE C.V.",
+      "MEXUS 4PL"
+     ],
+     "entity_id": "Xvkl9kPSUH6SzSXuQ2blRQ",
+     "countries": [
+      "MEX",
+      "USA",
+      "CHN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_uflpa_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Xvkl9kPSUH6SzSXuQ2blRQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/Xvkl9kPSUH6SzSXuQ2blRQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Xvkl9kPSUH6SzSXuQ2blRQ"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "31y9XyNfYytbOpoxL6s6ng",
+      "entity_url": "https://graph.sayari.com/resource/entity/31y9XyNfYytbOpoxL6s6ng"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "HONG KONG ECOFLOW INNOVATION TECHNO",
+     "entity_id": "fQVd3QgHDm8BX1ioVFPQ2Q",
+     "countries": [
+      "HKG",
+      "CHN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "fQVd3QgHDm8BX1ioVFPQ2Q",
+       "entity_url": "https://graph.sayari.com/resource/entity/fQVd3QgHDm8BX1ioVFPQ2Q"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/fQVd3QgHDm8BX1ioVFPQ2Q"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "ftLCfOEyTic0eSODK3c2Yg",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PORTABLE SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 11212.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-12-09']",
+       "departure_address": {
+        "city": "Yantian",
+        "country": "CHN",
+        "value": "Yantian"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Hongkong",
+        "value": "RM 707 FORTRESS TOWER 250 KING&APOS ;S RDNORTH POINT HONGKONG ."
+       },
+       "receiver_address": {
+        "city": "L59",
+        "state": "US-ID",
+        "value": "PASEO MORELOS NO 10 TECATE, BAJA CA LIFORNIA MX 21430"
+       },
+       "identifiers": [
+        {
+         "value": "BPIVBPIO24110488",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "GoosOK05uVX9ZlFC3nQcPg",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL HS CODE:8541430000"
+       ],
+       "weight": {
+        "value": 7994.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-11-08']",
+       "departure_address": {
+        "city": "Yantian",
+        "country": "CHN",
+        "value": "Yantian"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Point",
+        "country": "HKG",
+        "value": "ADDRESS: RM 707 FORTRESS TOWER 250K ING&APOS;S RD NORTH POINT HONGKONG ."
+       },
+       "receiver_address": {
+        "city": "Lifornia",
+        "state": "Mx",
+        "value": "PASEO MORELOS NO 10 TECATE, BAJA CA LIFORNIA MX 21430 ."
+       },
+       "identifiers": [
+        {
+         "value": "BPIVBPIO24100181",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "14Hp1drJ2FwaVN3kLliRBw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 7994.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-11-08']",
+       "departure_address": {
+        "city": "Yantian",
+        "country": "CHN",
+        "value": "Yantian"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Point",
+        "country": "HKG",
+        "value": "ADDRESS: RM 707 FORTRESS TOWER 250K ING&APOS;S RD NORTH POINT HONGKONG ."
+       },
+       "receiver_address": {
+        "city": "Lifornia",
+        "state": "Mx",
+        "value": "PASEO MORELOS NO 10 TECATE, BAJA CA LIFORNIA MX 21430 ."
+       },
+       "identifiers": [
+        {
+         "value": "BPIVBPIO24100183",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "hfLyIoCZBvhCfMt3neM_Yw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL HS CODE:8541430000"
+       ],
+       "weight": {
+        "value": 7994.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-11-08']",
+       "departure_address": {
+        "city": "Yantian",
+        "country": "CHN",
+        "value": "Yantian"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Point",
+        "country": "HKG",
+        "value": "ADDRESS: RM 707 FORTRESS TOWER 250K ING&APOS;S RD NORTH POINT HONGKONG ."
+       },
+       "receiver_address": {
+        "city": "Lifornia",
+        "state": "Mx",
+        "value": "PASEO MORELOS NO 10 TECATE, BAJA CA LIFORNIA MX 21430 ."
+       },
+       "identifiers": [
+        {
+         "value": "BPIVBPIO24100182",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "pvL1Qq0vR6I6NRhN-PjmUA",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PORTABLE SOLAR PANEL SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 8474.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-11-04']",
+       "departure_address": {
+        "city": "Yantian",
+        "country": "CHN",
+        "value": "Yantian"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Point",
+        "country": "HKG",
+        "value": "ADDRESS: RM 707 FORTRESS TOWER 250K ING&APOS;S RD NORTH POINT HONGKONG ."
+       },
+       "receiver_address": {
+        "city": "Lifornia",
+        "state": "Mx",
+        "value": "PASEO MORELOS NO 10 TECATE, BAJA CA LIFORNIA MX 21430 ."
+       },
+       "identifiers": [
+        {
+         "value": "BPIVBPIO24100161",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Rzt1eoJo8DGx8wjpeFYUvw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PORTABLE POWER STATION LITHIUM ION, BATTERIES CONTAINED IN EQUIPMENT (INCLUDING L, ITHIUM IONPOLYMER BATTERIES) UN3480 HS CODE:8, 507.60.00 90 563CTNS 13454.55KGS 50.61CBM SOL, AR PANEL HS CODE 8541430000 2CTNS 45.6KGS 0.1, 4CBM",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 13500.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-03-02']",
+       "departure_address": {
+        "city": "Yantian",
+        "country": "CHN",
+        "value": "Yantian"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Point Hongkong",
+        "country": "HKG",
+        "value": "RM 707 FORTRESS TOWER 250 KING'S RD NORTH POINT,HONGKONG,HK"
+       },
+       "receiver_address": {
+        "city": "Ifornia",
+        "state": "Mx",
+        "country": "MEX",
+        "value": "PASEO MORELOS NO 10 TECATE,BAJA CAL IFORNIA MX 21430,BAJA CALIFORNIA, 2 1430,MX"
+       },
+       "identifiers": [
+        {
+         "value": "SXCOSZOE24020205",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "MEXUS 4PL SA DE CV",
+     "names": [
+      "MEXUS 4PL SA DE CV",
+      "MEXUS 4 PL S.A. DE C.V.",
+      "MEXUS 4PL"
+     ],
+     "entity_id": "Xvkl9kPSUH6SzSXuQ2blRQ",
+     "countries": [
+      "MEX",
+      "USA",
+      "CHN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_uflpa_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Xvkl9kPSUH6SzSXuQ2blRQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/Xvkl9kPSUH6SzSXuQ2blRQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Xvkl9kPSUH6SzSXuQ2blRQ"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "fQVd3QgHDm8BX1ioVFPQ2Q",
+      "entity_url": "https://graph.sayari.com/resource/entity/fQVd3QgHDm8BX1ioVFPQ2Q"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "MEXUS 4PL SA DE CV",
+     "names": [
+      "MEXUS 4PL SA DE CV",
+      "MEXUS 4 PL S.A. DE C.V.",
+      "MEXUS 4PL"
+     ],
+     "entity_id": "Xvkl9kPSUH6SzSXuQ2blRQ",
+     "countries": [
+      "MEX",
+      "USA",
+      "CHN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_uflpa_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Xvkl9kPSUH6SzSXuQ2blRQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/Xvkl9kPSUH6SzSXuQ2blRQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Xvkl9kPSUH6SzSXuQ2blRQ"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "4b9Ozmr5T9NZD8tBD3BVAQ",
+       "departure_country": [
+        "MEX"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "8541430100",
+         "description": "Células fotovoltaicas ensambladas en módulos o paneles"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "CARGADOR SOLAR PORTATIL",
+        "Células fotovoltaicas ensambladas en módulos o paneles"
+       ],
+       "weight": {
+        "value": 5171.59,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 8656.0,
+        "currency": "MXN"
+       },
+       "arrival_date": "['2024-09-30']",
+       "departure_address": {
+        "country": "MEX",
+        "value": "BAJA CALIFORNIA NORTE"
+       },
+       "arrival_address": {
+        "country": "USA"
+       },
+       "shipper_address": {
+        "city": "Tecate",
+        "country": "MEX",
+        "value": "PASEO MORELOS 10 CALLE CULIACAN Y AVENIDA DEFENSORES DE BAJA CALIFORNIA TECATE BAJA CALIFORNIA NORTE 21430"
+       },
+       "identifiers": [
+        {
+         "value": "{DC60AC52-3043-447E-9A3CBE284008CABB}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "31df3cc3a57cc4a39dcc29dd4b9ce5e5",
+         "label": "Mexico Imports & Exports (January 2022 - Present)"
+        }
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "BLUE COMMERCE INC",
+     "entity_id": "pitP50vLtBTRFnGyPJ3Z1w",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "pitP50vLtBTRFnGyPJ3Z1w",
+       "entity_url": "https://graph.sayari.com/resource/entity/pitP50vLtBTRFnGyPJ3Z1w"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/pitP50vLtBTRFnGyPJ3Z1w"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "Xvkl9kPSUH6SzSXuQ2blRQ",
+      "entity_url": "https://graph.sayari.com/resource/entity/Xvkl9kPSUH6SzSXuQ2blRQ"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "ECOFLOW EUROPE S.R.O.",
+     "entity_id": "ObVSZvaJ3m0bpa_AcJ9myA",
+     "countries": [
+      "CZE",
+      "FRA",
+      "GBR",
+      "USA",
+      "AUS"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "mass_address_usage",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "ObVSZvaJ3m0bpa_AcJ9myA",
+       "entity_url": "https://graph.sayari.com/resource/entity/ObVSZvaJ3m0bpa_AcJ9myA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/ObVSZvaJ3m0bpa_AcJ9myA"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "EuJ94mBAbk2hBpD_PGo5gw",
+       "departure_country": [
+        "NLD"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES OR MACONTAINER CONTAINING SOLAR PANEL HS, CODE 8541430000 EMAILSTEFCOVASTABLECA, M.COM 91730 / OP1MEXUS.ME / LOGISTICSSHI, PMOR.COM /EMILIO.MORENOMEXUS.ME / 47-4494129, FREIGHT PREPAID SHIPPERS LOAD STOW COUNT A, ND WEIGHT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 12390.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "city": "Rotterdam",
+        "country": "NLD",
+        "value": "Rotterdam"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Pardubice",
+        "country": "CZE",
+        "value": "DOUBRAVICE 110 PARDUBICE 533 53 CZ ATTNJAROSLAV KUBICEK TETEL(+420) 463 358 737"
+       },
+       "receiver_address": {
+        "city": "Tax",
+        "state": "Id",
+        "country": "MEX",
+        "value": "PASEO MORELOS NO 10 TECATE BAJA CALIFORNIA MX 21430"
+       },
+       "identifiers": [
+        {
+         "value": "YMJAT755584561A",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "D85hL2zWgOQlhRJNvZ33pA",
+       "departure_country": [
+        "NLD"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES OR MACONTAINER CONTAINING SOLAR PANEL HS, CODE 8541430000 EMAILSTEFCOVASTABLECA, M.COM 91730 / OP1MEXUS.ME / LOGISTICSSHIP, MOR.COM / EMILIO.MORENOMEXUS.ME / 47-4494129, FREIGHT PREPAID SHIPPERS LOAD STOW COUNT AN, D WEIGHT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 15400.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "city": "Rotterdam",
+        "country": "NLD",
+        "value": "Rotterdam"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Pardubice",
+        "country": "CZE",
+        "value": "DOUBRAVICE 110 PARDUBICE 533 53 CZ ATTNJAROSLAV KUBICEK TEL(+420) 463 TE358 737"
+       },
+       "receiver_address": {
+        "city": "Tax",
+        "state": "Id",
+        "country": "MEX",
+        "value": "PASEO MORELOS NO 10 TECATE BAJA CALIFORNIA MX 21430"
+       },
+       "identifiers": [
+        {
+         "value": "YMJAT755584560A",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "wJ9eBlfK8ocezZOfABSJQg",
+       "departure_country": [
+        "NLD"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES OR MACONTAINER CONTAINING 912 CARTONS PA, CKED ON 24PACKAGES SOLAR PANEL HS CODE 854143, 0000 TEL(+420) 463 358 737, EMAILSTEFCOVASTABLECAM.COM FREIGH, T PREPAID SHIPPERS LOAD STOW COUNT AND WEIGHT, EXPRESS",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 12390.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "city": "Rotterdam",
+        "country": "NLD",
+        "value": "Rotterdam"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Pardubice",
+        "country": "CZE",
+        "value": "DOUBRAVICE 110 PARDUBICE 533 53 CZ TEATTNJAROSLAV KUBICEK"
+       },
+       "receiver_address": {
+        "city": "Tax",
+        "state": "Id",
+        "country": "MEX",
+        "value": "PASEO MORELOS NO 10 TECATE BAJA CALIFORNIA MX 21430"
+       },
+       "identifiers": [
+        {
+         "value": "YMJAT755584559A",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "l9JQeCNZQrW-zZKyhn5RFQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 16138.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-05-28']",
+       "departure_address": {
+        "value": "Stadersand"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Pardubice",
+        "country": "CZE",
+        "value": "DOUBRAVICE 110 DOUBRAVICE 110 PARDUBICE 533 53 PARDUBICE 533 53 CZ"
+       },
+       "receiver_address": {
+        "country": "MEX",
+        "value": "PASEO MORELOS NO 10 PASEO MORELOS NO 10 TECATE BAJA CAL BAJA CALIFORNIA 21430 MX"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYPRGE02609A01",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "QHX25jUrQU9I2N09Bdaqkg",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 16138.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-05-28']",
+       "departure_address": {
+        "value": "Stadersand"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Pardubice",
+        "country": "CZE",
+        "value": "DOUBRAVICE 110 DOUBRAVICE 110 PARDUBICE 533 53 PARDUBICE 533 53 CZ"
+       },
+       "receiver_address": {
+        "country": "MEX",
+        "value": "PASEO MORELOS NO 10 PASEO MORELOS NO 10 TECATE BAJA CAL BAJA CALIFORNIA 21430 MX"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYPRGE02608A01",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "ttmHY8N2-5sglW1syHCFcQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 13921.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-04-15']",
+       "departure_address": {
+        "value": "Stadersand"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Pardubice",
+        "country": "CZE",
+        "value": "DOUBRAVICE 110 DOUBRAVICE 110 PARDUBICE 533 53 CZ PARDUBICE 533 53 CZ"
+       },
+       "receiver_address": {
+        "country": "MEX",
+        "value": "PASEO MORELOS NO 10 PASEO MORELOS NO 10 TECATE, TECATE 21400 MX"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYPRGE01433A01",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "OzkJ0oxxikL5bGilVQP1ag",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANEL"
+       ],
+       "weight": {
+        "value": 13921.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-04-15']",
+       "departure_address": {
+        "value": "Stadersand"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Pardubice",
+        "country": "CZE",
+        "value": "DOUBRAVICE 110 DOUBRAVICE 110 PARDUBICE 533 53 CZ"
+       },
+       "receiver_address": {
+        "country": "MEX",
+        "value": "PASEO MORELOS NO 10 PASEO MORELOS NO 10 21410 MX"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYPRGE01432A01",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Twx55QmUcIXkHz-HKWYkNQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANELS H.S. CODE: 8541.4300, CN> MAIL:O",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 11420.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-03-05']",
+       "departure_address": {
+        "value": "Stadersand"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Pardubice",
+        "country": "CZE",
+        "value": "DOUBRAVICE 110 CZ-533 53 PARDUBICE PARDUBICE 53353 CZ"
+       },
+       "receiver_address": {
+        "city": "Tecate",
+        "state": "MX-BCN",
+        "country": "MEX",
+        "value": "PASEO MORELOS NO 10 TECATE, BAJA CALIFORNIA 21430 MX"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYHAME01790A01",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "gWBBxfhVrQgynjVGcfTotQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "ON 23 PALLETS SOLAR PANELS H.S. COD, E: 8541.43",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 16450.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-02-12']",
+       "departure_address": {
+        "value": "Stadersand"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "city": "Pardubice",
+        "country": "CZE",
+        "value": "DOUBRAVICE 110 PARDUBICE 533 53 CZ PARDUBICE 53353 CZ"
+       },
+       "receiver_address": {
+        "country": "MEX",
+        "value": "PASEO MORELOS NO 10 TECATE, BAJA CA CALIFORNIA 21430 MX"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYHAME03381A01",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "LGqK6M2_2FyY-sD0ItanYg",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "ON 28 PALLETS SOLAR PANELS H.S. COD, E: 8541.43",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 17584.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-02-12']",
+       "departure_address": {
+        "value": "Stadersand"
+       },
+       "arrival_address": {
+        "city": "Norfolk",
+        "state": "US-VA",
+        "country": "USA",
+        "value": "Norfolk, Virginia"
+       },
+       "shipper_address": {
+        "city": "Pardubice",
+        "country": "CZE",
+        "value": "DOUBRAVICE 110 PARDUBICE PARDUBICE 53353 CZ"
+       },
+       "receiver_address": {
+        "city": "Tecate",
+        "state": "California",
+        "country": "MEX",
+        "value": "PASEO MORELOS NO 10 TECATE, CALIFORNIA 21430 MX"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYHAME03389A01",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "MEXUS 4PL SA DE CV",
+     "names": [
+      "MEXUS 4PL SA DE CV",
+      "MEXUS 4 PL S.A. DE C.V.",
+      "MEXUS 4PL"
+     ],
+     "entity_id": "Xvkl9kPSUH6SzSXuQ2blRQ",
+     "countries": [
+      "MEX",
+      "USA",
+      "CHN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_uflpa_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Xvkl9kPSUH6SzSXuQ2blRQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/Xvkl9kPSUH6SzSXuQ2blRQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Xvkl9kPSUH6SzSXuQ2blRQ"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "ObVSZvaJ3m0bpa_AcJ9myA",
+      "entity_url": "https://graph.sayari.com/resource/entity/ObVSZvaJ3m0bpa_AcJ9myA"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "MEXUS 4PL SA DE CV",
+     "names": [
+      "MEXUS 4PL SA DE CV",
+      "MEXUS 4 PL S.A. DE C.V.",
+      "MEXUS 4PL"
+     ],
+     "entity_id": "Xvkl9kPSUH6SzSXuQ2blRQ",
+     "countries": [
+      "MEX",
+      "USA",
+      "CHN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_uflpa_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Xvkl9kPSUH6SzSXuQ2blRQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/Xvkl9kPSUH6SzSXuQ2blRQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Xvkl9kPSUH6SzSXuQ2blRQ"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "bUdsdUxYbdzm0gwRWJRRFg",
+       "departure_country": [
+        "MEX"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PANEL SOLAR PLEGABLE"
+       ],
+       "weight": {
+        "value": 49532.09,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 53040.0,
+        "currency": "MXN"
+       },
+       "departure_date": "['2026-01-15']",
+       "departure_address": {
+        "country": "MEX",
+        "value": "BAJA CALIFORNIA NORTE"
+       },
+       "arrival_address": {
+        "country": "USA"
+       },
+       "shipper_address": {
+        "city": "Tecate",
+        "country": "MEX",
+        "value": "PASEO MORELOS 10 CALLE CULIACAN Y AVENIDA DEFENSORES DE BAJA CALIFORNIA TECATE BAJA CALIFORNIA NORTE 21430"
+       },
+       "identifiers": [
+        {
+         "value": "6003054",
+         "type": "mex_shipment_declaration_number"
+        }
+       ],
+       "sources": [
+        {
+         "id": "31df3cc3a57cc4a39dcc29dd4b9ce5e5",
+         "label": "Mexico Imports & Exports (January 2022 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "ug3yR7LdBB9M2Bw9x-F1vw",
+       "departure_country": [
+        "MEX"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PANEL SOLAR"
+       ],
+       "weight": {
+        "value": 47940.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 512367.0,
+        "currency": "MXN"
+       },
+       "departure_date": "['2025-12-30']",
+       "departure_address": {
+        "country": "MEX",
+        "value": "BAJA CALIFORNIA NORTE"
+       },
+       "arrival_address": {
+        "country": "USA"
+       },
+       "shipper_address": {
+        "city": "Tecate",
+        "country": "MEX",
+        "value": "PASEO MORELOS 10 CALLE CULIACAN Y AVENIDA DEFENSORES DE BAJA CALIFORNIA TECATE BAJA CALIFORNIA NORTE 21430"
+       },
+       "identifiers": [
+        {
+         "value": "5004446",
+         "type": "mex_shipment_declaration_number"
+        }
+       ],
+       "sources": [
+        {
+         "id": "31df3cc3a57cc4a39dcc29dd4b9ce5e5",
+         "label": "Mexico Imports & Exports (January 2022 - Present)"
+        }
+       ]
+      }
+     }
+    ],
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "Xvkl9kPSUH6SzSXuQ2blRQ",
+      "entity_url": "https://graph.sayari.com/resource/entity/Xvkl9kPSUH6SzSXuQ2blRQ"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 750,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Mexus 4PL",
+    "shipper_name": "MEXUS 4PL SA DE CV",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6Ijg2Y2JjMzEyNzZmMGUzNWJhOWQ5MzllNjE2MGU5ZWQwMDM1OWYwYWFiNGRiMmIxNDNjODhhNDMxNDk3MGZmZTEiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "Do not treat incorporation date as evidence of legitimate operational history — always verify actual commercial activity timelines against the registration date",
+   "When a counterparty has an aged incorporation but thin commercial footprint, escalate for enhanced due diligence before onboarding or transacting",
+   "Build formation agent clustering into automated screening workflows to identify shelf company factories that supply illicit networks"
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

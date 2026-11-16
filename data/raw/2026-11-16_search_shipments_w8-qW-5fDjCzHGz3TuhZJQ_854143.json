@@ -1,0 +1,1511 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Runergy PV Technology Thailand",
+  "shipper_name": "RUNERGY PV TECHNOLOGY (THAILAND) COMPANY LIMITED",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:26:07+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 3,
+  "items": [
+   {
+    "supplier": {
+     "name": "RUNERGY PV TECHNOLOGY (THAILAND) C",
+     "entity_id": "Uqfdui4JvBxhLsZVB4O9MA",
+     "countries": [
+      "THA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Uqfdui4JvBxhLsZVB4O9MA",
+       "entity_url": "https://graph.sayari.com/resource/entity/Uqfdui4JvBxhLsZVB4O9MA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Uqfdui4JvBxhLsZVB4O9MA"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "DgpS2K4djMHAqAAY-nLdYg",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 250855.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-05-26']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO.820, MOO.5, KHLONG KIEW SUB-DIST RICT, BAN BUENG DISTRICT, CHONBURI PROVINCE 20220, THAILAND 20220"
+       },
+       "receiver_address": {
+        "city": "City",
+        "state": "US-NV",
+        "country": "USA",
+        "value": "1CARSON CITY, NV 89703, USA"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM09062300",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "6u-xtcbm9UHxyDvo9moiFA",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 289448.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-05-16']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO.820, MOO.5, KHLONG KIEW SUB-DIST RICT, BAN BUENG DISTRICT, CHONBURI PROVINCE 20220, THAILAND 20220"
+       },
+       "receiver_address": {
+        "city": "City",
+        "state": "US-NV",
+        "country": "USA",
+        "value": "1CARSON CITY, NV 89703, USA"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM56499900",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "uSl76r7C8jpTsppRA5M8hw",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 289448.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-05-16']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO.820, MOO.5, KHLONG KIEW SUB-DIST RICT, BAN BUENG DISTRICT, CHONBURI PROVINCE 20220, THAILAND 20220"
+       },
+       "receiver_address": {
+        "city": "City",
+        "state": "US-NV",
+        "country": "USA",
+        "value": "1CARSON CITY, NV 89703, USA"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM25006500",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "CsJYkqFnaNzR9LSL_xQKYw",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 289448.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-05-05']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO.820, MOO.5, KHLONG KIEW SUB-DIST RICT, BAN BUENG DISTRICT, CHONBURI PROVINCE 20220, THAILAND 20220"
+       },
+       "receiver_address": {
+        "city": "City",
+        "state": "US-NV",
+        "country": "USA",
+        "value": "1CARSON CITY, NV 89703, USA"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM33876600",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "x5qW48V2z8aoeig5zzmf0A",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 289448.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-24']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO.820, MOO.5, KHLONG KIEW SUB-DIST RICT, BAN BUENG DISTRICT, CHONBURI PROVINCE 20220, THAILAND 20220"
+       },
+       "receiver_address": {
+        "city": "City",
+        "state": "US-NV",
+        "country": "USA",
+        "value": "1CARSON CITY, NV 89703, USA"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM37655800",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "sLrkGnG6uNO6pdEX--JK7w",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 289448.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-24']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO.820, MOO.5, KHLONG KIEW SUB-DIST RICT, BAN BUENG DISTRICT, CHONBURI PROVINCE 20220, THAILAND 20220"
+       },
+       "receiver_address": {
+        "city": "City",
+        "state": "US-NV",
+        "country": "USA",
+        "value": "1CARSON CITY, NV 89703, USA"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM96863800",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "fSeMsTq8sHhwVpFs1bAkTw",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 289448.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-19']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO.820, MOO.5, KHLONG KIEW SUB-DIS TRICT, BAN BUENG DISTRICT, CHONBURI PROVINCE 20220, THAILAND 20220"
+       },
+       "receiver_address": {
+        "city": "City",
+        "state": "US-NV",
+        "country": "USA",
+        "value": "1CARSON CITY, NV 89703, USA"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM87298800",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "MLuzM5I9b-Pw0HBRS1txDQ",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 289448.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-19']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO.820, MOO.5, KHLONG KIEW SUB-DIST RICT, BAN BUENG DISTRICT, CHONBURI PROVINCE 20220, THAILAND 20220"
+       },
+       "receiver_address": {
+        "city": "City",
+        "state": "US-NV",
+        "country": "USA",
+        "value": "1CARSON CITY, NV 89703, USA"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM21846100",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Z6Yc3re_xwApUYI5I3DYmg",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 289448.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-19']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO.820, MOO.5, KHLONG KIEW SUB-DIS TRICT, BAN BUENG DISTRICT, CHONBURI PROVINCE 20220, THAILAND 20220"
+       },
+       "receiver_address": {
+        "city": "City",
+        "state": "US-NV",
+        "country": "USA",
+        "value": "1CARSON CITY, NV 89703, USA"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM19896000",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Yot9Wkj98CZChKk7ppu-pQ",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 289448.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-08']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO.820, MOO.5, KHLONG KIEW SUB-DIST RICT, BAN BUENG DISTRICT, CHONBURI PROVINCE 20220, THAILAND 20220"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "1NV 89703, USA"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM90972200",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "RUNERGY NORTH AMERICA TRADING LLC",
+     "entity_id": "sUV4k5rVOQf4xX6UJcN2Bg",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "mass_address_usage",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "sUV4k5rVOQf4xX6UJcN2Bg",
+       "entity_url": "https://graph.sayari.com/resource/entity/sUV4k5rVOQf4xX6UJcN2Bg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/sUV4k5rVOQf4xX6UJcN2Bg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "Uqfdui4JvBxhLsZVB4O9MA",
+      "entity_url": "https://graph.sayari.com/resource/entity/Uqfdui4JvBxhLsZVB4O9MA"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "RUNERGY PV TECHNOLOGY (THAILAND) COMPANY LIMITED",
+     "names": [
+      "RUNERGY PV TECHNOLOGY (THAILAND) COMPANY LIMITED",
+      "RUNERGY PV TECHNOLOGY (THAILAND) CO",
+      "RUNERGY PV TECHNOLOGY THAILAND"
+     ],
+     "entity_id": "w8-qW-5fDjCzHGz3TuhZJQ",
+     "countries": [
+      "THA",
+      "VNM",
+      "TLS",
+      "TWN",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "w8-qW-5fDjCzHGz3TuhZJQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/w8-qW-5fDjCzHGz3TuhZJQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/w8-qW-5fDjCzHGz3TuhZJQ"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "OYFL82EedrZSkTg369-_6A",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE 306 PALLETS=3, 06 PACKAGES= 9486 PIECES INVOICE NO XXXXXXXX, XX HS CODE 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 328049.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-05-22']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "value": "NO.820,MOO.5,KHLONG KIEW SUB-DISTRICT, BAN BUENG CHONBURI 20220 TH"
+       },
+       "receiver_address": {
+        "city": "Carson",
+        "country": "USA",
+        "value": "112 NORTH CURRY STREET, CARSON NV89703 US"
+       },
+       "identifiers": [
+        {
+         "value": "CHQFHXM26040753",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "5lPZaXvHi9iijvHQY_GbCA",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE 270 PALLETS=2, 70 PACKAGES= 8370 PIECES INVOICE NO XXXXXXXX, XX HS CODE 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 289455.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-05-22']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "value": "NO.820,MOO.5,KHLONG KIEW SUB-DISTRICT, BAN BUENG CHONBURI 20220 TH"
+       },
+       "receiver_address": {
+        "city": "Carson",
+        "country": "USA",
+        "value": "112 NORTH CURRY STREET, CARSON NV89703 US"
+       },
+       "identifiers": [
+        {
+         "value": "CHQFHXM26040752",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "sAKHUfXd8rIc7vCqAHSPrA",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE 270 PALLETS=2, 70 PACKAGES= 8370 PIECES INVOICE NO XXXXXXXX, XX HS CODE 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 289455.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-05-14']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "value": "NO.820,MOO.5,KHLONG KIEW SUB-DISTRICT, BAN BUENG CHONBURI 20220 TH"
+       },
+       "receiver_address": {
+        "city": "Carson",
+        "country": "USA",
+        "value": "112 NORTH CURRY STREET, CARSON NV89703 US"
+       },
+       "identifiers": [
+        {
+         "value": "CHQFHXM26040291",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "JlTFTcaUZHefHWcOWaJqDg",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 289448.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-05-05']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO.820, MOO.5, KHLONG KIEW SUB-DIST RICT, BAN BUENG DISTRICT, CHONBURI PROVINCE 20220, THAILAND 20220"
+       },
+       "receiver_address": {
+        "city": "City",
+        "state": "US-NV",
+        "country": "USA",
+        "value": "1CARSON CITY, NV 89703, USA"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM45015300",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Pd6CniEZCI1skWyG7arARw",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE 270 PALLETS=2, 70 PACKAGES= 8370 PIECES INVOICE NO XXXXXXXX, XX HS CODE 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 289455.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-05-04']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "value": "NO.820,MOO.5,KHLONG KIEW SUB-DISTRICT, BAN BUENG CHONBURI 20220 TH"
+       },
+       "receiver_address": {
+        "city": "Carson",
+        "country": "USA",
+        "value": "112 NORTH CURRY STREET, CARSON NV89703 US"
+       },
+       "identifiers": [
+        {
+         "value": "CHQFHXM26040158",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "d7LLY04NNR-apCWaLHUvmg",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE 270 PALLETS=2, 70 PACKAGES= 8370 PIECES INVOICE NO XXXXXXXXX, X HS CODE 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 289455.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-05-02']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "value": "NO.820,MOO.5,KHLONG KIEW SUB-DISTRICT, BAN BUENG CHONBURI 20220 TH"
+       },
+       "receiver_address": {
+        "city": "Carson",
+        "country": "USA",
+        "value": "112 NORTH CURRY STREET, CARSON NV89703 US"
+       },
+       "identifiers": [
+        {
+         "value": "CHQFHXM26040236",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "RUNERGY NORTH AMERICA TRADING LLC",
+     "entity_id": "sUV4k5rVOQf4xX6UJcN2Bg",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "mass_address_usage",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "sUV4k5rVOQf4xX6UJcN2Bg",
+       "entity_url": "https://graph.sayari.com/resource/entity/sUV4k5rVOQf4xX6UJcN2Bg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/sUV4k5rVOQf4xX6UJcN2Bg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "w8-qW-5fDjCzHGz3TuhZJQ",
+      "entity_url": "https://graph.sayari.com/resource/entity/w8-qW-5fDjCzHGz3TuhZJQ"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "RUNERGY PV TECHNOLOGY (THAILAND) COMPANY LIMITED",
+     "names": [
+      "RUNERGY PV TECHNOLOGY (THAILAND) COMPANY LIMITED",
+      "RUNERGY PV TECHNOLOGY (THAILAND) CO",
+      "RUNERGY PV TECHNOLOGY THAILAND"
+     ],
+     "entity_id": "w8-qW-5fDjCzHGz3TuhZJQ",
+     "countries": [
+      "THA",
+      "VNM",
+      "TLS",
+      "TWN",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "w8-qW-5fDjCzHGz3TuhZJQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/w8-qW-5fDjCzHGz3TuhZJQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/w8-qW-5fDjCzHGz3TuhZJQ"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "w-6i1QIJmYqdwkjUS4FcKQ",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 37344.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-01-28']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO.820,MOO.5,KHLONG KIEW SUB-DISTR ICT,BAN BUENG DISTRICT, CHONBURI PR OVINCE 20220,THAILAND"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "8 THE GREENDE 19901,UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM90453601",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "-8jfsVBynf7S5JgRJve2Qw",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 242733.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-01-28']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO.820,MOO.5,KHLONG KIEW SUB-DISTR ICT,BAN BUENG DISTRICT, CHONBURI PR OVINCE 20220,THAILAND"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "8 THE GREENDE 19901,UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM90453600",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "YEwQ83gSu3ZcO6nae0Ioeg",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 98065.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-01-23']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO. 820 MOO.5 KHLONG KIEW SUB-DISTR ICT, BAN BUENG DISTRICT, CHONBURI P ROVINCE 20220, THAILAND 10110"
+       },
+       "receiver_address": {
+        "city": "Dover",
+        "state": "US-DE",
+        "country": "USA",
+        "value": "8 THE GREEN,SUITE A, DOVER, DE 1990 1,UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM15189300",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "PFFaXPR0Y-W3ROJ_SZS4XA",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BIFACIAL SOLAR MODULE, SHIPPER LOAD AND COUNT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 93359.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-01-23']",
+       "departure_address": {
+        "city": "Laem Chabang",
+        "country": "THA",
+        "value": "Laem Chabang"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Kiew",
+        "value": "NO.820,MOO.5,KHLONG KIEW SUB-DISTR ICT,BAN BUENG DISTRICT, CHONBURI PR OVINCE 20220,THAILAND"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "8 THE GREENDE 19901,UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HDMUBKKM52107900",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "RUNERGY USA TRADING LLC",
+     "entity_id": "KXnLYjkv1pnWTkqNs9-LDg",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "KXnLYjkv1pnWTkqNs9-LDg",
+       "entity_url": "https://graph.sayari.com/resource/entity/KXnLYjkv1pnWTkqNs9-LDg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/KXnLYjkv1pnWTkqNs9-LDg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "w8-qW-5fDjCzHGz3TuhZJQ",
+      "entity_url": "https://graph.sayari.com/resource/entity/w8-qW-5fDjCzHGz3TuhZJQ"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 632,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Runergy PV Technology Thailand",
+    "shipper_name": "RUNERGY PV TECHNOLOGY (THAILAND) COMPANY LIMITED",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6ImQ2MjZiYzlkN2M2MjgyMWNmYmQ1YmVmZjRiOGU1Nzc4NTY1OGU2ODVjODQ0ZWFlZmJiNTNmZWE5NTNjZTEwOTIiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving US entities, include the state of incorporation if known — many companies share similar names across different states.",
+   "Delaware incorporation is normal for large companies and not inherently suspicious, but Nevada/Wyoming incorporation combined with operations elsewhere can indicate a desire for opacity.",
+   "FinCEN BOI data is not publicly accessible — Sayari's US ownership data comes from state filings, SEC filings, and other public sources."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

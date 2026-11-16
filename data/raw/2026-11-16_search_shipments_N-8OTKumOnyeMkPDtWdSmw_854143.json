@@ -1,0 +1,1492 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Waaree Energies",
+  "shipper_name": "WAAREE ENERGIES LIMITED",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:23:22+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 2,
+  "items": [
+   {
+    "supplier": {
+     "name": "WAAREE ENERGIES LIMITED",
+     "entity_id": "N-8OTKumOnyeMkPDtWdSmw",
+     "countries": [
+      "IND",
+      "USA",
+      "KOR",
+      "HKG",
+      "ESP"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "esg_score_medium",
+       "export_to_soe",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "exports_to_usa_section_1260h_entity",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_from_bis_addresses_high_diversion_risk",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_export_to_soe",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_exports_to_usa_section_1260h_entity",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_from_bis_addresses_high_diversion_risk",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "N-8OTKumOnyeMkPDtWdSmw",
+       "entity_url": "https://graph.sayari.com/resource/entity/N-8OTKumOnyeMkPDtWdSmw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/N-8OTKumOnyeMkPDtWdSmw"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "wO6gnH473H-QD9SpwxZx8Q",
+       "departure_country": [
+        "MAR"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE-854143SOLAR PHOTOVOLTAIC MO, DULES SOL AR PV MODULE (BIFACIAL) BIN-21-615",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 150001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-11-01']",
+       "departure_address": {
+        "city": "Tangier",
+        "country": "MAR",
+        "value": "Tangier"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026328",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "s-maPXTal8KrjoL4IaHU9g",
+       "departure_country": [
+        "MAR"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE-854143SOLAR PHOTOVOLTAIC MO, DULES SOL AR PV MODULE (BIFACIAL) BIN-21-615",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 125001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-11-01']",
+       "departure_address": {
+        "city": "Tangier",
+        "country": "MAR",
+        "value": "Tangier"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026330",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "OEOwy9oboN3YBRGev3fSYg",
+       "departure_country": [
+        "MAR"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE-854143SOLAR PHOTOVOLTAIC MO, DULES SOL AR PV MODULE (BIFACIAL) BIN-21-615",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 125001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-11-01']",
+       "departure_address": {
+        "city": "Tangier",
+        "country": "MAR",
+        "value": "Tangier"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026331",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "loVv-WImwhttjqeTfx6qsQ",
+       "departure_country": [
+        "MAR"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE-854143SOLAR PHOTOVOLTAIC MO, DULESSOL AR PV MODULE (BIFACIAL) BIN-21-615",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 150001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-11-01']",
+       "departure_address": {
+        "city": "Tangier",
+        "country": "MAR",
+        "value": "Tangier"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026329",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "AbswKiv0DKv5Dr1BQu2vTQ",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 SOLAR PHOTOVOLTAIC, MODULES SOLAR PV MODULE (BIFACIAL) BIN-21-61, 5",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 150001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026394",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "cGbrXEFscYYq6yA8SV-2HA",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 SOLAR PHOTOVOLTAIC, MODULES SOLAR PV MODULE (BIFACIAL) BIN-21-61, 5",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 125001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026423",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "hWQWCaYBfBCujwKUPU0Fbg",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE.85414300 SOLAR PHOTOVOLTAIC, MODULES SOLAR PV MODULE (BIFACIAL) BIN-21-61, 5",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 175001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026750",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Prya3yXpfV02cZZLQkaIMg",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 SOLAR PHOTOVOLTAIC, MODULES SOLAR PV MODULE (BIFACIAL) BIN-21-61, 5",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 175001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026393",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "OauW15dgAsckOVCAWUSapg",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 SOLAR PHOTOVOLTAIC, MODULES SOLAR PV MODULE (BIFACIAL) BIN-21-61, 5",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 150001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026380",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "GsL6ceNEe3fn7XwJ1f3fIg",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE.85414300 SOLAR PHOTOVOLTAIC, MODULES SOLAR PV MODULE (BIFACIAL) BIN-21-61, 5",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 125001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026746",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "TrGGmo2gaZmlzSk_ZRsVcg",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 SOLAR PHOTOVOLTAIC, MODULES SOLAR PV MODULE (BIFACIAL) BIN-21-61, 5",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 25000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026529",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "I_LyTcmfVXZvrbqQhRswUA",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 SOLAR PHOTOVOLTAIC, MODULES SOLAR PV MODULE (BIFACIAL) BIN-21-61, 5",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 125001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026375",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "6Cvd-P-I9tjur-WB7PY8Rw",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE 85414300 SOLAR PHOTOVOLTAIC, MODULES SOLAR PV MODULE (BIFACIAL) BIN-21-61, 5",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 150001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026379",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "z-H30uoOer2jY2lojMNAfA",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE-854143SOLAR PHOTOVOLTAIC MO, DULESSOL AR PV MODULE (BIFACIAL) BIN-21-615",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 125001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026537",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "u8d2y1sQwJb4KiS52mAc5Q",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE-854143SOLAR PHOTOVOLTAIC MO, DULES SOL AR PV MODULE (BIFACIAL) BIN-21-615",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 125001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026377",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "QXs4H-FMboQ_5oQL6EyQCQ",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE.85414300 SOLAR PHOTOVOLTAIC, MODULES SOLAR PV MODULE (BIFACIAL) BIN-21-61, 5",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 100001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026742",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "iMwzpA4KQ-tV0Qjs9Ih2RQ",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE-854143SOLAR PHOTOVOLTAIC MO, DULES SOL AR PV MODULE (BIFACIAL) BIN-21-615",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 125001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026376",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "8j4SMju7HQhHzph09TKHTQ",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE.85414300 SOLAR PHOTOVOLTAIC, MODULES SOLAR PV MODULE (BIFACIAL) BIN-21-61, 5",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 125001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026747",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "UT5flMU1QnuSMTaEIiTllQ",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE-854143SOLAR PHOTOVOLTAIC MO, DULESSOL AR PV MODULE (BIFACIAL) BIN-21-61",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 125001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-31']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "9651 KATY FWY,SUITE 600 HOUSTON TX 77924 U.S.A."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026536",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "ENCAP ENERGY HOLDINGS,LLC",
+     "entity_id": "KCcQ_VWyu0N4TA4B10YO0g",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "KCcQ_VWyu0N4TA4B10YO0g",
+       "entity_url": "https://graph.sayari.com/resource/entity/KCcQ_VWyu0N4TA4B10YO0g"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/KCcQ_VWyu0N4TA4B10YO0g"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "N-8OTKumOnyeMkPDtWdSmw",
+      "entity_url": "https://graph.sayari.com/resource/entity/N-8OTKumOnyeMkPDtWdSmw"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "WAAREE ENERGIES LIMITED",
+     "entity_id": "N-8OTKumOnyeMkPDtWdSmw",
+     "countries": [
+      "IND",
+      "USA",
+      "KOR",
+      "HKG",
+      "ESP"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "esg_score_medium",
+       "export_to_soe",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "exports_to_usa_section_1260h_entity",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_from_bis_addresses_high_diversion_risk",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_export_to_soe",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_exports_to_usa_section_1260h_entity",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_from_bis_addresses_high_diversion_risk",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "N-8OTKumOnyeMkPDtWdSmw",
+       "entity_url": "https://graph.sayari.com/resource/entity/N-8OTKumOnyeMkPDtWdSmw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/N-8OTKumOnyeMkPDtWdSmw"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "dOYAhi5FEODUPN5ZQXjKpg",
+       "departure_country": [
+        "MAR"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "HS CODE-854143SOLAR PHOTOVOLTAIC MO, DULES SOL AR PV MODULE (BIFACIAL) BIN-21-615",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 125001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-11-01']",
+       "departure_address": {
+        "city": "Tangier",
+        "country": "MAR",
+        "value": "Tangier"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Navsari",
+        "country": "IND",
+        "value": "SURVEY NO .1934/1 TO 6,1853/1 TO 6N H -48 VILLAGE: DEGAM TALUKA:CHIKHLI GUJARAT NAVSARI 396530 INDIA"
+       },
+       "receiver_address": {
+        "state": "US-CA",
+        "country": "USA",
+        "value": "17800 CASTLETON ST STE 610CITY OF I NDUSTRY CA 91748 U.S.A. ."
+       },
+       "identifiers": [
+        {
+         "value": "AMJALLPAOL026327",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "M&AK INC",
+     "entity_id": "FXJJPFn55AWKHSpV6GQemg",
+     "countries": [
+      "USA"
+     ],
+     "quality_flags": [],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "FXJJPFn55AWKHSpV6GQemg",
+       "entity_url": "https://graph.sayari.com/resource/entity/FXJJPFn55AWKHSpV6GQemg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/FXJJPFn55AWKHSpV6GQemg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "N-8OTKumOnyeMkPDtWdSmw",
+      "entity_url": "https://graph.sayari.com/resource/entity/N-8OTKumOnyeMkPDtWdSmw"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 7613,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Waaree Energies",
+    "shipper_name": "WAAREE ENERGIES LIMITED",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6ImQ4OGYwNjAwNGI3YTg3ODRhYzIzYWRiMDNjZjI4NzJmYTgxZjE5Y2EwMGYyNDI4MzgyMjRiN2EyZjMyZGZlYmMiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "Hong Kong entities connecting mainland Chinese operations to international markets is a normal and common structure.",
+   "The Significant Controllers Register exists but is not publicly accessible — Sayari's UBO data for HK companies comes from filed shareholder data and cross-border references.",
+   "Corporate service providers in Hong Kong manage large numbers of entities — shared registered addresses are common and not always suspicious."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

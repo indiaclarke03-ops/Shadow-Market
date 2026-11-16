@@ -1,0 +1,1468 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "FS India Solar Ventures",
+  "shipper_name": "FS INDIA SOLAR VENTURES PRIVATE LIMITED",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:23:22+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 2,
+  "items": [
+   {
+    "supplier": {
+     "name": "FS INDIA SOLAR VENTURES PRIVATE LIMITED",
+     "names": [
+      "FS INDIA SOLAR VENTURES PRIVATE LIMITED",
+      "FS INDIA SOLAR VENTURES PVT LTD",
+      "FS INDIA SOLAR VENTURES PRIVATE",
+      "FS India Solar Ventures Private Ltd",
+      "FS INDIA SOLAR VENTURES"
+     ],
+     "entity_id": "5o88cxYmG-covaV4-JqlCw",
+     "countries": [
+      "IND",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owned_by_regulatory_action_entity",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "5o88cxYmG-covaV4-JqlCw",
+       "entity_url": "https://graph.sayari.com/resource/entity/5o88cxYmG-covaV4-JqlCw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/5o88cxYmG-covaV4-JqlCw"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "xgpPwZXh_ShqlnrFw-F7WQ",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020184, LEG 2 SHIPMENT, NO 400775329, INVOICE NO, 32212633E5100509, INV DT 04.09.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-30']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUEUR2608AOVF0",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "cBEDPp-o6quWHbB0-dVCHA",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020185, LEG 2 SHIPMENT, NO 400775263, INVOICE NO, 32212633E5100487, INV DT 04.09.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-30']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUEUR2608APFB0",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "rDgL_tSM9WbRPyTOlDBETw",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020186, LEG 2 SHIPMENT, NO 400775350, INVOICE NO, 32212633E5100520, INV DT 05.09.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-30']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUEUR2608AOZX0",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "-ZnlA8aC0qrJL39XjoxOSQ",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020183, LEG 2 SHIPMENT, NO 400775189, INVOICE NO, 32212633E5100515, INV DT 05.09.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-30']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUEUR2608AOVA4",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "mxcQxse7s4YCcf8-uDUTfQ",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020181, LEG 2 SHIPMENT, NO 400775362, INVOICE NO, 32212633E5100468, INV DT 03.09.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-29']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUEUR260899888",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "IqnPvpE4o30L-_V6W8XxNw",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020277, LEG 2 SHIPMENT, NO 400780007, INVOICE NO, 32212633E4100054, INV DT 04.09.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-29']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUEUR2608APAM9",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "YSGK4HVemj8SmoD_pnMGew",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020182, LEG 2 SHIPMENT, NO 400775202, INVOICE NO, 32212633E5100477, INV DT 03.09.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-29']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "US-TN",
+        "country": "In India",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN INDIA"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUEUR260899983",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "mO3rAC8nLTn2q7LwHZaudw",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020128, LEG 2 SHIPMENT, NO 400773170, INVOICE NO, 32212633E5100258, INV DT 17.08.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-27']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUMA3260863093",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "ReilcViOltswyaqMFB_Xtg",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500019807, LEG 2 SHIPMENT, NO 400761863, INVOICE NO, 32212633EW100113, INV DT 27.07.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-27']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUEUR260784506",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "JUz_pcLsrfcmRdrL__o7Pw",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020127, LEG 2 SHIPMENT, NO 400773289, INVOICE NO, 32212633E5100277, INV DT 17.08.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-27']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUMA3260862247",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "o6oJvLS9S95JjotCXz2vKA",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020135, LEG 2 SHIPMENT, NO 400773383, INVOICE NO, 32212633E5100353, INV DT 19.08.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-27']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUMA3260865099",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "2C57aMMMFLkt31ry_DVufg",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020129, LEG 2 SHIPMENT, NO 400773267, INVOICE NO, 32212633E5100308, INV DT 18.08.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-27']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUMA3260864209",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "dL4Gz18foUYQvwvAPLR4bA",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500019808, LEG 2 SHIPMENT, NO 400761928, INVOICE NO, 32212633EW100110, INV DT 27.07.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-27']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUEUR260788657",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "WOsbAL2fLtNXgqwVBzkJeQ",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020126, LEG 2 SHIPMENT, NO 400773241, INVOICE NO, 32212633E5100272, INV DT 17.08.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-27']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUMA3260864231",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "1PrUeFZMBNvCKvUBuRFhwQ",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500019810, LEG 2 SHIPMENT, NO 400761969, INVOICE NO, 32212633EW100121, INV DT 28.07.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-27']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUEUR260788986",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "91useoBk09UvWNmVvpMzhA",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020133, LEG 2 SHIPMENT, NO 400773379, INVOICE NO, 32212633E5100345, INV DT 19.08.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-27']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUMA3260864940",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "VWl6nBO84Xqm0E7-aZuKcQ",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500019952, LEG 2 SHIPMENT, NO 400767624, INVOICE NO, 32212633E5100126, INV DT 10.08.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-27']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "INC. CORPORATE HEADQUARTERS 350 W WASHINGTON ST TEMPE AZ 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUMA3260809767",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "FIRST SOLAR,",
+     "entity_id": "v5uYaie3rE59AxHDIKWCKg",
+     "countries": [
+      "USA"
+     ],
+     "quality_flags": [],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "v5uYaie3rE59AxHDIKWCKg",
+       "entity_url": "https://graph.sayari.com/resource/entity/v5uYaie3rE59AxHDIKWCKg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/v5uYaie3rE59AxHDIKWCKg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "5o88cxYmG-covaV4-JqlCw",
+      "entity_url": "https://graph.sayari.com/resource/entity/5o88cxYmG-covaV4-JqlCw"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "FS INDIA SOLAR VENTURES PRIVATE LIMITED",
+     "names": [
+      "FS INDIA SOLAR VENTURES PRIVATE LIMITED",
+      "FS INDIA SOLAR VENTURES PVT LTD",
+      "FS INDIA SOLAR VENTURES PRIVATE",
+      "FS India Solar Ventures Private Ltd",
+      "FS INDIA SOLAR VENTURES"
+     ],
+     "entity_id": "5o88cxYmG-covaV4-JqlCw",
+     "countries": [
+      "IND",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owned_by_regulatory_action_entity",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "5o88cxYmG-covaV4-JqlCw",
+       "entity_url": "https://graph.sayari.com/resource/entity/5o88cxYmG-covaV4-JqlCw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/5o88cxYmG-covaV4-JqlCw"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "7rHlQVdIeieG9oHVm-Ii7w",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020276, LEG 2 SHIPMENT, NO 400779998, INVOICE NO, 32212633E4100072, INV DT 05.09.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-30']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "350 W WASHINGTON ST TEMPE ARIZONA 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUEUR2608APAD0",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "ZHoxB3WU3mv_uFPJviRSjA",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020278, LEG 2 SHIPMENT, NO 400780061 INVOICE NO, 32212633E4100067 INV DT, 05.09.2026 SB NO 6681460, SB DT 09.09.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-29']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "350 W WASHINGTON ST TEMPE ARIZONA 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUEUR2608APAN0",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "wnUrcSYQo_jxJ7Z12Hzs6g",
+       "departure_country": [
+        "LKA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL, GROUPING ID 500020180, LEG 2 SHIPMENT, NO 400775386, INVOICE NO, 32212633E5100469, INV DT 03.09.2026",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 138514.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-29']",
+       "departure_address": {
+        "country": "LKA",
+        "value": "Colombo Harbor"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kanchipuram",
+        "state": "Tn",
+        "country": "IND",
+        "value": "PLOT NO.A-1/1 SIPCOT INDUSTRIAL PARK PILLAIPAKKAM KANCHIPURAM 602105 TN IN"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "350 W WASHINGTON ST TEMPE ARIZONA 85281-1495 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUEUR260899855",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "FIRST SOLAR, INC. CORP HEADQUARTERS",
+     "entity_id": "8zQiESm-xKJ7jcxdK7VsrA",
+     "countries": [
+      "USA"
+     ],
+     "quality_flags": [],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "8zQiESm-xKJ7jcxdK7VsrA",
+       "entity_url": "https://graph.sayari.com/resource/entity/8zQiESm-xKJ7jcxdK7VsrA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/8zQiESm-xKJ7jcxdK7VsrA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "5o88cxYmG-covaV4-JqlCw",
+      "entity_url": "https://graph.sayari.com/resource/entity/5o88cxYmG-covaV4-JqlCw"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 10000,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "FS India Solar Ventures",
+    "shipper_name": "FS INDIA SOLAR VENTURES PRIVATE LIMITED",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6IjZjM2E3ZmU2ZjE0ZTI0MWY2NDU4YjRhYmIzMDAyNTY4YTMzYzFlN2Q5OWU1MDVlODgxYmI5MTE0MjJhOTk3N2QiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving US entities, include the state of incorporation if known — many companies share similar names across different states.",
+   "Delaware incorporation is normal for large companies and not inherently suspicious, but Nevada/Wyoming incorporation combined with operations elsewhere can indicate a desire for opacity.",
+   "FinCEN BOI data is not publicly accessible — Sayari's US ownership data comes from state filings, SEC filings, and other public sources."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

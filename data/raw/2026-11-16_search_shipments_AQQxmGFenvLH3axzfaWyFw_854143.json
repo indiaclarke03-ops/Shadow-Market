@@ -1,0 +1,1394 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Nexuns Vietnam",
+  "shipper_name": "CôNG TY TNHH NEXUNS VIệT NAM",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:25:42+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 1,
+  "items": [
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH NEXUNS VIệT NAM",
+     "names": [
+      "CôNG TY TNHH NEXUNS VIệT NAM",
+      "NEXUNS VIETNAM COMPANY LIMITED",
+      "VIETNAMESE NEXUNS COMPANY LIMITED",
+      "CONG TY TNHH NEXUNS Vietnam",
+      "NEXUNS VIET NAM CO., LTD"
+     ],
+     "entity_id": "AQQxmGFenvLH3axzfaWyFw",
+     "countries": [
+      "VNM",
+      "CHN",
+      "HKG",
+      "SGP",
+      "JPN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "AQQxmGFenvLH3axzfaWyFw",
+       "entity_url": "https://graph.sayari.com/resource/entity/AQQxmGFenvLH3axzfaWyFw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/AQQxmGFenvLH3axzfaWyFw"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "rssWj0FzG3Y_wzaYq2WOsw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 9181.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-22']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250618",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "KGT7OBSQpFD7DStCh9H-NQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-22']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250620",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "6aj3c8q7IHkX7_iCMlYFJA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 9181.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-22']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250616",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "b_3pzEsqPtPTp3mMlPC57w",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-22']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250621",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Rn5ec9KQXrcnetRsqSjWvw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 9181.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-22']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250615",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "g_tFTX1xwrl8iYtmFQ85xQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-22']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250619",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "18eyofDoCpqT-Kq_6OerGw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-22']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250622",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Xsh1vSCb8EDm2LPBpApmFA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 9181.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-22']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250617",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "D4vV1yFP8NNHLJZ4x5r6Kw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-19']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250609",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "0iAQsQzqyEwhJjkpHruRkA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-19']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250613",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "VXcvaQVai7n-N1bdaM15Ew",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-19']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250604",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "eguVXpVYsMwUa1mmIwdQtw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-19']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250614",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "aA1kwcCVs3Sa1EP0-FySKg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-19']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250605",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "w_C62KrV811FDP7mv4s0mQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-19']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250611",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "pcb7pCHjneHhRDKqXUY0tQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-19']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250607",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "lobhpdiW_fiR5RRPE46wkw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-19']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250612",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "w6_L6R3vcQNUaSxQa0-e-w",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-19']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250610",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "uM7Aar4QrqNdQUZeeVD4Vg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 9181.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-15']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250625",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "6Yp9R5P_Ely6H3f1qXAA0Q",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-14']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250606",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "BocbmGTj-1AcYvMl0SWP4A",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANEL HS CODE 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 8688.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-11']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Hai Phong",
+        "country": "CHN",
+        "value": "FACTORY WORKSHOP CN-09-07, VAN TRUN G IP, VAN TRUNG, VIET YEN,BAC GIANG Haiphong Hai Phong CN"
+       },
+       "receiver_address": {
+        "city": "Jessup",
+        "country": "USA",
+        "value": "8605 SANTA MONICA BLVD 30327 WEST H OLLYWOOD,CA 90069,USA JESSUP MD20794 US"
+       },
+       "identifiers": [
+        {
+         "value": "AQOGAGL250518",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "ALFA SOLAR ENERGY INC.",
+     "names": [
+      "ALFA SOLAR ENERGY INC.",
+      "GoSolar Energy Inc."
+     ],
+     "entity_id": "1ZEisyViZbhl41CHKx7Ffw",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "1ZEisyViZbhl41CHKx7Ffw",
+       "entity_url": "https://graph.sayari.com/resource/entity/1ZEisyViZbhl41CHKx7Ffw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/1ZEisyViZbhl41CHKx7Ffw"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "AQQxmGFenvLH3axzfaWyFw",
+      "entity_url": "https://graph.sayari.com/resource/entity/AQQxmGFenvLH3axzfaWyFw"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 726,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Nexuns Vietnam",
+    "shipper_name": "CôNG TY TNHH NEXUNS VIệT NAM",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6IjZjMGQ0ZDZhYjRiNTMzMDg1ODY5ZjkyZmIyZmMzZDg4NmJjYTkyOGU0ZGYwZTVjNGMxZTFmZDExYjA1OWFiMDQiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving Chinese entities, try both the Chinese name and known English/trade names in the Sayari API — there is no standardized Romanization.",
+   "The administrative division prefix in a Chinese company name indicates registration level, not headquarters location.",
+   "National-level companies (no geographic prefix or parenthetical prefix) are typically large SOEs or nationally significant enterprises."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

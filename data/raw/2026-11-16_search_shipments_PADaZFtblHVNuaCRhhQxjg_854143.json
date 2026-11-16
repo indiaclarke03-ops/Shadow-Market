@@ -1,0 +1,1337 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Samsung SDS Asia Pacific",
+  "shipper_name": "SAMSUNG SDS ASIA PACIFIC PTE LTD",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:26:07+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 1,
+  "items": [
+   {
+    "supplier": {
+     "name": "SAMSUNG SDS ASIA PACIFIC PTE LTD",
+     "names": [
+      "SAMSUNG SDS ASIA PACIFIC PTE LTD",
+      "SAMSUNG SDS ASIA PACIFIC PTE LIMITED"
+     ],
+     "entity_id": "PADaZFtblHVNuaCRhhQxjg",
+     "countries": [
+      "SGP",
+      "VNM",
+      "KOR",
+      "USA",
+      "CHN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_bis_high_priority_items_critical_components_indirect",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_forced_labor",
+       "psa_exports_bis_high_priority_items_critical_components_indirect",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "PADaZFtblHVNuaCRhhQxjg",
+       "entity_url": "https://graph.sayari.com/resource/entity/PADaZFtblHVNuaCRhhQxjg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/PADaZFtblHVNuaCRhhQxjg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "f6U75TLrittg-61IappXFQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOCELLS THAT HAVE BEEN INSTALLED, IN MODULES OR ASSEMBLED INTO BLOCKS AND SOLA, R PANELS",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 14272.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-03']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Honolulu",
+        "state": "US-HI",
+        "country": "USA",
+        "value": "Honolulu, Hawaii"
+       },
+       "shipper_address": {
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPLE TREE BUSINESS C SINGAPORE 117440 S TEG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F 216, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF49870800",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "p17xx-4Or-H6vghQbdy_TQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOCELLS THAT HAVE BEEN INSTALLED, IN MODULES OR ASSEMBLED INTO BLOCKS AND SOLA, R PANELS , PHOTOCELLS THAT HAVE BEEN INSTALLE, D IN MODULES OR ASSEMBLED INTO BLOCKS",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 42816.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-03']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Honolulu",
+        "state": "US-HI",
+        "country": "USA",
+        "value": "Honolulu, Hawaii"
+       },
+       "shipper_address": {
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPLE TREE BUSINESS C SINGAPORE 117440 S TEG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F 216, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF49868800",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "e31hbF8WeM1dXPXUWUuBJQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOCELLS THAT HAVE BEEN INSTALLED, IN MODULES OR ASSEMBLED INTO BLOCKS AND PHOT, OCELLS THAT HAVE BEEN INSTALLED IN MODULES OR, ASSEMBLED INTO BLOCKS",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 42816.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-10-17']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Oakland",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Oakland, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPL ETREE BUSINESS SINGAPORE 117440 SG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F 216, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF50944900",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "jDSz4dVTKCvbs_woICrnQg",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANELS"
+       ],
+       "weight": {
+        "value": 42816.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-10-15']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPL ETREE BUSINESS SINGAPORE 117440 SG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F 216, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF50947500",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "sjLVGW2tNWSd7OujTI0mOw",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANELS"
+       ],
+       "weight": {
+        "value": 14272.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-10-14']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Oakland",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Oakland, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPL ETREE BUSINESS SINGAPORE 117440 SG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F 216, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF50948601",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "aerR0Ae2ZjCCffKVasvhuA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "392390",
+         "description": "Plastics; articles for the conveyance or packing of goods n.e.c. in heading no. 3923"
+        },
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Plastics; articles for the conveyance or packing of goods n.e.c. in heading no. 3923",
+        "AIR DUNNAGE BAGS",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 35739.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-10-08']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPL ETREE BUSINESS SINGAPORE 117440 SG"
+       },
+       "receiver_address": {
+        "city": "Tea",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F 216, SANTA FE S SANTA FE SPRINGS, C TEA CA 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF50948600",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "v441jURvX0DIZ0ztPzspaA",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANELS"
+       ],
+       "weight": {
+        "value": 28544.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-10-01']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Honolulu",
+        "state": "US-HI",
+        "country": "USA",
+        "value": "Honolulu, Hawaii"
+       },
+       "shipper_address": {
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPLE TREE BUSINESS C SINGAPORE 117440 S TEG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F 216, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF50012900",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "eYx5dzMgAI2Mb2e05EifJg",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANELS"
+       ],
+       "weight": {
+        "value": 28544.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-09-18']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Honolulu",
+        "state": "US-HI",
+        "country": "USA",
+        "value": "Honolulu, Hawaii"
+       },
+       "shipper_address": {
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPLE TREE BUSINESS C SINGAPORE 117440 S TEG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F2 16, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF42366800",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "53GDE19NGHUK-zyVwGR3zA",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANELS"
+       ],
+       "weight": {
+        "value": 14272.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-09-04']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Honolulu",
+        "state": "US-HI",
+        "country": "USA",
+        "value": "Honolulu, Hawaii"
+       },
+       "shipper_address": {
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPLE TREE BUSINESS C SINGAPORE 117440 S TEG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F2 16, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF35155600",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "WtAxc6Hq38L12MdoDS0hKw",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANELS"
+       ],
+       "weight": {
+        "value": 28544.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-08-26']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Honolulu",
+        "state": "US-HI",
+        "country": "USA",
+        "value": "Honolulu, Hawaii"
+       },
+       "shipper_address": {
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPLE TREE BUSINESS C SINGAPORE 117440 S TEG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F2 16, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF23854900",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "zebK6v83G_g2Sv9cdbHLKg",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANELS"
+       ],
+       "weight": {
+        "value": 28544.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-08-07']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Honolulu",
+        "state": "US-HI",
+        "country": "USA",
+        "value": "Honolulu, Hawaii"
+       },
+       "shipper_address": {
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPLE TREE BUSINESS C SINGAPORE 117440 S TEG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F2 16, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF27879600",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "dd_tPlDp_AvXSb9N6-seww",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANELS"
+       ],
+       "weight": {
+        "value": 14272.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-30']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "country": "SGP",
+        "value": "30 PASIR PANJANG ROAD NO. 07-32 SIN GAPORE 117440 SG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F2 16, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF27721601",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "4KsNRohEZbrUm-qmDLPNDg",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANELS"
+       ],
+       "weight": {
+        "value": 28544.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-24']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Honolulu",
+        "state": "US-HI",
+        "country": "USA",
+        "value": "Honolulu, Hawaii"
+       },
+       "shipper_address": {
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPLE TREE BUSINESS C SINGAPORE 117440 S TEG"
+       },
+       "receiver_address": {
+        "city": "Suit San Ta Fe Springs",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUIT SAN TA FE SPRINGS CA 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF21242500",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Qk5Pbt1WjTGQNJg9b9tVNw",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES OR MA3X40HC SLAC 54 PACKAGES OF SOLAR PA, NELS HS CODE 85414300 PIC JUN KIM C, +1-714-497-6412/ JUNYEON2.KIMSAMSUN, G.COM",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 42817.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-23']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "value": "30 PASIR PANJANG ROAD 07-32 MAPLETREE BUSINESS CITY SINGAPORE 117440."
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY SUITE F2 16 SANTA FE SPRINGS CA 90670"
+       },
+       "identifiers": [
+        {
+         "value": "YMJAW450308745",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "KtNTYTCgN_xj-2F0xzf72g",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES OR MA"
+       ],
+       "weight": {
+        "value": 28544.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-16']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPL ETREE BUSINESS SINGAPORE 117440 SG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F 216, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF37835600",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "8wkMLlC1w-z4DEv32eB9nQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANELS"
+       ],
+       "weight": {
+        "value": 57088.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-14']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Savannah",
+        "state": "US-GA",
+        "country": "USA",
+        "value": "Savannah, Georgia"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "30 PASIR PANJANG ROAD, SINGAPORE 1 17440 SG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F 216, SANTA FE SPRINGS, CA CA 90670 TEUS"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF30409300",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "GMC2JBZEHwonizU1AWiWIw",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANELS"
+       ],
+       "weight": {
+        "value": 14272.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-10']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Honolulu",
+        "state": "US-HI",
+        "country": "USA",
+        "value": "Honolulu, Hawaii"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPL ETREE BUSINESS SINGAPORE 117440 SG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F 216, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF21120700",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "DsIRa2WqL9pqFadceCp-8w",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PHOTOVOLTAIC CELLS ASSEMBLED IN MOD, ULES OR M"
+       ],
+       "weight": {
+        "value": 57088.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-10']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPLE TREE BUSINESS C SINGAPORE 117440 S TEG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F216, SANTA FE SANTA FE SPRINGS CA TE90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF27719600",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "bw6lRbonO-wf5qgt5DS3iw",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANELS"
+       ],
+       "weight": {
+        "value": 14272.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-10']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "value": "30 PASIR PANJANG ROAD, #07-32 MAPLE TREE BUSINESS C SINGAPORE 117440 S TEG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F2 16, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF27719601",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "t_DIDCXkers3DQYsSHfu-A",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR PANELS,PHOTOVOLTAIC CELLS ASS, EMBLED IN"
+       ],
+       "weight": {
+        "value": 42816.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-09']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Oakland",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Oakland, California"
+       },
+       "shipper_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "30 PASIR PANJANG ROAD, SINGAPORE 1 17440 SG"
+       },
+       "receiver_address": {
+        "city": "Santa Fe Springs",
+        "country": "USA",
+        "value": "12631 E. IMPERIAL HIGHWAY, SUITE F 216, SANTA FE S SANTA FE SPRINGS CA TE 90670 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYSINF27714801",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "SAMSUNG SDS AMERICA INC.",
+     "names": [
+      "SAMSUNG SDS AMERICA INC.",
+      "SAMSUNG SDS GLOBAL SCL AMERICA INC.",
+      "SAMSUNG SDS GLOBAL SCL AMERICA",
+      "SAMSUNG SDS GLOBAL SCL AMERICA,INC.",
+      "SAMSUNG SDS GLOBAL AMERICA INC.",
+      "SAMSUNG SDS AMERICA",
+      "SAMSUNG SDS AMERICA,INC",
+      "SAMSUNG SDS GLOBAL SCL AMERICA IN",
+      "SAMSUNG SDS GLOBAL SCL AMERICA, INC",
+      "SAMSUNG SDS GLOBAL SCL AMERICA, I",
+      "SAMSUNG SDS IT SERVICES AMERICA, INC.",
+      "SAMSUNG SDS GLOBAL SCL AMERICA(LOSA",
+      "SAMSUNG SDS GLOBAL SCL AMERICALOS A",
+      "SAMSUNG SDS GLOBAL SCL AMERICA,IN (CUSTOMS BROKER)",
+      "SAMSUNG GLOBAL SCL AMERICA, INC.",
+      "SAMSUNG SDS AMERICA INC",
+      "SAMSUNG SDS AMERIA,INC.",
+      "SAMSUNG SDS GLOBAL SCL AMERICA INC.AMERICA INC.",
+      "SAMSUNG SDS GLOBAL SCL AMERICA INC",
+      "SAMSUNG SDS AMERICA INC INC"
+     ],
+     "entity_id": "mNB7ceLq7-iqKNqZs-W6wQ",
+     "countries": [
+      "USA",
+      "MEX",
+      "CHN",
+      "GBR",
+      "KOR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "mNB7ceLq7-iqKNqZs-W6wQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/mNB7ceLq7-iqKNqZs-W6wQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/mNB7ceLq7-iqKNqZs-W6wQ"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "PADaZFtblHVNuaCRhhQxjg",
+      "entity_url": "https://graph.sayari.com/resource/entity/PADaZFtblHVNuaCRhhQxjg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 462,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Samsung SDS Asia Pacific",
+    "shipper_name": "SAMSUNG SDS ASIA PACIFIC PTE LTD",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6ImZiYjUzMjliZDIzM2JjNWRhZmY3ZDc1MWFkYjQxZjBkZTBmN2RlNDFkOTc5NWI0NGFlNTkzYzU4MTUyODRiYWEiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving Chinese entities, try both the Chinese name and known English/trade names in the Sayari API — there is no standardized Romanization.",
+   "The administrative division prefix in a Chinese company name indicates registration level, not headquarters location.",
+   "National-level companies (no geographic prefix or parenthetical prefix) are typically large SOEs or nationally significant enterprises."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

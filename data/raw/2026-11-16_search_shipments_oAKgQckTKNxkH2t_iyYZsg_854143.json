@@ -1,0 +1,1425 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "First Solar Malaysia",
+  "shipper_name": "FIRST SOLAR MALAYSIA SDN BHD",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:23:56+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 1,
+  "items": [
+   {
+    "supplier": {
+     "name": "FIRST SOLAR MALAYSIA SDN BHD",
+     "names": [
+      "FIRST SOLAR MALAYSIA SDN BHD",
+      "FIRST SOLAR M SDN BHD",
+      "First Solar Manufacturing Sdn Bhd",
+      "FIRST SOLAR SDN BHD",
+      "FIRST SOLAR MAALYSIA SDN BHD",
+      "FIRST SOLAR MALAYSIA SDN BHD CO N",
+      "FIRST SOLAR MALAYSIA MANUFACTU",
+      "FIRST SOLAR MALAYSIA",
+      "FIRST SOLAR MAYLASIA SDN BHD",
+      "FIRTS SOLAR MALAYSIA SDN BHD",
+      "KMT1 FIRST SOLAR MALAYSIA MANUFACTU",
+      "FIRST SOLAR MALAYSIA MANUFACTURING",
+      "First Solar Malaysia Sdn. Bhd"
+     ],
+     "entity_id": "oAKgQckTKNxkH2t_iyYZsg",
+     "countries": [
+      "MYS",
+      "USA",
+      "JPN",
+      "DEU",
+      "CHN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "export_controls_adjacent",
+       "export_to_soe",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owned_by_regulatory_action_entity",
+       "psa_export_to_soe",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "oAKgQckTKNxkH2t_iyYZsg",
+       "entity_url": "https://graph.sayari.com/resource/entity/oAKgQckTKNxkH2t_iyYZsg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/oAKgQckTKNxkH2t_iyYZsg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "jq2kdkmZzl5HiJGm18b69g",
+       "departure_country": [
+        "BHS"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "THIN FILM PHOTOVOLTAIC, HTS: 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 39900.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-29']",
+       "departure_address": {
+        "country": "BHS",
+        "value": "South Riding Point"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "MY-02",
+        "country": "MYS",
+        "value": "LOT PT 2486, FIRST SOLAR BOULEVARD (JLN HI-TECH 11),ZON INDUSTRI FASA3 KULIM, KEDAH 09090 MY"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E CAMELBACK RD SUITE 220 PHOENIX AZ 85018 US"
+       },
+       "identifiers": [
+        {
+         "value": "EXDO6560098725",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "YvMy2St3OEdw-O4_aX0EXA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE, SHIPMENT NO 400763208, SO 34585-8, HS 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 111672.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-20']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, SUITE 220 PHOENIX ARIZONA UNITED STATES 85018"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL260881280",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "OC2lS2QB_Y56bK9KWQFKrg",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE, SHIPMENT NO 400763181, SO 34585-33, HS 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-20']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, SUITE 220 PHOENIX ARIZONA UNITED STATES 85018"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL260759040",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "PmkqV85g8M_8sEGDnxntjA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "\"SHIPPER_DESCRIPTION\" (SOLAR MODULE, ) - \"HSCD_DESCRIPTION\" (PHOTOCELLS THAT HAVE, BEEN INSTALLED IN MODULES OR ASSEMBLED INTO B, LOCKS) PLEASE NOTE - QUANTITY AND DESCRIPT, ION OF THE CARGO ARE BASED ON THE SHIPPER'S L, OAD AND COUNT. OCEAN CARRIER HAS NO KNOWLEDGE, , INFORMATION, OR REASON TO BELIEVE OR SUSPE, CT THAT TH",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 93060.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-10-10']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "country": "MYS",
+        "value": "(JALAN HI-TECH 11),ZON INDUSTRI FAS A 3, KULIM HI-T KULIM 09090 MY"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, PHOENIX AZ 85018 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYPENG13913900",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "mHP0pyNFb4j-ojtQllp5TQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "\"SHIPPER_DESCRIPTION\" (SOLAR MODULE, ) - \"HSCD_DESCRIPTION\" (PHOTOCELLS THAT HAVE, BEEN INSTALLED IN MODULES OR ASSEMBLED INTO B, LOCKS) PLEASE NOTE - QUANTITY AND DESCRIPT, ION OF THE CARGO ARE BASED ON THE SHIPPER'S L, OAD AND COUNT. OCEAN CARRIER HAS NO KNOWLEDGE, , INFORMATION, OR REASON TO BELIEVE OR SUSPE, CT THAT TH",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-09-18']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "country": "MYS",
+        "value": "ZON INDUSTRI FASA 3 KULIM 09090 MY"
+       },
+       "receiver_address": {
+        "city": "Murray Hill",
+        "state": "Nj Nj",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD MURRAY HILL, NJ NJ 85018 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYPENG13160300",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "n9Inycw3Ed30Ks0vAu3WVQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "\"SHIPPER_DESCRIPTION\" (SOLAR MODULE, ) - \"HSCD_DESCRIPTION\" (PHOTOCELLS THAT HAVE, BEEN INSTALLED IN MODULES OR ASSEMBLED INTO B, LOCKS) PLEASE NOTE - QUANTITY AND DESCRIPT, ION OF THE CARGO ARE BASED ON THE SHIPPER'S L, OAD AND COUNT. OCEAN CARRIER HAS NO KNOWLEDGE, , INFORMATION, OR REASON TO BELIEVE OR SUSPE, CT THAT TH",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-09-18']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD ( JALAN HI-TECH 1 KULIM 09090 MY"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, PHOENIX NJ 85018 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYPENG13156800",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "K3RdLVbfPmXW4awqYTcOqA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "\"SHIPPER_DESCRIPTION\" (SOLAR MODULE, ) - \"HSCD_DESCRIPTION\" (PHOTOCELLS THAT HAVE, BEEN INSTALLED IN MODULES OR ASSEMBLED INTO B, LOCKS) PLEASE NOTE - QUANTITY AND DESCRIPT, ION OF THE CARGO ARE BASED ON THE SHIPPER'S L, OAD AND COUNT. OCEAN CARRIER HAS NO KNOWLEDGE, , INFORMATION, OR REASON TO BELIEVE OR SUSPE, CT THAT TH",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-09-18']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD ( JALAN HI-TECH 1 KULIM 09090 MY"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, SUITE 220 P HOENIX ARIZONA PHOENIX ARIZONA AZ 8 TE5018 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYPENG13157900",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "FiDnQQgQO5FRceHMxV5O_Q",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE, SHIPMENT NO 400683826, SO 27501-2, HS 854143",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 93060.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-05-25']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, SUITE 220 PHOENIX ARIZONA UNITED STATES 85018"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL260300984",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "okZfgotJmjB2iZi9BFBPNQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE, SHIPMENT NO, SO -, X HC CONTAINER, BOX, SOLAR MODULE, HS-CODE"
+       ],
+       "weight": {
+        "value": 18612.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-22']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, SUITE 220 PHOENIX ARIZONA UNITED STATES 85018"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL260231308",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "wffeBzZ7BVYw5eDqOh9szQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SHIPMENT NO, SO, HS"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-06']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, SUITE 220 PHOENIX ARIZONA UNITED STATES 85018"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL260107691",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Y9_w3ru5Lv4X5dqZWBRgnA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SHIPMENT NO, SO -, HS"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-06']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, SUITE 220 PHOENIX ARIZONA UNITED STATES 85018"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL260107775",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "q5Y6mZ8jnKwrC8T7iYS6vg",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SHIPMENT NO, SO -, X HC CONTAINERS, BOXES, SOLAR MODULE, HS CODE, HS"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-03']",
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, SUITE 220 PHOENIX ARIZONA UNITED STATES 85018"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL260127745",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "aaeAnN1gpUVRyxYfhJesng",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SHIPMENT NO, SO -, HS"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-03']",
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, SUITE 220 PHOENIX ARIZONA UNITED STATES 85018"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL260107670",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "toOnIfY7UU9IMK63qR0tJQ",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SHIPMENT NO, SO -, HS"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-03']",
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, SUITE 220 PHOENIX ARIZONA UNITED STATES 85018"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL260107815",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "n-L1zf3pGHTuU4WrRW1TUA",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SHIPMENT NO, SO -, X HC CONTAINERS, BOXES, SOLAR MODULE, HS CODE, HS"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-03']",
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, SUITE 220 PHOENIX ARIZONA UNITED STATES 85018"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL260129137",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "uRFycVcsse78ACDQ5FF0gw",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SHIPMENT NO, SO -, HS"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-03']",
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, SUITE 220 PHOENIX ARIZONA UNITED STATES 85018"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL260127555",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "hWjyimDSLVXHrp0aXFiYFQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE, SHIPMENT NO, SO"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-01-29']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "350 WEST WASHINGTON STREET SUITE 600 TEMPE ARIZONA UNITED STATES 85288"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL251116327",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "u8COWHZIysY55Pqi63mviA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MOD, SHIPMENT NO, SO -, HS"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-01-24']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "350 WEST WASHINGTON STREET SUITE 600 TEMPE ARIZONA UNITED STATES 85288"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL251116137",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "ChP9py8HimSawvgjJIysxg",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SHIPMENT NO, SO -, HS"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-01-24']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "350 WEST WASHINGTON STREET SUITE 600 TEMPE ARIZONA UNITED STATES 85288"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL251116159",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "fnrlMDrT6ppLkUIv2ZE26Q",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SHIPMENT NO, SO -, HS"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-01-24']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Kulim",
+        "state": "Kedah Darul Aman",
+        "country": "MYS",
+        "value": "LOT PT 2486 FIRST SOLAR BOULEVARD (JALAN HI-TECH 11),ZON INDUSTRI FASA 3, KULIM HI-TECH PARK,09090 KULIM, KEDAH DARUL AMAN, MALAYSIA"
+       },
+       "receiver_address": {
+        "city": "Tempe",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "350 WEST WASHINGTON STREET SUITE 600 TEMPE ARIZONA UNITED STATES 85288"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUKUL251116115",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "FIRST SOLAR, INC.",
+     "names": [
+      "FIRST SOLAR, INC.",
+      "FIRST SOLAR",
+      "First Solar",
+      "FIRST SOLAR HOLDINGS LLC",
+      "FIRST SOLAR INC. (0387002043)",
+      "FIRST SOLAR INC",
+      "FIRST SOLAR INC - WALBRIDGE FACILITY",
+      "First Solar Holdings, Inc."
+     ],
+     "entity_id": "R58uSXzck_darm-KgcfUFA",
+     "countries": [
+      "USA",
+      "MEX",
+      "AUS",
+      "JPN",
+      "DEU"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "controlled_by_mass_business_registration",
+       "esg_score_medium",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "mass_address_usage",
+       "owned_by_regulatory_action_entity",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "sanctioned_adjacent",
+       "sanctioned_other_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "R58uSXzck_darm-KgcfUFA",
+       "entity_url": "https://graph.sayari.com/resource/entity/R58uSXzck_darm-KgcfUFA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/R58uSXzck_darm-KgcfUFA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "oAKgQckTKNxkH2t_iyYZsg",
+      "entity_url": "https://graph.sayari.com/resource/entity/oAKgQckTKNxkH2t_iyYZsg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 3085,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "First Solar Malaysia",
+    "shipper_name": "FIRST SOLAR MALAYSIA SDN BHD",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6ImQ2NjIyMjliYTMxMzFiNzc5YTlhZGIzYzc2MTk4NmNhNTZiOTU1MGQ1ODlhNTBmMTFiMDFmZWZiYTMzYTliMGIiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "Singapore ACRA data is generally high quality — Sayari typically has good coverage of Singapore corporate data. Use the Sayari API to retrieve company profiles, directors, and shareholder information.",
+   "Every Singapore company must have at least one resident director — for foreign-owned companies, this director is often a nominee and not the true decision-maker.",
+   "The RORC is not public, so UBO data relies on filed shareholder information and cross-references from other jurisdictions."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

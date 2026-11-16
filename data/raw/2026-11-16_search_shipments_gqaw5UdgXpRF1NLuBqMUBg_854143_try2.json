@@ -1,0 +1,1759 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Trina Solar Energy Development",
+  "shipper_name": "TRINA SOLAR ENERGY DEVELOPMENT",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:23:56+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 3,
+  "items": [
+   {
+    "supplier": {
+     "name": "TRINA SOLAR ENERGY DEVELOPMENT COMPANY LIMITED",
+     "names": [
+      "TRINA SOLAR ENERGY DEVELOPMENT COMPANY LIMITED",
+      "CôNG TY TNHH PHáT TRIểN NăNG LượNG TRINA SOLAR",
+      "TRINA SOLAR ENERGY DEVELOPMENT COMP",
+      "TRINA SOLAR ENERGY DEVELOPMENT COM"
+     ],
+     "entity_id": "gqaw5UdgXpRF1NLuBqMUBg",
+     "countries": [
+      "VNM",
+      "VIR",
+      "CHN",
+      "CHE",
+      "JPN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_from_usa_section_1260h_entity",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_from_usa_section_1260h_entity",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "gqaw5UdgXpRF1NLuBqMUBg",
+       "entity_url": "https://graph.sayari.com/resource/entity/gqaw5UdgXpRF1NLuBqMUBg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/gqaw5UdgXpRF1NLuBqMUBg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "O5iBDh9NAYB7fZuz61Fgsg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP15#&Bifacial monocrystalline solar module (210*182 mm*66PCE) 600W NEG19RC.20, 100% new#&KXĐ , TP15#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*182 mm*66PCE) 600W NEG19RC.20, mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 248.5,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 741.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-09-17']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Wilmer",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "1200 NORTH SUNRISE ROAD, WILMER, TEXAS,UNITED STATES,75172, US"
+       },
+       "identifiers": [
+        {
+         "value": "{DCE79C2E-BC83-434B-9AC9383FBE9072FD}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "dB157zDMhidQoW35GTHevQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-sided glass monocrystalline solar module (210*210 mm*66PCE) 660W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 660W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 273.5,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 630.3,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-09-17']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Wilmer",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "1200 NORTH SUNRISE ROAD, WILMER, TEXAS,UNITED STATES,75172, US"
+       },
+       "identifiers": [
+        {
+         "value": "{C40F3C26-BA53-4C4A-AAD049A216E94538}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "TRINA SOLAR US MANUFACTURING MODULE 1.LLC",
+     "entity_id": "fNaySXclciv0ye3-Gnt6nw",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "fNaySXclciv0ye3-Gnt6nw",
+       "entity_url": "https://graph.sayari.com/resource/entity/fNaySXclciv0ye3-Gnt6nw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/fNaySXclciv0ye3-Gnt6nw"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "gqaw5UdgXpRF1NLuBqMUBg",
+      "entity_url": "https://graph.sayari.com/resource/entity/gqaw5UdgXpRF1NLuBqMUBg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "TRINA SOLAR ENERGY DEVELOPMENT COMPANY LIMITED",
+     "names": [
+      "TRINA SOLAR ENERGY DEVELOPMENT COMPANY LIMITED",
+      "CôNG TY TNHH PHáT TRIểN NăNG LượNG TRINA SOLAR",
+      "TRINA SOLAR ENERGY DEVELOPMENT COMP",
+      "TRINA SOLAR ENERGY DEVELOPMENT COM"
+     ],
+     "entity_id": "gqaw5UdgXpRF1NLuBqMUBg",
+     "countries": [
+      "VNM",
+      "VIR",
+      "CHN",
+      "CHE",
+      "JPN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_from_usa_section_1260h_entity",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_from_usa_section_1260h_entity",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "gqaw5UdgXpRF1NLuBqMUBg",
+       "entity_url": "https://graph.sayari.com/resource/entity/gqaw5UdgXpRF1NLuBqMUBg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/gqaw5UdgXpRF1NLuBqMUBg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "cbcnEhsK79uEySEZbUnQPw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-08-12']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "LOT CN-14, YEN BINH INDUSTRIAL ZONE , HONG TIEN COMMUNE, PHO YEN TOWN THAI NGUYEN PROVINC VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "7100 STEVENSON BLVD FREMONT CA94536 US"
+       },
+       "identifiers": [
+        {
+         "value": "DWCHSSGNS0023793",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "B7PuHJz2uBA7c9ESiplM1Q",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-08-05']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "LOT CN-14, YEN BINH INDUSTRIAL ZONE , HONG TIEN COMMUNE, PHO YEN TOWN THAI NGUYEN PROVINC VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "7100 STEVENSON BLVD FREMONT CA94536 US"
+       },
+       "identifiers": [
+        {
+         "value": "DWCHSSGNS0023699",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "2OfTCmXb8WPzFci_jftGxA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-08-05']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "LOT CN-14, YEN BINH INDUSTRIAL ZONE , HONG TIEN COMMUNE, PHO YEN TOWN THAI NGUYEN PROVINC VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "7100 STEVENSON BLVD FREMONT CA94536 US"
+       },
+       "identifiers": [
+        {
+         "value": "DWCHSSGNS0023698",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "TRINA SOLAR (U.S) INC",
+     "names": [
+      "TRINA SOLAR (U.S) INC",
+      "TRINA SOLAR (U.S.), INC.",
+      "TRINA SOLAR (U.S.) , INC.",
+      "TRINA SOLAR (U.S.)"
+     ],
+     "entity_id": "VFQiRsFsEiIT7DZACT9DKg",
+     "countries": [
+      "USA",
+      "CHN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "controlled_by_mass_business_registration",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "mass_address_usage",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "VFQiRsFsEiIT7DZACT9DKg",
+       "entity_url": "https://graph.sayari.com/resource/entity/VFQiRsFsEiIT7DZACT9DKg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/VFQiRsFsEiIT7DZACT9DKg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "gqaw5UdgXpRF1NLuBqMUBg",
+      "entity_url": "https://graph.sayari.com/resource/entity/gqaw5UdgXpRF1NLuBqMUBg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "TRINA SOLAR ENERGY DEVELOPMENT COMPANY LIMITED",
+     "names": [
+      "TRINA SOLAR ENERGY DEVELOPMENT COMPANY LIMITED",
+      "CôNG TY TNHH PHáT TRIểN NăNG LượNG TRINA SOLAR",
+      "TRINA SOLAR ENERGY DEVELOPMENT COMP",
+      "TRINA SOLAR ENERGY DEVELOPMENT COM"
+     ],
+     "entity_id": "gqaw5UdgXpRF1NLuBqMUBg",
+     "countries": [
+      "VNM",
+      "VIR",
+      "CHN",
+      "CHE",
+      "JPN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_from_usa_section_1260h_entity",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_from_usa_section_1260h_entity",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "gqaw5UdgXpRF1NLuBqMUBg",
+       "entity_url": "https://graph.sayari.com/resource/entity/gqaw5UdgXpRF1NLuBqMUBg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/gqaw5UdgXpRF1NLuBqMUBg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "A4NIf_3sWVX8w4MBS8Y28Q",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 660W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 660W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 234471.6,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{7C17105F-425E-47B8-A7EA36F858734219}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "9_gPmVObdIgJwxoldo55dA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 665W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 665W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 118123.95,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{6EFD52E1-573E-4A07-84EFD2A26619803B}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "lo_1owOuY6r5kWnZ5ZFF8A",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 655W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 655W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 18127.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 31026.04,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{C5739A80-41D0-403C-91DB4B1FFA3CCC94}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "l8GXrf-BIe6QZqLRZKlEUA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 660W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 660W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 175853.7,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{8AA0F796-C351-4525-B7221A1ECEF74646}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "nQyvwGk4MdgyZtb7lDLizw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 655W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 655W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 58173.83,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{636506E2-9042-46AE-BA11E47C3FEF88AF}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "iyLvFF7-btMJ6Tnr0SQsag",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 665W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 665W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 59061.98,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{43D2100E-5ED9-4F2E-8F272681477E3EDA}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "_LLjdC2jzOtukIGga3YX5Q",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 660W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 660W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 293089.5,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{5EF85D8E-AB83-4278-809A5F39E5FA8FE0}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "N51GjvhoTDrzQ-suoM3XYQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 665W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 665W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 295309.88,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{8D304FE1-2B3D-4E64-9EDDFB602007C348}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "x8AjEQjLV6qPxoIoflTcBw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 660W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 660W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 175853.7,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{695E6717-4D68-4FD9-AC3AF74F42C3A8B9}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "EvmGJAk3M163lIu1o91QKQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 655W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 655W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 290869.13,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{1998F430-0878-4700-A5CE1CCB881DE0B7}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "J2alqmCWSMk15TnhuDHBBg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 665W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 665W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 236247.9,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{07EA8241-622D-41E7-BB3D2859D1D1ACC6}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "YiFZiD7XEHcp7RjKjIe_2Q",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 660W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 660W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 18127.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 11723.58,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{1593CA80-9D9D-4D97-BC5DEEC141DD3860}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "byFfFcs960EYBLrE04wVhw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 660W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 660W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 58617.9,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{CB9EDCBA-0E8B-4E3E-A101BD602244274B}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "XT4pPX-pbOzWrYktbdJc1g",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 660W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 660W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 15876.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 23447.16,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{89ED45EB-BF1F-4037-B1E24DBC215F66B0}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "__Kl3kAHJaCpGE_5-A7ekQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "TP08#&Double-glass monocrystalline solar module (210*210 mm*66PCE) 655W DEG21C.20, 100% new#&VN , TP08#&Tấm module năng lượng mặt trời đơn tinh thể hai mặt kính (210*210 mm*66PCE) 655W DEG21C.20, mới 100%#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 93450.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 58173.83,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-27']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "state": "Tỉnh Thái Nguyên",
+        "country": "VNM",
+        "value": "Lô CN-14, Khu Công nghiệp Yên Bình, Phường Hồng Tiến,Thành phố Phổ Yên, Tỉnh Thái Nguyên, Việt Nam , 985598898"
+       },
+       "receiver_address": {
+        "city": "Singapore",
+        "country": "SGP",
+        "value": "9 RAFFLES PLACE #26-01, REPUBLIC PLAZA, SINGAPORE 048619, SG"
+       },
+       "identifiers": [
+        {
+         "value": "{5FE23144-5A11-43A4-92C825EBC3C47F89}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "TRINA SOLAR ENERGY DEVELOPMENT PTE LTD",
+     "names": [
+      "TRINA SOLAR ENERGY DEVELOPMENT PTE LTD",
+      "TRINA SOLAR ENERGY DEVELOPMENT PTE.LTD.",
+      "TRINA SOLAR ENERGY DEVLOPMENT PTE LTD",
+      "TRINA SOLAR ENERGY DEVELOPMENT LTD",
+      "TRINA SOLAR ENERGY DEVELOPMEN PTE",
+      "TRINA SOLAR ENERGY DEVELOPMENT PTE LTA"
+     ],
+     "entity_id": "ow-Cy8J7m8E28-HPbu-_Yg",
+     "countries": [
+      "SGP",
+      "CHN",
+      "MYS",
+      "FRA",
+      "AUS"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "mass_address_usage",
+       "owned_by_regulatory_action_entity",
+       "owned_by_section_1260h_entity",
+       "owned_by_sheffield_hallam_university_reports_forced_labor_entity",
+       "owned_by_usa_section_1260h_entity",
+       "psa_export_controls_section_1260h_50_percent_rule",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "psa_owned_by_section_1260h_entity",
+       "psa_owned_by_sheffield_hallam_university_reports_forced_labor_entity",
+       "psa_owned_by_usa_section_1260h_entity",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "ow-Cy8J7m8E28-HPbu-_Yg",
+       "entity_url": "https://graph.sayari.com/resource/entity/ow-Cy8J7m8E28-HPbu-_Yg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/ow-Cy8J7m8E28-HPbu-_Yg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "gqaw5UdgXpRF1NLuBqMUBg",
+      "entity_url": "https://graph.sayari.com/resource/entity/gqaw5UdgXpRF1NLuBqMUBg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 6453,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Trina Solar Energy Development",
+    "shipper_name": "TRINA SOLAR ENERGY DEVELOPMENT",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6ImQxZWY0MzlhNmU2ZmZjMmVhNzlmNjA1YmNlZTBiN2IzMmEwMDdlOWEyMjM3Yjc5NTk1NGI2NGU5ZmE3NzcxODYiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "Always search Sayari Graph for all linguistic variants of Swiss legal form suffixes (AG/SA, GmbH/Sàrl/Sagl) to avoid missing entity matches",
+   "Be aware that Swiss foundations (Stiftungen) are frequently used for wealth structuring and may appear in UBO chains — they are legal persons registered in the commercial register",
+   "Sole proprietorships below CHF 100,000 revenue may not appear in any registry"
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

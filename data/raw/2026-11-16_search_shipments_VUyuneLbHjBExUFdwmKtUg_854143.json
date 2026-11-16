@@ -1,0 +1,1385 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Infinity Ocean Line",
+  "shipper_name": "INFINITY OCEAN LINE LLP",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:26:07+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 1,
+  "items": [
+   {
+    "supplier": {
+     "name": "INFINITY OCEAN LINE LLP",
+     "names": [
+      "INFINITY OCEAN LINE LLP",
+      "KOTAK GLOBAL LLP"
+     ],
+     "entity_id": "VUyuneLbHjBExUFdwmKtUg",
+     "countries": [
+      "IND",
+      "BEL",
+      "NLD",
+      "DEU",
+      "GRC"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_conflict_minerals",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "imports_conflict_minerals",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_conflict_minerals",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_imports_conflict_minerals",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "VUyuneLbHjBExUFdwmKtUg",
+       "entity_url": "https://graph.sayari.com/resource/entity/VUyuneLbHjBExUFdwmKtUg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/VUyuneLbHjBExUFdwmKtUg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "a-BW-zKbyrpkHXz6rxVKdg",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "TOTAL PACKAGES 20, SOLAR PANELS, SOLAR PV MODULE (BIFACIAL), BIN-08-580, HS CODE 85414300, SCAC CODE AMJA, \"FREIGHT COLLECT\"",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 24000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-08-28']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "value": "15TH FLOOR, UNIT NO. 1511-1520 THE GATEWAY, GOREGAON LINK ROAD, MULUND WEST- 400080 ON BEHALF OF M/S.WAAREE ENERGIES"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUBO12607BUJN7",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "_OU6wrDzjoMw40Wa3keZ4A",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PV MODULE, SOLAR PV MODULE (BIFACIAL), BIN-08-580, HS CODE 85414300, SCAC CODE AMJA, FREIGHT COLLECT, NAC XXXXXXXXXXXXXXXXXXXXXXX",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 120000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-08-17']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "value": "15TH FLOOR, UNIT NO. 1511-1520 THE GATEWAY, GOREGAON LINK ROAD, MULUND WEST- 400080 ON BEHALF OF M/S.WAAREE ENERGIES"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUBO12606RCFV1",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Eid4e1jz7vm1SZYSyO-dxw",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANELS, TOTAL PACKAGES 80, SOLAR PV MODULE (BIFACIAL), BIN-08-580, HS CODE 85414300, SCAC CODE AMJA, FREIGHT COLLECT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 96000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-08-17']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "value": "15TH FLOOR, UNIT NO. 1511-1520 THE GATEWAY, GOREGAON LINK ROAD, MULUND WEST- 400080 ON BEHALF OF M/S.WAAREE ENERGIES"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUBO1260724546",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "XF6zqaEHEnEyPwI9czcS6g",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PV MODULE (BIFACIAL), BIN-08-580, HS CODE 85414300, SCAC CODE AMJA, FREIGHT COLLECT, NAC XXXXXXXXXXXXXXXXXXXXXXX",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 120000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-08-17']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "value": "15TH FLOOR, UNIT NO. 1511-1520 THE GATEWAY, GOREGAON LINK ROAD, MULUND WEST- 400080 ON BEHALF OF M/S.WAAREE ENERGIES"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUBO12606RCFS8",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "-KNrPFwKEQxrskt5bgaENw",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "TOTAL PACKAGES: 120, SOLAR PANELS, SOLAR PV MODULE (BIFACIAL) BIN-08-5, 80 HS CODE: 85414300, HBL NO: LLPAOL024138, SCAC CODE: AMJA, FREIGHT COLLECT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 166340.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-08-07']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "New York",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "New York, New York"
+       },
+       "shipper_address": {
+        "city": "Mulund",
+        "value": "15TH FLOOR UNIT 1514 1517 THE GATEWAY MULUND GOREGAON LINK ROAD MULUND WEST TEON BEHALF OF : M/S.WAAREE ENERGIES"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "CMDUAMC2557532C",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "9mnzAWmG4ffGu95t2kprbQ",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PANELS, SOLAR PV MODULE (BIFACIAL) BIN-08-5, 80 HS CODE: 85414300",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 166830.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-08-07']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "New York",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "New York, New York"
+       },
+       "shipper_address": {
+        "city": "Mulund",
+        "value": "15TH FLOOR UNIT 1514 1517 THE GATEWAY MULUND GOREGAON LINK ROAD MULUND WEST TEON BEHALF OF : M/S.WAAREE ENERGIES"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "CMDUAMC2557532A",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "HjyiICutY6Mha2bKH29gNQ",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "TOTAL PACKAGES: 120, SOLAR PANELS, SOLAR PV MODULE (BIFACIAL) BIN-08-5, 80 HS CODE: 85414300, HBL NO:, SCAC CODE: AMJA, FREIGHT COLLECT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 166360.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-08-07']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "New York",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "New York, New York"
+       },
+       "shipper_address": {
+        "city": "Mulund",
+        "value": "15TH FLOOR UNIT 1514 1517 THE GATEWAY MULUND GOREGAON LINK ROAD MULUND WEST TEON BEHALF OF : M/S.WAAREE ENERGIES"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "CMDUAMC2557532B",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "V2kx8qy8gui-l_jHQIF46w",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "TOTAL PACKAGES: 120, SOLAR PANELS, SOLAR PV MODULE (BIFACIAL) BIN08580, HS CODE: 85414300, HBL NO:LLPAOL024139, SCAC CODE: AMJA, FREIGHT COLLECT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 166200.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-08-07']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "New York",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "New York, New York"
+       },
+       "shipper_address": {
+        "city": "Mulund",
+        "value": "15TH FLOOR UNIT 1514 1517 THE GATEWAY MULUND GOREGAON LINK ROAD MULUND WEST TEON BEHALF OF : M/S.WAAREE ENERGIES"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "CMDUAMC2557532D",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "GxhAp5RrG3j_6MTeabQM2w",
+       "departure_country": [
+        "BEL"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "TOTAL PACKAGES: 100, SOLAR PHOTOVOLTAIC MODULES, SOLAR PV MODULE (BIFACIAL) BIN-21-6, 15 HS CODE: 85414300, HBL NO:, SCAC CODE: AMJA, FREIGHT COLLECT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 143761.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-06-26']",
+       "departure_address": {
+        "state": "BE-VAN",
+        "country": "BEL",
+        "value": "Anvers"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mulund",
+        "value": "15TH FLOOR UNIT 1514 1517 THE GATEWAY MULUND GOREGAON LINK ROAD MULUND WEST TEON BEHALF OF : M/S.WAAREE ENERGIES"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "CMDUAMC2513975F",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Ks3dxmIv2y7Q_Ws-se-DIw",
+       "departure_country": [
+        "BEL"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PHOTOVOLTAIC MODULES, SOLAR PV MODULE (BIFACIAL) BIN-21-6, 15 HS CODE: 85414300, HBL NO:, SCAC CODE: AMJA, FREIGHT COLLECT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 144121.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-06-26']",
+       "departure_address": {
+        "state": "BE-VAN",
+        "country": "BEL",
+        "value": "Anvers"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mulund",
+        "value": "15TH FLOOR UNIT 1514 1517 THE GATEWAY MULUND GOREGAON LINK ROAD MULUND WEST TEON BEHALF OF : M/S.WAAREE ENERGIES"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "CMDUAMC2513975B",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "qIYkDKfyAW6Pdu33UO-bRg",
+       "departure_country": [
+        "BEL"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "TOTAL PACKAGES: 100, SOLAR PHOTOVOLTAIC MODULES, SOLAR PV MODULE (BIFACIAL) BIN-21-6, 15 HS CODE: 85414300, HBL NO:, SCAC CODE: AMJA, FREIGHT COLLECT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 144221.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-06-26']",
+       "departure_address": {
+        "state": "BE-VAN",
+        "country": "BEL",
+        "value": "Anvers"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mulund",
+        "value": "15TH FLOOR UNIT 1514 1517 THE GATEWAY MULUND GOREGAON LINK ROAD- 400080 TEON BEHALF OF : M/S.WAAREE"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "CMDUAMC2513975A",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "U76mau3VBsqnrXKF9vnEJw",
+       "departure_country": [
+        "BEL"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PHOTOVOLTAIC MODULES, SOLAR PV MODULE (BIFACIAL) BIN-21-6, 15 HS CODE: 85414300, HBL NO:, SCAC CODE: AMJA, FREIGHT COLLECT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 143201.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-06-26']",
+       "departure_address": {
+        "state": "BE-VAN",
+        "country": "BEL",
+        "value": "Anvers"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mulund",
+        "value": "15TH FLOOR UNIT 1514 1517 THE GATEWAY MULUND GOREGAON LINK ROAD MULUND WEST TEON BEHALF OF : M/S.WAAREE ENERGIES"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "CMDUAMC2513975C",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "P7bYCh-KDHp5Uuv9dfjwSA",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PV MODULE (BIFACIAL), BIN-08-575, HS CODE 85414300, SCAC CODE AMJA, FREIGHT COLLECT, NAC XXXXXXXXXXXXXXXXXXXXXXX",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 144000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-06-25']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Mumbai",
+        "value": "15TH FLOOR, UNIT NO. 1511-1520 THE GATEWAY, MULUND GOREGAON LINK ROAD NEAR FORTIS HOSPITAL, MULUND WEST MUMBAI 400080.ON BEHALF OF"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUBO12605ATLB0",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "DnZZzeZ_tWqN7L2Lm-iVWg",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PV MODULE, SOLAR PV MODULE (BIFACIAL), BIN-08-575, HS CODE 85414300, SCAC CODE AMJA, FREIGHT COLLECT, NAC XXXXXXXXXXXXXXXXXXXXXXX",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 144000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-06-15']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Mumbai",
+        "value": "15TH FLOOR, UNIT NO. 1511-1520 THE GATEWAY, MULUND GOREGAON LINK ROAD NEAR FORTIS HOSPITAL, MULUND WEST MUMBAI 400080.ON BEHALF OF"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUBO1260554170",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "owE36NHbSPTewGb33Mj1YA",
+       "departure_country": [
+        "MAR"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PV MODULE (BIFACIAL), BIN-21-615, HS CODE 85414300, SCAC CODE AMJA, FREIGHT COLLECT, NAC XXXXXXXXXXXXXXXXXXXXXXX",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 125001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-06-13']",
+       "departure_address": {
+        "city": "Tangier",
+        "country": "MAR",
+        "value": "Tangier"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mumbai",
+        "value": "15TH FLOOR, UNIT NO. 1511-1520 THE GATEWAY, MULUND GOREGAON LINK ROAD NEAR FORTIS HOSPITAL, MULUND WEST MUMBAI 400080."
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUBO12603CBLP4",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "2arTV9GL-lkqSlPL0MVJXw",
+       "departure_country": [
+        "MAR"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR PV MODULE (BIFACIAL), BIN-21-615, HS CODE 85414300, SCAC CODE AMJA, FREIGHT COLLECT, NAC XXXXXXXXXXXXXXXXXXXXXXX",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 125001.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-06-13']",
+       "departure_address": {
+        "city": "Tangier",
+        "country": "MAR",
+        "value": "Tangier"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mumbai",
+        "value": "15TH FLOOR, UNIT NO. 1511-1520 THE GATEWAY, MULUND GOREGAON LINK ROAD NEAR FORTIS HOSPITAL, MULUND WEST MUMBAI 400080."
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "state": "US-NY",
+        "country": "USA",
+        "value": "189 SUNRISE HIGHWAY SUITE 302 ROCKVILLE CENTRE NY 11570"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUBO1260423783",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "1Ip5ZBMdxd3xLTv4FMjUqg",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "TOTAL PACKAGES 100 SOLAR PV MODULE, (BIFACIAL)BIN21615 HS CODE 85414300 SCAC C, ODE AMJA FREIGHT COLLECT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 275581.0,
+        "unit": "pound"
+       },
+       "arrival_date": "['2026-06-04']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mumbai",
+        "state": "US-IN",
+        "value": "15th Floor Unit No. 15111520 The Ga MUMBAI NA400037 IN"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "country": "USA",
+        "value": "189 Sunrise Highway suite 302 Rockv ROCKVILLE CENTRE NY115704713 US"
+       },
+       "identifiers": [
+        {
+         "value": "MAEU269382892",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "89VPDL5ll09m-ixx3IdI3A",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "TOTAL PACKAGES 100 SOLAR PV MODULE, (BIFACIAL)BIN21615 HS CODE 85414300 SCAC C, ODE AMJA FREIGHT COLLECT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 275581.0,
+        "unit": "pound"
+       },
+       "arrival_date": "['2026-06-04']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mumbai",
+        "state": "US-IN",
+        "value": "15th Floor Unit No. 15111520 The Ga MUMBAI NA400037 IN"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "country": "USA",
+        "value": "189 Sunrise Highway suite 302 Rockv ROCKVILLE CENTRE NY115704713 US"
+       },
+       "identifiers": [
+        {
+         "value": "MAEU269375508",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "dQ0idTYUVqIT_sn9MGF9Bw",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "TOTAL PACKAGES 100 SOLAR PHOTOVOLTA, IC MODULESSOLAR PV MODULE (BIFACIAL) BIN21615, HS CODE 85414300 SCAC CODE AMJA FREIGHT CO, LLECT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 275581.0,
+        "unit": "pound"
+       },
+       "arrival_date": "['2026-06-04']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mumbai",
+        "state": "US-IN",
+        "value": "15th Floor Unit No. 15111520 The Ga MUMBAI NA400037 IN"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "country": "USA",
+        "value": "189 Sunrise Highway suite 302 Rockv ROCKVILLE CENTRE NY115704713 US"
+       },
+       "identifiers": [
+        {
+         "value": "MAEU269429582",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "ZlKEJUOtguK_FZV_acm6yQ",
+       "departure_country": [
+        "IND"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "TOTAL PACKAGES 140 SOLAR PHOTOVOLTA, IC MODULESSOLAR PV MODULE (BIFACIAL) BIN21615, HS CODE 85414300 SCAC CODE AMJA FREIGHT CO, LLECT",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 385813.0,
+        "unit": "pound"
+       },
+       "arrival_date": "['2026-06-04']",
+       "departure_address": {
+        "city": "Nhava Sheva",
+        "country": "IND",
+        "value": "Nhava Sheva"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Mumbai",
+        "state": "US-IN",
+        "value": "15th Floor Unit No. 15111520 The Ga MUMBAI NA400037 IN"
+       },
+       "receiver_address": {
+        "city": "Rockville Centre",
+        "country": "USA",
+        "value": "189 Sunrise Highway suite 302 Rockv ROCKVILLE CENTRE NY115704713 US"
+       },
+       "identifiers": [
+        {
+         "value": "MAEU269425610",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "AMERICAN OCEAN LINE INC",
+     "names": [
+      "AMERICAN OCEAN LINE INC",
+      "AMERICAN OCEAN LINE, INC",
+      "AMERICAN OCEAN LINE",
+      "AMERICAN OCEAN LINE,INC",
+      "AMERICAN OCEAN LINE IN",
+      "AMERICAN OCEAN LINE INC INC"
+     ],
+     "entity_id": "Zay-miVXnpCPVzr2YRQRJg",
+     "countries": [
+      "USA",
+      "CHN",
+      "FRA",
+      "IND",
+      "BEL"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "mass_address_usage"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Zay-miVXnpCPVzr2YRQRJg",
+       "entity_url": "https://graph.sayari.com/resource/entity/Zay-miVXnpCPVzr2YRQRJg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Zay-miVXnpCPVzr2YRQRJg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "VUyuneLbHjBExUFdwmKtUg",
+      "entity_url": "https://graph.sayari.com/resource/entity/VUyuneLbHjBExUFdwmKtUg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 732,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Infinity Ocean Line",
+    "shipper_name": "INFINITY OCEAN LINE LLP",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6ImZkN2U2MDhjNDdmNzJmOTlhMDk5NTdjYTAyZjEzZjA0NzVhMmU3N2ZhMGExNGUxY2FkZjUzNmU1YTc4Y2UzYzEiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "Do not treat incorporation date as evidence of legitimate operational history — always verify actual commercial activity timelines against the registration date",
+   "When a counterparty has an aged incorporation but thin commercial footprint, escalate for enhanced due diligence before onboarding or transacting",
+   "Build formation agent clustering into automated screening workflows to identify shelf company factories that supply illicit networks"
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

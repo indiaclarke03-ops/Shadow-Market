@@ -1,0 +1,1410 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Mundra Solar PV",
+  "shipper_name": "MUNDRA SOLAR PV LIMITED",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:23:22+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 1,
+  "items": [
+   {
+    "supplier": {
+     "name": "MUNDRA SOLAR PV LIMITED",
+     "names": [
+      "MUNDRA SOLAR PV LIMITED",
+      "MUNDRA SOLAR PV"
+     ],
+     "entity_id": "zvwf8aAZhSWLgBa1667xpw",
+     "countries": [
+      "IND",
+      "KOR",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_uflpa_adjacent",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owned_by_regulatory_action_entity",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_direct",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_direct",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "psa_owner_of_regulatory_action_entity",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "zvwf8aAZhSWLgBa1667xpw",
+       "entity_url": "https://graph.sayari.com/resource/entity/zvwf8aAZhSWLgBa1667xpw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/zvwf8aAZhSWLgBa1667xpw"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "OgOiE-3XMUbMNkLUuCnR8Q",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES CONTAINING CARTON, S SOLAR PV MODULES WPBIFACIAL"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-05']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29958MDSAH",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "-jaPqxOsf-rBhwvMLhmtAA",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES CONTAINING CARTON, S SOLAR PV MODULES WPBIFACIAL"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-05']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29962MDSAH",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "M8StLvctIkDdArarEDlYJg",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES CONTAINING CARTON, S SOLAR PV MODULES WPBIFACIAL"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-05']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29959MDSAH",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "fe8xehLaVGrWjkFxPAjMLw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES CONTAINING CARTO, NS SOLAR PV MODULES WP BIFACIAL"
+       ],
+       "weight": {
+        "value": 51200.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29858MDSHR",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "6T_vCWbRC4Iwk4yGepXjzw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "CARTONS CONTAINING PACKAGES, SOLAR PV MODULES WP BI-FACIAL AB-G R-, -AAA",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29843MDLOS",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "fkA5kFL8o8MKElND3wV4-A",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES CONTAINING CARTON, S SOLAR PV MODULES WPBIFACIAL"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29907MDSHR",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "xVuph96u_Yppi3hfFVjd2w",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "CARTONS CONTAINING PACKAGESS, OLAR PV MODULES WP BIFACIALABG R AAA",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29851MDSHR",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "v889Y9QfTifFmuKEiwCrEg",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "CARTONS CONTAINING PACKAGESS, OLAR PV MODULES WP BIFACIALABG R AAA",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29844MDLOS",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "fhkDTATJ1CiggtTetc7hAA",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES CONTAINING CARTON, S SOLAR PV MODULES WPBIFACIAL"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29895MDLOS",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "lRc2MbWOTX9LVpEbD5w_IQ",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES CONTAINING CARTON, S SOLAR PV MODULES WP BI-FACIAL"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29893MDSHU",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "gblgcTtRCsGFwq_NA24OZQ",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES CONTAINING CARTON, S SOLAR PV MODULES WPBIFACIAL"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29896MDLAX",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "GH_q4xpAkne7A5tK8W-gsQ",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "CARTONS CONTAINING PACKAGESS, OLAR PV MODULES WP BIFACIALABG R AAA",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29856MDLAX",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Y1bVxojRRW1SvEl_pt9sDA",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES CONTAINING CARTON, S SOLAR PV MODULES WPBIFACIAL"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29888MDLAX",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "GT1HMQGnOFLGEQkHNT4OvA",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "CARTONS CONTAINING PACKAGES, SOLAR PV MODULES WP BI-FACIAL AB-G R-, -AAA",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 25600.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29868MDLAX",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "PhcbG9U6ci5L0fI8mKTGjw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "CARTONS CONTAINING PACKAGESS, OLAR PV MODULES WP BIFACIALABG R AAA",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29852MDSHU",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "EdTT-gI7BhOSyz4VQNTAMw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES CONTAINING CARTON, S SOLAR PV MODULES WPBIFACIAL"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29908MDLAX",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "IFAO4FBgjAuqX8H64g0b1g",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES CONTAINING CARTON, S SOLAR PV MODULES WP BI-FACIAL"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29904MDSHR",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "vw2y4lMZtJsonKJYq_bYfg",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES CONTAINING CARTON, S SOLAR PV MODULES WP BI-FACIAL"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29897MDSHU",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "COgFySzsMuKNKqTCdl2u1w",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES CONTAINING CARTON, S SOLAR PV MODULES WPBIFACIAL"
+       ],
+       "weight": {
+        "value": 76800.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29894MDLAX",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "fgjkyEJqOnRiHdWxqICQAA",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES CONTAINING CARTON, S SOLAR PV MODULES WP BI-FACIAL HS CODE:"
+       ],
+       "weight": {
+        "value": 51200.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Kutch",
+        "state": "IN-GJ",
+        "country": "IND",
+        "value": "SURVEY NO 180P & OTHERS, VILLAGE: TUNDA TALUKA: MUNDRA, KUTCH GUJARAT 370435 IN"
+       },
+       "receiver_address": {
+        "city": "Juno Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "700 UNIVERSE BOULEVARD JUNO BEACH FL 33408 US"
+       },
+       "identifiers": [
+        {
+         "value": "IGLBMU29855MDLAX",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "WILMOT ENERGY CENTER II LLC",
+     "entity_id": "LSnfVEnVWkzWC1q0_1LV4g",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "mass_address_usage",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "LSnfVEnVWkzWC1q0_1LV4g",
+       "entity_url": "https://graph.sayari.com/resource/entity/LSnfVEnVWkzWC1q0_1LV4g"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/LSnfVEnVWkzWC1q0_1LV4g"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "zvwf8aAZhSWLgBa1667xpw",
+      "entity_url": "https://graph.sayari.com/resource/entity/zvwf8aAZhSWLgBa1667xpw"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 8482,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Mundra Solar PV",
+    "shipper_name": "MUNDRA SOLAR PV LIMITED",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6ImRkY2U2Y2RiZmI5ZTY4YjcwNzEzZTkzZmU0Nzk1NzFiYWZiZTA1YTdkZjg3MGQyMjYwZmUyMjNiMjE3N2YwOGIiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving Chinese entities, try both the Chinese name and known English/trade names in the Sayari API — there is no standardized Romanization.",
+   "The administrative division prefix in a Chinese company name indicates registration level, not headquarters location.",
+   "National-level companies (no geographic prefix or parenthetical prefix) are typically large SOEs or nationally significant enterprises."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

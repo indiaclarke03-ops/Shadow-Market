@@ -1,0 +1,1626 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Blue Sky Solar Indonesia",
+  "shipper_name": "PT. BLUE SKY SOLAR INDONESIA",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:25:02+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 4,
+  "items": [
+   {
+    "supplier": {
+     "name": "PT. IDN SOLAR TECH",
+     "names": [
+      "PT. IDN SOLAR TECH",
+      "PT.IDN SOLAR TECH",
+      "IDN SOLAR TECH"
+     ],
+     "entity_id": "Y14952DH15puJrR8epb0og",
+     "countries": [
+      "IDN",
+      "SGP",
+      "KOR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_from_bis_addresses_high_diversion_risk",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_from_bis_addresses_high_diversion_risk",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Y14952DH15puJrR8epb0og",
+       "entity_url": "https://graph.sayari.com/resource/entity/Y14952DH15puJrR8epb0og"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Y14952DH15puJrR8epb0og"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "T9F4DZX_Isyc3OCL4RLPZw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MONO MODULES"
+       ],
+       "weight": {
+        "value": 113940.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-03-14']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "value": "KAWASAN KABIL INDONUSA ESTATE, BLO BATAM CENTRE RIAU 29416 INDONESIA TE711502"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 420 5000 HOPYARD ROAD. PLEASANTON CA 94588 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6439377260",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "hd4XZKIbH_NKlg5tyjUPsA",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MONO MODULES"
+       ],
+       "weight": {
+        "value": 113940.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-03-14']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "value": "KAWASAN KABIL INDONUSA ESTATE, BLO BATAM CENTRE RIAU 29416 INDONESIA TE711502"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 420 5000 HOPYARD ROAD. PLEASANTON CA 94588 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6439377540",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "2H2CHPiJpEcUqOQ74Y33gw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MONO MODULES"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-03-14']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "value": "KAWASAN KABIL INDONUSA ESTATE, BLO BATAM CENTRE RIAU 29416 INDONESIA TE711502"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 420 5000 HOPYARD ROAD. PLEASANTON CA 94588 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6439377830",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "sV6RQqCUk1i7y9y5LXrYMg",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MONO MODULES"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-03-01']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "value": "KAWASAN KABIL INDONUSA ESTATE, BLO BATAM CENTRE RIAU 29416 INDONESIA TE711502"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 420 5000 HOPYARD ROAD. PLEASANTON CA 94588 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6438868730",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "4n8l7b7rge4RMrdIY5wZrA",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MONO MODULES"
+       ],
+       "weight": {
+        "value": 113940.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-03-01']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "value": "KAWASAN KABIL INDONUSA ESTATE, BLO BATAM CENTRE RIAU 29416 INDONESIA TE711502"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 420 5000 HOPYARD ROAD. PLEASANTON CA 94588 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6438868530",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "0Xw17Yyo9LneHv4Jb2b0Xg",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MONO MODULES"
+       ],
+       "weight": {
+        "value": 113940.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-03-01']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "value": "KAWASAN KABIL INDONUSA ESTATE, BLO BATAM CENTRE RIAU 29416 INDONESIA TE711502"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 420 5000 HOPYARD ROAD. PLEASANTON CA 94588 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6438866790",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "ET SOLAR INC.",
+     "entity_id": "o9Mzgczg0GGSJI-O8NrkUQ",
+     "countries": [
+      "USA",
+      "SGP",
+      "AUT"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "o9Mzgczg0GGSJI-O8NrkUQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/o9Mzgczg0GGSJI-O8NrkUQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/o9Mzgczg0GGSJI-O8NrkUQ"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "Y14952DH15puJrR8epb0og",
+      "entity_url": "https://graph.sayari.com/resource/entity/Y14952DH15puJrR8epb0og"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "PT MEGA SOLAR INDONESIA",
+     "names": [
+      "PT MEGA SOLAR INDONESIA",
+      "MEGA SOLAR INDONESIA"
+     ],
+     "entity_id": "rQhiQSqjktVqPOF6kBJ7Kg",
+     "countries": [
+      "IDN",
+      "IND"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "rQhiQSqjktVqPOF6kBJ7Kg",
+       "entity_url": "https://graph.sayari.com/resource/entity/rQhiQSqjktVqPOF6kBJ7Kg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/rQhiQSqjktVqPOF6kBJ7Kg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "cEJT8EiNP5yjpm2wLWqdOA",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MONO MODULES"
+       ],
+       "weight": {
+        "value": 113940.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-03-14']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "BRIGJEN KATAMSO NO.72, SUNGAI BINT BATAM CENTRE RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 420 5000 HOPYARD ROAD. PLEASANTON CA 94588 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6438857010",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "2Ro0Lp33RFTGeBYt0QfTgQ",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MONO MODULES"
+       ],
+       "weight": {
+        "value": 113940.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-03-14']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "BRIGJEN KATAMSO NO.72, SUNGAI BINT BATAM CENTRE RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 420 5000 HOPYARD ROAD. PLEASANTON CA 94588 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6438857000",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "De5ZsWe19dYmPbM7q9nIDw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MONO MODULES"
+       ],
+       "weight": {
+        "value": 56970.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-03-01']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "BRIGJEN KATAMSO NO.72, SUNGAI BINT BATAM CENTRE RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 420 5000 HOPYARD ROAD. PLEASANTON CA 94588 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6438856970",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "ET SOLAR INC.",
+     "entity_id": "o9Mzgczg0GGSJI-O8NrkUQ",
+     "countries": [
+      "USA",
+      "SGP",
+      "AUT"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "o9Mzgczg0GGSJI-O8NrkUQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/o9Mzgczg0GGSJI-O8NrkUQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/o9Mzgczg0GGSJI-O8NrkUQ"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "rQhiQSqjktVqPOF6kBJ7Kg",
+      "entity_url": "https://graph.sayari.com/resource/entity/rQhiQSqjktVqPOF6kBJ7Kg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "PT DUNIA SOLAR INDONESIA",
+     "names": [
+      "PT DUNIA SOLAR INDONESIA",
+      "DUNIA SOLAR INDONESIA"
+     ],
+     "entity_id": "5_6NJu8kUfYI3WNm--v2KQ",
+     "countries": [
+      "IDN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "5_6NJu8kUfYI3WNm--v2KQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/5_6NJu8kUfYI3WNm--v2KQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/5_6NJu8kUfYI3WNm--v2KQ"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "uy7J6mAZlCgaa1r1bgZBMQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MONO MODULES"
+       ],
+       "weight": {
+        "value": 63847.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-02-14']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "state": "ID-RI",
+        "country": "IDN",
+        "value": "JL. KERAPU NO.12, TANJUNG SENGKUAN BATAM CENTRE RIAU INDONESIA"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "SUITE 420 5000 HOPYARD ROAD. PLEASANTON CA 94588 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6437419020",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "ET SOLAR INC.",
+     "entity_id": "o9Mzgczg0GGSJI-O8NrkUQ",
+     "countries": [
+      "USA",
+      "SGP",
+      "AUT"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "o9Mzgczg0GGSJI-O8NrkUQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/o9Mzgczg0GGSJI-O8NrkUQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/o9Mzgczg0GGSJI-O8NrkUQ"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "5_6NJu8kUfYI3WNm--v2KQ",
+      "entity_url": "https://graph.sayari.com/resource/entity/5_6NJu8kUfYI3WNm--v2KQ"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "PT. BLUE SKY SOLAR INDONESIA",
+     "names": [
+      "PT. BLUE SKY SOLAR INDONESIA",
+      "BLUE SKY SOLAR INDONESIA"
+     ],
+     "entity_id": "DE9mhS2GfwBaHGZcGom3PA",
+     "countries": [
+      "IDN",
+      "KOR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "DE9mhS2GfwBaHGZcGom3PA",
+       "entity_url": "https://graph.sayari.com/resource/entity/DE9mhS2GfwBaHGZcGom3PA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/DE9mhS2GfwBaHGZcGom3PA"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "5Kv7UF3Itnu-H-63JEYb5w",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOCELLS THAT HAVE BEEN INSTALLED, IN MODULES OR ASSEMBLED INTO BLOCKS AND BIFA, CIAL SOLAR MONO MODULES",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 19000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-29']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Long Beach",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Long Beach, California"
+       },
+       "shipper_address": {
+        "value": "KAWASAN INDUSTRI SEI PELUNGGUT DAPU R 12, SUNGAI PE BATAM 29439 ID"
+       },
+       "receiver_address": {
+        "city": "Anton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5000 HOPYARD ROAD, SUITE 420, PLEAS ANTON CA 94588 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYBTMF03248800",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "8E-K13lpSl6bBooNlQ_HpQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOCELLS THAT HAVE BEEN INSTALLED, IN MODULES OR ASSEMBLED INTO BLOCKS AND BIFA, CIAL SOLAR MONO MODULES",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 19000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-10']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "KAWASAN INDUSTRI SEI PELUNGGUT DAPU R 12, KEL. SUNG BATAM 29439 ID"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5000 HOPYARD ROAD SUITE 420 PLEASAN TON, CA 94588 PLEASANTON CA 94588 U TES"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYBTMF02980300",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "copWz9pVfDnF7tKh6iBx2g",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOCELLS THAT HAVE BEEN INSTALLED, IN MODULES OR ASSEMBLED INTO BLOCKS AND BIFA, CIAL SOLAR MONO MODULES",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 57000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-10']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "KAWASAN INDUSTRI SEI PELUNGGUT DAPU R 12 BATAM 29439 ID"
+       },
+       "receiver_address": {
+        "city": "Ton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5000 HOPYARD ROAD SUITE 420 PLEASAN TON CA 94588 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYBTMF02965600",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "My5EknuL3RWqnA1CM09Hqw",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOCELLS THAT HAVE BEEN INSTALLED, IN MODULES OR ASSEMBLED INTO BLOCKS AND BIFA, CIAL SOLAR MONO MODULES",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 57000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-10']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "value": "KAWASAN INDUSTRI SEI PELUNGGUT DAP UR 12, KEL. SUN BATAM 29439 ID"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5000 HOPYARD ROAD SUITE 420 PLEASAN TON, CA 94588 PLEASANTON CA 94588 U TES"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYBTMF02979400",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Ut_iWBRD40v4jZzl6Vb3_A",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOCELLS THAT HAVE BEEN INSTALLED, IN MODULES OR ASSEMBLED INTO BLOCKS AND BIFA, CIAL SOLAR MONO MODULES",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 57000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-10']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "city": "Batam",
+        "country": "IDN",
+        "value": "KAWASAN INDUSTRI SEI PELUNGGUT DAPU R 12, KEL. SUNG BATAM 29439 ID"
+       },
+       "receiver_address": {
+        "city": "Ton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5000 HOPYARD ROAD SUITE 420 PLEASAN TON CA 94588 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYBTMF02969300",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "I-gPC74VYCgyGAjzSwrK0g",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOCELLS THAT HAVE BEEN INSTALLED, IN MODULES OR ASSEMBLED INTO BLOCKS AND BIFA, CIAL SOLAR MONO MODULES",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 57000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-10']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "country": "IDN",
+        "value": "KAWASAN INDUSTRI SEI PELUNGGUT BATA M 99999 ID"
+       },
+       "receiver_address": {
+        "city": "Pleasanton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5000 HOPYARD ROAD PLEASANTON CA 945 88 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYBTMF02967800",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Rv872ereezAi-DR9JLq8kw",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOCELLS THAT HAVE BEEN INSTALLED, IN MODULES OR ASSEMBLED INTO BLOCKS AND BIFA, CIAL SOLAR MONO MODULES",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 57000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-10']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "value": "KAWASAN INDUSTRI SEI PELUNGGUT DAPU R 12, SUNGAI PE BATAM 29439 ID"
+       },
+       "receiver_address": {
+        "city": "Anton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5000 HOPYARD ROAD, SUITE 420, PLEAS ANTON CA 94588 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYBTMF02976800",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "w3Y49C6IlBc_X4WziXmKpw",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOCELLS THAT HAVE BEEN INSTALLED, IN MODULES OR ASSEMBLED INTO BLOCKS AND BIFA, CIAL SOLAR MONO MODULES",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 57000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-10']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "value": "KAWASAN INDUSTRI SEI PELUNGGUT DAPU R 12, SUNGAI PE BATAM 29439 ID"
+       },
+       "receiver_address": {
+        "city": "Anton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5000 HOPYARD ROAD, SUITE 420, PLEAS ANTON CA 94588 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYBTMF02978300",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "QmKFqJnzcLxVptASdJLMyA",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOCELLS THAT HAVE BEEN INSTALLED, IN MODULES OR ASSEMBLED INTO BLOCKS AND BIFA, CIAL SOLAR MONO MODULES",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 57000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-10']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "value": "KAWASAN INDUSTRI SEI PELUNGGUT BATA M 29439 ID"
+       },
+       "receiver_address": {
+        "city": "Ton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5000 HOPYARD ROAD SUITE 420 PLEASAN TON CA 94588 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYBTMF02971300",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "SLAtrTdhgmtGPGgtkNiaaQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "PHOTOCELLS THAT HAVE BEEN INSTALLED, IN MODULES OR ASSEMBLED INTO BLOCKS AND SOLA, R MONO MODULES (SOLAR CELLS)",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 57000.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-10']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "Los Angeles, California"
+       },
+       "shipper_address": {
+        "value": "KAWASAN INDUSTRI SEI PELUNGGUT DAPU R 12, SUNGAI PE BATAM 29439 ID"
+       },
+       "receiver_address": {
+        "city": "Anton",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "5000 HOPYARD ROAD, SUITE 420, PLEAS ANTON CA 94588 US"
+       },
+       "identifiers": [
+        {
+         "value": "ONEYBTMF02964500",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "ELITE SOLAR INC",
+     "entity_id": "pMtNGvzRXnglwMpzjDR2eA",
+     "countries": [
+      "USA",
+      "SGP"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "pMtNGvzRXnglwMpzjDR2eA",
+       "entity_url": "https://graph.sayari.com/resource/entity/pMtNGvzRXnglwMpzjDR2eA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/pMtNGvzRXnglwMpzjDR2eA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "DE9mhS2GfwBaHGZcGom3PA",
+      "entity_url": "https://graph.sayari.com/resource/entity/DE9mhS2GfwBaHGZcGom3PA"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 1247,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Blue Sky Solar Indonesia",
+    "shipper_name": "PT. BLUE SKY SOLAR INDONESIA",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6IjkyN2U3NDI3ZTRhYjBhYmIzM2IzODBkYzQyNTk4YmVmN2EyYmVkYTRiOGIyNWViZWI5MWE0ZjE0ZWQwZjJiNTQiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving Chinese entities, try both the Chinese name and known English/trade names in the Sayari API — there is no standardized Romanization.",
+   "The administrative division prefix in a Chinese company name indicates registration level, not headquarters location.",
+   "National-level companies (no geographic prefix or parenthetical prefix) are typically large SOEs or nationally significant enterprises."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

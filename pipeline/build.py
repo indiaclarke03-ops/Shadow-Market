@@ -45,7 +45,22 @@ def num(v, default=None):
 
 
 # ---------------------------------------------------------------- Layer 3
+def _rx_table(path: Path) -> list[dict]:
+    import re
+    rows = read_csv(path)
+    for r in rows:
+        r["_rx"] = re.compile(r["name_regex"], re.I)
+    return rows
+
+
 def classify(exporters: list[dict], rules: dict) -> list[dict]:
+    """Product check (DECISIONS #26): exporters whose product doesn't follow the polysilicon route
+    (pipeline/product_relevance.csv) keep their Sayari flags in `flags_all`, but `flags` is emptied, so
+    every headline figure is computed with the check on. Figures with the check off are kept alongside.
+    Enforcement on record (DECISIONS #27): `detained_group` names the corporate group if it has a
+    public solar detention or denial (pipeline/enforced_groups.csv, case ids from data/cases.csv)."""
+    prod = _rx_table(ROOT / "pipeline" / "product_relevance.csv")
+    groups = _rx_table(ROOT / "pipeline" / "enforced_groups.csv")
     rf_map = rules["risk_factor_map"]
     levels = {l["id"]: l for l in rules["exposure_levels"]}
     out = []
@@ -64,17 +79,28 @@ def classify(exporters: list[dict], rules: dict) -> list[dict]:
         conf = None
         if base_conf is not None:
             conf = CONF_NAMES[max(0, min(4, base_conf + corr * 2))]  # one named level = 2 rank steps
+        name = e.get("name", "")
+        pr = next((r for r in prod if r["_rx"].search(name)), None)
+        grp = next((g for g in groups if g["_rx"].search(name)), None)
+        relevant = not (pr and pr["polysilicon_route"] == "n")
         out.append({
             "id": e.get("exporter_id") or e.get("name"),
+            "flags_all": flags,
+            "product_relevant": relevant,
+            "technology": pr["technology"] if pr else "",
+            "product_note": pr["reason"] if pr else "",
+            "detained_group": grp["group"] if grp else "",
+            "detained_cases": grp["case_ids"].split(";") if grp else [],
             "name": e.get("name", ""),
             "country": e.get("country", "") or "Unknown",
             "stage": e.get("stage", ""),
             "value": num(e.get("us_import_value_usd")),
             "value_usd": num(e.get("us_import_value_usd")),
             "shipments": int(num(e.get("shipments"), 0) or 0),
-            "flags": flags,
+            "flags": flags if relevant else [],
             "unmapped_factors": unknown,
             "levels": sorted({fl["level"] for fl in flags}),
+            "weight_t": None,
             "confidence": conf,
             "traced": (e.get("traced", "y") or "y").lower().startswith("y"),
             "trade_coverage": e.get("trade_coverage", ""),
@@ -100,6 +126,11 @@ def flagged_under(ex: dict, tier: str, scope: str, ownership: str) -> bool:
     return False
 
 
+def _wshare(exs, exposed):
+    tot = sum(e["weight_t"] or 0 for e in exs)
+    return round(sum(e["weight_t"] or 0 for e in exposed) / tot * 100, 2) if tot else None
+
+
 def hhi(values: dict[str, float]) -> float | None:
     tot = sum(values.values())
     if tot <= 0:
@@ -109,6 +140,10 @@ def hhi(values: dict[str, float]) -> float | None:
 
 def metrics_for(exs: list[dict], tier, scope, own, total_value, detained_value):
     exposed = [e for e in exs if e["traced"] and flagged_under(e, tier, scope, own)]
+    return _metrics(exs, exposed, total_value, detained_value)
+
+
+def _metrics(exs, exposed, total_value, detained_value):
     clean = [e for e in exs if e not in exposed]
     exp_val = sum(e["value"] for e in exposed)
     by_exp = {e["id"]: e["value"] for e in clean}
@@ -126,6 +161,8 @@ def metrics_for(exs: list[dict], tier, scope, own, total_value, detained_value):
         "hhi_exporter_after": hhi(by_exp),
         "hhi_country_after": hhi(by_cty),
         "exposed_ids": [e["id"] for e in exposed],
+        "not_detained_share": round(sum(e["value"] for e in exposed if not e["detained_group"]) / total_value * 100, 2) if total_value else None,
+        "exposed_weight_share": _wshare(exs, exposed),
     }
 
 
@@ -155,6 +192,32 @@ def curves(combos: dict, rules: dict) -> dict:
             b["cliff"] = ratio >= cr["min_ratio"] and add_pp >= cr["min_share_pp"]
         out[dial] = steps
     return out
+
+
+def apply_weights(exs):
+    """Estimated weight (DECISIONS #28): shipments × median kg per shipment, from Sayari shipment
+    samples for the largest exporters (data/derived/shipment_samples.csv); others use the pooled median."""
+    rows = [r for r in read_csv(DERIVED / "shipment_samples.csv") if num(r.get("median_weight_kg"))]
+    by_id: dict[str, list[float]] = {}
+    for r in rows:
+        by_id.setdefault(r["sayari_entity_id"], []).append(num(r["median_weight_kg"]))
+    meds = sorted(v for vs in by_id.values() for v in vs)
+    pooled = meds[len(meds) // 2] if meds else None
+    for e in exs:
+        kg = sorted(by_id.get(e["sayari_entity_id"], []))
+        per = kg[len(kg) // 2] if kg else pooled
+        e["weight_t"] = round(e["shipments"] * per / 1000, 1) if per else None
+        e["weight_sampled"] = bool(kg)
+    return pooled
+
+
+def weight_meta(exs):
+    tot = sum(e["weight_t"] or 0 for e in exs)
+    if not tot:
+        return {"status": "pending"}
+    sampled = sum(e["weight_t"] or 0 for e in exs if e.get("weight_sampled"))
+    return {"status": "ok", "total_t": round(tot), "sampled_share": round(sampled / tot * 100, 1),
+            "sampled_exporters": sum(1 for e in exs if e.get("weight_sampled"))}
 
 
 # ---------------------------------------------------------------- Layer 2
@@ -198,6 +261,47 @@ def layer2_summary(stats: list[dict]) -> dict:
 
 
 # ---------------------------------------------------------------- build
+def write_named_sheet(l3: dict) -> None:
+    """Review sheet for every exporter the page names (top 30 with a link): for independent review and right of reply."""
+    rows = [e for e in l3["exporters"] if e["flags_all"]][:30]
+    cols = ["rank", "name", "country", "sayari_entity_id", "us_shipments", "share_pct", "link_levels", "link_factors",
+            "product_check", "detained_group", "case_ids", "confidence", "reviewer", "review_date", "right_of_reply_sent", "response"]
+    tot = l3["total_value"]
+    with (DERIVED / "named_companies.csv").open("w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=cols)
+        w.writeheader()
+        for i, e in enumerate(rows, 1):
+            w.writerow({"rank": i, "name": e["name"], "country": e["country"], "sayari_entity_id": e["sayari_entity_id"],
+                        "us_shipments": e["shipments"], "share_pct": round(e["value"] / tot * 100, 2),
+                        "link_levels": ";".join(sorted({x["level"] for x in e["flags_all"]})),
+                        "link_factors": ";".join(x["factor"] for x in e["flags_all"]),
+                        "product_check": e["technology"] or "polysilicon route", "detained_group": e["detained_group"],
+                        "case_ids": ";".join(e["detained_cases"]), "confidence": e["confidence"] or "",
+                        "reviewer": "", "review_date": "", "right_of_reply_sent": "", "response": ""})
+
+
+def slim_for_site(payload: dict) -> dict:
+    """The page needs level + scope per flag, not factor names; full detail stays in metrics.json."""
+    l3 = payload["layer3"]
+    if l3.get("status") != "ok":
+        return payload
+    def fl(flags):
+        return [dict(t) for t in sorted({(("level", f["level"]), ("scope", f["scope"])) for f in flags})]
+    notes = {}
+    exs = []
+    for i, e in enumerate(l3["exporters"]):
+        x = {k: e[k] for k in ("id", "name", "country", "value", "shipments", "weight_t", "levels", "confidence", "traced",
+                               "product_relevant", "detained_group", "detained_cases", "technology", "sayari_entity_id")}
+        x["flags"] = fl(e["flags"])
+        if not e["product_relevant"]:
+            x["flags_all"] = fl(e["flags_all"])
+        if e["product_note"]:
+            notes[e["technology"]] = e["product_note"]
+        x["source_records"] = e["source_records"] if i < 60 else []
+        exs.append(x)
+    return {**payload, "layer3": {**l3, "exporters": exs, "product_notes": notes}}
+
+
 def main() -> int:
     import argparse
     ap = argparse.ArgumentParser()
@@ -225,10 +329,17 @@ def main() -> int:
     layer3 = {"status": "pending", "reason": "No Sayari snapshot yet: data/derived/exporters.csv is missing."}
     if exs:
         total_value = sum(e["value"] for e in exs)
+        apply_weights(exs)
+        dv = detained_value if measure == "value_usd" else None  # tolerated exposure needs USD
         combos = {}
         for t, s, o in itertools.product(TIER_ORDER, SCOPE_ORDER, ("off", "one_hop")):
-            # Tolerated exposure subtracts CBP detained USD, so it needs a USD measure.
-            combos[f"{t}|{s}|{o}"] = metrics_for(exs, t, s, o, total_value, detained_value if measure == "value_usd" else None)
+            combos[f"{t}|{s}|{o}"] = metrics_for(exs, t, s, o, total_value, dv)
+        # Enforcement on record: every exporter in a group with a public solar detention or denial
+        combos["observed"] = _metrics(exs, [e for e in exs if e["detained_group"]], total_value, dv)
+        # Product check off: Sayari flags as given, thin-film makers included
+        raw = [{**e, "flags": e["flags_all"]} for e in exs]
+        combos_unadj = {f"{t}|{s}|{o}": {k: v for k, v in metrics_for(raw, t, s, o, total_value, dv).items() if k != "exposed_ids"}
+                        for t, s, o in itertools.product(TIER_ORDER, SCOPE_ORDER, ("off", "one_hop"))}
         by_cty: dict[str, float] = {}
         for e in exs:
             by_cty[e["country"]] = by_cty.get(e["country"], 0) + e["value"]
@@ -242,6 +353,11 @@ def main() -> int:
             "hhi_exporter_before": hhi({e["id"]: e["value"] for e in exs}),
             "hhi_country_before": hhi(by_cty),
             "combos": combos,
+            "combos_unadjusted": combos_unadj,
+            "product_check": {"excluded_share": round(sum(e["value"] for e in exs if not e["product_relevant"]) / total_value * 100, 2),
+                              "excluded_exporters": sum(1 for e in exs if not e["product_relevant"])},
+            "detained_groups": sorted({e["detained_group"] for e in exs if e["detained_group"]}),
+            "weight": weight_meta(exs),
             "curves": curves(combos, rules),
             "detained_basis": detained_basis,
             "exporters": sorted(exs, key=lambda e: -e["value"]),
@@ -251,7 +367,7 @@ def main() -> int:
     tiers_path = DERIVED / "tiers.json"
     tiers = json.loads(tiers_path.read_text()) if tiers_path.exists() else {"status": "pending"}
 
-    sources = read_csv(EVID / "sources.csv") + read_csv(EVID / "sources_layer2.csv")
+    sources = read_csv(EVID / "sources.csv") + read_csv(EVID / "sources_layer2.csv") + read_csv(EVID / "sources_sim.csv")
     payload = {
         "built": date.today().isoformat(),
         "snapshot": (exporters_raw[0].get("snapshot_date") if exporters_raw else None),
@@ -294,10 +410,13 @@ def main() -> int:
         print("WARNING: referenced source ids not in register:", ", ".join(sorted(missing)), file=sys.stderr)
 
     DERIVED.mkdir(parents=True, exist_ok=True)
-    js = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+    if layer3.get("status") == "ok" and not args.exporters:
+        write_named_sheet(layer3)
+    site_payload = slim_for_site(payload)
+    js = json.dumps(site_payload, ensure_ascii=False, separators=(",", ":"))
     if args.exporters:
-        payload["fixture"] = True
-        js = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+        site_payload["fixture"] = True
+        js = json.dumps(site_payload, ensure_ascii=False, separators=(",", ":"))
     else:
         (DERIVED / "metrics.json").write_text(json.dumps(payload, ensure_ascii=False, indent=1))
     Path(args.out_js or ROOT / "site" / "data.js").write_text("window.SM_DATA=" + js + ";\n")

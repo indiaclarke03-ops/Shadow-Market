@@ -1,0 +1,1649 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "First Solar Vietnam",
+  "shipper_name": "Công Ty TNHH Sản Xuất First Solar Việt Nam",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:22:55+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 3,
+  "items": [
+   {
+    "supplier": {
+     "name": "FIRST SOLAR VIETNAM",
+     "entity_id": "7hIGkwkqtN0qm3WWFgwNQw",
+     "countries": [
+      "VNM",
+      "USA",
+      "KOR",
+      "JPN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "7hIGkwkqtN0qm3WWFgwNQw",
+       "entity_url": "https://graph.sayari.com/resource/entity/7hIGkwkqtN0qm3WWFgwNQw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/7hIGkwkqtN0qm3WWFgwNQw"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "PMtu3bDhi9WHk8dGZI_QBA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE, SHIPMENT NO, SO -, HS"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-04-15']",
+       "departure_address": {
+        "city": "Vung Tau",
+        "country": "VNM",
+        "value": "Vung Tau"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh",
+        "value": "MANUFACTURING CO., LTD. LOT A1, A2 D10 STREET, DONG NAM IND. ZONE, BINH MY COMMUNE HO CHI MINH 70000, VIET NAMX"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD SUITE 220 PHOENIX ARIZONA 85018 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUSGN260237631",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Ek5NbwfWR2k_jU7mdNypYw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE, SHIPMENT NO, SO -, HS"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-03-14']",
+       "departure_address": {
+        "city": "Vung Tau",
+        "country": "VNM",
+        "value": "Vung Tau"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh",
+        "value": "MANUFACTURING CO., LTD. LOT A1, A2 D10 STREET, DONG NAM IND. ZONE, BINH MY COMMUNE HO CHI MINH 70000, VIET NAMX"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, SUITE 220 PHOENIX ARIZONA 85018 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUSGN2512AWKF0",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "i2nkOOZUvamQwkrgW2z4lQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE, SHIPMENT NO, SO -, HS"
+       ],
+       "weight": {
+        "value": 186120.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-03-14']",
+       "departure_address": {
+        "city": "Vung Tau",
+        "country": "VNM",
+        "value": "Vung Tau"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh",
+        "value": "MANUFACTURING CO., LTD. LOT A1, A2 D10 STREET, DONG NAM IND. ZONE, BINH MY COMMUNE HO CHI MINH 70000, VIET NAMX"
+       },
+       "receiver_address": {
+        "city": "Phoenix",
+        "state": "US-AZ",
+        "country": "USA",
+        "value": "4300 E. CAMELBACK ROAD, SUITE 220 PHOENIX ARIZONA 85018 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "HLCUSGN2512AWKG1",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "FIRST SOLAR, INC.",
+     "names": [
+      "FIRST SOLAR, INC.",
+      "FIRST SOLAR",
+      "First Solar",
+      "FIRST SOLAR HOLDINGS LLC",
+      "FIRST SOLAR INC. (0387002043)",
+      "FIRST SOLAR INC",
+      "FIRST SOLAR INC - WALBRIDGE FACILITY",
+      "First Solar Holdings, Inc."
+     ],
+     "entity_id": "R58uSXzck_darm-KgcfUFA",
+     "countries": [
+      "USA",
+      "MEX",
+      "AUS",
+      "JPN",
+      "DEU"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "controlled_by_mass_business_registration",
+       "esg_score_medium",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "mass_address_usage",
+       "owned_by_regulatory_action_entity",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "sanctioned_adjacent",
+       "sanctioned_other_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "R58uSXzck_darm-KgcfUFA",
+       "entity_url": "https://graph.sayari.com/resource/entity/R58uSXzck_darm-KgcfUFA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/R58uSXzck_darm-KgcfUFA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "7hIGkwkqtN0qm3WWFgwNQw",
+      "entity_url": "https://graph.sayari.com/resource/entity/7hIGkwkqtN0qm3WWFgwNQw"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "Công Ty TNHH Sản Xuất First Solar Việt Nam",
+     "names": [
+      "Công Ty TNHH Sản Xuất First Solar Việt Nam",
+      "First Solar Vietnam Manufacturing Company Limited",
+      "FIRST SOLAR VIETNAM MANUFACTURING",
+      "FIRST SOLAR VIETNAM MANUFACTURING COMPANY LTD",
+      "FIRST SOLAR VIETNAM MANUFACTURING COMPANY LIMITED",
+      "Công Ty TNHH Sản Xuất First Solar Vietnam",
+      "First Solar Vietnam Production Company Limited",
+      "FIRST SOLAR VIETNAM MANUFACTURING C",
+      "FIRST SOLAR VIETNAM MANUFACTURING CO LTD",
+      "CONG TY TNHH SX FIRST SOLAR Vietnam"
+     ],
+     "entity_id": "gJdet6R6qi6nBIm-ldCR9w",
+     "countries": [
+      "VNM",
+      "MYS",
+      "USA",
+      "DEU",
+      "GBR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owned_by_regulatory_action_entity",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "gJdet6R6qi6nBIm-ldCR9w",
+       "entity_url": "https://graph.sayari.com/resource/entity/gJdet6R6qi6nBIm-ldCR9w"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/gJdet6R6qi6nBIm-ldCR9w"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "JmrqaRPYS1rX1T22pSyhgA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULESHIPMENT NO:400435739SO, :15750-48",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 145944.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-05-07']",
+       "departure_address": {
+        "city": "Vung Tau",
+        "country": "VNM",
+        "value": "Vung Tau"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh City",
+        "country": "VNM",
+        "value": "LOT A1 AND A2 STREET D10 DONG NAM I NDUSTRIAL PARK BINH MY COMMUNE CU CHI DIST HO CHI MINH CITY VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "STE 600 350 WEST WASHINGTON STREET TEMPE AZ85281 USFIRST SOLAR INC"
+       },
+       "identifiers": [
+        {
+         "value": "DMALDZI382251",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "2TnZMd1GtRKOBRpbHPMjDw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULESHIPMENT NO:400435313SO, :15750-35",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 182430.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-05-07']",
+       "departure_address": {
+        "city": "Vung Tau",
+        "country": "VNM",
+        "value": "Vung Tau"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh City",
+        "country": "VNM",
+        "value": "LOT A1 AND A2 STREET D10 DONG NAM I NDUSTRIAL PARK BINH MY COMMUNE CU CHI DIST HO CHI MINH CITY VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "STE 600 350 WEST WASHINGTON STREET TEMPE AZ85281 USFIRST SOLAR INC"
+       },
+       "identifiers": [
+        {
+         "value": "DMALDZI382249",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "pGVNFX7yNrDfAJ9DF3i_zA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULESHIPMENT NO:400435235SO, :15751-63",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 182430.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-05-07']",
+       "departure_address": {
+        "city": "Vung Tau",
+        "country": "VNM",
+        "value": "Vung Tau"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh City",
+        "country": "VNM",
+        "value": "LOT A1 AND A2 STREET D10 DONG NAM I NDUSTRIAL PARK BINH MY COMMUNE CU CHI DIST HO CHI MINH CITY VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "STE 600 350 WEST WASHINGTON STREET TEMPE AZ85281 USFIRST SOLAR INC"
+       },
+       "identifiers": [
+        {
+         "value": "DMALDZI382250",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "fS2kRP2hsEoZpdE8WPuuyg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULESHIPMENT NO:400410927SO, :15032-89",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 182430.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-04-10']",
+       "departure_address": {
+        "city": "Vung Tau",
+        "country": "VNM",
+        "value": "Vung Tau"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh City",
+        "country": "VNM",
+        "value": "LOT A1 AND A2 STREET D10 DONG NAM I NDUSTRIAL PARK BINH MY COMMUNE CU CHI DIST HO CHI MINH CITY VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "STE 600 350 WEST WASHINGTON STREET TEMPE AZ85281 USFIRST SOLAR INC"
+       },
+       "identifiers": [
+        {
+         "value": "DMALDZI378591",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "NBPD75l15QF7J_SZmLd1BA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SHIPMENT NO:400410818SO:15032-13",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 182430.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-04-10']",
+       "departure_address": {
+        "city": "Vung Tau",
+        "country": "VNM",
+        "value": "Vung Tau"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh City",
+        "country": "VNM",
+        "value": "LOT A1 AND A2 STREET D10 DONG NAM I NDUSTRIAL PARK BINH MY COMMUNE CU CHI DIST HO CHI MINH CITY VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "STE 600 350 WEST WASHINGTON STREET TEMPE AZ85281 USFIRST SOLAR INC"
+       },
+       "identifiers": [
+        {
+         "value": "DMALDZI378590",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "GaIBKT8k3XmJqJgSOTMhDQ",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE SHIPMENT NO:400402278S, O:14681-36",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 182430.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-03-31']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh City",
+        "country": "VNM",
+        "value": "LOT A1 AND A2 STREET D10 DONG NAM I NDUSTRIAL PARK BINH MY COMMUNE CU CHI DIST HO CHI MINH CITY VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "STE 600 350 WEST WASHINGTON STREET TEMPE AZ85281 USFIRST SOLAR INC"
+       },
+       "identifiers": [
+        {
+         "value": "DMALDZI376925",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "aQmCHm4NPay6Wxd9L7rwEw",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULESHIPMENT NO:400395362SO, :14503-10",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 182430.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-03-16']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh City",
+        "country": "VNM",
+        "value": "LOT A1 AND A2 STREET D10 DONG NAM I NDUSTRIAL PARK BINH MY COMMUNE CU CHI DIST HO CHI MINH CITY VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "STE 600 350 WEST WASHINGTON STREET TEMPE AZ85281 USFIRST SOLAR INC"
+       },
+       "identifiers": [
+        {
+         "value": "DMALDZI376272",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "viNFmffhJebkdScRe9dhNQ",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULESHIPMENT NO:400397591SO, :400397591",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 182430.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-03-15']",
+       "departure_address": {
+        "city": "Yantian",
+        "country": "CHN",
+        "value": "Yantian"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh City",
+        "country": "VNM",
+        "value": "LOT A1 AND A2 STREET D10 DONG NAM I NDUSTRIAL PARK BINH MY COMMUNE CU CHI DIST HO CHI MINH CITY VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "STE 600 350 WEST WASHINGTON STREET TEMPE AZ85281 USFIRST SOLAR INC"
+       },
+       "identifiers": [
+        {
+         "value": "DMALDZI376779",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "opo3Em82ZocFubAyuNHrjQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULESHIPMENT NO:400375985SO, :14124-27",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 182430.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-02-24']",
+       "departure_address": {
+        "city": "Vung Tau",
+        "country": "VNM",
+        "value": "Vung Tau"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh City",
+        "country": "VNM",
+        "value": "LOT A1 AND A2 STREET D10 DONG NAM I NDUSTRIAL PARK BINH MY COMMUNE CU CHI DIST HO CHI MINH CITY VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "STE 600 350 WEST WASHINGTON STREET TEMPE AZ85281 USFIRST SOLAR INC"
+       },
+       "identifiers": [
+        {
+         "value": "DMALDZI374367",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "qzZG_fYMX6wsAzWYBCGStg",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULESHIPMENT NO:400369533SO, :13842-4",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 182430.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-02-16']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh City",
+        "country": "VNM",
+        "value": "LOT A1 AND A2 STREET D10 DONG NAM I NDUSTRIAL PARK BINH MY COMMUNE CU CHI DIST HO CHI MINH CITY VN"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "STE 600 350 WEST WASHINGTON STREET TEMPE AZ85281 USFIRST SOLAR INC"
+       },
+       "identifiers": [
+        {
+         "value": "DMALDZI373464",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "nG_sz0JAWXMZVCMPSCQkiQ",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 182430.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-02-03']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh City",
+        "value": "LOT A1 AND A2 STREET D10 DONG NAM I NDUSTRIAL PARK BINH MY COMMUNE CU CHI DIST HO CHI MINH CITY VNFIRST SOLAR"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "STE 600 350 WEST WASHINGTON STREET TEMPE AZ85281 USFIRST SOLAR INC"
+       },
+       "identifiers": [
+        {
+         "value": "DMALDZI372389",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "jzn1B87hIKJZG3wZZ6O3Hw",
+       "departure_country": [
+        "SGP"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 182430.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-02-03']",
+       "departure_address": {
+        "country": "SGP",
+        "value": "Singapore"
+       },
+       "arrival_address": {
+        "city": "Charleston",
+        "state": "US-SC",
+        "country": "USA",
+        "value": "Charleston, South Carolina"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh City",
+        "value": "LOT A1 AND A2 STREET D10 DONG NAM I NDUSTRIAL PARK BINH MY COMMUNE CU CHI DIST HO CHI MINH CITY VNFIRST SOLAR"
+       },
+       "receiver_address": {
+        "country": "USA",
+        "value": "STE 600 350 WEST WASHINGTON STREET TEMPE AZ85281 USFIRST SOLAR INC"
+       },
+       "identifiers": [
+        {
+         "value": "DMALDZI372248",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "f8Ftf6BT6cdIFxcrsN51Rw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "730890",
+         "description": "Iron or steel; structures and parts thereof, n.e.c. in heading 7308"
+        },
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "S6+ FS300 BIFI 2.5MM, HS CODE: 85414300, WIP RACK OF S6 MODULES, (STEEL RACK) HS CODE: 73089099",
+        "Iron or steel; structures and parts thereof, n.e.c. in heading 7308",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 98550.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-01-09']",
+       "departure_address": {
+        "city": "Vung Tau",
+        "country": "VNM",
+        "value": "Vung Tau"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh",
+        "country": "VNM",
+        "value": "LOT A1, A2 D10 STREET DONG NAM IZ, BINH MY COMMUNE HO CHI MINH 70000 VN"
+       },
+       "receiver_address": {
+        "city": "Perrysburg",
+        "state": "US-OH",
+        "country": "USA",
+        "value": "28101 CEDAR PARK BLVD PERRYSBURG OH 43551-487 US"
+       },
+       "identifiers": [
+        {
+         "value": "BANQ1063114540",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "W1XujsMswnp3ZdcoiKp2FQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "730890",
+         "description": "Iron or steel; structures and parts thereof, n.e.c. in heading 7308"
+        },
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "S6+ FS300 BIFI 2.5MM, HS CODE: 85414300, WIP RACK OF S6 MODULES, (STEEL RACK) HS CODE: 73089099",
+        "Iron or steel; structures and parts thereof, n.e.c. in heading 7308",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 98550.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-01-09']",
+       "departure_address": {
+        "city": "Vung Tau",
+        "country": "VNM",
+        "value": "Vung Tau"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh",
+        "country": "VNM",
+        "value": "LOT A1, A2 D10 STREET DONG NAM IZ, BINH MY COMMUNE HO CHI MINH 70000 VN"
+       },
+       "receiver_address": {
+        "city": "Perrysburg",
+        "state": "US-OH",
+        "country": "USA",
+        "value": "28101 CEDAR PARK BLVD PERRYSBURG OH 43551-487 US"
+       },
+       "identifiers": [
+        {
+         "value": "BANQ1063114582",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "jkG-zaq0VG4wPbODqnabsg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "730890",
+         "description": "Iron or steel; structures and parts thereof, n.e.c. in heading 7308"
+        },
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "S6+ FS300 BIFI 2.5MM, HS CODE: 85414300, WIP RACK OF S6 MODULES, (STEEL RACK) HS CODE: 73089099",
+        "Iron or steel; structures and parts thereof, n.e.c. in heading 7308",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 98550.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-01-09']",
+       "departure_address": {
+        "city": "Vung Tau",
+        "country": "VNM",
+        "value": "Vung Tau"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh",
+        "country": "VNM",
+        "value": "LOT A1, A2 D10 STREET DONG NAM IZ, BINH MY COMMUNE HO CHI MINH 70000 VN"
+       },
+       "receiver_address": {
+        "city": "Perrysburg",
+        "state": "US-OH",
+        "country": "USA",
+        "value": "28101 CEDAR PARK BLVD PERRYSBURG OH 43551-487 US"
+       },
+       "identifiers": [
+        {
+         "value": "BANQ1063114553",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "e0geT3_Pvrh1F7YiCg2LrQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "730890",
+         "description": "Iron or steel; structures and parts thereof, n.e.c. in heading 7308"
+        },
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "S6+ FS300 BIFI 2.5MM, HS CODE: 85414300, WIP RACK OF S6 MODULES, (STEEL RACK) HS CODE: 73089099",
+        "Iron or steel; structures and parts thereof, n.e.c. in heading 7308",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 98550.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-01-09']",
+       "departure_address": {
+        "city": "Vung Tau",
+        "country": "VNM",
+        "value": "Vung Tau"
+       },
+       "arrival_address": {
+        "city": "Newark",
+        "state": "US-NJ",
+        "country": "USA",
+        "value": "New York/Newark Area, Newark, New Jersey"
+       },
+       "shipper_address": {
+        "city": "Ho Chi Minh",
+        "country": "VNM",
+        "value": "LOT A1, A2 D10 STREET DONG NAM IZ, BINH MY COMMUNE HO CHI MINH 70000 VN"
+       },
+       "receiver_address": {
+        "city": "Perrysburg",
+        "state": "US-OH",
+        "country": "USA",
+        "value": "28101 CEDAR PARK BLVD PERRYSBURG OH 43551-487 US"
+       },
+       "identifiers": [
+        {
+         "value": "BANQ1063113392",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "FIRST SOLAR, INC.",
+     "names": [
+      "FIRST SOLAR, INC.",
+      "FIRST SOLAR",
+      "First Solar",
+      "FIRST SOLAR HOLDINGS LLC",
+      "FIRST SOLAR INC. (0387002043)",
+      "FIRST SOLAR INC",
+      "FIRST SOLAR INC - WALBRIDGE FACILITY",
+      "First Solar Holdings, Inc."
+     ],
+     "entity_id": "R58uSXzck_darm-KgcfUFA",
+     "countries": [
+      "USA",
+      "MEX",
+      "AUS",
+      "JPN",
+      "DEU"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "controlled_by_mass_business_registration",
+       "esg_score_medium",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "mass_address_usage",
+       "owned_by_regulatory_action_entity",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "sanctioned_adjacent",
+       "sanctioned_other_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "R58uSXzck_darm-KgcfUFA",
+       "entity_url": "https://graph.sayari.com/resource/entity/R58uSXzck_darm-KgcfUFA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/R58uSXzck_darm-KgcfUFA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "gJdet6R6qi6nBIm-ldCR9w",
+      "entity_url": "https://graph.sayari.com/resource/entity/gJdet6R6qi6nBIm-ldCR9w"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "Yq6o-ZES0vRJUd-aO5KH7Q",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULESHIPMENT NO:400362660SO, :13712-28",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 182430.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-02-09']",
+       "departure_address": {
+        "city": "Yantian",
+        "country": "CHN",
+        "value": "Yantian"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "receiver_address": {
+        "city": "Ho Chi Minh City",
+        "country": "VNM",
+        "value": "LOT A1 AND A2 STREET D10 DONG NAM I NDUSTRIAL PARK BINH MY COMMUNE CU CHI DIST HO CHI MINH CITY VN"
+       },
+       "identifiers": [
+        {
+         "value": "DMALDZI372881",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "Công Ty TNHH Sản Xuất First Solar Việt Nam",
+     "names": [
+      "Công Ty TNHH Sản Xuất First Solar Việt Nam",
+      "First Solar Vietnam Manufacturing Company Limited",
+      "FIRST SOLAR VIETNAM MANUFACTURING",
+      "FIRST SOLAR VIETNAM MANUFACTURING COMPANY LTD",
+      "FIRST SOLAR VIETNAM MANUFACTURING COMPANY LIMITED",
+      "Công Ty TNHH Sản Xuất First Solar Vietnam",
+      "First Solar Vietnam Production Company Limited",
+      "FIRST SOLAR VIETNAM MANUFACTURING C",
+      "FIRST SOLAR VIETNAM MANUFACTURING CO LTD",
+      "CONG TY TNHH SX FIRST SOLAR Vietnam"
+     ],
+     "entity_id": "gJdet6R6qi6nBIm-ldCR9w",
+     "countries": [
+      "VNM",
+      "MYS",
+      "USA",
+      "DEU",
+      "GBR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owned_by_regulatory_action_entity",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "gJdet6R6qi6nBIm-ldCR9w",
+       "entity_url": "https://graph.sayari.com/resource/entity/gJdet6R6qi6nBIm-ldCR9w"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/gJdet6R6qi6nBIm-ldCR9w"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "gJdet6R6qi6nBIm-ldCR9w",
+      "entity_url": "https://graph.sayari.com/resource/entity/gJdet6R6qi6nBIm-ldCR9w"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 10000,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "First Solar Vietnam",
+    "shipper_name": "Công Ty TNHH Sản Xuất First Solar Việt Nam",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6ImQ2ZjgzOTJhY2VkNGZjMTNjZGQ1NDNmYTUwZTYxNzRmZWEyOWU1YjI5ZjBlYjFkZmEzMzhkNWJlYjU2MjI5Y2QiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "Do not automatically treat free zone registration as a red flag — apply contextual analysis based on the entity's ownership transparency, trade patterns, and business rationale",
+   "When UBO tracing dead-ends at a free zone entity, escalate to enhanced due diligence and attempt to resolve ownership through alternative Sayari data sources (trade records naming individuals, historical filings, linked entities)",
+   "Map all entities co-located at the same free zone address and examine their collective trade patterns, as sanctions evasion networks frequently register clusters of entities at the same address"
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

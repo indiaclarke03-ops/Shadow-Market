@@ -1,0 +1,8 @@
+group,name_regex,case_ids,events,note
+LONGi,LONGI,C-007;C-012,detention;denial,Group named in reported detentions (2022) and a reported denial (2023)
+Trina Solar,TRINA,C-008;C-011,detention;release,Group named in reported detentions (2022); shipments later cleared
+JinkoSolar,JINKO,C-009;C-010,detention;release,Group named in reported detentions (2022); some shipments released
+Astronergy (Chint),ASTRONERGY|CHINT,C-013,detention,Reported detention (2023)
+Maxeon,MAXEON|SUNPOWER PHILIPPINES,C-020,denial,CBP denied protests (2025)
+Hanwha Qcells,HANWHA|Q\s?CELLS,C-021,detention,Reported detention (2025); imports eventually cleared
+VSUN / Toyo,VIETNAM SUNERGY|VSUN|\bTOYO\b,C-022,denial,CBP decision confirmed 2026-01-11

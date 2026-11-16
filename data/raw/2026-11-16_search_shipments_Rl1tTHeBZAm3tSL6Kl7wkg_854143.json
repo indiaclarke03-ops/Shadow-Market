@@ -1,0 +1,1715 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Jinko Solar Vietnam",
+  "shipper_name": "CôNG TY TNHH CôNG NGHIệP JINKO SOLAR (VIệT NAM)",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:24:27+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 3,
+  "items": [
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH CôNG NGHIệP JINKO SOLAR (VIệT NAM)",
+     "names": [
+      "CôNG TY TNHH CôNG NGHIệP JINKO SOLAR (VIệT NAM)",
+      "JINKO SOLAR INDUSTRIAL COMPANY LIMITED (VIETNAM)",
+      "JINKO SOLAR (VIETNAM) INDUSTRIES COMPANY LIMITED",
+      "CONG TY TNHH CONG NGHIEP JINKO SOLAR (VIETNAM)",
+      "JINKO SOLAR INDUSTRIAL CO., LTD (VIETNAM)",
+      "Jinko Solar Industry Company Limited (Vietnam)",
+      "JINKO SOLAR INDUSTRIAL CO LTD VIETNAM",
+      "CONG TY TNHH CONG NHIEP JINKO SOLAR VIET NAM",
+      "JINKO SOLAR INDUSTRIAL COMPANY LIMITED VIETNAM",
+      "JINKO SOLAR (VIETNAM) INDUSTRIES CO.,LTD",
+      "\"Jinko solar (Vietnam) Industries Company Limited\"",
+      "JINKO SOLAR (VIETNAM) INDUSTRIES CO LTD"
+     ],
+     "entity_id": "Rl1tTHeBZAm3tSL6Kl7wkg",
+     "countries": [
+      "VNM",
+      "CHN",
+      "CHE",
+      "LAO",
+      "VIR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owned_by_sheffield_hallam_university_reports_forced_labor_entity",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_from_usa_bis_entity",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_sheffield_hallam_university_reports_forced_labor_entity",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Rl1tTHeBZAm3tSL6Kl7wkg",
+       "entity_url": "https://graph.sayari.com/resource/entity/Rl1tTHeBZAm3tSL6Kl7wkg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Rl1tTHeBZAm3tSL6Kl7wkg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "I3obYksDmsYvjpRfVUj_kg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE, JKM620N-66HL4M-BDV, = 2,520 PCS, HS CODE: 8541430000, P.A. NO.:, MCUSTS26Q2017-2-IN1, INVOICE NO.: XXXXXXXXXXXXX",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 85430.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-08-05']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Tacoma",
+        "state": "US-WA",
+        "country": "USA",
+        "value": "Tacoma, Washington"
+       },
+       "shipper_address": {
+        "city": "Hiep Hoa",
+        "state": "V",
+        "value": "CN-XL-06,11- SONG KHOAI IZ HIEP HOA WARD, QUANG NINH 200000 V"
+       },
+       "receiver_address": {
+        "city": "Markham",
+        "state": "CA-ON",
+        "country": "CAN",
+        "value": "100 ALLSTATE PKY SUITE 703 MARKHAM ON L3R 6H3 CA"
+       },
+       "identifiers": [
+        {
+         "value": "BANQ1075836595",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "dST4MGcZquB6POKGvrisqg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE, JKM620N-66HL4M-BDV, = 2,520 PCS, HS CODE: 8541430000, P.A. NO.:, MCUSTS26Q2017-2-IN1, INVOICE NO.: XXXXXXXXXXXXX",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 85430.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2026-08-05']",
+       "departure_address": {
+        "city": "Haiphong",
+        "country": "VNM",
+        "value": "Haiphong"
+       },
+       "arrival_address": {
+        "city": "Tacoma",
+        "state": "US-WA",
+        "country": "USA",
+        "value": "Tacoma, Washington"
+       },
+       "shipper_address": {
+        "city": "Hiep Hoa",
+        "state": "V",
+        "value": "CN-XL-06,11- SONG KHOAI IZ HIEP HOA WARD, QUANG NINH 200000 V"
+       },
+       "receiver_address": {
+        "city": "Markham",
+        "state": "CA-ON",
+        "country": "CAN",
+        "value": "100 ALLSTATE PKY SUITE 703 MARKHAM ON L3R 6H3 CA"
+       },
+       "identifiers": [
+        {
+         "value": "BANQ1075836321",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "JINKO SOLAR",
+     "names": [
+      "JINKO SOLAR",
+      "JINKOSOLAR CANADA CO., LTD",
+      "JINKO SOLAR CANADA COMPANY LIMITED",
+      "JINKO SOLAR CANADA CO., LTD.",
+      "JINKOSOLAR CANADA CO., LTD.",
+      "NOVATECH ENERGY",
+      "جينقو للشمسيات",
+      "Jingo Umbrellas",
+      "Jinkosolar Canada Co",
+      "نوفاتيك إينارجي",
+      "Novatek Energy",
+      "Jinko Solar"
+     ],
+     "entity_id": "MghMbKybBOnquzIua0dWzw",
+     "countries": [
+      "USA",
+      "CAN",
+      "CHN",
+      "BRA",
+      "TUN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_sheffield_hallam_university_reports_forced_labor_entity",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "MghMbKybBOnquzIua0dWzw",
+       "entity_url": "https://graph.sayari.com/resource/entity/MghMbKybBOnquzIua0dWzw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/MghMbKybBOnquzIua0dWzw"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "Rl1tTHeBZAm3tSL6Kl7wkg",
+      "entity_url": "https://graph.sayari.com/resource/entity/Rl1tTHeBZAm3tSL6Kl7wkg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "JINKO SOLAR (VIETNAM) INDUSTRIES CO.",
+     "entity_id": "tV6U3wzSDtTOFTuOB6SL9g",
+     "countries": [
+      "VNM"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "tV6U3wzSDtTOFTuOB6SL9g",
+       "entity_url": "https://graph.sayari.com/resource/entity/tV6U3wzSDtTOFTuOB6SL9g"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/tV6U3wzSDtTOFTuOB6SL9g"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "v09S2P1MUXyrmMUUpYx5hw",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "BDXSOLAR MODULE - FREIGHT PREPAID J, KM N- HL -BDXSOLAR MODULE JKM N- HL -, BDXSOLAR MODULE HS CODE: INVOICE N, O.: Z - P.A. NO.: MCLARP Q - -, IN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 264642.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-12-25']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "LOT CN-XL-06, 11 SONG KHOAI INDUSTR QUANG NINH 13 00000 VIET NAM"
+       },
+       "receiver_address": {
+        "city": "Nassau",
+        "country": "BHS",
+        "value": "P.O. BOX CB-12043 ROCK PLANT ROAD, NASSAU NP 11598 BAHAMAS"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUKS552363",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "lNKvnnf4OamffwPoableVw",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "KM N- HL -BDXSOLAR MODULE JKM, N- HL -BDXSOLA - FREIGHT PREPAID JKM N-, HL -BDXSOLAR MODULE= , PCS JKM N- HL -B, DXSOLAR MODULE= , PCS HS CODE:, INVOICE NO.:Z - P.A. NO.:MCLA RP, Q - -IN + EMAIL :PH ILIPP=COMPASS-POWER., COM",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 288700.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-11-19']",
+       "departure_address": {
+        "city": "Pusan",
+        "value": "Pusan"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "Houston, Texas"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "LOT CN-XL-06, 11 SONG KHOAI INDUSTR QUANG NINH 13 00000 VIET NAM"
+       },
+       "receiver_address": {
+        "city": "Nassau",
+        "country": "BHS",
+        "value": "P.O. BOX CB-12043 ROCK PLANT ROAD, NASSAU NP 11598 BAHAMAS"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUKS236157",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "COMPASS SOLAR SYSTEMS LIMITED",
+     "entity_id": "0pq3Ozy6p3UnyEHAlbTfCA",
+     "countries": [
+      "USA",
+      "BHS",
+      "TCA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "0pq3Ozy6p3UnyEHAlbTfCA",
+       "entity_url": "https://graph.sayari.com/resource/entity/0pq3Ozy6p3UnyEHAlbTfCA"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/0pq3Ozy6p3UnyEHAlbTfCA"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "tV6U3wzSDtTOFTuOB6SL9g",
+      "entity_url": "https://graph.sayari.com/resource/entity/tV6U3wzSDtTOFTuOB6SL9g"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "CôNG TY TNHH CôNG NGHIệP JINKO SOLAR (VIệT NAM)",
+     "names": [
+      "CôNG TY TNHH CôNG NGHIệP JINKO SOLAR (VIệT NAM)",
+      "JINKO SOLAR INDUSTRIAL COMPANY LIMITED (VIETNAM)",
+      "JINKO SOLAR (VIETNAM) INDUSTRIES COMPANY LIMITED",
+      "CONG TY TNHH CONG NGHIEP JINKO SOLAR (VIETNAM)",
+      "JINKO SOLAR INDUSTRIAL CO., LTD (VIETNAM)",
+      "Jinko Solar Industry Company Limited (Vietnam)",
+      "JINKO SOLAR INDUSTRIAL CO LTD VIETNAM",
+      "CONG TY TNHH CONG NHIEP JINKO SOLAR VIET NAM",
+      "JINKO SOLAR INDUSTRIAL COMPANY LIMITED VIETNAM",
+      "JINKO SOLAR (VIETNAM) INDUSTRIES CO.,LTD",
+      "\"Jinko solar (Vietnam) Industries Company Limited\"",
+      "JINKO SOLAR (VIETNAM) INDUSTRIES CO LTD"
+     ],
+     "entity_id": "Rl1tTHeBZAm3tSL6Kl7wkg",
+     "countries": [
+      "VNM",
+      "CHN",
+      "CHE",
+      "LAO",
+      "VIR"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "exports_eudr_shipment_rubber",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_aspi_origin_subtier",
+       "forced_labor_aspi_origin_subtier_product_blueprint",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier",
+       "forced_labor_xinjiang_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "owned_by_sheffield_hallam_university_reports_forced_labor_entity",
+       "psa_exports_eudr_shipment_rubber",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_aspi_origin_subtier",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_from_usa_bis_entity",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_sheffield_hallam_university_reports_forced_labor_entity",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Rl1tTHeBZAm3tSL6Kl7wkg",
+       "entity_url": "https://graph.sayari.com/resource/entity/Rl1tTHeBZAm3tSL6Kl7wkg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Rl1tTHeBZAm3tSL6Kl7wkg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "FbEb9NZVo_ihsQ8pvdOssQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003258#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM585N-72HL4-BDV, (26003258), size (2278*1134*30) mm. 100% new#&KXĐ , 26003258#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào),JKM585N-72HL4-BDV, (26003258), kích thước (2278*1134*30) mm. Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 638656.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 2291328.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-26']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "HOUSTON, TEXAS"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{8B892462-31F3-45C8-BF3EE8F483ECC89C}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "TYf3g5s2gTC_vNX9igrYhQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003242#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM580N-72HL4-BDV, (26003242), size (2278*1134*30) mm. 100% new#&KXĐ , 26003242#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào),JKM580N-72HL4-BDV, (26003242), kích thước (2278*1134*30) mm. Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 394464.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1403136.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-25']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "HOUSTON - TX"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{5590B183-066F-40DC-AF1D0A33F68DE2AA}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "LpfR0tXFA5den5Pk8Fn0vQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003258#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM585N-72HL4-BDV, (26003258), size (2278*1134*30) mm. 100% new#&KXĐ , 26003258#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào),JKM585N-72HL4-BDV, (26003258), kích thước (2278*1134*30) mm. Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 638656.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 2291328.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-20']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "HOUSTON, TEXAS"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{8D5E400B-5E54-431D-9154ABD7C7CA473F}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "_SYWpWmTrcQZc4pqNwWV7g",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003242#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM580N-72HL4-BDV, (26003242), size (2278*1134*30) mm. 100% new#&KXĐ , 26003242#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào),JKM580N-72HL4-BDV, (26003242), kích thước (2278*1134*30) mm. Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 394464.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1403136.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-18']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Houston",
+        "state": "US-TX",
+        "country": "USA",
+        "value": "HOUSTON - TX"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{7305A85A-C494-4D1B-9B267F7E9204EE89}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Kj3ZtziTeVLLEAoK4e1B5Q",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003258#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM585N-72HL4-BDV, (26003258), size (2278*1134*30) mm. 100% new#&KXĐ , 26003258#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào),JKM585N-72HL4-BDV, (26003258), kích thước (2278*1134*30) mm. Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 319328.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1145664.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-08']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{C8B12534-F318-4492-96A076AC55448476}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "bUlmHZgoX1N96dug5qJk7Q",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003328#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM590N-72HL4-BDV, (26003328), size (2278*1134*30) mm. 100% new#&KXĐ , 26003328#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào), JKM590N-72HL4-BDV, (26003328),kích thước (2278*1134*30) mm.Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 169056.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 611712.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-08']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{AAB8DCBA-55DA-4067-883AC5FDB9DCFA05}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "q6GYeBZc9ZgZvTovvVskbA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003258#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM585N-72HL4-BDV, (26003258), size (2278*1134*30) mm. 100% new#&KXĐ , 26003258#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào),JKM585N-72HL4-BDV, (26003258), kích thước (2278*1134*30) mm. Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 375680.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1347840.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-08']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{C3ABBD96-9079-49A6-870A4024F5A9C0C0}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "Kl_hQgl1B7Qeah2YblQiqg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003328#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM590N-72HL4-BDV, (26003328), size (2278*1134*30) mm. 100% new#&KXĐ , 26003328#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào), JKM590N-72HL4-BDV, (26003328),kích thước (2278*1134*30) mm.Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 112704.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 407808.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-07']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{3A341A34-DE7A-4503-84F7DBE7BCB09BCD}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "B71J1ioc898Q0jxsffcAig",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003258#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM585N-72HL4-BDV, (26003258), size (2278*1134*30) mm. 100% new#&KXĐ , 26003258#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào),JKM585N-72HL4-BDV, (26003258), kích thước (2278*1134*30) mm. Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 11520.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1347840.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-07']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{DFC4592C-625C-410F-A3D3CCF1EA3F7CB8}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "LmhufQ4zjmhxXzO4Ry35sQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003258#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM585N-72HL4-BDV, (26003258), size (2278*1134*30) mm. 100% new#&KXĐ , 26003258#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào),JKM585N-72HL4-BDV, (26003258), kích thước (2278*1134*30) mm. Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 319328.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1145664.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-07']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{6D2CB598-0356-4DFF-873B4018012F4EEA}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "PqXADrMK5PgwzC8bCLTvzQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003242#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM580N-72HL4-BDV, (26003242), size (2278*1134*30) mm. 100% new#&KXĐ , 26003242#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào),JKM580N-72HL4-BDV, (26003242), kích thước (2278*1134*30) mm. Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 319328.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1135872.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-06']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{C2924F70-2CDF-4AC0-856F1396993FCD39}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "G_vfjfaTQBr81qtyX-L-eQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003258#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM585N-72HL4-BDV, (26003258), size (2278*1134*30) mm. 100% new#&KXĐ , 26003258#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào),JKM585N-72HL4-BDV, (26003258), kích thước (2278*1134*30) mm. Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 450816.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1617408.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-06']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Los Angeles",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "LOS ANGELES - CA"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{9F634994-ED21-40FC-B644BCAD9CF08B0B}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "4Xnayda5Y-GCukhioJ41wA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003242#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM580N-72HL4-BDV, (26003242), size (2278*1134*30) mm. 100% new#&KXĐ , 26003242#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào),JKM580N-72HL4-BDV, (26003242), kích thước (2278*1134*30) mm. Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 319328.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1135872.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-05']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{6B96193F-E149-4251-B51485848E745DE9}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "j9Sz8zlu3_gYnSPyR3ZrTg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003141#&Solar modules (assembled from photovoltaic cells (cells) produced in Laos), JKM575N-72HL4-BDV, (26003141), size (2278*1134*30) mm. 100% new#&KXĐ , 26003141#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện( cell pin) sản xuất tại Lào), JKM575N-72HL4-BDV, (26003141), kích thước (2278*1134*30) mm. Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 93920.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 331200.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-05']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO - IL"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{618ABAF4-5E2B-4145-AD316B80C0DC35A0}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "QdkHF6yP5cayWerrcRJJiw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003242#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM580N-72HL4-BDV, (26003242), size (2278*1134*30) mm. 100% new#&KXĐ , 26003242#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào ),JKM580N-72HL4-BDV, (26003242), kích thước (2278*1134*30) mm. Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 413248.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1469952.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-05']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{11BA997D-A45C-4DA7-B76329A1147A761D}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "9K8KSW029W0Hzp-MgLwyog",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414300",
+         "description": "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "26003242#&Solar modules (assembled from photovoltaic cells (cell batteries) produced in Laos), JKM580N-72HL4-BDV, (26003242), size (2278*1134*30) mm. 100% new#&KXĐ , 26003242#&Tấm quang năng solar modules ( được lắp ráp từ các tấm tế bào quang điện (cell pin) sản xuất tại Lào ),JKM580N-72HL4-BDV, (26003242), kích thước (2278*1134*30) mm. Hàng mới 100%#&KXĐ",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "Tế bào quang điện đã lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 56352.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 200448.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-11-05']",
+       "departure_address": {
+        "country": "VNM",
+        "value": "CANG LACH HUYEN HP"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "city": "Yên",
+        "state": "Tỉnh Quảng Ninh",
+        "country": "VNM",
+        "value": "CN-XL-06,11-KHU CÔNG NGHIỆP SÔNG KHOAI, XÃ SÔNG KHOAI,THỊ XÃ QUẢNG YÊN, TỈNH QUẢNG NINH, VIỆT NAM , 788243264"
+       },
+       "receiver_address": {
+        "city": "Campbell",
+        "state": "US-CA",
+        "country": "United States Of America Us",
+        "value": "1901 S. BASCOM AVENUE, SUITE 350, CAMPBELL, CALIFORNIA 95008, UNITED STATES OF AMERICA, US"
+       },
+       "identifiers": [
+        {
+         "value": "{0259CECC-B73A-4312-8493767BAC896D64}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "JINKO SOLAR (U.S.) INC.",
+     "names": [
+      "JINKO SOLAR (U.S.) INC.",
+      "JINKOSOLAR (U.S.) INC."
+     ],
+     "entity_id": "KD3qQkOp9ZMD11drRRMY2w",
+     "countries": [
+      "USA",
+      "TWN"
+     ],
+     "quality_flags": [],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "KD3qQkOp9ZMD11drRRMY2w",
+       "entity_url": "https://graph.sayari.com/resource/entity/KD3qQkOp9ZMD11drRRMY2w"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/KD3qQkOp9ZMD11drRRMY2w"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "Rl1tTHeBZAm3tSL6Kl7wkg",
+      "entity_url": "https://graph.sayari.com/resource/entity/Rl1tTHeBZAm3tSL6Kl7wkg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 1334,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Jinko Solar Vietnam",
+    "shipper_name": "CôNG TY TNHH CôNG NGHIệP JINKO SOLAR (VIệT NAM)",
+    "arrival_country": "USA",
+    "hs_code": "854143",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6IjFkZmQwZDdlNTNlMzUxZmI2YmEwYmQ3ZTNhYmI1MjhjNmJiOWY2YTFiZjFiMDM0NjY2YzMwNjQ0NWU3OGYwYjIiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "Always search Sayari Graph for all linguistic variants of Swiss legal form suffixes (AG/SA, GmbH/Sàrl/Sagl) to avoid missing entity matches",
+   "Be aware that Swiss foundations (Stiftungen) are frequently used for wealth structuring and may appear in UBO chains — they are legal persons registered in the commercial register",
+   "Sole proprietorships below CHF 100,000 revenue may not appear in any registry"
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

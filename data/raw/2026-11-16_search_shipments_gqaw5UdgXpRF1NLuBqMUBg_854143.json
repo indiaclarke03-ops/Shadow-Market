@@ -1,0 +1,1390 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Trina Solar Vietnam",
+  "shipper_name": "CôNG TY TNHH PHáT TRIểN NăNG LượNG TRINA SOLAR",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:23:22+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 5,
+  "items": [
+   {
+    "supplier": {
+     "name": "TRINA SOLAR CO LTD.",
+     "names": [
+      "TRINA SOLAR CO LTD.",
+      "CôNG TY TNHH TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY",
+      "TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO., LTD.",
+      "TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO,,LTD",
+      "TRINA SOLAR VIETNAM CO LTD",
+      "Trina Solar Co., Ltd.",
+      "天合光能股份有限公司",
+      "CONG TY TNHH TRINA SOLAR (VIET NAM) SCIENCE & TECHNOLOGY",
+      "CHANGZHOU TRINA SOLAR ENERGY CO LTD",
+      "TRINA SOLAR CO LTD",
+      "Trina Solar Limited",
+      "Changzhou Trina Solar Co., Ltd.",
+      "常州天合光能有限公司",
+      "CHANGZHOU TRINA SOLAR ENERGY CO., LTD.",
+      "天合光能",
+      "Trina Solar",
+      "CHANGZHOU TRINA SOLAR ENERGY LTD. LIABILITY CO.",
+      "tian ge guang neng gu fen you xian gong si",
+      "天合光能有限公司",
+      "TRINA SOLAR (VIETNAM) CO., LTD.",
+      "Trina Solar Limited - Spon ADR",
+      "常州天合铝板幕墙制造有限公司",
+      "Changzhou Tianhe Aluminum Curtain Wall Manufacturing Co., Ltd.",
+      "TRINA SOLAR CO.,LTD.",
+      "TRINA SOLAR SCIENCE AND TECHNOLOGY",
+      "CONG TY TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO.,LTD",
+      "TRINA SOLAR CO., LTD",
+      "TRINA SOLAR CO. LTD",
+      "TRINA SOLAR COMPANY LIMITED",
+      "TRINIA SOLAR CO LTD",
+      "天合光能集团",
+      "Trina Solar Group",
+      "Tian He Guang Neng Gu Fen You Xian Gong Si"
+     ],
+     "entity_id": "_DcWgs6VXAh5t4G5S6X_mQ",
+     "countries": [
+      "VNM",
+      "CHN",
+      "NLD",
+      "USA",
+      "GRC"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "controlled_by_mass_business_registration",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "export_controls_section_1260h",
+       "export_to_soe",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "meu_list_contractors",
+       "owner_of_forced_labor_xinjiang_entity",
+       "owner_of_soe",
+       "psa_export_to_soe",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "psa_owner_of_forced_labor_xinjiang_entity",
+       "psa_owner_of_soe",
+       "regulatory_action",
+       "sheffield_hallam_university_forced_labor_entity",
+       "sheffield_hallam_university_forced_labor_reports_intermediary_entity",
+       "soe_adjacent",
+       "usa_section_1260h"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "_DcWgs6VXAh5t4G5S6X_mQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/_DcWgs6VXAh5t4G5S6X_mQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/_DcWgs6VXAh5t4G5S6X_mQ"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "qpdbiqN46socgeGrqkRfbw",
+       "departure_country": [
+        "VIR"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "PACKAGES SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 20878.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-09-03']",
+       "departure_address": {
+        "city": "Christiansted",
+        "country": "VIR",
+        "value": "Christiansted, St. Croix"
+       },
+       "arrival_address": {
+        "city": "West Palm Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "West Palm Beach, Florida"
+       },
+       "shipper_address": {
+        "city": "Changzhou",
+        "state": "CN-JS",
+        "country": "CHN",
+        "value": "NO.2 TIAN HE RD. TRINA PV INDUSTRI NEW DISTRICT CHANGZHOU,JIANGSU CHANGZHOU ,JIANGSU CN"
+       },
+       "receiver_address": {
+        "city": "Providenciales",
+        "country": "TCA",
+        "value": "22-25 CAICOS DEPOT, SOUTH DOCK RD. PROVIDENCIALES TKCA 1ZZ TC"
+       },
+       "identifiers": [
+        {
+         "value": "TSCW18063217",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "FqR4_nE1hDIHtCgeh2g45A",
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE, BORIS VON BORMANN, +1-949-697-2921, BORIS@RENUTCI.COM, +1-949-697-2921, BORIS@RENUTCI.COM, N/M",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 20878.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-01']",
+       "arrival_address": {
+        "city": "West Palm Beach",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "West Palm Beach, Florida"
+       },
+       "shipper_address": {
+        "city": "Changzhou",
+        "state": "CN-JS",
+        "country": "CHN",
+        "value": "NO.2 TIAN HE RD. TRINA PV INDUSTRI NEW DISTRICT CHANGZHOU,JIANGSU CHANGZHOU ,JIANGSU CN"
+       },
+       "receiver_address": {
+        "city": "Providenciales",
+        "country": "TCA",
+        "value": "22-25 CAICOS DEPOT, SOUTH DOCK RD. PROVIDENCIALES TKCA 1ZZ TC"
+       },
+       "identifiers": [
+        {
+         "value": "TSCW17907909",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "RENU ENERGY TCI",
+     "entity_id": "eLMHcLpyTPGEWSFPNKMEaw",
+     "countries": [
+      "TCA",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "imports_from_usa_section_1260h_entity",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "psa_imports_from_usa_section_1260h_entity",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "eLMHcLpyTPGEWSFPNKMEaw",
+       "entity_url": "https://graph.sayari.com/resource/entity/eLMHcLpyTPGEWSFPNKMEaw"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/eLMHcLpyTPGEWSFPNKMEaw"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "_DcWgs6VXAh5t4G5S6X_mQ",
+      "entity_url": "https://graph.sayari.com/resource/entity/_DcWgs6VXAh5t4G5S6X_mQ"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "TRINA SOLAR CO LTD.",
+     "names": [
+      "TRINA SOLAR CO LTD.",
+      "CôNG TY TNHH TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY",
+      "TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO., LTD.",
+      "TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO,,LTD",
+      "TRINA SOLAR VIETNAM CO LTD",
+      "Trina Solar Co., Ltd.",
+      "天合光能股份有限公司",
+      "CONG TY TNHH TRINA SOLAR (VIET NAM) SCIENCE & TECHNOLOGY",
+      "CHANGZHOU TRINA SOLAR ENERGY CO LTD",
+      "TRINA SOLAR CO LTD",
+      "Trina Solar Limited",
+      "Changzhou Trina Solar Co., Ltd.",
+      "常州天合光能有限公司",
+      "CHANGZHOU TRINA SOLAR ENERGY CO., LTD.",
+      "天合光能",
+      "Trina Solar",
+      "CHANGZHOU TRINA SOLAR ENERGY LTD. LIABILITY CO.",
+      "tian ge guang neng gu fen you xian gong si",
+      "天合光能有限公司",
+      "TRINA SOLAR (VIETNAM) CO., LTD.",
+      "Trina Solar Limited - Spon ADR",
+      "常州天合铝板幕墙制造有限公司",
+      "Changzhou Tianhe Aluminum Curtain Wall Manufacturing Co., Ltd.",
+      "TRINA SOLAR CO.,LTD.",
+      "TRINA SOLAR SCIENCE AND TECHNOLOGY",
+      "CONG TY TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO.,LTD",
+      "TRINA SOLAR CO., LTD",
+      "TRINA SOLAR CO. LTD",
+      "TRINA SOLAR COMPANY LIMITED",
+      "TRINIA SOLAR CO LTD",
+      "天合光能集团",
+      "Trina Solar Group",
+      "Tian He Guang Neng Gu Fen You Xian Gong Si"
+     ],
+     "entity_id": "_DcWgs6VXAh5t4G5S6X_mQ",
+     "countries": [
+      "VNM",
+      "CHN",
+      "NLD",
+      "USA",
+      "GRC"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "controlled_by_mass_business_registration",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "export_controls_section_1260h",
+       "export_to_soe",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "meu_list_contractors",
+       "owner_of_forced_labor_xinjiang_entity",
+       "owner_of_soe",
+       "psa_export_to_soe",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "psa_owner_of_forced_labor_xinjiang_entity",
+       "psa_owner_of_soe",
+       "regulatory_action",
+       "sheffield_hallam_university_forced_labor_entity",
+       "sheffield_hallam_university_forced_labor_reports_intermediary_entity",
+       "soe_adjacent",
+       "usa_section_1260h"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "_DcWgs6VXAh5t4G5S6X_mQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/_DcWgs6VXAh5t4G5S6X_mQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/_DcWgs6VXAh5t4G5S6X_mQ"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "5xLEynqvFQlF7moOtcMbJg",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE HS CODE:8541430000"
+       ],
+       "weight": {
+        "value": 803.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-07-05']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Miami",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "Miami, Florida"
+       },
+       "shipper_address": {
+        "city": "Changzhou",
+        "state": "Cn",
+        "country": "CHN",
+        "value": "NO.2 TIAN HE RD. TRINA PV INDUSTRIAL PARK, NEW DISTRICT CHANGZHOU JIANGSU CHINA CN"
+       },
+       "receiver_address": {
+        "state": "Usppi",
+        "country": "USA",
+        "value": "UNIVERSITY OF THE VIRGIN ISLANDS ST. CROIX VI 64 WEST PALM DRIVE KINGSHILL, VI00850 USPPI US"
+       },
+       "identifiers": [
+        {
+         "value": "CHKMSH25082169",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "QP8q1MyQj1KPnpBzv70_tA",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 20878.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2025-06-23']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Miami",
+        "state": "US-FL",
+        "country": "USA",
+        "value": "Miami, Florida"
+       },
+       "shipper_address": {
+        "city": "Gsu",
+        "country": "CHN",
+        "value": "NO.2 TIAN HE RD. TRINA PV INDUSTRIA L PARK, NEW DISTRICT CHANGZHOU JIAN GSU CHINA"
+       },
+       "receiver_address": {
+        "city": "Kings Hill",
+        "value": "UNIVERSITY OF THE VIRGIN ISLANDS ST . CROIX VI 64 WEST PALM DRIVE KINGS HILL, VI00850"
+       },
+       "identifiers": [
+        {
+         "value": "TXSLSZ25041439",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "RT PARK SOLAR FARM",
+     "entity_id": "aPzcxr1A6hW0JGV8zCZnFQ",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "imports_from_usa_section_1260h_entity",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_direct",
+       "psa_imports_from_usa_section_1260h_entity",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "aPzcxr1A6hW0JGV8zCZnFQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/aPzcxr1A6hW0JGV8zCZnFQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/aPzcxr1A6hW0JGV8zCZnFQ"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "_DcWgs6VXAh5t4G5S6X_mQ",
+      "entity_url": "https://graph.sayari.com/resource/entity/_DcWgs6VXAh5t4G5S6X_mQ"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "TRINA SOLAR CO LTD.",
+     "names": [
+      "TRINA SOLAR CO LTD.",
+      "CôNG TY TNHH TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY",
+      "TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO., LTD.",
+      "TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO,,LTD",
+      "TRINA SOLAR VIETNAM CO LTD",
+      "Trina Solar Co., Ltd.",
+      "天合光能股份有限公司",
+      "CONG TY TNHH TRINA SOLAR (VIET NAM) SCIENCE & TECHNOLOGY",
+      "CHANGZHOU TRINA SOLAR ENERGY CO LTD",
+      "TRINA SOLAR CO LTD",
+      "Trina Solar Limited",
+      "Changzhou Trina Solar Co., Ltd.",
+      "常州天合光能有限公司",
+      "CHANGZHOU TRINA SOLAR ENERGY CO., LTD.",
+      "天合光能",
+      "Trina Solar",
+      "CHANGZHOU TRINA SOLAR ENERGY LTD. LIABILITY CO.",
+      "tian ge guang neng gu fen you xian gong si",
+      "天合光能有限公司",
+      "TRINA SOLAR (VIETNAM) CO., LTD.",
+      "Trina Solar Limited - Spon ADR",
+      "常州天合铝板幕墙制造有限公司",
+      "Changzhou Tianhe Aluminum Curtain Wall Manufacturing Co., Ltd.",
+      "TRINA SOLAR CO.,LTD.",
+      "TRINA SOLAR SCIENCE AND TECHNOLOGY",
+      "CONG TY TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO.,LTD",
+      "TRINA SOLAR CO., LTD",
+      "TRINA SOLAR CO. LTD",
+      "TRINA SOLAR COMPANY LIMITED",
+      "TRINIA SOLAR CO LTD",
+      "天合光能集团",
+      "Trina Solar Group",
+      "Tian He Guang Neng Gu Fen You Xian Gong Si"
+     ],
+     "entity_id": "_DcWgs6VXAh5t4G5S6X_mQ",
+     "countries": [
+      "VNM",
+      "CHN",
+      "NLD",
+      "USA",
+      "GRC"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "controlled_by_mass_business_registration",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "export_controls_section_1260h",
+       "export_to_soe",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "meu_list_contractors",
+       "owner_of_forced_labor_xinjiang_entity",
+       "owner_of_soe",
+       "psa_export_to_soe",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "psa_owner_of_forced_labor_xinjiang_entity",
+       "psa_owner_of_soe",
+       "regulatory_action",
+       "sheffield_hallam_university_forced_labor_entity",
+       "sheffield_hallam_university_forced_labor_reports_intermediary_entity",
+       "soe_adjacent",
+       "usa_section_1260h"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "_DcWgs6VXAh5t4G5S6X_mQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/_DcWgs6VXAh5t4G5S6X_mQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/_DcWgs6VXAh5t4G5S6X_mQ"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "RRcCoDhsqoVfQksE6N308Q",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "SOLAR MODULE - SOLAR MODULE 14DAYS, FREE DEMURRAGE AT DESTINATION.",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+       ],
+       "weight": {
+        "value": 64662.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-06-14']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Mobile",
+        "state": "US-AL",
+        "country": "USA",
+        "value": "Mobile, Alabama"
+       },
+       "shipper_address": {
+        "country": "CHN",
+        "value": "NO.2 TIAN HE ROAD, TRINA PV PARK, X CHANGZHOU 32 213031 CHINA"
+       },
+       "receiver_address": {
+        "city": "Nassau",
+        "country": "BHS",
+        "value": "30 MT. PLEASANT RD NASSAU NP BAHAMAS"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUHV838725",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "vFwAOv2ZKFfm6ZLc_n8_NQ",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE - SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 22022.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2023-12-23']",
+       "departure_address": {
+        "city": "Shanghai",
+        "country": "CHN",
+        "value": "Shanghai"
+       },
+       "arrival_address": {
+        "city": "Mobile",
+        "state": "US-AL",
+        "country": "USA",
+        "value": "Mobile, Alabama"
+       },
+       "shipper_address": {
+        "country": "CHN",
+        "value": "NO.2 TIAN HE ROAD, TRINA PV PARK, X CHANGZHOU 32 213031 CHINA"
+       },
+       "receiver_address": {
+        "city": "Nassau",
+        "country": "BHS",
+        "value": "30 MT. PLEASANT RD NASSAU NP BAHAMAS"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUZL757438",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "BAHAMAS ENERGY & SOLAR SUPPLIES LTD",
+     "entity_id": "XretlkFXb9a2nzkNGxK0Og",
+     "countries": [
+      "BHS",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "XretlkFXb9a2nzkNGxK0Og",
+       "entity_url": "https://graph.sayari.com/resource/entity/XretlkFXb9a2nzkNGxK0Og"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/XretlkFXb9a2nzkNGxK0Og"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "_DcWgs6VXAh5t4G5S6X_mQ",
+      "entity_url": "https://graph.sayari.com/resource/entity/_DcWgs6VXAh5t4G5S6X_mQ"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": {
+     "name": "TRINA SOLAR CO LTD.",
+     "names": [
+      "TRINA SOLAR CO LTD.",
+      "CôNG TY TNHH TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY",
+      "TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO., LTD.",
+      "TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO,,LTD",
+      "TRINA SOLAR VIETNAM CO LTD",
+      "Trina Solar Co., Ltd.",
+      "天合光能股份有限公司",
+      "CONG TY TNHH TRINA SOLAR (VIET NAM) SCIENCE & TECHNOLOGY",
+      "CHANGZHOU TRINA SOLAR ENERGY CO LTD",
+      "TRINA SOLAR CO LTD",
+      "Trina Solar Limited",
+      "Changzhou Trina Solar Co., Ltd.",
+      "常州天合光能有限公司",
+      "CHANGZHOU TRINA SOLAR ENERGY CO., LTD.",
+      "天合光能",
+      "Trina Solar",
+      "CHANGZHOU TRINA SOLAR ENERGY LTD. LIABILITY CO.",
+      "tian ge guang neng gu fen you xian gong si",
+      "天合光能有限公司",
+      "TRINA SOLAR (VIETNAM) CO., LTD.",
+      "Trina Solar Limited - Spon ADR",
+      "常州天合铝板幕墙制造有限公司",
+      "Changzhou Tianhe Aluminum Curtain Wall Manufacturing Co., Ltd.",
+      "TRINA SOLAR CO.,LTD.",
+      "TRINA SOLAR SCIENCE AND TECHNOLOGY",
+      "CONG TY TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO.,LTD",
+      "TRINA SOLAR CO., LTD",
+      "TRINA SOLAR CO. LTD",
+      "TRINA SOLAR COMPANY LIMITED",
+      "TRINIA SOLAR CO LTD",
+      "天合光能集团",
+      "Trina Solar Group",
+      "Tian He Guang Neng Gu Fen You Xian Gong Si"
+     ],
+     "entity_id": "_DcWgs6VXAh5t4G5S6X_mQ",
+     "countries": [
+      "VNM",
+      "CHN",
+      "NLD",
+      "USA",
+      "GRC"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "controlled_by_mass_business_registration",
+       "export_controls_adjacent",
+       "export_controls_other_adjacent",
+       "export_controls_section_1260h",
+       "export_to_soe",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "meu_list_contractors",
+       "owner_of_forced_labor_xinjiang_entity",
+       "owner_of_soe",
+       "psa_export_to_soe",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "psa_owned_by_regulatory_action_entity",
+       "psa_owner_of_forced_labor_xinjiang_entity",
+       "psa_owner_of_soe",
+       "regulatory_action",
+       "sheffield_hallam_university_forced_labor_entity",
+       "sheffield_hallam_university_forced_labor_reports_intermediary_entity",
+       "soe_adjacent",
+       "usa_section_1260h"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "_DcWgs6VXAh5t4G5S6X_mQ",
+       "entity_url": "https://graph.sayari.com/resource/entity/_DcWgs6VXAh5t4G5S6X_mQ"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/_DcWgs6VXAh5t4G5S6X_mQ"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "tx5IJT7SvJgKjgCfugMvTA",
+       "departure_country": [
+        "CHN"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE - SOLAR MODULE"
+       ],
+       "weight": {
+        "value": 362882.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-05-20']",
+       "departure_address": {
+        "country": "CHN",
+        "value": "Ningpo"
+       },
+       "arrival_address": {
+        "city": "Mobile",
+        "state": "US-AL",
+        "country": "USA",
+        "value": "Mobile, Alabama"
+       },
+       "shipper_address": {
+        "country": "CHN",
+        "value": "NO.2 TIAN HE ROAD, TRINA PV INDUSTR CHANGZHOU 32 213376 CHINA"
+       },
+       "receiver_address": {
+        "city": "N Nassau",
+        "country": "BHS",
+        "value": "82 DOWDSWELL STREET NASSAU N-3717 N NASSAU NP 3717 BAHAMAS"
+       },
+       "identifiers": [
+        {
+         "value": "MEDUOC757798",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "BAHAMAS SOLAR & RENEWABLES COMPANY",
+     "entity_id": "0KZ0ZKadpcxeP6gy4e2Pqg",
+     "countries": [
+      "BHS",
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "0KZ0ZKadpcxeP6gy4e2Pqg",
+       "entity_url": "https://graph.sayari.com/resource/entity/0KZ0ZKadpcxeP6gy4e2Pqg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/0KZ0ZKadpcxeP6gy4e2Pqg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "_DcWgs6VXAh5t4G5S6X_mQ",
+      "entity_url": "https://graph.sayari.com/resource/entity/_DcWgs6VXAh5t4G5S6X_mQ"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   },
+   {
+    "supplier": [
+     {
+      "name": "TRINA SOLAR SCIENCE & TECHNOLOGY (T",
+      "entity_id": "O6ZKEgctINQrO1-H8bYe_A",
+      "countries": [
+       "THA"
+      ],
+      "risks": {
+       "sanctioned": false,
+       "pep": false,
+       "risk_levels": [
+        "exports_ilab_child_labor",
+        "exports_ilab_forced_labor",
+        "psa_exports_ilab_child_labor",
+        "psa_exports_ilab_forced_labor"
+       ]
+      },
+      "quality_flags": [
+       "risky"
+      ],
+      "next_action": {
+       "tool": "get_entity_summary",
+       "args": {
+        "entity_id": "O6ZKEgctINQrO1-H8bYe_A",
+        "entity_url": "https://graph.sayari.com/resource/entity/O6ZKEgctINQrO1-H8bYe_A"
+       }
+      },
+      "entity_url": "https://graph.sayari.com/resource/entity/O6ZKEgctINQrO1-H8bYe_A"
+     },
+     {
+      "name": "TRINA SOLAR CO LTD.",
+      "names": [
+       "TRINA SOLAR CO LTD.",
+       "CôNG TY TNHH TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY",
+       "TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO., LTD.",
+       "TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO,,LTD",
+       "TRINA SOLAR VIETNAM CO LTD",
+       "Trina Solar Co., Ltd.",
+       "天合光能股份有限公司",
+       "CONG TY TNHH TRINA SOLAR (VIET NAM) SCIENCE & TECHNOLOGY",
+       "CHANGZHOU TRINA SOLAR ENERGY CO LTD",
+       "TRINA SOLAR CO LTD",
+       "Trina Solar Limited",
+       "Changzhou Trina Solar Co., Ltd.",
+       "常州天合光能有限公司",
+       "CHANGZHOU TRINA SOLAR ENERGY CO., LTD.",
+       "天合光能",
+       "Trina Solar",
+       "CHANGZHOU TRINA SOLAR ENERGY LTD. LIABILITY CO.",
+       "tian ge guang neng gu fen you xian gong si",
+       "天合光能有限公司",
+       "TRINA SOLAR (VIETNAM) CO., LTD.",
+       "Trina Solar Limited - Spon ADR",
+       "常州天合铝板幕墙制造有限公司",
+       "Changzhou Tianhe Aluminum Curtain Wall Manufacturing Co., Ltd.",
+       "TRINA SOLAR CO.,LTD.",
+       "TRINA SOLAR SCIENCE AND TECHNOLOGY",
+       "CONG TY TRINA SOLAR (VIETNAM) SCIENCE & TECHNOLOGY CO.,LTD",
+       "TRINA SOLAR CO., LTD",
+       "TRINA SOLAR CO. LTD",
+       "TRINA SOLAR COMPANY LIMITED",
+       "TRINIA SOLAR CO LTD",
+       "天合光能集团",
+       "Trina Solar Group",
+       "Tian He Guang Neng Gu Fen You Xian Gong Si"
+      ],
+      "entity_id": "_DcWgs6VXAh5t4G5S6X_mQ",
+      "countries": [
+       "VNM",
+       "CHN",
+       "NLD",
+       "USA",
+       "GRC"
+      ],
+      "risks": {
+       "sanctioned": false,
+       "pep": false,
+       "risk_levels": [
+        "controlled_by_mass_business_registration",
+        "export_controls_adjacent",
+        "export_controls_other_adjacent",
+        "export_controls_section_1260h",
+        "export_to_soe",
+        "exports_eudr_shipment_wood",
+        "exports_ilab_child_labor",
+        "exports_ilab_forced_labor",
+        "imports_ilab_child_labor",
+        "imports_ilab_forced_labor",
+        "meu_list_contractors",
+        "owner_of_forced_labor_xinjiang_entity",
+        "owner_of_soe",
+        "psa_export_to_soe",
+        "psa_exports_eudr_shipment_wood",
+        "psa_exports_ilab_child_labor",
+        "psa_exports_ilab_forced_labor",
+        "psa_imports_ilab_child_labor",
+        "psa_imports_ilab_forced_labor",
+        "psa_owned_by_regulatory_action_entity",
+        "psa_owner_of_forced_labor_xinjiang_entity",
+        "psa_owner_of_soe",
+        "regulatory_action",
+        "sheffield_hallam_university_forced_labor_entity",
+        "sheffield_hallam_university_forced_labor_reports_intermediary_entity",
+        "soe_adjacent",
+        "usa_section_1260h"
+       ]
+      },
+      "quality_flags": [
+       "risky"
+      ],
+      "next_action": {
+       "tool": "get_entity_summary",
+       "args": {
+        "entity_id": "_DcWgs6VXAh5t4G5S6X_mQ",
+        "entity_url": "https://graph.sayari.com/resource/entity/_DcWgs6VXAh5t4G5S6X_mQ"
+       }
+      },
+      "entity_url": "https://graph.sayari.com/resource/entity/_DcWgs6VXAh5t4G5S6X_mQ"
+     }
+    ],
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "aaphqkWMp6YHa6OkikX-CQ",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "854143",
+         "description": "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MODULE",
+        "BIFACIAL SOLAR MODULE854143",
+        "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+       ],
+       "weight": {
+        "value": 319.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-02-06']",
+       "departure_address": {
+        "country": "THA",
+        "value": "THLCH"
+       },
+       "arrival_address": {
+        "country": "USA",
+        "value": "USHOU"
+       },
+       "shipper_address": {
+        "city": "Pluak Daeng",
+        "state": "TH-21",
+        "country": "THA",
+        "value": "7/496, MOO 6 PLUAK DAENG RAYONG 21140 THAILAND"
+       },
+       "receiver_address": {
+        "city": "Fremont",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "7100 STEVENSON BOULEVARD FREMONT CA 94538 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6374123140",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "faa9caafcfabcee04ef2f0b21dd9197a",
+         "label": "South Korea Imports & Exports (January 2021 - April 2024)"
+        },
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "KOR",
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "KV9lExT1OAhI9qOTZv16Uw",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "854143",
+         "description": "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "BIFACIAL SOLAR MODULE",
+        "BIFACIAL SOLAR MODULE854143",
+        "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+       ],
+       "weight": {
+        "value": 2408.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2024-02-06']",
+       "departure_address": {
+        "country": "THA",
+        "value": "THLCH"
+       },
+       "arrival_address": {
+        "country": "USA",
+        "value": "USHOU"
+       },
+       "shipper_address": {
+        "city": "Pluak Daeng",
+        "state": "TH-21",
+        "country": "THA",
+        "value": "7/496, MOO 6 PLUAK DAENG RAYONG 21140 THAILAND"
+       },
+       "receiver_address": {
+        "city": "Fremont",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "7100 STEVENSON BOULEVARD FREMONT CA 94538 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6374122970",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "faa9caafcfabcee04ef2f0b21dd9197a",
+         "label": "South Korea Imports & Exports (January 2021 - April 2024)"
+        },
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "KOR",
+        "USA"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "k_hfdzxHHvfGt2g7gmfaHg",
+       "departure_country": [
+        "THA"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854143",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+        },
+        {
+         "code": "854143",
+         "description": "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+        }
+       ],
+       "product_descriptions": [
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+        "SOLAR MODULE",
+        "solar module854143",
+        "반도체 디바이스(예: 다이오드ㆍ트랜지스터ㆍ반도체 기반 트랜스듀서), 감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다), 발광다이오드[(엘이디), 다른 발광다이오드와 결합되었는지 여부과 관계없이 포함한다], 장착된 압전기 결정소자 (감광성 반도체 디바이스(광전지는 모듈에 조립되었거나 패널로 구성되었는지 여부와 관계없이 포함한다)와 발광다이오드(엘이디),광전지(모듈에 조립되었거나 패널로 구성된 것으로 한정한다))"
+       ],
+       "weight": {
+        "value": 89250.0,
+        "unit": "kilogram"
+       },
+       "arrival_date": "['2023-09-12']",
+       "departure_address": {
+        "country": "THA",
+        "value": "THLCH"
+       },
+       "arrival_address": {
+        "country": "USA",
+        "value": "USHOU"
+       },
+       "shipper_address": {
+        "city": "Pluak Daeng",
+        "state": "TH-21",
+        "country": "THA",
+        "value": "7/496, MOO 6 PLUAK DAENG RAYONG 21140 THAILAND"
+       },
+       "receiver_address": {
+        "city": "Fremont",
+        "state": "US-CA",
+        "country": "USA",
+        "value": "7100 STEVENSON BOULEVARD FREMONT CA 94538 UNITED STATES"
+       },
+       "identifiers": [
+        {
+         "value": "COSU6361803790",
+         "type": "bill_of_lading"
+        }
+       ],
+       "sources": [
+        {
+         "id": "faa9caafcfabcee04ef2f0b21dd9197a",
+         "label": "South Korea Imports & Exports (January 2021 - April 2024)"
+        },
+        {
+         "id": "16a4cc2d0f467fa993b28587d542a25d",
+         "label": "USA Imports (2021 - Present)"
+        }
+       ],
+       "transit_country": [
+        "KOR",
+        "USA"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "TRINA SOLAR (U.S) INC",
+     "names": [
+      "TRINA SOLAR (U.S) INC",
+      "TRINA SOLAR (U.S.), INC.",
+      "TRINA SOLAR (U.S.) , INC.",
+      "TRINA SOLAR (U.S.)"
+     ],
+     "entity_id": "VFQiRsFsEiIT7DZACT9DKg",
+     "countries": [
+      "USA",
+      "CHN"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "controlled_by_mass_business_registration",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "mass_address_usage",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "VFQiRsFsEiIT7DZACT9DKg",
+       "entity_url": "https://graph.sayari.com/resource/entity/VFQiRsFsEiIT7DZACT9DKg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/VFQiRsFsEiIT7DZACT9DKg"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "O6ZKEgctINQrO1-H8bYe_A",
+      "entity_url": "https://graph.sayari.com/resource/entity/O6ZKEgctINQrO1-H8bYe_A"
+     }
+    },
+    "quality_flags": [
+     "multiple_parties",
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 10,
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 10,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "Do not treat incorporation date as evidence of legitimate operational history — always verify actual commercial activity timelines against the registration date",
+   "When a counterparty has an aged incorporation but thin commercial footprint, escalate for enhanced due diligence before onboarding or transacting",
+   "Build formation agent clustering into automated screening workflows to identify shelf company factories that supply illicit networks"
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

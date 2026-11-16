@@ -26,7 +26,12 @@ data/derived/metrics.json   everything the site shows (generated)
 pipeline/build.py           classification, all dial combinations, curves, cliffs, Layer 2 merge, validation
 pipeline/extract_sayari.py  raw Sayari JSON → data/derived/exporters.csv
 pipeline/build_tiers.py     hub-inbound polysilicon/wafer rollups → data/derived/tiers.json
-pipeline/sim_inputs.json    Monte Carlo input distributions, with status and source
+pipeline/sim_inputs.json    Monte Carlo inputs (centre ± spread), with status and source ids
+pipeline/product_relevance.csv   product check: exporters whose product doesn't follow the polysilicon route
+pipeline/enforced_groups.csv     company groups with a public solar detention or denial (enforcement on record)
+data/evidence/sources_sim.csv    sources for the simulation inputs (SI-…)
+data/derived/shipment_samples.csv  Sayari shipment samples: weight per shipment, product descriptions
+data/derived/named_companies.csv   review sheet for every named company (independent review, right of reply)
 pipeline/notes/             research logs and the Sayari pull plan
 site/                       index.html, styles.css, charts.js, sim.js, app.js
 ```

@@ -1,0 +1,1575 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "Boviet Solar",
+  "shipper_name": "Công ty TNHH Khoa học kỹ thuật năng lượng mặt trời Boviet",
+  "hs_code": "854142",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "response_mode": "full",
+  "limit": 20
+ },
+ "captured": "2026-11-16T19:26:39+00:00",
+ "response": {
+  "tool": "search_shipments",
+  "response_mode": "full",
+  "returned": 1,
+  "items": [
+   {
+    "supplier": {
+     "name": "Công ty TNHH Khoa học kỹ thuật năng lượng mặt trời Boviet",
+     "names": [
+      "Công ty TNHH Khoa học kỹ thuật năng lượng mặt trời Boviet",
+      "Boviet Solar Energy Science and Technology Company Limited",
+      "BOVIET SOLAR TECHNOLOGY CO.,LTD",
+      "BOVIET SOLAR ENERGY SCIENCE AND TECHNICAL COMPANY LIMITED",
+      "Boviet Solar Science and Technology Co Ltd",
+      "BOVIET SOLAR SCIENCE AND TECHNOLOGY CO LTD",
+      "BOVIET SOLAR SCIENCE & TECHNOLOGY COMPANY LIMITED",
+      "BOVIET SOLAR TECHNOLOGY CO.,LTD.B5,B6 SONG KHE-NOI HOANG INDUSTRIAL ZONE TIEN PHONG WARD, BAC NINH PRO VINCE VIETNAM, DEMOCRATIC REP. OF VIETNAM, DEMOCRATIC REP.VIETNAM, DEMOCRATIC REP."
+     ],
+     "entity_id": "Ans4ITWP6XH8C5DxNW0fwg",
+     "countries": [
+      "VNM",
+      "CHN",
+      "VIR",
+      "CHE",
+      "LAO"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "chinese_soe_adjacent",
+       "export_to_chinese_soe",
+       "exports_eudr_shipment_wood",
+       "exports_ilab_child_labor",
+       "exports_ilab_forced_labor",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+       "forced_labor_uflpa_origin_subtier_product_blueprint",
+       "imports_eudr_shipment_rubber",
+       "imports_eudr_shipment_wood",
+       "imports_ilab_child_labor",
+       "imports_ilab_forced_labor",
+       "psa_export_to_chinese_soe",
+       "psa_exports_eudr_shipment_wood",
+       "psa_exports_ilab_child_labor",
+       "psa_exports_ilab_forced_labor",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier",
+       "psa_imports_eudr_shipment_rubber",
+       "psa_imports_eudr_shipment_wood",
+       "psa_imports_ilab_child_labor",
+       "psa_imports_ilab_forced_labor",
+       "soe_adjacent"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "Ans4ITWP6XH8C5DxNW0fwg",
+       "entity_url": "https://graph.sayari.com/resource/entity/Ans4ITWP6XH8C5DxNW0fwg"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/Ans4ITWP6XH8C5DxNW0fwg"
+    },
+    "shipments": [
+     {
+      "shipment": {
+       "shipment_id": "fPTRcTxaNuWF1pbHOJzkIA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce Bifacial Solar Module panels Products MONO SOLAR CELL-Efficiency 23.4%. 100% new.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.4%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 73033.6,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 872797.94,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-08-02']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{DBA274E6-3F24-49D0-B6EEF686E3533259}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "j7MvvMSTqSJR8il7l0X3hQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce Bifacial Solar Module panels Products MONO SOLAR CELL-Efficiency 23.1%. 100% new.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.1%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 73033.6,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 396726.34,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-08-02']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{38C921D5-E35E-4AAF-89AA773A328288DF}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "0edNJfhQEU0W_WifyHADXQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce Bifacial Solar Module panels Products MONO SOLAR CELL-Efficiency 23.3%. 100% new.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.3%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 73033.6,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1507560.08,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-08-02']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{B6595868-D737-4497-B50C2E3BA2E2DDF2}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "ube2z-qSxFq1I_ZeU_QJng",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce Bifacial Solar Module panels Products MONO SOLAR CELL-Efficiency 23.2%. 100% new.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.2%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 73033.6,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1375317.96,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-08-02']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{111238A4-6FD4-4FCC-8545EA8B6E299F9A}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "hNyWVT9cQIuPKxL88PUhAw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce Bifacial Solar Module panels Products MONO SOLAR CELL-Efficiency 23.5%. 100% new.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.5%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 73033.6,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 79391.07,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-08-02']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{FA2E6362-AA09-4B1D-8978E5D81368D94B}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "SCVK4kWex3ARRZ98_sN-rw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 23.1%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.1%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 60240.9,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 167121.79,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-26']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{FCD56167-61C5-4117-B4A868D6420D16B2}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "C0BGHG1uqd6oxjvUlGaQOQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 23.3%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.3%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 60240.9,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1504096.13,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-26']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{AE2DD575-AA6E-40CE-A487AF89287DA108}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "LOvplB4RKa8OI_zk8PNDug",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 23.4%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.4%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 60240.9,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 863462.59,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-26']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{8618F6D1-A3E0-43EC-B1B2500786913661}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "PLFu514BU24aKsLQJR4L4A",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 23.5%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.5%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 60240.9,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 27836.54,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-26']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{7CE18AB4-D26A-4D64-B0969607C6AE6B7E}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "P3sK92WUzCeM0DMAeFrJzg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 23.2%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.2%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 60240.9,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1058438.02,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-26']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{FD66CF08-F60C-432C-BD2748EF9A4709F5}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "3gtfrmP3usYeUq621V-FvA",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 23.3%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.3%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 57126.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 1052642.3,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-19']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{8A96AF83-9856-4B2F-8A52E1D0923EBEEE}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "YJIqfh4C4TYrjVRCWHp8ng",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 23.0%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.0%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 57126.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 199148.54,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-19']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{20546501-3301-4B27-B9FFA9EE96B55BEF}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "auUit85pe1IrSIgGjaFROg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 23.4%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.4%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 57126.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 853493.76,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-19']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{0CE67CEB-4501-4A0A-B4F54A374BC951D4}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "1BsB-XSBU9DOIecKVhshOw",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 23.2%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.2%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 57126.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 682795.01,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-19']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{FB99104F-D488-41DA-A39BFE9B013057F8}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "j5zYFSlDmeRCXMMYIjs_zg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 23.1%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.1%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 57126.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 540546.05,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-19']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{FC852E65-0D22-4AE1-996D38DC46135C00}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "F5vGTG4n0Yd6aRhGUN84vQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 23.5%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.5%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 57126.0,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 85355.31,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-19']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{1EDF2ED6-8D71-49BC-96E13EFF89F89763}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "MIQp9e2BUFUQ1hJ1eAe7ag",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 23.4%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.4%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 88314.3,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 635904.0,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-17']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{B8AB8465-5420-44FB-86AC575A1DA60596}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "yNfGN6TmfCbTEI9GZm4iyQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 23.5%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.5%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 88314.3,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 76245.01,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-17']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{48629880-0D50-4CA0-914E8E289ACFDF6A}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "qJ8QR2V8MuInvKcC0b_5XQ",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 22.8%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 22.8%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 88314.3,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 101744.64,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-17']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{074BEFC7-7BA9-433F-91F69AF48D29B3F5}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     },
+     {
+      "shipment": {
+       "shipment_id": "pUd8--5jCrqfL8BJz4vqYg",
+       "departure_country": [
+        "VNM"
+       ],
+       "arrival_country": [
+        "USA"
+       ],
+       "hs_codes": [
+        {
+         "code": "854142",
+         "description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels"
+        },
+        {
+         "code": "85414200",
+         "description": "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+        }
+       ],
+       "product_descriptions": [
+        "BVSP0219#&Photovoltaic cell panels used to produce solar module panels Bifacial Products MONO SOLAR CELL-Efficiency 23.1%. 100% new product.#&VN , BVSP0219#&Tấm tế bào quang điện dùng để sản xuất tấm Module năng lượng mặt trời Bifacial Products MONO SOLAR CELL-Efficiency 23.1%. Hàng mới 100%.#&VN",
+        "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+        "Tế bào quang điện chưa lắp ráp thành các mảng mô-đun hoặc thành bảng"
+       ],
+       "weight": {
+        "value": 88314.3,
+        "unit": "kilogram"
+       },
+       "value": {
+        "amount": 839393.28,
+        "currency": "USD"
+       },
+       "arrival_date": "['2024-07-17']",
+       "departure_address": {
+        "city": "Ha Noi",
+        "country": "VNM",
+        "value": "HA NOI"
+       },
+       "arrival_address": {
+        "city": "Chicago",
+        "state": "US-IL",
+        "country": "USA",
+        "value": "CHICAGO ILL"
+       },
+       "shipper_address": {
+        "country": "VNM",
+        "value": "Lô B5, B6 KCN Song Khê - Nội Hoàng, TP.Bắc Giang, Bắc Giang ,"
+       },
+       "receiver_address": {
+        "city": "Greenville",
+        "state": "US-NC",
+        "country": "USA",
+        "value": "1125 SUGG PKWY, GREENVILLE, NC 27834, US"
+       },
+       "identifiers": [
+        {
+         "value": "{6058F655-5C47-4319-8C27D612F14625FC}",
+         "type": "global_trade_internal_shipment_id"
+        }
+       ],
+       "sources": [
+        {
+         "id": "e5de7b52cc88ef4cd1a10e201bdf46ee",
+         "label": "Vietnam Imports & Exports (January 2019 - Present)"
+        }
+       ],
+       "product_origin": [
+        "VNM"
+       ]
+      }
+     }
+    ],
+    "buyer": {
+     "name": "BOVIET SOLAR TECHNOLOGY (NORTH CAROLINA) LLC",
+     "entity_id": "fB_N185yF212N7-vx4vE-g",
+     "countries": [
+      "USA"
+     ],
+     "risks": {
+      "sanctioned": false,
+      "pep": false,
+      "risk_levels": [
+       "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "mass_address_usage",
+       "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+       "psa_forced_labor_uflpa_origin_subtier",
+       "psa_forced_labor_xinjiang_origin_subtier"
+      ]
+     },
+     "quality_flags": [
+      "risky"
+     ],
+     "next_action": {
+      "tool": "get_entity_summary",
+      "args": {
+       "entity_id": "fB_N185yF212N7-vx4vE-g",
+       "entity_url": "https://graph.sayari.com/resource/entity/fB_N185yF212N7-vx4vE-g"
+      }
+     },
+     "entity_url": "https://graph.sayari.com/resource/entity/fB_N185yF212N7-vx4vE-g"
+    },
+    "next_action": {
+     "tool": "get_entity_summary",
+     "args": {
+      "entity_id": "Ans4ITWP6XH8C5DxNW0fwg",
+      "entity_url": "https://graph.sayari.com/resource/entity/Ans4ITWP6XH8C5DxNW0fwg"
+     }
+    },
+    "quality_flags": [
+     "risky"
+    ]
+   }
+  ],
+  "total_available": 111,
+  "continue": {
+   "tool": "search_shipments",
+   "args": {
+    "query": "Boviet Solar",
+    "shipper_name": "Công ty TNHH Khoa học kỹ thuật năng lượng mặt trời Boviet",
+    "arrival_country": "USA",
+    "hs_code": "854142",
+    "date_from": "2024-11-16",
+    "date_to": "2026-11-16",
+    "page_token": "eyJmcCI6IjQyYzVmODk0ZGNiYzUzZGY2MGI2Y2YyM2RlNWYxYjc1NzhjZDBhYWE4MzE5MDliMjg5ODZkYmZmZWVmMjg2ZDgiLCJsaW1pdCI6MjAsIm1vZGUiOiJmdWxsIiwib2Zmc2V0IjoyMCwic3RyYXRlZ3kiOiJtYW51YWwiLCJ0b29sIjoic2VhcmNoX3NoaXBtZW50cyIsInYiOjF9"
+   }
+  },
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 20,
+  "_guidance": {
+   "selection_rule": "Choose rows using dates, countries, HS codes, product text, and party identifiers together. For broad corridor work, prefer supplier/buyer rollups or ships_to/receives_from traversal before pulling shipment rows.",
+   "ambiguity_rule": "Trade party names can be noisy, partially normalized, or missing entity IDs. Missing supplier, buyer, route, or goods fields means the record is incomplete, not that the relationship is disproved.",
+   "verification_rule": "Verify key counterparties with get_entity_summary or get_entity_profile, and use search_shipments only after narrowing the target slice when you need date- and HS-level confirmation. Confirm opaque HS or risk signals with lookup_hs_codes or lookup_risk_factors before making high-confidence claims."
+  },
+  "investigation_notes": [
+   "When resolving Chinese entities, try both the Chinese name and known English/trade names in the Sayari API — there is no standardized Romanization.",
+   "The administrative division prefix in a Chinese company name indicates registration level, not headquarters location.",
+   "National-level companies (no geographic prefix or parenthetical prefix) are typically large SOEs or nationally significant enterprises."
+  ],
+  "_hints": [
+   "For full risk factor details including scoring methodology, use the lookup_risk_factors tool.",
+   "For full HS code hierarchy and details, use the lookup_hs_codes tool."
+  ]
+ }
+}

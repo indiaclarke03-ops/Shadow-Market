@@ -820,6 +820,16 @@
           <li><b>Not an accusation engine, not a forecast, not proof of intent.</b> Price effects are out of scope for v1.</li>
         </ul></div>
 
+      <div class="panel" style="grid-column:1/-1"><h3 class="display" style="margin-bottom:18px">Proposed rule (Case 2)</h3>
+        <ul>
+          <li><b>The core rule doesn’t exist yet.</b> Generation threshold, exemption and trigger come from press and analyst reporting (Reuters; Morgan Stanley notes via Economic Daily News and Commercial Times; Cignal AI; Counterpoint). The FCC hasn’t published a threat determination or draft text.</li>
+          <li><b>Supply shares are illustrative</b> until replaced with student analysis. Public figures are revenue-based global market estimates, which differ by source (InnoLight 27% vs 34%, on different measures) and aren’t US-specific.</li>
+          <li><b>US BOM share is unknown.</b> No public teardown data was used. The exemption is the most assumption-sensitive part of the model; see “What matters most”.</li>
+          <li><b>Manufacturing location ≠ ownership.</b> The entity/origin distinction drives much of the result, and the reported rule doesn’t yet settle it.</li>
+          <li><b>Price and delay are indices and orders of magnitude</b>, not forecasts. <b>Design considerations are questions, not advice.</b></li>
+          <li><b>Neutral by design.</b> Stakeholder positions are attributed. The tool doesn’t assess whether the rule is warranted. Corrections to the original brief (dates, attributions, unsupported claims) are logged in DECISIONS.md.</li>
+        </ul></div>
+
       <div class="panel" style="grid-column:1/-1"><h3 class="display" style="margin-bottom:18px">Build status</h3>
         <table class="tbl status-tbl"><thead><tr><th>Milestone</th><th>What</th><th>Status</th></tr></thead><tbody>
         ${ms.map((m) => `<tr><td>${m[0]}</td><td>${esc(m[1])}</td><td><span class="badge ${/done|built/.test(m[2]) ? "ok" : "pend"}">${esc(m[2])}</span></td></tr>`).join("")}</tbody></table>
@@ -834,7 +844,7 @@
   let simInited = false;
   function route() {
     const v = (location.hash || "#explorer").slice(1).split("?")[0];
-    const view = ["explorer", "simulation", "method"].includes(v) ? v : "explorer";
+    const view = ["explorer", "simulation", "proposed", "method"].includes(v) ? v : "explorer";
     document.querySelectorAll(".view").forEach((n) => n.classList.toggle("on", n.id === "view-" + view));
     document.querySelectorAll(".tabs a").forEach((a) => (a.dataset.view === view ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
     if (view === "simulation") {
@@ -843,12 +853,14 @@
       runSim();
     }
     if (view === "explorer") { renderFlow(); renderCurves(); renderEnf(); }
-    if (["simulation", "method"].includes(v) || v === "explorer" || !v) window.scrollTo(0, 0);
+    if (view === "proposed" && SM.renderProposed) SM.renderProposed();
+    if (["simulation", "proposed", "method"].includes(v) || v === "explorer" || !v) window.scrollTo(0, 0);
   }
 
   renderHero(); renderFindings(); renderLayers(); renderDials(); renderReadout(); renderEvidence(); renderCompanies(); renderMethod();
   bindDeclared();
   window.addEventListener("hashchange", route);
   route();
-  let rT; window.addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => { const v = (location.hash || "#explorer").slice(1).split("?")[0]; if (v === "simulation") runSim(); else { renderFlow(); renderCurves(); renderEnf(); } }, 150); });
+  let rT; window.addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => { document.querySelectorAll(".view.on svg").forEach((n) => n.remove()); // old widths would hold containers open
+    const v = (location.hash || "#explorer").slice(1).split("?")[0]; if (v === "simulation") runSim(); else if (v === "proposed") { if (SM.renderProposed) SM.renderProposed(true); } else { renderFlow(); renderCurves(); renderEnf(); } }, 150); });
 })();

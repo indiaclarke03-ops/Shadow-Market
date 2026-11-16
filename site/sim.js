@@ -50,6 +50,8 @@
     }
   }
   SM.draw = draw;
+  // shared helpers for other engines (proposed.js); results of SM.simulate are unchanged
+  SM.rng = mulberry32; SM.triInv = triInv; SM.normal = normal; SM.phi = phi;
 
   /* An input on the page is a centre value plus a spread. Each simulated future draws it from a
      symmetric triangular distribution (centre ± spread), clipped to the input's allowed range. */

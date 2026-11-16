@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Shadow Market</title>
+<meta name="description" content="What supply chain regulation catches, compared with what full supply chain transparency would reveal. Case 1: UFLPA × US solar PV.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#explorer">The Shadow Market <span class="dot" aria-hidden="true">→</span></a>
+    <div class="tabs" role="tablist">
+      <a href="#explorer" data-view="explorer">Explorer</a>
+      <a href="#simulation" data-view="simulation">Simulation</a>
+      <a href="#method" data-view="method">Method &amp; limits</a>
+    </div>
+    <span class="snap" id="snap"></span>
+  </div>
+</nav>
+
+<!-- ============================================================ EXPLORER -->
+<main class="view" id="view-explorer">
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="kicker">UFLPA × US solar PV · Case 1 of 3</p>
+      <h1><span>What the rule catches.</span><span class="soft">What it tolerates.</span></h1>
+      <div class="hero-grid">
+        <p class="lede">Every supply chain regulation draws lines: which lists count, how many tiers upstream, what standard of proof. <strong>The Shadow Market</strong> is the supply that sits inside a rule's intent but outside its enforcement. This tool measures that gap for the Uyghur Forced Labor Prevention Act and US solar imports, and asks why the lines sit where they do.</p>
+        <div class="hero-stats" id="hero-stats"></div>
+      </div>
+      <p class="coverage" id="coverage"></p>
+    </div>
+  </header>
+
+  <!-- three layers -->
+  <section id="layers">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display" style="color:var(--navy)">Three layers</h2>
+        <p class="lede">The same rule, read three ways: as written, as enforced, and as it would apply if every tier of the supply chain were visible.</p>
+      </div>
+      <div class="layers">
+        <article class="panel layer" id="layer1"></article>
+        <article class="panel layer" id="layer2"></article>
+        <article class="panel layer" id="layer3"></article>
+      </div>
+      <div class="equation"><span>Tolerated exposure</span><em>=</em><span>Layer 3</span><em>−</em><span>Layer 2</span></div>
+    </div>
+  </section>
+
+  <!-- explorer -->
+  <section class="dark deep" id="dials-section">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display">Turn the dials</h2>
+        <p class="lede">Each regulatory design choice is a dial. Tighten one and watch exposure and market impact respond. Does exposure rise smoothly, or is there a cliff?</p>
+      </div>
+      <div class="explorer-grid">
+        <div class="glass" id="dials"></div>
+        <div>
+          <div class="readout" id="readout"></div>
+        </div>
+      </div>
+      <div class="charts">
+        <div class="panel" id="flow-panel">
+          <div class="panel-title"><h4>Where flagged volume sits in the chain</h4><div class="legend" id="flow-legend"></div></div>
+          <div id="flow"></div>
+        </div>
+        <div class="chart-row">
+          <div class="panel" id="curve-panel">
+            <div class="panel-title"><h4>Exposure curve</h4><span class="small" id="curve-note"></span></div>
+            <div id="curves"></div>
+          </div>
+          <div class="panel" id="enf-panel">
+            <div class="panel-title"><h4>What enforcement has caught</h4><span class="small">CBP UFLPA statistics</span></div>
+            <div id="enf"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- why the line is here -->
+  <section id="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display" style="color:var(--navy)">Why the line<br>is here</h2>
+        <p class="lede">The data shows <em>where</em> the lines sit. The record (statute, guidance, testimony, lobbying, research) shows <em>why</em>. Each claim carries a type and a confidence level.</p>
+      </div>
+      <div class="chips" id="dial-chips" role="group" aria-label="Filter evidence by dial"></div>
+      <div class="why-grid">
+        <div class="panel flat">
+          <div class="panel-title"><h4>Timeline</h4><span class="small" id="tl-count"></span></div>
+          <ol class="timeline" id="timeline"></ol>
+        </div>
+        <div>
+          <p class="intent-note">Intent rule: a data cliff plus documentary evidence that a boundary was contested or chosen is reported only as <b>evidence consistent with a deliberate choice</b>, never as proof. Alternative explanations are shown with every claim.</p>
+          <div class="claims" id="claims"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- companies -->
+  <section class="mist" id="companies">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display" style="color:var(--navy)">Named suppliers</h2>
+        <p class="lede">Companies are named only with their exposure level, confidence and source. Exposure means a supply chain connection, not proof that a product contains a targeted input.</p>
+      </div>
+      <div class="panel" id="company-exposure"></div>
+      <div class="panel" style="margin-top:24px" id="company-cases"></div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================================================ SIMULATION -->
+<main class="view" id="view-simulation">
+  <section class="dark deep" style="padding-top:88px">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display">If the line moved</h2>
+        <p class="lede">Ten thousand seeded runs per threshold. Uncertain inputs are drawn from sourced ranges: high-confidence flags barely move, low-confidence ones swing widely.</p>
+      </div>
+      <p class="scenario-flag" id="sim-flag"></p>
+      <div class="sim-controls">
+        <div>
+          <p class="kicker">Threshold: the rule tightened to…</p>
+          <div class="seg" id="sim-thresholds"></div>
+        </div>
+        <div class="glass">
+          <p class="kicker" style="margin-bottom:8px">Significant disruption = gap above</p>
+          <div class="slider-row"><input type="range" id="sim-x" min="5" max="50" step="1" value="20" aria-label="Significant disruption threshold"><span class="num" style="font-size:34px" id="sim-x-val">20%</span></div>
+        </div>
+      </div>
+      <div class="readout" id="sim-readout"></div>
+      <div class="sim-grid" style="margin-top:24px">
+        <div class="panel"><div class="panel-title"><h4>Supply gap</h4><span class="small">% of US cell + module supply removed</span></div><div id="h-gap"></div></div>
+        <div class="panel"><div class="panel-title"><h4>Shortage duration</h4><span class="small">months, after inventory buffer</span></div><div id="h-dur"></div></div>
+        <div class="panel"><div class="panel-title"><h4>Threshold curve</h4><span class="small">P(significant disruption) by rule position</span></div><div id="t-curve"></div></div>
+        <div class="panel"><div class="panel-title"><h4>What drives the result</h4><span class="small">median gap at P10 → P90 of each input</span></div><div id="tornado"></div></div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <div class="panel-title"><h3 class="display" style="color:var(--navy)">Input ranges</h3><div style="display:flex;gap:10px"><button class="btn" id="sim-reset">Reset to sourced defaults</button></div></div>
+      <p class="small" style="max-width:80ch">Every input is a distribution. Edit the 5th and 95th percentiles to test your own assumptions. Results update immediately and stay reproducible (seed <span id="sim-seed"></span>).</p>
+      <div class="panel flat tbl-wrap"><table class="tbl inputs-tbl" id="sim-inputs"></table></div>
+      <div class="panel flat" style="margin-top:24px"><div class="panel-title"><h4>Model</h4></div><ol id="sim-model" style="color:var(--ink-2);font-size:15px;margin:0;padding-left:20px"></ol></div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================================================ METHOD -->
+<main class="view" id="view-method">
+  <section class="mist" style="padding-top:88px">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display" style="color:var(--navy)">Method &amp; limits</h2>
+        <p class="lede">What the numbers mean, where they come from, and what they cannot tell you.</p>
+      </div>
+      <div class="method-grid" id="method"></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>The Shadow Market · India Clarke · Beyond the Brand · Draft v0.5</span><span id="foot-built"></span></div></footer>
+
+<div class="tip" id="tip" role="tooltip"></div>
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script src="sim.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

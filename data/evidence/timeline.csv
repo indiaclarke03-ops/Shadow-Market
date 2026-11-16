@@ -1,0 +1,38 @@
+date,event,category,dial,source_ids,confidence
+2021-05-01,"Sheffield Hallam publishes 'In Broad Daylight', tracing solar supply chains from quartz to module; XUAR ~45% of 2020 solar-grade polysilicon (month-level date)",research,tier_depth,EV-028,high
+2021-06-24,"CBP issues Withhold Release Order on Hoshine Silicon and its subsidiaries, covering derived goods such as polysilicon",enforcement,ownership_reach,EV-002,high
+2021-08-01,CBP begins detaining solar modules under the Hoshine WRO; ACP says suppliers of about two-thirds of US modules were affected (month-level date),enforcement,lookback,EV-024,medium
+2021-12-23,UFLPA (Pub. L. 117-78) signed; presumption for goods made wholly or in part in XUAR or by listed entities; polysilicon mandated as high-priority sector,statute,tier_depth,EV-001,high
+2022-01-24,DHS/FLETF Federal Register notice opens public comment (docket DHS-2022-0001); 180 comments received,consultation,general,EV-003,high
+2022-03-10,"SEIA, ACP and First Solar file comments to the FLETF docket on detentions, verified-importer treatment and scrutiny of XUAR polysilicon ties",consultation,tier_depth,EV-023;EV-024;EV-025,high
+2022-04-08,"FLETF public hearing on UFLPA implementation (supply chain tracing, entity list factors, high-priority sectors)",consultation,general,EV-003,high
+2022-06-13,CBP UFLPA Operational Guidance for Importers: polysilicon mapping to quartzite location; commingling warning,guidance,tier_depth,EV-004,high
+2022-06-17,FLETF Strategy published with initial 20-entity list drawn from WROs and BIS Entity List,entity_list,trigger_scope,EV-003,high
+2022-06-21,UFLPA rebuttable presumption takes effect,statute,lookback,EV-001;EV-003,high
+2022-07-18,Reuters: lawmakers ask CBP why three major Chinese solar companies were left off the list; DOL official cites 'competing objectives',entity_list,trigger_scope,EV-031,low
+2022-10-25,"CBP has detained 1,053 solar shipments since June 21, none released (public-records response)",enforcement,lookback,EV-032,medium
+2022-11-01,"ACP reports Q3 2022 solar installations down 23% and ~23 GW of projects delayed, mainly from panel shortages (month-level date)",market,lookback,EV-032,low
+2023-03-01,Solar module imports pick up; White House adviser cites 'clearer guidance'; Trina says >900 MW cleared (month-level date),enforcement,lookback,EV-033,low
+2023-07-01,Sheffield Hallam 'Over-Exposed' finds bifurcated solar supply chains and continued MGS/quartz exposure (month-level date; updated Nov 2023),research,tier_depth,EV-029,high
+2023-08-01,FLETF 2023 strategy update: CBP to prioritise non-XUAR affiliates of XUAR entities likely to contain XUAR inputs,guidance,ownership_reach,EV-005,high
+2024-03-01,CBP questionnaires to large solar importers inform later detentions (month-level date),enforcement,tier_depth,EV-038;EV-039,medium
+2024-05-16,FLETF begins counting each named subsidiary/affiliate as a separate listed entity,entity_list,ownership_reach,EV-008,high
+2024-07-01,CBP begins detaining Maxeon's US solar imports under UFLPA (month-level date),enforcement,lookback,EV-027,medium
+2024-07-09,FLETF 2024 strategy update: list at 68; listing prioritises 'egregious' corroborated cases; scalable process,guidance,trigger_scope,EV-006,high
+2025-01-15,"37 entities added (total 144), including Donghai JA Solar, Hongyuan Green Energy and Shuangliang Silicon for sourcing XUAR polysilicon",entity_list,trigger_scope,EV-010,high
+2025-03-01,CBP denies Maxeon's protests on detained panels (late March); Maxeon sues at the CIT (month-level date),enforcement,lookback,EV-027,medium
+2025-04-01,"CBP begins excluding some high-risk goods immediately instead of detaining first; monthly stopped shipments fall from ~1,062 (Nov-Mar) to ~224 (Apr-Aug) (month-level date)",enforcement,lookback,EV-039;EV-018,medium
+2025-08-19,"FLETF 2025 strategy update adds caustic soda, copper, lithium, red dates, steel as high-priority sectors",guidance,trigger_scope,EV-007,high
+2025-08-21,Former CBP attorney reports staff losses and no extensions for UFLPA document packages at the Electronics Center,enforcement,lookback,EV-038,low
+2025-09-30,BIS (not UFLPA) adopts 50% Affiliates Rule for its Entity List,entity_list,ownership_reach,EV-020,high
+2025-11-10,BIS Affiliates Rule suspended for one year (to 2026-11-09),entity_list,ownership_reach,EV-020,high
+2025-12-15,House Democrats' letter to DHS/CBP on the 2025 decline in UFLPA enforcement and no list additions since Jan 2025,consultation,lookback,EV-018,high
+2026-01-19,FY2026 DHS appropriations statement directs CBP to keep forced-labor funding at no less than FY2025 levels and brief on transshipment,statute,general,EV-017,high
+2026-02-24,Reuters: HTS 8541 (incl. solar) is 82% of all UFLPA stopped value; stopped value fell from $1.78bn (2024) to $187.7m (2025),enforcement,lookback,EV-034,medium
+2026-06-12,CBP publishes consolidated Forced Labor Enforcement Operational Guidance; silica-based products tracing unchanged,guidance,tier_depth,EV-013,high
+2026-08-03,"43 entities added (total 187), the largest expansion and first since Jan 2025; TBEA listed (aluminum/coal basis)",entity_list,trigger_scope,EV-011;EV-022,high
+2026-08-05,"China's MOFCOM places US supply-chain mapping, audit and origin-testing organisations on its countermeasures list",market,tier_depth,EV-040,low
+2026-09-02,CIT Camel Group opinion (remand without vacatur of FLETF delisting denial) published in Customs Bulletin,entity_list,trigger_scope,EV-021,high
+2026-09-03,"Bipartisan House Select Committee / CECC letter requests DHS briefing on UFLPA priorities incl. polysilicon, listing barriers and staffing (approx. date)",consultation,trigger_scope,EV-019,medium
+2026-10-29,Three BGI entities added (total 190),entity_list,trigger_scope,EV-012,high
+2026-11-10,Scheduled end of BIS Affiliates Rule suspension (resumption not verified),entity_list,ownership_reach,EV-020,medium

@@ -1,0 +1,97 @@
+{
+  "regulation": "Uyghur Forced Labor Prevention Act (UFLPA)",
+  "citation": "Public Law 117-78 (23 Dec 2021); rebuttable presumption effective 21 Jun 2022",
+  "product_chain": "Solar PV: polysilicon → ingots/wafers → cells → modules",
+  "destination_market": "United States imports",
+  "layer1": {
+    "target_set": [
+      "Goods mined, produced or manufactured wholly or in part in the Xinjiang Uyghur Autonomous Region",
+      "Goods produced by an entity on the UFLPA Entity List (snapshot: 187 entities after the 3 Aug 2026 update; 144 before)"
+    ],
+    "presumption": "Rebuttable. The importer must show, by clear and convincing evidence, that goods were not made with forced labour, and must fully respond to CBP requests.",
+    "reach": "'Wholly or in part', so in principle there is no tier limit",
+    "de_minimis": "None in the statute. Whether CBP applies one in practice is an open research item.",
+    "note": "Layer 1 produces no number. It sets the theoretical maximum that Layer 3 tests against."
+  },
+  "stages": [
+    {"id": "S1", "label": "Polysilicon", "hs": ["2804.61"], "role": "upstream"},
+    {"id": "S2", "label": "Ingots & wafers", "hs": ["3818.00"], "role": "upstream"},
+    {"id": "S3", "label": "PV cells", "hs": ["8541.42"], "role": "market"},
+    {"id": "S4", "label": "PV modules", "hs": ["8541.43"], "role": "market"}
+  ],
+  "exposure_levels": [
+    {"id": "E0", "label": "Listed", "meaning": "Entity is on the UFLPA Entity List", "confidence": "high", "dial": "tier_depth", "position": 0},
+    {"id": "E1", "label": "Direct", "meaning": "Tier-1 trade with a listed or Xinjiang-based entity", "confidence": "medium-high", "dial": "tier_depth", "position": 1},
+    {"id": "E2", "label": "Sub-tier (2–3)", "meaning": "A listed or Xinjiang entity at tier 2–3", "confidence": "medium", "dial": "tier_depth", "position": 2},
+    {"id": "E3", "label": "Product-relevant (2–4)", "meaning": "A product-relevant link at tiers 2–4 (Sayari Product Blueprint)", "confidence": "medium", "dial": "tier_depth", "position": 3},
+    {"id": "A1", "label": "Ownership-adjacent", "meaning": "One hop from a listed entity (any relationship)", "confidence": "low", "dial": "ownership_reach"},
+    {"id": "R1", "label": "Research-named", "meaning": "Named in independent research (ASPI, Sheffield Hallam), not necessarily on the Entity List", "confidence": "low-medium", "dial": "trigger_scope"}
+  ],
+  "risk_factor_map": {
+    "forced_labor_xinjiang_uflpa": {"level": "E0", "scope": "entity_list"},
+    "forced_labor_uflpa_origin_direct": {"level": "E1", "scope": "entity_list"},
+    "forced_labor_xinjiang_origin_direct": {"level": "E1", "scope": "xinjiang"},
+    "forced_labor_uflpa_origin_subtier": {"level": "E2", "scope": "entity_list"},
+    "forced_labor_xinjiang_origin_subtier": {"level": "E2", "scope": "xinjiang"},
+    "forced_labor_uflpa_origin_subtier_product_blueprint": {"level": "E3", "scope": "entity_list"},
+    "forced_labor_xinjiang_origin_subtier_product_blueprint": {"level": "E3", "scope": "xinjiang"},
+    "forced_labor_xinjiang_uflpa_adjacent": {"level": "A1", "scope": "entity_list"},
+    "aspi_uyghur_forced_labor_report_entity": {"level": "E0", "scope": "research"},
+    "forced_labor_aspi_origin_direct": {"level": "E1", "scope": "research"},
+    "forced_labor_aspi_origin_subtier": {"level": "E2", "scope": "research"},
+    "forced_labor_aspi_origin_subtier_product_blueprint": {"level": "E3", "scope": "research"},
+    "forced_labor_sheffield_hallam_university_reports_origin_direct": {"level": "E1", "scope": "research"},
+    "forced_labor_sheffield_hallam_university_reports_origin_subtier": {"level": "E2", "scope": "research"},
+    "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint": {"level": "E3", "scope": "research"}
+  },
+  "dials": {
+    "tier_depth": {
+      "label": "Tier depth",
+      "question": "How far upstream does the rule look?",
+      "positions": [
+        {"id": "E0", "label": "Listed only"},
+        {"id": "E1", "label": "Direct suppliers"},
+        {"id": "E2", "label": "Tiers 2–3"},
+        {"id": "E3", "label": "Tiers 2–4, product-relevant"}
+      ],
+      "default": "E1"
+    },
+    "trigger_scope": {
+      "label": "Trigger scope",
+      "question": "Which entities count as a trigger?",
+      "positions": [
+        {"id": "entity_list", "label": "Entity List only"},
+        {"id": "xinjiang", "label": "+ Xinjiang-based"},
+        {"id": "research", "label": "+ Research-named"}
+      ],
+      "default": "xinjiang"
+    },
+    "ownership_reach": {
+      "label": "Ownership reach",
+      "question": "Do ownership or control links count?",
+      "positions": [
+        {"id": "off", "label": "Listed entity only"},
+        {"id": "one_hop", "label": "+ One hop adjacent"}
+      ],
+      "default": "off"
+    },
+    "value_basis": {
+      "label": "Value basis",
+      "question": "What do we count?",
+      "positions": [
+        {"id": "value", "label": "Share of import value"},
+        {"id": "count", "label": "Count of exporters"}
+      ],
+      "default": "value"
+    }
+  },
+  "cliff_rule": {"min_ratio": 2.0, "min_share_pp": 5.0, "note": "A step is a cliff if the exposed value at least doubles AND the step adds at least 5 percentage points of market share (spec §12)"},
+  "significant_disruption_pct": 20,
+  "lookback_days": 730,
+  "replacement_time_assumption": {
+    "months_low": 6, "months_high": 18,
+    "label": "Months to qualify and ramp a new module supplier",
+    "status": "assumption",
+    "source": "Sector assumption, not yet sourced. Replace with a cited industry estimate (see pipeline/notes)."
+  }
+}

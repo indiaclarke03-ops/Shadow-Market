@@ -1,0 +1,1689 @@
+{
+ "built": "2026-11-15",
+ "snapshot": null,
+ "rules": {
+  "regulation": "Uyghur Forced Labor Prevention Act (UFLPA)",
+  "citation": "Public Law 117-78 (23 Dec 2021); rebuttable presumption effective 21 Jun 2022",
+  "product_chain": "Solar PV: polysilicon → ingots/wafers → cells → modules",
+  "destination_market": "United States imports",
+  "layer1": {
+   "target_set": [
+    "Goods mined, produced or manufactured wholly or in part in the Xinjiang Uyghur Autonomous Region",
+    "Goods produced by an entity on the UFLPA Entity List (snapshot: 187 entities after the 3 Aug 2026 update; 144 before)"
+   ],
+   "presumption": "Rebuttable. The importer must show, by clear and convincing evidence, that goods were not made with forced labour, and must fully respond to CBP requests.",
+   "reach": "'Wholly or in part', so in principle there is no tier limit",
+   "de_minimis": "None in the statute. Whether CBP applies one in practice is an open research item.",
+   "note": "Layer 1 produces no number. It sets the theoretical maximum that Layer 3 tests against."
+  },
+  "stages": [
+   {
+    "id": "S1",
+    "label": "Polysilicon",
+    "hs": [
+     "2804.61"
+    ],
+    "role": "upstream"
+   },
+   {
+    "id": "S2",
+    "label": "Ingots & wafers",
+    "hs": [
+     "3818.00"
+    ],
+    "role": "upstream"
+   },
+   {
+    "id": "S3",
+    "label": "PV cells",
+    "hs": [
+     "8541.42"
+    ],
+    "role": "market"
+   },
+   {
+    "id": "S4",
+    "label": "PV modules",
+    "hs": [
+     "8541.43"
+    ],
+    "role": "market"
+   }
+  ],
+  "exposure_levels": [
+   {
+    "id": "E0",
+    "label": "Listed",
+    "meaning": "Entity is on the UFLPA Entity List",
+    "confidence": "high",
+    "dial": "tier_depth",
+    "position": 0
+   },
+   {
+    "id": "E1",
+    "label": "Direct",
+    "meaning": "Tier-1 trade with a listed or Xinjiang-based entity",
+    "confidence": "medium-high",
+    "dial": "tier_depth",
+    "position": 1
+   },
+   {
+    "id": "E2",
+    "label": "Sub-tier (2–3)",
+    "meaning": "A listed or Xinjiang entity at tier 2–3",
+    "confidence": "medium",
+    "dial": "tier_depth",
+    "position": 2
+   },
+   {
+    "id": "E3",
+    "label": "Product-relevant (2–4)",
+    "meaning": "A product-relevant link at tiers 2–4 (Sayari Product Blueprint)",
+    "confidence": "medium",
+    "dial": "tier_depth",
+    "position": 3
+   },
+   {
+    "id": "A1",
+    "label": "Ownership-adjacent",
+    "meaning": "One hop from a listed entity (any relationship)",
+    "confidence": "low",
+    "dial": "ownership_reach"
+   },
+   {
+    "id": "R1",
+    "label": "Research-named",
+    "meaning": "Named in independent research (ASPI, Sheffield Hallam), not necessarily on the Entity List",
+    "confidence": "low-medium",
+    "dial": "trigger_scope"
+   }
+  ],
+  "risk_factor_map": {
+   "forced_labor_xinjiang_uflpa": {
+    "level": "E0",
+    "scope": "entity_list"
+   },
+   "forced_labor_uflpa_origin_direct": {
+    "level": "E1",
+    "scope": "entity_list"
+   },
+   "forced_labor_xinjiang_origin_direct": {
+    "level": "E1",
+    "scope": "xinjiang"
+   },
+   "forced_labor_uflpa_origin_subtier": {
+    "level": "E2",
+    "scope": "entity_list"
+   },
+   "forced_labor_xinjiang_origin_subtier": {
+    "level": "E2",
+    "scope": "xinjiang"
+   },
+   "forced_labor_uflpa_origin_subtier_product_blueprint": {
+    "level": "E3",
+    "scope": "entity_list"
+   },
+   "forced_labor_xinjiang_origin_subtier_product_blueprint": {
+    "level": "E3",
+    "scope": "xinjiang"
+   },
+   "forced_labor_xinjiang_uflpa_adjacent": {
+    "level": "A1",
+    "scope": "entity_list"
+   },
+   "aspi_uyghur_forced_labor_report_entity": {
+    "level": "E0",
+    "scope": "research"
+   },
+   "forced_labor_aspi_origin_direct": {
+    "level": "E1",
+    "scope": "research"
+   },
+   "forced_labor_aspi_origin_subtier": {
+    "level": "E2",
+    "scope": "research"
+   },
+   "forced_labor_aspi_origin_subtier_product_blueprint": {
+    "level": "E3",
+    "scope": "research"
+   },
+   "forced_labor_sheffield_hallam_university_reports_origin_direct": {
+    "level": "E1",
+    "scope": "research"
+   },
+   "forced_labor_sheffield_hallam_university_reports_origin_subtier": {
+    "level": "E2",
+    "scope": "research"
+   },
+   "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint": {
+    "level": "E3",
+    "scope": "research"
+   }
+  },
+  "dials": {
+   "tier_depth": {
+    "label": "Tier depth",
+    "question": "How far upstream does the rule look?",
+    "positions": [
+     {
+      "id": "E0",
+      "label": "Listed only"
+     },
+     {
+      "id": "E1",
+      "label": "Direct suppliers"
+     },
+     {
+      "id": "E2",
+      "label": "Tiers 2–3"
+     },
+     {
+      "id": "E3",
+      "label": "Tiers 2–4, product-relevant"
+     }
+    ],
+    "default": "E1"
+   },
+   "trigger_scope": {
+    "label": "Trigger scope",
+    "question": "Which entities count as a trigger?",
+    "positions": [
+     {
+      "id": "entity_list",
+      "label": "Entity List only"
+     },
+     {
+      "id": "xinjiang",
+      "label": "+ Xinjiang-based"
+     },
+     {
+      "id": "research",
+      "label": "+ Research-named"
+     }
+    ],
+    "default": "xinjiang"
+   },
+   "ownership_reach": {
+    "label": "Ownership reach",
+    "question": "Do ownership or control links count?",
+    "positions": [
+     {
+      "id": "off",
+      "label": "Listed entity only"
+     },
+     {
+      "id": "one_hop",
+      "label": "+ One hop adjacent"
+     }
+    ],
+    "default": "off"
+   },
+   "value_basis": {
+    "label": "Value basis",
+    "question": "What do we count?",
+    "positions": [
+     {
+      "id": "value",
+      "label": "Share of import value"
+     },
+     {
+      "id": "count",
+      "label": "Count of exporters"
+     }
+    ],
+    "default": "value"
+   }
+  },
+  "cliff_rule": {
+   "min_ratio": 2.0,
+   "min_share_pp": 5.0,
+   "note": "A step is a cliff if the exposed value at least doubles AND the step adds at least 5 percentage points of market share (spec §12)"
+  },
+  "significant_disruption_pct": 20,
+  "lookback_days": 730,
+  "replacement_time_assumption": {
+   "months_low": 6,
+   "months_high": 18,
+   "label": "Months to qualify and ramp a new module supplier",
+   "status": "assumption",
+   "source": "Sector assumption, not yet sourced. Replace with a cited industry estimate (see pipeline/notes)."
+  }
+ },
+ "layer2": {
+  "summary": {},
+  "stats": [],
+  "cases": [],
+  "entity_list_history": []
+ },
+ "layer3": {
+  "status": "pending",
+  "reason": "No Sayari snapshot yet: data/derived/exporters.csv is missing."
+ },
+ "tiers": {
+  "status": "pending"
+ },
+ "evidence": {
+  "sources": [
+   {
+    "source_id": "EV-001",
+    "title": "Uyghur Forced Labor Prevention Act, Public Law 117-78 (135 Stat. 1525)",
+    "publisher": "U.S. Congress",
+    "date": "2021-12-23",
+    "url": "https://www.congress.gov/bill/117th-congress/house-bill/6256/text",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Statute. Sec. 3(a) presumption for goods 'wholly or in part' from XUAR or listed entities; Sec. 3(b) exception requires full compliance with guidance + clear and convincing evidence; Sec. 2(d)(2)(B)(viii) mandates cotton, tomatoes, polysilicon as high-priority sectors."
+   },
+   {
+    "source_id": "EV-002",
+    "title": "The Department of Homeland Security Issues Withhold Release Order on Silica-Based Products Made by Forced Labor in Xinjiang",
+    "publisher": "U.S. Customs and Border Protection",
+    "date": "2021-06-24",
+    "url": "https://www.cbp.gov/newsroom/national-media-release/department-homeland-security-issues-withhold-release-order-silica",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Hoshine WRO; applies to Hoshine and its subsidiaries and to goods derived from its silica-based products (e.g., polysilicon). Notes June 2021 DOL listing of Xinjiang polysilicon and BIS licence requirements on Xinjiang polysilicon producers."
+   },
+   {
+    "source_id": "EV-003",
+    "title": "Strategy to Prevent the Importation of Goods Mined, Produced, or Manufactured with Forced Labor in the People's Republic of China (UFLPA Strategy)",
+    "publisher": "DHS / Forced Labor Enforcement Task Force",
+    "date": "2022-06-17",
+    "url": "https://www.dhs.gov/sites/default/files/2022-06/22_0617_fletf_uflpa-strategy.pdf",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Initial 20-entity list sourced from existing CBP WROs and BIS Entity List; importer guidance on tracing 'from raw materials to finished good'; summarises 180 public comments and April 8 2022 hearing."
+   },
+   {
+    "source_id": "EV-004",
+    "title": "UFLPA Operational Guidance for Importers (CBP Pub. 1793-0522)",
+    "publisher": "U.S. Customs and Border Protection",
+    "date": "2022-06-13",
+    "url": "https://www.cbp.gov/sites/default/files/assets/documents/2022-Jun/CBP_Guidance_for_Importers_for_UFLPA_13_June_2022.pdf",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Polysilicon annex: flow chart from location of quartzite to polysilicon to downstream facilities; warns factories sourcing both XUAR and non-XUAR polysilicon risk detention. Superseded June 2026 by EV-013."
+   },
+   {
+    "source_id": "EV-005",
+    "title": "2023 Updates to the Strategy to Prevent the Importation of Goods Mined, Produced, or Manufactured with Forced Labor in the PRC",
+    "publisher": "DHS / FLETF",
+    "date": "2023-08-01",
+    "url": "https://www.dhs.gov/sites/default/files/2023-08/23_0728_plcy_uflpa-strategy-2023-update-508.pdf",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "CBP risk-based targeting prioritises direct XUAR imports, listed entities, third-country manufacturing/transshipment, and non-XUAR entities related (parent/subsidiary/affiliate) to XUAR entities that are also likely to contain XUAR inputs."
+   },
+   {
+    "source_id": "EV-006",
+    "title": "2024 Updates to the Strategy to Prevent the Importation of Goods Mined, Produced, or Manufactured with Forced Labor in the PRC",
+    "publisher": "DHS / FLETF",
+    "date": "2024-07-09",
+    "url": "https://www.dhs.gov/sites/default/files/2024-07/2024%20Updates%20to%20the%20Strategy%20to%20Prevent%20the%20Importation%20of%20Goods%20Mined%2C%20Produced%2C%20or%20Manufactured%20with%20Forced%20Labor%20in%20the%20People%E2%80%99s%20Republic%20of%20China.pdf",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "List grew 20 -> 68; FLETF 'prioritized its efforts to identify entities who have egregiously, and with corroborated evidence' met criteria; improved, 'scalable' listing process; added PVC, aluminum, seafood sectors."
+   },
+   {
+    "source_id": "EV-007",
+    "title": "2025 Updates to the Strategy to Prevent the Importation of Goods Mined, Produced, or Manufactured with Forced Labor in the PRC",
+    "publisher": "DHS / FLETF",
+    "date": "2025-08-19",
+    "url": "https://www.dhs.gov/sites/default/files/2025-08/25_0819_plcy_uflpa-strategy-2025-update-508.pdf",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Adds caustic soda, copper, lithium, red dates, steel as high-priority sectors; list at 144; DHS page states >16,700 shipments reviewed (~$3.7bn). No 2026 update located (see open questions)."
+   },
+   {
+    "source_id": "EV-008",
+    "title": "UFLPA Frequently Asked Questions",
+    "publisher": "U.S. Department of Homeland Security",
+    "date": "2026",
+    "url": "https://www.dhs.gov/uflpa-frequently-asked-questions",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Living page (accessed date governs). From May 16 2024 FLETF counts named subsidiaries/affiliates individually (+9 entities). Presumption covers goods made elsewhere that incorporate XUAR or listed-entity inputs. Removal process via FLETF Chair."
+   },
+   {
+    "source_id": "EV-009",
+    "title": "FAQs: Uyghur Forced Labor Prevention Act (UFLPA) Enforcement",
+    "publisher": "U.S. Customs and Border Protection",
+    "date": "2026",
+    "url": "https://www.cbp.gov/trade/forced-labor/faqs-uflpa-enforcement",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Living page. Summary tracing report for supply chains identical to one previously cleared cuts detention to avg 10-14 days; same applies to commingled supply chains."
+   },
+   {
+    "source_id": "EV-010",
+    "title": "CSMS # 63743803 - DHS Places New Additions to UFLPA Entity List",
+    "publisher": "U.S. Customs and Border Protection (CSMS bulletin)",
+    "date": "2025-01-14",
+    "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/3cca73b",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "37 additions effective 2025-01-15 (total 144) incl. Donghai JA Solar Technology (Jiangsu; sources polysilicon from XUAR producer), Hongyuan Green Energy + subsidiary (Inner Mongolia), Shuangliang Silicon; Zijin Mining + Xinjiang subsidiaries."
+   },
+   {
+    "source_id": "EV-011",
+    "title": "Notice Regarding the Uyghur Forced Labor Prevention Act Entity List (FR Doc. 2026-15628, 91 FR 48913)",
+    "publisher": "DHS / FLETF (Federal Register)",
+    "date": "2026-08-03",
+    "url": "https://www.federalregister.gov/documents/2026/08/03/2026-15628/notice-regarding-the-uyghur-forced-labor-prevention-act-entity-list",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Supersedes the Jan 15 2025 list; adds 43 (total 187). TBEA listed under 2(d)(2)(B)(v) for sourcing aluminum (and Tianchi Energy coal) from XUAR; technical correction renames Xinjiang GCL to Xinjiang Goens Energy Technology (polysilicon). Tianshan Aluminum listed with seven named subsidiaries."
+   },
+   {
+    "source_id": "EV-012",
+    "title": "Notice Regarding the Uyghur Forced Labor Prevention Act Entity List (FR Doc. 2026-22094)",
+    "publisher": "DHS / FLETF (Federal Register)",
+    "date": "2026-10-29",
+    "url": "https://www.federalregister.gov/documents/2026/10/29/2026-22094/notice-regarding-the-uyghur-forced-labor-prevention-act-entity-list",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Adds BGI Genomics, MGI Tech, Shenzhen BGI Technology (total 190). Non-solar; used for timeline/trigger-scope trend only."
+   },
+   {
+    "source_id": "EV-013",
+    "title": "CBP Forced Labor Enforcement Operational Guidance for Importers (CBP Pub. 5560-0526)",
+    "publisher": "U.S. Customs and Border Protection",
+    "date": "2026-06-12",
+    "url": "https://www.cbp.gov/sites/default/files/2026-06/fld_importer_guidance_final_06092026_0.pdf",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Consolidates UFLPA, Sec. 307 and CAATSA guidance; supersedes June 2022 guidance. Silica-based products annex keeps quartzite-to-import flow chart and commingling warning. Release date per CBP document page."
+   },
+   {
+    "source_id": "EV-014",
+    "title": "Uyghur Forced Labor Prevention Act (UFLPA) Enforcement Statistics Dashboard Guide",
+    "publisher": "U.S. Customs and Border Protection",
+    "date": "2026-01",
+    "url": "https://www.cbp.gov/sites/default/files/2026-01/forced-labor-dashboard-guide.pdf",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Defines 'shipment' as individual import transaction; 'stopped' = automated hold, not necessarily physical detention. Example: 65,707 stopped shipments ($3.91bn) through 2025-11-24. Solar sector referenced via HTS 8541."
+   },
+   {
+    "source_id": "EV-015",
+    "title": "Forced Labor Imports: DHS Increased Resources and Enforcement Efforts, but Needs to Improve Workforce Planning and Monitoring (GAO-21-106)",
+    "publisher": "U.S. Government Accountability Office",
+    "date": "2020",
+    "url": "https://www.gao.gov/products/gao-21-106",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Pre-UFLPA capacity baseline: Forced Labor Division spending ~$1m (FY18) to $1.4m (FY19); staff shortage suspended some investigations; CBP reported completing workforce assessment by March 2023. No UFLPA-specific GAO report located."
+   },
+   {
+    "source_id": "EV-016",
+    "title": "U.S. Customs and Border Protection Budget Overview, Fiscal Year 2025 Congressional Justification",
+    "publisher": "U.S. Department of Homeland Security",
+    "date": "2024-03-14",
+    "url": "https://www.dhs.gov/sites/default/files/2024-04/2024_0314_us_customs_and_border_protection.pdf",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "FY2022-23 appropriations supported hiring 338 positions CBP-wide for UFLPA/forced labor; FY2025 request +$19.9m to sustain 336 FTE and tracing technology."
+   },
+   {
+    "source_id": "EV-017",
+    "title": "Joint Explanatory Statement, Division C - Department of Homeland Security Appropriations (FY2026)",
+    "publisher": "U.S. House of Representatives",
+    "date": "2026-01-19",
+    "url": "https://docs.house.gov/billsthisweek/20260119/DEF%20LHHS%20HS%20THUD%20-%20JES%20-%20Division%20C%20-%20Homeland%20-%201-19-2026%20-%20Reduced%20File%20Size.pdf",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Directs CBP to allocate not less than FY2025 levels to forced-labor enforcement and to brief on UFLPA implementation incl. transshipment of XUAR-related goods."
+   },
+   {
+    "source_id": "EV-018",
+    "title": "Letter from Reps. DeLauro, Krishnamoorthi et al. to DHS and CBP on UFLPA enforcement",
+    "publisher": "Office of Rep. Rosa DeLauro (U.S. House)",
+    "date": "2025-12-15",
+    "url": "https://delauro.house.gov/sites/evo-subsites/delauro.house.gov/files/evo-media-document/december-2025-letter-from-reps-delauro-krishnamoorthi-et-al-to-dhs-cbp.pdf",
+    "source_type": "primary_official",
+    "partisan": "y",
+    "accessed": "2026-11-15",
+    "notes": "Democratic members' oversight letter. Cites CBP data: avg 1,062 stopped shipments/month Nov 2024-Mar 2025 vs 224/month Apr-Aug 2025; zero list additions since 2025-01-15; asks whether resources diverted to tariffs and about cuts at TIP/DRL/ILAB."
+   },
+   {
+    "source_id": "EV-019",
+    "title": "Select Committee on China and CECC Back DHS's Enforcement of UFLPA (letter requesting briefing)",
+    "publisher": "House Select Committee on the CCP",
+    "date": "2026-09",
+    "url": "http://chinaselectcommittee.house.gov/media/press-releases/select-committee-on-china-and-congressional-executive-commission-on-china-back-dhs-s-enforcement-of-uflpa",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Bipartisan (Moolenaar, Khanna, Smith, Merkley, McGovern, Thompson et al.). Requests briefing on priorities incl. polysilicon, barriers/resource constraints to listing, evidentiary standards, staffing changes since 2024. Date approx. (InsideTrade report dated 2026-09-03)."
+   },
+   {
+    "source_id": "EV-020",
+    "title": "One Year Suspension of Expansion of End-User Controls for Affiliates of Certain Listed Entities (FR Doc. 2025-19846)",
+    "publisher": "Bureau of Industry and Security, Dept. of Commerce (Federal Register)",
+    "date": "2025-11-12",
+    "url": "https://www.federalregister.gov/documents/2025/11/12/2025-19846/one-year-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed-entities",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "BIS (not UFLPA) Affiliates Rule of 2025-09-30 applied Entity List restrictions to >=50%-owned affiliates; suspended 2025-11-10 to 2026-11-09, scheduled to resume 2026-11-10. Comparator for the ownership_reach dial."
+   },
+   {
+    "source_id": "EV-021",
+    "title": "Camel Group Co., Ltd. v. United States, Slip Op. 26-95 (Ct. Int'l Trade)",
+    "publisher": "U.S. Court of International Trade",
+    "date": "2026",
+    "url": "https://www.cit.uscourts.gov/sites/cit/files/26-95.pdf",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "APA review of FLETF refusal to remove Camel Group (listed 2023-08-02); remanded for lack of reasoned decision-making, without vacatur; cites Ninestar II. Published in Customs Bulletin Vol. 60 No. 26 (2026-09-02); exact opinion date not captured."
+   },
+   {
+    "source_id": "EV-022",
+    "title": "DHS Announces the Addition of 43 Companies to the UFLPA Entity List",
+    "publisher": "U.S. Department of Homeland Security",
+    "date": "2026-07-31",
+    "url": "https://www.dhs.gov/news/2026/07/31/dhs-announces-addition-43-companies-uflpa-entity-list",
+    "source_type": "primary_official",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Press release: 187 entities, '30% increase', 'single largest-ever expansion'; sectors aluminum, apparel, copper, cotton, tomatoes; frames additions as protecting American businesses from unfair competition."
+   },
+   {
+    "source_id": "EV-023",
+    "title": "Comment Submitted by Solar Energy Industries Association (DHS-2022-0001-0128), 'SEIA UFLPA Comments 3.10.2022'",
+    "publisher": "Solar Energy Industries Association via Regulations.gov",
+    "date": "2022-03-10",
+    "url": "https://downloads.regulations.gov/DHS-2022-0001-0128/attachment_1.pdf",
+    "source_type": "formal_submission",
+    "partisan": "y",
+    "accessed": "2026-11-15",
+    "notes": "Trade association comment to FLETF docket. Recommends public-private partnership, recognition of verified importers (traceability programme with third-party audit), pre-detention procedures (CF-28 / RASA) before detention. Reliable for what was said, not for truth of claims."
+   },
+   {
+    "source_id": "EV-024",
+    "title": "Comment Submitted by American Clean Power Association (DHS-2022-0001-0163), 'ACP - UFLPA Comments AS FILED'",
+    "publisher": "American Clean Power Association via Regulations.gov",
+    "date": "2022-03-10",
+    "url": "https://downloads.regulations.gov/DHS-2022-0001-0163/attachment_1.pdf",
+    "source_type": "formal_submission",
+    "partisan": "y",
+    "accessed": "2026-11-15",
+    "notes": "Describes Hoshine WRO detentions from Aug 2021 affecting suppliers of ~two-thirds of US modules; asks that a source shown XUAR-free not be re-examined across detentions and that detentions not rest on outdated information."
+   },
+   {
+    "source_id": "EV-025",
+    "title": "Comment Submitted by First Solar, Inc. (DHS-2022-0001-0175), 'Public Comments on UFLPA Enforcement'",
+    "publisher": "First Solar, Inc. via Regulations.gov",
+    "date": "2022-03-10",
+    "url": "https://downloads.regulations.gov/DHS-2022-0001-0175/attachment_1.pdf",
+    "source_type": "formal_submission",
+    "partisan": "y",
+    "accessed": "2026-11-15",
+    "notes": "US thin-film maker (no polysilicon) with commercial interest in strict enforcement. Urges scrutiny of makers with long-term supply agreements with XUAR polysilicon producers or producers with XUAR subsidiaries, and ties to BIS-listed entities; notes polysilicon blending and multiple BOMs hamper traceability."
+   },
+   {
+    "source_id": "EV-026",
+    "title": "First Solar, Inc. Form 10-K for fiscal year ended 2025-12-31",
+    "publisher": "First Solar, Inc. (SEC EDGAR)",
+    "date": "2026-02",
+    "url": "https://www.sec.gov/Archives/edgar/data/1274494/000127449426000021/fslr-20251231.htm",
+    "source_type": "formal_submission",
+    "partisan": "y",
+    "accessed": "2026-11-15",
+    "notes": "Risk factors / business: does not use polysilicon, mitigating UFLPA disruption; main competitors are crystalline-silicon makers 'the majority of which are linked to China'; competes on responsible sourcing."
+   },
+   {
+    "source_id": "EV-027",
+    "title": "Maxeon Solar Technologies Form 20-F for fiscal year 2024",
+    "publisher": "Maxeon Solar Technologies (SEC EDGAR)",
+    "date": "2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1796898/000179689825000031/maxn-20241231.htm",
+    "source_type": "formal_submission",
+    "partisan": "y",
+    "accessed": "2026-11-15",
+    "notes": "Discloses UFLPA detentions of US imports since July 2024; revenue decline of $614.1m attributed primarily to detentions; CBP denied protests late March 2025; CIT action filed. Describes Hoshine-era 'lengthy and arduous process' of proving no forced labor 'at the furthest upstream stages'."
+   },
+   {
+    "source_id": "EV-028",
+    "title": "In Broad Daylight: Uyghur Forced Labour and Global Solar Supply Chains",
+    "publisher": "Sheffield Hallam University, Helena Kennedy Centre (Murphy & Elima)",
+    "date": "2021-05",
+    "url": "https://www.shu.ac.uk/-/media/home/research/helena-kennedy-centre/projects/pdfs/evidence-base/in-broad-daylight.pdf",
+    "source_type": "independent_analysis",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "XUAR ~45% of 2020 solar-grade polysilicon; traces quartz to module; names Hoshine, Daqo, GCL, TBEA/Xinte, East Hope; argues manufacturers must scrutinise down to raw quartz because MGS and polysilicon are blended."
+   },
+   {
+    "source_id": "EV-029",
+    "title": "Over-Exposed: Uyghur Region Exposure Assessment for Solar Industry Sourcing",
+    "publisher": "Sheffield Hallam University (Crawford & Murphy)",
+    "date": "2023-11",
+    "url": "https://www.shu.ac.uk/-/media/home/research/helena-kennedy-centre/projects/over-exposed/crawford-murphy-et-al--over-exposed-november-2023.pdf",
+    "source_type": "independent_analysis",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Published July 2023, updated Nov 2023. XUAR ~35% of 2022 polysilicon, up to 32% of global MGS; finds bifurcated supply chains; argues industry treated polysilicon as a 'raw material', overlooking quartz/MGS tiers."
+   },
+   {
+    "source_id": "EV-030",
+    "title": "Section 307 and Imports Produced by Forced Labor (IF11360)",
+    "publisher": "Congressional Research Service",
+    "date": "2026",
+    "url": "https://www.congress.gov/crs-product/IF11360",
+    "source_type": "independent_analysis",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "CRS (nonpartisan, congressional). As of March 2026 ~42,000 shipments detained ($3.9bn); list grew 20 -> nearly 150; notes Dec 2025 members' letter on 2025 decline; cites 2020 GAO staff-shortage finding and later funding increases."
+   },
+   {
+    "source_id": "EV-031",
+    "title": "Allies seek to follow U.S. lead on Xinjiang forced labor ban - U.S. official",
+    "publisher": "Reuters (via Yahoo Finance)",
+    "date": "2022-07-18",
+    "url": "https://au.finance.yahoo.com/news/allies-seek-u-lead-xinjiang-221302885.html",
+    "source_type": "independent_analysis",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Reports lawmakers asked CBP why three major Chinese solar companies were excluded from the list; notes expansion could threaten solar supply and decarbonisation goals; DOL's Thea Lee: 'competing objectives within an administration'. Underlying letter not located."
+   },
+   {
+    "source_id": "EV-032",
+    "title": "Exclusive: U.S. blocks more than 1,000 solar shipments over Chinese slave labor concerns",
+    "publisher": "Reuters (via Yahoo Finance)",
+    "date": "2022-11",
+    "url": "https://finance.yahoo.com/news/exclusive-u-blocks-more-1-023239383.html",
+    "source_type": "independent_analysis",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "CBP public-records response: 1,053 solar shipments detained 2022-06-21 to 2022-10-25, none released; ACP: Q3 installs -23%, ~23 GW delayed; CBP: timing 'contingent upon how quickly an importer is able to submit sufficient documentation'."
+   },
+   {
+    "source_id": "EV-033",
+    "title": "Exclusive: U.S. solar panel imports from China grow, alleviating gridlock, officials say",
+    "publisher": "Reuters (via Yahoo Finance)",
+    "date": "2023-03",
+    "url": "https://ca.finance.yahoo.com/news/u-solar-panel-imports-china-225651408.html",
+    "source_type": "independent_analysis",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "John Podesta (CERAWeek): 'clearer guidance out'; Trina: >900 MW cleared in four months, <1% detained; CBP had released 374 of 1,433 electronics shipments. Date month-level (CERAWeek week)."
+   },
+   {
+    "source_id": "EV-034",
+    "title": "Solar dominates import seizures after US ban on Chinese forced labor goods",
+    "publisher": "Reuters (via Yahoo Finance)",
+    "date": "2026-02-24",
+    "url": "https://finance.yahoo.com/news/solar-dominates-import-seizures-us-212231825.html",
+    "source_type": "independent_analysis",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "New CBP HTS breakdown: HTS 8541 (incl. solar) $3.26bn of $3.94bn stopped (82%); >79% of that value released; stopped value 2025 $187.7m vs $1.78bn 2024; most from Malaysia, Vietnam, Thailand."
+   },
+   {
+    "source_id": "EV-035",
+    "title": "What's Next for the Uyghur Forced Labor Prevention Act?",
+    "publisher": "Center for Strategic and International Studies",
+    "date": "2023",
+    "url": "https://www.csis.org/analysis/whats-next-uyghur-forced-labor-prevention-act",
+    "source_type": "independent_analysis",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Q3 2022: >1,500 stops, >1,000 electronics (mostly solar), 69% from Malaysia/Vietnam; DHS under pressure to expand list; stopping all research-named categories 'an impossible task for CBP' even with added resources. Exact date not captured."
+   },
+   {
+    "source_id": "EV-036",
+    "title": "Assessing the Impact of the Uyghur Forced Labor Prevention Act After Three Years",
+    "publisher": "Center for Strategic and International Studies",
+    "date": "2025",
+    "url": "https://www.csis.org/analysis/assessing-impact-uyghur-forced-labor-prevention-act-after-three-years",
+    "source_type": "independent_analysis",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Citing Bernreuter: XUAR polysilicon share ~41% -> 24.8% by capacity since 2021; XUAR share of China MGS rose to 53%; separate US-bound lines. Notes no new entities and falling detentions in 2025; 'political will is critical'. Data to Aug 2025."
+   },
+   {
+    "source_id": "EV-037",
+    "title": "Forced Labor in Global Supply Chains: Trade Enforcement (RR-A2534-1)",
+    "publisher": "RAND Corporation",
+    "date": "2024",
+    "url": "https://www.rand.org/content/dam/rand/pubs/research_reports/RRA2500/RRA2534-1/RAND_RRA2534-1.pdf",
+    "source_type": "independent_analysis",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Using FactSet relationship data: US businesses with 2nd-4th tier links to XUAR entities persisting or growing since UFLPA; share of shipments from XUAR-connected global firms roughly constant. Authors caution apparent increase may reflect better data."
+   },
+   {
+    "source_id": "EV-038",
+    "title": "Experts: UFLPA Enforcement Changing as CBP Tested by Tariffs Changes",
+    "publisher": "International Trade Today",
+    "date": "2025-08-21",
+    "url": "https://internationaltradetoday.com/article/2025/08/21/experts-uflpa-enforcement-changing-as-cbp-tested-by-tariffs-changes-2508210061?BC=bc_68a7a26e611c9",
+    "source_type": "independent_analysis",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Luke Tillman (ex-CBP attorney, now LONGi general counsel - interested party): Electronics CEE stopped granting extensions in 2025; 'loss of talent at CBP'; resources 'stretched'; early-2024 questionnaire to solar importers 'best enforcement tool'."
+   },
+   {
+    "source_id": "EV-039",
+    "title": "ArentFox Schiff 2026 Forced Labor Guide for Global Businesses",
+    "publisher": "ArentFox Schiff LLP",
+    "date": "2026-02",
+    "url": "https://www.afslaw.com/sites/default/files/2026-02/ForcedLaborReport_2026.pdf",
+    "source_type": "independent_analysis",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Law-firm analysis: HTS 8541 >61% of FY2025 stopped value; solar focus driven partly by 2024 questionnaires to large importers; from April 2025 CBP sometimes excluded goods immediately, bypassing detention; refers to 'tariff-driven distractions of 2025'."
+   },
+   {
+    "source_id": "EV-040",
+    "title": "DHS Adds Three Chinese Companies to UFLPA Entity List as China Threatens Retaliation",
+    "publisher": "Brownstein Hyatt Farber Schreck",
+    "date": "2026-10",
+    "url": "https://www.bhfs.com/insight/dhs-adds-three-chinese-companies-to-uflpa-entity-list-as-china-threatens-retaliation",
+    "source_type": "independent_analysis",
+    "partisan": "n",
+    "accessed": "2026-11-15",
+    "notes": "Reports MOFCOM on 2026-08-05 put six US organisations (Altana, Responsible Business Alliance, Verite, Stratum Reservoir, Applied DNA Sciences, Human Rights in China) on its countermeasures list over Xinjiang listings; removal petitions not appealable, no decision timeline."
+   },
+   {
+    "source_id": "EV-041",
+    "title": "ANSI Approves New SEIA Standard to Enhance Solar Supply Chain Transparency",
+    "publisher": "Solar Energy Industries Association",
+    "date": "2025",
+    "url": "https://seia.org/news/ansi-approves-new-seia-standard-to-enhance-solar-supply-chain-transparency",
+    "source_type": "advocacy_industry",
+    "partisan": "y",
+    "accessed": "2026-11-15",
+    "notes": "ANSI/SEIA 101 traces origins 'from raw materials to finished goods', built on examples of shipments detained and released by CBP. Exact date not captured (listed near Oct 2025 releases)."
+   },
+   {
+    "source_id": "EV-042",
+    "title": "Coalition Urges Robust Enforcement Four Years After UFLPA Implementation",
+    "publisher": "Coalition to End Forced Labour in the Uyghur Region",
+    "date": "2026-06",
+    "url": "https://enduyghurforcedlabour.org/four-years-after-uflpa-implementation-coalition-urges-robust-enforcement",
+    "source_type": "advocacy_industry",
+    "partisan": "y",
+    "accessed": "2026-11-15",
+    "notes": "Advocacy: dashboard shows decline; no list additions since 2025-01-15; 'static list' forecloses use of presumption (Corporate Accountability Lab). Date approx. (four-year anniversary)."
+   },
+   {
+    "source_id": "EV-043",
+    "title": "China: US Law Against Uyghur Forced Labor Takes Effect",
+    "publisher": "Human Rights Watch",
+    "date": "2022-06-20",
+    "url": "https://www.hrw.org/news/2022/06/20/china-us-law-against-uyghur-forced-labor-takes-effect",
+    "source_type": "advocacy_industry",
+    "partisan": "y",
+    "accessed": "2026-11-15",
+    "notes": "Advocacy: 'clear and convincing evidence' is 'a near impossible bar' for XUAR sourcing because surveillance and threats prevent meaningful audits; urges no audits/certifications in Xinjiang."
+   }
+  ],
+  "claims": [
+   {
+    "claim_id": "C-001",
+    "claim_text": "The UFLPA presumption reaches goods mined, produced or manufactured 'wholly or in part' in the XUAR or by a listed entity, and an exception requires the importer to have fully complied with FLETF guidance, answered all CBP inquiries, and shown by clear and convincing evidence that no forced labor was used.",
+    "claim_type": "fact",
+    "dial": "tier_depth",
+    "sources": "EV-001",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "The 'wholly or in part' wording is what makes tier depth a live design question: the statute sets no tier limit, so the effective depth is set by guidance and enforcement practice."
+   },
+   {
+    "claim_id": "C-002",
+    "claim_text": "CBP's June 2022 operational guidance asked polysilicon importers for a flow chart running from the location of the quartzite through the polysilicon plant to downstream facilities, and warned that factories sourcing both XUAR and non-XUAR polysilicon risk detention because commingling is hard to rule out.",
+    "claim_type": "fact",
+    "dial": "tier_depth",
+    "sources": "EV-004",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "On paper the documentation expectation for solar goes to the raw-material tier (quartz), i.e. beyond the spec's E3 position."
+   },
+   {
+    "claim_id": "C-003",
+    "claim_text": "CBP's June 2026 consolidated guidance keeps the same quartzite-to-import mapping and commingling warning for 'silica-based products (including polysilicon)'; the documentary tracing depth expected for solar was neither narrowed nor widened between 2022 and 2026.",
+    "claim_type": "fact",
+    "dial": "tier_depth",
+    "sources": "EV-004;EV-013",
+    "confidence": "medium",
+    "counter_evidence": "Unchanged wording does not mean unchanged practice: what CBP actually accepts in applicability reviews is not public, and practitioner reports (EV-038) describe stricter handling of extensions in 2025.",
+    "notes": "Medium because the 'neither narrowed nor widened' part is our comparison of two primary texts, not a CBP statement."
+   },
+   {
+    "claim_id": "C-004",
+    "claim_text": "The FLETF Strategy (June 2022) tells importers to be able to trace the complete supply chain 'from raw materials to finished good', and allows DNA or isotopic origin testing as evidence if its reliability is demonstrated.",
+    "claim_type": "fact",
+    "dial": "tier_depth",
+    "sources": "EV-003",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": ""
+   },
+   {
+    "claim_id": "C-005",
+    "claim_text": "CBP says importers can cut detention of shipments from a previously cleared supply chain (including commingled ones) to an average of 10-14 days by filing a summary tracing report naming suppliers at every production stage.",
+    "claim_type": "fact",
+    "dial": "tier_depth",
+    "sources": "EV-009",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "This lowers the cost of meeting deep tracing for repeat importers, which matters for how disruptive a deeper tier setting would be."
+   },
+   {
+    "claim_id": "C-006",
+    "claim_text": "CBP's summary-tracing-report shortcut resembles what ACP asked for in March 2022, namely that a source already shown XUAR-free should not be re-examined in each detention. This is consistent with industry input shaping how the tracing burden is processed, not how deep it goes.",
+    "claim_type": "interpretation",
+    "dial": "tier_depth",
+    "sources": "EV-024;EV-009",
+    "confidence": "low",
+    "counter_evidence": "CBP has its own workload reasons to reuse prior reviews (see capacity claims C-033, C-034); no document links the FAQ to the ACP comment.",
+    "notes": "Our inference from timing and content only."
+   },
+   {
+    "claim_id": "C-007",
+    "claim_text": "In its March 2022 FLETF comment SEIA argued that leading importers had already shown CBP by clear and convincing evidence that their panels were free of XUAR inputs under the Hoshine WRO, and proposed recognising 'verified' importers and using information requests (CF-28) or RASA reviews before any detention.",
+    "claim_type": "position",
+    "dial": "tier_depth",
+    "sources": "EV-023",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "Confidence refers to the record of what SEIA said, not to whether the claim about importers was true. SEIA's 2022 membership included US arms of Chinese module makers (reported, not verified here)."
+   },
+   {
+    "claim_id": "C-008",
+    "claim_text": "ACP told the FLETF in March 2022 that under the Hoshine WRO, CBP detained all imports of suppliers accounting for about two-thirds of US modules from August 2021 by classifying their whole output as high risk, and asked for process changes so cleared sources are not re-examined and detentions do not rest on outdated information.",
+    "claim_type": "position",
+    "dial": "lookback",
+    "sources": "EV-024",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "Position by an industry association. The two-thirds figure is ACP's and is not independently verified."
+   },
+   {
+    "claim_id": "C-009",
+    "claim_text": "First Solar, a US thin-film maker that does not use polysilicon, urged the FLETF in March 2022 to scrutinise manufacturers with long-term supply agreements with XUAR polysilicon producers (or producers with XUAR subsidiaries) and those tied to BIS Entity List firms, and noted that polysilicon blending and multiple bills of materials per module model make tracing hard.",
+    "claim_type": "position",
+    "dial": "ownership_reach",
+    "sources": "EV-025",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "First Solar's 10-K (EV-026) says it competes partly on responsible sourcing against crystalline-silicon makers mostly linked to China, so it benefits commercially from a wider trigger and ownership reach. That is a commercial interest, not evidence of bad faith."
+   },
+   {
+    "claim_id": "C-010",
+    "claim_text": "First Solar's FY2025 10-K states it does not use polysilicon, which limits its UFLPA disruption risk, and that its main competitors are crystalline-silicon module makers 'the majority of which are linked to China'.",
+    "claim_type": "fact",
+    "dial": "general",
+    "sources": "EV-026",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "Formal submission; reliable for what the company disclosed."
+   },
+   {
+    "claim_id": "C-011",
+    "claim_text": "The initial June 2022 UFLPA Entity List (20 entities) was drawn from existing CBP Withhold Release Orders and the Commerce BIS Entity List, not from entities named only in research.",
+    "claim_type": "fact",
+    "dial": "trigger_scope",
+    "sources": "EV-003",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": ""
+   },
+   {
+    "claim_id": "C-012",
+    "claim_text": "In July 2022 Reuters reported that lawmakers had asked CBP to explain why three major Chinese solar companies were left off the list, noting that a wider scope could threaten US panel supply and the administration's decarbonisation goal; a senior Labor Department official acknowledged 'competing objectives within an administration'.",
+    "claim_type": "fact",
+    "dial": "trigger_scope",
+    "sources": "EV-031",
+    "confidence": "low",
+    "counter_evidence": "The official's remark is general and does not mention solar; she declined to comment on the solar companies. The lawmakers' letter itself was not located.",
+    "notes": "Single secondary source. The underlying letter would raise this to high."
+   },
+   {
+    "claim_id": "C-013",
+    "claim_text": "The record is consistent with a deliberate choice in 2022-2024 to keep the largest crystalline-silicon module brands off the Entity List and handle them shipment by shipment through detentions instead: the boundary was publicly contested (C-012), and the FLETF says it prioritised entities that 'egregiously, and with corroborated evidence' met the listing criteria (C-014).",
+    "claim_type": "interpretation",
+    "dial": "trigger_scope",
+    "sources": "EV-031;EV-006;EV-032",
+    "confidence": "low",
+    "counter_evidence": "Other explanations: (1) the evidentiary bar of 'reasonable cause based on specific and articulable information' and APA review of listings (C-035); (2) major brands built separate US-bound non-XUAR lines (C-030), which may have removed the factual basis for listing; (3) staff limits on case building (C-033).",
+    "notes": "Allowed only as 'consistent with'. It still needs a Layer 3 data cliff on the trigger_scope dial before it can be shown; mark as pending until the exposure curve is computed.",
+    "held": "Held under the intent rule: no Layer 3 cliff on this dial yet"
+   },
+   {
+    "claim_id": "C-014",
+    "claim_text": "The FLETF's 2024 strategy update says the list grew from 20 to 68 entities, that it 'prioritized its efforts to identify entities who have egregiously, and with corroborated evidence' met the criteria, and that it had built a 'scalable' process to list entities faster.",
+    "claim_type": "fact",
+    "dial": "trigger_scope",
+    "sources": "EV-006",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": ""
+   },
+   {
+    "claim_id": "C-015",
+    "claim_text": "The January 15 2025 additions (37 entities, bringing the total to 144) included Donghai JA Solar Technology in Jiangsu, listed under section 2(d)(2)(B)(v) for sourcing polysilicon from an XUAR producer, along with Hongyuan Green Energy and its Inner Mongolia subsidiary and Shuangliang Silicon. These are non-XUAR solar wafer, cell and module firms reached through their polysilicon sourcing.",
+    "claim_type": "fact",
+    "dial": "trigger_scope",
+    "sources": "EV-010",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "Shows the list moving from XUAR-based producers toward non-XUAR downstream solar firms through clause (v)."
+   },
+   {
+    "claim_id": "C-016",
+    "claim_text": "No entities were added to the UFLPA Entity List between January 15 2025 and August 3 2026: the August 2026 notice expressly supersedes the list published on January 15 2025.",
+    "claim_type": "fact",
+    "dial": "lookback",
+    "sources": "EV-011;EV-018;EV-042",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "The 19-month freeze is the main timing feature of the trigger_scope dial."
+   },
+   {
+    "claim_id": "C-017",
+    "claim_text": "On August 3 2026 the FLETF added 43 entities (total 187), the largest single expansion so far, aimed mainly at aluminum, apparel, copper, cotton and tomato supply chains. TBEA, which also makes high-purity polysilicon, was listed on the stated basis that it sources aluminum and its subsidiary Tianchi Energy sources coal from the XUAR. The notice also renamed listed polysilicon maker Xinjiang GCL as Xinjiang Goens Energy Technology.",
+    "claim_type": "fact",
+    "dial": "trigger_scope",
+    "sources": "EV-011;EV-022",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "DHS framed the additions partly as protecting 'American businesses from foreign competitors' unfair practices' (EV-022)."
+   },
+   {
+    "claim_id": "C-018",
+    "claim_text": "Because the presumption attaches to goods 'produced by' a listed entity whatever the listing rationale, TBEA's own polysilicon now falls within scope even though TBEA was listed for aluminum and coal. The extracted notice text does not show whether TBEA's polysilicon subsidiary Xinte Energy was named, so that output may sit outside the list unless it is covered by the XUAR-origin prong.",
+    "claim_type": "interpretation",
+    "dial": "ownership_reach",
+    "sources": "EV-011;EV-001;EV-028",
+    "confidence": "medium",
+    "counter_evidence": "Xinte's production is in the XUAR, so its polysilicon is presumptively barred under the geographic prong anyway; the ownership gap mainly matters for non-XUAR affiliates.",
+    "notes": "Reasonable reading of primary documents. Open question: check the full appendix for Xinte (the other agent's entity_list_history.csv may resolve this)."
+   },
+   {
+    "claim_id": "C-019",
+    "claim_text": "The UFLPA list covers named entities only: subsidiaries are added by name (e.g. Tianshan Aluminum 'and the seven named subsidiaries' in August 2026), and since May 16 2024 the FLETF counts each named subsidiary or affiliate as a separate entity. We found no rule extending the presumption to unnamed affiliates.",
+    "claim_type": "fact",
+    "dial": "ownership_reach",
+    "sources": "EV-008;EV-011",
+    "confidence": "medium",
+    "counter_evidence": "Absence of evidence: the statute and notices do not explicitly exclude affiliates; CBP can still target affiliates as a risk factor (C-020).",
+    "notes": "The naming practice is high confidence; 'no affiliate rule' is our reading of the primary documents, so medium overall."
+   },
+   {
+    "claim_id": "C-020",
+    "claim_text": "The FLETF's 2023 strategy update says CBP prioritises imports from non-XUAR entities that are related to an XUAR entity (as parent, subsidiary or affiliate) and are also likely to contain XUAR inputs. Ownership is a targeting factor for detentions, not an automatic trigger of the presumption.",
+    "claim_type": "fact",
+    "dial": "ownership_reach",
+    "sources": "EV-005",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "Supports the spec default of ownership reach 'Off' for the legal presumption, with A1 approximating CBP's risk targeting rather than the law."
+   },
+   {
+    "claim_id": "C-021",
+    "claim_text": "The 2021 Hoshine WRO, the predecessor action for solar, expressly covered Hoshine 'and its subsidiaries' and goods such as polysilicon derived from its silica-based products.",
+    "claim_type": "fact",
+    "dial": "ownership_reach",
+    "sources": "EV-002",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "Ownership and derived-input reach were built into the solar enforcement tool before the UFLPA list existed."
+   },
+   {
+    "claim_id": "C-022",
+    "claim_text": "Commerce's BIS adopted a 50% 'Affiliates Rule' for its own Entity List on September 30 2025, suspended it from November 10 2025 to November 9 2026, and scheduled it to come back on November 10 2026. No equivalent 50% rule exists for the UFLPA Entity List.",
+    "claim_type": "fact",
+    "dial": "ownership_reach",
+    "sources": "EV-020",
+    "confidence": "high",
+    "counter_evidence": "Whether the BIS rule actually resumed on 2026-11-10 was not verified.",
+    "notes": "Comparator only: the BIS rule does not change UFLPA scope. The 'no equivalent' part rests on our search of DHS/CBP materials."
+   },
+   {
+    "claim_id": "C-023",
+    "claim_text": "Between June 21 and October 25 2022 CBP detained 1,053 shipments of solar equipment and released none (public-records response to Reuters). ACP reported a 23% fall in Q3 2022 installations and about 23 GW of projects delayed, largely from lack of panels.",
+    "claim_type": "fact",
+    "dial": "lookback",
+    "sources": "EV-032;EV-035",
+    "confidence": "medium",
+    "counter_evidence": "ACP figures are an industry estimate; other factors (the 2022 Commerce anti-circumvention inquiry, logistics) also hit module supply in 2022.",
+    "notes": "CSIS (EV-035) independently reports >1,000 electronics stops in Q3 2022, mostly solar, 69% from Malaysia/Vietnam."
+   },
+   {
+    "claim_id": "C-024",
+    "claim_text": "By March 2023 module imports were flowing again; White House adviser John Podesta attributed this to 'clearer guidance', and Trina said more than 900 MW had cleared in four months with under 1% detained.",
+    "claim_type": "fact",
+    "dial": "lookback",
+    "sources": "EV-033",
+    "confidence": "low",
+    "counter_evidence": "Supplier shifts to separate non-XUAR lines (C-030) may explain the thaw as much as clearer guidance.",
+    "notes": "Single secondary source quoting officials and a company."
+   },
+   {
+    "claim_id": "C-025",
+    "claim_text": "Of the $3.94bn in shipments stopped under the UFLPA since 2022, HTS 8541 (which includes solar cells and modules) accounts for $3.26bn (82%), and more than 79% of that value was later released. Total stopped value fell from $1.78bn in 2024 to $187.7m in 2025.",
+    "claim_type": "fact",
+    "dial": "lookback",
+    "sources": "EV-034;EV-039",
+    "confidence": "medium",
+    "counter_evidence": "HTS 8541 also includes LEDs and other semiconductor devices, so 8541 is an upper bound for solar. Dashboard definitions changed in 2026 (C-027).",
+    "notes": "Reuters analysis of CBP data, corroborated by ArentFox Schiff (8541 >61% of FY2025 value). The high release share suggests most solar stops end in applicability/admissibility clearance, not exclusion."
+   },
+   {
+    "claim_id": "C-026",
+    "claim_text": "According to a December 2025 letter from House Democrats citing CBP data, monthly stopped shipments averaged 1,062 from November 2024 to March 2025 and 224 from April to August 2025, against averages of 334 (2023) and 383 (2024).",
+    "claim_type": "fact",
+    "dial": "lookback",
+    "sources": "EV-018;EV-030",
+    "confidence": "medium",
+    "counter_evidence": "Law-firm tallies show FY2025 detentions above FY2024 by count (driven by the early-FY2025 peak), and the April 2025 shift to immediate exclusions (C-027) changes what is counted.",
+    "notes": "Partisan source quoting official data. CRS (EV-030) confirms the letter and the concern about a relative decline in 2025."
+   },
+   {
+    "claim_id": "C-027",
+    "claim_text": "UFLPA shipment counts are not comparable across sources or over time. The 2026 dashboard counts each import transaction line and treats 'stopped' as an automated hold, not necessarily a physical detention (65,707 stopped by November 2025, against roughly 16,700 'shipments' under the older method). From April 2025 CBP also sometimes excluded goods immediately instead of detaining them first.",
+    "claim_type": "fact",
+    "dial": "lookback",
+    "sources": "EV-014;EV-007;EV-039",
+    "confidence": "medium",
+    "counter_evidence": "",
+    "notes": "This is a data limit that cuts against reading any count-based 'slowdown' or 'surge' as a change in policy. Value-based series are more robust."
+   },
+   {
+    "claim_id": "C-028",
+    "claim_text": "Reps. DeLauro, Krishnamoorthi and colleagues suggested that the 2025 drop in UFLPA enforcement may reflect CBP resources diverted to tariff implementation and cuts to forced-labor programmes at TIP, DRL and ILAB, and asked why no entities had been added since January 15 2025.",
+    "claim_type": "position",
+    "dial": "lookback",
+    "sources": "EV-018",
+    "confidence": "high",
+    "counter_evidence": "DHS's response, if any, was not found.",
+    "notes": "Partisan letter; confidence refers to what was asked or argued."
+   },
+   {
+    "claim_id": "C-029",
+    "claim_text": "In August 2025 a former CBP enforcement attorney (now general counsel at LONGi) said CBP had lost talent and senior attorneys in 2025, that its resources were 'stretched' by tariff and traceability demands, and that the Electronics Center had stopped granting extensions for UFLPA document packages.",
+    "claim_type": "fact",
+    "dial": "lookback",
+    "sources": "EV-038",
+    "confidence": "low",
+    "counter_evidence": "The speaker works for a major Chinese module maker affected by UFLPA enforcement.",
+    "notes": "Single secondary source, interested party. Treat as a lead, not an established fact."
+   },
+   {
+    "claim_id": "C-030",
+    "claim_text": "Independent research agrees the UFLPA pushed polysilicon sourcing for US-bound solar out of the XUAR but not the upstream MGS/quartz tiers. The XUAR's share of solar-grade polysilicon fell from about 45% (2020) to about 35% (2022) and about 25% of capacity (2025), while its share of China's metallurgical-grade silicon rose to about 53%. Major makers run separate US-bound lines.",
+    "claim_type": "fact",
+    "dial": "tier_depth",
+    "sources": "EV-036;EV-029;EV-028",
+    "confidence": "medium",
+    "counter_evidence": "Market shares come mainly from one analyst (Bernreuter) cited by both CSIS and Sheffield Hallam, so the two sources are not fully independent on the numbers.",
+    "notes": "Supports placing the main residual exposure at tiers 3-4 (MGS, quartz) for the Layer 3 model."
+   },
+   {
+    "claim_id": "C-031",
+    "claim_text": "The remaining XUAR exposure in US solar imports is concentrated at the MGS/quartz tiers, where verification is hardest, so a tier-depth step from polysilicon (E2) to MGS/quartz (E3) is the most likely place for a 'cliff' in the exposure curve.",
+    "claim_type": "interpretation",
+    "dial": "tier_depth",
+    "sources": "EV-036;EV-029;EV-037",
+    "confidence": "low",
+    "counter_evidence": "CBP guidance nominally already requires quartzite-level mapping (C-002, C-003), so any gap is in verification and enforcement practice rather than the written rule. RAND notes its tier counts may reflect better data rather than more exposure.",
+    "notes": "Our hypothesis to test against the Layer 3 data, not a finding."
+   },
+   {
+    "claim_id": "C-032",
+    "claim_text": "RAND found that the number of US businesses with second- to fourth-tier customer links to XUAR entities persisted or grew after the UFLPA, and that the share of shipments from XUAR-connected foreign firms stayed roughly constant, even as direct shipments largely stopped.",
+    "claim_type": "fact",
+    "dial": "tier_depth",
+    "sources": "EV-037",
+    "confidence": "low",
+    "counter_evidence": "RAND itself cautions the apparent increase may reflect better data collection and reporting on XUAR links.",
+    "notes": "Single independent study, across all products rather than solar specifically."
+   },
+   {
+    "claim_id": "C-033",
+    "claim_text": "CBP capacity has been a recorded limit throughout. Before the UFLPA, GAO found staff shortages had suspended some forced-labor investigations. Congress then funded about 338 UFLPA/forced-labor positions in FY2022-23, and in FY2026 directed CBP to keep forced-labor funding at no less than FY2025 levels.",
+    "claim_type": "fact",
+    "dial": "general",
+    "sources": "EV-015;EV-016;EV-017;EV-030",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "The capacity explanation applies to every dial: deeper tiers, wider triggers and ownership reach all multiply review workload."
+   },
+   {
+    "claim_id": "C-034",
+    "claim_text": "CSIS judged in 2023 that even with the added resources, stopping goods across all the product categories and companies named in research would be 'an impossible task for CBP'. This is a capacity argument against a research-named (R1) trigger.",
+    "claim_type": "position",
+    "dial": "trigger_scope",
+    "sources": "EV-035",
+    "confidence": "medium",
+    "counter_evidence": "Advocates (EV-042, EV-043) argue a broader list improves compliance without extra port workload because importers self-police.",
+    "notes": "Independent analysis; medium for the reasoning, which is consistent with the GAO capacity record (C-033)."
+   },
+   {
+    "claim_id": "C-035",
+    "claim_text": "Entity List decisions face judicial review under the APA. In Camel Group (Slip Op. 26-95, 2026) the Court of International Trade sent the FLETF's refusal to delist back to the agency for lack of reasoned decision-making, without vacating it, following Ninestar.",
+    "claim_type": "fact",
+    "dial": "trigger_scope",
+    "sources": "EV-021",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "A legal constraint: each listing needs a documented, reasoned record, which limits how fast and on what evidence (e.g. research-only naming) the list can grow."
+   },
+   {
+    "claim_id": "C-036",
+    "claim_text": "On August 5 2026, two days after the expansion took effect, China's Commerce Ministry put six US organisations on its countermeasures list, including supply-chain mapping, audit and origin-testing providers (Altana, the Responsible Business Alliance, Verite, Applied DNA Sciences). Firms in China may not transact with them.",
+    "claim_type": "fact",
+    "dial": "tier_depth",
+    "sources": "EV-040",
+    "confidence": "low",
+    "counter_evidence": "",
+    "notes": "Single law-firm source. If confirmed, this is a legal constraint on importers' ability to produce upstream (MGS/quartz) evidence, independent of US choices."
+   },
+   {
+    "claim_id": "C-037",
+    "claim_text": "Human Rights Watch argued in 2022 that 'clear and convincing evidence' is 'a near impossible bar' for XUAR-linked sourcing because surveillance and threats prevent meaningful audits, and that companies should exit rather than audit.",
+    "claim_type": "position",
+    "dial": "tier_depth",
+    "sources": "EV-043",
+    "confidence": "high",
+    "counter_evidence": "",
+    "notes": "Advocacy position; confidence refers to the record of what was said."
+   },
+   {
+    "claim_id": "C-038",
+    "claim_text": "Independent and advocacy sources attribute the 2025 enforcement decline and the static list to weak political will. CSIS (2025) said it had 'not yet seen a commitment' from the new administration, and the Coalition said a 'static list' forecloses use of the presumption.",
+    "claim_type": "position",
+    "dial": "lookback",
+    "sources": "EV-036;EV-042",
+    "confidence": "high",
+    "counter_evidence": "Several things point the other way: the same administration added five high-priority sectors (August 2025) and made the largest-ever list expansion (August 2026); capacity diversion (C-028, C-029) and counting changes (C-027) also fit the data.",
+    "notes": "Confidence refers to the positions being stated."
+   },
+   {
+    "claim_id": "C-039",
+    "claim_text": "On balance the 2025 slowdown fits capacity diversion, staff loss and process or counting changes better than a decision to narrow the UFLPA's boundaries, because the written boundaries (tracing guidance, sectors) held or widened over 2025-2026 and the list later grew sharply.",
+    "claim_type": "interpretation",
+    "dial": "lookback",
+    "sources": "EV-007;EV-011;EV-013;EV-018;EV-027;EV-038",
+    "confidence": "low",
+    "counter_evidence": "Political-will explanations (C-038) and US-China trade negotiations (the BIS affiliates suspension, C-022, came out of trade talks according to secondary reporting not read here) cannot be ruled out; there is no document stating why no listings were made between January 2025 and August 2026.",
+    "notes": "Our inference. Never framed as intent."
+   },
+   {
+    "claim_id": "C-040",
+    "claim_text": "Maxeon disclosed that CBP had detained its US solar imports since July 2024, that a $614.1m revenue fall was mainly due to the detentions, and that CBP denied its protests in late March 2025, leaving the goods excluded and prompting a Court of International Trade challenge. Solar detentions of established brands continued through the 2025 lull.",
+    "claim_type": "fact",
+    "dial": "lookback",
+    "sources": "EV-027",
+    "confidence": "medium",
+    "counter_evidence": "",
+    "notes": "Company securities filing: reliable for what was disclosed, but the company's account of compliance is self-interested. 'Continued through the lull' is our reading."
+   },
+   {
+    "claim_id": "C-041",
+    "claim_text": "Solar targeting in 2024-2025 was driven in part by information from questionnaires CBP sent to large solar importers in early 2024.",
+    "claim_type": "fact",
+    "dial": "lookback",
+    "sources": "EV-038;EV-039",
+    "confidence": "medium",
+    "counter_evidence": "",
+    "notes": "Two independent practitioner sources agree; the questionnaire itself is not public."
+   },
+   {
+    "claim_id": "C-042",
+    "claim_text": "SEIA's ANSI/SEIA 101 standard, built on examples of solar shipments CBP detained and released, sets traceability 'from raw materials to finished goods'. The industry is aligning its own standard with the depth CBP enforces rather than arguing for a shallower one.",
+    "claim_type": "position",
+    "dial": "tier_depth",
+    "sources": "EV-041",
+    "confidence": "high",
+    "counter_evidence": "The standard's actual depth (whether it reaches MGS and quartz) was not checked; the standard text is not public.",
+    "notes": "Confidence refers to what SEIA stated; the interpretive half is low."
+   }
+  ],
+  "timeline": [
+   {
+    "date": "2021-05-01",
+    "event": "Sheffield Hallam publishes 'In Broad Daylight', tracing solar supply chains from quartz to module; XUAR ~45% of 2020 solar-grade polysilicon (month-level date)",
+    "category": "research",
+    "dial": "tier_depth",
+    "source_ids": "EV-028",
+    "confidence": "high"
+   },
+   {
+    "date": "2021-06-24",
+    "event": "CBP issues Withhold Release Order on Hoshine Silicon and its subsidiaries, covering derived goods such as polysilicon",
+    "category": "enforcement",
+    "dial": "ownership_reach",
+    "source_ids": "EV-002",
+    "confidence": "high"
+   },
+   {
+    "date": "2021-08-01",
+    "event": "CBP begins detaining solar modules under the Hoshine WRO; ACP says suppliers of about two-thirds of US modules were affected (month-level date)",
+    "category": "enforcement",
+    "dial": "lookback",
+    "source_ids": "EV-024",
+    "confidence": "medium"
+   },
+   {
+    "date": "2021-12-23",
+    "event": "UFLPA (Pub. L. 117-78) signed; presumption for goods made wholly or in part in XUAR or by listed entities; polysilicon mandated as high-priority sector",
+    "category": "statute",
+    "dial": "tier_depth",
+    "source_ids": "EV-001",
+    "confidence": "high"
+   },
+   {
+    "date": "2022-01-24",
+    "event": "DHS/FLETF Federal Register notice opens public comment (docket DHS-2022-0001); 180 comments received",
+    "category": "consultation",
+    "dial": "general",
+    "source_ids": "EV-003",
+    "confidence": "high"
+   },
+   {
+    "date": "2022-03-10",
+    "event": "SEIA, ACP and First Solar file comments to the FLETF docket on detentions, verified-importer treatment and scrutiny of XUAR polysilicon ties",
+    "category": "consultation",
+    "dial": "tier_depth",
+    "source_ids": "EV-023;EV-024;EV-025",
+    "confidence": "high"
+   },
+   {
+    "date": "2022-04-08",
+    "event": "FLETF public hearing on UFLPA implementation (supply chain tracing, entity list factors, high-priority sectors)",
+    "category": "consultation",
+    "dial": "general",
+    "source_ids": "EV-003",
+    "confidence": "high"
+   },
+   {
+    "date": "2022-06-13",
+    "event": "CBP UFLPA Operational Guidance for Importers: polysilicon mapping to quartzite location; commingling warning",
+    "category": "guidance",
+    "dial": "tier_depth",
+    "source_ids": "EV-004",
+    "confidence": "high"
+   },
+   {
+    "date": "2022-06-17",
+    "event": "FLETF Strategy published with initial 20-entity list drawn from WROs and BIS Entity List",
+    "category": "entity_list",
+    "dial": "trigger_scope",
+    "source_ids": "EV-003",
+    "confidence": "high"
+   },
+   {
+    "date": "2022-06-21",
+    "event": "UFLPA rebuttable presumption takes effect",
+    "category": "statute",
+    "dial": "lookback",
+    "source_ids": "EV-001;EV-003",
+    "confidence": "high"
+   },
+   {
+    "date": "2022-07-18",
+    "event": "Reuters: lawmakers ask CBP why three major Chinese solar companies were left off the list; DOL official cites 'competing objectives'",
+    "category": "entity_list",
+    "dial": "trigger_scope",
+    "source_ids": "EV-031",
+    "confidence": "low"
+   },
+   {
+    "date": "2022-10-25",
+    "event": "CBP has detained 1,053 solar shipments since June 21, none released (public-records response)",
+    "category": "enforcement",
+    "dial": "lookback",
+    "source_ids": "EV-032",
+    "confidence": "medium"
+   },
+   {
+    "date": "2022-11-01",
+    "event": "ACP reports Q3 2022 solar installations down 23% and ~23 GW of projects delayed, mainly from panel shortages (month-level date)",
+    "category": "market",
+    "dial": "lookback",
+    "source_ids": "EV-032",
+    "confidence": "low"
+   },
+   {
+    "date": "2023-03-01",
+    "event": "Solar module imports pick up; White House adviser cites 'clearer guidance'; Trina says >900 MW cleared (month-level date)",
+    "category": "enforcement",
+    "dial": "lookback",
+    "source_ids": "EV-033",
+    "confidence": "low"
+   },
+   {
+    "date": "2023-07-01",
+    "event": "Sheffield Hallam 'Over-Exposed' finds bifurcated solar supply chains and continued MGS/quartz exposure (month-level date; updated Nov 2023)",
+    "category": "research",
+    "dial": "tier_depth",
+    "source_ids": "EV-029",
+    "confidence": "high"
+   },
+   {
+    "date": "2023-08-01",
+    "event": "FLETF 2023 strategy update: CBP to prioritise non-XUAR affiliates of XUAR entities likely to contain XUAR inputs",
+    "category": "guidance",
+    "dial": "ownership_reach",
+    "source_ids": "EV-005",
+    "confidence": "high"
+   },
+   {
+    "date": "2024-03-01",
+    "event": "CBP questionnaires to large solar importers inform later detentions (month-level date)",
+    "category": "enforcement",
+    "dial": "tier_depth",
+    "source_ids": "EV-038;EV-039",
+    "confidence": "medium"
+   },
+   {
+    "date": "2024-05-16",
+    "event": "FLETF begins counting each named subsidiary/affiliate as a separate listed entity",
+    "category": "entity_list",
+    "dial": "ownership_reach",
+    "source_ids": "EV-008",
+    "confidence": "high"
+   },
+   {
+    "date": "2024-07-01",
+    "event": "CBP begins detaining Maxeon's US solar imports under UFLPA (month-level date)",
+    "category": "enforcement",
+    "dial": "lookback",
+    "source_ids": "EV-027",
+    "confidence": "medium"
+   },
+   {
+    "date": "2024-07-09",
+    "event": "FLETF 2024 strategy update: list at 68; listing prioritises 'egregious' corroborated cases; scalable process",
+    "category": "guidance",
+    "dial": "trigger_scope",
+    "source_ids": "EV-006",
+    "confidence": "high"
+   },
+   {
+    "date": "2025-01-15",
+    "event": "37 entities added (total 144), including Donghai JA Solar, Hongyuan Green Energy and Shuangliang Silicon for sourcing XUAR polysilicon",
+    "category": "entity_list",
+    "dial": "trigger_scope",
+    "source_ids": "EV-010",
+    "confidence": "high"
+   },
+   {
+    "date": "2025-03-01",
+    "event": "CBP denies Maxeon's protests on detained panels (late March); Maxeon sues at the CIT (month-level date)",
+    "category": "enforcement",
+    "dial": "lookback",
+    "source_ids": "EV-027",
+    "confidence": "medium"
+   },
+   {
+    "date": "2025-04-01",
+    "event": "CBP begins excluding some high-risk goods immediately instead of detaining first; monthly stopped shipments fall from ~1,062 (Nov-Mar) to ~224 (Apr-Aug) (month-level date)",
+    "category": "enforcement",
+    "dial": "lookback",
+    "source_ids": "EV-039;EV-018",
+    "confidence": "medium"
+   },
+   {
+    "date": "2025-08-19",
+    "event": "FLETF 2025 strategy update adds caustic soda, copper, lithium, red dates, steel as high-priority sectors",
+    "category": "guidance",
+    "dial": "trigger_scope",
+    "source_ids": "EV-007",
+    "confidence": "high"
+   },
+   {
+    "date": "2025-08-21",
+    "event": "Former CBP attorney reports staff losses and no extensions for UFLPA document packages at the Electronics Center",
+    "category": "enforcement",
+    "dial": "lookback",
+    "source_ids": "EV-038",
+    "confidence": "low"
+   },
+   {
+    "date": "2025-09-30",
+    "event": "BIS (not UFLPA) adopts 50% Affiliates Rule for its Entity List",
+    "category": "entity_list",
+    "dial": "ownership_reach",
+    "source_ids": "EV-020",
+    "confidence": "high"
+   },
+   {
+    "date": "2025-11-10",
+    "event": "BIS Affiliates Rule suspended for one year (to 2026-11-09)",
+    "category": "entity_list",
+    "dial": "ownership_reach",
+    "source_ids": "EV-020",
+    "confidence": "high"
+   },
+   {
+    "date": "2025-12-15",
+    "event": "House Democrats' letter to DHS/CBP on the 2025 decline in UFLPA enforcement and no list additions since Jan 2025",
+    "category": "consultation",
+    "dial": "lookback",
+    "source_ids": "EV-018",
+    "confidence": "high"
+   },
+   {
+    "date": "2026-01-19",
+    "event": "FY2026 DHS appropriations statement directs CBP to keep forced-labor funding at no less than FY2025 levels and brief on transshipment",
+    "category": "statute",
+    "dial": "general",
+    "source_ids": "EV-017",
+    "confidence": "high"
+   },
+   {
+    "date": "2026-02-24",
+    "event": "Reuters: HTS 8541 (incl. solar) is 82% of all UFLPA stopped value; stopped value fell from $1.78bn (2024) to $187.7m (2025)",
+    "category": "enforcement",
+    "dial": "lookback",
+    "source_ids": "EV-034",
+    "confidence": "medium"
+   },
+   {
+    "date": "2026-06-12",
+    "event": "CBP publishes consolidated Forced Labor Enforcement Operational Guidance; silica-based products tracing unchanged",
+    "category": "guidance",
+    "dial": "tier_depth",
+    "source_ids": "EV-013",
+    "confidence": "high"
+   },
+   {
+    "date": "2026-08-03",
+    "event": "43 entities added (total 187), the largest expansion and first since Jan 2025; TBEA listed (aluminum/coal basis)",
+    "category": "entity_list",
+    "dial": "trigger_scope",
+    "source_ids": "EV-011;EV-022",
+    "confidence": "high"
+   },
+   {
+    "date": "2026-08-05",
+    "event": "China's MOFCOM places US supply-chain mapping, audit and origin-testing organisations on its countermeasures list",
+    "category": "market",
+    "dial": "tier_depth",
+    "source_ids": "EV-040",
+    "confidence": "low"
+   },
+   {
+    "date": "2026-09-02",
+    "event": "CIT Camel Group opinion (remand without vacatur of FLETF delisting denial) published in Customs Bulletin",
+    "category": "entity_list",
+    "dial": "trigger_scope",
+    "source_ids": "EV-021",
+    "confidence": "high"
+   },
+   {
+    "date": "2026-09-03",
+    "event": "Bipartisan House Select Committee / CECC letter requests DHS briefing on UFLPA priorities incl. polysilicon, listing barriers and staffing (approx. date)",
+    "category": "consultation",
+    "dial": "trigger_scope",
+    "source_ids": "EV-019",
+    "confidence": "medium"
+   },
+   {
+    "date": "2026-10-29",
+    "event": "Three BGI entities added (total 190)",
+    "category": "entity_list",
+    "dial": "trigger_scope",
+    "source_ids": "EV-012",
+    "confidence": "high"
+   },
+   {
+    "date": "2026-11-10",
+    "event": "Scheduled end of BIS Affiliates Rule suspension (resumption not verified)",
+    "category": "entity_list",
+    "dial": "ownership_reach",
+    "source_ids": "EV-020",
+    "confidence": "medium"
+   }
+  ]
+ },
+ "simulation": {
+  "_note": "Monte Carlo input ranges (spec §5b). status: from_layer3 = recomputed from Sayari exposure once available; from_layer2 = calibrated from CBP statistics; placeholder = structural default awaiting data, shown with a badge on the page. Every range can be edited on the page.",
+  "seed": 20261115,
+  "runs": 10000,
+  "significant_gap_pct": 20,
+  "copula_rho_hidden_rerouting": 0.5,
+  "thresholds": [
+   {
+    "id": "T0",
+    "label": "Listed only",
+    "combo": "E0|entity_list|off",
+    "adds_level": "E0",
+    "confidence": "high"
+   },
+   {
+    "id": "T1",
+    "label": "Direct suppliers (≈ current practice)",
+    "combo": "E1|xinjiang|off",
+    "adds_level": "E1",
+    "confidence": "medium-high",
+    "current": true
+   },
+   {
+    "id": "T2",
+    "label": "Tiers 2–3",
+    "combo": "E2|xinjiang|off",
+    "adds_level": "E2",
+    "confidence": "medium"
+   },
+   {
+    "id": "T3",
+    "label": "Tiers 2–4, product-relevant",
+    "combo": "E3|xinjiang|off",
+    "adds_level": "E3",
+    "confidence": "medium"
+   },
+   {
+    "id": "T4",
+    "label": "+ One-hop ownership",
+    "combo": "E3|xinjiang|one_hop",
+    "adds_level": "A1",
+    "confidence": "low"
+   },
+   {
+    "id": "T5",
+    "label": "+ Research-named",
+    "combo": "E3|research|one_hop",
+    "adds_level": "R1",
+    "confidence": "low-medium"
+   }
+  ],
+  "step_increments_placeholder": {
+   "_note": "Added flagged share of US cell+module import value at each threshold step, in percentage points (triangular low/mode/high). PLACEHOLDER until the Layer 3 Sayari classification exists. Not data.",
+   "T0": [
+    1,
+    3,
+    6
+   ],
+   "T1": [
+    4,
+    9,
+    15
+   ],
+   "T2": [
+    8,
+    18,
+    30
+   ],
+   "T3": [
+    4,
+    10,
+    20
+   ],
+   "T4": [
+    2,
+    5,
+    10
+   ],
+   "T5": [
+    2,
+    6,
+    12
+   ]
+  },
+  "inputs": [
+   {
+    "id": "tau_high",
+    "label": "True-exposure rate · high-confidence flags",
+    "represents": "Share of flagged supply that really contains the targeted input, for high-confidence flags (E0)",
+    "dist": {
+     "type": "beta",
+     "a": 18,
+     "b": 2
+    },
+    "status": "placeholder",
+    "confidence": "high",
+    "source": "Structural: narrow band because listing is a matter of public record (spec §5b)."
+   },
+   {
+    "id": "tau_medium",
+    "label": "True-exposure rate · medium-confidence flags",
+    "represents": "The same for E1–E3 trade links",
+    "dist": {
+     "type": "beta",
+     "a": 6,
+     "b": 4
+    },
+    "status": "placeholder",
+    "confidence": "medium",
+    "source": "Structural: medium width. Will be tightened by M7 spot checks of Sayari source records."
+   },
+   {
+    "id": "tau_low",
+    "label": "True-exposure rate · low-confidence flags",
+    "represents": "The same for ownership-adjacent and research-named flags",
+    "dist": {
+     "type": "beta",
+     "a": 2,
+     "b": 3
+    },
+    "status": "placeholder",
+    "confidence": "low",
+    "source": "Structural: wide band. Single-hop ownership and research mentions are weak evidence of content."
+   },
+   {
+    "id": "hidden",
+    "label": "Hidden exposure",
+    "represents": "Exposed share of supply where trade data is missing, in pp of the market at full depth",
+    "dist": {
+     "type": "uniform",
+     "lo": 0,
+     "hi": 12
+    },
+    "status": "placeholder",
+    "confidence": "low",
+    "source": "Coverage gap: the untraced share × an unknown exposure rate. Wide by default (spec §5b). Linked to rerouting via the copula."
+   },
+   {
+    "id": "p_enf",
+    "label": "Enforcement probability",
+    "represents": "Chance that a genuinely exposed shipment is stopped once the rule reaches it",
+    "dist": {
+     "type": "beta",
+     "a": 7,
+     "b": 3
+    },
+    "status": "placeholder",
+    "confidence": "low",
+    "source": "To be calibrated against CBP detentions at the current setting (T1) once Layer 3 exists."
+   },
+   {
+    "id": "release",
+    "label": "Release rate",
+    "represents": "Share of detained goods later released",
+    "dist": {
+     "type": "beta",
+     "a": 4,
+     "b": 6
+    },
+    "status": "placeholder",
+    "confidence": "medium",
+    "source": "Replaced by CBP released ÷ (released + denied) when Layer 2 stats are present."
+   },
+   {
+    "id": "reroute",
+    "label": "Rerouting / evasion",
+    "represents": "Share of blocked supply that comes back in through other routes (transshipment)",
+    "dist": {
+     "type": "uniform",
+     "lo": 0.05,
+     "hi": 0.4
+    },
+    "status": "placeholder",
+    "confidence": "low",
+    "source": "Wide range. To be sourced from enforcement cases and Southeast Asia transshipment research."
+   },
+   {
+    "id": "capacity",
+    "label": "Replacement capacity",
+    "represents": "Percentage points of US market supply that clean suppliers can add per month, once ramped",
+    "dist": {
+     "type": "triangular",
+     "lo": 1,
+     "mode": 2.5,
+     "hi": 5
+    },
+    "status": "placeholder",
+    "confidence": "low",
+    "source": "Industry capacity estimates still to be sourced (US and non-China module/cell build-out)."
+   },
+   {
+    "id": "ramp",
+    "label": "Ramp-up delay",
+    "represents": "Months before replacement capacity starts arriving",
+    "dist": {
+     "type": "triangular",
+     "lo": 3,
+     "mode": 6,
+     "hi": 12
+    },
+    "status": "placeholder",
+    "confidence": "low",
+    "source": "Sector assumption (rules: 6–18 months to qualify a supplier). To be sourced."
+   },
+   {
+    "id": "buffer",
+    "label": "Inventory buffer",
+    "represents": "Months of total US supply already in the pipeline or in warehouses",
+    "dist": {
+     "type": "triangular",
+     "lo": 1,
+     "mode": 3,
+     "hi": 6
+    },
+    "status": "placeholder",
+    "confidence": "low",
+    "source": "Range from industry/trade sources still to be sourced."
+   }
+  ],
+  "model": [
+   "removed_j = Σ_{k≤j} Δ_k · τ(conf_k) · p_enf · (1 − release) · (1 − reroute)  +  hidden · depth_j · p_enf · (1 − release) · (1 − reroute)",
+   "depth_j = 0, 0.25, 0.5, 0.75, 0.9, 1 for T0…T5: how much hidden (untraced) exposure a rule at that depth would surface",
+   "significant disruption ⇔ removed_j > X% of US market supply (default X = 20)",
+   "refill_months = ramp + removed / capacity;  buffer_cover = buffer × 100 / removed;  shortage_months = max(0, refill_months − buffer_cover)"
+  ]
+ }
+}

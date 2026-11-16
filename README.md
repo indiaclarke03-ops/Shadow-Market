@@ -2,6 +2,8 @@
 
 What supply chain regulation catches, compared with what full supply chain transparency would reveal. Case 1: **UFLPA × US solar PV**.
 
+**View the site:** https://indiaclarke03-ops.github.io/Shadow-Market/site/
+
 See `concept_2.md` (the idea) and `specification.md` (the MVP spec). Judgement calls made during the build are in `DECISIONS.md`.
 
 ## Run it

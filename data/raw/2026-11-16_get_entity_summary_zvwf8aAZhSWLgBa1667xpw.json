@@ -1,0 +1,59 @@
+{
+ "tool": "get_entity_summary",
+ "args": {
+  "entity_id": "zvwf8aAZhSWLgBa1667xpw"
+ },
+ "captured": "2026-11-16T09:34:41",
+ "response": {
+  "entity_id": "zvwf8aAZhSWLgBa1667xpw",
+  "label": "MUNDRA SOLAR PV LIMITED",
+  "risk": {
+   "sanctioned": false,
+   "pep": false,
+   "risk_levels": [
+    "basel_aml",
+    "chinese_soe_adjacent",
+    "cpi_score",
+    "exports_ilab_child_labor",
+    "exports_ilab_forced_labor",
+    "forced_labor_sheffield_hallam_university_reports_origin_direct",
+    "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+    "forced_labor_xinjiang_origin_subtier",
+    "forced_labor_xinjiang_uflpa_adjacent",
+    "owned_by_regulatory_action_entity",
+    "psa_exports_ilab_child_labor",
+    "psa_exports_ilab_forced_labor",
+    "psa_forced_labor_sheffield_hallam_university_reports_origin_direct",
+    "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+    "psa_forced_labor_uflpa_origin_direct",
+    "psa_forced_labor_uflpa_origin_subtier",
+    "psa_forced_labor_xinjiang_origin_direct",
+    "psa_forced_labor_xinjiang_origin_subtier",
+    "psa_owned_by_regulatory_action_entity",
+    "psa_owner_of_regulatory_action_entity",
+    "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+   ]
+  },
+  "sources": [
+   "UK Imports & Exports (January 2023 - Present)",
+   "Vietnam Imports & Exports (January 2019 - Present)",
+   "Global Historical Imports & Exports (2019 - 2020)",
+   "Legal Entity Identifier (LEI) Registry (3rd Party Data)",
+   "Japan Imports & Exports (January 2023 - Present)"
+  ],
+  "trade_count": {
+   "sent": 10763,
+   "received": 11662
+  }
+ },
+ "abridged": {
+  "omitted_fields": [
+   "attributes (names, addresses, identifiers, countries, company_type)",
+   "investigation_notes",
+   "_hints",
+   "_guidance"
+  ],
+  "note": "Data fields transcribed in full from the inline MCP response; listed boilerplate fields omitted (DECISIONS #18)."
+ },
+ "note": "risk_levels identical to the supplier-rollup row (verified at capture), so stored from it."
+}

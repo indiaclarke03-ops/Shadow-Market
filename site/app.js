@@ -22,6 +22,10 @@
   };
   const comboKey = (t = state.tier, s = state.scope, o = state.own) => `${t}|${s}|${o}`;
   const L3ok = L3.status === "ok";
+  // Layer 3 size measure: USD if Sayari carried values, else US bill-of-lading shipment counts (DECISIONS #15)
+  const BYSHIP = L3ok && L3.measure === "shipments";
+  const amt = (v) => (BYSHIP ? `${int(v)} shipments` : usd(v));
+  const MV = BYSHIP ? "shipments" : "import value";
 
   /* ---------------------------------------------------------------- sources */
   const SRC = Object.fromEntries(EV.sources.map((s) => [s.source_id, s]));
@@ -106,13 +110,13 @@
     if (L3ok) {
       const m = L3.combos[comboKey()];
       const full = L3.combos["E3|research|one_hop"];
-      stats.push(`<div class="hero-stat"><span class="num" data-tip="1" id="hero-gap">${pct(full.exposed_share - m.exposed_share, 0)}</span><span class="lbl">of US cell + module import value flagged at full depth but not at current settings</span></div>`);
+      stats.push(`<div class="hero-stat"><span class="num" data-tip="1" id="hero-gap">${pct(full.exposed_share - m.exposed_share, 0)}</span><span class="lbl">of US cell + module ${MV} flagged at full depth but not at current settings</span></div>`);
     } else {
       stats.push(`<div class="hero-stat"><span class="num">Pending</span><span class="lbl">Layer 3 (Sayari full-transparency exposure) not yet pulled</span></div>`);
     }
     $("hero-stats").innerHTML = stats.join("");
     $("coverage").innerHTML = L3ok
-      ? `Coverage: ${pct(L3.traced_share, 0)} of import value traced upstream. “No exposure found” can mean “no data”. Untraced volume is shown in grey, not left out.`
+      ? `Coverage: ${pct(L3.traced_share, 0)} of ${MV} traced upstream. “No exposure found” can mean “no data”. Untraced volume is shown in grey, not left out.`
       : `Layer 3 is waiting on the Sayari snapshot. Enforcement data (Layer 2) and the evidence record are live; exposure figures will appear once the trade graph is pulled. Nothing on this page is estimated in its place.`;
     $("snap").textContent = (D.snapshot ? "Sayari snapshot " + D.snapshot : "Sayari snapshot pending") + " · built " + D.built;
     $("foot-built").textContent = "Data built " + D.built;
@@ -141,7 +145,7 @@
       <div class="tag">Layer 2</div>
       <h3 class="display">What enforcement catches</h3>
       <div class="body">Shipments CBP has stopped, released, denied or left pending under UFLPA since June 2022. CBP does not report “solar” as an industry, so we use ${esc(basisName)} and say so.
-      ${rr ? `<p style="margin:12px 0 0">Release rate: <b data-src="${esc(rr.source_ids.join(";"))}" data-title="Release rate" data-body="released ÷ (released + denied), ${esc(rr.basis)}, by ${esc(rr.by)}" data-conf="high">${pct(rr.value * 100, 0)}</b> of decided ${esc(rr.basis)} shipments were later released.</p>` : ""}
+      ${rr ? `<p style="margin:12px 0 0">Release rate: <b data-src="${esc(rr.source_ids.join(";"))}" data-title="Release rate" data-body="released ÷ (released + denied), ${esc(rr.basis)}, by ${esc(rr.by)}" data-conf="high">${pct(rr.value * 100, 0)}</b> of the value of decided ${esc(rr.basis === "hts8541" ? "HTS 8541" : rr.basis)} shipments was later released${rr.by_count != null ? ` (${pct(rr.by_count * 100, 0)} by shipment count)` : ""}.</p>` : ""}
       <p style="margin:8px 0 0">${(L2.cases || []).length} public solar enforcement events are logged below.</p></div>
       <div class="foot">${basis ? `<div class="big" data-src="${esc(basis.stopped.source_id)}" data-title="Stopped, ${esc(basisName)}" data-body="${esc(int(basis.stopped.shipments) + " shipments · " + (basis.stopped.period || "") + (basis.stopped.notes ? " · " + basis.stopped.notes : ""))}" data-conf="high">${usd(basis.stopped.value_usd)}</div><p class="small" style="margin:6px 0 0">stopped, ${esc(basisName.split(" (")[0])}, ${esc(basis.stopped.period || "")}</p>` : `<div class="big">Pending</div><p class="small">CBP statistics not yet captured.</p>`}</div>`;
 
@@ -150,8 +154,8 @@
       $("layer3").innerHTML = `
         <div class="tag">Layer 3</div>
         <h3 class="display">What full transparency would catch</h3>
-        <div class="body">The same trigger logic applied through every tier Sayari's trade and ownership graph can see. ${int(L3.exporter_count)} exporters supply ${usd(L3.total_value)} of US cell and module imports in the 730-day window; ${pct(L3.traced_share, 0)} by value is traced.</div>
-        <div class="foot"><div class="big">${pct(full.exposed_share, 0)}</div><p class="small" style="margin:6px 0 0">of import value linked at full depth, against ${pct(m.exposed_share, 0)} at current settings</p></div>`;
+        <div class="body">The same trigger logic applied through every tier Sayari's trade and ownership graph can see. ${int(L3.exporter_count)} exporters sent ${amt(L3.total_value)} of cells and modules to the US in the 730-day window${BYSHIP ? " (Sayari\u2019s US bill-of-lading records carry no declared value, so shipments are the measure)" : ""}; ${pct(L3.traced_share, 0)} is traced.</div>
+        <div class="foot"><div class="big">${pct(full.exposed_share, 0)}</div><p class="small" style="margin:6px 0 0">of ${MV} linked at full depth, against ${pct(m.exposed_share, 0)} at current settings</p></div>`;
     } else {
       $("layer3").innerHTML = `
         <div class="tag">Layer 3</div>
@@ -210,8 +214,8 @@
     const share = state.basis === "count" ? m.exposed_count_share : m.exposed_share;
     const tolTip = `data-src="${esc(((L2.summary[L3.detained_basis] || {}).stopped || {}).source_id || "")}" data-title="Tolerated exposure" data-body="Exposed import value at these settings minus value stopped by CBP (${esc(L3.detained_basis || "n/a")} basis, an upper bound for solar). Windows differ: Sayari 730 days vs CBP since June 2022."`;
     $("readout").innerHTML = [
-      metric("Exposed share", pct(share, 1), state.basis === "count" ? `${int(m.exposed_count)} of ${int(L3.exporter_count)} exporters` : `${usd(m.exposed_value)} of ${usd(L3.total_value)}`),
-      metric("Tolerated exposure", m.tolerated_exposure === null ? "—" : usd(m.tolerated_exposure), "Layer 3 − Layer 2", "", tolTip),
+      metric("Exposed share", pct(share, 1), state.basis === "count" ? `${int(m.exposed_count)} of ${int(L3.exporter_count)} exporters` : `${amt(m.exposed_value)} of ${amt(L3.total_value)}`),
+      metric("Tolerated exposure", m.tolerated_exposure === null ? "—" : usd(m.tolerated_exposure), BYSHIP ? "needs USD import values; CBP counts in USD" : "Layer 3 − Layer 2", "", tolTip),
       metric("Remaining clean suppliers", int(m.remaining_suppliers), `of ${int(L3.exporter_count)} exporters`),
       metric("Concentration after removal, by exporter (HHI)", int(m.hhi_exporter_after), `before ${int(L3.hhi_exporter_before)}`),
       metric("Concentration after removal, by country (HHI)", int(m.hhi_country_after), `before ${int(L3.hhi_country_before)}`),
@@ -257,7 +261,7 @@
       tip: (col, c, S) => {
         if (col.pending) return `<b>${esc(col.label)}</b><br>Not yet traced. Volume is shown in grey, not left out.`;
         const conf = LEVEL_CONF[c.id];
-        return `<b>${esc(c.label)}</b> · ${esc(col.label)}<br>${usd(S.v)} · ${(S.share * 100).toFixed(1)}% of this column${conf ? `<div class="t-src">Confidence of this exposure level: <b>${esc(conf)}</b><br>Source: Sayari risk factors, snapshot ${esc(D.snapshot || "")}</div>` : ""}`;
+        return `<b>${esc(c.label)}</b> · ${esc(col.label)}<br>${amt(S.v)} · ${(S.share * 100).toFixed(1)}% of this column${conf ? `<div class="t-src">Confidence of this exposure level: <b>${esc(conf)}</b><br>Source: Sayari risk factors, snapshot ${esc(D.snapshot || "")}</div>` : ""}`;
       },
     });
     $("flow-legend").innerHTML = cats.map((c) => `<span><i class="${c.id === "clean" ? "outline" : ""}" style="background:${c.color}"></i>${esc(c.label)}</span>`).join("");
@@ -289,7 +293,7 @@
       }));
       SM.stepChart(chart, steps, {
         height: 170, title: R.dials[dial].label,
-        tip: (p) => `<b>${esc(p.label)}</b><br>${pct(p.y)} exposed · ${usd(p.exposed_value)}${p.ratio_vs_prev !== undefined ? `<br>vs previous step: ×${p.ratio_vs_prev ?? "∞"}, +${p.added_pp} pp` : ""}${p.cliff ? "<br><b>Cliff under the spec rule</b>" : ""}<div class="t-src">Sayari snapshot ${esc(D.snapshot || "")}</div>`,
+        tip: (p) => `<b>${esc(p.label)}</b><br>${pct(p.y)} exposed · ${amt(p.exposed_value)}${p.ratio_vs_prev !== undefined ? `<br>vs previous step: ×${p.ratio_vs_prev ?? "∞"}, +${p.added_pp} pp` : ""}${p.cliff ? "<br><b>Cliff under the spec rule</b>" : ""}<div class="t-src">Sayari snapshot ${esc(D.snapshot || "")}</div>`,
       });
     }
   }
@@ -388,9 +392,9 @@
       ce.innerHTML = `<div class="panel-title"><h4>Top exporters by US import value</h4><span class="badge pend">Awaiting Sayari snapshot</span></div><div class="pending" style="min-height:160px"><div><strong>Exporter exposure appears with Layer 3</strong>Each row will show exposure level, confidence and the underlying Sayari source records. A company is never named without all three.</div></div>`;
     } else {
       const rows = L3.exporters.filter((e) => e.flags.length).slice(0, 30);
-      ce.innerHTML = `<div class="panel-title"><h4>Exporters with a flag, by US import value</h4><span class="small">${rows.length} shown · current dial settings shade the level</span></div>
-        <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Exporter</th><th>Country</th><th class="r">US import value</th><th>Exposure levels</th><th>Under current dials</th><th>Confidence</th><th>Sayari records</th></tr></thead><tbody>
-        ${rows.map((e) => { const c = categoryOf(e); return `<tr><td><b>${esc(e.name)}</b></td><td>${esc(e.country)}</td><td class="r">${usd(e.value)}</td><td>${e.levels.map(lvlBadge).join(" ")}</td><td>${esc(CAT[c].label)}</td><td><span class="conf ${confClass(e.confidence)}">${esc(e.confidence || "—")}</span></td><td class="small">${e.source_records.length ? e.source_records.map(esc).join(", ") : esc(e.sayari_entity_id || "—")}</td></tr>`; }).join("")}
+      ce.innerHTML = `<div class="panel-title"><h4>Exporters with a flag, by US ${MV}</h4><span class="small">${rows.length} shown · current dial settings shade the level</span></div>
+        <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Exporter</th><th>Country</th><th class="r">${BYSHIP ? "US shipments" : "US import value"}</th><th>Exposure levels</th><th>Under current dials</th><th>Confidence</th><th>Sayari records</th></tr></thead><tbody>
+        ${rows.map((e) => { const c = categoryOf(e); return `<tr><td><b>${esc(e.name)}</b></td><td>${esc(e.country)}</td><td class="r">${BYSHIP ? int(e.value) : usd(e.value)}</td><td>${e.levels.map(lvlBadge).join(" ")}</td><td>${esc(CAT[c].label)}</td><td><span class="conf ${confClass(e.confidence)}">${esc(e.confidence || "—")}</span></td><td class="small">${e.source_records.length ? e.source_records.map(esc).join(", ") : esc(e.sayari_entity_id || "—")}</td></tr>`; }).join("")}
         </tbody></table></div>`;
     }
     const cases = L2.cases || [];
@@ -411,7 +415,7 @@
     if (rr) {
       const k = 60;
       simInputs.release = { type: "beta", a: rr.value * k, b: (1 - rr.value) * k };
-      simStatus.release = { status: "from_layer2", source: `CBP: released ÷ (released + denied), ${rr.basis}, ${(rr.value * 100).toFixed(0)}%. Sources ${rr.source_ids.join(", ")}. Concentration k=60 is our assumption.` };
+      simStatus.release = { status: "from_layer2", source: `CBP: released ÷ (released + denied) by value, ${rr.basis}, ${(rr.value * 100).toFixed(0)}%. Sources ${rr.source_ids.join(", ")}. Concentration k=60 is our assumption.` };
     }
     simInc = {};
     if (L3ok) {
@@ -555,7 +559,7 @@
 
       <div class="panel"><h3 class="display" style="margin-bottom:18px">Metrics</h3>
         <ul>
-          <li><b>Exposed share</b>: exposed US import value ÷ total US import value (cells + modules, 730-day window).</li>
+          <li><b>Exposed share</b>: exposed ÷ total US ${MV} (cells + modules, 730-day window).${BYSHIP ? " Sayari\u2019s US import records are bills of lading with weight but no declared value, so the measure is shipment records, not dollars." : ""}</li>
           <li><b>Tolerated exposure</b>: Layer 3 exposed value − Layer 2 stopped value. CBP doesn't report solar, so the Layer 2 basis is HTS 8541 where captured, otherwise Electronics (both upper bounds). The windows differ (Sayari 730 days, CBP since June 2022).</li>
           <li><b>Remaining suppliers</b>: traced exporters with no flag under the current dials.</li>
           <li><b>HHI</b>: Herfindahl–Hirschman Index (0–10,000) of the supply that remains, by exporter and by country of export.</li>

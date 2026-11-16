@@ -1,0 +1,89 @@
+{
+ "tool": "get_entity_profile",
+ "args": {
+  "entity_id": "N-8OTKumOnyeMkPDtWdSmw",
+  "relationships_limit": 10
+ },
+ "captured": "2026-11-16T09:34:41",
+ "response": {
+  "entity_id": "N-8OTKumOnyeMkPDtWdSmw",
+  "label": "WAAREE ENERGIES LIMITED",
+  "registration_date": "1990-12-18",
+  "identifiers": [
+   "lei 335800TCF9YCJG3VRZ10",
+   "ind_corporate_id_number L29248MH1990PLC059463"
+  ],
+  "risk": {
+   "sanctioned": false,
+   "pep": false,
+   "risk_levels": [
+    "basel_aml",
+    "chinese_soe_adjacent",
+    "cpi_score",
+    "esg_score_medium",
+    "export_to_soe",
+    "exports_to_usa_section_1260h_entity",
+    "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+    "forced_labor_xinjiang_origin_subtier_product_blueprint",
+    "psa_export_to_soe",
+    "psa_exports_to_usa_section_1260h_entity",
+    "sheffield_hallam_university_forced_labor_reports_entity_adjacent",
+    "soe_adjacent"
+   ]
+  },
+  "relationships_summary": {
+   "carrier_of": 1,
+   "linked_to": 1,
+   "has_beneficial_owner": 1,
+   "has_officer": 2,
+   "has_manager": 1,
+   "shareholder_of": 2,
+   "has_shareholder": 85,
+   "notify_party_of": 56,
+   "has_director": 9,
+   "has_lawyer": 2,
+   "owner_of": 1,
+   "ships_to": 213,
+   "receives_from": 483,
+   "has_subsidiary": 6,
+   "issuer_of": 4
+  },
+  "receives_from_sample": [
+   "zlFsj-59f78hw24U3FDgFQ JIANGSU GOODWE POWER SUPPLY TECHNOLOGY",
+   "zkyOWjQAZMaejfVj1rSkJQ JIANGYIN TIANGUANG TECHNOLOGY",
+   "zbQSrPsE90wnN-CbOC33KA CHANGZHOU GS ENERGY AND TECH",
+   "zZ5rcJASCfJyIkI1MPeiSQ SUNIVERSE TECHNOLOGY SOLE (LAO)",
+   "zXZ4SKmFLstoZNVz8ApWsA SHANGHAI XINZHUOZHUANG PRINTING TECHNOLOGY",
+   "zPfLr4gKK-eWsHl-LqSpVA MAICHUANG PHOTOVOLTAIC MATERIALS (HUAIAN)",
+   "zHixrqwcX-VCNu3gBmqpjw TARGRAY INTERNATIONAL",
+   "zEDH03fhSI2_aoVjKoUz9A TOPTOYO INVESTMENT",
+   "zCY4GLG0c0lKufw2pICicw XIAMEN XIANGYU NEW ENERGY"
+  ],
+  "ships_to_sample": [
+   "z-T0ITwJCISNMVCxcj9WXw MAMMOTH CENTRAL LLC (USA)"
+  ],
+  "sources": [
+   "India BSE Stock Exchange",
+   "India National Stock Exchange",
+   "SESAMm ESG Controversy Events (3rd Party Data)",
+   "UK Imports & Exports (January 2023 - Present)",
+   "Japan Imports & Exports (January 2023 - Present)"
+  ],
+  "trade_count": {
+   "sent": 9708,
+   "received": 28354
+  }
+ },
+ "abridged": {
+  "omitted_fields": [
+   "addresses",
+   "business_purpose",
+   "per-relationship risk_flags/countries",
+   "investigation_notes",
+   "_hints",
+   "_guidance"
+  ],
+  "note": "Data fields transcribed in full from the inline MCP response; listed boilerplate fields omitted (DECISIONS #18)."
+ },
+ "note": "FINDING: profile risk_levels lack forced_labor_sheffield_hallam_university_reports_origin_subtier and forced_labor_xinjiang_origin_subtier that the supplier rollup carried. Rollup vs profile drift; see corroboration.csv."
+}

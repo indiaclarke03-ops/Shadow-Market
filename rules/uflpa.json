@@ -79,7 +79,7 @@
       "label": "Value basis",
       "question": "What do we count?",
       "positions": [
-        {"id": "value", "label": "Share of import value"},
+        {"id": "value", "label": "Share of US imports"},
         {"id": "count", "label": "Count of exporters"}
       ],
       "default": "value"

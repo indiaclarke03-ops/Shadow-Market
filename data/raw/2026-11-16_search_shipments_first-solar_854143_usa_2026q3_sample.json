@@ -1,0 +1,77 @@
+{
+ "tool": "search_shipments",
+ "args": {
+  "query": "First Solar",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2026-06-01",
+  "date_to": "2026-08-31",
+  "limit": 3,
+  "response_mode": "full"
+ },
+ "captured": "2026-11-16T09:29:33",
+ "response": {
+  "returned": 1,
+  "total_available": 10000,
+  "grouping": "supplier_buyer_pair",
+  "shipment_rows_returned": 3,
+  "items": [
+   {
+    "supplier": {
+     "name": "FS INDIA SOLAR VENTURES PRIVATE LIMITED",
+     "entity_id": "5o88cxYmG-covaV4-JqlCw",
+     "countries": [
+      "IND",
+      "USA"
+     ]
+    },
+    "buyer": {
+     "name": "FIRST SOLAR,",
+     "entity_id": "v5uYaie3rE59AxHDIKWCKg",
+     "countries": [
+      "USA"
+     ]
+    },
+    "shipments": [
+     {
+      "shipment_id": "xgpPwZXh_ShqlnrFw-F7WQ",
+      "bill_of_lading": "HLCUEUR2608AOVF0",
+      "weight_kg": 138514.0,
+      "arrival_date": "2026-10-30",
+      "departure": "Colombo Harbor, LKA",
+      "arrival": "Charleston, South Carolina",
+      "hs": "854143",
+      "source": "16a4cc2d0f467fa993b28587d542a25d USA Imports (2021 - Present)"
+     },
+     {
+      "shipment_id": "cBEDPp-o6quWHbB0-dVCHA",
+      "bill_of_lading": "HLCUEUR2608APFB0",
+      "weight_kg": 138514.0,
+      "arrival_date": "2026-10-30",
+      "departure": "Colombo Harbor, LKA",
+      "arrival": "Charleston, South Carolina",
+      "hs": "854143",
+      "source": "16a4cc2d0f467fa993b28587d542a25d USA Imports (2021 - Present)"
+     },
+     {
+      "shipment_id": "rDgL_tSM9WbRPyTOlDBETw",
+      "bill_of_lading": "HLCUEUR2608AOZX0",
+      "weight_kg": 138514.0,
+      "arrival_date": "2026-10-30",
+      "departure": "Colombo Harbor, LKA",
+      "arrival": "Charleston, South Carolina",
+      "hs": "854143",
+      "source": "16a4cc2d0f467fa993b28587d542a25d USA Imports (2021 - Present)"
+     }
+    ]
+   }
+  ]
+ },
+ "abridged": {
+  "omitted_fields": [
+   "supplier names[] aliases, risk_levels (same as supplier rollup), addresses, product_descriptions, next_action, _guidance, investigation_notes, _hints"
+  ],
+  "note": "Data fields transcribed in full from the inline MCP response; listed boilerplate fields omitted (DECISIONS #18)."
+ },
+ "note": "Finding: US BoL shipment records carry weight but no declared value (DECISIONS #15). Note arrival date 2026-10-30 is outside the requested date_to; the date filter appears to apply to another date field."
+}

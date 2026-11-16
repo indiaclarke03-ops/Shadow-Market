@@ -1,0 +1,719 @@
+{
+ "tool": "search_suppliers",
+ "args": {
+  "query": "*",
+  "hs_code": "280461",
+  "arrival_country": "THA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "limit": 100,
+  "offset": 0,
+  "response_mode": "compact"
+ },
+ "captured": "2026-11-16T09:30:22",
+ "response": {
+  "tool": "search_suppliers",
+  "response_mode": "compact",
+  "returned": 22,
+  "total_available": 22,
+  "items": [
+   {
+    "entity_id": "DNWt6QevFmCJyDwVW3R7mw",
+    "label": "SHANDONG SMART INTERNATIONAL LOGISTI",
+    "type": "company",
+    "countries": [
+     "SWE",
+     "HRV",
+     "ITA",
+     "NLD",
+     "CHN"
+    ],
+    "trade_count": {
+     "sent": 169761,
+     "received": 654
+    },
+    "metadata": {
+     "shipments": 41,
+     "latest_shipment_date": "2026-08-30",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "chinese_soe_adjacent",
+      "cpi_score",
+      "export_controls_adjacent",
+      "export_to_sanctioned",
+      "export_to_soe",
+      "exports_bis_high_priority_items_indirect",
+      "exports_eudr_shipment_wood",
+      "exports_ilab_child_labor",
+      "exports_ilab_forced_labor",
+      "exports_to_sanctioned_che_seco_entity",
+      "exports_to_sanctioned_eu_ec_regulation_833_2014_entity",
+      "exports_to_sanctioned_eu_sanctions_entity",
+      "exports_to_sanctioned_ukr_nsdc_entity",
+      "exports_to_sanctioned_usa_ofac_sdn_entity",
+      "pep_adjacent",
+      "sanctioned_adjacent",
+      "soe_adjacent",
+      "+13 psa_ variants"
+     ]
+    }
+   },
+   {
+    "entity_id": "ooRAtBuwK-FqyteV-WEiVQ",
+    "label": "STAR SHIPPING INTERNATIONAL LTD",
+    "type": "company",
+    "countries": [
+     "BEL",
+     "ITA",
+     "NLD",
+     "CHN",
+     "FRA"
+    ],
+    "trade_count": {
+     "sent": 11050,
+     "received": 2024
+    },
+    "metadata": {
+     "shipments": 17,
+     "latest_shipment_date": "2026-03-07",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "chinese_soe_adjacent",
+      "cpi_score",
+      "export_controls_adjacent",
+      "sanctioned_adjacent",
+      "soe_adjacent"
+     ]
+    }
+   },
+   {
+    "entity_id": "QTGe48MKdBHh2Dkbxh_ifw",
+    "label": "TIANJIN EBOXLINE INTERNATIONAL TRANS",
+    "type": "company",
+    "countries": [
+     "CHN",
+     "MYS",
+     "BGD"
+    ],
+    "trade_count": {
+     "sent": 54054,
+     "received": 1380
+    },
+    "metadata": {
+     "shipments": 12,
+     "latest_shipment_date": "2025-08-25",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "chinese_soe_adjacent",
+      "cpi_score",
+      "export_controls_adjacent",
+      "export_to_chinese_soe",
+      "export_to_soe",
+      "exports_bis_high_priority_items_indirect",
+      "exports_eudr_shipment_wood",
+      "exports_ilab_child_labor",
+      "exports_ilab_forced_labor",
+      "sanctioned_adjacent",
+      "soe_adjacent",
+      "+6 psa_ variants"
+     ]
+    }
+   },
+   {
+    "entity_id": "RRmXKnwn4gniHDZ-kRGZmw",
+    "label": "PAN-WAY INTL LOGISTICS CO LTD",
+    "type": "company",
+    "countries": [
+     "CHN"
+    ],
+    "trade_count": {
+     "sent": 35768,
+     "received": 351
+    },
+    "metadata": {
+     "shipments": 9,
+     "latest_shipment_date": "2025-10-16",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score",
+      "soe_adjacent"
+     ]
+    }
+   },
+   {
+    "entity_id": "rv7YBuV_V0AFkiqfQ2Oa4A",
+    "label": "LINDE INDUSTRY CO., LTD",
+    "type": "company",
+    "countries": [
+     "CHN",
+     "MHL"
+    ],
+    "trade_count": {
+     "sent": 76,
+     "received": 0
+    },
+    "metadata": {
+     "shipments": 8,
+     "latest_shipment_date": "2022-09-24",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score"
+     ]
+    }
+   },
+   {
+    "entity_id": "8gl8QOphssLIO8IakTuEuA",
+    "label": "JAVA SARI SDN BHD",
+    "type": "company",
+    "countries": [
+     "MYS"
+    ],
+    "trade_count": {
+     "sent": 12,
+     "received": 21
+    },
+    "metadata": {
+     "shipments": 4,
+     "latest_shipment_date": "2025-12-03",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score"
+     ]
+    }
+   },
+   {
+    "entity_id": "8EDxGxOG6mRJS-pWmHWJJA",
+    "label": "NEXA RESOURCES CAJAMARQUILLA S.A.",
+    "type": "company",
+    "countries": [
+     "USA",
+     "HUN",
+     "PER",
+     "SEN",
+     "ECU"
+    ],
+    "trade_count": {
+     "sent": 13795,
+     "received": 4579
+    },
+    "metadata": {
+     "shipments": 3,
+     "latest_shipment_date": null,
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "chinese_soe_adjacent",
+      "cpi_score",
+      "eu_high_risk_third",
+      "forced_labor_xinjiang_origin_subtier",
+      "psa_forced_labor_xinjiang_origin_subtier",
+      "soe_adjacent"
+     ]
+    }
+   },
+   {
+    "entity_id": "cu108TOAgwHX_Aq0b7uUNQ",
+    "label": "STARSHIPPING INTL LTD",
+    "type": "company",
+    "countries": [
+     "CHN",
+     "GBR"
+    ],
+    "trade_count": {
+     "sent": 4592,
+     "received": 45
+    },
+    "metadata": {
+     "shipments": 3,
+     "latest_shipment_date": "2025-06-23",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score",
+      "soe_adjacent"
+     ]
+    }
+   },
+   {
+    "entity_id": "f56jitKxYDEbJGZn7ESOvA",
+    "label": "GUANGZHOU DUNHONG IMP & EXP TRADINGCO.,LTD",
+    "type": "company",
+    "countries": [
+     "CHN"
+    ],
+    "trade_count": {
+     "sent": 172,
+     "received": 0
+    },
+    "metadata": {
+     "shipments": 3,
+     "latest_shipment_date": "2022-05-17",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score"
+     ]
+    }
+   },
+   {
+    "entity_id": "pDxlFr9gaQbPPsGmLNqM_A",
+    "label": "SUN-ALIKE(H.K.)TRADING CO.,LIMITED",
+    "type": "company",
+    "countries": [
+     "CHN"
+    ],
+    "trade_count": {
+     "sent": 6,
+     "received": 0
+    },
+    "metadata": {
+     "shipments": 3,
+     "latest_shipment_date": "2023-07-24",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score"
+     ]
+    }
+   },
+   {
+    "entity_id": "7NjiscYTt0sbMnqTR1WqOQ",
+    "label": "ELKEM ASA",
+    "type": "person",
+    "countries": [
+     "BEL",
+     "NLD",
+     "CHN",
+     "POL",
+     "DEU"
+    ],
+    "trade_count": {
+     "sent": 2060,
+     "received": 88
+    },
+    "metadata": {
+     "shipments": 2,
+     "latest_shipment_date": "2025-01-29",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score"
+     ]
+    }
+   },
+   {
+    "entity_id": "U1x8v-r2D9tTXJS432-bTg",
+    "label": "OCI TERRASUS SDN BHD",
+    "type": "company",
+    "countries": [
+     "MYS",
+     "KOR",
+     "SGP"
+    ],
+    "trade_count": {
+     "sent": 615,
+     "received": 471
+    },
+    "metadata": {
+     "shipments": 2,
+     "latest_shipment_date": "2026-01-13",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score",
+      "export_to_soe",
+      "exports_ilab_forced_labor",
+      "psa_export_to_soe",
+      "psa_exports_ilab_forced_labor",
+      "soe_adjacent"
+     ]
+    }
+   },
+   {
+    "entity_id": "Uzrnt8vRT6a8dCMoIHcEgQ",
+    "label": "TIANJIN MAOTONG INTERNATIONAL LOGISTICS CO LTD",
+    "type": "company",
+    "countries": [
+     "CHN",
+     "NLD",
+     "DEU",
+     "ESP"
+    ],
+    "trade_count": {
+     "sent": 1241,
+     "received": 1184
+    },
+    "metadata": {
+     "shipments": 2,
+     "latest_shipment_date": "2023-02-14",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score",
+      "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+     ]
+    }
+   },
+   {
+    "entity_id": "VOjfQbX9AKZeb0gKPggQ1g",
+    "label": "TR FUTURE METAL CO LIMITED",
+    "type": "company",
+    "countries": [
+     "CHN",
+     "HKG"
+    ],
+    "trade_count": {
+     "sent": 41,
+     "received": 0
+    },
+    "metadata": {
+     "shipments": 2,
+     "latest_shipment_date": "2023-07-01",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score"
+     ]
+    }
+   },
+   {
+    "entity_id": "ecUl0JsOUeIGcS8ne4gO_w",
+    "label": "FUJIAN MOONSTAR SUPPLY CHAIN MANAGEMENT COMPANY LIMITED",
+    "type": "company",
+    "countries": [
+     "CHN"
+    ],
+    "trade_count": {
+     "sent": 5,
+     "received": 95
+    },
+    "metadata": {
+     "shipments": 2,
+     "latest_shipment_date": "2023-09-17",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score"
+     ]
+    }
+   },
+   {
+    "entity_id": "g0XCZOcVp7wHRl4lXkS0NQ",
+    "label": "UPRISING EXPRESS LIMITED",
+    "type": "company",
+    "countries": [
+     "BEL",
+     "ITA",
+     "CHN",
+     "GBR",
+     "POL"
+    ],
+    "trade_count": {
+     "sent": 1606,
+     "received": 1549
+    },
+    "metadata": {
+     "shipments": 2,
+     "latest_shipment_date": "2024-07-01",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score"
+     ]
+    }
+   },
+   {
+    "entity_id": "6PYiCj5yjayQsgGco6pK9Q",
+    "label": "TEOYALL INTERNATIONAL TRADE CO., LIMITED",
+    "type": "company",
+    "countries": [
+     "IDN",
+     "BEL",
+     "CHN",
+     "PHL",
+     "HKG"
+    ],
+    "trade_count": {
+     "sent": 235,
+     "received": 2
+    },
+    "metadata": {
+     "shipments": 1,
+     "latest_shipment_date": "2026-02-04",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "bis_addresses_high_diversion_risk",
+      "cpi_score",
+      "eu_high_risk_third",
+      "mass_address_usage"
+     ]
+    }
+   },
+   {
+    "entity_id": "KNIJ-r6zhL8EYOFi0AaCCw",
+    "label": "EVER-WOLF(TIANJIN)INTERNATIONAL FORWORDERSCO.,LTD",
+    "type": "company",
+    "countries": [
+     "CHN"
+    ],
+    "trade_count": {
+     "sent": 561,
+     "received": 540
+    },
+    "metadata": {
+     "shipments": 1,
+     "latest_shipment_date": "2023-12-25",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score",
+      "exports_eudr_shipment_wood",
+      "exports_ilab_child_labor",
+      "exports_ilab_forced_labor",
+      "+3 psa_ variants"
+     ]
+    }
+   },
+   {
+    "entity_id": "YhEPQ-J8jh5dGEvj3mvbeg",
+    "label": "HONGKONG HEIRUN CO LIMITED",
+    "type": "company",
+    "countries": [
+     "HKG",
+     "CHN"
+    ],
+    "trade_count": {
+     "sent": 23,
+     "received": 0
+    },
+    "metadata": {
+     "shipments": 1,
+     "latest_shipment_date": "2022-09-07",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "bis_addresses_high_diversion_risk",
+      "cpi_score"
+     ]
+    }
+   },
+   {
+    "entity_id": "Z64LQsFcHUnn5UZWkJ76WQ",
+    "label": "JUNTOP METAL LIMITED",
+    "type": "company",
+    "countries": [
+     "CHN",
+     "HKG"
+    ],
+    "trade_count": {
+     "sent": 43,
+     "received": 0
+    },
+    "metadata": {
+     "shipments": 1,
+     "latest_shipment_date": "2024-01-15",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score"
+     ]
+    }
+   },
+   {
+    "entity_id": "gVfpeL9xqOnrAN_DaXe2qQ",
+    "label": "TR FUTURE METAL CO.,LIMITED",
+    "type": "company",
+    "countries": [
+     "HKG",
+     "CHN"
+    ],
+    "trade_count": {
+     "sent": 47,
+     "received": 0
+    },
+    "metadata": {
+     "shipments": 1,
+     "latest_shipment_date": "2022-04-25",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "bis_addresses_high_diversion_risk",
+      "cpi_score"
+     ]
+    }
+   },
+   {
+    "entity_id": "x_qeBtdhj49Zj9QU8aVhFQ",
+    "label": "TIANJIN QICHENG INTL FREIGHT FORWARD",
+    "type": "company",
+    "countries": [
+     "CHN"
+    ],
+    "trade_count": {
+     "sent": 2430,
+     "received": 176
+    },
+    "metadata": {
+     "shipments": 1,
+     "latest_shipment_date": "2024-10-12",
+     "hs_codes": [
+      {
+       "code": "280461"
+      }
+     ]
+    },
+    "risk_flags": {
+     "risk_levels": [
+      "basel_aml",
+      "cpi_score"
+     ]
+    }
+   }
+  ]
+ },
+ "abridged": {
+  "omitted_fields": [
+   "identifiers",
+   "quality_flags",
+   "next_action",
+   "entity_url",
+   "hs_code descriptions",
+   "psa_ variants of non-forced-labour factors collapsed to a count"
+  ],
+  "note": "Data fields transcribed in full from the inline MCP response; listed boilerplate fields omitted (DECISIONS #18)."
+ },
+ "note": "Several latest_shipment_date values predate date_from: latest_shipment_date appears to be entity-wide, not window-filtered."
+}

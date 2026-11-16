@@ -1,0 +1,63 @@
+{
+ "tool": "get_entity_summary",
+ "args": {
+  "entity_id": "gJdet6R6qi6nBIm-ldCR9w"
+ },
+ "captured": "2026-11-16T09:34:41",
+ "response": {
+  "entity_id": "gJdet6R6qi6nBIm-ldCR9w",
+  "label": "Công Ty TNHH Sản Xuất First Solar Việt Nam",
+  "risk": {
+   "sanctioned": false,
+   "pep": false,
+   "risk_levels": [
+    "basel_aml",
+    "cpi_score",
+    "eu_high_risk_third",
+    "exports_eudr_shipment_rubber",
+    "exports_eudr_shipment_wood",
+    "exports_ilab_child_labor",
+    "exports_ilab_forced_labor",
+    "forced_labor_aspi_origin_subtier",
+    "forced_labor_aspi_origin_subtier_product_blueprint",
+    "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+    "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+    "forced_labor_uflpa_origin_subtier",
+    "forced_labor_uflpa_origin_subtier_product_blueprint",
+    "forced_labor_xinjiang_origin_subtier",
+    "forced_labor_xinjiang_origin_subtier_product_blueprint",
+    "owned_by_regulatory_action_entity",
+    "psa_exports_eudr_shipment_rubber",
+    "psa_exports_eudr_shipment_wood",
+    "psa_exports_ilab_child_labor",
+    "psa_exports_ilab_forced_labor",
+    "psa_forced_labor_aspi_origin_subtier",
+    "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+    "psa_forced_labor_uflpa_origin_subtier",
+    "psa_forced_labor_xinjiang_origin_subtier",
+    "psa_owned_by_regulatory_action_entity"
+   ]
+  },
+  "sources": [
+   "UK Imports & Exports (January 2023 - Present)",
+   "Vietnam Imports & Exports (January 2019 - Present)",
+   "South Korea Imports & Exports (January 2021 - April 2024)",
+   "Japan Imports & Exports (January 2023 - Present)",
+   "South Korea Imports & Exports (January 2023 - Present)"
+  ],
+  "trade_count": {
+   "sent": 103617,
+   "received": 216799
+  }
+ },
+ "abridged": {
+  "omitted_fields": [
+   "attributes (names, addresses, identifiers, countries, company_type)",
+   "investigation_notes",
+   "_hints",
+   "_guidance"
+  ],
+  "note": "Data fields transcribed in full from the inline MCP response; listed boilerplate fields omitted (DECISIONS #18)."
+ },
+ "note": "risk_levels identical to the supplier-rollup row (verified at capture), so stored from it."
+}

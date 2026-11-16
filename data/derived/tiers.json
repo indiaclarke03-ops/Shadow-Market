@@ -1,0 +1,161 @@
+{
+ "status": "ok",
+ "measure": "shipments",
+ "method": "Method (DECISIONS #19): get_upstream_supply_chain could not isolate HS 2804.61 (its product filter\nmatched HS 2804 industrial gases), so the upstream columns are built from supplier rollups of\npolysilicon (2804.61) and wafer (3818.00) shipments INTO the cell/module hubs:\n  data/raw/*_search_suppliers_{280461|381800}_{hub}_compact_off*.json\nEach hub's inbound shipments are split by the exporting entity's own Sayari forced-labour flags,\nclassified at the page's default dial setting (tier E1, Xinjiang scope, ownership off):\n  E0 = on the UFLPA Entity List; flagged at default → its level; flagged only at deeper settings →\n  shadow; no flag → clean; freight forwarder as shipper → untraced.\nHub shares are then weighted by each hub's share of US cell/module shipments (exporters.csv) and\nscaled to the market total, so the columns read as \"share of the US market's upstream\". Hubs not\npulled, and the hub tail beyond the first 100 suppliers, count as untraced.",
+ "dial_setting": {
+  "tier": "E1",
+  "scope": "xinjiang"
+ },
+ "columns": {
+  "S1": {
+   "segments": [
+    {
+     "cat": "E1",
+     "value": 448
+    },
+    {
+     "cat": "clean",
+     "value": 89264
+    },
+    {
+     "cat": "shadow",
+     "value": 46492
+    },
+    {
+     "cat": "untraced",
+     "value": 23326
+    }
+   ]
+  },
+  "S2": {
+   "segments": [
+    {
+     "cat": "E0",
+     "value": 177
+    },
+    {
+     "cat": "clean",
+     "value": 76072
+    },
+    {
+     "cat": "shadow",
+     "value": 57204
+    },
+    {
+     "cat": "untraced",
+     "value": 26080
+    }
+   ]
+  }
+ },
+ "meta": {
+  "S1": {
+   "hs": "280461",
+   "hubs": {
+    "IDN": {
+     "weight": 0.0759,
+     "suppliers_pulled": 65,
+     "suppliers_total": 65,
+     "shipments_pulled": 51343,
+     "split": {
+      "clean": 0.9956,
+      "shadow": 0.0043,
+      "untraced": 0.0001
+     },
+     "file": "2026-11-16_search_suppliers_280461_idn_compact_off0000.json"
+    },
+    "IND": {
+     "weight": 0.2866,
+     "suppliers_pulled": 58,
+     "suppliers_total": 58,
+     "shipments_pulled": 204,
+     "split": {
+      "clean": 0.6422,
+      "shadow": 0.2696,
+      "untraced": 0.0784,
+      "E1": 0.0098
+     },
+     "file": "2026-11-16_search_suppliers_280461_ind_compact_off0000.json"
+    },
+    "MYS": {
+     "weight": 0.0269,
+     "suppliers_pulled": 80,
+     "suppliers_total": 80,
+     "shipments_pulled": 732,
+     "split": {
+      "clean": 0.4836,
+      "untraced": 0.4317,
+      "shadow": 0.0847
+     },
+     "file": "2026-11-16_search_suppliers_280461_mys_compact_off0000.json"
+    },
+    "THA": {
+     "weight": 0.0101,
+     "suppliers_pulled": 22,
+     "suppliers_total": 22,
+     "shipments_pulled": 121,
+     "split": {
+      "clean": 0.6777,
+      "untraced": 0.2975,
+      "shadow": 0.0248
+     },
+     "file": "2026-11-16_search_suppliers_280461_tha_compact_off0000.json"
+    },
+    "VNM": {
+     "weight": 0.497,
+     "suppliers_pulled": 100,
+     "suppliers_total": 147,
+     "shipments_pulled": 3803,
+     "split": {
+      "shadow": 0.4252,
+      "clean": 0.5635,
+      "untraced": 0.0113
+     },
+     "file": "2026-11-16_search_suppliers_280461_vnm_compact_off0000.json"
+    }
+   },
+   "hub_weight_covered": 0.8965
+  },
+  "S2": {
+   "hs": "381800",
+   "hubs": {
+    "IDN": {
+     "weight": 0.0759,
+     "suppliers_pulled": 100,
+     "suppliers_total": 387,
+     "shipments_pulled": 10733,
+     "split": {
+      "untraced": 0.3026,
+      "clean": 0.5992,
+      "shadow": 0.0982
+     },
+     "file": "2026-11-16_search_suppliers_381800_idn_compact_off0000.json"
+    },
+    "IND": {
+     "weight": 0.2866,
+     "suppliers_pulled": 100,
+     "suppliers_total": 646,
+     "shipments_pulled": 4389,
+     "split": {
+      "clean": 0.8391,
+      "shadow": 0.157,
+      "E0": 0.0039
+     },
+     "file": "2026-11-16_search_suppliers_381800_ind_compact_off0000.json"
+    },
+    "VNM": {
+     "weight": 0.497,
+     "suppliers_pulled": 100,
+     "suppliers_total": 365,
+     "shipments_pulled": 12934,
+     "split": {
+      "shadow": 0.616,
+      "clean": 0.384
+     },
+     "file": "2026-11-16_search_suppliers_381800_vnm_compact_off0000.json"
+    }
+   },
+   "hub_weight_covered": 0.8595
+  }
+ }
+}

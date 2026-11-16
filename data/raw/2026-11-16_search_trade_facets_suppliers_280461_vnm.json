@@ -1,0 +1,371 @@
+{
+ "tool": "search_trade_facets",
+ "args": {
+  "scope": "suppliers",
+  "query": "*",
+  "hs_code": "280461",
+  "arrival_country": "VNM",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "bucket_limit": 15
+ },
+ "captured": "2026-11-16T09:29:33",
+ "response": {
+  "tool": "search_trade_facets",
+  "scope": "suppliers",
+  "search_tool": "search_suppliers",
+  "query": "*",
+  "total_available": 147,
+  "facets": [
+   {
+    "name": "supplier_country",
+    "buckets": [
+     [
+      "CHN",
+      89
+     ],
+     [
+      "USA",
+      35
+     ],
+     [
+      "KOR",
+      50
+     ],
+     [
+      "DEU",
+      24
+     ],
+     [
+      "MYS",
+      20
+     ],
+     [
+      "SGP",
+      20
+     ],
+     [
+      "ITA",
+      16
+     ],
+     [
+      "FRA",
+      21
+     ],
+     [
+      "JPN",
+      39
+     ],
+     [
+      "GBR",
+      26
+     ],
+     [
+      "ESP",
+      17
+     ],
+     [
+      "BEL",
+      14
+     ],
+     [
+      "NLD",
+      19
+     ],
+     [
+      "AUS",
+      12
+     ],
+     [
+      "MEX",
+      7
+     ]
+    ]
+   },
+   {
+    "name": "buyer_country",
+    "buckets": [
+     [
+      "VNM",
+      85
+     ],
+     [
+      "CHN",
+      57
+     ],
+     [
+      "CHE",
+      35
+     ],
+     [
+      "SGP",
+      26
+     ],
+     [
+      "VIR",
+      23
+     ],
+     [
+      "HKG",
+      26
+     ],
+     [
+      "JPN",
+      29
+     ],
+     [
+      "MYS",
+      15
+     ],
+     [
+      "MAR",
+      8
+     ],
+     [
+      "USA",
+      32
+     ],
+     [
+      "IDN",
+      5
+     ],
+     [
+      "LAO",
+      4
+     ],
+     [
+      "GEO",
+      15
+     ],
+     [
+      "DEU",
+      20
+     ],
+     [
+      "THA",
+      16
+     ]
+    ]
+   },
+   {
+    "name": "supplier_risk",
+    "buckets": [
+     [
+      "soe_adjacent",
+      16
+     ],
+     [
+      "sheffield_hallam_university_forced_labor_reports_entity_adjacent",
+      9
+     ],
+     [
+      "psa_exports_ilab_forced_labor",
+      62
+     ],
+     [
+      "exports_ilab_forced_labor",
+      59
+     ],
+     [
+      "forced_labor_aspi_origin_subtier_product_blueprint",
+      13
+     ],
+     [
+      "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+      10
+     ],
+     [
+      "psa_forced_labor_aspi_origin_subtier",
+      20
+     ],
+     [
+      "forced_labor_aspi_origin_subtier",
+      16
+     ],
+     [
+      "forced_labor_xinjiang_origin_subtier_product_blueprint",
+      11
+     ],
+     [
+      "psa_export_to_soe",
+      8
+     ],
+     [
+      "forced_labor_uflpa_origin_subtier_product_blueprint",
+      10
+     ],
+     [
+      "chinese_soe_adjacent",
+      10
+     ],
+     [
+      "export_to_soe",
+      7
+     ],
+     [
+      "sanctioned_adjacent",
+      7
+     ],
+     [
+      "export_controls_adjacent",
+      6
+     ]
+    ]
+   },
+   {
+    "name": "buyer_risk",
+    "buckets": [
+     [
+      "psa_forced_labor_aspi_origin_subtier",
+      32
+     ],
+     [
+      "forced_labor_aspi_origin_subtier",
+      31
+     ],
+     [
+      "psa_forced_labor_xinjiang_origin_subtier",
+      36
+     ],
+     [
+      "exports_ilab_forced_labor",
+      26
+     ],
+     [
+      "psa_exports_ilab_forced_labor",
+      26
+     ],
+     [
+      "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+      27
+     ],
+     [
+      "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+      26
+     ],
+     [
+      "exports_ilab_child_labor",
+      30
+     ],
+     [
+      "psa_exports_ilab_child_labor",
+      30
+     ],
+     [
+      "exports_eudr_shipment_wood",
+      19
+     ],
+     [
+      "psa_exports_eudr_shipment_wood",
+      19
+     ],
+     [
+      "forced_labor_xinjiang_origin_subtier",
+      33
+     ],
+     [
+      "psa_forced_labor_uflpa_origin_subtier",
+      23
+     ],
+     [
+      "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+      16
+     ],
+     [
+      "chinese_soe_adjacent",
+      12
+     ]
+    ]
+   },
+   {
+    "name": "buyer_risk_category",
+    "buckets": [
+     [
+      "export_controls",
+      10
+     ],
+     [
+      "political_exposure",
+      2
+     ],
+     [
+      "forced_labor",
+      47
+     ],
+     [
+      "adverse_media",
+      0
+     ],
+     [
+      "regulatory_action",
+      3
+     ],
+     [
+      "sanctions",
+      2
+     ],
+     [
+      "sanctions_and_export_control_lists",
+      0
+     ],
+     [
+      "environmental_risk",
+      26
+     ],
+     [
+      "shell_company_risk",
+      4
+     ]
+    ]
+   },
+   {
+    "name": "supplier_risk_category",
+    "buckets": [
+     [
+      "export_controls",
+      17
+     ],
+     [
+      "political_exposure",
+      10
+     ],
+     [
+      "forced_labor",
+      73
+     ],
+     [
+      "adverse_media",
+      1
+     ],
+     [
+      "regulatory_action",
+      10
+     ],
+     [
+      "sanctions",
+      4
+     ],
+     [
+      "sanctions_and_export_control_lists",
+      0
+     ],
+     [
+      "environmental_risk",
+      22
+     ],
+     [
+      "shell_company_risk",
+      10
+     ]
+    ]
+   }
+  ]
+ },
+ "abridged": {
+  "omitted_fields": [
+   "applied_filters (same as args)",
+   "buckets stored as [key,count] pairs instead of {key,count} objects"
+  ],
+  "note": "Data fields transcribed in full from the inline MCP response; listed boilerplate fields omitted (DECISIONS #18)."
+ }
+}

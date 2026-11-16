@@ -1,6 +1,6 @@
 # Sayari pull plan (M1, M2, M5)
 
-Status 2026-11-15: **not run.** The Sayari claude.ai connector was unavailable in the build session (claude.ai login lapsed). Re-authenticate with `/login` (or `claude auth login`) in an interactive session, then check that `/mcp` lists Sayari.
+Status 2026-11-16: **run.** M1/M2/M5 done with the deviations in DECISIONS #15–21; results in `layer3_validation.md`. (Earlier status 2026-11-15: not run.) The Sayari claude.ai connector was unavailable in the build session (claude.ai login lapsed). Re-authenticate with `/login` (or `claude auth login`) in an interactive session, then check that `/mcp` lists Sayari.
 
 Save every response to `data/raw/{YYYY-MM-DD}_{tool}_{query-slug}.json` **before** analysing it. Never edit raw files.
 

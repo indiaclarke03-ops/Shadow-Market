@@ -1,0 +1,59 @@
+{
+ "tool": "get_entity_summary",
+ "args": {
+  "entity_id": "WovHW8Ersoy7ccioxUzizg"
+ },
+ "captured": "2026-11-16T09:34:41",
+ "response": {
+  "entity_id": "WovHW8Ersoy7ccioxUzizg",
+  "label": "CôNG TY TNHH JA SOLAR VIệT NAM",
+  "risk": {
+   "sanctioned": false,
+   "pep": false,
+   "risk_levels": [
+    "basel_aml",
+    "chinese_soe_adjacent",
+    "cpi_score",
+    "eu_high_risk_third",
+    "exports_eudr_shipment_rubber",
+    "exports_eudr_shipment_wood",
+    "exports_ilab_child_labor",
+    "exports_ilab_forced_labor",
+    "forced_labor_aspi_origin_subtier",
+    "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+    "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+    "forced_labor_xinjiang_origin_subtier",
+    "forced_labor_xinjiang_uflpa_adjacent",
+    "psa_exports_eudr_shipment_rubber",
+    "psa_exports_eudr_shipment_wood",
+    "psa_exports_ilab_child_labor",
+    "psa_exports_ilab_forced_labor",
+    "psa_forced_labor_aspi_origin_subtier",
+    "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+    "psa_forced_labor_uflpa_origin_subtier",
+    "psa_forced_labor_xinjiang_origin_subtier"
+   ]
+  },
+  "sources": [
+   "SESAMm ESG Controversy Events (3rd Party Data)",
+   "UK Imports & Exports (January 2023 - Present)",
+   "China LHNB MOFCOM Foreign Investment Directory",
+   "South Korea Imports & Exports (January 2021 - April 2024)",
+   "Japan Imports & Exports (January 2023 - Present)"
+  ],
+  "trade_count": {
+   "sent": 23824,
+   "received": 114339
+  }
+ },
+ "abridged": {
+  "omitted_fields": [
+   "attributes (names, addresses, identifiers, countries, company_type)",
+   "investigation_notes",
+   "_hints",
+   "_guidance"
+  ],
+  "note": "Data fields transcribed in full from the inline MCP response; listed boilerplate fields omitted (DECISIONS #18)."
+ },
+ "note": "risk_levels identical to the supplier-rollup row (verified at capture), so stored from it."
+}

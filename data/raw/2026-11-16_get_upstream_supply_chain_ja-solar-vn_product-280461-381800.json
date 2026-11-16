@@ -1,0 +1,89 @@
+{
+ "tool": "get_upstream_supply_chain",
+ "args": {
+  "entity_id": "WovHW8Ersoy7ccioxUzizg",
+  "max_depth": 3,
+  "min_date": "2024-11-16",
+  "limit": 25,
+  "product": [
+   "280461",
+   "381800"
+  ]
+ },
+ "captured": "2026-11-16T09:29:33",
+ "response": {
+  "returned": 4,
+  "focus": {
+   "entity_id": "WovHW8Ersoy7ccioxUzizg"
+  },
+  "items": [
+   {
+    "entity_id": "5-plpBKPNPMXu8NR-LdgXw",
+    "label": "CôNG TY TNHH CôNG NGHệ NăNG LượNG ET (VIệT NAM)",
+    "tier": 3,
+    "path": [
+     "MGLrnC1jOOWOjXG9h5Da9A (MESSER HẢI PHÒNG – CHI NHÁNH HẢI DƯƠNG, tier 2, HS 2804, MYS/VNM→VNM, 2019-08-02..2025-03-29)",
+     "5-plpBKPNPMXu8NR-LdgXw (tier 3, HS 2804, VNM→VNM, 2024-11-22..2024-12-12)"
+    ],
+    "risk_levels": [
+     "exports_eudr_shipment_rubber",
+     "exports_eudr_shipment_wood",
+     "exports_ilab_child_labor",
+     "exports_ilab_forced_labor",
+     "psa_exports_eudr_shipment_rubber",
+     "psa_exports_eudr_shipment_wood",
+     "psa_exports_ilab_child_labor",
+     "psa_exports_ilab_forced_labor"
+    ]
+   },
+   {
+    "entity_id": "GqAg00Y1bOr7E111QNDCnA",
+    "label": "ASIA PACIFIC GAS ENTERPRISE COMPANY LIMITED",
+    "tier": 3,
+    "path": [
+     "MGLrnC1jOOWOjXG9h5Da9A (tier 2)",
+     "GqAg00Y1bOr7E111QNDCnA (tier 3, HS 2804, CHN/HKG→VNM, 2021-05-19..2024-12-30)"
+    ],
+    "risk_levels": [
+     "exports_ilab_child_labor",
+     "exports_ilab_forced_labor",
+     "psa_exports_ilab_child_labor",
+     "psa_exports_ilab_forced_labor"
+    ]
+   },
+   {
+    "entity_id": "9jRsy6beUJLJYGo92C3uyQ",
+    "label": "KUNMING ANNING MESSER GAS PRODUCTS CO., LTD",
+    "tier": 3,
+    "path": [
+     "MGLrnC1jOOWOjXG9h5Da9A (tier 2)",
+     "9jRsy6beUJLJYGo92C3uyQ (tier 3, HS 2804, CHN→VNM, 2023-09-27..2025-11-28)"
+    ],
+    "risk_levels": []
+   },
+   {
+    "entity_id": "mymy9hH6fr4708RgvjqHSg",
+    "label": "ORIENTAL OCEAN CHEMICAL TECHNOLOGY PTE. LTD",
+    "tier": 3,
+    "path": [
+     "MGLrnC1jOOWOjXG9h5Da9A (tier 2)",
+     "mymy9hH6fr4708RgvjqHSg (tier 3, HS 2804, CHN→VNM, 2025-01-21)"
+    ],
+    "risk_levels": [
+     "controlled_by_mass_business_registration"
+    ]
+   }
+  ]
+ },
+ "abridged": {
+  "omitted_fields": [
+   "per-node countries, quality_flags, next_action, entity_url",
+   "_guidance",
+   "investigation_notes",
+   "risk_factor_context (definitions; see lookup_risk_factors)",
+   "path nodes condensed to strings"
+  ],
+  "note": "Data fields transcribed in full from the inline MCP response; listed boilerplate fields omitted (DECISIONS #18)."
+ },
+ "note": "Finding: product filter matched HS 2804 at 4 digits (industrial gases via Messer), not 2804.61 polysilicon. Not used for tiers.json."
+}

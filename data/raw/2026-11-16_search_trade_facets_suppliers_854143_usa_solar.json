@@ -1,0 +1,290 @@
+{
+ "tool": "search_trade_facets",
+ "args": {
+  "scope": "suppliers",
+  "query": "solar",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16"
+ },
+ "captured": "2026-11-16T09:23:18",
+ "response": {
+  "tool": "search_trade_facets",
+  "scope": "suppliers",
+  "search_tool": "search_suppliers",
+  "query": "solar",
+  "applied_filters": {
+   "query": "solar",
+   "arrival_country": "USA",
+   "hs_code": "854143",
+   "date_from": "2024-11-16",
+   "date_to": "2026-11-16"
+  },
+  "total_available": 1581,
+  "facets": [
+   {
+    "name": "supplier_country",
+    "buckets": [
+     {
+      "key": "USA",
+      "count": 682
+     },
+     {
+      "key": "IND",
+      "count": 208
+     },
+     {
+      "key": "KOR",
+      "count": 272
+     },
+     {
+      "key": "CHN",
+      "count": 742
+     },
+     {
+      "key": "VNM",
+      "count": 322
+     },
+     {
+      "key": "JPN",
+      "count": 116
+     },
+     {
+      "key": "CHE",
+      "count": 51
+     },
+     {
+      "key": "HKG",
+      "count": 199
+     },
+     {
+      "key": "VIR",
+      "count": 15
+     },
+     {
+      "key": "SGP",
+      "count": 145
+     }
+    ]
+   },
+   {
+    "name": "buyer_country",
+    "buckets": [
+     {
+      "key": "USA",
+      "count": 1742
+     },
+     {
+      "key": "CHN",
+      "count": 410
+     },
+     {
+      "key": "CAN",
+      "count": 328
+     },
+     {
+      "key": "SGP",
+      "count": 84
+     },
+     {
+      "key": "AUS",
+      "count": 100
+     },
+     {
+      "key": "DEU",
+      "count": 176
+     },
+     {
+      "key": "VNM",
+      "count": 82
+     },
+     {
+      "key": "MYS",
+      "count": 50
+     },
+     {
+      "key": "KOR",
+      "count": 156
+     },
+     {
+      "key": "GBR",
+      "count": 195
+     }
+    ]
+   },
+   {
+    "name": "supplier_risk",
+    "buckets": [
+     {
+      "key": "psa_forced_labor_xinjiang_origin_subtier",
+      "count": 127
+     },
+     {
+      "key": "psa_exports_ilab_child_labor",
+      "count": 451
+     },
+     {
+      "key": "psa_exports_ilab_forced_labor",
+      "count": 433
+     },
+     {
+      "key": "exports_ilab_child_labor",
+      "count": 442
+     },
+     {
+      "key": "exports_ilab_forced_labor",
+      "count": 425
+     },
+     {
+      "key": "psa_forced_labor_uflpa_origin_subtier",
+      "count": 109
+     },
+     {
+      "key": "forced_labor_xinjiang_origin_subtier",
+      "count": 96
+     },
+     {
+      "key": "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+      "count": 139
+     },
+     {
+      "key": "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+      "count": 98
+     },
+     {
+      "key": "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+      "count": 124
+     }
+    ]
+   },
+   {
+    "name": "buyer_risk",
+    "buckets": [
+     {
+      "key": "psa_forced_labor_sheffield_hallam_university_reports_origin_subtier",
+      "count": 166
+     },
+     {
+      "key": "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+      "count": 184
+     },
+     {
+      "key": "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+      "count": 157
+     },
+     {
+      "key": "mass_address_usage",
+      "count": 213
+     },
+     {
+      "key": "psa_forced_labor_xinjiang_origin_subtier",
+      "count": 152
+     },
+     {
+      "key": "psa_forced_labor_uflpa_origin_subtier",
+      "count": 141
+     },
+     {
+      "key": "psa_exports_ilab_forced_labor",
+      "count": 134
+     },
+     {
+      "key": "psa_exports_ilab_child_labor",
+      "count": 132
+     },
+     {
+      "key": "exports_ilab_forced_labor",
+      "count": 124
+     },
+     {
+      "key": "forced_labor_xinjiang_origin_subtier",
+      "count": 105
+     }
+    ]
+   },
+   {
+    "name": "buyer_risk_category",
+    "buckets": [
+     {
+      "key": "export_controls",
+      "count": 29
+     },
+     {
+      "key": "political_exposure",
+      "count": 26
+     },
+     {
+      "key": "forced_labor",
+      "count": 332
+     },
+     {
+      "key": "adverse_media",
+      "count": 20
+     },
+     {
+      "key": "regulatory_action",
+      "count": 64
+     },
+     {
+      "key": "sanctions",
+      "count": 14
+     },
+     {
+      "key": "sanctions_and_export_control_lists",
+      "count": 0
+     },
+     {
+      "key": "environmental_risk",
+      "count": 59
+     },
+     {
+      "key": "shell_company_risk",
+      "count": 267
+     }
+    ]
+   },
+   {
+    "name": "supplier_risk_category",
+    "buckets": [
+     {
+      "key": "export_controls",
+      "count": 57
+     },
+     {
+      "key": "political_exposure",
+      "count": 51
+     },
+     {
+      "key": "forced_labor",
+      "count": 552
+     },
+     {
+      "key": "adverse_media",
+      "count": 15
+     },
+     {
+      "key": "regulatory_action",
+      "count": 76
+     },
+     {
+      "key": "sanctions",
+      "count": 10
+     },
+     {
+      "key": "sanctions_and_export_control_lists",
+      "count": 1
+     },
+     {
+      "key": "environmental_risk",
+      "count": 268
+     },
+     {
+      "key": "shell_company_risk",
+      "count": 72
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,87 @@
+{
+ "tool": "lookup_risk_factors",
+ "args": {
+  "ids": "15 keys in rules/uflpa.json risk_factor_map"
+ },
+ "captured": "2026-11-16T09:23:18",
+ "response": {
+  "risk_factors": [
+   {
+    "id": "aspi_uyghur_forced_labor_report_entity",
+    "label": "Entity from ASPI Forced Labor Report",
+    "description": "The entity is named in the Australian Strategic Policy Institute's report, \"Uyghurs for sale: ‘Re-education’, forced labour and surveillance beyond Xinjiang.\" The ASPI has identified entities that are using Uyghur labour transferred from Xinjiang since 2017."
+   },
+   {
+    "id": "forced_labor_aspi_origin_direct",
+    "label": "Direct Trade History with ASPI Entity",
+    "description": "Historical shipment records suggest that the entity possibly traded directly with an entity mentioned in the following forced labor report: \"Uyghurs for sale: ‘Re-education’, forced labour and surveillance beyond Xinjiang\" by Australian Strategic Policy Institute, that was identified in tier 1 of their supplier network using global import & export data. This risk factor only applies to trade activity within the last 730 days."
+   },
+   {
+    "id": "forced_labor_aspi_origin_subtier",
+    "label": "Supplier Network with ASPI Entity",
+    "description": "Historical shipment records suggest that the entity has a third-party entity mentioned in the following forced labor report: “Uyghurs for Sale: ‘Re-education’, Forced Labor, and Surveillance beyond Xinjiang” by Australian Strategic Policy Institute, that was identified in tier 2 or 3 of their supplier network using global import & export data. This risk factor only applies to trade activity within the last 730 days."
+   },
+   {
+    "id": "forced_labor_aspi_origin_subtier_product_blueprint",
+    "label": "Product-relevant Supplier Network with ASPI Entity",
+    "description": "Historical shipment records suggest that the entity indirectly traded goods relevant to its supply chain with a third-party entity mentioned in the following forced labor report: “Uyghurs for Sale: ‘Re-education’, Forced Labor, and Surveillance beyond Xinjiang” by Australian Strategic Policy Institute. The risk was assessed using Sayari’s Product Blueprint, a proprietary methodology that traces upstream value chains to identify sub-tier supplier risks accurately across tier 2, 3, and 4 suppliers using global import & export data. This risk factor only applies to trade activity within the last 730 days."
+   },
+   {
+    "id": "forced_labor_sheffield_hallam_university_reports_origin_direct",
+    "label": "Direct Trade History with Entity from Sheffield Hallam University Forced Labor Reports",
+    "description": "Historical shipment records suggest that the entity possibly traded directly with an entity mentioned in Sheffield Hallam University Forced Labor Reports that was identified in tier 1 of their supplier network using global import & export data. This risk factor only applies to trade activity within the last 730 days."
+   },
+   {
+    "id": "forced_labor_sheffield_hallam_university_reports_origin_subtier",
+    "label": "Supplier Network with Entity from Sheffield Hallam University Forced Labor Reports",
+    "description": "Historical shipment records suggest that the entity has a third-party entity mentioned in Sheffield Hallam University Forced Labor Reports that was identified in tier 2 or 3 of their supplier network using global import & export data. This risk factor only applies to trade activity within the last 730 days."
+   },
+   {
+    "id": "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+    "label": "Product-relevant Supplier Network with Entity from Sheffield Hallam University Forced Labor Reports",
+    "description": "Historical shipment records suggest that the entity indirectly traded goods relevant to its supply chain with a third-party entity mentioned in Sheffield Hallam University’s Forced Labor Reports. The risk was assessed using Sayari’s Product Blueprint, a proprietary methodology that traces upstream value chains to identify sub-tier supplier risks accurately across tier 2, 3, and 4 suppliers using global import & export data. This risk factor only applies to trade activity within the last 730 days."
+   },
+   {
+    "id": "forced_labor_uflpa_origin_direct",
+    "label": "Direct Trade History with UFLPA Entity",
+    "description": "Historical shipment records suggest that the entity possibly traded directly with an entity mentioned in the U.S. Department of Homeland Security’s “Strategy to Prevent the Importation of Goods Mined, Produced, or Manufactured with Forced Labor in the People’s Republic of China,” also known as the Uyghur Forced Labor Prevention Act (UFLPA) Entity List, that was identified in tier 1 of their supplier network using global import & export data. This risk factor only applies to trade activity within the last 730 days."
+   },
+   {
+    "id": "forced_labor_uflpa_origin_subtier",
+    "label": "Supplier Network with UFLPA Entity",
+    "description": "Historical shipment records suggest that the entity has a third-party entity mentioned in the U.S. Department of Homeland Security’s “Strategy to Prevent the Importation of Goods Mined, Produced, or Manufactured with Forced Labor in the People’s Republic of China,” also known as the Uyghur Forced Labor Prevention Act (UFLPA) Entity List, that was identified in tier 2 or 3 of their supplier network using global import & export data. This risk factor only applies to trade activity within the last 730 days."
+   },
+   {
+    "id": "forced_labor_uflpa_origin_subtier_product_blueprint",
+    "label": "Product-relevant Supplier Network with UFLPA Entity",
+    "description": "Historical shipment records suggest that the entity indirectly traded goods relevant to its supply chain with a third-party entity mentioned in the U.S. Department of Homeland Security’s “Strategy to Prevent the Importation of Goods Mined, Produced, or Manufactured with Forced Labor in the People’s Republic of China,” also known as the Uyghur Forced Labor Prevention Act (UFLPA) Entity List. The risk was assessed using Sayari’s Product Blueprint, a proprietary methodology that traces upstream value chains to identify sub-tier supplier risks accurately across tier 2, 3 and 4 suppliers using global import & export data. This risk factor only applies to trade activity within the last 730 days."
+   },
+   {
+    "id": "forced_labor_xinjiang_origin_direct",
+    "label": "Direct Trade History with Xinjiang-Based Entity",
+    "description": "Historical shipment records suggest that the entity possibly traded directly with a Xinjiang-based entity that was identified in tier 1 of their supplier network using global import & export data. The Xinjiang-based entity was assessed with geospatial and/or keyword methodology as possibly located, registered, or conducting business in Xinjiang. This risk factor only applies to trade activity within the last 730 days."
+   },
+   {
+    "id": "forced_labor_xinjiang_origin_subtier",
+    "label": "Supplier Network with Xinjiang-Based Entity",
+    "description": "Historical shipment records suggest that the entity has a third-party Xinjiang-based entity that was identified in tier 2 or 3 of their supplier network using global import & export data. The Xinjiang-based entity was assessed with geospatial and/or keyword methodology as possibly located, registered, or conducting business in Xinjiang. This risk factor only applies to trade activity within the last 730 days."
+   },
+   {
+    "id": "forced_labor_xinjiang_origin_subtier_product_blueprint",
+    "label": "Product-relevant Supplier Network with Xinjiang-Based Entity",
+    "description": "Historical shipment records suggest that the entity indirectly traded goods relevant to its supply chain with a third-party Xinjiang-based entity. The risk was assessed using Sayari’s Product Blueprint, a proprietary methodology that traces upstream value chains to identify sub-tier supplier risks accurately across tier 2, 3, and 4 suppliers using global import & export data. The Xinjiang-based entity was assessed with geospatial and/or keyword methodology as possibly located, registered, or conducting business in Xinjiang. This risk factor only applies to trade activity within the last 730 days."
+   },
+   {
+    "id": "forced_labor_xinjiang_uflpa",
+    "label": "UFLPA Entity",
+    "description": "The entity is listed in the U.S. Department of Homeland Security's \"Strategy to Prevent the Importation of Goods Mined, Produced, or Manufactured with Forced Labor in the People’s Republic of China,\" also known as the Uyghur Forced Labor Prevention Act (UFLPA) Entity List. Entities in the United States are prohibited from importing goods made wholly or in part with forced labor into the United States in an effort to end the systematic use of forced labor in the Xinjiang Uyghur Autonomous Region."
+   },
+   {
+    "id": "forced_labor_xinjiang_uflpa_adjacent",
+    "label": "Related to UFLPA Entity",
+    "description": "The entity is 1 hop away from an entity listed in the U.S. Department of Homeland Security’s “Strategy to Prevent the Importation of Goods Mined, Produced, or Manufactured with Forced Labor in the People’s Republic of China,” also known as the Uyghur Forced Labor Prevention Act (UFLPA) Entity List. Applies to all relationship types."
+   }
+  ],
+  "total_count": 15
+ }
+}

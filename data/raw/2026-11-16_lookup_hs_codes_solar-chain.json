@@ -1,0 +1,73 @@
+{
+ "tool": "lookup_hs_codes",
+ "args": {
+  "codes": [
+   "854142",
+   "854143",
+   "280461",
+   "381800"
+  ]
+ },
+ "captured": "2026-11-16T09:23:18",
+ "response": {
+  "hs_codes": [
+   {
+    "code": "28",
+    "long_description": "Inorganic chemicals; organic and inorganic compounds of precious metals; of rare earth metals, of radio-active elements and of isotopes",
+    "short_description": "Inorganic chemicals"
+   },
+   {
+    "code": "38",
+    "long_description": "Chemical products n.e.c.",
+    "short_description": "Various chemical products"
+   },
+   {
+    "code": "85",
+    "long_description": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
+    "short_description": "Electrical equipment, electronics"
+   },
+   {
+    "code": "2804",
+    "long_description": "Hydrogen, rare gases and other non-metals",
+    "short_description": "Hydrogen & rare gases"
+   },
+   {
+    "code": "3818",
+    "long_description": "Chemical elements doped for use in electronics, in the form of discs, wafers or similar forms; chemical compounds doped for use in electronics",
+    "short_description": "Doped elements & compounds for electronics"
+   },
+   {
+    "code": "8541",
+    "long_description": "Semiconductor devices (e.g. diodes, transistors, semiconductor based transducers); including photovoltaic cells assembled or not in modules or panels, light-emitting diodes (LED) assembled with other LEDs or not, mounted piezo-electric crystals",
+    "short_description": "Diodes & Transistors"
+   },
+   {
+    "code": "280461",
+    "long_description": "Silicon; containing by weight not less than 99.99% of silicon",
+    "short_description": null
+   },
+   {
+    "code": "381800",
+    "long_description": "Chemical elements; doped for use in electronics, in the form of discs, wafers or similar forms; chemical compounds doped for use in electronics",
+    "short_description": null
+   },
+   {
+    "code": "854142",
+    "long_description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells not assembled in modules or made up into panels",
+    "short_description": null
+   },
+   {
+    "code": "854143",
+    "long_description": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels",
+    "short_description": null
+   }
+  ],
+  "total_count": 10,
+  "filtered_by": [
+   "854142",
+   "854143",
+   "280461",
+   "381800"
+  ]
+ }
+}

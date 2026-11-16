@@ -6,6 +6,8 @@ See `concept_2.md` (the idea) and `specification.md` (the MVP spec). Judgement c
 
 ## Run it
 ```
+python3 pipeline/extract_sayari.py  # data/raw → data/derived/exporters.csv
+python3 pipeline/build_tiers.py     # data/raw → data/derived/tiers.json (upstream columns)
 python3 pipeline/build.py          # rebuilds data/derived/metrics.json and site/data.js
 open site/index.html               # works straight from disk; no server needed
 ```
@@ -20,7 +22,8 @@ data/cases.csv              Layer 2: public solar enforcement events
 data/evidence/              source register, claims, timeline, Entity List history
 data/derived/metrics.json   everything the site shows (generated)
 pipeline/build.py           classification, all dial combinations, curves, cliffs, Layer 2 merge, validation
-pipeline/extract_sayari.py  raw Sayari JSON → data/derived/exporters.csv (skeleton until the first pull)
+pipeline/extract_sayari.py  raw Sayari JSON → data/derived/exporters.csv
+pipeline/build_tiers.py     hub-inbound polysilicon/wafer rollups → data/derived/tiers.json
 pipeline/sim_inputs.json    Monte Carlo input distributions, with status and source
 pipeline/notes/             research logs and the Sayari pull plan
 site/                       index.html, styles.css, charts.js, sim.js, app.js

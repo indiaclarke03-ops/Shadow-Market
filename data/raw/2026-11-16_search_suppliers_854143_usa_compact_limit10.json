@@ -1,0 +1,14 @@
+{
+ "tool": "search_suppliers",
+ "args": {
+  "query": "*",
+  "hs_code": "854143",
+  "arrival_country": "USA",
+  "date_from": "2024-11-16",
+  "date_to": "2026-11-16",
+  "limit": 10,
+  "response_mode": "compact"
+ },
+ "captured": "2026-11-16T09:29:33",
+ "response": "Not stored separately: the 10 items are identical to the first 10 of 2026-11-16_search_suppliers_854143_usa_compact_off0000.json (same query, offset 0)."
+}

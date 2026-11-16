@@ -1,0 +1,30 @@
+{
+ "tool": "get_investigation_guidance",
+ "args": {
+  "query": "trace polysilicon and wafer suppliers upstream of a solar module exporter...",
+  "investigation_type": "supply_chain",
+  "limit": 3
+ },
+ "captured": "2026-11-16T09:29:33",
+ "response": {
+  "results": [
+   {
+    "id": "capability-api-tool-selection"
+   },
+   {
+    "id": "corporate-structure-sayari-api-tool-selection"
+   },
+   {
+    "id": "supply-chain-mapping-core-methodology"
+   }
+  ],
+  "total_matches": 15,
+  "has_more": true
+ },
+ "abridged": {
+  "omitted_fields": [
+   "content/implications/sources text of each guidance entry (generic methodology, no data)"
+  ],
+  "note": "Data fields transcribed in full from the inline MCP response; listed boilerplate fields omitted (DECISIONS #18)."
+ }
+}

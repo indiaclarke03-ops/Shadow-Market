@@ -69,7 +69,8 @@ def classify(exporters: list[dict], rules: dict) -> list[dict]:
             "name": e.get("name", ""),
             "country": e.get("country", "") or "Unknown",
             "stage": e.get("stage", ""),
-            "value": num(e.get("us_import_value_usd"), 0.0),
+            "value": num(e.get("us_import_value_usd")),
+            "value_usd": num(e.get("us_import_value_usd")),
             "shipments": int(num(e.get("shipments"), 0) or 0),
             "flags": flags,
             "unmapped_factors": unknown,
@@ -163,7 +164,7 @@ def layer2_summary(stats: list[dict]) -> dict:
         rows = [r for r in stats if r.get("industry", "").lower() == industry.lower()
                 and r.get("exam_result", "").lower() == result and r.get("period_type") == period_type
                 and (not hts4 or r.get("hts4") == hts4)
-                and not r.get("country_of_origin")]
+                and r.get("country_of_origin", "").lower() in ("", "all")]
         rows.sort(key=lambda r: r.get("capture_date", ""), reverse=True)
         return rows[0] if rows else None
 
@@ -177,17 +178,20 @@ def layer2_summary(stats: list[dict]) -> dict:
                     "period": r.get("period"), "source_id": r.get("source_id"), "notes": r.get("notes", "")}
     # HTS 8541 (solar proxy), if captured
     for res in ("stopped", "released", "denied", "pending"):
-        rows = [r for r in stats if r.get("hts4") == "8541" and r.get("exam_result") == res and r.get("period_type") == "cumulative" and not r.get("country_of_origin")]
+        rows = [r for r in stats if r.get("hts4") == "8541" and r.get("exam_result") == res and r.get("period_type") == "cumulative" and r.get("country_of_origin", "").lower() in ("", "all")]
         if rows:
             r = sorted(rows, key=lambda r: r.get("capture_date", ""), reverse=True)[0]
             out.setdefault("hts8541", {})[res] = {"shipments": num(r.get("shipments")), "value_usd": num(r.get("value_usd")),
                                                   "period": r.get("period"), "source_id": r.get("source_id"), "notes": r.get("notes", "")}
-    # Release rate = released / (released + denied), electronics if possible
+    # Release rate = released / (released + denied), by VALUE (DECISIONS #13: line counts changed
+    # definition across dashboard revisions; values are comparable). Narrowest scope first.
     for scope in ("hts8541", "electronics", "all"):
         s = out.get(scope, {})
-        if "released" in s and "denied" in s and s["released"]["shipments"] and s["denied"]["shipments"] is not None:
-            rel, den = s["released"]["shipments"], s["denied"]["shipments"]
-            out["release_rate"] = {"value": round(rel / (rel + den), 3), "basis": scope, "by": "shipments",
+        if "released" in s and "denied" in s and s["released"]["value_usd"] and s["denied"]["value_usd"] is not None:
+            rel, den = s["released"]["value_usd"], s["denied"]["value_usd"]
+            rc, dc = s["released"]["shipments"], s["denied"]["shipments"]
+            out["release_rate"] = {"value": round(rel / (rel + den), 3), "basis": scope, "by": "value_usd",
+                                   "by_count": round(rc / (rc + dc), 3) if rc and dc is not None else None,
                                    "source_ids": sorted({s["released"]["source_id"], s["denied"]["source_id"]})}
             break
     return out
@@ -203,6 +207,10 @@ def main() -> int:
     rules = json.loads((ROOT / "rules" / "uflpa.json").read_text())
     exporters_raw = read_csv(Path(args.exporters) if args.exporters else DERIVED / "exporters.csv")
     exs = classify(exporters_raw, rules)
+    # Size measure (DECISIONS #15): USD import value when every exporter has one, else shipment counts.
+    measure = "value_usd" if exs and all(e["value_usd"] is not None for e in exs) else "shipments"
+    for e in exs:
+        e["value"] = e["value_usd"] if measure == "value_usd" else float(e["shipments"])
     stats = read_csv(DATA / "cbp_uflpa_stats.csv")
     l2 = layer2_summary(stats)
 
@@ -219,13 +227,15 @@ def main() -> int:
         total_value = sum(e["value"] for e in exs)
         combos = {}
         for t, s, o in itertools.product(TIER_ORDER, SCOPE_ORDER, ("off", "one_hop")):
-            combos[f"{t}|{s}|{o}"] = metrics_for(exs, t, s, o, total_value, detained_value)
+            # Tolerated exposure subtracts CBP detained USD, so it needs a USD measure.
+            combos[f"{t}|{s}|{o}"] = metrics_for(exs, t, s, o, total_value, detained_value if measure == "value_usd" else None)
         by_cty: dict[str, float] = {}
         for e in exs:
             by_cty[e["country"]] = by_cty.get(e["country"], 0) + e["value"]
         traced_val = sum(e["value"] for e in exs if e["traced"])
         layer3 = {
             "status": "ok",
+            "measure": measure,
             "total_value": round(total_value),
             "traced_share": round(traced_val / total_value * 100, 1) if total_value else None,
             "exporter_count": len(exs),

@@ -1,0 +1,51 @@
+{
+ "tool": "get_entity_summary",
+ "args": {
+  "entity_id": "5o88cxYmG-covaV4-JqlCw"
+ },
+ "captured": "2026-11-16T09:34:41",
+ "response": {
+  "entity_id": "5o88cxYmG-covaV4-JqlCw",
+  "label": "FS INDIA SOLAR VENTURES PRIVATE LIMITED",
+  "risk": {
+   "sanctioned": false,
+   "pep": false,
+   "risk_levels": [
+    "basel_aml",
+    "cpi_score",
+    "forced_labor_aspi_origin_subtier",
+    "forced_labor_aspi_origin_subtier_product_blueprint",
+    "forced_labor_sheffield_hallam_university_reports_origin_subtier_product_blueprint",
+    "forced_labor_uflpa_origin_subtier_product_blueprint",
+    "forced_labor_xinjiang_origin_subtier",
+    "forced_labor_xinjiang_origin_subtier_product_blueprint",
+    "owned_by_regulatory_action_entity",
+    "psa_forced_labor_aspi_origin_subtier",
+    "psa_forced_labor_uflpa_origin_subtier",
+    "psa_forced_labor_xinjiang_origin_subtier",
+    "psa_owned_by_regulatory_action_entity"
+   ]
+  },
+  "sources": [
+   "SESAMm ESG Controversy Events (3rd Party Data)",
+   "UK Imports & Exports (January 2023 - Present)",
+   "Legal Entity Identifier (LEI) Registry (3rd Party Data)",
+   "South Korea Imports & Exports (January 2023 - Present)",
+   "India Imports & Exports (January 2023 - Present)"
+  ],
+  "trade_count": {
+   "sent": 24951,
+   "received": 68719
+  }
+ },
+ "abridged": {
+  "omitted_fields": [
+   "attributes (names, addresses, identifiers, countries, company_type)",
+   "investigation_notes",
+   "_hints",
+   "_guidance"
+  ],
+  "note": "Data fields transcribed in full from the inline MCP response; listed boilerplate fields omitted (DECISIONS #18)."
+ },
+ "note": "risk_levels identical to the supplier-rollup row (verified at capture), so stored from it."
+}

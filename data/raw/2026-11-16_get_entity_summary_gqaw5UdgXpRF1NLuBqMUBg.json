@@ -1,0 +1,53 @@
+{
+ "tool": "get_entity_summary",
+ "args": {
+  "entity_id": "gqaw5UdgXpRF1NLuBqMUBg"
+ },
+ "captured": "2026-11-16T09:34:41",
+ "response": {
+  "entity_id": "gqaw5UdgXpRF1NLuBqMUBg",
+  "label": "CôNG TY TNHH PHáT TRIểN NăNG LượNG TRINA SOLAR",
+  "risk": {
+   "sanctioned": false,
+   "pep": false,
+   "risk_levels": [
+    "basel_aml",
+    "cpi_score",
+    "exports_eudr_shipment_rubber",
+    "exports_eudr_shipment_wood",
+    "exports_ilab_child_labor",
+    "exports_ilab_forced_labor",
+    "forced_labor_sheffield_hallam_university_reports_origin_direct",
+    "imports_from_usa_section_1260h_entity",
+    "psa_exports_eudr_shipment_rubber",
+    "psa_exports_eudr_shipment_wood",
+    "psa_exports_ilab_child_labor",
+    "psa_exports_ilab_forced_labor",
+    "psa_forced_labor_sheffield_hallam_university_reports_origin_direct",
+    "psa_imports_from_usa_section_1260h_entity",
+    "sheffield_hallam_university_forced_labor_reports_entity_adjacent"
+   ]
+  },
+  "sources": [
+   "SESAMm ESG Controversy Events (3rd Party Data)",
+   "Vietnam National Business Registration Service",
+   "South Korea Imports & Exports (January 2021 - April 2024)",
+   "Japan Imports & Exports (January 2023 - Present)",
+   "South Korea Imports & Exports (January 2023 - Present)"
+  ],
+  "trade_count": {
+   "sent": 21826,
+   "received": 44571
+  }
+ },
+ "abridged": {
+  "omitted_fields": [
+   "attributes (names, addresses, identifiers, countries, company_type)",
+   "investigation_notes",
+   "_hints",
+   "_guidance"
+  ],
+  "note": "Data fields transcribed in full from the inline MCP response; listed boilerplate fields omitted (DECISIONS #18)."
+ },
+ "note": "risk_levels identical to the supplier-rollup row (verified at capture), so stored from it."
+}

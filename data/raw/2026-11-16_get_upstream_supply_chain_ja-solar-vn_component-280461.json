@@ -1,0 +1,15 @@
+{
+ "tool": "get_upstream_supply_chain",
+ "args": {
+  "entity_id": "WovHW8Ersoy7ccioxUzizg",
+  "max_depth": 4,
+  "min_date": "2024-11-16",
+  "limit": 25,
+  "component": [
+   "280461"
+  ],
+  "response_mode": "compact"
+ },
+ "captured": "2026-11-16T09:29:33",
+ "response": "An unexpected error occurred. Please try again."
+}

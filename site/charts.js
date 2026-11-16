@@ -144,7 +144,7 @@
   SM.alluvial = function (container, columns, cats, opts = {}) {
     container.innerHTML = "";
     const { w } = size(container), h = opts.height || 380;
-    const m = { t: 30, r: 10, b: 34, l: 10 };
+    const m = w < 640 ? { t: 46, r: 10, b: 50, l: 10 } : { t: 30, r: 10, b: 34, l: 10 };
     const s = SM.svg("svg", { width: w, height: h, viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "Supply chain flow by exposure category" }, container);
     const n = columns.length, colW = Math.min(118, (w - m.l - m.r) / (n * 2.2));
     const gapX = (w - m.l - m.r - colW * n) / (n - 1);
@@ -180,8 +180,13 @@
       });
     }
     pos.forEach((p) => {
-      SM.svg("text", { x: p.x + colW / 2, y: m.t - 12, "text-anchor": "middle", class: "lbl-strong" }, s).textContent = p.col.label;
-      SM.svg("text", { x: p.x + colW / 2, y: h - m.b + 20, "text-anchor": "middle" }, s).textContent = p.col.sub || "";
+      // Wrap labels to the space between column centres so neighbours never collide on narrow screens
+      const slot = pos.length > 1 ? (w - m.l - m.r) / pos.length : w, maxCh = Math.max(6, Math.floor(slot / 6.6));
+      const wrap = (str) => { const out = []; let line = ""; String(str || "").split(/\s+/).forEach((wd) => { if (line && (line + " " + wd).length > maxCh) { out.push(line); line = wd; } else line = line ? line + " " + wd : wd; }); if (line) out.push(line); return out; };
+      const put = (lines, y0, cls, up) => { const t = SM.svg("text", { x: p.x + colW / 2, y: up ? y0 - (lines.length - 1) * 13 : y0, "text-anchor": "middle", ...(cls ? { class: cls } : {}) }, s);
+        lines.forEach((ln, i) => { const ts = SM.svg("tspan", { x: p.x + colW / 2, dy: i ? 13 : 0 }, t); ts.textContent = ln; }); };
+      put(wrap(p.col.label), m.t - 12, "lbl-strong", true);
+      put(wrap(p.col.sub), h - m.b + 20, "", false);
       cats.forEach((c) => {
         const S = p.out[c.id];
         if (!S) return;

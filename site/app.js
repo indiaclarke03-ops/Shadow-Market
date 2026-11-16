@@ -21,6 +21,8 @@
     simX: D.simulation.significant_gap_pct,
   };
   const comboKey = (t = state.tier, s = state.scope, o = state.own) => `${t}|${s}|${o}`;
+  const DEFAULT_COMBO = `${R.dials.tier_depth.default}|${R.dials.trigger_scope.default}|${R.dials.ownership_reach.default}`;
+  const FULL_COMBO = "E3|research|one_hop";
   const L3ok = L3.status === "ok";
   // Layer 3 size measure: USD if Sayari carried values, else US bill-of-lading shipment counts (DECISIONS #15)
   const BYSHIP = L3ok && L3.measure === "shipments";
@@ -82,18 +84,27 @@
     return "clean";
   }
   const CATS = [
-    { id: "E0", label: "Listed", color: COL.E0 },
-    { id: "E1", label: "Direct link", color: COL.E1 },
-    { id: "E2", label: "Sub-tier 2–3", color: COL.E2 },
-    { id: "E3", label: "Product-relevant 2–4", color: COL.E3 },
-    { id: "R1", label: "Research-named", color: COL.R1 },
-    { id: "A1", label: "Ownership-adjacent", color: COL.A1 },
-    { id: "shadow", label: "Flagged only at deeper settings", color: COL.shadow },
-    { id: "clean", label: "No flag found", color: COL.clean },
-    { id: "untraced", label: "Not traced / no data", color: COL.untraced },
+    { id: "E0", label: "On the US blacklist", color: COL.E0 },
+    { id: "E1", label: "Direct supplier link", color: COL.E1 },
+    { id: "E2", label: "Link 2–3 steps back", color: COL.E2 },
+    { id: "E3", label: "Link up to 4 steps back", color: COL.E3 },
+    { id: "R1", label: "Named in research", color: COL.R1 },
+    { id: "A1", label: "Shares an owner", color: COL.A1 },
+    { id: "shadow", label: "Shadow market: flagged only if the rule went further", color: COL.shadow },
+    { id: "clean", label: "No link found", color: COL.clean },
+    { id: "untraced", label: "Can’t be traced", color: COL.untraced },
   ];
   const CAT = Object.fromEntries(CATS.map((c) => [c.id, c]));
   const LEVEL_CONF = Object.fromEntries(R.exposure_levels.map((l) => [l.id, l.confidence]));
+  const PLAIN = {
+    tier_depth: { label: "How far back to look", question: "How many steps up the supply chain does the rule check?", positions: { E0: "Blacklisted companies only", E1: "Direct suppliers", E2: "2–3 steps back", E3: "Up to 4 steps back" } },
+    trigger_scope: { label: "Who counts as a red flag", question: "Which companies trigger the rule?", positions: { entity_list: "US blacklist only", xinjiang: "+ any Xinjiang company", research: "+ companies named by researchers" } },
+    ownership_reach: { label: "Do shared owners count?", question: "Flag a supplier that shares an owner with a blacklisted company?", positions: { off: "No", one_hop: "Yes" } },
+    value_basis: { label: "Measure by", question: "Count shipments, or count companies?", positions: { value: "Share of shipments", count: "Number of exporters" } },
+  };
+  const dialLabel = (id) => (PLAIN[id] || {}).label || R.dials[id].label;
+  const posLabel = (id, pos) => ((PLAIN[id] || {}).positions || {})[pos] || pos;
+  const hhiWord = (v) => (v == null ? "" : v < 1500 ? "spread out" : v < 2500 ? "moderately concentrated" : "highly concentrated");
 
   /* ---------------------------------------------------------------- header + hero */
   function renderHero() {
@@ -101,67 +112,64 @@
     const latest = elh.length ? elh.slice().sort((a, b) => a.date.localeCompare(b.date)).pop() : null;
     const all = (L2.summary.all || {}).stopped;
     const stats = [];
-    stats.push(latest
-      ? `<div class="hero-stat"><span class="num" data-src="${esc(latest.source_id)}" data-title="UFLPA Entity List" data-conf="high">${int(latest.total_entities)}</span><span class="lbl">entities on the UFLPA Entity List (${esc(latest.date)})</span></div>`
-      : `<div class="hero-stat"><span class="num">187</span><span class="lbl">entities on the UFLPA Entity List after 3 Aug 2026 (rules config)</span></div>`);
-    stats.push(all
-      ? `<div class="hero-stat"><span class="num" data-src="${esc(all.source_id)}" data-title="Shipments stopped, all industries" data-body="${esc(int(all.shipments) + " shipments · " + (all.period || ""))}" data-conf="high">${usd(all.value_usd)}</span><span class="lbl">of shipments stopped under UFLPA since June 2022, all industries</span></div>`
-      : `<div class="hero-stat"><span class="num">—</span><span class="lbl">CBP enforcement figures not yet captured</span></div>`);
     if (L3ok) {
-      const m = L3.combos[comboKey()];
-      const full = L3.combos["E3|research|one_hop"];
-      stats.push(`<div class="hero-stat"><span class="num" data-tip="1" id="hero-gap">${pct(full.exposed_share - m.exposed_share, 0)}</span><span class="lbl">of US cell + module ${MV} flagged at full depth but not at current settings</span></div>`);
-    } else {
-      stats.push(`<div class="hero-stat"><span class="num">Pending</span><span class="lbl">Layer 3 (Sayari full-transparency exposure) not yet pulled</span></div>`);
+      const now = L3.combos[DEFAULT_COMBO], full = L3.combos[FULL_COMBO];
+      $("h1-a").textContent = `${pct(now.exposed_share, 0)} flagged.`;
+      $("h1-b").textContent = `${pct(full.exposed_share, 0)} linked.`;
+      $("hero-lede").innerHTML = `The US bans goods made with forced labour in Xinjiang, China. Check only the companies that ship solar cells and panels to America, roughly how the rule is applied today, and <b>${pct(now.exposed_share, 0)}</b> of shipments are flagged. Follow the same supply chains back to the polysilicon and wafers, and <b>${pct(full.exposed_share, 0)}</b> come from suppliers with a link to companies tied to forced labour.`;
+      stats.push(`<div class="hero-stat"><span class="num">${int(L3.total_value)}</span><span class="lbl">solar cell and panel shipments to the US in two years, from ${int(L3.exporter_count)} exporters (Sayari trade data)</span></div>`);
     }
+    stats.push(latest
+      ? `<div class="hero-stat"><span class="num" data-src="${esc(latest.source_id)}" data-title="UFLPA Entity List" data-conf="high">${int(latest.total_entities)}</span><span class="lbl">companies on the US forced-labour blacklist (UFLPA Entity List, ${esc(latest.date)})</span></div>`
+      : `<div class="hero-stat"><span class="num">187</span><span class="lbl">companies on the US forced-labour blacklist after 3 Aug 2026</span></div>`);
+    if (all) stats.push(`<div class="hero-stat"><span class="num" data-src="${esc(all.source_id)}" data-title="Shipments stopped, all industries" data-body="${esc(int(all.shipments) + " shipments · " + (all.period || ""))}" data-conf="high">${usd(all.value_usd)}</span><span class="lbl">of goods stopped by US customs under the law since June 2022, across all industries</span></div>`);
     $("hero-stats").innerHTML = stats.join("");
     $("coverage").innerHTML = L3ok
-      ? `Coverage: ${pct(L3.traced_share, 0)} of ${MV} traced upstream. “No exposure found” can mean “no data”. Untraced volume is shown in grey, not left out.`
-      : `Layer 3 is waiting on the Sayari snapshot. Enforcement data (Layer 2) and the evidence record are live; exposure figures will appear once the trade graph is pulled. Nothing on this page is estimated in its place.`;
-    $("snap").textContent = (D.snapshot ? "Sayari snapshot " + D.snapshot : "Sayari snapshot pending") + " · built " + D.built;
+      ? `Coverage: ${pct(L3.traced_share, 0)} of shipments can be traced upstream. The rest is shown in grey, not left out, because “no link found” can also mean “no data”. A link is a supply chain connection, not proof that a product contains forced labour.`
+      : `Supply chain data (Layer 3) is waiting on the Sayari snapshot. Nothing on this page is estimated in its place.`;
+    $("snap").textContent = (D.snapshot ? "Data as of " + D.snapshot : "Sayari snapshot pending");
     $("foot-built").textContent = "Data built " + D.built;
     if (D.fixture) {
-      const b = h("div", { style: "position:fixed;left:0;right:0;bottom:0;z-index:99;background:#a0509a;color:#fff;text-align:center;padding:8px;font-weight:600" }, "TEST FIXTURE: synthetic exporters for layout testing only. Not real data.");
+      const b = h("div", { style: "position:fixed;left:0;right:0;bottom:0;z-index:99;background:#a8432f;color:#fff;text-align:center;padding:8px;font-weight:600" }, "TEST FIXTURE: synthetic exporters for layout testing only. Not real data.");
       document.body.appendChild(b);
     }
   }
 
   /* ---------------------------------------------------------------- three layers */
   function renderLayers() {
-    const l1 = R.layer1;
     $("layer1").innerHTML = `
-      <div class="tag">Layer 1</div>
-      <h3 class="display">The rule as written</h3>
-      <div class="body"><p style="margin:0 0 8px">${esc(R.citation)}</p><ul>${l1.target_set.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
-      <p style="margin:12px 0 0"><b>Presumption:</b> ${esc(l1.presumption)}</p>
-      <p style="margin:8px 0 0"><b>Reach:</b> ${esc(l1.reach)}. <b>De minimis:</b> ${esc(l1.de_minimis)}</p></div>
-      <div class="foot"><div class="big">No tier limit</div><p class="small" style="margin:6px 0 0">Layer 1 produces no number. It sets the theoretical maximum that Layer 3 tests against.</p></div>`;
+      <div class="tag">1 · On paper</div>
+      <h3 class="display">What the law says</h3>
+      <div class="body"><p style="margin:0 0 10px">The Uyghur Forced Labor Prevention Act (in force since June 2022) presumes that goods are made with forced labour, and bars them from the US, if they were made <b>wholly or in part</b>:</p>
+      <ul><li>in Xinjiang, China, or</li><li>by a company on the US blacklist (the UFLPA Entity List).</li></ul>
+      <p style="margin:12px 0 0">The importer must prove otherwise with “clear and convincing evidence”. The law sets no limit on how far up the supply chain this applies, and no minimum amount.</p></div>
+      <div class="foot"><div class="big">No limit</div><p class="small" style="margin:6px 0 0">on how far back the law reaches. This is the theoretical maximum the other two readings are tested against.</p></div>`;
 
     const s = L2.summary, e = s.electronics || {}, hts = s.hts8541 || {};
     const basis = hts.stopped ? hts : e.stopped ? e : null;
-    const basisName = hts.stopped ? "HTS 8541 (solar cells and modules, plus other semiconductor devices)" : "Electronics (upper bound for solar)";
+    const basisName = hts.stopped ? "solar cells and panels, plus other semiconductor devices (customs code HTS 8541)" : "electronics (an upper bound for solar)";
     const rr = s.release_rate;
     $("layer2").innerHTML = `
-      <div class="tag">Layer 2</div>
-      <h3 class="display">What enforcement catches</h3>
-      <div class="body">Shipments CBP has stopped, released, denied or left pending under UFLPA since June 2022. CBP does not report “solar” as an industry, so we use ${esc(basisName)} and say so.
-      ${rr ? `<p style="margin:12px 0 0">Release rate: <b data-src="${esc(rr.source_ids.join(";"))}" data-title="Release rate" data-body="released ÷ (released + denied), ${esc(rr.basis)}, by ${esc(rr.by)}" data-conf="high">${pct(rr.value * 100, 0)}</b> of the value of decided ${esc(rr.basis === "hts8541" ? "HTS 8541" : rr.basis)} shipments was later released${rr.by_count != null ? ` (${pct(rr.by_count * 100, 0)} by shipment count)` : ""}.</p>` : ""}
-      <p style="margin:8px 0 0">${(L2.cases || []).length} public solar enforcement events are logged below.</p></div>
-      <div class="foot">${basis ? `<div class="big" data-src="${esc(basis.stopped.source_id)}" data-title="Stopped, ${esc(basisName)}" data-body="${esc(int(basis.stopped.shipments) + " shipments · " + (basis.stopped.period || "") + (basis.stopped.notes ? " · " + basis.stopped.notes : ""))}" data-conf="high">${usd(basis.stopped.value_usd)}</div><p class="small" style="margin:6px 0 0">stopped, ${esc(basisName.split(" (")[0])}, ${esc(basis.stopped.period || "")}</p>` : `<div class="big">Pending</div><p class="small">CBP statistics not yet captured.</p>`}</div>`;
+      <div class="tag">2 · In practice</div>
+      <h3 class="display">What customs stops</h3>
+      <div class="body">Shipments US Customs and Border Protection (CBP) has stopped under the law since June 2022. CBP doesn’t report solar on its own, so we use ${esc(basisName)}.
+      ${rr ? `<p style="margin:12px 0 0">Most stopped goods get through in the end: <b data-src="${esc(rr.source_ids.join(";"))}" data-title="Release rate" data-body="released ÷ (released + denied), ${esc(rr.basis)}, by ${esc(rr.by)}" data-conf="high">${pct(rr.value * 100, 0)}</b> of the value of decided cases was released after importers submitted paperwork${rr.by_count != null ? ` (${pct(rr.by_count * 100, 0)} by number of shipments)` : ""}.</p>` : ""}
+      <p style="margin:8px 0 0">${(L2.cases || []).length} public solar cases are listed further down.</p></div>
+      <div class="foot">${basis ? `<div class="big" data-src="${esc(basis.stopped.source_id)}" data-title="Stopped" data-body="${esc(int(basis.stopped.shipments) + " shipments · " + (basis.stopped.period || "") + (basis.stopped.notes ? " · " + basis.stopped.notes : ""))}" data-conf="high">${usd(basis.stopped.value_usd)}</div><p class="small" style="margin:6px 0 0">stopped, ${esc(basis.stopped.period || "").replace("..", " to ")}</p>` : `<div class="big">Pending</div><p class="small">CBP statistics not yet captured.</p>`}</div>`;
 
     if (L3ok) {
-      const m = L3.combos[comboKey()], full = L3.combos["E3|research|one_hop"];
+      const m = L3.combos[DEFAULT_COMBO], full = L3.combos[FULL_COMBO];
       $("layer3").innerHTML = `
-        <div class="tag">Layer 3</div>
-        <h3 class="display">What full transparency would catch</h3>
-        <div class="body">The same trigger logic applied through every tier Sayari's trade and ownership graph can see. ${int(L3.exporter_count)} exporters sent ${amt(L3.total_value)} of cells and modules to the US in the 730-day window${BYSHIP ? " (Sayari\u2019s US bill-of-lading records carry no declared value, so shipments are the measure)" : ""}; ${pct(L3.traced_share, 0)} is traced.</div>
-        <div class="foot"><div class="big">${pct(full.exposed_share, 0)}</div><p class="small" style="margin:6px 0 0">of ${MV} linked at full depth, against ${pct(m.exposed_share, 0)} at current settings</p></div>`;
+        <div class="tag">3 · With full visibility</div>
+        <h3 class="display">What the law could catch</h3>
+        <div class="body">The same test, applied to every step of the supply chain that Sayari’s trade and company records can see. ${int(L3.exporter_count)} exporters sent ${int(L3.total_value)} shipments of solar cells and panels to the US over two years, and ${pct(L3.traced_share, 0)} of them can be traced upstream.${BYSHIP ? " (US shipping records give weight, not value, so we count shipments.)" : ""}</div>
+        <div class="foot"><div class="big">${pct(full.exposed_share, 0)}</div><p class="small" style="margin:6px 0 0">of shipments have a supply chain link to forced-labour risk when every link counts, against ${pct(m.exposed_share, 0)} under today’s approach.</p></div>`;
     } else {
       $("layer3").innerHTML = `
-        <div class="tag">Layer 3</div>
-        <h3 class="display">What full transparency would catch</h3>
-        <div class="body">The same trigger logic applied through every tier Sayari's trade and ownership graph can see: US importers of PV cells (HS 8541.42) and modules (8541.43), their exporters, and each exporter's deepest forced-labour risk factor (E0–E3, A1, R1).</div>
-        <div class="foot"><span class="badge pend">Awaiting Sayari snapshot</span><p class="small" style="margin:10px 0 0">Milestones M1–M2. The connector wasn't available in the build session. Run <code>pipeline/extract_sayari.py</code> then <code>build.py</code> once the pulls are in <code>data/raw/</code>.</p></div>`;
+        <div class="tag">3 · With full visibility</div>
+        <h3 class="display">What the law could catch</h3>
+        <div class="body">The same test applied through every step Sayari’s trade and ownership records can see.</div>
+        <div class="foot"><span class="badge pend">Awaiting Sayari snapshot</span></div>`;
     }
   }
 
@@ -173,10 +181,10 @@
     for (const [id, dial] of Object.entries(R.dials)) {
       const key = DIAL_STATE[id];
       const d = h("div", { class: "dial" + (state.activeDial === id ? " active" : ""), "data-dial": id });
-      d.innerHTML = `<div class="dial-head"><span class="dial-name">${esc(dial.label)}</span></div><div class="dial-q">${esc(dial.question)}</div>`;
-      const seg = h("div", { class: "seg", role: "group", "aria-label": dial.label });
+      d.innerHTML = `<div class="dial-head"><span class="dial-name">${esc(dialLabel(id))}</span></div><div class="dial-q">${esc((PLAIN[id] || {}).question || dial.question)}</div>`;
+      const seg = h("div", { class: "seg", role: "group", "aria-label": dialLabel(id) });
       dial.positions.forEach((p) => {
-        const b = h("button", { type: "button", "aria-pressed": String(state[key] === p.id) }, `${esc(p.label)}${p.id === dial.default ? '<span class="def">default</span>' : ""}`);
+        const b = h("button", { type: "button", "aria-pressed": String(state[key] === p.id) }, `${esc(posLabel(id, p.id))}${p.id === dial.default ? `<span class="def">${id === "value_basis" ? "default" : "≈ today"}</span>` : ""}`);
         b.addEventListener("click", (ev) => {
           ev.stopPropagation();
           state[key] = p.id;
@@ -197,28 +205,23 @@
   }
   function renderReadout() {
     const ra = R.replacement_time_assumption;
-    const repl = metric("Replacement time", `${ra.months_low}–${ra.months_high}<span style="font-size:.45em"> mo</span>`, esc(ra.label), "assume", `data-src="" data-title="Assumption" data-body="${esc(ra.source)}"`);
+    const repl = metric("Time to bring in a new supplier", `${ra.months_low}–${ra.months_high}<span style="font-size:.45em"> months</span>`, "to qualify and ramp up a replacement", "assume", `data-src="" data-title="Assumption" data-body="${esc(ra.source)}"`);
     if (!L3ok) {
-      $("readout").innerHTML = [
-        metric("Exposed share", "—", "Needs Layer 3"),
-        metric("Tolerated exposure", "—", "Layer 3 − Layer 2"),
-        metric("Remaining clean suppliers", "—", "Exporters with no flag"),
-        metric("Concentration after removal, by exporter (HHI)", "—", ""),
-        metric("Concentration after removal, by country (HHI)", "—", ""),
-        repl,
-      ].join("") + `<div class="pending" style="grid-column:1/-1;min-height:120px"><div><strong>Dials are live; numbers wait on Sayari</strong>Every dial combination (4 × 3 × 2 = 24, by value and by count) is precomputed by the pipeline as soon as exporters are classified.</div></div>`;
+      $("readout").innerHTML = [metric("Share of shipments flagged", "—", "needs Sayari data"), repl].join("");
       bindDeclared($("readout"));
       return;
     }
-    const m = L3.combos[comboKey()];
-    const share = state.basis === "count" ? m.exposed_count_share : m.exposed_share;
-    const tolTip = `data-src="${esc(((L2.summary[L3.detained_basis] || {}).stopped || {}).source_id || "")}" data-title="Tolerated exposure" data-body="Exposed import value at these settings minus value stopped by CBP (${esc(L3.detained_basis || "n/a")} basis, an upper bound for solar). Windows differ: Sayari 730 days vs CBP since June 2022."`;
+    const m = L3.combos[comboKey()], now = L3.combos[DEFAULT_COMBO];
+    const byCount = state.basis === "count";
+    const share = byCount ? m.exposed_count_share : m.exposed_share;
+    const nowShare = byCount ? now.exposed_count_share : now.exposed_share;
+    const extra = share - nowShare;
     $("readout").innerHTML = [
-      metric("Exposed share", pct(share, 1), state.basis === "count" ? `${int(m.exposed_count)} of ${int(L3.exporter_count)} exporters` : `${amt(m.exposed_value)} of ${amt(L3.total_value)}`),
-      metric("Tolerated exposure", m.tolerated_exposure === null ? "—" : usd(m.tolerated_exposure), BYSHIP ? "needs USD import values; CBP counts in USD" : "Layer 3 − Layer 2", "", tolTip),
-      metric("Remaining clean suppliers", int(m.remaining_suppliers), `of ${int(L3.exporter_count)} exporters`),
-      metric("Concentration after removal, by exporter (HHI)", int(m.hhi_exporter_after), `before ${int(L3.hhi_exporter_before)}`),
-      metric("Concentration after removal, by country (HHI)", int(m.hhi_country_after), `before ${int(L3.hhi_country_before)}`),
+      metric(byCount ? "Exporters flagged" : "US solar shipments flagged", pct(share, 1), byCount ? `${int(m.exposed_count)} of ${int(L3.exporter_count)} exporters` : `${int(m.exposed_value)} of ${int(L3.total_value)} shipments`, "key"),
+      metric("Flagged here but not under today’s rule", (extra > 0 ? "+" : "") + pct(extra, 1), extra > 0 ? "the shadow market at these settings" : "these settings catch no more than today’s"),
+      metric("Suppliers left with no link", int(m.remaining_suppliers), `of ${int(L3.exporter_count)} exporters`),
+      metric("How concentrated the rest is, by company", int(m.hhi_exporter_after), `${hhiWord(m.hhi_exporter_after)} · ${int(L3.hhi_exporter_before)} before (HHI, 0–10,000)`, "", `data-src="" data-title="Concentration (HHI)" data-body="Herfindahl–Hirschman Index of the supply left after flagged suppliers are removed. Under 1,500 = spread out; 1,500–2,500 = moderate; over 2,500 = high (US merger guidelines). It can fall when one big supplier is removed."`),
+      metric("How concentrated the rest is, by country", int(m.hhi_country_after), `${hhiWord(m.hhi_country_after)} · ${int(L3.hhi_country_before)} before`),
       repl,
     ].join("");
     bindDeclared($("readout"));
@@ -245,10 +248,10 @@
         used.add(c);
       });
       cols = [
-        upstream("S1", "Polysilicon", "HS 2804.61"),
-        upstream("S2", "Ingots & wafers", "HS 3818.00"),
-        { id: "S34", label: "Cells & modules", sub: "exporters to the US", segments: Object.entries(agg).map(([cat, value]) => ({ cat, value })) },
-        { id: "US", label: "Left on the US market", sub: "if flagged supply is removed", segments: Object.entries(aggLeft).map(([cat, value]) => ({ cat, value })) },
+        upstream("S1", "Polysilicon", "the raw material"),
+        upstream("S2", "Wafers", "sliced from polysilicon"),
+        { id: "S34", label: "Cells & panels", sub: "shipped to the US", segments: Object.entries(agg).map(([cat, value]) => ({ cat, value })) },
+        { id: "US", label: "What’s left", sub: "if flagged supply is blocked", segments: Object.entries(aggLeft).map(([cat, value]) => ({ cat, value })) },
       ];
     } else {
       cols = [upstream("S1", "Polysilicon", "HS 2804.61"), upstream("S2", "Ingots & wafers", "HS 3818.00"),
@@ -259,9 +262,9 @@
     SM.alluvial(cont, cols, cats, {
       height: 400, absolute: L3ok,
       tip: (col, c, S) => {
-        if (col.pending) return `<b>${esc(col.label)}</b><br>Not yet traced. Volume is shown in grey, not left out.`;
+        if (col.pending) return `<b>${esc(col.label)}</b><br>Not traced yet. Shown in grey, not left out.`;
         const conf = LEVEL_CONF[c.id];
-        return `<b>${esc(c.label)}</b> · ${esc(col.label)}<br>${amt(S.v)} · ${(S.share * 100).toFixed(1)}% of this column${conf ? `<div class="t-src">Confidence of this exposure level: <b>${esc(conf)}</b><br>Source: Sayari risk factors, snapshot ${esc(D.snapshot || "")}</div>` : ""}`;
+        return `<b>${esc(c.label)}</b> · ${esc(col.label)}<br>${amt(S.v)} · ${(S.share * 100).toFixed(1)}% of this column${conf ? `<div class="t-src">How confident this kind of link is: <b>${esc(conf)}</b><br>Source: Sayari risk factors, data as of ${esc(D.snapshot || "")}</div>` : ""}`;
       },
     });
     $("flow-legend").innerHTML = cats.map((c) => `<span><i class="${c.id === "clean" ? "outline" : ""}" style="background:${c.color}"></i>${esc(c.label)}</span>`).join("");
@@ -275,7 +278,7 @@
     const cont = $("curves");
     cont.innerHTML = "";
     const cr = R.cliff_rule;
-    $("curve-note").textContent = `Cliff: exposure ≥ ${cr.min_ratio}× and +${cr.min_share_pp} pp in one step`;
+    $("curve-note").textContent = `Jump = one step at least doubles the flagged share and adds ${cr.min_share_pp}+ points`;
     if (!L3ok) {
       cont.innerHTML = `<div class="pending"><div><strong>Curves appear with Layer 3</strong>One step chart per dial, others held at default, with cliffs marked under the rule in spec §12.</div></div>`;
       return;
@@ -283,17 +286,17 @@
     const map = { tier_depth: "tier", trigger_scope: "scope", ownership_reach: "own" };
     for (const dial of ["tier_depth", "trigger_scope", "ownership_reach"]) {
       const box = h("div", { style: "margin-bottom:10px" });
-      box.innerHTML = `<div class="small" style="font-weight:600;color:var(--navy)">${esc(R.dials[dial].label)}</div>`;
+      box.innerHTML = `<div class="small" style="font-weight:600;color:var(--navy)">${esc(dialLabel(dial))}</div>`;
       const chart = h("div");
       box.appendChild(chart);
       cont.appendChild(box);
       const steps = L3.curves[dial].map((p) => ({
-        ...p, y: state.basis === "count" ? (p.exposed_count / L3.exporter_count) * 100 : p.exposed_share,
+        ...p, label: posLabel(dial, p.position), y: state.basis === "count" ? (p.exposed_count / L3.exporter_count) * 100 : p.exposed_share,
         current: state[map[dial]] === p.position,
       }));
       SM.stepChart(chart, steps, {
         height: 170, title: R.dials[dial].label,
-        tip: (p) => `<b>${esc(p.label)}</b><br>${pct(p.y)} exposed · ${amt(p.exposed_value)}${p.ratio_vs_prev !== undefined ? `<br>vs previous step: ×${p.ratio_vs_prev ?? "∞"}, +${p.added_pp} pp` : ""}${p.cliff ? "<br><b>Cliff under the spec rule</b>" : ""}<div class="t-src">Sayari snapshot ${esc(D.snapshot || "")}</div>`,
+        tip: (p) => `<b>${esc(p.label)}</b><br>${pct(p.y)} flagged · ${amt(p.exposed_value)}${p.ratio_vs_prev !== undefined ? `<br>vs the step before: ×${p.ratio_vs_prev ?? "∞"}, +${p.added_pp} points` : ""}${p.cliff ? "<br><b>A jump: one small change flags much more supply</b>" : ""}<div class="t-src">Sayari data as of ${esc(D.snapshot || "")}</div>`,
       });
     }
   }
@@ -309,23 +312,23 @@
     };
     add("all", "All industries");
     add("electronics", "Electronics");
-    add("hts8541", "HTS 8541");
+    add("hts8541", "Solar & chips");
     const cont = $("enf");
     if (!rows.length) {
       cont.innerHTML = `<div class="pending"><div><strong>CBP figures pending</strong>Layer 2 research is in progress.</div></div>`;
       return;
     }
     const cats = [
-      { id: "released", label: "Released", color: COL.E3, textColor: "#22386c" },
-      { id: "denied", label: "Denied", color: COL.E0 },
-      { id: "pending", label: "Pending", color: COL.untraced, textColor: "#22386c" },
+      { id: "released", label: "Released", color: COL.E3, textColor: "#0f1b33" },
+      { id: "denied", label: "Refused entry", color: COL.E0 },
+      { id: "pending", label: "Still pending", color: COL.untraced, textColor: "#0f1b33" },
     ];
-    cont.innerHTML = `<div class="legend" style="margin-bottom:12px">${cats.map((c) => `<span><i style="background:${c.color}"></i>${c.label}</span>`).join("")}<span class="small">share of stopped value</span></div><div id="enf-bars"></div><div id="enf-notes"></div>`;
+    cont.innerHTML = `<div class="legend" style="margin-bottom:12px">${cats.map((c) => `<span><i style="background:${c.color}"></i>${c.label}</span>`).join("")}<span class="small">share of the value stopped</span></div><div id="enf-bars"></div><div id="enf-notes"></div>`;
     SM.outcomeBars($("enf-bars"), rows, cats, {
       tip: (r, c, v, tot) => { const g = r.g[c.id]; return srcTipHTML(g?.source_id, { title: `${r.label} · ${c.label}`, body: `${usd(v)} (${((v / tot) * 100).toFixed(1)}%)${g?.shipments ? " · " + int(g.shipments) + " shipments" : ""}<br>${esc(g?.period || "")}`, conf: "high" }); },
     });
     const solar = (L2.stats || []).filter((r) => r.industry === "solar_reported");
-    $("enf-notes").innerHTML = `<p class="small" style="margin:14px 0 0">CBP's industry categories don't isolate solar. Electronics is an upper bound; HTS 8541 also includes LEDs, diodes and other semiconductor devices.</p>` +
+    $("enf-notes").innerHTML = `<p class="small" style="margin:14px 0 0">Most goods customs stops are eventually released. CBP doesn’t report solar on its own: “Solar &amp; chips” (customs code HTS 8541) also includes LEDs, diodes and other semiconductors, and “Electronics” is broader still.</p>` +
       (solar.length ? `<div style="margin-top:14px">${solar.map((r) => `<div class="small" style="margin-top:6px">${esc(r.period)}: ${r.shipments ? int(r.shipments) + " solar shipments " : ""}${r.value_usd ? usd(+r.value_usd) + " " : ""}${esc(r.exam_result)}. ${esc(r.notes)} <a data-sid="${esc(r.source_id)}" href="${esc(SRC[r.source_id]?.url || "#")}" target="_blank" rel="noopener">${esc(r.source_id)}</a></div>`).join("")}</div>` : "");
     bindDeclared(cont);
   }
@@ -339,7 +342,7 @@
     if (d.includes("look") || d.includes("tim")) return "lookback";
     return "general";
   }
-  const DIAL_LABEL = { all: "All dials", tier_depth: "Tier depth", trigger_scope: "Trigger scope", ownership_reach: "Ownership reach", lookback: "Timing & intensity", general: "General" };
+  const DIAL_LABEL = { all: "Everything", tier_depth: "How far back to look", trigger_scope: "Who counts as a red flag", ownership_reach: "Shared owners", lookback: "Timing & intensity", general: "General" };
   function confClass(c) { c = String(c || "").toLowerCase(); return c.startsWith("high") ? "high" : c.startsWith("low") ? "low" : "medium"; }
 
   function renderEvidence() {
@@ -369,15 +372,15 @@
     claims.sort((a, b) => (order[a.claim_type] ?? 3) - (order[b.claim_type] ?? 3) || ["high", "medium", "low"].indexOf(confClass(a.confidence)) - ["high", "medium", "low"].indexOf(confClass(b.confidence)));
     $("claims").innerHTML = claims.length ? claims.map((c) => c.held ? `
       <article class="claim low" style="background:rgba(255,255,255,0.55)">
-        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="type">intent claim · held</span><span class="small">${esc(DIAL_LABEL[normDial(c.dial)])} · ${esc(c.claim_id)}</span></div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="type">Claim about intent · on hold</span><span class="small">${esc(DIAL_LABEL[normDial(c.dial)])} · ${esc(c.claim_id)}</span></div>
         <p class="small" style="margin-top:8px">${esc(c.held)}. The claim is kept in the register and will be shown here once both conditions are met.</p>
       </article>` : `
       <article class="claim ${confClass(c.confidence)}">
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="type">${esc(c.claim_type)}</span><span class="conf ${confClass(c.confidence)}">${esc(c.confidence)} confidence</span><span class="small">${esc(DIAL_LABEL[normDial(c.dial)])} · ${esc(c.claim_id)}</span></div>
         <p>${esc(c.claim_text)}</p>
-        ${c.counter_evidence ? `<div class="counter"><b>Other explanations:</b> ${esc(c.counter_evidence)}</div>` : ""}
+        ${c.counter_evidence ? `<div class="counter"><b>Other possible explanations:</b> ${esc(c.counter_evidence)}</div>` : ""}
         <div class="srcs">Sources: ${srcLinks(c.sources)}</div>
-      </article>`).join("") : `<div class="pending"><div><strong>${EV.claims.length ? "No claims for this dial yet" : "Claims register in progress"}</strong>${EV.claims.length ? "Pick another dial above." : "Evidence research (M5a) is running."}</div></div>`;
+      </article>`).join("") : `<div class="pending"><div><strong>${EV.claims.length ? "No claims for this choice yet" : "Claims register in progress"}</strong>${EV.claims.length ? "Pick another filter above." : ""}</div></div>`;
     bindDeclared($("why"));
   }
   function catColor(c) {
@@ -385,20 +388,20 @@
   }
 
   /* ---------------------------------------------------------------- companies */
-  function lvlBadge(l) { return `<span class="lvl"><i style="background:${COL[l] || COL.peri}"></i>${esc(l)}</span>`; }
+  function lvlBadge(l) { return `<span class="lvl"><i style="background:${COL[l] || COL.peri}"></i>${esc((CAT[l] || {}).label || l)}</span>`; }
   function renderCompanies() {
     const ce = $("company-exposure");
     if (!L3ok) {
       ce.innerHTML = `<div class="panel-title"><h4>Top exporters by US import value</h4><span class="badge pend">Awaiting Sayari snapshot</span></div><div class="pending" style="min-height:160px"><div><strong>Exporter exposure appears with Layer 3</strong>Each row will show exposure level, confidence and the underlying Sayari source records. A company is never named without all three.</div></div>`;
     } else {
       const rows = L3.exporters.filter((e) => e.flags.length).slice(0, 30);
-      ce.innerHTML = `<div class="panel-title"><h4>Exporters with a flag, by US ${MV}</h4><span class="small">${rows.length} shown · current dial settings shade the level</span></div>
-        <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Exporter</th><th>Country</th><th class="r">${BYSHIP ? "US shipments" : "US import value"}</th><th>Exposure levels</th><th>Under current dials</th><th>Confidence</th><th>Sayari records</th></tr></thead><tbody>
-        ${rows.map((e) => { const c = categoryOf(e); return `<tr><td><b>${esc(e.name)}</b></td><td>${esc(e.country)}</td><td class="r">${BYSHIP ? int(e.value) : usd(e.value)}</td><td>${e.levels.map(lvlBadge).join(" ")}</td><td>${esc(CAT[c].label)}</td><td><span class="conf ${confClass(e.confidence)}">${esc(e.confidence || "—")}</span></td><td class="small">${e.source_records.length ? e.source_records.map(esc).join(", ") : esc(e.sayari_entity_id || "—")}</td></tr>`; }).join("")}
+      ce.innerHTML = `<div class="panel-title"><h4>Exporters with a link, by US shipments</h4><span class="small">top ${rows.length} · the “Under your settings” column follows the choices above</span></div>
+        <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Exporter</th><th>Country</th><th class="r">${BYSHIP ? "US shipments" : "US import value"}</th><th>Types of link</th><th>Under your settings</th><th>Confidence</th><th>Sayari records</th></tr></thead><tbody>
+        ${rows.map((e) => { const c = categoryOf(e); return `<tr><td><b>${esc(e.name)}</b></td><td>${esc(e.country)}</td><td class="r">${BYSHIP ? int(e.value) : usd(e.value)}</td><td>${e.levels.map(lvlBadge).join("<br>")}</td><td>${esc(CAT[c].label)}</td><td><span class="conf ${confClass(e.confidence)}">${esc(e.confidence || "—")}</span></td><td class="small">${e.source_records.length ? e.source_records.map(esc).join(", ") : esc(e.sayari_entity_id || "—")}</td></tr>`; }).join("")}
         </tbody></table></div>`;
     }
     const cases = L2.cases || [];
-    $("company-cases").innerHTML = `<div class="panel-title"><h4>Public enforcement events in solar</h4><span class="small">Layer 2 · known-case check (spec §8)</span></div>` + (cases.length ? `
+    $("company-cases").innerHTML = `<div class="panel-title"><h4>Public solar cases</h4><span class="small">detentions, blacklistings and other enforcement on record</span></div>` + (cases.length ? `
       <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Date</th><th>Company</th><th>Event</th><th>Outcome</th><th>Confidence</th><th>Source</th></tr></thead><tbody>
       ${cases.slice().sort((a, b) => (b.date || "").localeCompare(a.date || "")).map((c) => `<tr><td style="white-space:nowrap">${esc(c.date)}</td><td><b>${esc(c.company)}</b><div class="small">${esc(c.company_role)} · ${esc(c.country)}</div></td><td>${esc(c.event.replace(/_/g, " "))}<div class="small">${esc(c.description)}</div></td><td>${esc(c.outcome)}</td><td><span class="conf ${confClass(c.confidence)}">${esc(c.confidence)}</span></td><td class="small">${srcLinks(c.source_ids)}</td></tr>`).join("")}
       </tbody></table></div>` : `<div class="pending" style="min-height:140px"><div><strong>Cases register in progress</strong></div></div>`);
@@ -407,126 +410,260 @@
 
   /* ---------------------------------------------------------------- simulation */
   const SIM = D.simulation;
-  let simInputs = null, simInc = null, simStatus = {};
+  const INP = Object.fromEntries(SIM.inputs.map((i) => [i.id, i]));
+  const TH = SIM.thresholds;
+  const CUR_T = Math.max(0, TH.findIndex((t) => t.current));
+  const flaggedAt = TH.map((t) => (L3ok ? L3.combos[t.combo].exposed_share : (([lo, mode, hi]) => ({ type: "triangular", lo, mode, hi }))(SIM.step_increments_placeholder[t.id])));
+  const sim = { reach: CUR_T, vals: {}, status: {}, X: SIM.significant_gap_pct, preset: "today", cur: null, prev: null };
+  const f1 = (v) => (v > 0 && v < 10 ? v.toFixed(1) : v.toFixed(0));
+  const fmtVal = (id, v) => {
+    const u = INP[id].unit;
+    if (u === "share") return Math.round(v * 100) + "%";
+    if (u === "times") return v.toFixed(1) + "×";
+    if (u === "months") return (v % 1 ? v.toFixed(1) : v) + (v === 1 ? " month" : " months");
+    if (u === "pp") return v.toFixed(1) + "% / mo";
+    return String(v);
+  };
+  const STATUS_LABEL = { placeholder: "placeholder", from_layer2: "from CBP data", from_layer3: "from Sayari", sourced: "sourced", user: "your setting", preset: "scenario setting" };
+
   function simDefaults() {
-    simInputs = {}; simStatus = {};
-    SIM.inputs.forEach((i) => { simInputs[i.id] = { ...i.dist }; simStatus[i.id] = { status: i.status, source: i.source }; });
+    SIM.inputs.forEach((i) => { sim.vals[i.id] = i.centre; sim.status[i.id] = { status: i.status, source: i.source }; });
     const rr = L2.summary.release_rate;
     if (rr) {
-      const k = 60;
-      simInputs.release = { type: "beta", a: rr.value * k, b: (1 - rr.value) * k };
-      simStatus.release = { status: "from_layer2", source: `CBP: released ÷ (released + denied) by value, ${rr.basis}, ${(rr.value * 100).toFixed(0)}%. Sources ${rr.source_ids.join(", ")}. Concentration k=60 is our assumption.` };
+      sim.vals.release = Math.round(rr.value * 200) / 200;
+      sim.status.release = { status: "from_layer2", source: `US Customs (CBP): ${pct(rr.value * 100, 1)} of the value of decided cases for solar cells, panels and other chips (HTS 8541) was released (${pct(rr.by_count * 100, 0)} by number of shipments). Source ${rr.source_ids.join(", ")}. The ±10-point spread is our assumption.` };
     }
-    simInc = {};
-    if (L3ok) {
-      let prev = 0;
-      SIM.thresholds.forEach((t) => { const sh = L3.combos[t.combo].exposed_share; simInc[t.id] = Math.max(0, sh - prev); prev = Math.max(prev, sh); });
-      simStatus._inc = { status: "from_layer3" };
-    } else {
-      SIM.thresholds.forEach((t) => { const [lo, mode, hi] = SIM.step_increments_placeholder[t.id]; simInc[t.id] = { type: "triangular", lo, mode, hi }; });
-      simStatus._inc = { status: "placeholder" };
+    sim.base = { ...sim.vals };
+  }
+  function applyPreset(id) {
+    const pr = SIM.presets.find((p) => p.id === id);
+    simDefaults();
+    for (const [k, v] of Object.entries(pr.set || {})) {
+      sim.vals[k] = v;
+      sim.status[k] = { status: "preset", source: `Set by the “${pr.label}” scenario. Default: ${fmtVal(k, sim.base[k])}. ${INP[k].source}` };
     }
+    sim.reach = TH.findIndex((t) => t.id === pr.reach);
+    sim.preset = id;
   }
   function simCfg() {
-    return { seed: SIM.seed, runs: SIM.runs, thresholds: SIM.thresholds, increments: simInc, inputs: simInputs, rho: SIM.copula_rho_hidden_rerouting };
+    const inputs = {};
+    SIM.inputs.forEach((i) => (inputs[i.id] = SM.distOf(i, sim.vals[i.id])));
+    return { seed: SIM.seed, runs: SIM.runs, flagged: flaggedAt, traced: L3ok ? L3.traced_share : 100, inputs, rho: SIM.copula_rho_hidden_rerouting };
   }
-  const STATUS_LABEL = { placeholder: "placeholder", from_layer2: "CBP-calibrated", from_layer3: "from Sayari", sourced: "sourced" };
-  function renderSimStatic() {
-    const seg = $("sim-thresholds");
-    seg.innerHTML = "";
-    SIM.thresholds.forEach((t, i) => {
-      const b = h("button", { type: "button", "aria-pressed": String(state.simT === i) }, `${esc(t.id)} · ${esc(t.label.replace(" (≈ current practice)", ""))}${t.current ? '<span class="def">≈ current</span>' : ""}`);
-      b.addEventListener("click", () => { state.simT = i; renderSimStatic(); runSim(); });
-      seg.appendChild(b);
+
+  function renderPresets() {
+    $("sim-presets").innerHTML = SIM.presets.map((p, i) => `<button type="button" class="preset" data-p="${p.id}" aria-pressed="${sim.preset === p.id}"><span class="k">Scenario ${i + 1}</span><b>${esc(p.label)}</b><span>${esc(p.blurb)}</span></button>`).join("");
+    $("sim-presets").querySelectorAll(".preset").forEach((b) => b.addEventListener("click", () => { applyPreset(b.dataset.p); renderControls(); compute(); }));
+  }
+  function sliderHTML(id) {
+    const i = INP[id], v = sim.vals[id], d = SM.distOf(i, v), st = sim.status[id];
+    return `<div class="ctl" data-ctl="${id}">
+      <label for="in-${id}">${esc(i.label)}</label>
+      <div class="q">${esc(i.question)}</div>
+      <div class="row"><input type="range" id="in-${id}" min="${i.min}" max="${i.max}" step="${i.step}" value="${v}"><span class="val" id="val-${id}">${fmtVal(id, v)}</span></div>
+      <div class="meta"><span id="rng-${id}">varies ${fmtVal(id, d.lo)}–${fmtVal(id, d.hi)}</span><span class="badge ${st.status === "placeholder" ? "pend" : "ok"}" data-src="" data-title="${esc(STATUS_LABEL[st.status] || st.status)}" data-body="${esc(st.source)}">${esc(STATUS_LABEL[st.status] || st.status)}</span></div>
+    </div>`;
+  }
+  function renderControls() {
+    renderPresets();
+    const reach = TH.map((t, i) => `<button type="button" data-r="${i}" aria-pressed="${sim.reach === i}"><span>${esc(t.label)}</span><span class="f">${L3ok ? pct(flaggedAt[i], 0) + " flagged" : ""}</span></button>`).join("");
+    $("sim-controls").innerHTML = `
+      <div class="ctl-group"><p class="kicker">The rule</p>
+        <div class="ctl"><label>How far back does customs look?</label><div class="q">Customs blocks shipments when it finds a link to forced-labour risk this far up the supply chain. The % is the share of US solar shipments the rule would flag (Sayari data).</div>
+        <div class="reach-list" role="group" aria-label="Reach">${reach}</div></div></div>
+      <div class="ctl-group"><p class="kicker">Enforcement</p>${["p_enf", "release", "reroute"].map(sliderHTML).join("")}</div>
+      <div class="ctl-group"><p class="kicker">The market’s cushion</p>${["buffer", "ramp", "capacity"].map(sliderHTML).join("")}</div>
+      <div class="ctl-group"><p class="kicker">Unknowns and the line</p>${sliderHTML("hidden")}
+        <div class="ctl"><label for="in-X">What counts as a serious disruption?</label><div class="q">Losing more than this share of US solar supply.</div>
+        <div class="row"><input type="range" id="in-X" min="5" max="50" step="1" value="${sim.X}"><span class="val" id="val-X">${sim.X}%</span></div></div></div>
+      <button type="button" class="btn" id="sim-reset" style="color:var(--on-dark)">Reset to defaults</button>`;
+    $("sim-controls").querySelectorAll(".reach-list button").forEach((b) => b.addEventListener("click", () => { sim.reach = +b.dataset.r; sim.preset = null; renderControls(); compute(); }));
+    SIM.inputs.forEach((i) => {
+      const el = $("in-" + i.id);
+      el.addEventListener("input", () => {
+        sim.vals[i.id] = +el.value; sim.preset = null;
+        sim.status[i.id] = { status: "user", source: `You changed this. Default: ${fmtVal(i.id, sim.base[i.id])}. ${i.source}` };
+        const d = SM.distOf(i, +el.value);
+        $("val-" + i.id).textContent = fmtVal(i.id, +el.value);
+        $("rng-" + i.id).textContent = `varies ${fmtVal(i.id, d.lo)}–${fmtVal(i.id, d.hi)}`;
+        $("sim-presets").querySelectorAll(".preset").forEach((b) => b.setAttribute("aria-pressed", "false"));
+        scheduleCompute();
+      });
+      el.addEventListener("change", () => { const b = el.closest(".ctl").querySelector(".badge"); b.className = "badge ok"; b.textContent = "your setting"; b.dataset.title = "your setting"; b.dataset.body = sim.status[i.id].source; });
     });
-    $("sim-seed").textContent = SIM.seed;
-    $("sim-model").innerHTML = SIM.model.map((m) => `<li style="margin-bottom:6px">${esc(m)}</li>`).join("");
-    const nPlace = Object.values(simStatus).filter((s) => s.status === "placeholder").length;
-    $("sim-flag").innerHTML = `<b>Scenario, not forecast.</b> ${nPlace ? `${nPlace} of ${SIM.inputs.length + 1} input groups are still structural placeholders${L3ok ? "" : ", including the flagged share at each threshold, which waits on the Sayari Layer 3 pull"}. Until they're replaced, the curves show how the model behaves, not what the market would do.` : "All inputs are sourced or calibrated; ranges remain editable below."}`;
-    renderSimInputs();
+    const x = $("in-X");
+    x.addEventListener("input", () => { sim.X = +x.value; $("val-X").textContent = x.value + "%"; scheduleCompute(); });
+    $("sim-reset").addEventListener("click", () => { applyPreset("today"); renderControls(); compute(); });
+    bindDeclared($("sim-controls"));
   }
-  function fmtDist(d) {
-    if (typeof d === "number") return d.toFixed(2) + " pp (fixed, from Layer 3)";
-    if (d.type === "beta") return `Beta(${d.a.toFixed(1)}, ${d.b.toFixed(1)})`;
-    if (d.type === "uniform") return `Uniform ${d.lo.toFixed(2)}–${d.hi.toFixed(2)}`;
-    if (d.type === "triangular") return `Triangular ${d.lo.toFixed(1)} / ${d.mode.toFixed(1)} / ${d.hi.toFixed(1)}`;
-    return "";
-  }
-  function renderSimInputs() {
-    const t = $("sim-inputs");
-    const rowsIn = SIM.inputs.map((i) => {
-      const d = simInputs[i.id], [p5, p95] = SM.distRange(d), st = simStatus[i.id];
-      const dec = p95 < 2 ? 2 : 1;
-      return `<tr><td><b>${esc(i.label)}</b><div class="small">${esc(i.represents)}</div></td><td class="small">${fmtDist(d)}</td>
-        <td><input type="number" step="any" data-in="${i.id}" data-q="lo" value="${p5.toFixed(dec)}" aria-label="${esc(i.label)} 5th percentile"></td>
-        <td><input type="number" step="any" data-in="${i.id}" data-q="hi" value="${p95.toFixed(dec)}" aria-label="${esc(i.label)} 95th percentile"></td>
-        <td><span class="badge ${st.status === "placeholder" ? "pend" : "ok"}">${STATUS_LABEL[st.status] || st.status}</span></td>
-        <td class="small" style="max-width:340px">${esc(st.source)}</td></tr>`;
-    });
-    const rowsInc = SIM.thresholds.map((th) => {
-      const d = simInc[th.id];
-      if (typeof d === "number") return `<tr><td><b>Added flagged share · ${esc(th.id)}</b><div class="small">${esc(th.label)} · ${esc(th.confidence)} confidence</div></td><td class="small">${fmtDist(d)}</td><td colspan="2" class="small">from data</td><td><span class="badge ok">from Sayari</span></td><td class="small">Layer 3 combo ${esc(th.combo)}</td></tr>`;
-      const [p5, p95] = SM.distRange(d);
-      return `<tr><td><b>Added flagged share · ${esc(th.id)}</b><div class="small">${esc(th.label)} · pp of US market · ${esc(th.confidence)} confidence</div></td><td class="small">${fmtDist(d)}</td>
-        <td><input type="number" step="any" data-inc="${th.id}" data-q="lo" value="${p5.toFixed(1)}"></td><td><input type="number" step="any" data-inc="${th.id}" data-q="hi" value="${p95.toFixed(1)}"></td>
-        <td><span class="badge pend">placeholder</span></td><td class="small">Waits on the Layer 3 Sayari classification. Not data.</td></tr>`;
-    });
-    t.innerHTML = `<thead><tr><th>Input</th><th>Distribution</th><th>P5</th><th>P95</th><th>Status</th><th>Source / basis</th></tr></thead><tbody>${rowsInc.join("")}${rowsIn.join("")}</tbody>`;
-    t.querySelectorAll("input").forEach((inp) => inp.addEventListener("change", () => {
-      const row = inp.closest("tr");
-      const lo = +row.querySelector('[data-q="lo"]').value, hi = +row.querySelector('[data-q="hi"]').value;
-      if (inp.dataset.in) {
-        simInputs[inp.dataset.in] = SM.distFromRange(simInputs[inp.dataset.in], lo, hi);
-        simStatus[inp.dataset.in] = { status: "user", source: "Edited on this page" };
-      } else {
-        simInc[inp.dataset.inc] = SM.distFromRange(simInc[inp.dataset.inc], lo, hi);
-      }
-      renderSimInputs();
-      runSim();
-    }));
-  }
-  STATUS_LABEL.user = "edited";
 
   let simTimer = null;
-  function runSim() {
-    clearTimeout(simTimer);
-    simTimer = setTimeout(() => {
-      const cfg = simCfg();
-      const res = SM.simulate(cfg);
-      const j = state.simT, X = state.simX;
-      const g = SM.summarise(res.gaps[j], X), du = SM.summarise(res.durs[j], 0);
-      let pDur = 0; for (const v of res.durs[j]) if (v > 0) pDur++;
-      const th = SIM.thresholds[j];
-      const hhi = L3ok ? L3.combos[th.combo] : null;
-      $("sim-readout").innerHTML = [
-        metric("Median supply gap", pct(g.p50, 1), `90% of runs: ${pct(g.p5, 1)}–${pct(g.p95, 1)}`),
-        metric(`P(gap &gt; ${X}%)`, pct(g.pOver, 0), "probability of significant disruption"),
-        metric("Median shortage after buffer", du.p50.toFixed(1) + '<span style="font-size:.45em"> mo</span>', `${(pDur / res.durs[j].length * 100).toFixed(0)}% of runs see any shortage · P95 ${du.p95.toFixed(1)} mo`),
-        metric("Concentration after removal (HHI)", hhi ? int(hhi.hhi_exporter_after) : "—", hhi ? `by exporter · country ${int(hhi.hhi_country_after)} · deterministic` : "needs Layer 3"),
-        metric("Threshold", esc(th.id), esc(th.label)),
-        metric("Runs", int(SIM.runs), `seed ${SIM.seed}`),
-      ].join("");
-      SM.histogram($("h-gap"), res.gaps[j], { unit: "%", threshold: X, thresholdLabel: `${X}% significant`, xMax: Math.max(X * 1.4, SM.niceMax(SM.quantile(res.gaps[SIM.thresholds.length - 1], 0.995))) });
-      if (du.p95 === 0 && pDur / res.durs[j].length < 0.05) {
-        $("h-dur").innerHTML = `<div class="pending" style="min-height:200px"><div><strong>${pDur ? "Shortages in under 5% of runs" : "No shortage in any run"}</strong>At this threshold, the inventory buffer covers the gap until replacement supply arrives${pDur ? ` in ${(100 - pDur / res.durs[j].length * 100).toFixed(1)}% of runs` : ""}. Try a tighter threshold or a smaller buffer.</div></div>`;
-      } else SM.histogram($("h-dur"), res.durs[j], { unit: " mo", title: "Shortage months" });
-      SM.lineChart($("t-curve"), SIM.thresholds.map((t, i) => ({ id: t.id, short: ({ T0: "Listed", T1: "Direct", T2: "Tiers 2–3", T3: "Tiers 2–4", T4: "+ Ownership", T5: "+ Research" })[t.id] || "", y: SM.summarise(res.gaps[i], X).pOver, sel: i === j, t, s: SM.summarise(res.gaps[i], X) })), {
-        tip: (p) => `<b>${esc(p.id)} · ${esc(p.t.label)}</b><br>P(gap &gt; ${X}%) = ${p.y.toFixed(1)}%<br>median gap ${p.s.p50.toFixed(1)}% (P5–P95 ${p.s.p5.toFixed(1)}–${p.s.p95.toFixed(1)}%)`,
-      });
-      const labels = Object.fromEntries(SIM.inputs.map((i) => [i.id, i.label]));
-      const sens = SM.sensitivity(cfg, j, labels);
-      SM.tornado($("tornado"), sens.rows, sens.base);
-    }, 30);
+  function scheduleCompute() { clearTimeout(simTimer); simTimer = setTimeout(compute, 40); }
+  function compute() {
+    const cfg = simCfg(), res = SM.simulate(cfg), X = sim.X, j = sim.reach;
+    const S = {};
+    for (const k of ["flagged", "stopped", "keptOut", "lost"]) S[k] = SM.summarise(res[k][j], X);
+    const sh = res.short[j], pos = [];
+    for (const v of sh) if (v > 0) pos.push(v);
+    pos.sort((a, b) => a - b);
+    S.pShort = (pos.length / sh.length) * 100;
+    S.durMed = pos.length ? pos[Math.floor(pos.length / 2)] : 0;
+    S.durP95 = pos.length ? pos[Math.floor(pos.length * 0.95)] : 0;
+    let serious = 0, shortOnly = 0, absorbed = 0;
+    for (let r = 0; r < sh.length; r++) { const l = res.lost[j][r]; if (l > X) serious++; else if (sh[r] > 0) shortOnly++; else if (l >= 1) absorbed++; }
+    const N = sh.length;
+    S.cats = { serious: (serious / N) * 100, shortOnly: (shortOnly / N) * 100, absorbed: (absorbed / N) * 100, none: ((N - serious - shortOnly - absorbed) / N) * 100 };
+    S.reach = TH.map((t, i) => SM.summarise(res.lost[i], X));
+    S.sens = S.flagged.p50 > 0.5 ? SM.sensitivity({ ...cfg, seed: SIM.seed + 1 }, j) : null;
+    S.lostArr = res.lost[j];
+    S.j = j; S.X = X; S.vals = { ...sim.vals }; S.preset = sim.preset;
+    if (sim.cur) sim.prev = sim.cur;
+    sim.cur = S;
+    renderSim();
   }
+
+  function tween(el, to, fmt) {
+    const from = +(el.dataset.v ?? to);
+    el.dataset.v = to;
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches || Math.abs(from - to) < 0.05) { el.innerHTML = fmt(to); return; }
+    const t0 = performance.now(), dur = 420;
+    const step = (t) => { const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3); el.innerHTML = fmt(from + (to - from) * e); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }
+  function deltaHTML(cur, prev, unit = " pts") {
+    if (prev == null) return "";
+    const d = cur - prev;
+    if (Math.abs(d) < 0.1) return "";
+    return `${d > 0 ? "▲ +" : "▼ −"}${f1(Math.abs(d))}${unit} vs your last setting`;
+  }
+
+  function renderSim() {
+    const S = sim.cur, P = sim.prev, X = S.X, th = TH[S.j];
+    const pr = SIM.presets.find((p) => p.id === S.preset);
+    $("sim-head").innerHTML = `<b>${pr ? esc(pr.label) : "Your own scenario"}.</b> Customs blocks solar shipments ${esc(th.plain)}.`;
+
+    // headline numbers
+    if (!$("m-lost")) {
+      $("sim-readout").innerHTML = `
+        <div class="metric"><div class="lbl">US solar supply lost for good, in a typical future</div><div class="num" id="m-lost"></div><div class="sub" id="m-lost-s"></div><span class="delta" id="m-lost-d"></span></div>
+        <div class="metric" id="m-ser-box"><div class="lbl">Chance of a serious disruption</div><div class="num" id="m-ser"></div><div class="sub" id="m-ser-s"></div><span class="delta" id="m-ser-d"></span></div>
+        <div class="metric" id="m-sh-box"><div class="lbl">Chance of a shortage</div><div class="num" id="m-sh"></div><div class="sub" id="m-sh-s"></div><span class="delta" id="m-sh-d"></span></div>`;
+    }
+    tween($("m-lost"), S.lost.p50, (v) => f1(v) + "%");
+    $("m-lost-s").textContent = S.lost.p95 > 0.05 ? `9 in 10 futures: ${f1(S.lost.p5)}–${f1(S.lost.p95)}%` : "none in any future";
+    tween($("m-ser"), S.lost.pOver, (v) => Math.round(v) + "%");
+    $("m-ser-s").textContent = `futures where more than ${X}% of supply is lost`;
+    $("m-ser-box").classList.toggle("bad", S.lost.pOver >= 50);
+    tween($("m-sh"), S.pShort, (v) => (v > 0 && v < 1 ? "<1" : Math.round(v)) + "%");
+    $("m-sh-s").textContent = S.pShort > 0 ? `when stock runs out before new suppliers arrive, it lasts about ${f1(S.durMed)} months` : "stock covers the gap in every future";
+    $("m-sh-box").classList.toggle("bad", S.pShort >= 50);
+    const setD = (id, html) => { const n = $(id); n.textContent = html; n.classList.toggle("on", !!html); };
+    setD("m-lost-d", P ? deltaHTML(S.lost.p50, P.lost.p50) : "");
+    setD("m-ser-d", P ? deltaHTML(S.lost.pOver, P.lost.pOver) : "");
+    setD("m-sh-d", P ? deltaHTML(S.pShort, P.pShort) : "");
+
+    $("sim-analysis").innerHTML = analyse(S, P);
+
+    SM.funnel($("sim-funnel"), [
+      { label: "Flagged by the rule", sub: "supply with a link at this reach", ...S.flagged, prev: P && P.flagged.p50, color: COL.E3, tip: "Sayari trade data, plus an estimate for the untraced share" },
+      { label: "Stopped at the border", sub: "customs stops and inspects", ...S.stopped, prev: P && P.stopped.p50, color: COL.E2, dark: true },
+      { label: "Kept out after review", sub: "not released on paperwork", ...S.keptOut, prev: P && P.keptOut.p50, color: COL.E1, dark: true },
+      { label: "Lost for good", sub: "after some gets back in", ...S.lost, prev: P && P.lost.p50, color: COL.brick, dark: true },
+    ]);
+
+    const cats = [
+      { id: "serious", label: `Serious disruption: more than ${X}% of supply lost`, color: COL.brick, share: S.cats.serious },
+      { id: "short", label: "A shortage, but a smaller loss", color: COL.accent, share: S.cats.shortOnly },
+      { id: "absorbed", label: "Some supply lost; stock and new suppliers cover it", color: COL.E3, share: S.cats.absorbed },
+      { id: "ok", label: "Little or no effect (under 1% lost)", color: "#ffffff", share: S.cats.none },
+    ];
+    const n = SM.futures($("sim-futures"), cats);
+    $("sim-futures-legend").innerHTML = cats.map((c, i) => `<span><i class="${c.id === "ok" ? "outline" : ""}" style="background:${c.color}"></i><b>${n[i]}</b>&nbsp;${esc(c.label)}</span>`).join("");
+
+    const hi = Math.max(SM.quantile(S.lostArr, 0.995), P ? SM.quantile(P.lostArr, 0.995) : 0, X * 1.25);
+    SM.distChart($("sim-dist"), S.lostArr, P && P.lostArr !== S.lostArr ? P.lostArr : null, { threshold: X, xMax: Math.min(100, SM.niceMax(hi)) });
+
+    const yTop = Math.max(...S.reach.map((r) => r.p95), X * 1.15);
+    SM.reachChart($("sim-reach"), TH.map((t, i) => ({ short: t.short, ...S.reach[i], sel: i === S.j, t })), {
+      threshold: X, yMax: Math.min(100, SM.niceMax(yTop * 1.1)),
+      tip: (p) => `<b>${esc(p.t.label)}</b><br>Rule flags ${L3ok ? pct(flaggedAt[TH.indexOf(p.t)], 0) : "—"} of shipments<br>Typical loss ${p.p50.toFixed(1)}% (9 in 10 futures: ${p.p5.toFixed(1)}–${p.p95.toFixed(1)}%)<br>Serious disruption in ${p.pOver.toFixed(0)}% of futures`,
+      onPick: (i) => { sim.reach = i; sim.preset = null; renderControls(); compute(); },
+    });
+
+    if (S.sens) {
+      SM.tornado($("sim-tornado"), S.sens.rows.map((r) => ({ ...r, label: INP[r.id].label })), S.sens.base, {
+        tip: (r) => `<b>${esc(INP[r.id].label)}</b><br>At the low end (${fmtVal(r.id, r.p10)}): typical loss ${r.lo.toFixed(1)}%<br>At the high end (${fmtVal(r.id, r.p90)}): typical loss ${r.hi.toFixed(1)}%`,
+      });
+    } else {
+      $("sim-tornado").innerHTML = `<div class="pending" style="min-height:120px"><div><strong>Nothing to test at this reach</strong>The rule flags no shipments, so no input changes the result. Pick a reach further back.</div></div>`;
+    }
+    renderSimDetails();
+  }
+
+  const INSIGHT = {
+    release: (v) => v.release >= 0.6
+      ? "In other words, <b>how much paperwork customs accepts matters more than how far back the rule looks.</b> Today most stopped solar shipments are released, so a deeper rule with the same release rate mostly creates delays, not lost supply."
+      : "In other words, <b>how much paperwork customs accepts matters more than how far back the rule looks.</b> At a release rate this low, most of what customs stops stays out.",
+    p_enf: () => "That depends on <b>customs’ staff, data and priorities</b> as much as on the wording of the rule.",
+    reroute: () => "So <b>leakage matters most</b>: if blocked goods can come back in through other countries or suppliers, a tougher rule achieves less.",
+    hidden: () => "So <b>better data on the supply nobody can trace</b> would narrow the result down more than anything else.",
+    buffer: () => "Stock on hand <b>decides whether a loss turns into a shortage</b>.",
+    ramp: () => "So <b>how soon replacement suppliers can start shipping</b> is the key unknown.",
+    capacity: () => "So <b>how fast replacement suppliers can scale up</b> is the key unknown.",
+  };
+  function analyse(S, P) {
+    const th = TH[S.j], v = S.vals, X = S.X, L = S.lost;
+    const fullF = L3ok ? flaggedAt[TH.length - 1] : null;
+    const out = [];
+    if (S.flagged.p50 < 0.5) {
+      out.push(`<p class="takeaway">At this reach the rule sees nothing, so nothing is lost. That doesn’t mean the supply is clean.</p>`);
+      out.push(`<p>With customs checking ${esc(th.plain)}, Sayari’s records show no US solar shipments from suppliers the rule would flag. Every one of the 10,000 simulated futures ends the same way: no supply lost and no shortage.</p>`);
+      if (fullF) out.push(`<p>Yet <b>${pct(fullF, 0)}</b> of the same shipments come from suppliers with a link further up the supply chain. This is the shadow market: supply the law is meant to cover, but which a rule that only checks direct suppliers never reaches. Try <b>Look further back</b> or <b>Look everywhere</b> to see what reaching it would cost.</p>`);
+    } else {
+      let take;
+      if (L.pOver >= 50) take = `A serious shock. In most futures, the US loses more than ${X}% of its solar supply.`;
+      else if (L.pOver >= 10) take = `A real risk of serious disruption: about ${Math.round(L.pOver / 10)} in 10 futures lose more than ${X}% of supply.`;
+      else if (S.pShort >= 50) take = `Supply gets tight. Most futures see a shortage, though rarely a serious loss.`;
+      else if (S.flagged.p50 >= 20 && L.p50 < S.flagged.p50 / 3) take = `The rule flags a lot (${f1(S.flagged.p50)}% of supply), but the US loses far less: about ${f1(L.p50)}%.`;
+      else take = `The US loses about ${f1(L.p50)}% of its solar supply, and copes.`;
+      out.push(`<p class="takeaway">${take}</p>`);
+      out.push(`<p><b>What happens.</b> With customs checking ${esc(th.plain)}, the rule flags about <b>${f1(S.flagged.p50)}%</b> of US solar cell and panel supply. Customs stops ${f1(S.stopped.p50)}%. Because about ${fmtVal("release", v.release)} of stopped shipments are released once importers show paperwork, only ${f1(S.keptOut.p50)}% is kept out. Some of that gets back in another way, so a typical future loses <b>${f1(L.p50)}%</b> of US supply for good (between ${f1(L.p5)}% and ${f1(L.p95)}% in 9 out of 10 futures).</p>`);
+      if (S.pShort < 0.5) out.push(`<p><b>Can the US cope?</b> Yes, in almost every future. The stock already in the country (about ${fmtVal("buffer", v.buffer)} of demand) lasts until replacement suppliers catch up, so the loss never becomes a shortage. ${L.pOver > 0 ? `Even so, ${f1(L.pOver)}% of futures cross your ${X}% line for a serious disruption.` : ""}</p>`);
+      else out.push(`<p><b>Can the US cope?</b> ${S.pShort >= 50 ? "Often not." : "Usually."} In <b>${f1(S.pShort)}%</b> of futures, stock runs out before replacement suppliers catch up. When that happens, the shortage lasts about <b>${f1(S.durMed)} months</b>${S.durP95 > S.durMed + 1 ? `, and up to ${f1(S.durP95)} months in the worst 1 in 20` : ""}. ${L.pOver >= 1 ? `${f1(L.pOver)}% of futures cross your ${X}% line for a serious disruption.` : ""}</p>`);
+      if (S.sens && S.sens.rows.length) {
+        const t = S.sens.rows[0];
+        out.push(`<p><b>What matters most.</b> The result depends most on <b>${esc(INP[t.id].label.toLowerCase())}</b>: moving it from the low to the high end of its range changes the typical loss by about ${f1(Math.abs(t.hi - t.lo))} points. ${INSIGHT[t.id] ? INSIGHT[t.id](v) : ""}</p>`);
+      }
+      const today = S.reach[CUR_T], full = S.reach[TH.length - 1];
+      const cmp = [];
+      if (S.j !== CUR_T) cmp.push(`a rule at today’s reach loses ${f1(today.p50)}% of supply`);
+      if (S.j !== TH.length - 1) cmp.push(`a rule that counts every link loses ${f1(full.p50)}%`);
+      if (cmp.length) out.push(`<p><b>For comparison.</b> With the same assumptions, ${cmp.join(", and ")}.</p>`);
+    }
+    if (P && (P.j !== S.j || JSON.stringify(P.vals) !== JSON.stringify(S.vals) || P.X !== S.X)) {
+      const dl = L.p50 - P.lost.p50, ds = L.pOver - P.lost.pOver;
+      out.push(`<p><b>Compared with your last setting:</b> the typical loss ${Math.abs(dl) < 0.1 ? `stayed at ${f1(L.p50)}%` : `went ${dl > 0 ? "up" : "down"} from ${f1(P.lost.p50)}% to ${f1(L.p50)}%`}, and the chance of a serious disruption ${Math.abs(ds) < 0.5 ? `stayed at ${Math.round(L.pOver)}%` : `went ${ds > 0 ? "up" : "down"} from ${Math.round(P.lost.pOver)}% to ${Math.round(L.pOver)}%`}.</p>`);
+    }
+    const nPlace = SIM.inputs.filter((i) => sim.status[i.id].status === "placeholder").length;
+    out.push(`<p class="caveat">This is a what-if, not a forecast. The flagged shares come from Sayari trade records${L2.summary.release_rate ? " and the release rate from US Customs data" : ""}; ${nPlace} of the other inputs are placeholder ranges that still need sources (marked on each slider). Released shipments can still sit at the border for weeks or months, which this model doesn’t count, and it says nothing about prices.</p>`);
+    return `<h4>What this means</h4>` + out.join("");
+  }
+
+  function renderSimDetails() {
+    $("sim-seed").textContent = SIM.seed;
+    $("sim-runs").textContent = int(SIM.runs);
+    $("sim-model").innerHTML = SIM.model.map((m) => `<li>${esc(m)}</li>`).join("");
+    const rowsF = TH.map((t, i) => `<tr><td><b>Flagged share · ${esc(t.label)}</b></td><td>${L3ok ? pct(flaggedAt[i], 1) : "placeholder"}</td><td class="small">fixed</td><td><span class="badge ${L3ok ? "ok" : "pend"}">${L3ok ? "from Sayari" : "placeholder"}</span></td><td class="small">${L3ok ? `Share of US cell + module shipments (730 days to ${esc(D.snapshot || "")}) from exporters flagged at ${esc(t.combo.replace(/\|/g, " · "))}.` : "Waits on Layer 3."}</td></tr>`);
+    const rowsI = SIM.inputs.map((i) => { const d = SM.distOf(i, sim.vals[i.id]), st = sim.status[i.id]; return `<tr><td><b>${esc(i.label)}</b><div class="small">${esc(i.question)}</div></td><td>${fmtVal(i.id, sim.vals[i.id])}</td><td class="small">${fmtVal(i.id, d.lo)}–${fmtVal(i.id, d.hi)}</td><td><span class="badge ${st.status === "placeholder" ? "pend" : "ok"}">${esc(STATUS_LABEL[st.status] || st.status)}</span></td><td class="small" style="max-width:380px">${esc(st.source)}</td></tr>`; });
+    $("sim-inputs").innerHTML = `<thead><tr><th>Input</th><th>Value</th><th>Range across futures</th><th>Status</th><th>Source</th></tr></thead><tbody>${rowsF.join("")}${rowsI.join("")}</tbody>`;
+  }
+
   function initSim() {
     simDefaults();
-    renderSimStatic();
-    const x = $("sim-x");
-    x.value = state.simX;
-    x.addEventListener("input", () => { state.simX = +x.value; $("sim-x-val").textContent = x.value + "%"; runSim(); });
-    $("sim-x-val").textContent = state.simX + "%";
-    $("sim-reset").addEventListener("click", () => { simDefaults(); renderSimStatic(); runSim(); });
+    applyPreset("today");
+    renderControls();
   }
+  function runSim() { if (!sim.cur) compute(); else renderSim(); }
 
   /* ---------------------------------------------------------------- method */
   function renderMethod() {
@@ -540,8 +677,8 @@
       ["M5", "Upstream tracing (Sankey tiers)", (D.tiers || {}).status === "ok" ? "done" : "waiting on Sayari"],
       ["M5a", "Evidence layer: sources, claims, timeline", hasClaims ? "done (first pass)" : "in progress"],
       ["M6", "Interface", "built"],
-      ["M6a", "Simulation", "built; exposure inputs are placeholders until M2"],
-      ["M7", "Validation (§8) and independent review of named companies / intent claims", "not started"],
+      ["M6a", "Simulation", "built; flagged shares from Sayari, release rate from CBP, other inputs are placeholders"],
+      ["M7", "Validation (§8) and independent review of named companies / intent claims", "first pass done; independent review outstanding"],
     ];
     $("method").innerHTML = `
       <div class="panel"><h3 class="display" style="margin-bottom:18px">Exposure levels</h3>
@@ -559,11 +696,11 @@
 
       <div class="panel"><h3 class="display" style="margin-bottom:18px">Metrics</h3>
         <ul>
-          <li><b>Exposed share</b>: exposed ÷ total US ${MV} (cells + modules, 730-day window).${BYSHIP ? " Sayari\u2019s US import records are bills of lading with weight but no declared value, so the measure is shipment records, not dollars." : ""}</li>
+          <li><b>Flagged share</b>: flagged ÷ total US ${MV} (cells + modules, 730-day window).${BYSHIP ? " Sayari\u2019s US import records are bills of lading with weight but no declared value, so the measure is shipment records, not dollars." : ""}</li>
           <li><b>Tolerated exposure</b>: Layer 3 exposed value − Layer 2 stopped value. CBP doesn't report solar, so the Layer 2 basis is HTS 8541 where captured, otherwise Electronics (both upper bounds). The windows differ (Sayari 730 days, CBP since June 2022).</li>
-          <li><b>Remaining suppliers</b>: traced exporters with no flag under the current dials.</li>
-          <li><b>HHI</b>: Herfindahl–Hirschman Index (0–10,000) of the supply that remains, by exporter and by country of export.</li>
-          <li><b>Cliff</b>: one step at least ×${R.cliff_rule.min_ratio} exposed value <i>and</i> +${R.cliff_rule.min_share_pp} pp of market share.</li>
+          <li><b>Suppliers left with no link</b>: traced exporters with no flag under the current settings.</li>
+          <li><b>Concentration (HHI)</b>: Herfindahl–Hirschman Index (0–10,000) of the supply that remains, by exporter and by country. Under 1,500 is spread out, over 2,500 is highly concentrated.</li>
+          <li><b>Jump</b> (spec: “cliff”): one step at least ×${R.cliff_rule.min_ratio} flagged supply <i>and</i> +${R.cliff_rule.min_share_pp} percentage points of the market.</li>
           <li><b>Replacement time</b>: a labelled sector assumption, shown as an input, not a result.</li>
         </ul></div>
 

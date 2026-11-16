@@ -26024,7 +26024,7 @@
   ]
  },
  "simulation": {
-  "_note": "Monte Carlo input ranges (spec §5b). status: from_layer3 = recomputed from Sayari exposure once available; from_layer2 = calibrated from CBP statistics; placeholder = structural default awaiting data, shown with a badge on the page. Every range can be edited on the page.",
+  "_note": "Monte Carlo scenario inputs (spec §5b; model revised 2026-11-16, DECISIONS #23). Each input is a central value plus a spread: every simulated future draws the input from a symmetric triangular distribution centre ± spread, clipped to [min, max]. status: from_layer2 = calibrated from CBP statistics; from_layer3 = Sayari; placeholder = structural default awaiting a source, shown with a badge on the page. Every value can be changed on the page.",
   "seed": 20261115,
   "runs": 10000,
   "significant_gap_pct": 20,
@@ -26032,221 +26032,212 @@
   "thresholds": [
    {
     "id": "T0",
-    "label": "Listed only",
-    "combo": "E0|entity_list|off",
-    "adds_level": "E0",
-    "confidence": "high"
+    "label": "Blacklisted companies only",
+    "plain": "only when the supplier itself is on the US blacklist (the UFLPA Entity List)",
+    "short": "Blacklist only",
+    "combo": "E0|entity_list|off"
    },
    {
     "id": "T1",
-    "label": "Direct suppliers (≈ current practice)",
+    "label": "Direct suppliers (roughly today)",
+    "plain": "when a direct supplier is on the blacklist or based in Xinjiang, which is roughly how the rule is applied today",
+    "short": "Direct (today)",
     "combo": "E1|xinjiang|off",
-    "adds_level": "E1",
-    "confidence": "medium-high",
     "current": true
    },
    {
     "id": "T2",
-    "label": "Tiers 2–3",
-    "combo": "E2|xinjiang|off",
-    "adds_level": "E2",
-    "confidence": "medium"
+    "label": "2–3 steps back",
+    "plain": "when a blacklisted or Xinjiang company appears 2–3 steps back in the supply chain",
+    "short": "2–3 steps",
+    "combo": "E2|xinjiang|off"
    },
    {
     "id": "T3",
-    "label": "Tiers 2–4, product-relevant",
-    "combo": "E3|xinjiang|off",
-    "adds_level": "E3",
-    "confidence": "medium"
+    "label": "Up to 4 steps back",
+    "plain": "up to 4 steps back, where the link is to a solar-relevant input",
+    "short": "4 steps",
+    "combo": "E3|xinjiang|off"
    },
    {
     "id": "T4",
-    "label": "+ One-hop ownership",
-    "combo": "E3|xinjiang|one_hop",
-    "adds_level": "A1",
-    "confidence": "low"
+    "label": "+ companies sharing an owner",
+    "plain": "up to 4 steps back, and also when a supplier shares an owner with a blacklisted company",
+    "short": "+ owners",
+    "combo": "E3|xinjiang|one_hop"
    },
    {
     "id": "T5",
-    "label": "+ Research-named",
-    "combo": "E3|research|one_hop",
-    "adds_level": "R1",
-    "confidence": "low-medium"
+    "label": "+ companies named by researchers",
+    "plain": "everywhere the data can see: up to 4 steps back, shared owners, and companies named in independent research (ASPI, Sheffield Hallam)",
+    "short": "+ research",
+    "combo": "E3|research|one_hop"
    }
   ],
   "step_increments_placeholder": {
-   "_note": "Added flagged share of US cell+module import value at each threshold step, in percentage points (triangular low/mode/high). PLACEHOLDER until the Layer 3 Sayari classification exists. Not data.",
+   "_note": "Fallback only, used if Layer 3 is missing: flagged share of US supply at each step (triangular low/mode/high, cumulative). Not data.",
    "T0": [
     1,
     3,
     6
    ],
    "T1": [
-    4,
-    9,
-    15
+    5,
+    12,
+    21
    ],
    "T2": [
-    8,
-    18,
-    30
+    13,
+    30,
+    51
    ],
    "T3": [
-    4,
-    10,
-    20
+    17,
+    40,
+    71
    ],
    "T4": [
-    2,
-    5,
-    10
+    19,
+    45,
+    81
    ],
    "T5": [
-    2,
-    6,
-    12
+    21,
+    51,
+    93
    ]
   },
   "inputs": [
    {
-    "id": "tau_high",
-    "label": "True-exposure rate · high-confidence flags",
-    "represents": "Share of flagged supply that really contains the targeted input, for high-confidence flags (E0)",
-    "dist": {
-     "type": "beta",
-     "a": 18,
-     "b": 2
-    },
-    "status": "placeholder",
-    "confidence": "high",
-    "source": "Structural: narrow band because listing is a matter of public record (spec §5b)."
-   },
-   {
-    "id": "tau_medium",
-    "label": "True-exposure rate · medium-confidence flags",
-    "represents": "The same for E1–E3 trade links",
-    "dist": {
-     "type": "beta",
-     "a": 6,
-     "b": 4
-    },
-    "status": "placeholder",
-    "confidence": "medium",
-    "source": "Structural: medium width. Will be tightened by M7 spot checks of Sayari source records."
-   },
-   {
-    "id": "tau_low",
-    "label": "True-exposure rate · low-confidence flags",
-    "represents": "The same for ownership-adjacent and research-named flags",
-    "dist": {
-     "type": "beta",
-     "a": 2,
-     "b": 3
-    },
-    "status": "placeholder",
-    "confidence": "low",
-    "source": "Structural: wide band. Single-hop ownership and research mentions are weak evidence of content."
-   },
-   {
-    "id": "hidden",
-    "label": "Hidden exposure",
-    "represents": "Exposed share of supply where trade data is missing, in pp of the market at full depth",
-    "dist": {
-     "type": "uniform",
-     "lo": 0,
-     "hi": 12
-    },
-    "status": "placeholder",
-    "confidence": "low",
-    "source": "Coverage gap: the untraced share × an unknown exposure rate. Wide by default (spec §5b). Linked to rerouting via the copula."
-   },
-   {
     "id": "p_enf",
-    "label": "Enforcement probability",
-    "represents": "Chance that a genuinely exposed shipment is stopped once the rule reaches it",
-    "dist": {
-     "type": "beta",
-     "a": 7,
-     "b": 3
-    },
+    "label": "How many flagged shipments customs stops",
+    "question": "Of the shipments the rule flags, what share does US customs actually stop and inspect?",
+    "unit": "share",
+    "centre": 0.7,
+    "spread": 0.2,
+    "min": 0,
+    "max": 1,
+    "step": 0.05,
     "status": "placeholder",
-    "confidence": "low",
-    "source": "To be calibrated against CBP detentions at the current setting (T1) once Layer 3 exists."
+    "source": "Not calibratable yet: at today's reach Sayari flags no shipments, so there is no flagged base to divide CBP detentions by (pipeline/notes/layer3_validation.md)."
    },
    {
     "id": "release",
-    "label": "Release rate",
-    "represents": "Share of detained goods later released",
-    "dist": {
-     "type": "beta",
-     "a": 4,
-     "b": 6
-    },
+    "label": "How many stopped shipments are released",
+    "question": "Of the shipments customs stops, what share is released after the importer submits supply chain paperwork?",
+    "unit": "share",
+    "centre": 0.795,
+    "spread": 0.1,
+    "min": 0,
+    "max": 1,
+    "step": 0.05,
     "status": "placeholder",
-    "confidence": "medium",
-    "source": "Replaced by CBP released ÷ (released + denied) when Layer 2 stats are present."
+    "source": "Replaced by CBP released ÷ (released + denied) when Layer 2 statistics are present."
    },
    {
     "id": "reroute",
-    "label": "Rerouting / evasion",
-    "represents": "Share of blocked supply that comes back in through other routes (transshipment)",
-    "dist": {
-     "type": "uniform",
-     "lo": 0.05,
-     "hi": 0.4
-    },
+    "label": "How much blocked supply gets back in",
+    "question": "Of the supply that is blocked for good, what share finds another way into the US (rerouted through other countries or suppliers)?",
+    "unit": "share",
+    "centre": 0.2,
+    "spread": 0.15,
+    "min": 0,
+    "max": 0.9,
+    "step": 0.05,
     "status": "placeholder",
-    "confidence": "low",
     "source": "Wide range. To be sourced from enforcement cases and Southeast Asia transshipment research."
    },
    {
-    "id": "capacity",
-    "label": "Replacement capacity",
-    "represents": "Percentage points of US market supply that clean suppliers can add per month, once ramped",
-    "dist": {
-     "type": "triangular",
-     "lo": 1,
-     "mode": 2.5,
-     "hi": 5
-    },
+    "id": "hidden",
+    "label": "How exposed the untraced supply is",
+    "question": "About 9% of supply can't be traced. Compared with the supply we can trace, how likely is it to carry the same links?",
+    "unit": "times",
+    "centre": 1,
+    "spread": 0.5,
+    "min": 0,
+    "max": 3,
+    "step": 0.1,
     "status": "placeholder",
-    "confidence": "low",
-    "source": "Industry capacity estimates still to be sourced (US and non-China module/cell build-out)."
-   },
-   {
-    "id": "ramp",
-    "label": "Ramp-up delay",
-    "represents": "Months before replacement capacity starts arriving",
-    "dist": {
-     "type": "triangular",
-     "lo": 3,
-     "mode": 6,
-     "hi": 12
-    },
-    "status": "placeholder",
-    "confidence": "low",
-    "source": "Sector assumption (rules: 6–18 months to qualify a supplier). To be sourced."
+    "source": "Assumption: untraced supply is about as exposed as traced supply at the same reach, give or take half. Linked to rerouting (ρ = 0.5): opaque supply chains are also the leakiest."
    },
    {
     "id": "buffer",
-    "label": "Inventory buffer",
-    "represents": "Months of total US supply already in the pipeline or in warehouses",
-    "dist": {
-     "type": "triangular",
-     "lo": 1,
-     "mode": 3,
-     "hi": 6
-    },
+    "label": "Solar stock already in the US",
+    "question": "How many months of normal US demand for cells and modules is already sitting in warehouses or in transit?",
+    "unit": "months",
+    "centre": 3,
+    "spread": 2,
+    "min": 0,
+    "max": 12,
+    "step": 0.5,
     "status": "placeholder",
-    "confidence": "low",
-    "source": "Range from industry/trade sources still to be sourced."
+    "source": "Range from industry and trade sources still to be sourced."
+   },
+   {
+    "id": "ramp",
+    "label": "Time before new suppliers deliver",
+    "question": "How many months before replacement suppliers start shipping?",
+    "unit": "months",
+    "centre": 6,
+    "spread": 3,
+    "min": 0,
+    "max": 24,
+    "step": 1,
+    "status": "placeholder",
+    "source": "Sector assumption (rules: 6–18 months to qualify a new supplier). To be sourced."
+   },
+   {
+    "id": "capacity",
+    "label": "How fast new suppliers fill the gap",
+    "question": "Once they start, how much of normal US demand can replacement suppliers add each month?",
+    "unit": "pp",
+    "centre": 2.5,
+    "spread": 1.5,
+    "min": 0.5,
+    "max": 10,
+    "step": 0.5,
+    "status": "placeholder",
+    "source": "Industry capacity estimates still to be sourced (US and non-China module and cell build-out)."
+   }
+  ],
+  "presets": [
+   {
+    "id": "today",
+    "label": "Today’s rule",
+    "blurb": "Customs checks direct suppliers only.",
+    "reach": "T1"
+   },
+   {
+    "id": "upstream",
+    "label": "Look further back",
+    "blurb": "Customs checks 2–3 steps up the supply chain.",
+    "reach": "T2"
+   },
+   {
+    "id": "everything",
+    "label": "Look everywhere",
+    "blurb": "Every link the data can see counts.",
+    "reach": "T5"
+   },
+   {
+    "id": "strict",
+    "label": "Everywhere, and strict",
+    "blurb": "Every link counts, and customs rarely accepts the paperwork.",
+    "reach": "T5",
+    "set": {
+     "p_enf": 0.9,
+     "release": 0.25,
+     "reroute": 0.1
+    }
    }
   ],
   "model": [
-   "removed_j = Σ_{k≤j} Δ_k · τ(conf_k) · p_enf · (1 − release) · (1 − reroute)  +  hidden · depth_j · p_enf · (1 − release) · (1 − reroute)",
-   "depth_j = 0, 0.25, 0.5, 0.75, 0.9, 1 for T0…T5: how much hidden (untraced) exposure a rule at that depth would surface",
-   "significant disruption ⇔ removed_j > X% of US market supply (default X = 20)",
-   "refill_months = ramp + removed / capacity;  buffer_cover = buffer × 100 / removed;  shortage_months = max(0, refill_months − buffer_cover)"
+   "Flagged = share of US cell + module shipments from suppliers the rule would flag at this reach (Sayari), plus the untraced share × (flagged ÷ traced) × the untraced-exposure multiplier.",
+   "Stopped = Flagged × share customs stops.",
+   "Kept out = Stopped × (1 − share released).",
+   "Lost = Kept out × (1 − share that gets back in another way).",
+   "Serious disruption = Lost is above the line you set (default 20% of US supply).",
+   "Shortage months = max(0, (delay before new suppliers + Lost ÷ monthly replacement) − (stock in months × 100 ÷ Lost)). Stock runs down first; any time left before replacement catches up is a shortage."
   ]
  }
 }

@@ -1,4 +1,4 @@
-/* The Shadow Market: Monte Carlo engine (spec §5b). Seeded, so results reproduce. */
+/* The Shadow Market: Monte Carlo engine (spec §5b, model revised in DECISIONS #23). Seeded, so results reproduce. */
 (function () {
   const SM = (window.SM = window.SM || {});
 
@@ -51,91 +51,68 @@
   }
   SM.draw = draw;
 
-  /* p5/p95 helpers so every input can be edited as a plain range */
-  SM.distRange = function (d) {
-    const rng = mulberry32(7), xs = [];
-    for (let i = 0; i < 4000; i++) xs.push(draw(rng, d));
-    xs.sort((a, b) => a - b);
-    return [xs[Math.floor(0.05 * 4000)], xs[Math.floor(0.95 * 4000)], xs.reduce((a, b) => a + b, 0) / xs.length];
+  /* An input on the page is a centre value plus a spread. Each simulated future draws it from a
+     symmetric triangular distribution (centre ± spread), clipped to the input's allowed range. */
+  SM.distOf = function (inp, centre) {
+    const c = centre ?? inp.centre, w = inp.spread;
+    const lo = Math.max(inp.min, c - w), hi = Math.min(inp.max, c + w);
+    return { type: "triangular", lo, mode: Math.min(hi, Math.max(lo, c)), hi };
   };
-  SM.distFromRange = function (d, lo, hi) {
-    if (!(hi > lo)) return d;
-    if (d.type === "uniform") { // p5/p95 → bounds
-      const span = (hi - lo) / 0.9;
-      return { type: "uniform", lo: Math.max(0, lo - span * 0.05), hi: hi + span * 0.05 };
-    }
-    if (d.type === "triangular") {
-      const [plo, phi_, ] = SM.distRange(d);
-      const rel = (d.mode - d.lo) / (d.hi - d.lo || 1);
-      const scale = (hi - lo) / (phi_ - plo || 1);
-      const nlo = Math.max(0, lo - (plo - d.lo) * scale), nhi = hi + (d.hi - phi_) * scale;
-      return { type: "triangular", lo: nlo, mode: nlo + rel * (nhi - nlo), hi: nhi };
-    }
-    if (d.type === "beta") { // method of moments: mean = midpoint, sd = (p95-p5)/3.29
-      lo = Math.max(0.001, lo); hi = Math.min(0.999, hi);
-      const mu = (lo + hi) / 2, sd = (hi - lo) / 3.29, v = sd * sd;
-      const k = Math.max(0.5, (mu * (1 - mu)) / v - 1);
-      return { type: "beta", a: mu * k, b: (1 - mu) * k };
-    }
-    return d;
+  SM.distRange = function (d) { // 5th and 95th percentile of a triangular distribution
+    if (d.type !== "triangular") return [d.lo, d.hi];
+    return [triInv(0.05, d.lo, d.mode, d.hi), triInv(0.95, d.lo, d.mode, d.hi)];
   };
-
-  const TAU_FOR = { high: "tau_high", "medium-high": "tau_medium", medium: "tau_medium", "low-medium": "tau_low", low: "tau_low" };
-  const DEPTH = [0, 0.25, 0.5, 0.75, 0.9, 1];
 
   /**
-   * cfg: { seed, runs, thresholds:[{id,confidence}], increments: {T0:{type..}|number}, inputs:{id:dist}, rho, fixed:{inputId:value} }
-   * returns per-threshold arrays of gap and duration
+   * cfg: { seed, runs, flagged:[share per reach step, % of US supply], traced (%), inputs:{id:dist}, rho, fixed:{id:value} }
+   * Per simulated future and per reach step j:
+   *   flagged = F_j + untraced × (F_j / traced) × hidden
+   *   stopped = flagged × p_enf;  keptOut = stopped × (1 − release);  lost = keptOut × (1 − reroute)
+   *   shortage = max(0, ramp + lost / capacity − buffer × 100 / lost)
    */
   SM.simulate = function (cfg) {
     const rng = mulberry32(cfg.seed);
-    const T = cfg.thresholds, nT = T.length, N = cfg.runs;
-    const gaps = T.map(() => new Float64Array(N)), durs = T.map(() => new Float64Array(N));
+    const F = cfg.flagged, nT = F.length, N = cfg.runs;
+    const mk = () => F.map(() => new Float64Array(N));
+    const out = { flagged: mk(), stopped: mk(), keptOut: mk(), lost: mk(), short: mk() };
     const rho = cfg.rho ?? 0.5, fixed = cfg.fixed || {};
     const get = (id, u) => (id in fixed ? fixed[id] : draw(rng, cfg.inputs[id], u));
+    const traced = cfg.traced ?? 100, untraced = 100 - traced;
     for (let r = 0; r < N; r++) {
-      // correlated hidden exposure & rerouting via Gaussian copula
+      // opaque supply chains are also the leakiest: couple hidden exposure and rerouting (Gaussian copula)
       const z1 = normal(rng), z2 = rho * z1 + Math.sqrt(1 - rho * rho) * normal(rng);
-      const hidden = get("hidden", phi(z1));
-      const reroute = get("reroute", phi(z2));
-      const tau = { tau_high: get("tau_high"), tau_medium: get("tau_medium"), tau_low: get("tau_low") };
+      const hidden = get("hidden", phi(z1)), reroute = get("reroute", phi(z2));
       const pEnf = get("p_enf"), rel = get("release");
-      const cap = Math.max(0.05, get("capacity")), ramp = get("ramp"), buf = get("buffer");
-      const pass = pEnf * (1 - rel) * (1 - reroute);
-      let cum = 0;
+      const cap = Math.max(0.1, get("capacity")), ramp = get("ramp"), buf = get("buffer");
       for (let j = 0; j < nT; j++) {
-        const inc = cfg.increments[T[j].id];
-        const delta = typeof inc === "number" ? inc : draw(rng, inc);
-        cum += delta * tau[TAU_FOR[T[j].confidence] || "tau_medium"];
-        const removed = Math.min(100, (cum + hidden * DEPTH[Math.min(j, DEPTH.length - 1)]) * pass);
-        gaps[j][r] = removed;
-        const refill = removed > 0 ? ramp + removed / cap : 0;
-        const cover = removed > 0 ? (buf * 100) / removed : Infinity;
-        durs[j][r] = Math.max(0, refill - cover);
+        const f = typeof F[j] === "number" ? F[j] : draw(rng, F[j]);
+        const fl = Math.min(100, f + (traced ? untraced * (f / traced) * hidden : 0));
+        const st = fl * pEnf, ko = st * (1 - rel), lost = ko * (1 - reroute);
+        out.flagged[j][r] = fl; out.stopped[j][r] = st; out.keptOut[j][r] = ko; out.lost[j][r] = lost;
+        out.short[j][r] = lost > 0.05 ? Math.max(0, ramp + lost / cap - (buf * 100) / lost) : 0;
       }
     }
-    return { gaps: gaps.map((a) => Array.from(a)), durs: durs.map((a) => Array.from(a)) };
+    return out;
   };
 
   SM.summarise = function (arr, X) {
     const s = Float64Array.from(arr).sort();
     const q = (p) => s[Math.min(s.length - 1, Math.floor(p * (s.length - 1)))];
-    let over = 0;
-    for (const v of arr) if (v > X) over++;
-    return { p5: q(0.05), p50: q(0.5), p95: q(0.95), pOver: (over / arr.length) * 100 };
+    let over = 0, pos = 0;
+    for (const v of arr) { if (v > X) over++; if (v > 0) pos++; }
+    return { p5: q(0.05), p50: q(0.5), p95: q(0.95), pOver: (over / arr.length) * 100, pPos: (pos / arr.length) * 100 };
   };
 
-  /* one-at-a-time sensitivity: fix each input at its P10 / P90, median gap at threshold j */
-  SM.sensitivity = function (cfg, j, labels) {
+  /* one-at-a-time sensitivity: hold each input at its P10 / P90, median loss at reach step j */
+  SM.sensitivity = function (cfg, j) {
     const out = [];
-    const base = SM.summarise(SM.simulate({ ...cfg, runs: 3000 }).gaps[j], 0).p50;
+    const base = SM.summarise(SM.simulate({ ...cfg, runs: 2000 }).lost[j], 0).p50;
     for (const id of Object.keys(cfg.inputs)) {
-      const rng = mulberry32(11), xs = [];
-      for (let i = 0; i < 3000; i++) xs.push(draw(rng, cfg.inputs[id]));
-      xs.sort((a, b) => a - b);
-      const lo = SM.summarise(SM.simulate({ ...cfg, runs: 3000, fixed: { [id]: xs[300] } }).gaps[j], 0).p50;
-      const hi = SM.summarise(SM.simulate({ ...cfg, runs: 3000, fixed: { [id]: xs[2700] } }).gaps[j], 0).p50;
-      out.push({ id, label: labels[id] || id, lo, hi });
+      const d = cfg.inputs[id];
+      const p10 = triInv(0.1, d.lo, d.mode, d.hi), p90 = triInv(0.9, d.lo, d.mode, d.hi);
+      const lo = SM.summarise(SM.simulate({ ...cfg, runs: 2000, fixed: { [id]: p10 } }).lost[j], 0).p50;
+      const hi = SM.summarise(SM.simulate({ ...cfg, runs: 2000, fixed: { [id]: p90 } }).lost[j], 0).p50;
+      out.push({ id, lo, hi, p10, p90 });
     }
     out.sort((a, b) => Math.abs(b.hi - b.lo) - Math.abs(a.hi - a.lo));
     return { base, rows: out };

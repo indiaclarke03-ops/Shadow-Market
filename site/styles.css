@@ -425,3 +425,5 @@ footer .wrap { display: flex; justify-content: space-between; gap: 24px; flex-wr
 @media (max-width: 720px) { .pr-form .grid2 { grid-template-columns: 1fr; } }
 code { overflow-wrap: anywhere; }
 .pr-form[hidden] { display: none; }
+.method-grid > .panel { min-width: 0; overflow-x: auto; }
+@media (max-width: 720px) { .status-tbl td:first-child { white-space: normal; } }

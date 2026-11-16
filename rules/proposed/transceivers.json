@@ -1,0 +1,108 @@
+{
+  "case": "Case 2: optical transceivers × FCC Covered List",
+  "status_line": "Scenario, not forecast. Parameters marked reported have no official text yet.",
+  "no_official_text": "No official text has been published. These parameters come from press and analyst reporting.",
+  "levers": [
+    {"id": "trigger", "label": "Who the rule catches", "type": "options", "default": "entity", "source_ids": ["PR-010", "PR-016"],
+     "options": [
+       {"id": "none", "label": "No transceiver rule", "note": "Component rule only (FCC 26-50), which reaches producer-based Covered List entities and so no transceiver segment here."},
+       {"id": "named", "label": "Named companies only", "note": "InnoLight, Eoptolink and subsidiaries, as named in S.5548."},
+       {"id": "entity", "label": "Chinese-headquartered makers", "note": "Any Chinese-HQ maker, wherever it builds."},
+       {"id": "origin", "label": "Made in China", "note": "Anything made in China, whoever owns it."},
+       {"id": "entity_or_origin", "label": "Either", "note": "Chinese-HQ makers anywhere, plus anything made in China."}
+     ],
+     "alt": {"none": "entity", "named": "entity", "entity": "origin", "origin": "entity", "entity_or_origin": "entity"}},
+    {"id": "generation", "label": "Which products", "type": "options", "default": "3.2T+", "source_ids": ["PR-015", "PR-028"],
+     "options": [
+       {"id": "3.2T+", "label": "3.2T and faster", "covers": ["3.2T"]},
+       {"id": "1.6T+", "label": "1.6T and faster", "covers": ["1.6T", "3.2T"]},
+       {"id": "all_new", "label": "All new models", "covers": ["800G", "1.6T", "3.2T"]}
+     ],
+     "alt": {"3.2T+": "1.6T+", "1.6T+": "3.2T+", "all_new": "1.6T+"}},
+    {"id": "installed", "label": "Existing equipment", "type": "options", "default": "new_models_only", "source_ids": ["PR-001", "PR-010"],
+     "options": [
+       {"id": "new_models_only", "label": "New models only", "note": "Models authorised before the start keep selling."},
+       {"id": "also_existing_models", "label": "Also stop new sales of existing models", "note": "Equipment already installed is never affected."}
+     ],
+     "alt": {"new_models_only": "also_existing_models", "also_existing_models": "new_models_only"}},
+    {"id": "scope", "label": "Which buyers", "type": "options", "default": "all_us", "source_ids": ["PR-010", "PR-025"],
+     "options": [
+       {"id": "all_us", "label": "All US buyers", "note": "FCC equipment-authorisation style."},
+       {"id": "federal_nss", "label": "Federal systems only", "note": "S.5548 style: federal procurement for national-security systems."}
+     ],
+     "alt": {"all_us": "federal_nss", "federal_nss": "all_us"}},
+    {"id": "exemption", "label": "Domestic-content exemption", "type": "toggle", "default": true, "source_ids": ["PR-015"], "alt": "flip"},
+    {"id": "threshold", "label": "Exemption threshold (% of BOM value from US companies)", "type": "range", "min": 40, "max": 90, "step": 5, "default": 65, "source_ids": ["PR-015", "PR-013"], "alt_delta": 10},
+    {"id": "start_year", "label": "When it starts", "type": "range", "min": 2027, "max": 2031, "step": 1, "default": 2028, "source_ids": ["PR-015", "PR-028"], "alt_delta": 1},
+    {"id": "transition_years", "label": "Phase-in period (years)", "type": "range", "min": 0, "max": 5, "step": 1, "default": 0, "source_ids": ["PR-025"], "alt_delta": 2}
+  ],
+  "trigger_logic": {
+    "named": {"field": "named_in", "includes": "PR-020"},
+    "entity": {"field": "hq", "equals": "CN"},
+    "origin": {"field": "site", "equals": "CN"},
+    "entity_or_origin": {"any": ["entity", "origin"]},
+    "none": {"never": true}
+  },
+  "confidence_resample": {"high": 0, "medium": 0.25, "low": 0.5,
+    "note": "A lever set by an intel card takes its 'alt' option in this share of simulated futures (DECISIONS #33). Levers set by a preset or by hand are fixed."},
+  "cards": [
+    {"id": "I-1", "headline": "Component rule in force: logic-bearing parts from Covered List producers", "date": "2026-10-13", "tier": "primary", "confidence": "high",
+     "source_ids": ["PR-001", "PR-002", "PR-004"], "sets": {"installed": "new_models_only"},
+     "note": "FCC 26-50 applies to new authorisations only. Only producer-based Covered List entries (e.g. Huawei, ZTE) trigger it, so it does not reach InnoLight or Eoptolink optics today."},
+    {"id": "I-2", "headline": "FCC reported to be drafting a ban on new models of Chinese transceivers", "date": "2026-08-04", "tier": "reported", "confidence": "medium",
+     "source_ids": ["PR-010", "PR-011"], "sets": {"trigger": "entity", "installed": "new_models_only", "scope": "all_us"},
+     "note": "Four unnamed sources (Reuters). No FCC threat determination or draft text has been published."},
+    {"id": "I-3", "headline": "Ban reported to phase in from the 3.2T generation (≈2028–29)", "date": "2026-10", "tier": "reported", "confidence": "low",
+     "source_ids": ["PR-015", "PR-028", "PR-013", "PR-019"], "sets": {"generation": "3.2T+", "start_year": 2028},
+     "note": "From analyst notes of meetings in Washington (Morgan Stanley). Other analysts expect 800G/1.6T revisions to count as new models (PR-012, PR-016)."},
+    {"id": "I-4", "headline": "Possible exemption at ≥65% US bill-of-materials value", "date": "2026-10", "tier": "reported", "confidence": "low",
+     "source_ids": ["PR-015", "PR-013"], "sets": {"exemption": true, "threshold": 65},
+     "note": "Economic Daily News citing Morgan Stanley (via TrendForce); a single reported chain. Chinese-assembled modules use US DSPs and US/Japanese lasers (PR-014)."},
+    {"id": "I-5", "headline": "Trigger unsettled: company ownership or place of manufacture?", "date": "2026-09", "tier": "reported", "confidence": "low",
+     "source_ids": ["PR-016", "PR-014", "PR-017", "PR-011"], "sets": {"trigger": "entity"},
+     "note": "Applying this card keeps 'Chinese-headquartered makers' but treats it as uncertain: in half of simulated futures the rule follows place of manufacture instead, which leaves Thai-made modules outside."},
+    {"id": "I-6", "headline": "S.5548: federal procurement ban on InnoLight and Eoptolink transceivers (introduced)", "date": "2026-09-24", "tier": "primary", "confidence": "high",
+     "source_ids": ["PR-025", "PR-020", "PR-021"], "sets": {"trigger": "named", "scope": "federal_nss", "transition_years": 5, "start_year": 2027, "exemption": false},
+     "note": "Introduced and referred to HSGAC, not enacted. The bill's prohibitions take effect five years after enactment; modelled as a phase-in from an assumed 2027 enactment (an upper bound on early effect)."},
+    {"id": "I-7", "headline": "InnoLight added to the Department of War 1260H list", "date": "2026-06-08", "tier": "primary", "confidence": "high",
+     "source_ids": ["PR-024", "PR-022", "PR-023"], "sets": {},
+     "note": "Context only: sets no transceiver lever. Entity contracting ban from 30 Jun 2026; product ban from 30 Jun 2027 excludes components inside end items. InnoLight disputes the designation (PR-040)."},
+    {"id": "I-8", "headline": "Power inverters on the Covered List, narrowed to utility-interactive UL 1741 units", "date": "2026-08-20", "tier": "primary", "confidence": "high",
+     "source_ids": ["PR-030", "PR-031", "PR-032"], "sets": {},
+     "note": "Context only: drives the power item in the design checklist. Whether data-centre UPS or battery systems fall in scope depends on that definition."},
+    {"id": "I-9", "headline": "Consumer-grade routers on the Covered List", "date": "2026-03-23", "tier": "primary", "confidence": "high",
+     "source_ids": ["PR-033", "PR-034", "PR-035"], "sets": {},
+     "note": "Context only. Residential, customer-installed routers; generally not data-centre networking. Conditional Approvals listed as of 4 Jun 2026 end between 1 Oct and 5 Dec 2027."}
+  ],
+  "presets": [
+    {"id": "reported", "label": "As reported", "blurb": "Intel cards I-1 to I-5 applied.", "cards": ["I-1", "I-2", "I-3", "I-4", "I-5"]},
+    {"id": "s5548", "label": "Federal systems only (S.5548)", "blurb": "Named companies, federal buyers, five-year phase-in.", "set": {"trigger": "named", "scope": "federal_nss", "transition_years": 5, "start_year": 2027, "exemption": false, "generation": "all_new", "installed": "also_existing_models"}},
+    {"id": "origin16", "label": "By place of manufacture, from 1.6T", "blurb": "Made in China, 1.6T and faster, no exemption.", "set": {"trigger": "origin", "generation": "1.6T+", "exemption": false, "installed": "new_models_only", "scope": "all_us", "start_year": 2028, "transition_years": 0}},
+    {"id": "widest", "label": "Widest reach", "blurb": "Company or place of manufacture, all new models, no exemption, from 2027.", "set": {"trigger": "entity_or_origin", "generation": "all_new", "exemption": false, "start_year": 2027, "installed": "new_models_only", "scope": "all_us", "transition_years": 0}},
+    {"id": "none", "label": "No new rule", "blurb": "Status quo: the component rule only.", "set": {"trigger": "none"}}
+  ],
+  "timeline": [
+    {"date": "2026-03-23", "event": "Consumer-grade routers added to the Covered List", "tier": "primary", "source_ids": ["PR-033"]},
+    {"date": "2026-06-08", "event": "InnoLight added to the 1260H list (188 entities)", "tier": "primary", "source_ids": ["PR-024", "PR-022"]},
+    {"date": "2026-07-22", "event": "FCC adopts the component rule (FCC 26-50)", "tier": "primary", "source_ids": ["PR-001", "PR-005"]},
+    {"date": "2026-07-28", "event": "Foreign-produced power inverters added to the Covered List", "tier": "primary", "source_ids": ["PR-030"]},
+    {"date": "2026-08-04", "event": "Reuters: FCC drafting a ban on new models of Chinese transceivers", "tier": "reported", "source_ids": ["PR-010"]},
+    {"date": "2026-08-20", "event": "Inverter entry narrowed to utility-interactive UL 1741 units", "tier": "primary", "source_ids": ["PR-031"]},
+    {"date": "2026-09-24", "event": "S.5548 introduced in the Senate", "tier": "primary", "source_ids": ["PR-025"]},
+    {"date": "2026-10", "event": "Reports: phase-in from 3.2T; possible 65% US-content exemption", "tier": "reported", "source_ids": ["PR-028", "PR-015"]},
+    {"date": "2026-10-13", "event": "Component rule takes effect", "tier": "primary", "source_ids": ["PR-002"]},
+    {"date": "2026-11-10", "event": "Microsoft reported to be urging the administration to drop the plan", "tier": "reported", "source_ids": ["PR-015", "PR-019"]}
+  ],
+  "considerations": [
+    {"id": "site", "when": "trigger_origin", "tags": ["optics", "procurement"], "title": "Manufacturing-site records", "check": "Can each optics SKU be tied to a factory location? Thai-made and China-made modules may be treated differently.", "source_ids": ["PR-016"]},
+    {"id": "bom", "when": "exemption_on", "tags": ["optics", "procurement"], "title": "BOM provenance", "check": "Is there supplier data on the value share of DSPs, lasers and drivers by company nationality, and could it support a 65%-style test?", "source_ids": ["PR-015", "PR-014"]},
+    {"id": "arch", "when": "gen_3.2T+", "tags": ["optics", "network"], "title": "Architecture timing", "check": "3.2T decisions (pluggable, linear-drive or co-packaged optics) land as the rule starts. Co-packaged optics move the optics into the switch, which changes which equipment authorisation and which components are examined (compare the component rule, I-1).", "source_ids": ["PR-012", "PR-001"]},
+    {"id": "second", "when": "shortfall", "tags": ["optics", "procurement"], "title": "Second-source qualification", "check": "Qualification time is the main lever on delay in this scenario. Which non-covered suppliers are qualified for each generation?", "source_ids": ["PR-014", "PR-017"]},
+    {"id": "buyahead", "when": "pullforward", "tags": ["procurement"], "title": "Buy-ahead and inventory", "check": "The scenario implies stockpiling before the start year. What is the inventory and obsolescence trade-off?", "source_ids": ["PR-016"]},
+    {"id": "federal", "when": "federal", "tags": ["procurement"], "title": "Separating federal capacity", "check": "S.5548 would apply to federal procurement for national-security systems after five years. Does federal capacity need separate optics sourcing?", "source_ids": ["PR-025"]},
+    {"id": "installed", "when": "always", "tags": ["optics"], "title": "Installed base", "check": "Under a new-models-only rule, modules already installed are not affected. Refresh-cycle timing decides when the rule starts to matter at each site.", "source_ids": ["PR-001", "PR-013"]},
+    {"id": "power", "when": "always", "tags": ["power"], "title": "Inverters and battery systems", "check": "The Covered List entry now covers utility-interactive UL 1741 inverters with remote communications (I-8). Does on-site solar, battery storage or grid-interactive UPS equipment fit that definition, and were models authorised before 28 Jul 2026?", "source_ids": ["PR-031", "PR-032"]},
+    {"id": "network", "when": "always", "tags": ["network"], "title": "Routers and switches", "check": "The router entry is consumer-grade (I-9), so it is unlikely to cover data-centre switching. The component rule (I-1) still applies to any device with logic-bearing parts from producer-based Covered List entities.", "source_ids": ["PR-035", "PR-001"]},
+    {"id": "firmware", "when": "always", "tags": ["network", "optics"], "title": "Firmware", "check": "FCC 26-50 excludes firmware for now and keeps the record open (I-1). A watch item, not a current requirement.", "source_ids": ["PR-001", "PR-002"]}
+  ]
+}

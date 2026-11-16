@@ -340,7 +340,7 @@
       SM.svg("text", { x: X(b) + 6, y: by + bh / 2 + 4, style: "font-size:12px" }, s).textContent = "±" + (Math.abs(r.hi - r.lo) / 2).toFixed(1) + " pts";
     });
     SM.svg("line", { x1: X(base), x2: X(base), y1: m.t - 4, y2: h - m.b + 4, stroke: SM.COL.navy, "stroke-width": 1.5 }, s);
-    SM.svg("text", { x: X(base), y: h - 8, "text-anchor": "middle", class: "lbl-strong" }, s).textContent = "typical loss " + base.toFixed(1) + "%";
+    SM.svg("text", { x: X(base), y: h - 8, "text-anchor": "middle", class: "lbl-strong" }, s).textContent = (opts.baseLabel || "typical loss") + " " + base.toFixed(1) + "%";
     return s;
   };
 

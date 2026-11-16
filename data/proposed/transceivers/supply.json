@@ -1,0 +1,69 @@
+{
+  "_note": "Segments of US AI data-centre transceiver supply. ILLUSTRATIVE: shares are anchored to reported global ranges (Chinese-HQ ≈55–65%, InnoLight ≈27–34%, Eoptolink ≈10–15%), not US-specific data. Every value is a placeholder until replaced by data/proposed/transceivers/part_map.json (student analysis). Shares are percent of supply; us_bom_pct is the percent of bill-of-materials value from US companies.",
+  "status": "illustrative",
+  "segments": [
+    {"id": "inno_cn", "label": "InnoLight, made in China", "maker": "innolight", "hq": "CN", "site": "CN", "named_in": ["PR-020", "PR-025"],
+     "share_pct": {"centre": 16, "spread": 6}, "us_bom_pct": {"centre": 50, "spread": 20}, "gen_mix": {"800G": 0.55, "1.6T": 0.4, "3.2T": 0.05},
+     "status": "placeholder", "source_ids": ["PR-014", "PR-012"]},
+    {"id": "inno_th", "label": "InnoLight, made in Thailand", "maker": "innolight", "hq": "CN", "site": "TH", "named_in": ["PR-020", "PR-025"],
+     "share_pct": {"centre": 13, "spread": 6}, "us_bom_pct": {"centre": 50, "spread": 20}, "gen_mix": {"800G": 0.55, "1.6T": 0.4, "3.2T": 0.05},
+     "status": "placeholder", "source_ids": ["PR-014", "PR-016"]},
+    {"id": "eo_cn", "label": "Eoptolink, made in China", "maker": "eoptolink", "hq": "CN", "site": "CN", "named_in": ["PR-020", "PR-025"],
+     "share_pct": {"centre": 6, "spread": 3}, "us_bom_pct": {"centre": 50, "spread": 20}, "gen_mix": {"800G": 0.6, "1.6T": 0.37, "3.2T": 0.03},
+     "status": "placeholder", "source_ids": ["PR-014"]},
+    {"id": "eo_th", "label": "Eoptolink, made in Thailand", "maker": "eoptolink", "hq": "CN", "site": "TH", "named_in": ["PR-020", "PR-025"],
+     "share_pct": {"centre": 6, "spread": 3}, "us_bom_pct": {"centre": 50, "spread": 20}, "gen_mix": {"800G": 0.6, "1.6T": 0.37, "3.2T": 0.03},
+     "status": "placeholder", "source_ids": ["PR-014", "PR-016"]},
+    {"id": "oth_cn", "label": "Other Chinese-HQ makers, made in China", "maker": "other_cn", "hq": "CN", "site": "CN", "named_in": [],
+     "examples": "HG Genuine, Accelink, Source Photonics, CIG (as named in PR-012, PR-014, PR-016)",
+     "share_pct": {"centre": 18, "spread": 5}, "us_bom_pct": {"centre": 45, "spread": 20}, "gen_mix": {"800G": 0.75, "1.6T": 0.24, "3.2T": 0.01},
+     "status": "placeholder", "source_ids": ["PR-014", "PR-012"]},
+    {"id": "non_asia", "label": "Non-Chinese makers, made in Thailand, Malaysia or elsewhere", "maker": "non_cn", "hq": "OTHER", "site": "OTHER", "named_in": [],
+     "examples": "Coherent, Lumentum, Broadcom and others (PR-014)",
+     "share_pct": {"centre": 33, "spread": 6}, "us_bom_pct": {"centre": 60, "spread": 20}, "gen_mix": {"800G": 0.6, "1.6T": 0.37, "3.2T": 0.03},
+     "status": "placeholder", "source_ids": ["PR-014"]},
+    {"id": "non_us", "label": "Non-Chinese makers, made in the US", "maker": "non_cn", "hq": "OTHER", "site": "US", "named_in": [],
+     "examples": "e.g. AAOI (PR-014)",
+     "share_pct": {"centre": 8, "spread": 4}, "us_bom_pct": {"centre": 70, "spread": 15}, "gen_mix": {"800G": 0.7, "1.6T": 0.29, "3.2T": 0.01},
+     "status": "placeholder", "source_ids": ["PR-014"]}
+  ],
+  "splits": [
+    {"maker": "innolight", "label": "InnoLight output made in Thailand", "th_share": {"centre": 0.45, "spread": 0.3}, "status": "placeholder",
+     "note": "The China/Thailand split is unknown. Thailand lines were built for North American demand (PR-016, PR-014), so a wide range around 45%."},
+    {"maker": "eoptolink", "label": "Eoptolink output made in Thailand", "th_share": {"centre": 0.5, "spread": 0.3}, "status": "placeholder",
+     "note": "Unknown; wide range."}
+  ],
+  "us_bom_note": "No public teardown or BOM data. DSP and laser content from US companies 'could approach' the 65% threshold (PR-013, reporting Morgan Stanley; PR-014 on DSP and laser sourcing). Default centre 50%, spread 20.",
+  "demand_mix": {
+    "_note": "Share of new transceiver purchases in each generation, by year. Placeholder ramp: 3.2T enters production in 2028 (PR-012) and ramps around 2028–29 (PR-015, PR-028). The 3.2T share has the given spread; the rest is split between 800G and 1.6T in the given proportions.",
+    "years": [2026, 2027, 2028, 2029, 2030, 2031],
+    "share_3_2T": [{"centre": 0, "spread": 0}, {"centre": 0, "spread": 0.02}, {"centre": 0.1, "spread": 0.05}, {"centre": 0.3, "spread": 0.1}, {"centre": 0.5, "spread": 0.1}, {"centre": 0.65, "spread": 0.1}],
+    "share_1_6T_of_rest": [0.3, 0.5, 0.6, 0.7, 0.8, 0.85],
+    "status": "placeholder", "source_ids": ["PR-012", "PR-015", "PR-028"]
+  },
+  "new_model_share": {
+    "_note": "Under a new-models-only rule, the share of purchases in each year after the start that are models authorised after the start (older authorised models keep selling). 3.2T models don't exist before 2028, so a 3.2T rule starting in 2028 or earlier covers all 3.2T purchases.",
+    "by_years_since_start": [{"centre": 0.4, "spread": 0.15}, {"centre": 0.75, "spread": 0.15}, {"centre": 0.95, "spread": 0.05}, {"centre": 1, "spread": 0}],
+    "status": "placeholder", "source_ids": ["PR-010", "PR-012"]
+  },
+  "inputs": [
+    {"id": "fed_share", "label": "Federal national-security share of demand", "unit": "pct", "centre": 3, "spread": 2, "min": 0, "max": 20, "status": "placeholder",
+     "source": "No public figure; federal national-security systems are a small fraction of hyperscale demand.", "source_ids": []},
+    {"id": "pull_forward", "label": "Months bought ahead before the start", "unit": "months", "centre": 3, "spread": 3, "min": 0, "max": 12, "status": "placeholder",
+     "source": "Procurement guidance to buy ahead of the rule (PR-016). No measured figure.", "source_ids": ["PR-016"]},
+    {"id": "headroom", "label": "Spare non-covered capacity in year one", "unit": "pct", "centre": 5, "spread": 5, "min": 0, "max": 30, "status": "placeholder",
+     "source": "Coherent and Lumentum reported running at capacity and ~30% overbooked (PR-018); Western competitors lack capacity to absorb the volume within 12–24 months (PR-014).", "source_ids": ["PR-018", "PR-014"]},
+    {"id": "capacity_add", "label": "Non-covered capacity added per year", "unit": "pct", "centre": 8, "spread": 5, "min": 0, "max": 30, "status": "placeholder",
+     "source": "Vendors: two to three years to stand up a rush operation (PR-017); 12–24 months (PR-014). Percent of demand per year, from 2027.", "source_ids": ["PR-017", "PR-014"]},
+    {"id": "shift", "label": "Blocked demand that shifts to uncovered sources", "unit": "share", "centre": 0.3, "spread": 0.2, "min": 0, "max": 0.9, "status": "placeholder",
+     "source": "Share of blocked demand that moves to uncovered lines of the same makers (e.g. Thai lines under an origin rule) or is redesigned to pass the BOM test. Coupled to BOM uncertainty (ρ = 0.5): where the rule's line is fuzzier, more supply finds a way to stay on the right side of it.", "source_ids": ["PR-012", "PR-016"]},
+    {"id": "elasticity", "label": "Price pressure per point of shortfall", "unit": "index", "centre": 1.5, "spread": 1, "min": 0, "max": 5, "status": "placeholder",
+     "source": "Index only: direction and rough size, never a dollar figure.", "source_ids": []},
+    {"id": "ramp", "label": "Months to qualify a new optics supplier", "unit": "months", "centre": 9, "spread": 4, "min": 1, "max": 24, "status": "placeholder",
+     "source": "Same assumption family as the solar case (6–18 months to qualify a new supplier).", "source_ids": []}
+  ],
+  "seed": 20261116,
+  "runs": 10000,
+  "serious_shortfall_pct": 10,
+  "copula_rho_bom_shift": 0.5
+}

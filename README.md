@@ -11,6 +11,7 @@ See `concept_2.md` (the idea) and `specification.md` (the MVP spec). Judgement c
 python3 pipeline/extract_sayari.py  # data/raw → data/derived/exporters.csv
 python3 pipeline/build_tiers.py     # data/raw → data/derived/tiers.json (upstream columns)
 python3 pipeline/build.py          # rebuilds data/derived/metrics.json and site/data.js
+python3 pipeline/build_proposed.py # Case 2 (proposed rule): validates and writes site/data_proposed.js
 open site/index.html               # works straight from disk; no server needed
 ```
 (Until the Xcode licence is accepted on this machine, use `/Library/Developer/CommandLineTools/usr/bin/python3`.)
@@ -33,7 +34,13 @@ data/evidence/sources_sim.csv    sources for the simulation inputs (SI-…)
 data/derived/shipment_samples.csv  Sayari shipment samples: weight per shipment, product descriptions
 data/derived/named_companies.csv   review sheet for every named company (independent review, right of reply)
 pipeline/notes/             research logs and the Sayari pull plan
-site/                       index.html, styles.css, charts.js, sim.js, app.js
+site/                       index.html, styles.css, charts.js, sim.js, app.js, proposed.js (Case 2)
+rules/proposed/transceivers.json        Case 2 scenario: levers, intel cards, presets, design checklist
+data/proposed/transceivers/supply.json  Case 2 supply segments (illustrative placeholders) and simulation inputs
+data/proposed/transceivers/part_map.template.json   student plug-in schema (copy to part_map.json)
+data/evidence/sources_proposed.csv, claims_proposed.csv   Case 2 source register and claims
+pipeline/build_proposed.py              validates Case 2, merges part_map.json if present, writes site/data_proposed.js
+pipeline/notes/proposed_sayari_plan.md  suggested Sayari steps for the student analysis
 ```
 
 ## Rules

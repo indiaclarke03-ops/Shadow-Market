@@ -18,6 +18,7 @@
     <div class="tabs" role="tablist">
       <a href="#explorer" data-view="explorer">The gap</a>
       <a href="#simulation" data-view="simulation">What if?</a>
+      <a href="#proposed" data-view="proposed">Proposed rule</a>
       <a href="#method" data-view="method">Method &amp; limits</a>
     </div>
     <span class="snap" id="snap"></span>
@@ -208,6 +209,130 @@
   </section>
 </main>
 
+<!-- ============================================================ PROPOSED RULE (Case 2) -->
+<main class="view" id="view-proposed">
+  <header class="hero sim-hero">
+    <div class="wrap">
+      <p class="kicker">Proposed rule · Case 2 · Optical transceivers</p>
+      <h1 class="sim-h1">What if the rule changes?<br><span class="soft">Testing a regulation before it exists.</span></h1>
+      <div class="hero-grid">
+        <p class="lede">A different question from Case 1: not “what does today’s rule miss?” but “if this reported rule arrives, what would it cover, what would it leave out, and what would change for the people building AI data centres?” The core rule, a US restriction on Chinese optical transceivers, <b>has not been published</b>. This page runs on reported parameters and illustrative supply figures, and every input shows which it is.</p>
+        <p class="pr-banner" role="note"><b>Scenario, not forecast.</b> Parameters marked <span class="tier medium">reported</span> have no official text yet.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="sim-body" id="pr-known">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display">What’s known</h2>
+        <p class="lede">Each piece of intelligence is a card. Apply a card and it sets the rule’s design choices below; how sure we are of the card decides how much the simulation varies them.</p>
+      </div>
+      <div class="presets" id="pr-presets" role="group" aria-label="Scenarios"></div>
+      <div class="why-grid">
+        <div class="panel flat">
+          <div class="panel-title"><h4>Signals so far</h4><span class="small">tier shown in words and colour</span></div>
+          <ol class="timeline" id="pr-timeline"></ol>
+        </div>
+        <div>
+          <div class="panel-title"><h4 style="font-family:var(--display);font-weight:500;font-size:23px;letter-spacing:-.025em;color:var(--navy);margin:0">Intelligence cards</h4>
+            <div class="pr-card-tools"><button type="button" class="btn" id="pr-add">Add new intelligence</button><button type="button" class="btn" id="pr-export">Export cards (JSON)</button><label class="btn" for="pr-import">Import cards<input type="file" id="pr-import" accept="application/json,.json" hidden></label></div></div>
+          <form class="panel pr-form" id="pr-form" hidden></form>
+          <div class="claims" id="pr-cards"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" id="pr-gap">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display">The rule on paper<br>vs the supply chain</h2>
+        <p class="lede">Who the rule would reach, compared with who supplies US AI data centres. The gap between the two is this case’s version of the shadow market.</p>
+      </div>
+      <div class="explorer-grid">
+        <div class="controls" id="pr-levers"></div>
+        <div>
+          <div class="readout" id="pr-gap-readout"></div>
+          <div class="panel" style="margin-top:20px">
+            <div class="panel-title"><h4>How much supply the rule reaches</h4><div class="legend" id="pr-seg-legend"></div></div>
+            <p class="small panel-sub">100% = US AI data-centre transceiver supply (illustrative). Each row keeps the segments in place, so you can see what drops out at each step. Hatching = made in Thailand.</p>
+            <div id="pr-bars"></div>
+            <div id="pr-why"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sim-body" id="pr-sim">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display">What could<br>happen to supply</h2>
+        <p class="lede">The scenario played out 10,000 times, year by year from 2026 to 2031. Each future draws the uncertain inputs from their ranges, and levers set by less certain cards sometimes take their next-most-likely value.</p>
+      </div>
+      <div class="sim-layout">
+        <aside class="controls sim-controls" id="pr-sim-controls" aria-label="Simulation inputs"></aside>
+        <div class="sim-results">
+          <div class="readout light" id="pr-readout" aria-live="polite"></div>
+          <article class="analysis" id="pr-analysis" aria-live="polite"></article>
+          <div class="panel">
+            <div class="panel-title"><h4>Year by year, 2026–2031</h4><div class="legend" id="pr-years-legend"></div></div>
+            <div id="pr-years"></div>
+          </div>
+          <div class="sim-grid">
+            <div class="panel">
+              <div class="panel-title"><h4>100 possible futures</h4></div>
+              <p class="small panel-sub">Each square stands for 100 of the 10,000 simulated futures, by the worst year in each.</p>
+              <div id="pr-futures"></div>
+              <div class="legend" id="pr-futures-legend" style="margin-top:14px"></div>
+            </div>
+            <div class="panel">
+              <div class="panel-title"><h4>Same scenario, each trigger</h4><span class="small">click a bar to switch</span></div>
+              <p class="small panel-sub">Typical share of supply blocked in the peak year, after some shifts to uncovered sources.</p>
+              <div id="pr-trigger"></div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-title"><h4>What matters most</h4><span class="small">how far the typical peak blocked share moves</span></div>
+            <p class="small panel-sub">Inputs are moved between the low and high ends of their ranges; design choices are switched to their next-most-likely option.</p>
+            <div id="pr-tornado"></div>
+          </div>
+        </div>
+      </div>
+      <details class="panel flat sim-details">
+        <summary><h4>How the model works, and where each number comes from</h4></summary>
+        <ol class="model-list" id="pr-model"></ol>
+        <div class="tbl-wrap"><table class="tbl" id="pr-inputs"></table></div>
+        <p class="small">Reproducible: seed <span id="pr-seed"></span>, <span id="pr-runs"></span> runs.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="mist" id="pr-why-line">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display">Why the line<br>might sit here</h2>
+        <p class="lede">Positions from people with a stake, each in their own attributed words and sourced. The tool doesn’t take a side on whether the rule is warranted.</p>
+      </div>
+      <div class="pr-positions" id="pr-positions"></div>
+      <div class="panel" style="margin-top:20px" id="pr-design-reading"></div>
+    </div>
+  </section>
+
+  <section id="pr-build">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display">What it means for<br>building data centres</h2>
+        <p class="lede">Decisions this scenario puts in play, generated from the current settings and results. <b>Not legal or procurement advice; questions to check with counsel and suppliers.</b></p>
+      </div>
+      <div class="chips" id="pr-tags" role="group" aria-label="Filter by area"></div>
+      <div class="pr-checklist" id="pr-checklist"></div>
+      <div class="panel flat" style="margin-top:28px" id="pr-student"></div>
+    </div>
+  </section>
+</main>
+
 <!-- ============================================================ METHOD -->
 <main class="view" id="view-method">
   <section class="mist" style="padding-top:88px">
@@ -227,6 +352,8 @@
 <script src="data.js"></script>
 <script src="charts.js"></script>
 <script src="sim.js"></script>
+<script src="data_proposed.js"></script>
+<script src="proposed.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

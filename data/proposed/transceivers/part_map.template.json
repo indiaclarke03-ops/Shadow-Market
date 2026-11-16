@@ -1,0 +1,19 @@
+{
+  "analyst": "name or team",
+  "date": "YYYY-MM-DD",
+  "sayari_snapshot": "YYYY-MM-DD",
+  "segments": [
+    {
+      "id": "inno_th",
+      "entities": [
+        {"name": "…", "sayari_id": "…", "country": "THA", "role": "manufacturer",
+         "parent_sayari_id": "…", "named_in": ["PR-020"], "source_ids": ["SA-001"]}
+      ],
+      "share_pct": {"centre": 0, "spread": 0, "basis": "shipments | value | estimate", "source_ids": ["SA-001"]},
+      "us_bom_pct": {"centre": 0, "spread": 0, "basis": "teardown | supplier disclosure | estimate", "source_ids": []},
+      "gen_mix": {"800G": 0, "1.6T": 0, "3.2T": 0},
+      "notes": ""
+    }
+  ],
+  "sources": [ {"source_id": "SA-001", "title": "", "url": "", "type": "sayari_record | other"} ]
+}

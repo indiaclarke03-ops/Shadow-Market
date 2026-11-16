@@ -124,8 +124,6 @@
     const stats = [];
     if (L3ok) {
       const full = L3.combos[FULL_COMBO], fullRaw = L3.combos_unadjusted[FULL_COMBO];
-      $("h1-a").textContent = `${pct(full.exposed_share, 0)} linked.`;
-      $("h1-b").textContent = `${pct(full.not_detained_share, 0)} never publicly stopped.`;
       $("hero-lede").innerHTML = `The US bans goods made with forced labour in Xinjiang, China. Trace the solar cells and panels shipped to America back through their supply chains, and <b>${pct(full.exposed_share, 0)}</b> of shipments come from suppliers with a link to forced-labour risk. US customs has publicly detained or refused shipments from the company groups behind <b>${pct(OBS.exposed_share, 0)}</b>. That leaves <b>${pct(full.not_detained_share, 0)}</b> linked, from companies with no public detention on record.`;
       $("hero-check").innerHTML = `These figures set aside First Solar’s thin-film panels (${pct(techShare("thin_film_cdte"), 0)} of shipments), which use no polysilicon, and LED modules declared as solar (${pct(techShare("led_not_pv"), 1)}). Count every Sayari flag as given and ${pct(fullRaw.exposed_share, 0)} are linked.`;
       stats.push(`<div class="hero-stat"><span class="num">${int(L3.total_value)}</span><span class="lbl">solar cell and panel shipments to the US in two years, from ${int(L3.exporter_count)} exporters (Sayari trade data)</span></div>`);

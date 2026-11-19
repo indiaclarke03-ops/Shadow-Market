@@ -937,7 +937,7 @@
   }
   function playData() {
     const S = sim.cur;
-    return { label: scenLabel(S), reach: TH[S.j].label, plain: TH[S.j].plain, vals: { ...S.vals }, F: S.flagged.p50, S: S.stopped.p50, K: S.keptOut.p50, L: S.lost.p50, pShort: S.pShort, durMed: S.durMed };
+    return { label: scenLabel(S), preset: S.preset, j: S.j, reach: TH[S.j].label, short: TH[S.j].short, plain: TH[S.j].plain, vals: { ...S.vals }, F: S.flagged.p50, S: S.stopped.p50, K: S.keptOut.p50, L: S.lost.p50, pShort: S.pShort, pSer: S.lost.pOver, durMed: S.durMed, X: S.X };
   }
   // for story.js, goal.js and play.js
   SM.simApi = {
@@ -945,7 +945,13 @@
     flaggedAt: () => flaggedAt, traced: () => (L3ok ? L3.traced_share : 100),
     ensure: () => { if (!simInited) { initSim(); simInited = true; } if (!sim.cur) compute(); },
     preset: (id) => { applyPreset(id); renderControls(); compute(); },
-    set: (o) => { if (o.preset) applyPreset(o.preset); if (o.reach != null) { sim.reach = o.reach; sim.preset = null; } if (o.vals) { Object.assign(sim.vals, o.vals); sim.preset = o.preset || null; } renderControls(); compute(); },
+    set: (o) => {
+      if (o.preset) applyPreset(o.preset);
+      if (o.reach != null) { sim.reach = o.reach; sim.preset = null; }
+      if (o.vals) { Object.entries(o.vals).forEach(([k, v]) => { sim.vals[k] = v; sim.status[k] = { status: "user", source: `You changed this. Default: ${fmtVal(k, sim.base[k])}. ${INP[k].source}` }; }); sim.preset = o.preset || null; }
+      renderControls(); compute();
+    },
+    data: () => playData(),
     cur: () => sim.cur, pin: (on) => { if (!!sim.A !== !!on) pinToggle(); }, play: () => SM.playScenario && SM.playScenario(playData()),
     hash: (o) => { const qs = new URLSearchParams(); qs.set("r", TH[o.reach].id); Object.entries(o.vals || {}).forEach(([k, v]) => qs.set(k, +(+v).toFixed(3))); return "#simulation?" + qs.toString(); },
   };

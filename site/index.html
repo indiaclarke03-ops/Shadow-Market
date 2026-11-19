@@ -437,25 +437,50 @@
 <div class="theatre" id="theatre" hidden role="dialog" aria-modal="true" aria-labelledby="th-title">
   <div class="th-box">
     <div class="th-head">
-      <div><p class="kicker" id="th-kick">Playing out the typical future</p><h3 id="th-title"></h3></div>
+      <div><p class="kicker" id="th-kick">Play it out</p><h3 id="th-title"></h3></div>
       <button type="button" class="th-x" id="th-close" aria-label="Close">×</button>
     </div>
-    <div class="th-main">
-      <div class="th-stage" id="th-stage"></div>
-      <div class="th-side">
-        <div class="th-month"><span>Month</span><b id="th-month">0</b></div>
-        <div class="th-stat"><span>Stock in US warehouses</span><b id="th-stock"></b><div class="gauge light"><i id="th-stock-g"></i></div></div>
-        <div class="th-stat"><span>New suppliers</span><b id="th-new"></b><div class="gauge light"><i id="th-new-g"></i></div></div>
-        <p class="th-status" id="th-status"></p>
+
+    <section class="th-setup" id="th-setup" aria-label="The starting scenario">
+      <div class="th-setup-grid">
+        <div class="th-scen">
+          <p class="th-k">1 · The starting scenario</p>
+          <div class="th-presets" id="th-presets" role="group" aria-label="Scenarios"></div>
+          <div class="th-knobs" id="th-knobs"></div>
+          <p class="th-other" id="th-other"></p>
+        </div>
+        <div class="th-expect">
+          <p class="th-k">2 · What happens to every 100 shipments of solar cells and panels heading for the US</p>
+          <div class="th-waffle-row">
+            <div class="th-waffle" id="th-waffle" role="img"></div>
+            <ul class="th-fates" id="th-fates"></ul>
+          </div>
+          <p class="th-market" id="th-market"></p>
+          <button type="button" class="act primary th-go" id="th-go"><span aria-hidden="true">▶</span> Play it out</button>
+        </div>
       </div>
-    </div>
-    <div id="th-timeline"></div>
-    <div class="th-foot">
-      <button type="button" class="act primary" id="th-play">Pause</button>
-      <button type="button" class="act" id="th-restart">Restart</button>
-      <div class="seg light" id="th-speed" role="group" aria-label="Speed"><button type="button" data-v="1" aria-pressed="true">1×</button><button type="button" data-v="2" aria-pressed="false">2×</button><button type="button" data-v="4" aria-pressed="false">4×</button></div>
-      <p class="small th-note" id="th-note"></p>
-    </div>
+    </section>
+
+    <section class="th-run" id="th-run" hidden>
+      <div class="th-main">
+        <div class="th-stage" id="th-stage"></div>
+        <div class="th-side">
+          <div class="th-month"><span>Month</span><b id="th-month">0</b><i class="th-mprog"><em id="th-mprog"></em></i></div>
+          <ul class="th-tally" id="th-tally"></ul>
+          <div class="th-stat"><span>Stock in US warehouses</span><b id="th-stock"></b><div class="gauge light"><i id="th-stock-g"></i></div></div>
+          <div class="th-stat"><span>New suppliers</span><b id="th-new"></b><div class="gauge light"><i id="th-new-g"></i></div></div>
+        </div>
+      </div>
+      <p class="th-status" id="th-status" aria-live="polite"></p>
+      <div id="th-timeline"></div>
+      <div class="th-foot">
+        <button type="button" class="act primary" id="th-play">Pause</button>
+        <button type="button" class="act" id="th-restart">Restart</button>
+        <div class="seg light" id="th-speed" role="group" aria-label="Speed"><button type="button" data-v="1" aria-pressed="true">1×</button><button type="button" data-v="2" aria-pressed="false">2×</button><button type="button" data-v="4" aria-pressed="false">4×</button></div>
+        <button type="button" class="act" id="th-change">Change the scenario</button>
+        <p class="small th-note" id="th-note"></p>
+      </div>
+    </section>
   </div>
 </div>
 

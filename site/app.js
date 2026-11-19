@@ -144,6 +144,90 @@
     }
   }
 
+  /* ---------------------------------------------------------------- landing preview + supply chain map */
+  const CTY = { VNM: "Vietnam", IND: "India", IDN: "Indonesia", MYS: "Malaysia", KOR: "South Korea", SGP: "Singapore", CHN: "China", THA: "Thailand", KHM: "Cambodia", MEX: "Mexico", ETH: "Ethiopia", TUR: "Türkiye", LAO: "Laos", USA: "United States", DEU: "Germany", JPN: "Japan", TWN: "Taiwan", PHL: "Philippines", CAN: "Canada" };
+  let MAP = null, LAND = null;
+  function mapTip(n) {
+    const e = n.e, G = SM.MAP_GROUPS.find((g) => g.id === n.g);
+    const link = n.linked ? `Sayari records a link to forced-labour risk: <b>${esc(G.label.toLowerCase())}</b> (${esc(G.sub)})`
+      : n.g === "aside" ? `Links set aside: ${esc((L3.product_notes || {})[e.technology] || "the product uses no polysilicon")}`
+      : n.g === "untraced" ? "Can’t be traced upstream: shipped through a freight forwarder" : "No link found in the Sayari data";
+    const act = e.detained_group ? `<br>Customs action on record: <b>${esc(e.detained_group)}</b> group${e.detained_cases && e.detained_cases.length ? ` (${esc(e.detained_cases.join(", "))})` : ""}` : n.linked ? "<br>No public customs detention on record" : "";
+    return `<b>${esc(e.name)}</b><br>${esc(CTY[e.country] || e.country)} · ${int(e.shipments)} shipments (${n.share < 0.1 ? "<0.1" : n.share.toFixed(1)}% of US supply)<br>${link}${e.confidence && n.linked ? `<br>Confidence: <b>${esc(e.confidence)}</b>` : ""}${act}<div class="t-src">Sayari trade records and risk factors${e.sayari_entity_id ? ` · entity ${esc(e.sayari_entity_id)}` : ""}. A link is a supply chain connection, not proof that a product contains forced labour.</div>`;
+  }
+  function countUp(el, to, fmt, dur = 1400) {
+    const t0 = performance.now(), reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const step = (t) => { const k = reduced ? 1 : Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3); el.innerHTML = fmt(to * e); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }
+  function initLanding() {
+    if (!L3ok || MAP) return;
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    MAP = SM.SupplyMap($("map-host"), D, { reduced, height: (w) => (w < 560 ? 270 : Math.round(Math.min(430, Math.max(320, w * 0.34)))) });
+    MAP.onHover(mapTip);
+    const sh = MAP.shares(CUR_T), aside = techShare("thin_film_cdte") + techShare("led_not_pv");
+    const big = (v, l) => `<b>${v}</b><span>${l}</span>`;
+    const P0 = (v) => Math.round(v) + "%";
+    const scenes = [
+      { t: 0, cap: "Every circle is a company that shipped solar cells or panels to the US in the last two years, sized by its shipments.",
+        go: () => { MAP.layout("cloud").state({ mode: "plain", reach: null }).scatter(); countUp($("cap-num"), L3.exporter_count, (v) => big(int(v), `exporters · ${int(L3.total_value)} shipments`)); } },
+      { t: 5500, cap: "US customs has publicly detained or refused solar shipments from the company groups behind the circles now lit up.",
+        go: () => { MAP.state({ mode: "detained" }); countUp($("cap-num"), sh.detained, (v) => big(P0(v), "of shipments: customs has acted")); } },
+      { t: 11000, cap: "The biggest circles are First Solar. Its thin-film panels use no polysilicon, so their links are set aside.",
+        go: () => { MAP.state({ mode: "aside" }); countUp($("cap-num"), aside, (v) => big(P0(v), "of shipments set aside")); } },
+      { t: 16000, cap: "Now follow every supply chain back. Orange circles have a link to forced-labour risk further up the chain.",
+        go: () => { MAP.layout("groups").state({ mode: "shadow", reach: CUR_T }); countUp($("cap-num"), sh.linked, (v) => big(P0(v), "of shipments linked"), 2600); } },
+      { t: 22500, cap: `Customs has acted on ${P0(sh.caught)}. The other ${P0(sh.unseen)} is linked, from companies with no public detention on record.`,
+        go: () => { countUp($("cap-num"), sh.unseen, (v) => `<b class="amber">${P0(v)}</b><span>the shadow market</span>`); } },
+      { t: 27500, final: true, cap: "Choose what the rule checks and watch what it catches. Hover over any circle for the company, its link and the source.",
+        go: () => showMapControls() },
+    ];
+    const DUR = 30000;
+    LAND = { el: 0, playing: false, last: 0, i: -1 };
+    const setScene = (i) => {
+      LAND.i = i; const sc = scenes[i];
+      $("cap-k").textContent = sc.final ? "Explore the map" : `${i + 1} / ${scenes.length - 1}`;
+      const c = $("cap-text"); c.classList.remove("in"); void c.offsetWidth; c.textContent = sc.cap; c.classList.add("in");
+      sc.go();
+    };
+    const tick = (now) => {
+      if (!LAND.playing) return;
+      LAND.el += now - LAND.last; LAND.last = now;
+      $("stage-prog").style.width = Math.min(100, (LAND.el / DUR) * 100) + "%";
+      while (LAND.i + 1 < scenes.length && LAND.el >= scenes[LAND.i + 1].t) setScene(LAND.i + 1);
+      if (LAND.el < DUR) requestAnimationFrame(tick); else { LAND.playing = false; $("stage-pause").textContent = "Play"; }
+    };
+    LAND.play = () => { if (LAND.el >= DUR) LAND.restart(); LAND.playing = true; LAND.last = performance.now(); $("stage-pause").textContent = "Pause"; requestAnimationFrame(tick); };
+    LAND.pause = () => { LAND.playing = false; $("stage-pause").textContent = "Play"; };
+    LAND.restart = () => { LAND.el = 0; LAND.i = -1; $("map-ctl").hidden = true; $("stage").classList.remove("done"); $("cap-num").innerHTML = ""; LAND.playing = true; LAND.last = performance.now(); $("stage-pause").textContent = "Pause"; requestAnimationFrame(tick); };
+    LAND.skip = () => { LAND.playing = false; LAND.el = DUR; $("stage-prog").style.width = "100%"; MAP.layout("groups"); setScene(scenes.length - 1); $("stage-pause").textContent = "Play"; };
+    $("stage-pause").addEventListener("click", () => (LAND.playing ? LAND.pause() : LAND.play()));
+    $("stage-replay").addEventListener("click", () => LAND.restart());
+    $("stage-skip").addEventListener("click", () => LAND.skip());
+    document.addEventListener("visibilitychange", () => { if (document.hidden && LAND.playing) LAND.pause(); });
+    if (reduced) LAND.skip(); else LAND.play();
+  }
+  function showMapControls() {
+    $("stage").classList.add("done");
+    const box = $("mc-reach");
+    if (!box.children.length) {
+      box.innerHTML = TH.map((t, i) => `<button type="button" data-r="${i}" aria-pressed="${i === CUR_T}">${esc(t.short)}</button>`).join("");
+      box.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => setMapReach(+b.dataset.r)));
+      $("mc-legend").innerHTML = `<span><i style="background:#8eaad6"></i>Caught by the rule</span><span><i style="background:#c8841a"></i>Linked, not caught</span><span><i style="background:rgba(243,245,249,0.16)"></i>No link found</span><span><i class="dash"></i>Set aside</span><span><i class="ring"></i>Customs action on record</span>`;
+    }
+    $("map-ctl").hidden = false;
+    setMapReach(CUR_T);
+  }
+  function setMapReach(j) {
+    MAP.layout("groups").state({ mode: "shadow", reach: j });
+    $("mc-reach").querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(+b.dataset.r === j)));
+    const s = MAP.shares(j);
+    $("mc-caught").textContent = Math.round(s.caught) + "%";
+    $("mc-unseen").textContent = Math.round(s.unseen) + "%";
+    $("cap-text").textContent = `${TH[j].label}: the rule catches ${Math.round(s.caught)}% of US solar shipments. Orange marks the ${Math.round(s.unseen)}% linked to forced-labour risk but not caught.`;
+    $("cap-num").innerHTML = `<b class="amber">${Math.round(s.unseen)}%</b><span>linked, not caught</span>`;
+  }
+
   /* ---------------------------------------------------------------- findings */
   function renderFindings() {
     if (!L3ok) { $("findings").style.display = "none"; return; }
@@ -542,13 +626,15 @@
         $("val-" + i.id).textContent = fmtVal(i.id, +el.value);
         $("rng-" + i.id).textContent = `varies ${fmtVal(i.id, d.lo)}–${fmtVal(i.id, d.hi)}`;
         $("sim-presets").querySelectorAll(".preset").forEach((b) => b.setAttribute("aria-pressed", "false"));
-        scheduleCompute();
+        schedulePreview();
       });
-      el.addEventListener("change", () => { const b = el.closest(".ctl").querySelector(".badge"); b.className = "badge ok"; b.textContent = "your setting"; b.dataset.title = "your setting"; b.dataset.body = sim.status[i.id].source; });
+      el.addEventListener("change", () => {
+        compute(); const b = el.closest(".ctl").querySelector(".badge"); b.className = "badge ok"; b.textContent = "your setting"; b.dataset.title = "your setting"; b.dataset.body = sim.status[i.id].source; });
     });
     $("sim-product").querySelectorAll("button").forEach((b) => b.addEventListener("click", () => { sim.product = b.dataset.v; sim.preset = null; setFlagged(); renderControls(); compute(); }));
     const x = $("in-X");
-    x.addEventListener("input", () => { sim.X = +x.value; x.style.setProperty("--p", ((+x.value - 5) / 45) * 100 + "%"); $("val-X").textContent = x.value + "%"; scheduleCompute(); });
+    x.addEventListener("input", () => { sim.X = +x.value; x.style.setProperty("--p", ((+x.value - 5) / 45) * 100 + "%"); $("val-X").textContent = x.value + "%"; schedulePreview(); });
+    x.addEventListener("change", () => compute());
     $("sim-copy").addEventListener("click", () => {
       const url = location.href.split("#")[0] + simHash();
       const done = () => { $("sim-copy").textContent = "Link copied"; setTimeout(() => ($("sim-copy").textContent = "Copy link to this scenario"), 1600); };
@@ -558,10 +644,14 @@
     bindDeclared($("sim-controls"));
   }
 
-  let simTimer = null;
-  function scheduleCompute() { clearTimeout(simTimer); simTimer = setTimeout(compute, 40); }
-  function compute() {
-    const cfg = simCfg(), res = SM.simulate(cfg), X = sim.X, j = sim.reach;
+  // Smooth sliders: while dragging, a 2,000-future preview runs once per frame (about 1 ms) and only the fast
+  // charts redraw; letting go runs the full 10,000 futures plus the sensitivity test.
+  let previewRaf = 0;
+  function schedulePreview() { if (!previewRaf) previewRaf = requestAnimationFrame(() => { previewRaf = 0; compute(true); }); }
+  function scheduleCompute() { compute(); }
+  function compute(quick) {
+    const cfg = simCfg(); if (quick) cfg.runs = 2000;
+    const res = SM.simulate(cfg), X = sim.X, j = sim.reach;
     const S = {};
     for (const k of ["flagged", "stopped", "keptOut", "lost"]) S[k] = SM.summarise(res[k][j], X);
     const sh = res.short[j], pos = [];
@@ -575,12 +665,17 @@
     const N = sh.length;
     S.cats = { serious: (serious / N) * 100, shortOnly: (shortOnly / N) * 100, absorbed: (absorbed / N) * 100, none: ((N - serious - shortOnly - absorbed) / N) * 100 };
     S.reach = TH.map((t, i) => SM.summarise(res.lost[i], X));
-    S.sens = S.flagged.p50 > 0.5 ? SM.sensitivity({ ...cfg, seed: SIM.seed + 1 }, j) : null;
+    S.sens = quick ? (sim.cur && sim.cur.j === j ? sim.cur.sens : null) : S.flagged.p50 > 0.5 ? SM.sensitivity({ ...cfg, seed: SIM.seed + 1 }, j) : null;
     S.lostArr = res.lost[j];
-    S.j = j; S.X = X; S.vals = { ...sim.vals }; S.preset = sim.preset;
-    if (sim.cur) sim.prev = sim.cur;
+    S.ratio = Float64Array.from(res.lost[j], (v, r) => (res.flagged[TH.length - 1][r] > 0 ? (v / res.flagged[TH.length - 1][r]) * 100 : 0));
+    S.keep = SM.quantile(S.ratio, 0.5);
+    S.j = j; S.X = X; S.vals = { ...sim.vals }; S.preset = sim.preset; S.product = sim.product; S.quick = !!quick;
+    // "your last setting" = the settings before this drag started
+    if (quick) { if (!sim.dragBase) sim.dragBase = sim.cur; sim.prev = sim.dragBase; }
+    else { sim.prev = sim.dragBase || sim.cur; sim.dragBase = null; }
     sim.cur = S;
-    renderSim();
+    renderSim(quick);
+    if (quick) return;
     try { if ((location.hash || "").startsWith("#simulation")) history.replaceState(null, "", simHash()); } catch (e) { /* file:// or sandbox */ }
   }
 
@@ -592,26 +687,26 @@
     const step = (t) => { const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3); el.innerHTML = fmt(from + (to - from) * e); if (k < 1) requestAnimationFrame(step); };
     requestAnimationFrame(step);
   }
-  function deltaHTML(cur, prev, unit = " pts") {
+  function deltaHTML(cur, prev, unit = " pts", vs = " vs your last setting") {
     if (prev == null) return "";
     const d = cur - prev;
     if (Math.abs(d) < 0.1) return "";
-    return `${d > 0 ? "▲ +" : "▼ −"}${f1(Math.abs(d))}${unit} vs your last setting`;
+    return `${d > 0 ? "▲ +" : "▼ −"}${f1(Math.abs(d))}${unit}${vs}`;
   }
 
   // Supply flow: tween from what is on screen to the new values, redrawing in place each frame.
   let flowShown = null, flowRaf = 0;
   function flowScale() { return Math.max(10, ...flaggedAt.map((x) => (typeof x === "number" ? x : x.hi || 0))) * 1.15; }
-  function animateFlow(to, range) {
+  function animateFlow(to, range, cmp) {
     const el = $("sim-flow"), scale = flowScale();
     cancelAnimationFrame(flowRaf);
     const from = flowShown && el._flow && el.querySelector("svg") ? flowShown : null;
-    if (!from || matchMedia("(prefers-reduced-motion: reduce)").matches) { flowShown = to; SM.flow(el, to, { scale, range }); return; }
+    if (!from || matchMedia("(prefers-reduced-motion: reduce)").matches) { flowShown = to; SM.flow(el, to, { scale, range, cmp }); return; }
     const t0 = performance.now(), dur = 520;
     const step = (t) => {
       const q = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - q, 3), cur = {};
       for (const k in to) cur[k] = from[k] + (to[k] - from[k]) * e;
-      flowShown = cur; SM.flow(el, cur, { scale, range });
+      flowShown = cur; SM.flow(el, cur, { scale, range, cmp });
       if (q < 1) flowRaf = requestAnimationFrame(step);
     };
     flowRaf = requestAnimationFrame(step);
@@ -637,8 +732,42 @@
   window.addEventListener("scroll", () => { if (!liveRaf) liveRaf = requestAnimationFrame(() => { liveRaf = 0; if (sim.cur) syncLive(); }); }, { passive: true });
   document.addEventListener("click", (e) => { if (e.target && e.target.id === "lv-up") $("sim-dash").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); });
 
-  function renderSim() {
-    const S = sim.cur, P = sim.prev, X = S.X, th = TH[S.j];
+  /* ---- compare: pin the current scenario as A, keep changing B ---- */
+  const scenLabel = (S) => { const pr = SIM.presets.find((p) => p.id === S.preset); return pr ? pr.label : "Your own scenario"; };
+  function diffList(a, b) {
+    const out = [];
+    if (a.j !== b.j) out.push(`How far back: ${TH[a.j].short} → ${TH[b.j].short}`);
+    SIM.inputs.forEach((i) => { if (Math.abs(a.vals[i.id] - b.vals[i.id]) > 1e-9) out.push(`${i.label}: ${fmtVal(i.id, a.vals[i.id])} → ${fmtVal(i.id, b.vals[i.id])}`); });
+    if (a.product !== b.product) out.push(`Thin-film links: ${a.product === "on" ? "set aside" : "counted"} → ${b.product === "on" ? "set aside" : "counted"}`);
+    if (a.X !== b.X) out.push(`Serious-disruption line: ${a.X}% → ${b.X}%`);
+    return out;
+  }
+  function renderCompare() {
+    const box = $("sim-compare"), A = sim.A, S = sim.cur, pin = $("act-pin");
+    pin.textContent = A ? "Stop comparing" : "Compare: pin this as A";
+    pin.classList.toggle("on", !!A);
+    if (!A) { box.hidden = true; return; }
+    box.hidden = false;
+    const chg = (a, b, pts) => { const d = b - a; return Math.abs(d) < (pts ? 0.5 : 0.1) ? `<span class="same">same</span>` : `<span class="${d > 0 ? "up" : "down"}">${d > 0 ? "▲ +" : "▼ −"}${pts ? Math.round(Math.abs(d)) : f1(Math.abs(d))} pts</span>`; };
+    const rows = [
+      ["Supply lost for good", f1(A.S.lost.p50) + "%", f1(S.lost.p50) + "%", chg(A.S.lost.p50, S.lost.p50)],
+      ["Chance of a serious disruption", Math.round(A.S.lost.pOver) + "%", Math.round(S.lost.pOver) + "%", chg(A.S.lost.pOver, S.lost.pOver, true)],
+      ["Chance of a shortage", Math.round(A.S.pShort) + "%", Math.round(S.pShort) + "%", chg(A.S.pShort, S.pShort, true)],
+      ["Linked supply kept out for good", Math.round(A.S.keep) + "%", Math.round(S.keep) + "%", chg(A.S.keep, S.keep, true)],
+    ];
+    const d = diffList(A.S, S);
+    box.innerHTML = `<div class="cmp-h"><span class="tag a">A</span><b>${esc(A.label)}</b><span class="vs">against</span><span class="tag b">B</span><b>Now: ${esc(scenLabel(S))}</b></div>
+      <table class="cmp-t"><thead><tr><th></th><th><span class="tag a">A</span></th><th><span class="tag b">B</span></th><th>Change</th></tr></thead><tbody>${rows.map((r) => `<tr><td>${r[0]}</td><td>${r[1]}</td><td><b>${r[2]}</b></td><td>${r[3]}</td></tr>`).join("")}</tbody></table>
+      <p class="cmp-d">${d.length ? `<b>What’s different:</b> ${d.map(esc).join(" · ")}` : "B is the same as A. Change any setting or pick a scenario to compare."}</p>`;
+  }
+  function pinToggle() {
+    if (sim.A) sim.A = null; else sim.A = { S: sim.cur, label: scenLabel(sim.cur) };
+    renderSim();
+  }
+
+  function renderSim(quick) {
+    const S = sim.cur, X = S.X, th = TH[S.j], A = sim.A;
+    const P = A ? A.S : sim.prev;
     const pr = SIM.presets.find((p) => p.id === S.preset);
     $("sim-head").innerHTML = `<b>${pr ? esc(pr.label) : "Your own scenario"}.</b> Customs blocks solar shipments ${esc(th.plain)}.`;
 
@@ -649,18 +778,20 @@
         <div class="metric" id="m-ser-box"><div class="lbl">Chance of a serious disruption</div><div class="num" id="m-ser"></div><div class="gauge" id="g-ser"><i></i></div><div class="sub" id="m-ser-s"></div><span class="delta" id="m-ser-d"></span></div>
         <div class="metric" id="m-sh-box"><div class="lbl">Chance of a shortage</div><div class="num" id="m-sh"></div><div class="gauge" id="g-sh"><i></i></div><div class="sub" id="m-sh-s"></div><span class="delta" id="m-sh-d"></span></div>`;
     }
-    tween($("m-lost"), S.lost.p50, (v) => f1(v) + "%");
+    const tw = quick ? (el, to, fmt) => { el.dataset.v = to; el.innerHTML = fmt(to); } : tween;
+    tw($("m-lost"), S.lost.p50, (v) => f1(v) + "%");
     $("m-lost-s").textContent = S.lost.p95 > 0.05 ? `9 in 10 futures: ${f1(S.lost.p5)}–${f1(S.lost.p95)}%` : "none in any future";
-    tween($("m-ser"), S.lost.pOver, (v) => Math.round(v) + "%");
+    tw($("m-ser"), S.lost.pOver, (v) => Math.round(v) + "%");
     $("m-ser-s").textContent = `futures where more than ${X}% of supply is lost`;
     $("m-ser-box").classList.toggle("bad", S.lost.pOver >= 50);
-    tween($("m-sh"), S.pShort, (v) => (v > 0 && v < 1 ? "<1" : Math.round(v)) + "%");
+    tw($("m-sh"), S.pShort, (v) => (v > 0 && v < 1 ? "<1" : Math.round(v)) + "%");
     $("m-sh-s").textContent = S.pShort > 0 ? `when stock runs out before new suppliers arrive, it lasts about ${f1(S.durMed)} months` : "stock covers the gap in every future";
     $("m-sh-box").classList.toggle("bad", S.pShort >= 50);
     const setD = (id, html) => { const n = $(id); n.textContent = html; n.classList.toggle("on", !!html); };
-    setD("m-lost-d", P ? deltaHTML(S.lost.p50, P.lost.p50) : "");
-    setD("m-ser-d", P ? deltaHTML(S.lost.pOver, P.lost.pOver) : "");
-    setD("m-sh-d", P ? deltaHTML(S.pShort, P.pShort) : "");
+    const vs = A ? " vs A" : " vs your last setting";
+    setD("m-lost-d", P ? deltaHTML(S.lost.p50, P.lost.p50, " pts", vs) : "");
+    setD("m-ser-d", P ? deltaHTML(S.lost.pOver, P.lost.pOver, " pts", vs) : "");
+    setD("m-sh-d", P ? deltaHTML(S.pShort, P.pShort, " pts", vs) : "");
     // gauges: loss on a 0..2×line scale with the serious-disruption line marked; chances on 0..100
     const gMax = Math.max(X * 2, SM.niceMax(S.lost.p95 * 1.1));
     const gl = $("g-lost"), gp = (v) => Math.max(0, Math.min(100, (v / gMax) * 100)) + "%";
@@ -672,9 +803,13 @@
     $("m-lost-box").classList.toggle("bad", S.lost.p50 > X);
     renderLive(S);
 
-    $("sim-analysis").innerHTML = analyse(S, P);
+    $("sim-analysis").innerHTML = analyse(S, A ? null : P);
+    renderCompare();
 
-    animateFlow({ F: S.flagged.p50, S: S.stopped.p50, K: S.keptOut.p50, L: S.lost.p50 }, S.lost.p95 > 0.05 ? `9 in 10 futures: ${f1(S.lost.p5)}–${f1(S.lost.p95)}%` : "none in any future");
+    const fv = { F: S.flagged.p50, S: S.stopped.p50, K: S.keptOut.p50, L: S.lost.p50 }, frange = S.lost.p95 > 0.05 ? `9 in 10 futures: ${f1(S.lost.p5)}–${f1(S.lost.p95)}%` : "none in any future";
+    const fcmp = A ? { F: A.S.flagged.p50, S: A.S.stopped.p50, K: A.S.keptOut.p50, L: A.S.lost.p50 } : null;
+    if (quick) { cancelAnimationFrame(flowRaf); flowShown = fv; SM.flow($("sim-flow"), fv, { scale: flowScale(), range: frange, cmp: fcmp }); }
+    else animateFlow(fv, frange, fcmp);
 
     const cats = [
       { id: "serious", label: `Serious disruption: more than ${X}% of supply lost`, color: COL.brick, share: S.cats.serious },
@@ -695,6 +830,8 @@
       onPick: (i) => { sim.reach = i; sim.preset = null; renderControls(); compute(); },
     });
 
+    $("sim-dist-note").innerHTML = A ? `<span class="mark-prev dash"></span> outline = scenario A` : `<span class="mark-prev dash"></span> your last setting`;
+    if (quick) return;
     if (S.sens) {
       SM.tornado($("sim-tornado"), S.sens.rows.map((r) => ({ ...r, label: INP[r.id].label })), S.sens.base, {
         tip: (r) => `<b>${esc(INP[r.id].label)}</b><br>At the low end (${fmtVal(r.id, r.p10)}): typical loss ${r.lo.toFixed(1)}%<br>At the high end (${fmtVal(r.id, r.p90)}): typical loss ${r.hi.toFixed(1)}%`,
@@ -792,7 +929,26 @@
     applyPreset("today");
     readSimHash();
     renderControls();
+    $("act-pin").addEventListener("click", pinToggle);
+    $("act-play").addEventListener("click", () => SM.playScenario && SM.playScenario(playData()));
+    const story = () => SM.startStory && SM.startStory();
+    $("act-story").addEventListener("click", story);
+    $("hero-story").addEventListener("click", story);
   }
+  function playData() {
+    const S = sim.cur;
+    return { label: scenLabel(S), reach: TH[S.j].label, plain: TH[S.j].plain, vals: { ...S.vals }, F: S.flagged.p50, S: S.stopped.p50, K: S.keptOut.p50, L: S.lost.p50, pShort: S.pShort, durMed: S.durMed };
+  }
+  // for story.js, goal.js and play.js
+  SM.simApi = {
+    SIM, TH, INP, CUR_T, fmtVal, L3ok, sim,
+    flaggedAt: () => flaggedAt, traced: () => (L3ok ? L3.traced_share : 100),
+    ensure: () => { if (!simInited) { initSim(); simInited = true; } if (!sim.cur) compute(); },
+    preset: (id) => { applyPreset(id); renderControls(); compute(); },
+    set: (o) => { if (o.preset) applyPreset(o.preset); if (o.reach != null) { sim.reach = o.reach; sim.preset = null; } if (o.vals) { Object.assign(sim.vals, o.vals); sim.preset = o.preset || null; } renderControls(); compute(); },
+    cur: () => sim.cur, pin: (on) => { if (!!sim.A !== !!on) pinToggle(); }, play: () => SM.playScenario && SM.playScenario(playData()),
+    hash: (o) => { const qs = new URLSearchParams(); qs.set("r", TH[o.reach].id); Object.entries(o.vals || {}).forEach(([k, v]) => qs.set(k, +(+v).toFixed(3))); return "#simulation?" + qs.toString(); },
+  };
   function runSim() { if (!sim.cur) compute(); else renderSim(); }
 
   /* ---------------------------------------------------------------- method */
@@ -886,7 +1042,7 @@
   let simInited = false;
   function route() {
     const v = (location.hash || "#explorer").slice(1).split("?")[0];
-    const view = ["explorer", "simulation", "proposed", "method"].includes(v) ? v : "explorer";
+    const view = ["explorer", "simulation", "goal", "proposed", "method"].includes(v) ? v : "explorer";
     document.querySelectorAll(".view").forEach((n) => n.classList.toggle("on", n.id === "view-" + view));
     document.querySelectorAll(".tabs a").forEach((a) => (a.dataset.view === view ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
     if (sim.cur) syncLive();
@@ -895,9 +1051,11 @@
       else if (readSimHash()) { renderControls(); compute(); return; }
       runSim();
     }
-    if (view === "explorer") { renderFlow(); renderCurves(); renderEnf(); }
+    if (view === "explorer") { renderFlow(); renderCurves(); renderEnf(); initLanding(); if (MAP) MAP.redraw(); }
+    if (view === "goal" && SM.renderGoal) SM.renderGoal();
+    if (SM.storyRoute) SM.storyRoute(view);
     if (view === "proposed" && SM.renderProposed) SM.renderProposed();
-    if (["simulation", "proposed", "method"].includes(v) || v === "explorer" || !v) window.scrollTo(0, 0);
+    if (["simulation", "goal", "proposed", "method"].includes(v) || v === "explorer" || !v) window.scrollTo(0, 0);
   }
 
   renderHero(); renderFindings(); renderLayers(); renderDials(); renderReadout(); renderEvidence(); renderCompanies(); renderMethod();
@@ -905,5 +1063,5 @@
   window.addEventListener("hashchange", route);
   route();
   let rT; window.addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => { document.querySelectorAll(".view.on svg").forEach((n) => n.remove()); // old widths would hold containers open
-    const v = (location.hash || "#explorer").slice(1).split("?")[0]; if (v === "simulation") runSim(); else if (v === "proposed") { if (SM.renderProposed) SM.renderProposed(true); } else { renderFlow(); renderCurves(); renderEnf(); } }, 150); });
+    const v = (location.hash || "#explorer").slice(1).split("?")[0]; if (v === "simulation") runSim(); else if (v === "goal") { if (SM.renderGoal) SM.renderGoal(true); } else if (v === "proposed") { if (SM.renderProposed) SM.renderProposed(true); } else { renderFlow(); renderCurves(); renderEnf(); } }, 150); });
 })();

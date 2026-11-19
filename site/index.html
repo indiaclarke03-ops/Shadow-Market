@@ -21,6 +21,7 @@
     <div class="tabs" role="tablist">
       <a href="#explorer" data-view="explorer">The gap</a>
       <a href="#simulation" data-view="simulation">What if?</a>
+      <a href="#goal" data-view="goal">What would it take?</a>
       <a href="#proposed" data-view="proposed">Proposed rule</a>
       <a href="#method" data-view="method">Method &amp; limits</a>
     </div>
@@ -31,22 +32,49 @@
 <!-- ============================================================ EXPLORER -->
 <main class="view" id="view-explorer">
 
-  <header class="hero">
+  <header class="hero home">
     <div class="wrap">
       <p class="kicker">US solar imports × the Uyghur Forced Labor Prevention Act</p>
       <h1 class="title-h1"><span>The Shadow Market</span><span class="soft sub">Covered on paper. Unchecked in practice.</span></h1>
+
+      <div class="stage" id="stage">
+        <div class="stage-cap" aria-live="polite">
+          <p class="cap-k" id="cap-k"></p>
+          <p class="cap" id="cap-text"></p>
+          <div class="cap-num" id="cap-num"></div>
+        </div>
+        <div class="map-host" id="map-host"></div>
+        <div class="stage-bar" id="stage-bar">
+          <div class="prog" aria-hidden="true"><i id="stage-prog"></i></div>
+          <button type="button" class="sbtn" id="stage-pause">Pause</button>
+          <button type="button" class="sbtn" id="stage-replay">Replay</button>
+          <button type="button" class="sbtn" id="stage-skip">Skip to the map</button>
+        </div>
+        <div class="map-ctl" id="map-ctl" hidden>
+          <div class="mc-row">
+            <span class="mc-k">What the rule checks</span>
+            <div class="mc-reach" id="mc-reach" role="group" aria-label="What the rule checks"></div>
+          </div>
+          <div class="mc-row mc-out">
+            <div class="mc-num"><b id="mc-caught"></b><span>caught by the rule</span></div>
+            <div class="mc-num shadow"><b id="mc-unseen"></b><span>linked, not caught: the shadow market</span></div>
+            <div class="legend dark" id="mc-legend"></div>
+          </div>
+        </div>
+      </div>
+
       <div class="hero-grid">
         <div>
-          <p class="lede" id="hero-lede">The US bans goods made with forced labour in Xinjiang, China. Check only the companies that ship solar cells and panels to America, roughly how the rule is applied today, and almost nothing is flagged. Follow the same supply chains back to the polysilicon and wafers, and most shipments connect to companies linked to forced labour.</p>
+          <p class="lede" id="hero-lede"></p>
           <p class="hero-check" id="hero-check"></p>
-          <p class="lede lede-2">This tool measures that gap, the <b>shadow market</b>: supply the law is meant to cover but doesn’t reach. It shows where the gap sits, why the rule stops where it does, and what would happen to US solar supply if the rule went further.</p>
         </div>
         <div class="hero-stats" id="hero-stats"></div>
       </div>
-      <ol class="steps">
+      <ol class="steps four">
         <li><a href="#layers"><span class="n">01</span><b>See the gap</b><span>The rule on paper, in practice, and with full visibility of the supply chain.</span></a></li>
-        <li><a href="#dials-section"><span class="n">02</span><b>Move the line</b><span>Change how far back the rule looks and which companies count. Watch the flagged share move.</span></a></li>
-        <li><a href="#simulation"><span class="n">03</span><b>Test the fallout</b><span>Simulate what tougher enforcement would do to America’s solar supply.</span></a></li>
+        <li><a href="#simulation"><span class="n">02</span><b>Test the fallout</b><span>Simulate what tougher enforcement would do to America’s solar supply.</span></a></li>
+        <li><a href="#goal"><span class="n">03</span><b>What would it take?</b><span>Set a goal and find the rules that reach it without a shortage.</span></a></li>
+        <li><a href="#proposed"><span class="n">04</span><b>Test a new rule</b><span>Run a reported rule on AI data-centre optics before it exists.</span></a></li>
       </ol>
       <p class="coverage" id="coverage"></p>
     </div>
@@ -153,6 +181,7 @@
       <p class="kicker">Simulation · 10,000 possible futures</p>
       <h1 class="sim-h1">What if customs <span class="soft">looked further?</span></h1>
       <p class="lede">How much solar supply would America lose if customs blocked shipments linked to forced labour further up the supply chain? Nobody knows the inputs exactly, so each scenario is played out 10,000 times with slightly different assumptions. Change a setting and the results update straight away.</p>
+      <p class="hero-acts"><button type="button" class="btn accent" id="hero-story">▶ Walk me through it <span>2 minutes</span></button></p>
       <ol class="chain row" aria-label="How the simulation works">
         <li><b>1</b><span>The rule <em>flags</em> suppliers with a link to forced-labour risk</span></li>
         <li><b>2</b><span>Customs <em>stops</em> some of their shipments</span></li>
@@ -173,7 +202,13 @@
         </aside>
         <div class="sim-results">
           <div class="sim-dash" id="sim-dash">
+            <div class="sim-actions">
+              <button type="button" class="act primary" id="act-play"><span aria-hidden="true">▶</span> Play it out</button>
+              <button type="button" class="act" id="act-pin">Compare: pin this as A</button>
+              <button type="button" class="act" id="act-story">Walk me through it</button>
+            </div>
             <div class="sim-head" id="sim-head"></div>
+            <div class="compare" id="sim-compare" hidden></div>
             <div class="readout instrument" id="sim-readout" aria-live="polite"></div>
             <div class="panel flow-panel">
               <div class="panel-title"><h4>Where the supply goes</h4><span class="small">typical future · share of all US solar supply</span></div>
@@ -190,7 +225,7 @@
               </div>
               <div class="panel">
                 <div class="panel-title"><h4>How bad could it get?</h4></div>
-                <p class="small panel-sub">How often each size of loss came up. <span class="mark-prev dash"></span> your last setting.</p>
+                <p class="small panel-sub">How often each size of loss came up. <span id="sim-dist-note"><span class="mark-prev dash"></span> your last setting</span>.</p>
                 <div id="sim-dist"></div>
               </div>
             </div>
@@ -224,6 +259,39 @@
       <button type="button" class="btn" id="lv-up">Results ↑</button>
     </div>
   </div>
+</main>
+
+<!-- ============================================================ WHAT WOULD IT TAKE -->
+<main class="view" id="view-goal">
+  <header class="hero sim-hero compact">
+    <div class="wrap">
+      <p class="kicker">Goal finder · works backwards from the outcome you want</p>
+      <h1 class="sim-h1">What would it take <span class="soft">to keep it out?</span></h1>
+      <p class="lede">Set a goal for how much forced-labour-linked solar supply to keep out of the US, and how much risk of a shortage you’ll accept. The tool tries every combination of the settings a government controls and keeps the ones that meet the goal. Everything it can’t control stays at our estimates.</p>
+    </div>
+  </header>
+  <section class="sim-body">
+    <div class="wrap">
+      <div class="sim-layout">
+        <aside class="controls sim-controls" id="goal-controls" aria-label="Goal settings"></aside>
+        <div class="sim-results">
+          <div class="goal-answer" id="goal-answer" aria-live="polite"></div>
+          <div class="goal-routes" id="goal-routes"></div>
+          <div class="panel">
+            <div class="panel-title"><h4>The trade-off</h4><span class="small" id="goal-map-sub"></span></div>
+            <div class="goal-map-tabs" id="goal-map-tabs" role="group" aria-label="Reach"></div>
+            <div id="goal-map"></div>
+            <div class="legend" id="goal-map-legend" style="margin-top:12px"></div>
+          </div>
+          <article class="analysis" id="goal-analysis"></article>
+          <details class="panel flat sim-details">
+            <summary><h4>How the search works</h4></summary>
+            <div id="goal-method"></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <!-- ============================================================ PROPOSED RULE (Case 2) -->
@@ -366,11 +434,52 @@
 <footer><div class="wrap"><span>The Shadow Market · India Clarke · Beyond the Brand · Draft v0.5</span><span id="foot-built"></span></div></footer>
 
 <div class="tip" id="tip" role="tooltip"></div>
+<div class="theatre" id="theatre" hidden role="dialog" aria-modal="true" aria-labelledby="th-title">
+  <div class="th-box">
+    <div class="th-head">
+      <div><p class="kicker" id="th-kick">Playing out the typical future</p><h3 id="th-title"></h3></div>
+      <button type="button" class="th-x" id="th-close" aria-label="Close">×</button>
+    </div>
+    <div class="th-main">
+      <div class="th-stage" id="th-stage"></div>
+      <div class="th-side">
+        <div class="th-month"><span>Month</span><b id="th-month">0</b></div>
+        <div class="th-stat"><span>Stock in US warehouses</span><b id="th-stock"></b><div class="gauge light"><i id="th-stock-g"></i></div></div>
+        <div class="th-stat"><span>New suppliers</span><b id="th-new"></b><div class="gauge light"><i id="th-new-g"></i></div></div>
+        <p class="th-status" id="th-status"></p>
+      </div>
+    </div>
+    <div id="th-timeline"></div>
+    <div class="th-foot">
+      <button type="button" class="act primary" id="th-play">Pause</button>
+      <button type="button" class="act" id="th-restart">Restart</button>
+      <div class="seg light" id="th-speed" role="group" aria-label="Speed"><button type="button" data-v="1" aria-pressed="true">1×</button><button type="button" data-v="2" aria-pressed="false">2×</button><button type="button" data-v="4" aria-pressed="false">4×</button></div>
+      <p class="small th-note" id="th-note"></p>
+    </div>
+  </div>
+</div>
+
+<div class="story" id="story" hidden role="dialog" aria-labelledby="story-title">
+  <p class="story-k" id="story-k"></p>
+  <h4 id="story-title"></h4>
+  <p id="story-body"></p>
+  <div class="story-foot">
+    <div class="story-dots" id="story-dots" aria-hidden="true"></div>
+    <button type="button" class="act" id="story-back">Back</button>
+    <button type="button" class="act primary" id="story-next">Next</button>
+    <button type="button" class="story-x" id="story-x" aria-label="Exit the walkthrough">×</button>
+  </div>
+</div>
+
 <script src="data.js"></script>
 <script src="charts.js"></script>
 <script src="sim.js"></script>
+<script src="map.js"></script>
+<script src="play.js"></script>
 <script src="data_proposed.js"></script>
 <script src="proposed.js"></script>
 <script src="app.js"></script>
+<script src="goal.js"></script>
+<script src="story.js"></script>
 </body>
 </html>

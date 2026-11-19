@@ -267,7 +267,7 @@
       el.base = SM.svg("line", { x1: dx / 2 - nw, x2: w - dx / 2 + nw, y1: yb + 1, y2: yb + 1, stroke: "rgba(15,27,51,0.25)" }, s);
       const row = SM.h("div", { class: "flow-cells" });
       const names = [["All US solar supply", "All supply"], ["Flagged by the rule", "Flagged"], ["Stopped at the border", "Stopped"], ["Kept out after review", "Kept out"], ["Lost for good", "Lost"]];
-      row.innerHTML = names.map((nm, i) => `<div class="fc${i === 4 ? " last" : ""}"><span class="nm"><span class="long">${nm[0]}</span><span class="short">${nm[1]}</span></span><b class="v" data-i="${i}"></b><span class="lk" data-i="${i}"></span></div>`).join("");
+      row.innerHTML = names.map((nm, i) => `<div class="fc${i === 4 ? " last" : ""}"><span class="nm"><span class="long">${nm[0]}</span><span class="short">${nm[1]}</span></span><b class="v" data-i="${i}"></b><span class="ca"></span><span class="lk" data-i="${i}"></span></div>`).join("");
       container.appendChild(row);
       st = container._flow = { w, el, s, row };
     }
@@ -297,6 +297,8 @@
     const leaks = [`${f(100 - v.F)} not flagged`, `${f(v.F - v.S)} not stopped`, `${f(v.S - v.K)} released`, `${f(v.K - v.L)} got back in`, opts.range || ""];
     st.row.querySelectorAll(".v").forEach((b, i) => (b.textContent = f(vals[i])));
     st.row.querySelectorAll(".lk").forEach((b, i) => (b.innerHTML = i < 4 ? `<i>−</i>${leaks[i]}` : leaks[i]));
+    const cv = opts.cmp ? [null, opts.cmp.F, opts.cmp.S, opts.cmp.K, opts.cmp.L] : null;
+    st.row.querySelectorAll(".ca").forEach((b, i) => { b.innerHTML = cv && cv[i] != null ? `<span class="tag a">A</span> ${f(cv[i])}` : ""; });
     st.s.setAttribute("aria-label", `Where the supply goes, typical future: flagged ${f(v.F)} of US supply, stopped ${f(v.S)}, kept out ${f(v.K)}, lost for good ${f(v.L)}`);
     return st.s;
   };

@@ -59,3 +59,22 @@ Judgement calls made while building from `specification.md`. Spec §12 decisions
     - **Charts.** The tornado and the trigger chart use the typical **peak blocked share after shifting**, not the shortfall, because the shortfall is often zero and would hide which levers matter. The readout shows the shortfall.
     - **"No new rule".** Implemented as a `none` option on the trigger lever.
 35. **Shared code.** `sim.js` now exposes `SM.rng`, `SM.triInv`, `SM.normal` and `SM.phi`; Case 1 output is byte-identical for the same seed (checked). On resize, the visible view's SVGs are cleared before redrawing. Previously, old desktop-width charts held containers open, which caused horizontal scroll on narrow screens on both simulation pages.
+
+## 2026-11-19 · Presentation layer: landing preview, supply chain map, playback, compare, story, goal finder
+36. **Supply chain map (landing preview and network view).** One circle per exporter, area proportional to US shipments (Sayari). Each exporter's group is computed in the browser with the same rule as `pipeline/build.py` `flagged_under()`. The shares were checked against `combos` and match exactly at every reach (0, 11.04, 22.27, 25.33, 25.47, 40.05%).
+    - **Groups.** Exporters are placed by the first reach step that flags them.
+    - **Merges for legibility.** The "shared owner" step (0.1% of shipments) is drawn in the "up to 4 steps back" column, and the empty "on the blacklist" column is hidden. Lighting by reach still uses each exporter's own flags, so the "+ owners" button stays exact.
+    - **Why not supplier-to-supplier links.** The data holds hub-level upstream roll-ups (`tiers.json`), not per-exporter supplier links, so the map does not draw them. Drawing them would invent connections.
+    - **Tooltips.** Each company is named with its link level, confidence, customs action on record and Sayari source, plus the note that a link is not proof of forced labour.
+    - **Autoplay.** The 30-second autoplay reads every number from the data. It pauses when the tab is hidden and skips to the end under reduced motion.
+37. **"Play it out" uses the simulator's own simplification.** The playback shows the typical future: the median flagged, stopped, kept-out and lost shares, with the slider values as inputs.
+    - **The gap.** It is everything stopped while reviews run, then the supply lost for good, until new suppliers reach full volume at ramp + lost ÷ capacity. This is the same assumption `sim.js` makes, so the playback never shows a softer picture than the headline numbers.
+    - **Visual only.** The new-supplier "scaling up" bar between qualification and full volume is visual. Stock is not credited until full volume.
+    - **Where it differs from `sim.js`.** The playback adds the hold-up and the permanent loss into one stock line, where `sim.js` takes the longer of the two. That can make the playback slightly more severe, and the on-page note says the headline numbers come from the full simulation.
+38. **Goal finder definitions.**
+    - **"Kept out".** The supply lost to the US for good, as a share of all linked supply (every link the data can see, plus the untraced estimate). It is computed per simulated future and the median is taken.
+    - **Levers searched.** Reach (6 levels), share stopped (30–100%), share released (0–90%), stock (4–10 months) and new-supplier capacity (1.5–4.5% a month), with today's value always included. The uncontrolled inputs keep their uncertainty ranges.
+    - **Runs.** 3,000 futures per combination, with common random numbers.
+    - **"Smallest change".** Ranks combinations by the sum of each lever's move from today, scaled by its range.
+    - **Default goal.** Keep out 30%, with no more than a 10% chance of a shortage and no more than a 10% chance of a serious disruption. A 50% goal is unreachable by construction: linked supply is about 44% of all supply, so keeping out half of it loses about 22%, past the 20% serious-disruption line. The page says so in its analysis.
+39. **Smooth sliders.** While a slider is dragged, a 2,000-future preview runs once per frame (about 1 ms) and only the fast charts redraw. Letting go runs the full 10,000 futures and the sensitivity test. A Web Worker was not needed: with this split, a measured drag adds no dropped frames. Compare mode pins a scenario as A. While A is pinned, the deltas and the distribution outline refer to A instead of the last setting.

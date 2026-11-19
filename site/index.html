@@ -148,49 +148,54 @@
 
 <!-- ============================================================ SIMULATION -->
 <main class="view" id="view-simulation">
-  <header class="hero sim-hero">
+  <header class="hero sim-hero compact">
     <div class="wrap">
       <p class="kicker">Simulation · 10,000 possible futures</p>
-      <h1 class="sim-h1">What if customs<br><span class="soft">looked further?</span></h1>
-      <div class="hero-grid">
-        <p class="lede">Suppose US customs started blocking solar shipments whose supply chains link to forced labour further upstream. How much solar supply would America lose, and would there be a shortage? Nobody knows the inputs exactly, so the simulation plays the scenario out 10,000 times, each with slightly different assumptions, and shows the range of what could happen.</p>
-        <ol class="chain" aria-label="How the simulation works">
-          <li><b>1</b><span>The rule <em>flags</em> suppliers with a link to forced-labour risk</span></li>
-          <li><b>2</b><span>Customs <em>stops</em> some of their shipments</span></li>
-          <li><b>3</b><span>Some are <em>released</em> once importers show paperwork</span></li>
-          <li><b>4</b><span>Some blocked supply <em>gets back in</em> another way</span></li>
-          <li class="eq"><b>=</b><span>Supply <em>lost</em>. Can stock and new suppliers cover it?</span></li>
-        </ol>
-      </div>
+      <h1 class="sim-h1">What if customs <span class="soft">looked further?</span></h1>
+      <p class="lede">How much solar supply would America lose if customs blocked shipments linked to forced labour further up the supply chain? Nobody knows the inputs exactly, so each scenario is played out 10,000 times with slightly different assumptions. Change a setting and the results update straight away.</p>
+      <ol class="chain row" aria-label="How the simulation works">
+        <li><b>1</b><span>The rule <em>flags</em> suppliers with a link to forced-labour risk</span></li>
+        <li><b>2</b><span>Customs <em>stops</em> some of their shipments</span></li>
+        <li><b>3</b><span>Some are <em>released</em> once importers show paperwork</span></li>
+        <li><b>4</b><span>Some blocked supply <em>gets back in</em> another way</span></li>
+        <li class="eq"><b>=</b><span>Supply <em>lost</em>. Can stock and new suppliers cover it?</span></li>
+      </ol>
     </div>
   </header>
 
   <section class="sim-body">
     <div class="wrap">
-      <div class="presets" id="sim-presets" role="group" aria-label="Scenarios"></div>
       <div class="sim-layout">
-        <aside class="controls sim-controls" id="sim-controls" aria-label="Scenario settings"></aside>
+        <aside class="controls sim-controls" aria-label="Scenario settings">
+          <p class="kicker ctl-kick">Start from a scenario</p>
+          <div class="presets" id="sim-presets" role="group" aria-label="Scenarios"></div>
+          <div id="sim-controls"></div>
+        </aside>
         <div class="sim-results">
-          <div class="sim-head" id="sim-head"></div>
-          <div class="readout light" id="sim-readout" aria-live="polite"></div>
+          <div class="sim-dash" id="sim-dash">
+            <div class="sim-head" id="sim-head"></div>
+            <div class="readout instrument" id="sim-readout" aria-live="polite"></div>
+            <div class="panel flow-panel">
+              <div class="panel-title"><h4>Where the supply goes</h4><span class="small">typical future · share of all US solar supply</span></div>
+              <div id="sim-flow"></div>
+            </div>
+            <div class="sim-grid">
+              <div class="panel">
+                <div class="panel-title"><h4>100 possible futures</h4></div>
+                <div class="futures-wrap">
+                  <div id="sim-futures"></div>
+                  <div class="legend col" id="sim-futures-legend"></div>
+                </div>
+                <p class="small panel-sub" style="margin:10px 0 0">Each square stands for 100 of the 10,000 simulated futures.</p>
+              </div>
+              <div class="panel">
+                <div class="panel-title"><h4>How bad could it get?</h4></div>
+                <p class="small panel-sub">How often each size of loss came up. <span class="mark-prev dash"></span> your last setting.</p>
+                <div id="sim-dist"></div>
+              </div>
+            </div>
+          </div>
           <article class="analysis" id="sim-analysis" aria-live="polite"></article>
-          <div class="panel">
-            <div class="panel-title"><h4>Where the supply goes</h4><span class="small">typical future · bar = 9 in 10 futures · <span class="mark-prev"></span> your last setting</span></div>
-            <div id="sim-funnel"></div>
-          </div>
-          <div class="sim-grid">
-            <div class="panel">
-              <div class="panel-title"><h4>100 possible futures</h4></div>
-              <p class="small panel-sub">Each square stands for 100 of the 10,000 simulated futures.</p>
-              <div id="sim-futures"></div>
-              <div class="legend" id="sim-futures-legend" style="margin-top:14px"></div>
-            </div>
-            <div class="panel">
-              <div class="panel-title"><h4>How bad could it get?</h4></div>
-              <p class="small panel-sub">How often each size of loss came up. <span class="mark-prev dash"></span> outline = your last setting.</p>
-              <div id="sim-dist"></div>
-            </div>
-          </div>
           <div class="panel">
             <div class="panel-title"><h4>The same scenario at every reach</h4><span class="small">typical loss · line = 9 in 10 futures · click a bar to switch</span></div>
             <div id="sim-reach"></div>
@@ -210,6 +215,15 @@
       </details>
     </div>
   </section>
+  <div class="sim-live" id="sim-live" aria-hidden="true">
+    <div class="wrap">
+      <div class="lv"><span class="k">Lost for good</span><b id="lv-lost"></b></div>
+      <div class="lv"><span class="k">Serious disruption</span><b id="lv-ser"></b></div>
+      <div class="lv"><span class="k">Shortage</span><b id="lv-sh"></b></div>
+      <p class="lv-take" id="lv-take"></p>
+      <button type="button" class="btn" id="lv-up">Results ↑</button>
+    </div>
+  </div>
 </main>
 
 <!-- ============================================================ PROPOSED RULE (Case 2) -->

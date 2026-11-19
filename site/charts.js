@@ -239,6 +239,68 @@
     return s;
   };
 
+  /* ---------- simulation: supply flow (all supply -> flagged -> stopped -> kept out -> lost) ----------
+     A zoom column for all US supply, then a stream that drains at each step. Built once, then updated in place
+     so the app can animate it frame by frame. v = {F, S, K, L} in % of US supply; scale = % that fills the height. */
+  SM.flow = function (container, v, opts = {}) {
+    const w = Math.max(280, container.clientWidth || 600), narrow = w < 560;
+    const H = narrow ? 130 : 168, n = 5, dx = w / n, nw = narrow ? 8 : 12, yb = H - 2, top = 6;
+    let st = container._flow;
+    if (!st || st.w !== w || !container.querySelector("svg")) {
+      container.innerHTML = "";
+      const s = SM.svg("svg", { width: w, height: H, viewBox: `0 0 ${w} ${H}`, class: "flow-svg", role: "img" }, container);
+      const defs = SM.svg("defs", {}, s);
+      const grad = (id, a, b, oa = 1, ob = 1) => {
+        const g = SM.svg("linearGradient", { id, x1: 0, x2: 1, y1: 0, y2: 0 }, defs);
+        SM.svg("stop", { offset: 0, "stop-color": a, "stop-opacity": oa }, g);
+        SM.svg("stop", { offset: 1, "stop-color": b, "stop-opacity": ob }, g);
+      };
+      const C = SM.COL, cols = [C.accent, C.E3, C.E2, C.E1, C.brick];
+      for (let i = 0; i < 4; i++) grad(`fl-s${i}`, cols[i], cols[i + 1]);
+      for (let i = 0; i < 4; i++) grad(`fl-l${i}`, cols[i], cols[i], 0.42, 0);
+      const el = { leaks: [], streams: [], nodes: [] };
+      el.all = SM.svg("rect", { x: dx / 2 - nw / 2, width: nw, fill: "#d3dff2" }, s);
+      el.slice = SM.svg("rect", { x: dx / 2 - nw / 2, width: nw, fill: C.accent }, s);
+      for (let i = 0; i < 4; i++) el.leaks.push(SM.svg("path", { fill: `url(#fl-l${i})` }, s));
+      for (let i = 0; i < 4; i++) el.streams.push(SM.svg("path", { fill: `url(#fl-s${i})` }, s));
+      for (let i = 1; i < 5; i++) el.nodes.push(SM.svg("rect", { x: dx * (i + 0.5) - nw / 2, width: nw, fill: cols[i] }, s));
+      el.base = SM.svg("line", { x1: dx / 2 - nw, x2: w - dx / 2 + nw, y1: yb + 1, y2: yb + 1, stroke: "rgba(15,27,51,0.25)" }, s);
+      const row = SM.h("div", { class: "flow-cells" });
+      const names = [["All US solar supply", "All supply"], ["Flagged by the rule", "Flagged"], ["Stopped at the border", "Stopped"], ["Kept out after review", "Kept out"], ["Lost for good", "Lost"]];
+      row.innerHTML = names.map((nm, i) => `<div class="fc${i === 4 ? " last" : ""}"><span class="nm"><span class="long">${nm[0]}</span><span class="short">${nm[1]}</span></span><b class="v" data-i="${i}"></b><span class="lk" data-i="${i}"></span></div>`).join("");
+      container.appendChild(row);
+      st = container._flow = { w, el, s, row };
+    }
+    const { el } = st;
+    const scale = Math.max(opts.scale || 50, v.F, 1);
+    const k = (H - top - 16) / scale, h0 = H - top - 4;
+    const hF = v.F * k, hs = [hF, v.S * k, v.K * k, v.L * k];
+    const cx = (i) => dx * (i + 0.5);
+    const rib = (x0, t0, b0, x1, t1, b1) => { const xm = (x0 + x1) / 2; return `M${x0},${t0}C${xm},${t0} ${xm},${t1} ${x1},${t1}L${x1},${b1}C${xm},${b1} ${xm},${b0} ${x0},${b0}Z`; };
+    el.all.setAttribute("y", yb - h0); el.all.setAttribute("height", h0);
+    const sl = Math.max(v.F > 0 ? 1 : 0, (v.F / 100) * h0);
+    el.slice.setAttribute("y", yb - sl); el.slice.setAttribute("height", sl);
+    // zoom: slice of all supply -> flagged node
+    el.streams[0].setAttribute("d", rib(cx(0) + nw / 2, yb - sl, yb, cx(1) - nw / 2, yb - hF, yb));
+    el.leaks[0].setAttribute("d", "");
+    for (let i = 1; i < 4; i++) {
+      const a = hs[i - 1], b = hs[i];
+      el.streams[i].setAttribute("d", rib(cx(i) + nw / 2, yb - b, yb, cx(i + 1) - nw / 2, yb - b, yb));
+      const th = Math.max(0, a - b), x0 = cx(i) + nw / 2, x1 = cx(i) + dx * 0.72;
+      const t1 = Math.max(top, yb - a - 34 - th * 0.6), b1 = t1 + th * 0.8;
+      el.leaks[i].setAttribute("d", th > 0.2 ? rib(x0, yb - a, yb - b, x1, t1, Math.max(t1 + 1, b1)) : "");
+    }
+    hs.forEach((h, i) => { el.nodes[i].setAttribute("y", yb - Math.max(h, v[["F", "S", "K", "L"][i]] > 0 ? 1.5 : 0)); el.nodes[i].setAttribute("height", Math.max(h, v[["F", "S", "K", "L"][i]] > 0 ? 1.5 : 0)); });
+    // numbers
+    const f = (x) => (x > 0 && x < 10 ? x.toFixed(1) : Math.round(x)) + "%";
+    const vals = [100, v.F, v.S, v.K, v.L];
+    const leaks = [`${f(100 - v.F)} not flagged`, `${f(v.F - v.S)} not stopped`, `${f(v.S - v.K)} released`, `${f(v.K - v.L)} got back in`, opts.range || ""];
+    st.row.querySelectorAll(".v").forEach((b, i) => (b.textContent = f(vals[i])));
+    st.row.querySelectorAll(".lk").forEach((b, i) => (b.innerHTML = i < 4 ? `<i>−</i>${leaks[i]}` : leaks[i]));
+    st.s.setAttribute("aria-label", `Where the supply goes, typical future: flagged ${f(v.F)} of US supply, stopped ${f(v.S)}, kept out ${f(v.K)}, lost for good ${f(v.L)}`);
+    return st.s;
+  };
+
   /* ---------- simulation: 100 futures (HTML grid so colours animate) ---------- */
   SM.futures = function (container, cats) {
     let grid = container.querySelector(".futures");
@@ -248,7 +310,11 @@
     let left = 100 - fl.reduce((a, b) => a + b, 0);
     raw.map((v, i) => [v - fl[i], i]).sort((a, b) => b[0] - a[0]).forEach(([, i]) => { if (left > 0) { fl[i]++; left--; } });
     const cells = grid.children; let k = 0;
-    cats.forEach((c, i) => { for (let n = 0; n < fl[i]; n++, k++) { cells[k].style.background = c.color; cells[k].className = c.id; cells[k].title = c.label; } });
+    cats.forEach((c, i) => { for (let n = 0; n < fl[i]; n++, k++) {
+      const cell = cells[k], changed = cell.dataset.c && cell.dataset.c !== c.id;
+      cell.style.background = c.color; cell.className = c.id; cell.title = c.label; cell.dataset.c = c.id;
+      if (changed) { cell.style.animationDelay = (k * 4) + "ms"; void cell.offsetWidth; cell.classList.add("pop"); }
+    } });
     grid.setAttribute("aria-label", cats.map((c, i) => `${fl[i]} in 100 futures: ${c.label}`).join("; "));
     return fl;
   };

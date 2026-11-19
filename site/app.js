@@ -504,7 +504,7 @@
   }
 
   function renderPresets() {
-    $("sim-presets").innerHTML = SIM.presets.map((p, i) => `<button type="button" class="preset" data-p="${p.id}" aria-pressed="${sim.preset === p.id}"><span class="k">Scenario ${i + 1}</span><b>${esc(p.label)}</b><span>${esc(p.blurb)}</span></button>`).join("");
+    $("sim-presets").innerHTML = SIM.presets.map((p, i) => `<button type="button" class="preset" data-p="${p.id}" aria-pressed="${sim.preset === p.id}"><span class="k">${i + 1}</span><b>${esc(p.label)}</b><span>${esc(p.blurb)}</span></button>`).join("");
     $("sim-presets").querySelectorAll(".preset").forEach((b) => b.addEventListener("click", () => { applyPreset(b.dataset.p); renderControls(); compute(); }));
   }
   function sliderHTML(id) {
@@ -512,7 +512,7 @@
     return `<div class="ctl" data-ctl="${id}">
       <label for="in-${id}">${esc(i.label)}</label>
       <div class="q">${esc(i.question)}</div>
-      <div class="row"><input type="range" id="in-${id}" min="${i.min}" max="${i.max}" step="${i.step}" value="${v}"><span class="val" id="val-${id}">${fmtVal(id, v)}</span></div>
+      <div class="row"><input type="range" id="in-${id}" min="${i.min}" max="${i.max}" step="${i.step}" value="${v}" style="--p:${((v - i.min) / (i.max - i.min)) * 100}%"><span class="val" id="val-${id}">${fmtVal(id, v)}</span></div>
       <div class="meta"><span id="rng-${id}">varies ${fmtVal(id, d.lo)}–${fmtVal(id, d.hi)}</span><span class="badge ${st.status === "placeholder" ? "pend" : "ok"}" data-src="${esc((INP[id].source_ids || []).join(";"))}" data-title="${esc(STATUS_LABEL[st.status] || st.status)}" data-body="${esc(st.source)}">${esc(STATUS_LABEL[st.status] || st.status)}</span></div>
     </div>`;
   }
@@ -529,13 +529,14 @@
         <div class="ctl"><label>Count thin-film panels’ links?</label><div class="q">First Solar’s panels use no polysilicon. By default their Sayari links are set aside.</div>
         <div class="seg" id="sim-product" role="group" aria-label="Product check"><button type="button" data-v="on" aria-pressed="${sim.product === "on"}">Set aside</button><button type="button" data-v="off" aria-pressed="${sim.product === "off"}">Count them</button></div></div>
         <div class="ctl"><label for="in-X">What counts as a serious disruption?</label><div class="q">Losing more than this share of US solar supply.</div>
-        <div class="row"><input type="range" id="in-X" min="5" max="50" step="1" value="${sim.X}"><span class="val" id="val-X">${sim.X}%</span></div></div></div>
+        <div class="row"><input type="range" id="in-X" min="5" max="50" step="1" value="${sim.X}" style="--p:${((sim.X - 5) / 45) * 100}%"><span class="val" id="val-X">${sim.X}%</span></div></div></div>
       <div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" class="btn" id="sim-reset" style="color:var(--on-dark)">Reset to defaults</button><button type="button" class="btn" id="sim-copy" style="color:var(--on-dark)">Copy link to this scenario</button></div>`;
     $("sim-controls").querySelectorAll(".reach-list button").forEach((b) => b.addEventListener("click", () => { sim.reach = +b.dataset.r; sim.preset = null; renderControls(); compute(); }));
     SIM.inputs.forEach((i) => {
       const el = $("in-" + i.id);
       el.addEventListener("input", () => {
         sim.vals[i.id] = +el.value; sim.preset = null;
+        el.style.setProperty("--p", ((+el.value - i.min) / (i.max - i.min)) * 100 + "%");
         sim.status[i.id] = { status: "user", source: `You changed this. Default: ${fmtVal(i.id, sim.base[i.id])}. ${i.source}` };
         const d = SM.distOf(i, +el.value);
         $("val-" + i.id).textContent = fmtVal(i.id, +el.value);
@@ -547,7 +548,7 @@
     });
     $("sim-product").querySelectorAll("button").forEach((b) => b.addEventListener("click", () => { sim.product = b.dataset.v; sim.preset = null; setFlagged(); renderControls(); compute(); }));
     const x = $("in-X");
-    x.addEventListener("input", () => { sim.X = +x.value; $("val-X").textContent = x.value + "%"; scheduleCompute(); });
+    x.addEventListener("input", () => { sim.X = +x.value; x.style.setProperty("--p", ((+x.value - 5) / 45) * 100 + "%"); $("val-X").textContent = x.value + "%"; scheduleCompute(); });
     $("sim-copy").addEventListener("click", () => {
       const url = location.href.split("#")[0] + simHash();
       const done = () => { $("sim-copy").textContent = "Link copied"; setTimeout(() => ($("sim-copy").textContent = "Copy link to this scenario"), 1600); };
@@ -598,6 +599,44 @@
     return `${d > 0 ? "▲ +" : "▼ −"}${f1(Math.abs(d))}${unit} vs your last setting`;
   }
 
+  // Supply flow: tween from what is on screen to the new values, redrawing in place each frame.
+  let flowShown = null, flowRaf = 0;
+  function flowScale() { return Math.max(10, ...flaggedAt.map((x) => (typeof x === "number" ? x : x.hi || 0))) * 1.15; }
+  function animateFlow(to, range) {
+    const el = $("sim-flow"), scale = flowScale();
+    cancelAnimationFrame(flowRaf);
+    const from = flowShown && el._flow && el.querySelector("svg") ? flowShown : null;
+    if (!from || matchMedia("(prefers-reduced-motion: reduce)").matches) { flowShown = to; SM.flow(el, to, { scale, range }); return; }
+    const t0 = performance.now(), dur = 520;
+    const step = (t) => {
+      const q = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - q, 3), cur = {};
+      for (const k in to) cur[k] = from[k] + (to[k] - from[k]) * e;
+      flowShown = cur; SM.flow(el, cur, { scale, range });
+      if (q < 1) flowRaf = requestAnimationFrame(step);
+    };
+    flowRaf = requestAnimationFrame(step);
+  }
+
+  // Live bar: the three headline numbers, pinned to the bottom of the screen whenever the dashboard is out of view.
+  function renderLive(S) {
+    $("lv-lost").textContent = f1(S.lost.p50) + "%";
+    $("lv-ser").textContent = Math.round(S.lost.pOver) + "%";
+    $("lv-sh").textContent = (S.pShort > 0 && S.pShort < 1 ? "<1" : Math.round(S.pShort)) + "%";
+    $("lv-ser").classList.toggle("bad", S.lost.pOver >= 50);
+    $("lv-sh").classList.toggle("bad", S.pShort >= 50);
+    const pr = SIM.presets.find((p) => p.id === S.preset);
+    $("lv-take").textContent = `${pr ? pr.label : "Your own scenario"} · ${TH[S.j].label}`;
+    syncLive();
+  }
+  function syncLive() {
+    const bar = $("sim-live"), r = $("sim-readout").getBoundingClientRect();
+    const on = $("view-simulation").classList.contains("on") && (r.bottom < 70 || r.top > innerHeight - 40);
+    bar.classList.toggle("on", on); bar.setAttribute("aria-hidden", on ? "false" : "true");
+  }
+  let liveRaf = 0;
+  window.addEventListener("scroll", () => { if (!liveRaf) liveRaf = requestAnimationFrame(() => { liveRaf = 0; if (sim.cur) syncLive(); }); }, { passive: true });
+  document.addEventListener("click", (e) => { if (e.target && e.target.id === "lv-up") $("sim-dash").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); });
+
   function renderSim() {
     const S = sim.cur, P = sim.prev, X = S.X, th = TH[S.j];
     const pr = SIM.presets.find((p) => p.id === S.preset);
@@ -606,9 +645,9 @@
     // headline numbers
     if (!$("m-lost")) {
       $("sim-readout").innerHTML = `
-        <div class="metric"><div class="lbl">US solar supply lost for good, in a typical future</div><div class="num" id="m-lost"></div><div class="sub" id="m-lost-s"></div><span class="delta" id="m-lost-d"></span></div>
-        <div class="metric" id="m-ser-box"><div class="lbl">Chance of a serious disruption</div><div class="num" id="m-ser"></div><div class="sub" id="m-ser-s"></div><span class="delta" id="m-ser-d"></span></div>
-        <div class="metric" id="m-sh-box"><div class="lbl">Chance of a shortage</div><div class="num" id="m-sh"></div><div class="sub" id="m-sh-s"></div><span class="delta" id="m-sh-d"></span></div>`;
+        <div class="metric key" id="m-lost-box"><div class="lbl">US solar supply lost for good, in a typical future</div><div class="num" id="m-lost"></div><div class="gauge" id="g-lost"><span class="rng"></span><i></i><em></em></div><div class="sub" id="m-lost-s"></div><span class="delta" id="m-lost-d"></span></div>
+        <div class="metric" id="m-ser-box"><div class="lbl">Chance of a serious disruption</div><div class="num" id="m-ser"></div><div class="gauge" id="g-ser"><i></i></div><div class="sub" id="m-ser-s"></div><span class="delta" id="m-ser-d"></span></div>
+        <div class="metric" id="m-sh-box"><div class="lbl">Chance of a shortage</div><div class="num" id="m-sh"></div><div class="gauge" id="g-sh"><i></i></div><div class="sub" id="m-sh-s"></div><span class="delta" id="m-sh-d"></span></div>`;
     }
     tween($("m-lost"), S.lost.p50, (v) => f1(v) + "%");
     $("m-lost-s").textContent = S.lost.p95 > 0.05 ? `9 in 10 futures: ${f1(S.lost.p5)}–${f1(S.lost.p95)}%` : "none in any future";
@@ -622,15 +661,20 @@
     setD("m-lost-d", P ? deltaHTML(S.lost.p50, P.lost.p50) : "");
     setD("m-ser-d", P ? deltaHTML(S.lost.pOver, P.lost.pOver) : "");
     setD("m-sh-d", P ? deltaHTML(S.pShort, P.pShort) : "");
+    // gauges: loss on a 0..2×line scale with the serious-disruption line marked; chances on 0..100
+    const gMax = Math.max(X * 2, SM.niceMax(S.lost.p95 * 1.1));
+    const gl = $("g-lost"), gp = (v) => Math.max(0, Math.min(100, (v / gMax) * 100)) + "%";
+    gl.querySelector("i").style.width = gp(S.lost.p50);
+    gl.querySelector(".rng").style.left = gp(S.lost.p5); gl.querySelector(".rng").style.width = `calc(${gp(S.lost.p95)} - ${gp(S.lost.p5)})`;
+    const em = gl.querySelector("em"); em.style.left = gp(X); em.dataset.l = `${X}% line`;
+    $("g-ser").querySelector("i").style.width = Math.min(100, S.lost.pOver) + "%";
+    $("g-sh").querySelector("i").style.width = Math.min(100, S.pShort) + "%";
+    $("m-lost-box").classList.toggle("bad", S.lost.p50 > X);
+    renderLive(S);
 
     $("sim-analysis").innerHTML = analyse(S, P);
 
-    SM.funnel($("sim-funnel"), [
-      { label: "Flagged by the rule", sub: "supply with a link at this reach", ...S.flagged, prev: P && P.flagged.p50, color: COL.E3, tip: "Sayari trade data, plus an estimate for the untraced share" },
-      { label: "Stopped at the border", sub: "customs stops and inspects", ...S.stopped, prev: P && P.stopped.p50, color: COL.E2, dark: true },
-      { label: "Kept out after review", sub: "not released on paperwork", ...S.keptOut, prev: P && P.keptOut.p50, color: COL.E1, dark: true },
-      { label: "Lost for good", sub: "after some gets back in", ...S.lost, prev: P && P.lost.p50, color: COL.brick, dark: true },
-    ]);
+    animateFlow({ F: S.flagged.p50, S: S.stopped.p50, K: S.keptOut.p50, L: S.lost.p50 }, S.lost.p95 > 0.05 ? `9 in 10 futures: ${f1(S.lost.p5)}–${f1(S.lost.p95)}%` : "none in any future");
 
     const cats = [
       { id: "serious", label: `Serious disruption: more than ${X}% of supply lost`, color: COL.brick, share: S.cats.serious },
@@ -642,7 +686,7 @@
     $("sim-futures-legend").innerHTML = cats.map((c, i) => `<span><i class="${c.id === "ok" ? "outline" : ""}" style="background:${c.color}"></i><b>${n[i]}</b>&nbsp;${esc(c.label)}</span>`).join("");
 
     const hi = Math.max(SM.quantile(S.lostArr, 0.995), P ? SM.quantile(P.lostArr, 0.995) : 0, X * 1.25);
-    SM.distChart($("sim-dist"), S.lostArr, P && P.lostArr !== S.lostArr ? P.lostArr : null, { threshold: X, xMax: Math.min(100, SM.niceMax(hi)) });
+    SM.distChart($("sim-dist"), S.lostArr, P && P.lostArr !== S.lostArr ? P.lostArr : null, { threshold: X, xMax: Math.min(100, SM.niceMax(hi)), height: 196 });
 
     const yTop = Math.max(...S.reach.map((r) => r.p95), X * 1.15);
     SM.reachChart($("sim-reach"), TH.map((t, i) => ({ short: t.short, ...S.reach[i], sel: i === S.j, t })), {
@@ -845,6 +889,7 @@
     const view = ["explorer", "simulation", "proposed", "method"].includes(v) ? v : "explorer";
     document.querySelectorAll(".view").forEach((n) => n.classList.toggle("on", n.id === "view-" + view));
     document.querySelectorAll(".tabs a").forEach((a) => (a.dataset.view === view ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
+    if (sim.cur) syncLive();
     if (view === "simulation") {
       if (!simInited) { initSim(); simInited = true; }
       else if (readSimHash()) { renderControls(); compute(); return; }

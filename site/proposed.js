@@ -168,28 +168,60 @@
   }
   const med = (a) => SM.summarise(a, 0).p50;
 
-  /* ------------------------------------------------------------ rendering: presets, timeline, cards */
+  /* ------------------------------------------------------------ rendering: presets, the rule as a sentence, signals, cards */
   function renderPresets() {
-    $("pr-presets").innerHTML = R.presets.map((p, i) => `<button type="button" class="preset" data-p="${p.id}" aria-pressed="${st.preset === p.id}"><span class="k">Scenario ${i + 1}</span><b>${esc(p.label)}</b><span>${esc(p.blurb)}</span></button>`).join("");
+    $("pr-presets").innerHTML = R.presets.map((p, i) => `<button type="button" class="preset" data-p="${p.id}" aria-pressed="${st.preset === p.id}"><span class="k">${i + 1}</span><b>${esc(p.label)}</b><span>${esc(p.blurb)}</span></button>`).join("");
     $("pr-presets").querySelectorAll(".preset").forEach((b) => b.addEventListener("click", () => { applyPreset(b.dataset.p); refresh(true); }));
   }
   const tierBadge = (t) => `<span class="tier ${TIER_CLASS[t] || "low"}">${esc(t)}</span>`;
-  function renderTimeline() {
-    $("pr-timeline").innerHTML = R.timeline.map((t) => `<li><span class="d">${esc(t.date)}</span><span class="pip" style="background:${t.tier === "primary" ? COL.navy : COL.accent}"></span><div><div class="ev">${esc(t.event)}</div><div class="meta">${tierBadge(t.tier)}<span>${srcLinks(t.source_ids)}</span>${t.tier !== "primary" ? "<span>no official text</span>" : ""}</div></div></li>`).join("");
-  }
   const leverValueLabel = (k, v) => { const l = LV[k]; if (!l) return String(v); if (l.type === "options") return (l.options.find((o) => o.id === v) || {}).label || v; if (l.type === "toggle") return v ? "on" : "off"; return k === "threshold" ? v + "%" : String(v); };
+
+  // wording of each choice inside the rule sentence
+  const SENT = {
+    trigger: { none: "no transceiver rule", named: "from companies named in S.5548", entity: "from Chinese-headquartered makers", origin: "made in China", entity_or_origin: "from Chinese-headquartered makers or made in China" },
+    generation: { "3.2T+": "3.2T and faster", "1.6T+": "1.6T and faster", all_new: "every generation" },
+    installed: { new_models_only: "new models only", also_existing_models: "new sales of existing models too" },
+    scope: { all_us: "all US buyers", federal_nss: "federal national-security systems only" },
+  };
+  const rangeVals = (l) => Array.from({ length: Math.round((l.max - l.min) / l.step) + 1 }, (_, i) => +(l.min + i * l.step).toFixed(4));
+  const setBy2 = (k) => (setBy[k] ? (String(setBy[k]).startsWith("preset") ? "scenario" : setBy[k] === "you" ? "you" : setBy[k]) : "default");
+  const confOf = (k) => (!setBy[k] ? "none" : setBy[k] === "you" || String(setBy[k]).startsWith("preset") ? "fixed" : conf[k] || "high");
+  function chip(k, label) {
+    const l = LV[k], v = L[k];
+    let opts;
+    if (l.type === "options") opts = l.options.map((o) => [o.id, (SENT[k] && SENT[k][o.id]) || o.label]);
+    else if (l.type === "toggle") opts = [["true", "with a domestic-content exemption"], ["false", "with no domestic-content exemption"]];
+    else opts = rangeVals(l).map((x) => [String(x), label ? label(x) : String(x)]);
+    const c = confOf(k), by = setBy2(k);
+    const tip = by === "default" ? "Default: no card sets this" : by === "you" ? "Set by you" : by === "scenario" ? "Set by the scenario" : `Set by card ${by}${conf[k] ? `, ${conf[k]} confidence` : ""}${conf[k] && conf[k] !== "high" ? " (varies across futures)" : ""}`;
+    return `<span class="rchip c-${c}" title="${esc(tip)}"><select data-l="${k}" aria-label="${esc(l.label)}">${opts.map(([id, t]) => `<option value="${esc(id)}" ${String(v) === id ? "selected" : ""}>${esc(t)}</option>`).join("")}</select><small>${esc(by === "default" ? "default" : by === "you" ? "you" : by === "scenario" ? "scenario" : `${by} · ${conf[k] || ""}`)}</small></span>`;
+  }
+  function renderRule() {
+    const none = L.trigger === "none";
+    const sentence = none
+      ? `<p class="rs">In this scenario there is ${chip("trigger")}. Only the component rule already in force (FCC 26-50) applies, and it reaches none of the transceiver makers in this case.</p>`
+      : `<p class="rs">A US rule that blocks new optical transceivers ${chip("trigger")}, covering ${chip("generation")} and ${chip("installed")}, for ${chip("scope")}. It starts in ${chip("start_year")}, ${chip("transition_years", (x) => (x ? `phased in over ${x} year${x > 1 ? "s" : ""}` : "in full from the first year"))}, ${chip("exemption")}${L.exemption ? ` for modules where ${chip("threshold", (x) => x + "%")} or more of the parts’ value comes from US companies` : ""}.</p>`;
+    $("pr-rule").innerHTML = `<p class="pr-k">The rule in this scenario</p>${sentence}
+      <div class="rs-key"><span class="c-high">card, high confidence</span><span class="c-medium">card, medium: varies in 25% of futures</span><span class="c-low">card, low: varies in 50%</span><span class="c-fixed">scenario or you</span><span class="c-none">default</span></div>`;
+    $("pr-rule").querySelectorAll("select[data-l]").forEach((el) => el.addEventListener("change", () => {
+      const l = LV[el.dataset.l], v = l.type === "toggle" ? el.value === "true" : l.type === "range" ? +el.value : el.value;
+      st.manual[l.id] = v; st.manualSrc[l.id] = "you"; st.preset = null; recompute(); refresh(true);
+    }));
+  }
+  function renderTimeline() {
+    const items = R.timeline.slice().sort((a, b) => a.date.localeCompare(b.date));
+    $("pr-timeline").innerHTML = `<ol class="htl">${items.map((t) => `<li class="${t.tier === "primary" ? "p" : "r"}"><span class="d">${esc(t.date)}</span><i></i><div class="ev">${esc(t.event)}</div><div class="meta">${tierBadge(t.tier)} <span>${srcLinks(t.source_ids)}</span></div></li>`).join("")}</ol>`;
+  }
   function renderCards() {
     $("pr-cards").innerHTML = allCards().map((c) => {
       const sets = Object.entries(c.sets || {});
-      return `<article class="pr-card ${st.applied.has(c.id) ? "applied" : ""}">
-        <div class="top"><b>${esc(c.id)}</b><span>${esc(c.date || "")}</span>${tierBadge(c.tier)}<span class="conf ${c.confidence === "high" ? "high" : c.confidence === "low" ? "low" : "medium"}">${esc(c.confidence)} confidence</span>${c.custom ? '<span class="pr-custom">added by you, not in the source register</span>' : ""}</div>
+      const on = st.applied.has(c.id);
+      return `<article class="pr-card ${on ? "applied" : ""}">
+        <div class="top"><b>${esc(c.id)}</b>${tierBadge(c.tier)}<span class="conf ${c.confidence === "high" ? "high" : c.confidence === "low" ? "low" : "medium"}">${esc(c.confidence)}</span><span class="date">${esc(c.date || "")}</span></div>
         <h5>${esc(c.headline)}</h5>
-        ${c.note ? `<p>${esc(c.note)}</p>` : ""}
-        ${c.tier !== "primary" ? `<p class="small" style="margin:0 0 6px">${esc(R.no_official_text)}</p>` : ""}
-        <div class="sets">${sets.length ? "Sets: " + sets.map(([k, v]) => `${esc(LV[k] ? LV[k].label : k)} → <b>${esc(leverValueLabel(k, v))}</b>`).join("; ") : "Context only: sets no lever."}</div>
-        <div class="row"><span class="srcs">${c.custom ? (c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">source</a>` : "no source given") : "Sources: " + srcLinks(c.source_ids)}</span>
-        ${sets.length ? `<label class="pr-toggle"><input type="checkbox" data-card="${esc(c.id)}" ${st.applied.has(c.id) ? "checked" : ""}> Apply to scenario</label>` : ""}
-        ${c.custom ? `<button type="button" class="btn" data-del="${esc(c.id)}" style="padding:4px 10px;color:var(--brick)">Remove</button>` : ""}</div>
+        <div class="sets">${sets.length ? sets.map(([k, v]) => `<span><em>${esc(LV[k] ? LV[k].label : k)}</em> ${esc(leverValueLabel(k, v))}</span>`).join("") : `<span class="ctx">Context only: sets no part of the rule</span>`}</div>
+        <details><summary>Details and sources</summary>${c.note ? `<p>${esc(c.note)}</p>` : ""}${c.tier !== "primary" ? `<p class="small">${esc(R.no_official_text)}</p>` : ""}<p class="srcs">${c.custom ? (c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">source</a> · added by you, not in the source register` : "no source given · added by you") : "Sources: " + srcLinks(c.source_ids)}</p></details>
+        <div class="foot">${sets.length ? `<label class="switch"><input type="checkbox" data-card="${esc(c.id)}" ${on ? "checked" : ""}><span>${on ? "Applied" : "Apply"}</span></label>` : ""}${c.custom ? `<button type="button" class="act" data-del="${esc(c.id)}">Remove</button>` : ""}</div>
       </article>`;
     }).join("");
     $("pr-cards").querySelectorAll("input[data-card]").forEach((i) => i.addEventListener("change", () => {
@@ -201,6 +233,7 @@
     }));
     bindSrc($("pr-cards"));
   }
+
   function renderForm() {
     const f = $("pr-form");
     const leverRow = (l) => {
@@ -246,90 +279,93 @@
     });
   }
 
-  /* ------------------------------------------------------------ rendering: levers + gap */
-  const setByLabel = (k) => (setBy[k] ? `<span class="setby">set by ${esc(setBy[k])}${conf[k] && conf[k] !== "high" ? ` · ${esc(conf[k])} confidence, varies in the simulation` : ""}</span>` : "");
-  function renderLevers() {
-    const w = $("pr-levers");
-    w.innerHTML = R.levers.map((l) => {
-      if (l.id === "threshold" && !L.exemption) return "";
-      let ctl;
-      if (l.type === "options") ctl = `<div class="seg" role="group" aria-label="${esc(l.label)}">${l.options.map((o) => `<button type="button" data-l="${l.id}" data-v="${esc(o.id)}" aria-pressed="${L[l.id] === o.id}" title="${esc(o.note || "")}">${esc(o.label)}</button>`).join("")}</div>`;
-      else if (l.type === "toggle") ctl = `<div class="seg" role="group" aria-label="${esc(l.label)}"><button type="button" data-l="${l.id}" data-v="true" aria-pressed="${L[l.id] === true}">On</button><button type="button" data-l="${l.id}" data-v="false" aria-pressed="${L[l.id] === false}">Off</button></div>`;
-      else ctl = `<div class="lever-range"><input type="range" data-l="${l.id}" min="${l.min}" max="${l.max}" step="${l.step}" value="${L[l.id]}" aria-label="${esc(l.label)}"><span class="val">${esc(leverValueLabel(l.id, L[l.id]))}</span></div>`;
-      return `<div class="dial"><div class="dial-head"><span class="dial-name">${esc(l.label)}</span></div>${setByLabel(l.id)}<div style="margin-top:8px">${ctl}</div></div>`;
-    }).join("") + `<label class="pr-toggle" style="color:var(--on-dark);margin-top:10px"><input type="checkbox" id="pr-fed" ${st.federal ? "checked" : ""}> Serves federal customers</label>`;
-    const set = (k, v) => { st.manual[k] = v; st.manualSrc[k] = "you"; st.preset = null; recompute(); refresh(true); };
-    w.querySelectorAll("button[data-l]").forEach((b) => b.addEventListener("click", () => { const l = LV[b.dataset.l]; set(l.id, l.type === "toggle" ? b.dataset.v === "true" : b.dataset.v); }));
-    w.querySelectorAll('input[type=range][data-l]').forEach((i) => {
-      i.addEventListener("input", () => (i.nextElementSibling.textContent = leverValueLabel(i.dataset.l, +i.value)));
-      i.addEventListener("change", () => set(i.dataset.l, +i.value));
-    });
-    $("pr-fed").addEventListener("change", (e) => { st.federal = e.target.checked; renderChecklist(); });
+  /* ------------------------------------------------------------ rendering: who the rule reaches */
+  const UST = {
+    covered: { label: "Covered in the first year", col: "#8eaad6" },
+    exempt: { label: "Exempt under the US-content test", col: "#c9b6e4" },
+    later: { label: "In its sights, not covered yet (products, timing or buyers)", col: "rgba(142,170,214,0.32)", ring: true },
+    outside: { label: "Chinese-headquartered, outside this rule", col: "#c8841a" },
+    other: { label: "Other makers, not targeted", col: "rgba(243,245,249,0.14)" },
+  };
+  // largest-remainder rounding of a list of values to integers that sum to n
+  function lr(vals, n) {
+    const tot = vals.reduce((a, b) => a + b, 0) || 1, raw = vals.map((v) => (v / tot) * n), fl = raw.map(Math.floor);
+    let left = n - fl.reduce((a, b) => a + b, 0);
+    raw.map((v, i) => [v - fl[i], i]).sort((a, b) => b[0] - a[0]).forEach(([, i]) => { if (left > 0) { fl[i]++; left--; } });
+    return fl;
   }
-  const SEG_COL = { inno_cn: COL.E0, inno_th: COL.E1, eo_cn: COL.E2, eo_th: COL.E3, oth_cn: "#d3dff2", non_asia: COL.untraced, non_us: "#ffffff" };
   function renderGap() {
     const g = gapRows();
-    const ro = (lbl, val, sub, cls = "") => `<div class="metric ${cls}"><div class="lbl">${lbl}</div><div class="num">${val}</div><div class="sub">${sub}</div></div>`;
+    const none = L.trigger === "none";
+    const m = (lbl, val, sub, cls = "") => `<div class="metric ${cls}"><div class="lbl">${lbl}</div><div class="num">${val}</div><div class="sub">${sub}</div></div>`;
     $("pr-gap-readout").innerHTML = [
-      ro("Covered by the rule, in its first year", f1(g.covered) + "%", L.trigger === "none" ? "no transceiver rule: the component rule reaches none of these makers today" : `of US AI data-centre transceiver supply, ${g.y}`, "key"),
-      ro("Linked to named or Chinese-headquartered makers, outside this rule’s scope", f1(g.outside) + "%", `of supply (Chinese-HQ makers supply ${f1(g.cnhq)}% in this illustration)`),
-      ro("Already installed", "Unaffected", L.trigger === "none" ? "no new rule" : "equipment already in data centres stays in place until normal refresh (PR-013)"),
+      m("Covered by the rule in its first year", f1(g.covered) + "%", none ? "no transceiver rule in this scenario" : `of US AI data-centre transceiver supply, ${g.y}`, "key"),
+      m("From Chinese-headquartered makers, outside the rule", f1(g.outside) + "%", `Chinese-headquartered makers supply ${f1(g.cnhq)}% in this illustration`),
+      m("Equipment already installed", "Unaffected", none ? "no new rule" : "stays in place until normal refresh (PR-013)"),
     ].join("");
-    // stacked rows, segments held in place
-    const cont = $("pr-bars"); cont.innerHTML = "";
-    const w = Math.max(300, cont.clientWidth || 600), narrow = w < 560;
-    const rows = [["All supply", "share"], ["In the rule’s sights", "r1"], ["Covered when it starts", "r2"], ["Left after exemptions", "r3"]];
-    const lw = narrow ? 0 : 180, rh = narrow ? 52 : 40, h = rows.length * rh + 6;
-    const s = SM.svg("svg", { width: w, height: h, viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": rows.map(([lab, k]) => `${lab}: ${f1(g.rows.reduce((a, r) => a + r[k], 0))}%`).join("; ") }, cont);
-    const defs = SM.svg("defs", {}, s), pat = SM.svg("pattern", { id: "pr-hatch", width: 6, height: 6, patternUnits: "userSpaceOnUse", patternTransform: "rotate(45)" }, defs);
-    SM.svg("line", { x1: 0, y1: 0, x2: 0, y2: 6, stroke: "rgba(255,255,255,0.55)", "stroke-width": 2 }, pat);
-    const iw = w - lw - 50, X = (v) => lw + (v / 100) * iw;
-    rows.forEach(([lab, k], ri) => {
-      const y = ri * rh + (narrow ? 20 : 6), bh = narrow ? 24 : rh - 12;
-      SM.svg("text", { x: narrow ? 0 : lw - 12, y: narrow ? ri * rh + 14 : y + bh / 2 + 4, "text-anchor": narrow ? "start" : "end", class: "lbl-strong" }, s).textContent = lab;
-      let x0 = 0;
-      g.rows.forEach((r) => {
-        const slot = r.share, v = r[k];
-        SM.svg("rect", { x: X(x0), y, width: Math.max(0, X(x0 + slot) - X(x0) - 1), height: bh, fill: "rgba(15,27,51,0.05)" }, s);
-        if (v > 0.01) {
-          const rect = SM.svg("rect", { x: X(x0), y, width: Math.max(1, X(x0 + v) - X(x0) - 1), height: bh, fill: SEG_COL[r.s.id] || COL.E3, stroke: r.s.id === "non_us" || r.s.id === "oth_cn" ? "#9aa6bb" : "none" }, s);
-          SM.bindTip(rect, () => `<b>${esc(r.s.label)}</b><br>${esc(lab)}: ${v.toFixed(1)}% of supply (segment ${slot.toFixed(1)}%)<div class="t-src">Illustrative placeholder · ${esc(r.s.status)}</div>`);
-          if (r.s.site === "TH") SM.svg("rect", { x: X(x0), y, width: Math.max(1, X(x0 + v) - X(x0) - 1), height: bh, fill: "url(#pr-hatch)", "pointer-events": "none" }, s);
-        }
-        x0 += slot;
-      });
-      SM.svg("text", { x: X(100) + 8, y: y + bh / 2 + 4, class: "lbl-strong" }, s).textContent = f1(g.rows.reduce((a, r) => a + r[k], 0)) + "%";
+    // unit chart: 100 squares, a row per segment
+    const counts = lr(g.rows.map((r) => r.share), 100);
+    const rowsHTML = g.rows.map((r, i) => {
+      const n = counts[i], cn = r.s.hq === "CN";
+      const parts = [r.r3, Math.max(0, r.r2 - r.r3), Math.max(0, r.r1 - r.r2), Math.max(0, r.share - r.r1)];
+      const k = lr(parts, n), cls = ["covered", "exempt", "later", cn ? "outside" : "other"];
+      let sq = "";
+      cls.forEach((c, j) => { for (let q = 0; q < k[j]; q++) sq += `<i class="u ${c}"></i>`; });
+      return `<div class="urow${r.s.site === "TH" ? " th" : ""}" data-seg="${esc(r.s.id)}"><div class="ul"><b>${esc(r.s.label)}</b><span>${f1(r.share)}%${r.s.site === "TH" ? " · made in Thailand" : ""}</span></div><div class="us">${sq}</div></div>`;
+    }).join("");
+    $("pr-units").innerHTML = rowsHTML;
+    $("pr-units-year").textContent = none ? "no rule" : `first year: ${g.y}`;
+    $("pr-units").querySelectorAll(".urow").forEach((row) => {
+      const r = g.rows.find((x) => x.s.id === row.dataset.seg);
+      SM.bindTip(row, () => `<b>${esc(r.s.label)}</b>${r.s.examples ? `<br><i>${esc(r.s.examples)}</i>` : ""}<br>Share of supply: ${f1(r.share)}% (illustrative)<br>In the rule’s sights: ${f1(r.r1)}% · covered when it starts: ${f1(r.r2)}% · after exemptions: ${f1(r.r3)}%<div class="t-src">${esc(r.s.status)} · sources ${esc((r.s.source_ids || []).join(", "))}</div>`);
     });
-    $("pr-seg-legend").innerHTML = SEGS.map((x) => `<span><i class="${["non_us", "oth_cn"].includes(x.id) ? "outline" : ""}" style="background:${SEG_COL[x.id]}"></i>${esc(x.label)}</span>`).join("");
-    // Why? expanders
-    const cn = g.rows.filter((r) => r.s.hq === "CN");
-    const notInSights = cn.filter((r) => !r.r1 && r.share > 0);
-    const genLoss = g.rows.reduce((a, r) => a + r.r1 - r.r2, 0), exLo = g.rows.reduce((a, r) => a + r.exLo, 0), exHi = g.rows.reduce((a, r) => a + r.exHi, 0);
+    const used = new Set([...$("pr-units").querySelectorAll(".u")].map((x) => x.classList[1]));
+    $("pr-units-legend").innerHTML = Object.entries(UST).filter(([k]) => used.has(k)).map(([k, v]) => `<span><i style="background:${v.col}" class="${v.ring ? "ring" : ""}"></i>${esc(v.label)}</span>`).join("") + `<span class="small">Striped rows are made in Thailand.</span>`;
+    // funnel
+    const s1 = g.sum("r1"), s2 = g.sum("r2"), s3 = g.covered;
+    const step = (n, lbl, v, drop, dropLbl) => `<div class="fs"><span class="fn">${n}</span><b>${f1(v)}%</b><span class="fl">${lbl}</span>${drop > 0.05 ? `<span class="fd">− ${f1(drop)} ${dropLbl}</span>` : ""}</div>`;
+    $("pr-funnel").innerHTML = `<p class="pr-k">From all supply to what the rule covers</p>` +
+      step(1, "all US AI data-centre transceiver supply", 100, 0, "") +
+      step(2, "in the rule’s sights", s1, 100 - s1, "outside who the rule catches") +
+      step(3, `covered when it starts (${g.y})`, s2, s1 - s2, "products, timing or buyers not covered yet") +
+      step(4, "covered after exemptions", s3, s2 - s3, "exempt under the US-content test");
+    // why
+    const cnRows = g.rows.filter((r) => r.s.hq === "CN"), notIn = cnRows.filter((r) => !r.r1 && r.share > 0);
+    const genLoss = s1 - s2, exLo = g.rows.reduce((a, r) => a + r.exLo, 0), exHi = g.rows.reduce((a, r) => a + r.exHi, 0);
     const why = [];
-    if (L.trigger === "none") why.push("No transceiver rule in this scenario. The component rule (FCC 26-50) reaches only producer-based Covered List entities such as Huawei and ZTE, so it covers none of these segments (I-1).");
-    if (notInSights.length && L.trigger !== "none") why.push(`Outside the trigger (“${esc(leverValueLabel("trigger", L.trigger))}”): ${notInSights.map((r) => `${esc(r.s.label)} (${f1(r.share)}%)`).join(", ")}. ${L.trigger === "origin" ? "Thailand-made modules are outside an origin-based rule." : L.trigger === "named" ? "Only companies named in S.5548 are in scope." : ""}`);
-    if (genLoss > 0.05) why.push(`Products and timing remove ${f1(genLoss)} points: in ${g.y} the rule covers ${esc(leverValueLabel("generation", L.generation))}, which is ${f1(coveredShare(YEARS.indexOf(clamp(g.y, YEARS[0], YEARS[YEARS.length - 1])), L, null, NM_C) * 100)}% of new purchases that year${L.installed === "new_models_only" ? " once models authorised before the start (which keep selling) are excluded" : ""}${L.transition_years > 0 ? `, phased in over ${L.transition_years} years` : ""}${L.scope === "federal_nss" ? `, and only federal buyers (≈${INP.fed_share.centre}% of demand, placeholder)` : ""}.`);
-    if (L.exemption && exHi > 0.05) why.push(`The ${L.threshold}% US-content exemption removes an estimated ${f1(exLo)}–${f1(exHi)} points, depending on how much of each module’s value comes from US companies (unknown; no public BOM data).`);
-    $("pr-why").innerHTML = `<div class="pr-why">${why.map((t, i) => `<details ${i === 0 ? "open" : ""}><summary>Why? ${i + 1} of ${why.length}</summary><ul><li>${t}</li></ul></details>`).join("") || ""}</div>`;
+    if (none) why.push("No transceiver rule in this scenario. The component rule (FCC 26-50) reaches only producer-based Covered List entities such as Huawei and ZTE, so it covers none of these segments (I-1).");
+    if (notIn.length && !none) why.push(`<b>Outside who the rule catches</b> (“${esc(leverValueLabel("trigger", L.trigger))}”): ${notIn.map((r) => `${esc(r.s.label)} (${f1(r.share)}%)`).join(", ")}. ${L.trigger === "origin" ? "Thailand-made modules are outside a rule based on where things are made." : L.trigger === "named" ? "Only companies named in S.5548 are in scope." : ""}`);
+    if (genLoss > 0.05) why.push(`<b>Products and timing</b> remove ${f1(genLoss)} points: in ${g.y} the rule covers ${esc(leverValueLabel("generation", L.generation))}, which is ${f1(coveredShare(YEARS.indexOf(clamp(g.y, YEARS[0], YEARS[YEARS.length - 1])), L, null, NM_C) * 100)}% of new purchases that year${L.installed === "new_models_only" ? ", once models authorised before the start (which keep selling) are left out" : ""}${L.transition_years > 0 ? `, phased in over ${L.transition_years} years` : ""}${L.scope === "federal_nss" ? `, and only federal buyers (about ${INP.fed_share.centre}% of demand, placeholder)` : ""}.`);
+    if (L.exemption && exHi > 0.05) why.push(`<b>The ${L.threshold}% US-content exemption</b> removes an estimated ${f1(exLo)}–${f1(exHi)} points, depending on how much of each module’s value comes from US companies (unknown: no public parts data).`);
+    $("pr-why").innerHTML = why.length ? `<p class="pr-k">Why the rule reaches what it does</p><ul>${why.map((t) => `<li>${t}</li>`).join("")}</ul>` : "";
   }
 
   /* ------------------------------------------------------------ rendering: simulation */
   const fmtIn = (i, v) => (i.unit === "share" ? Math.round(v * 100) + "%" : i.unit === "pct" ? v.toFixed(1).replace(".0", "") + "%" : i.unit === "months" ? v + " mo" : v.toFixed(1));
   function renderSimControls() {
-    $("pr-sim-controls").innerHTML = `<div class="ctl-group"><p class="kicker">Uncertain inputs (all placeholders)</p>${SUP.inputs.map((i) => {
+    const pc = (i, v) => ((v - i.min) / (i.max - i.min)) * 100 + "%";
+    $("pr-sim-controls").innerHTML = `<div class="ctl-group"><p class="kicker">Uncertain inputs</p><p class="small held" style="margin:0 0 12px">All are placeholders until sourced. Drag to see the results move.</p>${SUP.inputs.map((i) => {
       const step = i.unit === "share" ? 0.05 : i.unit === "index" ? 0.25 : i.unit === "pct" ? 0.5 : 1;
       return `<div class="ctl"><label for="pin-${i.id}">${esc(i.label)}</label><div class="q">${esc(i.source)}</div>
-        <div class="row"><input type="range" id="pin-${i.id}" min="${i.min}" max="${i.max}" step="${step}" value="${st.vals[i.id]}"><span class="val" id="pval-${i.id}">${fmtIn(i, st.vals[i.id])}</span></div>
+        <div class="row"><input type="range" id="pin-${i.id}" min="${i.min}" max="${i.max}" step="${step}" value="${st.vals[i.id]}" style="--p:${pc(i, st.vals[i.id])}"><span class="val" id="pval-${i.id}">${fmtIn(i, st.vals[i.id])}</span></div>
         <div class="meta"><span>varies ± ${fmtIn(i, i.spread)}</span><span class="badge pend">${esc(i.status)}</span></div></div>`;
     }).join("")}</div>
     <div class="ctl-group"><p class="kicker">The line</p><div class="ctl"><label for="pin-X">What counts as a serious shortfall?</label><div class="q">Peak-year shortfall above this share of demand.</div>
-    <div class="row"><input type="range" id="pin-X" min="2" max="40" step="1" value="${st.X}"><span class="val" id="pval-X">${st.X}%</span></div></div></div>`;
-    let t;
-    SUP.inputs.forEach((i) => { const el = $("pin-" + i.id); el.addEventListener("input", () => { st.vals[i.id] = +el.value; $("pval-" + i.id).textContent = fmtIn(i, +el.value); clearTimeout(t); t = setTimeout(() => compute(), 60); }); });
-    $("pin-X").addEventListener("input", (e) => { st.X = +e.target.value; $("pval-X").textContent = st.X + "%"; clearTimeout(t); t = setTimeout(() => compute(), 60); });
+    <div class="row"><input type="range" id="pin-X" min="2" max="40" step="1" value="${st.X}" style="--p:${((st.X - 2) / 38) * 100}%"><span class="val" id="pval-X">${st.X}%</span></div></div></div>`;
+    let raf = 0;
+    const preview = () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; compute(true); }); };
+    SUP.inputs.forEach((i) => {
+      const el = $("pin-" + i.id);
+      el.addEventListener("input", () => { st.vals[i.id] = +el.value; $("pval-" + i.id).textContent = fmtIn(i, +el.value); el.style.setProperty("--p", pc(i, +el.value)); preview(); });
+      el.addEventListener("change", () => compute());
+    });
+    const x = $("pin-X");
+    x.addEventListener("input", () => { st.X = +x.value; $("pval-X").textContent = st.X + "%"; x.style.setProperty("--p", ((st.X - 2) / 38) * 100 + "%"); preview(); });
+    x.addEventListener("change", () => compute());
   }
-  function compute() {
-    const res = simulate(), X = st.X, N = res.peakShort.length;
+  // quick = while dragging: fewer futures, and the slower comparisons keep their last values
+  function compute(quick) {
+    const res = simulate(quick ? { runs: 2500 } : {}), X = st.X, N = res.peakShort.length;
     const S = { res, X, blockedP: SM.summarise(res.peakBlocked, 0), netP: SM.summarise(res.peakNet, 0), shortP: SM.summarise(res.peakShort, X), delay: SM.summarise(res.delay, 0), price: SM.summarise(res.price, 0) };
     S.years = YEARS.map((y, i) => ({ y, b: SM.summarise(res.blocked[i], 0), s: SM.summarise(res.short[i], 0) }));
     let ser = 0, some = 0, blockedOnly = 0;
@@ -338,14 +374,17 @@
     const posDelay = Array.from(res.delay).filter((v) => v > 0).sort((a, b) => a - b);
     S.delayGivenShort = posDelay.length ? posDelay[Math.floor(posDelay.length / 2)] : 0;
     S.pDelay = posDelay.length / N * 100;
-    // each trigger, same scenario
-    S.trig = ["named", "entity", "origin", "entity_or_origin"].map((t) => ({ t, sum: SM.summarise(simulate({ runs: 2500, lever: { trigger: t } }).peakNet, 0) }));
-    // what matters most: peak net blocked, median
-    S.sens = L.trigger === "none" ? null : sensitivity();
     S.L = { ...L };
-    st.prev = st.cur; st.cur = S;
-    renderSim();
+    const same = st.cur && JSON.stringify(st.cur.L) === JSON.stringify(S.L);
+    S.trig = quick && same ? st.cur.trig : ["named", "entity", "origin", "entity_or_origin"].map((t) => ({ t, sum: SM.summarise(simulate({ runs: 2500, lever: { trigger: t } }).peakNet, 0) }));
+    S.sens = quick && same ? st.cur.sens : L.trigger === "none" ? null : sensitivity();
+    S.flow = decomp(S.L);
+    if (quick) { if (!st.dragBase) st.dragBase = st.cur; st.prev = st.dragBase; }
+    else { st.prev = st.dragBase || st.cur; st.dragBase = null; }
+    st.cur = S;
+    renderSim(quick);
   }
+
   function sensitivity() {
     const runs = 2000, base = med(simulate({ runs }).peakNet), rows = [];
     SUP.inputs.forEach((i) => {
@@ -385,16 +424,120 @@
     });
     $("pr-years-legend").innerHTML = `<span><i style="background:${COL.E1}"></i>Blocked share of demand (typical, band = 9 in 10 futures)</span><span><i style="background:${COL.brick}"></i>Shortfall after shifting, spare capacity and stock</span>`;
   }
-  function renderSim() {
+  /* ---- where blocked supply goes, year by year: every input at its central value (same formulas as simulate) */
+  function decomp(Lx) {
+    const sh = segShares(), shift = st.vals.shift, fed = st.vals.fed_share, pf = st.vals.pull_forward, head = st.vals.headroom, cap = st.vals.capacity_add;
+    const exF = {};
+    SEGS.forEach((s) => (exF[s.id] = Lx.exemption ? clamp((s.us_bom_pct.centre - (Lx.threshold - 10)) / 20, 0, 1) : 0));
+    let stock = 0;
+    return YEARS.map((y, yi) => {
+      const cov = coveredShare(yi, Lx, null, NM_C), tr = transition(y, Lx);
+      let b = 0;
+      if (tr > 0 && cov > 0) for (const s of SEGS) if (inSights(s, Lx.trigger)) b += sh[s.id] * cov * (1 - exF[s.id]);
+      b *= tr * (Lx.scope === "federal_nss" ? fed / 100 : 1);
+      const shifted = b * shift, net = b - shifted;
+      if (y === Lx.start_year) stock = (net * pf) / 12;
+      const capC = Math.min(net, Math.max(0, head + cap * Math.max(0, y - 2026)));
+      const rem = net - capC, draw = Math.min(stock, rem);
+      stock -= draw;
+      return { y, b, shifted, capC, draw, short: Math.max(0, rem - draw), cov: cov * tr };
+    });
+  }
+  const FLOW = [
+    { k: "capC", label: "Covered by spare and new capacity", col: "#8eaad6" },
+    { k: "shifted", label: "Shifts to uncovered sources", col: "#c9b6e4" },
+    { k: "draw", label: "Covered by stock bought ahead", col: "#dfe8f6", ring: true },
+    { k: "short", label: "Shortfall: demand that can’t be met", col: "#a8432f" },
+  ];
+  let yPick = null, playT = 0, playing = false;
+  function flowChart(S) {
+    const cont = $("pr-yflow"); cont.innerHTML = "";
+    const F = S.flow, w = Math.max(300, cont.clientWidth || 600), nar = w < 560, h = nar ? 230 : 270, m = { t: 24, r: 10, b: 30, l: 40 };
+    const iw = w - m.l - m.r, ih = h - m.t - m.b;
+    const yMax = SM.niceMax(Math.max(4, ...F.map((d) => d.b)) * 1.15);
+    const s = SM.svg("svg", { width: w, height: h, viewBox: `0 0 ${w} ${h}`, role: "img", class: "pr-yflow-svg", "aria-label": "Where blocked supply goes, by year: " + F.map((d) => `${d.y} blocked ${d.b.toFixed(1)}%, shortfall ${d.short.toFixed(1)}%`).join("; ") }, cont);
+    const g = SM.svg("g", { class: "grid" }, s), Y = (v) => m.t + ih - (v / yMax) * ih;
+    for (let i = 0; i <= 4; i++) { const v = (yMax / 4) * i; SM.svg("line", { x1: m.l, x2: w - m.r, y1: Y(v), y2: Y(v) }, g); SM.svg("text", { x: m.l - 6, y: Y(v) + 4, "text-anchor": "end" }, s).textContent = Math.round(v) + "%"; }
+    const cw = iw / F.length, bw = Math.min(64, cw * 0.62);
+    const show = playing ? playT : F.length;
+    F.forEach((d, i) => {
+      const x = m.l + i * cw + (cw - bw) / 2, col = SM.svg("g", { class: `ycol${i < show ? " on" : ""}${yPick === i ? " pick" : ""}`, "data-i": i, style: `--d:${playing ? 0 : i * 70}ms` }, s);
+      SM.svg("rect", { x: x - 6, y: m.t - 10, width: bw + 12, height: ih + 10, class: "ybg" }, col);
+      let y0 = m.t + ih;
+      FLOW.forEach((f) => {
+        const v = d[f.k]; if (v <= 0.02) return;
+        const hh = (v / yMax) * ih;
+        SM.svg("rect", { x, y: y0 - hh, width: bw, height: Math.max(1, hh), fill: f.col, class: "yseg", stroke: f.ring ? "#9aa6bb" : "none" }, col);
+        y0 -= hh;
+      });
+      if (d.b > 0.05) SM.svg("text", { x: x + bw / 2, y: y0 - 6, "text-anchor": "middle", class: "lbl-strong ytot" }, col).textContent = f1(d.b) + "%";
+      if (d.short > 0.05) SM.svg("text", { x: x + bw / 2, y: m.t + ih - 4, "text-anchor": "middle", style: "fill:#fff;font-size:10.5px;font-weight:700" }, col).textContent = "";
+      SM.svg("text", { x: x + bw / 2, y: h - 10, "text-anchor": "middle", class: yPick === i ? "lbl-strong" : "" }, s).textContent = d.y;
+      const hit = SM.svg("rect", { x: m.l + i * cw, y: m.t - 10, width: cw, height: ih + 30, class: "hit" }, s);
+      hit.addEventListener("click", () => pickYear(i));
+      SM.bindTip(hit, () => `<b>${d.y}</b><br>Blocked: ${f1(d.b)}% of demand${FLOW.map((f) => `<br><span style="color:${f.k === "short" ? "#a8432f" : "inherit"}">${esc(f.label)}: ${d[f.k].toFixed(1)}%</span>`).join("")}`);
+    });
+    const si = YEARS.indexOf(S.L.start_year);
+    if (si >= 0 && S.L.trigger !== "none") {
+      const x = m.l + si * cw + 2;
+      SM.svg("line", { x1: x, x2: x, y1: m.t - 14, y2: m.t + ih, stroke: COL.accent, "stroke-width": 2, "stroke-dasharray": "4 3" }, s);
+      SM.svg("text", { x: x + 5, y: m.t - 4, style: "fill:#8a5810;font-weight:600;font-size:12px" }, s).textContent = "rule starts";
+    }
+    $("pr-yflow-legend").innerHTML = FLOW.map((f) => `<span><i style="background:${f.col}" class="${f.ring ? "outline" : ""}"></i>${esc(f.label)}</span>`).join("") + `<span class="small">Column height = share of demand the rule blocks that year. Every input at its central value.</span>`;
+  }
+  function yearNote(S, i) {
+    const d = S.flow[i], L0 = S.L;
+    if (L0.trigger === "none") return `<b>${d.y}.</b> No transceiver rule, so nothing is blocked.`;
+    if (d.y < L0.start_year) return `<b>${d.y}.</b> The rule hasn’t started.${st.vals.pull_forward > 0 && d.y === L0.start_year - 1 ? ` Buyers stock up ahead of it: about ${+st.vals.pull_forward.toFixed(1)} months of what it will block.` : ""}`;
+    if (d.b <= 0.05) return `<b>${d.y}.</b> The rule is in force but blocks almost nothing yet: its products make up very little of what’s bought this year.`;
+    const parts = [];
+    if (d.shifted > 0.05) parts.push(`${f1(d.shifted)}% shifts to uncovered sources`);
+    if (d.capC > 0.05) parts.push(`${f1(d.capC)}% is covered by spare and new capacity`);
+    if (d.draw > 0.05) parts.push(`${f1(d.draw)}% comes from stock bought ahead`);
+    return `<b>${d.y}.</b> The rule blocks <b>${f1(d.b)}%</b> of demand (it covers ${f1(d.cov * 100)}% of purchases that year${L0.scope === "federal_nss" ? ", federal buyers only" : ""}). ${parts.length ? parts.join(", ").replace(/, ([^,]*)$/, " and $1") + ". " : ""}${d.short > 0.05 ? `That leaves a <b class="bad">shortfall of ${f1(d.short)}%</b> of demand.` : "Nothing is short."}`;
+  }
+  function pickYear(i) {
+    yPick = i;
+    const S = st.cur;
+    $("pr-yearchips").querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(+b.dataset.i === i)));
+    $("pr-yflow").querySelectorAll(".ycol").forEach((c) => c.classList.toggle("pick", +c.dataset.i === i));
+    $("pr-ynote").innerHTML = yearNote(S, i);
+  }
+  let playTimer = 0;
+  function playYears() {
+    clearTimeout(playTimer);
+    const S = st.cur, reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) { playing = false; flowChart(S); pickYear(S.flow.length - 1); return; }
+    playing = true; playT = 0; $("pr-play").textContent = "Playing…"; flowChart(S);
+    const next = () => {
+      playT++;
+      const col = $("pr-yflow").querySelector(`.ycol[data-i="${playT - 1}"]`);
+      if (col) col.classList.add("on");
+      pickYear(playT - 1);
+      if (playT < S.flow.length) playTimer = setTimeout(next, 1700);
+      else { playing = false; $("pr-play").innerHTML = `<span aria-hidden="true">▶</span> Play again`; }
+    };
+    playTimer = setTimeout(next, 250);
+  }
+  function renderYearChips(S) {
+    $("pr-yearchips").innerHTML = S.flow.map((d, i) => `<button type="button" data-i="${i}" aria-pressed="${yPick === i}">${d.y}</button>`).join("");
+    $("pr-yearchips").querySelectorAll("button").forEach((b) => b.addEventListener("click", () => { clearTimeout(playTimer); playing = false; $("pr-play").innerHTML = `<span aria-hidden="true">▶</span> Play the years`; flowChart(st.cur); pickYear(+b.dataset.i); }));
+  }
+
+  function renderSim(quick) {
     const S = st.cur, P0 = st.prev, X = S.X;
     const d = (a, b) => (P0 && Math.abs(a - b) >= 0.1 ? `<span class="delta on">${a > b ? "▲ +" : "▼ −"}${f1(Math.abs(a - b))} pts vs last setting</span>` : "");
-    const m = (lbl, val, sub, extra = "", cls = "") => `<div class="metric ${cls}"><div class="lbl">${lbl}</div><div class="num">${val}</div><div class="sub">${sub}</div>${extra}</div>`;
+    const gMax = Math.max(X * 2, SM.niceMax(Math.max(S.blockedP.p95, S.shortP.p95) * 1.1));
+    const gp = (v) => clamp((v / gMax) * 100, 0, 100) + "%";
+    const gauge = (p, line) => `<div class="gauge"><span class="rng" style="left:${gp(p.p5)};width:calc(${gp(p.p95)} - ${gp(p.p5)})"></span><i style="width:${gp(p.p50)}"></i>${line ? `<em style="left:${gp(line)}" data-l="${line}% line"></em>` : ""}</div>`;
     $("pr-readout").innerHTML = [
-      m("Supply blocked in the peak year, typical future", f1(S.blockedP.p50) + "%", `9 in 10 futures: ${f1(S.blockedP.p5)}–${f1(S.blockedP.p95)}%`, P0 ? d(S.blockedP.p50, P0.blockedP.p50) : ""),
-      m("Shortfall in the peak year, typical future", f1(S.shortP.p50) + "%", `chance it exceeds ${X}%: ${Math.round(S.shortP.pOver)}%`, P0 ? d(S.shortP.p50, P0.shortP.p50) : "", S.shortP.pOver >= 50 ? "bad" : ""),
-      m("Deployment delay, when there is one", S.pDelay > 0.5 ? f1(S.delayGivenShort) + '<span style="font-size:.45em"> months</span>' : "None", `${Math.round(S.pDelay)}% of futures see a delay · price pressure index ${Math.round(S.price.p50)} (direction and rough size only)`),
+      `<div class="metric key"><div class="lbl">Supply blocked in the peak year, typical future</div><div class="num">${f1(S.blockedP.p50)}%</div>${gauge(S.blockedP)}<div class="sub">9 in 10 futures: ${f1(S.blockedP.p5)}–${f1(S.blockedP.p95)}%</div>${P0 ? d(S.blockedP.p50, P0.blockedP.p50) : ""}</div>`,
+      `<div class="metric ${S.shortP.p50 > X ? "bad" : ""}"><div class="lbl">Shortfall in the peak year, typical future</div><div class="num">${f1(S.shortP.p50)}%</div>${gauge(S.shortP, X)}<div class="sub">chance it’s above ${X}%: ${Math.round(S.shortP.pOver)}%</div>${P0 ? d(S.shortP.p50, P0.shortP.p50) : ""}</div>`,
+      `<div class="metric ${S.pDelay >= 50 ? "bad" : ""}"><div class="lbl">Chance of a deployment delay</div><div class="num">${Math.round(S.pDelay)}%</div><div class="gauge"><i style="width:${clamp(S.pDelay, 0, 100)}%"></i></div><div class="sub">${S.pDelay > 0.5 ? `about ${f1(S.delayGivenShort)} months when there is one` : "no delay in almost every future"} · price pressure index ${Math.round(S.price.p50)}</div></div>`,
     ].join("");
-    yearsChart(S);
+    if (yPick == null || yPick >= S.flow.length) { const peak = S.flow.reduce((a, x, i) => (x.b > S.flow[a].b ? i : a), 0); yPick = peak; }
+    if (!playing) { flowChart(S); renderYearChips(S); pickYear(yPick); }
+    if (!$("pr-yrange-wrap").hidden) yearsChart(S);
     const cats = [
       { id: "serious", label: `Serious shortfall (above ${X}%)`, color: COL.brick, share: S.cats.ser },
       { id: "short", label: "A smaller shortfall", color: COL.accent, share: S.cats.some },
@@ -409,12 +552,79 @@
       tip: (p) => `<b>${esc(leverValueLabel("trigger", p.t))}</b><br>Typical peak blocked share after shifting: ${p.p50.toFixed(1)}%<br>9 in 10 futures: ${p.p5.toFixed(1)}–${p.p95.toFixed(1)}%`,
       onPick: (i) => { st.manual.trigger = S.trig[i].t; st.manualSrc.trigger = "you"; st.preset = null; recompute(); refresh(true); },
     });
+    $("pr-analysis").innerHTML = analyse(S, P0);
+    if (quick) return;
     if (S.sens) SM.tornado($("pr-tornado"), S.sens.rows, S.sens.base, { baseLabel: "typical peak blocked share", tip: (r) => `<b>${esc(r.label)}</b><br>${esc(r.tip)}<br>Typical peak blocked share: ${r.lo.toFixed(1)}% → ${r.hi.toFixed(1)}%` });
     else $("pr-tornado").innerHTML = `<div class="pending" style="min-height:120px"><div><strong>Nothing to test</strong>With no transceiver rule, no input changes the result.</div></div>`;
-    $("pr-analysis").innerHTML = analyse(S, P0);
     renderChecklist();
     renderDetails();
   }
+  function setupTabs() {
+    const sel = (range) => {
+      $("pr-tab-flow").setAttribute("aria-selected", String(!range)); $("pr-tab-range").setAttribute("aria-selected", String(range));
+      $("pr-yflow-wrap").hidden = range; $("pr-yrange-wrap").hidden = !range;
+      if (st.cur) { if (range) yearsChart(st.cur); else flowChart(st.cur), pickYear(yPick); }
+    };
+    $("pr-tab-flow").addEventListener("click", () => sel(false));
+    $("pr-tab-range").addEventListener("click", () => sel(true));
+    $("pr-play").addEventListener("click", playYears);
+  }
+
+  /* ------------------------------------------------------------ planning roadmap */
+  function renderRoadmap() {
+    const box = $("pr-roadmap"); if (!box || !st.cur) return;
+    const S = st.cur, L0 = S.L, F = S.flow, none = L0.trigger === "none";
+    const y0 = YEARS[0], y1 = YEARS[YEARS.length - 1] + 1, pos = (y) => ((y - y0) / (y1 - y0)) * 100;
+    const marks = [];
+    const built = (P.built || "").slice(0, 7).split("-"), now = built.length === 2 ? +built[0] + (+built[1] - 1) / 12 : null;
+    if (now) marks.push({ t: now, label: "Today", cls: "now" });
+    const i32 = SUP.demand_mix.share_3_2T.findIndex((x) => x.centre >= 0.1);
+    if (i32 >= 0) marks.push({ t: YEARS[i32], label: "3.2T modules enter volume production", cls: "mkt", src: "PR-012" });
+    if (!none) {
+      marks.push({ t: L0.start_year, label: "Rule starts", cls: "rule" });
+      if (L0.transition_years > 0) marks.push({ t: Math.min(y1, L0.start_year + L0.transition_years), label: "Fully phased in", cls: "rule" });
+      if (st.vals.pull_forward > 0) marks.push({ t: L0.start_year - st.vals.pull_forward / 12, label: `Buy-ahead window opens (${+st.vals.pull_forward.toFixed(1)} months)`, cls: "buy" });
+      const pk = F.reduce((a, x, i) => (x.short > F[a].short ? i : a), 0);
+      if (F[pk].short > 0.05) marks.push({ t: F[pk].y + 0.5, label: `Peak shortfall: ${f1(F[pk].short)}% of demand`, cls: "short" });
+    }
+    marks.sort((a, b) => a.t - b.t);
+    // merge markers in the same place, then stack labels into rows so they never overlap
+    const merged = [];
+    marks.forEach((mk) => { const prev = merged[merged.length - 1]; if (prev && Math.abs(prev.t - mk.t) < 0.01) { prev.label = mk.cls === "rule" ? mk.label + " · " + prev.label : prev.label + " · " + mk.label; prev.src = prev.src || mk.src; if (mk.cls === "rule") prev.cls = "rule"; } else merged.push({ ...mk }); });
+    const lastX = [-99, -99, -99], gapPct = box.clientWidth < 560 ? 28 : 15;
+    merged.forEach((mk) => { const x = pos(mk.t); let r = lastX.findIndex((lx) => x - lx >= gapPct); if (r < 0) r = lastX.indexOf(Math.min(...lastX)); mk.row = r; lastX[r] = x; });
+    marks.length = 0; merged.forEach((mk) => marks.push(mk));
+    const bmax = Math.max(1, ...F.map((d) => d.b));
+    box.innerHTML = `<div class="rm">
+      <div class="rm-years">${YEARS.map((y) => `<span style="left:${pos(y)}%;width:${100 / YEARS.length}%">${y}</span>`).join("")}</div>
+      <div class="rm-bars">${F.map((d) => `<div style="left:${pos(d.y)}%;width:${100 / YEARS.length}%" title="${d.y}: blocks ${f1(d.b)}% of demand"><i style="height:${(d.b / bmax) * 100}%"></i>${d.short > 0.05 ? `<em style="height:${(d.short / bmax) * 100}%"></em>` : ""}<span>${d.b > 0.05 ? f1(d.b) + "%" : ""}</span></div>`).join("")}</div>
+      <div class="rm-track"></div>
+      <div class="rm-ticks">${YEARS.concat([y1]).map((y) => `<span style="left:${pos(y)}%"></span>`).join("")}</div>
+      <ul class="rm-marks">${marks.map((mk, i) => `<li class="${mk.cls}" style="left:${clamp(pos(mk.t), 0, 100)}%;--row:${mk.row}"><span>${esc(mk.label)}${mk.src ? ` <a data-sid="${mk.src}" href="${esc((SRC[mk.src] || {}).url || "#")}" target="_blank" rel="noopener">${mk.src}</a>` : ""}</span></li>`).join("")}</ul>
+    </div>
+    <p class="small rm-note">Bars: share of demand the rule blocks each year${F.some((d) => d.short > 0.05) ? ", with the shortfall in red" : ""} (every input at its central value). ${none ? "No transceiver rule in this scenario." : ""}</p>`;
+    bindSrc(box);
+  }
+
+  /* ------------------------------------------------------------ section steps: highlight where you are */
+  function setupSteps() {
+    const links = [...$("pr-steps").querySelectorAll("a")];
+    links.forEach((a) => a.addEventListener("click", (e) => {
+      e.preventDefault();
+      const t = $(a.dataset.s); if (!t) return;
+      scrollTo({ top: t.getBoundingClientRect().top + scrollY - 108, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    }));
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach((en) => {
+        if (!en.isIntersecting) return;
+        links.forEach((a) => a.classList.toggle("on", a.dataset.s === en.target.id));
+        const a = links.find((x) => x.dataset.s === en.target.id), bar = a && a.parentElement;
+        if (bar && bar.scrollWidth > bar.clientWidth) bar.scrollTo({ left: Math.max(0, a.offsetLeft - 16), behavior: "smooth" });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    links.forEach((a) => { const t = $(a.dataset.s); if (t) io.observe(t); });
+  }
+
   function analyse(S, P0) {
     const g = gapRows(S.L), out = [];
     if (S.L.trigger === "none") {
@@ -453,6 +663,7 @@
     bindSrc($("pr-inputs"));
   }
 
+
   /* ------------------------------------------------------------ positions, checklist, student slot */
   function renderPositions() {
     const C = Object.fromEntries(P.evidence.claims.map((c) => [c.claim_id, c]));
@@ -477,6 +688,7 @@
     const tags = ["all", "optics", "power", "network", "procurement"];
     $("pr-tags").innerHTML = tags.map((t) => `<button type="button" class="chip" data-t="${t}" aria-pressed="${st.tag === t}">${t === "all" ? "Everything" : t[0].toUpperCase() + t.slice(1)}</button>`).join("");
     $("pr-tags").querySelectorAll(".chip").forEach((b) => b.addEventListener("click", () => { st.tag = b.dataset.t; renderChecklist(); }));
+    renderRoadmap();
     const items = R.considerations.filter((c) => cond[c.when] && (st.tag === "all" || c.tags.includes(st.tag)));
     $("pr-checklist").innerHTML = items.map((c) => `<div class="pr-item"><div class="tags">${c.tags.map((t) => `<span>${esc(t)}</span>`).join("")}</div><h5>${esc(c.title)}</h5><p>${esc(c.check)}</p><div class="why">${esc(WHY[c.when])}</div><div class="srcs">Related: ${srcLinks(c.source_ids)}</div></div>`).join("") || `<div class="pr-item"><p>No items for this filter.</p></div>`;
     bindSrc($("pr-checklist"));
@@ -492,14 +704,16 @@
   /* ------------------------------------------------------------ lifecycle */
   let inited = false;
   function refresh(sim) {
-    renderPresets(); renderCards(); renderLevers(); renderGap();
+    renderPresets(); renderRule(); renderCards(); renderGap();
     if (sim) compute();
   }
   SM.renderProposed = function (resizeOnly) {
     if (!inited) {
       inited = true;
       applyPreset("reported");
-      renderTimeline(); setupCardTools(); renderSimControls(); renderPositions(); renderStudent();
+      renderTimeline(); setupCardTools(); renderSimControls(); renderPositions(); renderStudent(); setupTabs(); setupSteps();
+      $("pr-fed").checked = st.federal;
+      $("pr-fed").addEventListener("change", (e) => { st.federal = e.target.checked; renderChecklist(); });
       refresh(true);
       bindSrc($("pr-known"));
       return;

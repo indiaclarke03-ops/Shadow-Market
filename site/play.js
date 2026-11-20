@@ -238,7 +238,7 @@
     ctx.fillStyle = "rgba(255,255,255,0.05)"; rr(T.x0, T.y0, T.x1 - T.x0, th, 6); ctx.fill();
     if (fill > 0) {
       ctx.save(); rr(T.x0, T.y0, T.x1 - T.x0, th, 6); ctx.clip();
-      const tg = ctx.createLinearGradient(0, lvl, 0, T.y1); tg.addColorStop(0, low ? "#e2876f" : "#a9c0e6"); tg.addColorStop(1, low ? "#a8432f" : "#4467a6");
+      const tg = ctx.createLinearGradient(0, lvl, 0, T.y1); tg.addColorStop(0, low ? "#e2876f" : "#a9c0e6"); tg.addColorStop(1, low ? "#9b2f26" : "#4467a6");
       ctx.fillStyle = tg; ctx.beginPath(); ctx.moveTo(T.x0, T.y1);
       for (let x = T.x0; x <= T.x1; x += 3) ctx.lineTo(x, lvl + Math.sin(x / 7 + now / 300) * 2);
       ctx.lineTo(T.x1, T.y1); ctx.closePath(); ctx.fill(); ctx.restore();
@@ -332,7 +332,7 @@
     M.pts.forEach((p, i) => {
       if (p.short && i0 === null) i0 = i;
       if ((!p.short || i === M.pts.length - 1) && i0 !== null) {
-        SM.svg("rect", { x: X(M.pts[i0].t), y: m.t, width: Math.max(1, X(p.t) - X(M.pts[i0].t)), height: ih, fill: "rgba(168,67,47,0.5)" }, s);
+        SM.svg("rect", { x: X(M.pts[i0].t), y: m.t, width: Math.max(1, X(p.t) - X(M.pts[i0].t)), height: ih, fill: "rgba(155,47,38,0.5)" }, s);
         if (X(p.t) - X(M.pts[i0].t) > 50) SM.svg("text", { x: X(M.pts[i0].t) + 4, y: m.t + ih - 6, style: "fill:#f3c2b4;font-size:10.5px;font-weight:600" }, s).textContent = "SHORTAGE";
         i0 = null;
       }

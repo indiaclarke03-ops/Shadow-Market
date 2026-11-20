@@ -30,9 +30,9 @@
   SM.int = (v) => (v === null || v === undefined || isNaN(v) ? "—" : Math.round(v).toLocaleString("en-US"));
 
   SM.COL = {
-    E0: "#0f1b33", E1: "#22386c", E2: "#4467a6", E3: "#8eaad6", A1: "#a8432f", R1: "#c8841a",
+    E0: "#0f1b33", E1: "#22386c", E2: "#4467a6", E3: "#8eaad6", A1: "#9b2f26", R1: "#c8841a",
     shadow: "#efd9a7", clean: "#ffffff", untraced: "#c4c8d0", navy: "#22386c", peri: "#4467a6", ink3: "#6b7690",
-    accent: "#c8841a", brick: "#a8432f", ok: "#8eaad6", ghost: "#6b7690",
+    accent: "#c8841a", brick: "#9b2f26", ok: "#8eaad6", ghost: "#6b7690",
   };
 
   /* ---------- tooltip ---------- */
@@ -298,7 +298,7 @@
     st.row.querySelectorAll(".v").forEach((b, i) => (b.textContent = f(vals[i])));
     st.row.querySelectorAll(".lk").forEach((b, i) => (b.innerHTML = i < 4 ? `<i>−</i>${leaks[i]}` : leaks[i]));
     const cv = opts.cmp ? [null, opts.cmp.F, opts.cmp.S, opts.cmp.K, opts.cmp.L] : null;
-    st.row.querySelectorAll(".ca").forEach((b, i) => { b.innerHTML = cv && cv[i] != null ? `<span class="tag a">A</span> ${f(cv[i])}` : ""; });
+    st.row.querySelectorAll(".ca").forEach((b, i) => { b.innerHTML = cv && cv[i] != null ? `<span class="abtag a">A</span> ${f(cv[i])}` : ""; });
     st.s.setAttribute("aria-label", `Where the supply goes, typical future: flagged ${f(v.F)} of US supply, stopped ${f(v.S)}, kept out ${f(v.K)}, lost for good ${f(v.L)}`);
     return st.s;
   };

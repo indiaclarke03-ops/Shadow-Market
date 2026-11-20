@@ -36,7 +36,8 @@ data/derived/named_companies.csv   review sheet for every named company (indepen
 pipeline/notes/             research logs and the Sayari pull plan
 site/                       index.html, styles.css, charts.js, sim.js, app.js, proposed.js (Case 2),
                             map.js (supply chain map + landing preview), play.js ("Play it out"),
-                            goal.js ("What would it take?"), story.js ("Walk me through it")
+                            goal.js ("What would it take?"), story.js ("Walk me through it"),
+                            stress.js ("What could break it?", reverse stress test), glossary.js (inline definitions)
 rules/proposed/transceivers.json        Case 2 scenario: levers, intel cards, presets, design checklist
 data/proposed/transceivers/supply.json  Case 2 supply segments (illustrative placeholders) and simulation inputs
 data/proposed/transceivers/part_map.template.json   student plug-in schema (copy to part_map.json)

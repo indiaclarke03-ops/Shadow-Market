@@ -123,10 +123,14 @@
     const rho = SUP.copula_rho_bom_shift;
     const blocked = YEARS.map(() => new Float64Array(N)), short = YEARS.map(() => new Float64Array(N));
     const peakNet = new Float64Array(N), peakShort = new Float64Array(N), peakBlocked = new Float64Array(N), delay = new Float64Array(N), price = new Float64Array(N);
+    // optional: keep each future's draws for the reverse stress test (no extra random draws)
+    const REC_IDS = ["fed_share", "pull_forward", "headroom", "capacity_add", "shift", "ramp", "bom_u", ...SUP.splits.map((sp) => "th_" + sp.maker)];
+    const rec = opt.record ? Object.fromEntries(REC_IDS.map((k) => [k, new Float64Array(N)])) : null;
+    const swaps = opt.record ? Object.fromEntries(Object.keys(conf).map((k) => [k, new Uint8Array(N)])) : null;
     const get = (id, u) => (id in fx ? fx[id] : tri(st.vals[id], INP[id].spread, u ?? rng(), INP[id].min, INP[id].max));
     for (let r = 0; r < N; r++) {
       const Lx = { ...base };
-      for (const k of Object.keys(cf)) { const p = R.confidence_resample[cf[k]] || 0; if (p && rng() < p) Lx[k] = altOf(k, Lx[k], rng); }
+      for (const k of Object.keys(cf)) { const p = R.confidence_resample[cf[k]] || 0; if (p && rng() < p) { Lx[k] = altOf(k, Lx[k], rng); if (swaps && swaps[k]) swaps[k][r] = 1; } }
       // shares: draw each segment (split makers by total and Thailand share), then normalise to 100
       const sh = {};
       SEGS.forEach((s) => (sh[s.id] = Math.max(0, tri(s.share_pct.centre, s.share_pct.spread, rng(), 0, 100))));
@@ -135,6 +139,7 @@
         if (!cn || !th) return;
         const tot = sh[cn.id] + sh[th.id], f = fx["th_" + sp.maker] ?? tri(sp.th_share.centre, sp.th_share.spread, rng(), 0, 1);
         sh[cn.id] = tot * (1 - f); sh[th.id] = tot * f;
+        if (rec) rec["th_" + sp.maker][r] = f;
       });
       const tot = Object.values(sh).reduce((a, b) => a + b, 0) || 1;
       for (const k in sh) sh[k] = (sh[k] / tot) * 100;
@@ -143,6 +148,7 @@
       const uB = fx.bom_u ?? SM.phi(z1);
       const shift = "shift" in fx ? fx.shift : tri(st.vals.shift, INP.shift.spread, SM.phi(z2), INP.shift.min, INP.shift.max);
       const fed = get("fed_share"), pf = get("pull_forward"), head = get("headroom"), cap = get("capacity_add"), el = get("elasticity"), ramp = get("ramp");
+      if (rec) { rec.fed_share[r] = fed; rec.pull_forward[r] = pf; rec.headroom[r] = head; rec.capacity_add[r] = cap; rec.shift[r] = shift; rec.ramp[r] = ramp; rec.bom_u[r] = uB; }
       const nm = SUP.new_model_share.by_years_since_start.map((x) => tri(x.centre, x.spread, rng(), 0, 1));
       const d32 = SUP.demand_mix.share_3_2T.map((x) => tri(x.centre, x.spread, rng(), 0, 1));
       const exF = {};
@@ -164,7 +170,7 @@
       peakNet[r] = pNet; peakShort[r] = pS; peakBlocked[r] = pB; price[r] = 100 + el * pS;
       delay[r] = pS > 0.05 ? Math.max(0, ramp + pS / (Math.max(0.5, cap) / 12) - pf * (pNet / pS)) : 0;
     }
-    return { blocked, short, peakNet, peakShort, peakBlocked, delay, price };
+    return { blocked, short, peakNet, peakShort, peakBlocked, delay, price, inputs: rec, swaps };
   }
   const med = (a) => SM.summarise(a, 0).p50;
 
@@ -413,7 +419,7 @@
     for (let i = 0; i <= 4; i++) { const v = (yMax / 4) * i; SM.svg("line", { x1: m.l, x2: w - m.r, y1: Y(v), y2: Y(v) }, g); SM.svg("text", { x: m.l - 6, y: Y(v) + 4, "text-anchor": "end" }, s).textContent = Math.round(v) + "%"; }
     const band = (k, fill) => { let d = ""; S.years.forEach((p, i) => (d += (i ? "L" : "M") + X(i) + "," + Y(p[k].p95))); for (let i = S.years.length - 1; i >= 0; i--) d += "L" + X(i) + "," + Y(S.years[i][k].p5); SM.svg("path", { d: d + "Z", fill }, s); };
     const line = (k, stroke) => { let d = ""; S.years.forEach((p, i) => (d += (i ? "L" : "M") + X(i) + "," + Y(p[k].p50))); SM.svg("path", { d, fill: "none", stroke, "stroke-width": 2.5 }, s); };
-    band("b", "rgba(34,56,108,0.12)"); band("s", "rgba(168,67,47,0.14)");
+    band("b", "rgba(34,56,108,0.12)"); band("s", "rgba(155,47,38,0.14)");
     line("b", COL.E1); line("s", COL.brick);
     const si = YEARS.indexOf(S.L.start_year);
     if (si >= 0 && S.L.trigger !== "none") { SM.svg("line", { x1: X(si), x2: X(si), y1: m.t - 6, y2: m.t + ih, stroke: COL.accent, "stroke-width": 2, "stroke-dasharray": "4 3" }, s); SM.svg("text", { x: X(si) + 5, y: m.t + 4, style: "fill:#8a5810;font-weight:600" }, s).textContent = "rule starts"; }
@@ -447,7 +453,7 @@
     { k: "capC", label: "Covered by spare and new capacity", col: "#8eaad6" },
     { k: "shifted", label: "Shifts to uncovered sources", col: "#c9b6e4" },
     { k: "draw", label: "Covered by stock bought ahead", col: "#dfe8f6", ring: true },
-    { k: "short", label: "Shortfall: demand that can’t be met", col: "#a8432f" },
+    { k: "short", label: "Shortfall: demand that can’t be met", col: "#9b2f26" },
   ];
   let yPick = null, playT = 0, playing = false;
   function flowChart(S) {
@@ -475,7 +481,7 @@
       SM.svg("text", { x: x + bw / 2, y: h - 10, "text-anchor": "middle", class: yPick === i ? "lbl-strong" : "" }, s).textContent = d.y;
       const hit = SM.svg("rect", { x: m.l + i * cw, y: m.t - 10, width: cw, height: ih + 30, class: "hit" }, s);
       hit.addEventListener("click", () => pickYear(i));
-      SM.bindTip(hit, () => `<b>${d.y}</b><br>Blocked: ${f1(d.b)}% of demand${FLOW.map((f) => `<br><span style="color:${f.k === "short" ? "#a8432f" : "inherit"}">${esc(f.label)}: ${d[f.k].toFixed(1)}%</span>`).join("")}`);
+      SM.bindTip(hit, () => `<b>${d.y}</b><br>Blocked: ${f1(d.b)}% of demand${FLOW.map((f) => `<br><span style="color:${f.k === "short" ? "#9b2f26" : "inherit"}">${esc(f.label)}: ${d[f.k].toFixed(1)}%</span>`).join("")}`);
     });
     const si = YEARS.indexOf(S.L.start_year);
     if (si >= 0 && S.L.trigger !== "none") {
@@ -707,6 +713,15 @@
     renderPresets(); renderRule(); renderCards(); renderGap();
     if (sim) compute();
   }
+  SM.proposedApi = {
+    ensure: () => { if (!inited) SM.renderProposed(); },
+    simulate: (o) => simulate(o), SUP, INP, LV, R,
+    st: () => st, L: () => ({ ...L }), conf: () => ({ ...conf }), setBy: () => ({ ...setBy }),
+    label: () => { const p = R.presets.find((x) => x.id === st.preset); return p ? p.label : "Your own scenario"; },
+    presets: R.presets, preset: (id) => { applyPreset(id); refresh(true); },
+    setVals: (v) => { Object.assign(st.vals, v); renderSimControls(); compute(); },
+    leverLabel: (k, v) => leverValueLabel(k, v),
+  };
   SM.renderProposed = function (resizeOnly) {
     if (!inited) {
       inited = true;

@@ -236,6 +236,20 @@
       if (n && hoverFn) SM.showTip(hoverFn(n, st), ev); else SM.hideTip();
     });
     cvs.addEventListener("mouseleave", () => { hover = null; SM.hideTip(); kick(); });
+    // keyboard: Tab to the map, then arrow keys step through exporters from largest to smallest
+    cvs.tabIndex = 0;
+    let kIdx = -1;
+    cvs.addEventListener("keydown", (ev) => {
+      if (!["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp", "Escape", "Home"].includes(ev.key)) return;
+      ev.preventDefault();
+      if (ev.key === "Escape") { hover = null; kIdx = -1; SM.hideTip(); kick(); return; }
+      const order = nodes.map((n, i) => i).sort((a, b) => nodes[b].e.value - nodes[a].e.value);
+      kIdx = ev.key === "Home" ? 0 : (kIdx + (ev.key === "ArrowRight" || ev.key === "ArrowDown" ? 1 : -1) + order.length) % order.length;
+      hover = nodes[order[kIdx]]; kick();
+      const r = cvs.getBoundingClientRect();
+      if (hoverFn) SM.showTip(hoverFn(hover, st), { clientX: r.left + hover.x, clientY: r.top + hover.y });
+    });
+    cvs.addEventListener("blur", () => { if (kIdx >= 0) { hover = null; kIdx = -1; SM.hideTip(); kick(); } });
     cvs.addEventListener("click", (ev) => { const n = pick(ev); if (n && hoverFn) { hover = n; SM.showTip(hoverFn(n, st), ev); kick(); } });
 
     let rT; const ro = new ResizeObserver(() => { clearTimeout(rT); rT = setTimeout(resize, 120); });

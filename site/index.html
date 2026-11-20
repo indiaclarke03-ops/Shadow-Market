@@ -18,14 +18,24 @@
 <nav class="nav" aria-label="Main">
   <div class="wrap">
     <a class="brand" href="#explorer"><span class="mark" aria-hidden="true"></span>The Shadow Market</a>
-    <div class="tabs" role="tablist">
-      <a href="#explorer" data-view="explorer">The gap</a>
-      <a href="#simulation" data-view="simulation">What if?</a>
-      <a href="#goal" data-view="goal">What would it take?</a>
-      <a href="#proposed" data-view="proposed">Proposed rule</a>
-      <a href="#method" data-view="method">Method &amp; limits</a>
+    <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="tabs"><span aria-hidden="true"></span>Menu</button>
+    <div class="tabs" id="tabs" role="tablist">
+      <a href="#explorer" data-view="explorer" data-group="explorer">The gap</a>
+      <a href="#simulation" data-view="simulation" data-group="test">Test it</a>
+      <a href="#proposed" data-view="proposed" data-group="proposed">New rules</a>
+      <a href="#method" data-view="method" data-group="method">Method &amp; limits</a>
+      <a href="#brief" data-group="brief" class="m-only">The one-screen brief</a>
     </div>
+    <a class="brief-btn" href="#brief" data-group="brief">Brief <span aria-hidden="true">↗</span></a>
     <span class="snap" id="snap"></span>
+  </div>
+</nav>
+<nav class="subnav" id="subnav" aria-label="Test it" hidden>
+  <div class="wrap">
+    <a href="#simulation" data-view="simulation"><b>What if?</b><span>forward: set the rule, see what happens</span></a>
+    <a href="#goal" data-view="goal"><b>What would it take?</b><span>set a goal, find the rules that reach it</span></a>
+    <a href="#stress" data-view="stress"><b>What could break it?</b><span>reverse: start from a failure, find the causes</span></a>
+    <div class="ckey" aria-label="Colour key"><span><i style="background:#8eaad6"></i>caught</span><span><i style="background:#c8841a"></i>shadow market</span><span><i style="background:#9b2f26"></i>lost or short</span><span><i style="background:#eef3fb;box-shadow:inset 0 0 0 1px #9aa6bb"></i>released</span><span><i style="background:#c9b6e4"></i>back in</span></div>
   </div>
 </nav>
 
@@ -80,24 +90,29 @@
     </div>
   </header>
 
-  <!-- findings -->
-  <section id="findings" class="findings">
+  <nav class="pr-steps gap-steps" id="gap-steps" aria-label="Sections on this page">
     <div class="wrap">
-      <div class="sec-head">
-        <h2 class="display">What we found</h2>
-        <p class="lede">Five findings from two years of US customs records for solar cells and panels, traced upstream with Sayari’s trade and company data. Each links to the part of the tool that shows it.</p>
-      </div>
+      <a href="#findings" data-s="findings"><span>1</span>What we found</a>
+      <a href="#layers" data-s="layers"><span>2</span>Three readings</a>
+      <a href="#dials-section" data-s="dials-section"><span>3</span>Move the line</a>
+      <a href="#why" data-s="why"><span>4</span>Why it’s there</a>
+      <a href="#companies" data-s="companies"><span>5</span>The companies</a>
+    </div>
+  </nav>
+
+  <!-- findings -->
+  <section id="findings" class="findings pr-sec">
+    <div class="wrap">
+      <div class="pr-sec-head"><p class="pr-num">1</p><div><h2 class="display">What we found</h2><p class="lede">Five findings from two years of US customs records for solar cells and panels, traced upstream with Sayari’s trade and company data. Each links to the part of the tool that shows it.</p></div></div>
       <ol class="find-list" id="find-list"></ol>
     </div>
   </section>
 
   <!-- three layers -->
-  <section id="layers">
+  <section id="layers" class="pr-sec">
     <div class="wrap">
-      <div class="sec-head">
-        <h2 class="display">One rule,<br>three readings</h2>
-        <p class="lede">What the law says, what customs actually stops, and what the law would catch if every step of the supply chain were visible. The gap between the last two is the shadow market.</p>
-      </div>
+      <div class="pr-sec-head"><p class="pr-num">2</p><div><h2 class="display">One rule, three readings</h2><p class="lede">What the law says, what customs actually acts on, and what the law would catch if every step of the supply chain were visible. The gap between the last two is the shadow market.</p></div></div>
+      <div class="panel readings" id="readings"></div>
       <div class="layers">
         <article class="panel layer" id="layer1"></article>
         <article class="panel layer" id="layer2"></article>
@@ -107,16 +122,14 @@
   </section>
 
   <!-- explorer -->
-  <section class="dark" id="dials-section">
+  <section class="dark pr-sec" id="dials-section">
     <div class="wrap">
-      <div class="sec-head">
-        <h2 class="display">Move the line</h2>
-        <p class="lede">A rule like this is a set of choices: how far back to look, which companies count, whether shared owners count. Change them and see how much of America’s solar supply would be flagged. Watch for <b>jumps</b>, where one small change flags a lot more supply.</p>
-      </div>
+      <div class="pr-sec-head"><p class="pr-num">3</p><div><h2 class="display">Move the line</h2><p class="lede">A rule like this is a set of choices: how far back to look, which companies count, whether shared owners count. Change them and watch how much of America’s solar supply is flagged. Look for <b>jumps</b>, where one small change flags a lot more.</p></div></div>
       <div class="explorer-grid">
         <div class="controls" id="dials"></div>
         <div>
-          <div class="readout" id="readout"></div>
+          <div class="readout instrument" id="readout"></div>
+          <details class="more-measures"><summary>More measures: concentration and replacement time</summary><div class="readout instrument" id="readout-more"></div></details>
         </div>
       </div>
       <div class="charts">
@@ -141,12 +154,9 @@
   </section>
 
   <!-- why the line is here -->
-  <section id="why">
+  <section id="why" class="pr-sec">
     <div class="wrap">
-      <div class="sec-head">
-        <h2 class="display">Why the line<br>is where it is</h2>
-        <p class="lede">The data shows <em>where</em> the rule stops. The public record (the law, official guidance, hearings, lobbying, research) helps explain <em>why</em>. Every claim is labelled with how sure we are.</p>
-      </div>
+      <div class="pr-sec-head"><p class="pr-num">4</p><div><h2 class="display">Why the line is where it is</h2><p class="lede">The data shows <em>where</em> the rule stops. The public record (the law, official guidance, hearings, lobbying, research) helps explain <em>why</em>. Every claim says how sure we are.</p></div></div>
       <div class="chips" id="dial-chips" role="group" aria-label="Filter evidence by choice"></div>
       <div class="why-grid">
         <div class="panel flat">
@@ -162,12 +172,9 @@
   </section>
 
   <!-- companies -->
-  <section class="mist" id="companies">
+  <section class="mist pr-sec" id="companies">
     <div class="wrap">
-      <div class="sec-head">
-        <h2 class="display">The companies<br>behind the numbers</h2>
-        <p class="lede">A company is only named alongside how it is linked, how confident we are, and the source. A link means a supply chain connection, not proof that a product contains forced labour.</p>
-      </div>
+      <div class="pr-sec-head"><p class="pr-num">5</p><div><h2 class="display">The companies behind the numbers</h2><p class="lede">A company is only named alongside how it is linked, how confident we are, and the source. A link means a supply chain connection, not proof that a product contains forced labour.</p></div></div>
       <div class="panel" id="company-exposure"></div>
       <div class="panel" style="margin-top:24px" id="company-cases"></div>
     </div>
@@ -287,6 +294,73 @@
           <details class="panel flat sim-details">
             <summary><h4>How the search works</h4></summary>
             <div id="goal-method"></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================================================ WHAT COULD BREAK IT (reverse stress test) -->
+<main class="view" id="view-stress">
+  <header class="hero sim-hero compact">
+    <div class="wrap">
+      <p class="kicker">Reverse stress test · start from the failure</p>
+      <h1 class="sim-h1">What could break it? <span class="soft">Work back from the outcome.</span></h1>
+      <div class="rs-fr">
+        <div class="rs-dir"><p class="k">Forward · the What if? page</p><p class="q">“What happens if customs does this?”</p><div class="rs-flow"><span>Settings you choose</span><i>→</i><span>The model</span><i>→</i><span>Outcome</span></div><p class="rs-use">Useful for testing a rule you have in mind.</p></div>
+        <div class="rs-dir rev"><p class="k">Reverse · this page</p><p class="q">“What would have to be true for this to go wrong?”</p><div class="rs-flow"><span>The likely causes</span><i>←</i><span>The model</span><i>←</i><span>A failure you can’t accept</span></div><p class="rs-use">Useful for finding the combinations nobody thought to test, and what to watch for.</p></div>
+      </div>
+    </div>
+  </header>
+  <section class="sim-body">
+    <div class="wrap">
+      <div class="sim-layout">
+        <aside class="controls sim-controls" id="rs-controls" aria-label="Reverse stress test settings"></aside>
+        <div class="sim-results">
+          <div class="rs-question" id="rs-question"></div>
+          <div class="readout instrument" id="rs-readout" aria-live="polite"></div>
+          <p class="rs-note" id="rs-note"></p>
+          <div class="sim-grid">
+            <div class="panel">
+              <div class="panel-title"><h4>100 possible futures</h4></div>
+              <div class="futures-wrap"><div id="rs-futures"></div><div class="legend col" id="rs-futures-legend"></div></div>
+            </div>
+            <div class="panel">
+              <div class="panel-title"><h4>Where the line falls</h4></div>
+              <p class="small panel-sub">How the outcome is spread across all futures. Red bars are the ones that fail.</p>
+              <div id="rs-hist"></div>
+            </div>
+          </div>
+          <div class="panel rs-central" id="rs-central"></div>
+          <div class="panel">
+            <div class="panel-title"><h4>What the world looks like when it fails</h4><span class="small">ranked by how far each input moves</span></div>
+            <p class="small panel-sub">For each uncertain input: its spread across all futures (dashed) against the futures where the failure happens (red). Where the red sits away from the dashed line, that input helps cause the failure.</p>
+            <div id="rs-shifts"></div>
+            <div class="legend" id="rs-shifts-legend" style="margin-top:10px"></div>
+            <div id="rs-swaps" class="rs-swaps"></div>
+          </div>
+          <div class="sim-grid rs-lower">
+            <div class="panel">
+              <div class="panel-title"><h4>Ways it happens</h4></div>
+              <p class="small panel-sub">Failing futures grouped by what drives them. Bars show how far each input sits from normal.</p>
+              <div class="rs-families" id="rs-families"></div>
+            </div>
+            <div class="panel">
+              <div class="panel-title"><h4>What to watch</h4></div>
+              <p class="small panel-sub">The real-world signals that would show this failure building.</p>
+              <ul class="rs-watch" id="rs-watch"></ul>
+            </div>
+          </div>
+          <details class="panel flat sim-details">
+            <summary><h4>How the reverse stress test works</h4></summary>
+            <ol class="model-list">
+              <li>The simulator runs 20,000 futures for the rule you chose, recording every uncertain input in each one. It uses the same model and random numbers as the What if? or Proposed rule page.</li>
+              <li>You set a failure line. The futures that cross it are compared with all futures: how often it happens, how each input’s spread shifts, and the middle of each input across failing futures (the most plausible way it happens).</li>
+              <li>Failing futures are grouped by the inputs that shift most (k-means clustering) into families: different ways the same failure can happen.</li>
+              <li>If fewer than 40 futures fail, the page studies the futures that come closest instead, and says so.</li>
+              <li>This is a conditional reading of a simulation (“given the failure, what was true?”), not a forecast. It is simpler than the analytical multi-tier method in the reverse stress testing research it follows: it can only find causes among the inputs and ranges the model already has.</li>
+            </ol>
           </details>
         </div>
       </div>
@@ -439,6 +513,34 @@
   </section>
 </main>
 
+<!-- ============================================================ ONE-SCREEN BRIEF -->
+<main class="view" id="view-brief">
+  <section class="brief">
+    <div class="wrap">
+      <div class="brief-head">
+        <div>
+          <p class="kicker">The Shadow Market · the one-screen brief</p>
+          <h1 class="display">Covered on paper. <span>Unchecked in practice.</span></h1>
+          <p class="lede" id="brief-lede"></p>
+        </div>
+        <div class="brief-acts"><button type="button" class="act primary" id="brief-print">Print or save as PDF</button><a class="act" href="#explorer">Open the full tool →</a></div>
+      </div>
+      <div class="brief-grid">
+        <ol class="brief-nums" id="brief-nums"></ol>
+        <figure class="brief-map">
+          <div class="brief-map-host" id="brief-map"></div>
+          <figcaption id="brief-map-cap"></figcaption>
+        </figure>
+      </div>
+      <div class="brief-tools" id="brief-tools"></div>
+      <div class="brief-foot">
+        <div><p class="pr-k">How to read it</p><ul id="brief-caveats"></ul></div>
+        <div><p class="pr-k">How to cite</p><p class="small" id="brief-cite"></p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
 <!-- ============================================================ METHOD -->
 <main class="view" id="view-method">
   <section class="mist" style="padding-top:88px">
@@ -527,5 +629,7 @@
 <script src="app.js"></script>
 <script src="goal.js"></script>
 <script src="story.js"></script>
+<script src="stress.js"></script>
+<script src="glossary.js"></script>
 </body>
 </html>

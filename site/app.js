@@ -139,7 +139,7 @@
     $("snap").textContent = (D.snapshot ? "Data as of " + D.snapshot : "Sayari snapshot pending");
     $("foot-built").textContent = "Data built " + D.built;
     if (D.fixture) {
-      const b = h("div", { style: "position:fixed;left:0;right:0;bottom:0;z-index:99;background:#a8432f;color:#fff;text-align:center;padding:8px;font-weight:600" }, "TEST FIXTURE: synthetic exporters for layout testing only. Not real data.");
+      const b = h("div", { style: "position:fixed;left:0;right:0;bottom:0;z-index:99;background:#9b2f26;color:#fff;text-align:center;padding:8px;font-weight:600" }, "TEST FIXTURE: synthetic exporters for layout testing only. Not real data.");
       document.body.appendChild(b);
     }
   }
@@ -253,12 +253,65 @@
       [pct(techShare("thin_film_cdte"), 0), `of shipments are First Solar’s <b>thin-film panels</b>, which use no polysilicon. Sayari links them to forced-labour risk anyway. Counted as given, the linked share would be ${pct(raw.exposed_share, 0)}, so <b>product-level checks matter</b> as much as company links.`, "#companies", "See the companies"],
       [`${f1x(ev.p50)}% vs ${f1x(st.p50)}%`, `<b>Paperwork decides the outcome.</b> Customs releases ${rr ? pct(rr.value * 100, 0) : "most"} of the solar-and-chips value it stops. Enforcing at every link at today’s release rate removes about ${f1x(ev.p50)}% of supply in a typical simulated future; if customs rarely accepted the paperwork, about ${f1x(st.p50)}%.`, "#simulation?preset=strict", "Run the scenarios"],
     ];
+    FIND = { items, ev, st, full, direct, deep };
     $("find-list").innerHTML = items.map(([n, t, href, cta]) => `<li><span class="num">${n}</span><p>${t}</p><a href="${href}">${cta} →</a></li>`).join("");
   }
   const f1x = (v) => (v > 0 && v < 10 ? v.toFixed(1) : v.toFixed(0));
+  let FIND = null;
+
+  /* ---------------------------------------------------------------- one-screen brief */
+  let briefMap = null;
+  function renderBrief() {
+    if (!L3ok || !FIND) return;
+    const { full, ev, st } = FIND, rr = L2.summary.release_rate;
+    $("brief-lede").innerHTML = `The US bans goods made with forced labour in Xinjiang. Trace America’s solar cells and panels back through their supply chains and <b>${pct(full.exposed_share, 0)}</b> of shipments link to forced-labour risk, but customs has publicly acted against the companies behind only <b>${pct(OBS.exposed_share, 0)}</b>. The rest, <b>${pct(full.not_detained_share, 0)}</b>, is the shadow market.`;
+    const nums = [
+      [pct(full.exposed_share, 0), "of US solar shipments link to forced-labour risk upstream", "sky"],
+      [pct(OBS.exposed_share, 0), "come from company groups customs has publicly acted against", "sky"],
+      [pct(full.not_detained_share, 0), "are linked, with no public detention on record: the shadow market", "amber"],
+      [`${f1x(ev.p50)}% → ${f1x(st.p50)}%`, `of supply lost if customs enforced every link: at today’s paperwork release rate (${rr ? pct(rr.value * 100, 0) : "most"}), then if it rarely accepted the paperwork`, "brick"],
+    ];
+    $("brief-nums").innerHTML = nums.map(([n, t, c]) => `<li class="${c}"><b>${n}</b><span>${t}</span></li>`).join("");
+    const tools = [
+      ["#explorer", "The gap", "Where is the shadow market?", "A map of all 792 exporters, by how far back their link sits."],
+      ["#simulation", "What if?", "What if customs looked further?", "10,000 simulated futures, played out month by month."],
+      ["#goal", "What would it take?", "Which rules reach a goal without a shortage?", "Searches over 6,000 combinations of the settings a government controls."],
+      ["#stress", "What could break it?", "What would have to be true for it to fail?", "A reverse stress test: from the failure back to its likely causes."],
+      ["#proposed", "New rules", "What would a rule on AI data-centre optics do?", "Tests a reported rule before it exists."],
+    ];
+    $("brief-tools").innerHTML = tools.map(([h, k, q, d]) => `<a href="${h}"><span class="k">${k}</span><b>${q}</b><span>${d}</span><i aria-hidden="true">→</i></a>`).join("");
+    $("brief-caveats").innerHTML = [
+      "A link is a supply chain connection in Sayari’s records, not proof that a product contains forced labour.",
+      `“No public detention on record” is an upper bound: customs doesn’t name most detained importers.`,
+      "Simulations are what-ifs over stated assumptions, not forecasts. Every input shows whether it is sourced or a placeholder.",
+      "The optics case runs on a reported rule with no official text, and illustrative supply shares.",
+    ].map((t) => `<li>${t}</li>`).join("");
+    $("brief-cite").innerHTML = `The Shadow Market (${esc(D.built)}). Data: Sayari trade and company records (snapshot ${esc(D.snapshot || "")}), US Customs and Border Protection UFLPA statistics, and the public sources listed on the Method page. ${esc(location.href.split("#")[0])}`;
+    if (!briefMap) {
+      briefMap = SM.SupplyMap($("brief-map"), D, { reduced: true, height: (w) => (w < 560 ? 240 : 300) });
+      briefMap.onHover(mapTip);
+    }
+    briefMap.layout("groups").state({ mode: "shadow", reach: CUR_T }).redraw();
+    const s2 = briefMap.shares(CUR_T);
+    $("brief-map-cap").innerHTML = `<b>Each circle is an exporter</b>, sized by US shipments and grouped by how far back its link sits. <span class="cap-sky">Blue</span>: customs has acted (${Math.round(s2.caught)}%). <span class="cap-amber">Orange</span>: linked, not caught (${Math.round(s2.unseen)}%).`;
+  }
 
   /* ---------------------------------------------------------------- three layers */
+  function renderReadings() {
+    if (!L3ok) { $("readings").style.display = "none"; return; }
+    const full = L3.combos[FULL_COMBO], acted = full.exposed_share - full.not_detained_share;
+    const W = (v) => Math.max(0.6, Math.min(100, v)) + "%";
+    $("readings").innerHTML = `<div class="panel-title"><h4>Share of US solar shipments each reading reaches</h4><span class="small">0–100% of ${int(L3.total_value)} shipments</span></div>
+      <div class="rd">
+        <div class="rd-row"><div class="rd-l"><b>On paper</b><span>what the law covers</span></div><div class="rd-t"><i class="paper" style="width:100%"></i><em>every link, however far back: no limit</em></div></div>
+        <div class="rd-row"><div class="rd-l"><b>With full visibility</b><span>linked to forced-labour risk</span></div><div class="rd-t"><i class="sky" style="width:${W(acted)}"></i><i class="amber" style="left:${W(acted)};width:${W(full.not_detained_share)}"></i><em style="left:calc(${W(full.exposed_share)} + 10px)">${pct(full.exposed_share, 0)}</em></div></div>
+        <div class="rd-row"><div class="rd-l"><b>In practice</b><span>groups customs has acted against</span></div><div class="rd-t"><i class="sky" style="width:${W(OBS.exposed_share)}"></i><em style="left:calc(${W(OBS.exposed_share)} + 10px)">${pct(OBS.exposed_share, 0)}</em></div></div>
+        <div class="rd-gap" style="--a:${acted};--w:${full.not_detained_share}"><span class="long">the shadow market: ${pct(full.not_detained_share, 0)} linked, no public detention on record</span><span class="short">shadow market: ${pct(full.not_detained_share, 0)}</span></div>
+        <div class="rd-axis">${[0, 25, 50, 75, 100].map((v) => `<span style="left:${v}%">${v}%</span>`).join("")}</div>
+      </div>`;
+  }
   function renderLayers() {
+    renderReadings();
     $("layer1").innerHTML = `
       <div class="tag">1 · On paper</div>
       <h3 class="display">What the law says</h3>
@@ -280,6 +333,7 @@
       <p style="margin:8px 0 0">${(L2.cases || []).length} public solar cases are listed further down.</p></div>
       <div class="foot">${basis ? `<div class="big" data-src="${esc(basis.stopped.source_id)}" data-title="Stopped" data-body="${esc(int(basis.stopped.shipments) + " shipments · " + (basis.stopped.period || "") + (basis.stopped.notes ? " · " + basis.stopped.notes : ""))}" data-conf="high">${usd(basis.stopped.value_usd)}</div><p class="small" style="margin:6px 0 0">stopped, ${esc(basis.stopped.period || "").replace("..", " to ")}</p>` : `<div class="big">Pending</div><p class="small">CBP statistics not yet captured.</p>`}</div>`;
 
+    foldLayers();
     if (L3ok) {
       const full = L3.combos[FULL_COMBO], fullRaw = L3.combos_unadjusted[FULL_COMBO];
       $("layer3").innerHTML = `
@@ -287,6 +341,7 @@
         <h3 class="display">What the law could catch</h3>
         <div class="body">The same test, applied to every step of the supply chain that Sayari’s trade and company records can see. ${int(L3.exporter_count)} exporters sent ${int(L3.total_value)} shipments of solar cells and panels to the US over two years, and ${pct(L3.traced_share, 0)} of them can be traced upstream.${BYSHIP ? " (US shipping records give weight, not value, so we count shipments.)" : ""}</div>
         <div class="foot"><div class="big">${pct(full.exposed_share, 0)}</div><p class="small" style="margin:6px 0 0">of shipments have a supply chain link to forced-labour risk when every link counts (${pct(fullRaw.exposed_share, 0)} including thin-film panels, which use no polysilicon). Only ${pct(OBS.exposed_share, 0)} come from company groups customs has publicly acted against.</p></div>`;
+      foldLayers();
     } else {
       $("layer3").innerHTML = `
         <div class="tag">3 · With full visibility</div>
@@ -294,6 +349,17 @@
         <div class="body">The same test applied through every step Sayari’s trade and ownership records can see.</div>
         <div class="foot"><span class="badge pend">Awaiting Sayari snapshot</span></div>`;
     }
+  }
+
+  // each reading card: tag, title, the number, and the explanation folded away
+  function foldLayers() {
+    ["layer1", "layer2", "layer3"].forEach((id) => {
+      const el = $(id), body = el.querySelector(":scope > .body"), foot = el.querySelector(":scope > .foot");
+      if (!body || !foot || el.querySelector(":scope > details")) return;
+      const d = document.createElement("details"); d.className = "layer-more";
+      d.innerHTML = "<summary>How this is measured</summary>";
+      d.appendChild(body); el.insertBefore(foot, null); el.appendChild(d);
+    });
   }
 
   /* ---------------------------------------------------------------- dials */
@@ -339,15 +405,17 @@
     const share = shareOf(m);
     const unit = byCount ? "exporters" : byW ? "of estimated tonnes" : "shipments";
     const sub = byCount ? `${int(m.exposed_count)} of ${int(L3.exporter_count)} exporters` : byW ? `share of estimated tonnes (median weight per shipment from Sayari samples × shipments; relative shares only)` : `${int(m.exposed_value)} of ${int(L3.total_value)} shipments`;
-    $("readout").innerHTML = [
+    const ms = [
       metric(byCount ? "Exporters with a link" : `US solar ${byW ? "imports by weight" : "shipments"} with a link`, pct(share, 1), sub),
       metric("Linked, but no public detention on record", pct(m.not_detained_share, 1), `of shipments: the shadow market at these settings. Customs has acted against groups behind ${pct(OBS.exposed_share, 0)}.`, "key", `data-src="" data-title="No public detention on record" data-body="Linked at these settings, and not part of a company group named in a public solar detention or denial (${esc(L3.detained_groups.join(", "))}). CBP doesn't name most detained importers, so some of this supply may have been stopped without it being reported."`),
       metric("Suppliers left with no link", int(m.remaining_suppliers), `of ${int(L3.exporter_count)} exporters`),
       metric("How concentrated the rest is, by company", int(m.hhi_exporter_after), `${hhiWord(m.hhi_exporter_after)} · ${int(L3.hhi_exporter_before)} before (HHI, 0–10,000)`, "", `data-src="" data-title="Concentration (HHI)" data-body="Herfindahl–Hirschman Index of the supply left after linked suppliers are removed. Under 1,500 = spread out; 1,500–2,500 = moderate; over 2,500 = high (US merger guidelines). It can fall when one big supplier is removed."`),
       metric("How concentrated the rest is, by country", int(m.hhi_country_after), `${hhiWord(m.hhi_country_after)} · ${int(L3.hhi_country_before)} before`),
       repl,
-    ].join("");
-    bindDeclared($("readout"));
+    ];
+    $("readout").innerHTML = ms.slice(0, 3).join("");
+    $("readout-more").innerHTML = ms.slice(3).join("");
+    bindDeclared($("readout")); bindDeclared($("readout-more"));
   }
 
   /* ---------------------------------------------------------------- flow */
@@ -494,17 +562,21 @@
     if (!EV.timeline.length) {
       tl.innerHTML = `<div class="pending"><div><strong>Timeline in progress</strong>Evidence research (M5a) is running.</div></div>`;
     } else {
-      tl.innerHTML = EV.timeline.map((t) => {
+      const TL_N = 8, tlAll = state.tlAll;
+      tl.innerHTML = EV.timeline.filter((_, i) => tlAll || i >= EV.timeline.length - TL_N).map((t) => {
         const match = state.evDial === "all" || normDial(t.dial) === state.evDial;
         return `<li class="${match ? "" : "dim"}"><span class="d">${esc(t.date)}</span><span class="pip" style="background:${catColor(t.category)}"></span><div><div class="ev">${esc(t.event)}</div><div class="meta"><span>${esc(t.category)}</span><span class="conf ${confClass(t.confidence)}">${esc(t.confidence)}</span><span>${srcLinks(t.source_ids)}</span></div></div></li>`;
       }).join("");
     }
     $("tl-count").textContent = EV.timeline.length ? `${EV.timeline.length} events, 2020–2026` : "";
+    if (EV.timeline.length > 8) tl.insertAdjacentHTML("beforeend", `<li class="more-li"><button type="button" class="act" id="tl-more">${state.tlAll ? "Show the latest 8 only" : `Show all ${EV.timeline.length} events`}</button></li>`);
+    if ($("tl-more")) $("tl-more").addEventListener("click", () => { state.tlAll = !state.tlAll; renderEvidence(); });
 
     const claims = EV.claims.filter((c) => state.evDial === "all" || normDial(c.dial) === state.evDial);
     const order = { fact: 0, position: 1, interpretation: 2 };
     claims.sort((a, b) => (order[a.claim_type] ?? 3) - (order[b.claim_type] ?? 3) || ["high", "medium", "low"].indexOf(confClass(a.confidence)) - ["high", "medium", "low"].indexOf(confClass(b.confidence)));
-    $("claims").innerHTML = claims.length ? claims.map((c) => c.held ? `
+    const CL_N = 5, shown = state.clAll ? claims : claims.slice(0, CL_N);
+    $("claims").innerHTML = claims.length ? shown.map((c) => c.held ? `
       <article class="claim low" style="background:rgba(255,255,255,0.55)">
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="type">Claim about intent · on hold</span><span class="small">${esc(DIAL_LABEL[normDial(c.dial)])} · ${esc(c.claim_id)}</span></div>
         <p class="small" style="margin-top:8px">${esc(c.held)}. The claim is kept in the register and will be shown here once both conditions are met.</p>
@@ -515,6 +587,8 @@
         ${c.counter_evidence ? `<div class="counter"><b>Other possible explanations:</b> ${esc(c.counter_evidence)}</div>` : ""}
         <div class="srcs">Sources: ${srcLinks(c.sources)}</div>
       </article>`).join("") : `<div class="pending"><div><strong>${EV.claims.length ? "No claims for this choice yet" : "Claims register in progress"}</strong>${EV.claims.length ? "Pick another filter above." : ""}</div></div>`;
+    if (claims.length > CL_N) $("claims").insertAdjacentHTML("beforeend", `<button type="button" class="act more-btn" id="cl-more">${state.clAll ? "Show fewer" : `Show all ${claims.length} claims`}</button>`);
+    if ($("cl-more")) $("cl-more").addEventListener("click", () => { state.clAll = !state.clAll; renderEvidence(); });
     bindDeclared($("why"));
   }
   function catColor(c) {
@@ -528,11 +602,12 @@
     if (!L3ok) {
       ce.innerHTML = `<div class="panel-title"><h4>Top exporters by US import value</h4><span class="badge pend">Awaiting Sayari snapshot</span></div><div class="pending" style="min-height:160px"><div><strong>Exporter exposure appears with Layer 3</strong>Each row will show exposure level, confidence and the underlying Sayari source records. A company is never named without all three.</div></div>`;
     } else {
-      const rows = L3.exporters.filter((e) => (e.flags_all || e.flags).length).slice(0, 30);
-      ce.innerHTML = `<div class="panel-title"><h4>Exporters with a link, by US shipments</h4><span class="small">top ${rows.length} · the “Under your settings” column follows the choices above</span></div>
+      const allRows = L3.exporters.filter((e) => (e.flags_all || e.flags).length).slice(0, 30), rows = state.coAll ? allRows : allRows.slice(0, 10);
+      ce.innerHTML = `<div class="panel-title"><h4>Exporters with a link, by US shipments</h4><span class="small">top ${allRows.length} · the “Under your settings” column follows the choices above</span></div>
         <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Exporter</th><th>Country</th><th class="r">${BYSHIP ? "US shipments" : "US import value"}</th><th>Types of link</th><th>Under your settings</th><th>Customs action on record</th><th>Confidence</th><th>Sayari entity</th></tr></thead><tbody>
         ${rows.map((e) => { const c = categoryOf(e); return `<tr><td><b>${esc(e.name)}</b></td><td>${esc(e.country)}</td><td class="r">${BYSHIP ? int(e.value) : usd(e.value)}</td><td>${[...new Set((e.flags_all || e.flags).map((f) => f.level))].sort().map(lvlBadge).join("<br>")}</td><td>${esc(CAT[c].label)}${e.technology ? `<div class="small" style="margin-top:4px"><span data-src="${e.technology === "thin_film_cdte" ? "SI-014;SI-016" : ""}" data-title="Product check" data-body="${esc((L3.product_notes || {})[e.technology] || "")}">${e.technology === "thin_film_cdte" ? "Thin film (CdTe): no polysilicon" : "LED modules, not solar"}</span></div>` : ""}</td><td>${e.detained_group ? `${esc(e.detained_group)}<div class="small">${e.detained_cases.map(esc).join(", ")}</div>` : '<span class="small">none public</span>'}</td><td><span class="conf ${confClass(e.confidence)}">${esc(e.confidence || "—")}</span></td><td class="small"><span title="${esc(e.source_records.join("\n"))}">${e.source_records.length} pull${e.source_records.length === 1 ? "" : "s"}</span><div>${esc(e.sayari_entity_id || "")}</div></td></tr>`; }).join("")}
-        </tbody></table></div>`;
+        </tbody></table></div>${allRows.length > 10 ? `<button type="button" class="act more-btn" id="co-more">${state.coAll ? "Show the top 10 only" : `Show all ${allRows.length} exporters`}</button>` : ""}`;
+      if ($("co-more")) $("co-more").addEventListener("click", () => { state.coAll = !state.coAll; renderCompanies(); });
     }
     const cases = L2.cases || [];
     $("company-cases").innerHTML = `<div class="panel-title"><h4>Public solar cases</h4><span class="small">detentions, blacklistings and other enforcement on record</span></div>` + (cases.length ? `
@@ -756,8 +831,8 @@
       ["Linked supply kept out for good", Math.round(A.S.keep) + "%", Math.round(S.keep) + "%", chg(A.S.keep, S.keep, true)],
     ];
     const d = diffList(A.S, S);
-    box.innerHTML = `<div class="cmp-h"><span class="tag a">A</span><b>${esc(A.label)}</b><span class="vs">against</span><span class="tag b">B</span><b>Now: ${esc(scenLabel(S))}</b></div>
-      <table class="cmp-t"><thead><tr><th></th><th><span class="tag a">A</span></th><th><span class="tag b">B</span></th><th>Change</th></tr></thead><tbody>${rows.map((r) => `<tr><td>${r[0]}</td><td>${r[1]}</td><td><b>${r[2]}</b></td><td>${r[3]}</td></tr>`).join("")}</tbody></table>
+    box.innerHTML = `<div class="cmp-h"><span class="abtag a">A</span><b>${esc(A.label)}</b><span class="vs">against</span><span class="abtag b">B</span><b>Now: ${esc(scenLabel(S))}</b></div>
+      <table class="cmp-t"><thead><tr><th></th><th><span class="abtag a">A</span></th><th><span class="abtag b">B</span></th><th>Change</th></tr></thead><tbody>${rows.map((r) => `<tr><td>${r[0]}</td><td>${r[1]}</td><td><b>${r[2]}</b></td><td>${r[3]}</td></tr>`).join("")}</tbody></table>
       <p class="cmp-d">${d.length ? `<b>What’s different:</b> ${d.map(esc).join(" · ")}` : "B is the same as A. Change any setting or pick a scenario to compare."}</p>`;
   }
   function pinToggle() {
@@ -952,6 +1027,7 @@
       renderControls(); compute();
     },
     data: () => playData(),
+    cfg: () => simCfg(), reach: () => sim.reach, X: () => sim.X, label: () => (sim.cur ? scenLabel(sim.cur) : "Today’s enforcement"),
     cur: () => sim.cur, pin: (on) => { if (!!sim.A !== !!on) pinToggle(); }, play: () => SM.playScenario && SM.playScenario(playData()),
     hash: (o) => { const qs = new URLSearchParams(); qs.set("r", TH[o.reach].id); Object.entries(o.vals || {}).forEach(([k, v]) => qs.set(k, +(+v).toFixed(3))); return "#simulation?" + qs.toString(); },
   };
@@ -1048,9 +1124,14 @@
   let simInited = false;
   function route() {
     const v = (location.hash || "#explorer").slice(1).split("?")[0];
-    const view = ["explorer", "simulation", "goal", "proposed", "method"].includes(v) ? v : "explorer";
+    const view = ["explorer", "simulation", "goal", "stress", "proposed", "method", "brief"].includes(v) ? v : "explorer";
+    const group = ["simulation", "goal", "stress"].includes(view) ? "test" : view;
     document.querySelectorAll(".view").forEach((n) => n.classList.toggle("on", n.id === "view-" + view));
-    document.querySelectorAll(".tabs a").forEach((a) => (a.dataset.view === view ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
+    document.querySelectorAll(".tabs a, .brief-btn").forEach((a) => (a.dataset.group === group ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
+    $("subnav").hidden = group !== "test";
+    document.body.classList.toggle("has-subnav", group === "test");
+    $("subnav").querySelectorAll("a").forEach((a) => (a.dataset.view === view ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
+    document.querySelector(".nav").classList.remove("open"); $("menu-btn").setAttribute("aria-expanded", "false");
     if (sim.cur) syncLive();
     if (view === "simulation") {
       if (!simInited) { initSim(); simInited = true; }
@@ -1059,15 +1140,32 @@
     }
     if (view === "explorer") { renderFlow(); renderCurves(); renderEnf(); initLanding(); if (MAP) MAP.redraw(); }
     if (view === "goal" && SM.renderGoal) SM.renderGoal();
+    if (view === "stress" && SM.renderStress) SM.renderStress();
+    if (view === "brief") renderBrief();
     if (SM.storyRoute) SM.storyRoute(view);
     if (view === "proposed" && SM.renderProposed) SM.renderProposed();
-    if (["simulation", "goal", "proposed", "method"].includes(v) || v === "explorer" || !v) window.scrollTo(0, 0);
+    if (["simulation", "goal", "stress", "proposed", "method", "brief"].includes(v) || v === "explorer" || !v) window.scrollTo(0, 0);
   }
 
+  // numbered step bar (gap page): smooth jumps and highlight the section in view
+  function setupGapSteps() {
+    const links = [...$("gap-steps").querySelectorAll("a")];
+    links.forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); const t = $(a.dataset.s); if (t) scrollTo({ top: t.getBoundingClientRect().top + scrollY - 108, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }));
+    const io = new IntersectionObserver((ents) => ents.forEach((en) => {
+      if (!en.isIntersecting) return;
+      links.forEach((a) => a.classList.toggle("on", a.dataset.s === en.target.id));
+      const a = links.find((x) => x.dataset.s === en.target.id), bar = a && a.parentElement;
+      if (bar && bar.scrollWidth > bar.clientWidth) bar.scrollTo({ left: Math.max(0, a.offsetLeft - 16), behavior: "smooth" });
+    }), { rootMargin: "-45% 0px -50% 0px" });
+    links.forEach((a) => { const t = $(a.dataset.s); if (t) io.observe(t); });
+  }
+  setupGapSteps();
   renderHero(); renderFindings(); renderLayers(); renderDials(); renderReadout(); renderEvidence(); renderCompanies(); renderMethod();
   bindDeclared();
   window.addEventListener("hashchange", route);
+  $("brief-print").addEventListener("click", () => window.print());
+  $("menu-btn").addEventListener("click", () => { const n = document.querySelector(".nav"), o = !n.classList.contains("open"); n.classList.toggle("open", o); $("menu-btn").setAttribute("aria-expanded", String(o)); });
   route();
   let rT; window.addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => { document.querySelectorAll(".view.on svg").forEach((n) => n.remove()); // old widths would hold containers open
-    const v = (location.hash || "#explorer").slice(1).split("?")[0]; if (v === "simulation") runSim(); else if (v === "goal") { if (SM.renderGoal) SM.renderGoal(true); } else if (v === "proposed") { if (SM.renderProposed) SM.renderProposed(true); } else { renderFlow(); renderCurves(); renderEnf(); } }, 150); });
+    const v = (location.hash || "#explorer").slice(1).split("?")[0]; if (v === "simulation") runSim(); else if (v === "goal") { if (SM.renderGoal) SM.renderGoal(true); } else if (v === "stress") { if (SM.renderStress) SM.renderStress(true); } else if (v === "brief") { renderBrief(); } else if (v === "proposed") { if (SM.renderProposed) SM.renderProposed(true); } else { renderFlow(); renderCurves(); renderEnf(); } }, 150); });
 })();

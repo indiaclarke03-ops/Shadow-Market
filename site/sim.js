@@ -77,6 +77,9 @@
     const F = cfg.flagged, nT = F.length, N = cfg.runs;
     const mk = () => F.map(() => new Float64Array(N));
     const out = { flagged: mk(), stopped: mk(), keptOut: mk(), lost: mk(), short: mk() };
+    // optional: keep each future's input draws (for the reverse stress test); no extra random draws, so results are unchanged
+    const rec = cfg.record ? Object.fromEntries(["hidden", "reroute", "p_enf", "release", "capacity", "ramp", "buffer", "detention"].map((k) => [k, new Float64Array(N)])) : null;
+    if (rec) out.inputs = rec;
     const rho = cfg.rho ?? 0.5, fixed = cfg.fixed || {};
     const get = (id, u) => (id in fixed ? fixed[id] : draw(rng, cfg.inputs[id], u));
     const traced = cfg.traced ?? 100, untraced = 100 - traced;
@@ -87,6 +90,7 @@
       const pEnf = get("p_enf"), rel = get("release");
       const cap = Math.max(0.1, get("capacity")), ramp = get("ramp"), buf = get("buffer");
       const det = cfg.inputs.detention ? get("detention") : 0;
+      if (rec) { rec.hidden[r] = hidden; rec.reroute[r] = reroute; rec.p_enf[r] = pEnf; rec.release[r] = rel; rec.capacity[r] = cap; rec.ramp[r] = ramp; rec.buffer[r] = buf; rec.detention[r] = det; }
       for (let j = 0; j < nT; j++) {
         const f = typeof F[j] === "number" ? F[j] : draw(rng, F[j]);
         const fl = Math.min(100, f + (traced ? untraced * (f / traced) * hidden : 0));

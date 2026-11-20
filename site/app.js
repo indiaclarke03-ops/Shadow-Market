@@ -245,7 +245,8 @@
       const res = SM.simulate({ seed: S.seed, runs: 4000, flagged: S.thresholds.map((t) => L3.combos[t.combo].exposed_share), traced: L3.traced_share, inputs, rho: S.copula_rho_hidden_rerouting });
       return SM.summarise(res.lost[j], S.significant_gap_pct);
     };
-    const ev = run("everything"), st = run("strict");
+    const ev = run("everything"), st = run("strict"), td = run("today");
+    renderPlayBand({ today: td, everything: ev, strict: st });
     const items = [
       [pct(full.exposed_share, 0), `of US solar cell and panel shipments come from suppliers with a <b>link to forced-labour risk</b> somewhere upstream: on the US blacklist, in Xinjiang, or named by independent researchers.`, "#layers", "See the three readings"],
       [pct(full.not_detained_share, 0), `are linked but come from companies with <b>no public detention on record</b>. Customs has publicly acted against the groups behind ${pct(OBS.exposed_share, 0)} of shipments (${L3.detained_groups.length} groups). This is the shadow market.`, "#dials-section", "Move the line"],
@@ -257,6 +258,15 @@
     $("find-list").innerHTML = items.map(([n, t, href, cta]) => `<li><span class="num">${n}</span><p>${t}</p><a href="${href}">${cta} →</a></li>`).join("");
   }
   const f1x = (v) => (v > 0 && v < 10 ? v.toFixed(1) : v.toFixed(0));
+  // home page: three scenarios, each one tap from playing out
+  function renderPlayBand(R3) {
+    const S = D.simulation, blurb = { today: "Customs acts on the companies it has stopped before.", everything: "Every link the data can see counts.", strict: "Every link counts, and customs rarely accepts the paperwork." };
+    $("pi-band-cards").innerHTML = ["today", "everything", "strict"].map((id) => {
+      const pr = S.presets.find((p) => p.id === id), r = R3[id];
+      return `<button type="button" class="pi-card ${id}" data-p="${id}"><span class="k">${esc(pr.label)}</span><span class="b">${esc(blurb[id])}</span><b>${f1x(r.p50)}%</b><span class="l">of US solar supply lost for good, in a typical future</span><span class="go"><span aria-hidden="true">▶</span> Play it out</span></button>`;
+    }).join("");
+    $("pi-band-cards").querySelectorAll(".pi-card").forEach((b) => b.addEventListener("click", () => { SM.simApi.ensure(); SM.simApi.preset(b.dataset.p); SM.playFocus(); }));
+  }
   let FIND = null;
 
   /* ---------------------------------------------------------------- one-screen brief */
@@ -274,7 +284,7 @@
     $("brief-nums").innerHTML = nums.map(([n, t, c]) => `<li class="${c}"><b>${n}</b><span>${t}</span></li>`).join("");
     const tools = [
       ["#explorer", "The gap", "Where is the shadow market?", "A map of all 792 exporters, by how far back their link sits."],
-      ["#simulation", "What if?", "What if customs looked further?", "10,000 simulated futures, played out month by month."],
+      ["#simulation", "Play it out", "What happens, month by month, if customs looks further?", "Watch shipments stopped, held, released or kept out, and US stock run down. 10,000 futures behind it."],
       ["#goal", "What would it take?", "Which rules reach a goal without a shortage?", "Searches over 6,000 combinations of the settings a government controls."],
       ["#stress", "What could break it?", "What would have to be true for it to fail?", "A reverse stress test: from the failure back to its likely causes."],
       ["#proposed", "New rules", "What would a rule on AI data-centre optics do?", "Tests a reported rule before it exists."],
@@ -751,6 +761,7 @@
     sim.cur = S;
     renderSim(quick);
     if (quick) return;
+    if (SM.playRefresh) SM.playRefresh();
     try { if ((location.hash || "").startsWith("#simulation")) history.replaceState(null, "", simHash()); } catch (e) { /* file:// or sandbox */ }
   }
 
@@ -800,7 +811,8 @@
   }
   function syncLive() {
     const bar = $("sim-live"), r = $("sim-readout").getBoundingClientRect();
-    const on = $("view-simulation").classList.contains("on") && (r.bottom < 70 || r.top > innerHeight - 40);
+    const st = $("pi-host").getBoundingClientRect(), stageOn = st.top < innerHeight - 140 && st.bottom > 160; // keep the stage clear
+    const on = $("view-simulation").classList.contains("on") && !stageOn && (r.bottom < 70 || r.top > innerHeight - 40);
     bar.classList.toggle("on", on); bar.setAttribute("aria-hidden", on ? "false" : "true");
   }
   let liveRaf = 0;
@@ -1005,7 +1017,8 @@
     readSimHash();
     renderControls();
     $("act-pin").addEventListener("click", pinToggle);
-    $("act-play").addEventListener("click", () => SM.playScenario && SM.playScenario(playData()));
+    $("act-play").addEventListener("click", () => SM.playFocus && SM.playFocus());
+    $("pi-results").addEventListener("click", (e) => { e.preventDefault(); $("sim-dash").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); });
     const story = () => SM.startStory && SM.startStory();
     $("act-story").addEventListener("click", story);
     $("hero-story").addEventListener("click", story);
@@ -1028,7 +1041,7 @@
     },
     data: () => playData(),
     cfg: () => simCfg(), reach: () => sim.reach, X: () => sim.X, label: () => (sim.cur ? scenLabel(sim.cur) : "Today’s enforcement"),
-    cur: () => sim.cur, pin: (on) => { if (!!sim.A !== !!on) pinToggle(); }, play: () => SM.playScenario && SM.playScenario(playData()),
+    cur: () => sim.cur, pin: (on) => { if (!!sim.A !== !!on) pinToggle(); }, play: () => SM.playFocus && SM.playFocus(),
     hash: (o) => { const qs = new URLSearchParams(); qs.set("r", TH[o.reach].id); Object.entries(o.vals || {}).forEach(([k, v]) => qs.set(k, +(+v).toFixed(3))); return "#simulation?" + qs.toString(); },
   };
   function runSim() { if (!sim.cur) compute(); else renderSim(); }
@@ -1121,7 +1134,7 @@
     renderDials(); renderReadout(); renderFlow(); renderCurves(); renderEvidence(); renderCompanies();
     if (L3ok) renderHero(), bindDeclared($("hero-stats"));
   }
-  let simInited = false;
+  let simInited = false, piMounted = false, lastView = null;
   function route() {
     const v = (location.hash || "#explorer").slice(1).split("?")[0];
     const view = ["explorer", "simulation", "goal", "stress", "proposed", "method", "brief"].includes(v) ? v : "explorer";
@@ -1133,8 +1146,12 @@
     $("subnav").querySelectorAll("a").forEach((a) => (a.dataset.view === view ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
     document.querySelector(".nav").classList.remove("open"); $("menu-btn").setAttribute("aria-expanded", "false");
     if (sim.cur) syncLive();
+    // charts drawn while a page was hidden have the wrong width: clear them so they redraw at the real size
+    if (lastView !== view && ["simulation", "proposed"].includes(view)) document.querySelectorAll(`#view-${view} .sim-results svg, #view-${view} .pr-gap-grid svg`).forEach((n) => n.remove());
+    lastView = view;
     if (view === "simulation") {
       if (!simInited) { initSim(); simInited = true; }
+      if (SM.playInline && !piMounted) { piMounted = true; setTimeout(() => SM.playInline($("pi-host")), 0); }
       else if (readSimHash()) { renderControls(); compute(); return; }
       runSim();
     }
@@ -1143,7 +1160,7 @@
     if (view === "stress" && SM.renderStress) SM.renderStress();
     if (view === "brief") renderBrief();
     if (SM.storyRoute) SM.storyRoute(view);
-    if (view === "proposed" && SM.renderProposed) SM.renderProposed();
+    if (view === "proposed" && SM.renderProposed) { SM.renderProposed(); SM.renderProposed(true); }
     if (["simulation", "goal", "stress", "proposed", "method", "brief"].includes(v) || v === "explorer" || !v) window.scrollTo(0, 0);
   }
 

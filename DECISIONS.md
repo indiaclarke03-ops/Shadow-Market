@@ -97,3 +97,9 @@ Judgement calls made while building from `specification.md`. Spec §12 decisions
     - **Colour-blind check.** The "lost or short" red darkened from #a8432f to #9b2f26, so it separates more clearly from the amber shadow-market colour for colour-blind readers.
     - **Keyboard.** The canvas map is keyboard-reachable: Tab, then the arrow keys step through exporters by size, and Escape closes.
     - **Bug fix.** The A/B compare badges were renamed (`.abtag`) to stop them breaking the gap page's card labels.
+44. **Play it out as the centrepiece.**
+    - **Where it lives.** The playback now sits full-width at the top of the What if? page, above the workbench, rather than only in an overlay. It plays when at least 35% of it is on screen, pauses when scrolled away, and replays (debounced) whenever the simulator finishes a full run with new settings.
+    - **Scenario chips.** Chips in the stage switch scenario in one tap. A one-line "of every 100 shipments" breakdown stays visible above it.
+    - **One instance.** The same playback element moves into the overlay when it's opened from elsewhere and moves back on close, so the stage and the overlay always show the same thing.
+    - **Links in.** The home page gains a band of three scenario cards (today, everywhere, everywhere and strict), each with its typical loss from the same quick runs as the findings. Each opens the stage playing that scenario. The walkthrough's playback step, the stress test's "Play this scenario" and the brief all lead to the stage.
+    - **Chart redraw.** Charts drawn while a page was hidden are cleared when it becomes visible, so they redraw at the real width.

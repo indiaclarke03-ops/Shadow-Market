@@ -240,7 +240,7 @@
       <p class="small rs-loop">Reverse, then forward: the scenario above came from working backwards. Send it to the simulator to test it forwards and see how it plays out.</p>`;
     const central = Object.fromEntries(S.rows.filter((r) => R.cs === "solar" ? SM.simApi.INP[r.id] : SM.proposedApi.INP[r.id]).map((r) => [r.id, r.step ? Math.round(r.medF / r.step) * r.step : r.medF]));
     const send = (play) => {
-      if (R.cs === "solar") { SM.simApi.set({ vals: central }); if (play) SM.playScenario(); else location.hash = "#simulation"; }
+      if (R.cs === "solar") { SM.simApi.set({ vals: central }); if (play) SM.playFocus(); else location.hash = "#simulation"; }
       else { SM.proposedApi.setVals(central); location.hash = "#proposed"; setTimeout(() => { const t = $("pr-sim"); if (t) scrollTo({ top: t.getBoundingClientRect().top + scrollY - 110 }); }, 120); }
     };
     $("rs-play").addEventListener("click", () => send(true));

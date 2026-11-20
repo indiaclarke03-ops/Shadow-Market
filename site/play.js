@@ -39,6 +39,7 @@
 
   /* ---------------- state ---------------- */
   let A = null, D = null, M = null, raf = 0, playing = false, simT = 0, last = 0, speed = 1, parts = [], pops = [], spawnAcc = 0;
+  let inlineHost = null, inline = false, inView = false, wasPlaying = false;
   let W = 0, H = 0, cvs, ctx, dpr = 1, prevFocus = null, tl = null, flashT = -1, tally = null, lastPop = {}, yardSlots = [], binSlots = [];
 
   /* ---------------- setup screen ---------------- */
@@ -79,11 +80,30 @@
       fs.map((f) => `<li><i style="background:${f.col}"></i><b>${f1(Math.max(0, f.v))}</b><span><em>${esc(f.label)}</em> ${esc(f.sub)}</span></li>`).join("");
     $("th-market").innerHTML = `The US starts with <b>${esc(A.fmtVal("buffer", D.vals.buffer))}</b> of solar stock. Across 10,000 simulated futures this scenario loses <b>${f1(D.L)}%</b> of supply for good in a typical future, with a <b>${Math.round(D.pShort)}%</b> chance of a shortage.`;
   }
+  // the starting scenario, always visible above the stage: switch scenario in one tap
+  function renderScen() {
+    const fs = fates(D), chips = A.SIM.presets.map((p) => `<button type="button" data-p="${p.id}" aria-pressed="${D.preset === p.id}">${esc(p.label)}</button>`).join("") + (D.preset ? "" : `<span class="own">Your own settings</span>`);
+    $("th-scen").innerHTML = `<div class="th-scen-chips" role="group" aria-label="Scenario">${chips}</div>
+      <p class="th-scen-line"><b>Of every 100 shipments:</b> ${fs.map((f) => `<span><i style="background:${f.col}"></i><b>${f1(Math.max(0, f.v))}</b> ${esc(f.label.toLowerCase())}</span>`).join("")}</p>`;
+    $("th-scen").querySelectorAll("button[data-p]").forEach((b) => b.addEventListener("click", () => { A.preset(b.dataset.p); reload(true); }));
+  }
+  // new settings: rebuild the scenario and replay from the start
+  function reload(autoplay) {
+    if ($("th-run").hidden) return;
+    D = A.data(); M = model(D); renderScen();
+    $("th-title").textContent = D.label;
+    $("th-kick").textContent = `Play it out · what the rule checks: ${D.short}`;
+    size(); restart();
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) { fastForward(); return; }
+    if (autoplay) play(); else pause();
+  }
   function showSetup() { pause(); $("th-setup").hidden = false; $("th-run").hidden = true; renderSetup(); $("th-go").focus(); }
   function showRun() {
     D = A.data(); M = model(D);
     $("th-setup").hidden = true; $("th-run").hidden = false;
-    $("th-kick").textContent = `Playing out the typical future · what the rule checks: ${D.short}`;
+    $("th-title").textContent = D.label;
+    $("th-kick").textContent = `Play it out · what the rule checks: ${D.short}`;
+    renderScen();
     $("th-note").textContent = "Each dot is 2.5% of a month’s solar supply. A simplified month-by-month view of the typical future; the headline numbers come from the full 10,000-future simulation.";
     size(); restart();
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) { fastForward(); return; }
@@ -117,7 +137,7 @@
   const bez = (p0, p1, p2, t) => ({ x: (1 - t) * (1 - t) * p0.x + 2 * (1 - t) * t * p1.x + t * t * p2.x, y: (1 - t) * (1 - t) * p0.y + 2 * (1 - t) * t * p1.y + t * t * p2.y });
   function pop(x, y, text, col) {
     const now = performance.now();
-    if (now - (lastPop[text] || 0) < 650) return;
+    if (now - (lastPop[text] || 0) < 1200 || pops.some((q) => q.text === text)) return;
     lastPop[text] = now; pops.push({ x, y, text, col, life: 1 });
   }
   function spawn(prefill) {
@@ -348,7 +368,7 @@
   /* ---------------- loop ---------------- */
   function size() {
     const box = $("th-stage");
-    W = Math.max(300, box.clientWidth); H = W < 560 ? 300 : 360;
+    W = Math.max(300, box.clientWidth); H = W < 560 ? 300 : inline && W >= 820 ? 400 : 360;
     dpr = Math.min(2, window.devicePixelRatio || 1);
     cvs.width = W * dpr; cvs.height = H * dpr; cvs.style.width = W + "px"; cvs.style.height = H + "px";
     const g = geo(); yardSlots = slots(g.yard, g.nar ? 8 : 10); binSlots = slots(g.bin, g.nar ? 8 : 10);
@@ -371,7 +391,7 @@
     if (simT >= M.T) { playing = false; $("th-play").textContent = "Replay"; return; }
     raf = requestAnimationFrame(frame);
   }
-  function play() { if (simT >= M.T) restart(); playing = true; last = performance.now(); $("th-play").textContent = "Pause"; if (!raf) raf = requestAnimationFrame(frame); }
+  function play() { if (simT >= M.T) restart(); playing = true; wasPlaying = false; last = performance.now(); $("th-play").textContent = "Pause"; if (!raf) raf = requestAnimationFrame(frame); }
   function pause() { playing = false; if ($("th-play")) $("th-play").textContent = "Play"; }
   function restart() {
     simT = 0; parts = []; pops = []; spawnAcc = 0; tally = { pass: 0, rel: 0, out: 0, back: 0 };
@@ -386,8 +406,10 @@
   }
   function close() {
     pause(); $("theatre").hidden = true; document.body.classList.remove("no-scroll");
+    if (inlineHost) { inlineHost.appendChild(box()); inline = true; $("th-setup").hidden = true; $("th-run").hidden = false; reload(inView); }
     if (prevFocus) prevFocus.focus();
   }
+  const box = () => document.querySelector(".th-box");
 
   let wired = false;
   function wire() {
@@ -396,7 +418,7 @@
     $("th-stage").appendChild(cvs); ctx = cvs.getContext("2d");
     $("th-close").addEventListener("click", close);
     $("theatre").addEventListener("click", (e) => { if (e.target.id === "theatre") close(); });
-    document.addEventListener("keydown", (e) => { if (!$("theatre").hidden && e.key === "Escape") close(); });
+    document.addEventListener("keydown", (e) => { if (!inline && !$("theatre").hidden && e.key === "Escape") close(); });
     $("th-go").addEventListener("click", showRun);
     $("th-change").addEventListener("click", showSetup);
     $("th-play").addEventListener("click", () => (playing ? pause() : play()));
@@ -404,7 +426,7 @@
     $("th-speed").querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
       speed = +b.dataset.v; $("th-speed").querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
     }));
-    let rT; window.addEventListener("resize", () => { if ($("theatre").hidden || $("th-run").hidden) return; clearTimeout(rT); rT = setTimeout(() => { size(); draw(); side(); }, 120); });
+    let rT; window.addEventListener("resize", () => { if ((!inline && $("theatre").hidden) || $("th-run").hidden || (inline && !inlineHost.offsetParent)) return; clearTimeout(rT); rT = setTimeout(() => { size(); draw(); side(); }, 120); });
   }
 
   /** Opens on the starting scenario; the simulator's current settings are the starting point. */
@@ -412,8 +434,46 @@
     A = SM.simApi; if (!A) return;
     A.ensure();
     wire();
+    if (inline) { pause(); $("theatre").appendChild(box()); inline = false; }
     prevFocus = document.activeElement;
     $("theatre").hidden = false; document.body.classList.add("no-scroll");
     showSetup();
+  };
+
+  /* ---------------- inline: the stage at the top of the What if? page ---------------- */
+  SM.playInline = function (host) {
+    A = SM.simApi; if (!A || !host) return;
+    A.ensure(); wire();
+    inlineHost = host;
+    if ($("theatre").hidden) { host.appendChild(box()); inline = true; }
+    $("th-setup").hidden = true; $("th-run").hidden = false;
+    D = A.data(); M = model(D); renderScen();
+    $("th-title").textContent = D.label; $("th-kick").textContent = `Play it out · what the rule checks: ${D.short}`;
+    $("th-note").textContent = "Each dot is 2.5% of a month’s solar supply. A simplified month-by-month view of the typical future; the headline numbers come from the full 10,000-future simulation.";
+    size(); restart();
+    // play when it scrolls into view, pause when it leaves
+    new IntersectionObserver((ents) => ents.forEach((en) => {
+      inView = en.isIntersecting && en.intersectionRatio >= 0.35;
+      if (!inline || $("th-run").hidden) return;
+      if (inView && (wasPlaying || simT === 0)) { if (matchMedia("(prefers-reduced-motion: reduce)").matches) fastForward(); else play(); }
+      else if (!inView && playing) { wasPlaying = true; pause(); }
+    }), { threshold: [0, 0.35, 0.6] }).observe(host);
+  };
+  // the simulator's settings changed: replay with them (debounced)
+  let rfT = 0;
+  SM.playRefresh = function (force) {
+    if (!inline || !inlineHost) return;
+    clearTimeout(rfT);
+    rfT = setTimeout(() => { if ($("th-run").hidden) { $("th-setup").hidden = true; $("th-run").hidden = false; } reload(force || inView); }, force ? 0 : 250);
+  };
+  // jump to the stage from anywhere and play the current settings
+  SM.playFocus = function () {
+    const go = () => {
+      const h = document.getElementById("pi-host"); if (!h) return SM.playScenario();
+      if (!inline) SM.playInline(h);
+      scrollTo({ top: h.getBoundingClientRect().top + scrollY - 128, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+      SM.playRefresh(true);
+    };
+    if (!(location.hash || "").startsWith("#simulation")) { location.hash = "#simulation"; setTimeout(go, 180); } else go();
   };
 })();

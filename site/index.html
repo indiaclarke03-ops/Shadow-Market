@@ -32,7 +32,7 @@
 </nav>
 <nav class="subnav" id="subnav" aria-label="Test it" hidden>
   <div class="wrap">
-    <a href="#simulation" data-view="simulation"><b>What if?</b><span>forward: set the rule, see what happens</span></a>
+    <a href="#simulation" data-view="simulation"><b>What if? · Play it out</b><span>forward: watch a rule play out, month by month</span></a>
     <a href="#goal" data-view="goal"><b>What would it take?</b><span>set a goal, find the rules that reach it</span></a>
     <a href="#stress" data-view="stress"><b>What could break it?</b><span>reverse: start from a failure, find the causes</span></a>
     <div class="ckey" aria-label="Colour key"><span><i style="background:#8eaad6"></i>caught</span><span><i style="background:#c8841a"></i>shadow market</span><span><i style="background:#9b2f26"></i>lost or short</span><span><i style="background:#eef3fb;box-shadow:inset 0 0 0 1px #9aa6bb"></i>released</span><span><i style="background:#c9b6e4"></i>back in</span></div>
@@ -89,6 +89,17 @@
       <p class="coverage" id="coverage"></p>
     </div>
   </header>
+
+  <section class="pi-band" id="pi-band" aria-label="Play it out">
+    <div class="wrap">
+      <div class="pi-band-text">
+        <p class="kicker">Play it out</p>
+        <h2 class="display">What happens when customs looks further?</h2>
+        <p class="lede">Watch shipments reach the border, get stopped, held, released or kept out, and see whether America’s solar stock runs dry before new suppliers arrive.</p>
+      </div>
+      <div class="pi-band-cards" id="pi-band-cards"></div>
+    </div>
+  </section>
 
   <nav class="pr-steps gap-steps" id="gap-steps" aria-label="Sections on this page">
     <div class="wrap">
@@ -199,6 +210,17 @@
     </div>
   </header>
 
+  <section class="pi-sec" id="pi-sec" aria-label="Play it out">
+    <div class="wrap">
+      <div class="pi-head">
+        <div><p class="kicker">Play it out</p><h2 class="display">Watch the rule play out, month by month</h2></div>
+        <p class="lede">Every dot is a shipment heading for the US. Customs stops some of the ones the rule flags and holds them while it checks the paperwork: most are released, the rest are kept out, and some of those find another way in. Pick a scenario and watch what happens to America’s solar supply.</p>
+      </div>
+      <div class="pi-host" id="pi-host"></div>
+      <p class="pi-more">Change any setting below and it replays with your numbers · <a href="#sim-dash" id="pi-results">See the full results ↓</a></p>
+    </div>
+  </section>
+
   <section class="sim-body">
     <div class="wrap">
       <div class="sim-layout">
@@ -210,7 +232,7 @@
         <div class="sim-results">
           <div class="sim-dash" id="sim-dash">
             <div class="sim-actions">
-              <button type="button" class="act primary" id="act-play"><span aria-hidden="true">▶</span> Play it out</button>
+              <button type="button" class="act primary" id="act-play"><span aria-hidden="true">▶</span> Replay it above</button>
               <button type="button" class="act" id="act-pin">Compare: pin this as A</button>
               <button type="button" class="act" id="act-story">Walk me through it</button>
             </div>
@@ -585,6 +607,7 @@
     </section>
 
     <section class="th-run" id="th-run" hidden>
+      <div class="th-scen" id="th-scen"></div>
       <div class="th-main">
         <div class="th-stage" id="th-stage"></div>
         <div class="th-side">

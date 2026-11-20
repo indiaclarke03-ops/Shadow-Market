@@ -20,22 +20,14 @@
     <a class="brand" href="#explorer"><span class="mark" aria-hidden="true"></span>The Shadow Market</a>
     <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="tabs"><span aria-hidden="true"></span>Menu</button>
     <div class="tabs" id="tabs" role="tablist">
-      <a href="#explorer" data-view="explorer" data-group="explorer">The gap</a>
-      <a href="#simulation" data-view="simulation" data-group="test">Test it</a>
-      <a href="#proposed" data-view="proposed" data-group="proposed">New rules</a>
-      <a href="#method" data-view="method" data-group="method">Method &amp; limits</a>
+      <a href="#explorer" data-group="explorer">The gap</a>
+      <a href="#simulation" data-group="simulation">Play it out</a>
+      <a href="#stress" data-group="back">Work backwards</a>
+      <a href="#proposed" data-group="proposed">New rules</a>
+      <a href="#method" data-group="method" class="m-only">Method &amp; sources</a>
       <a href="#brief" data-group="brief" class="m-only">The one-screen brief</a>
     </div>
-    <a class="brief-btn" href="#brief" data-group="brief">Brief <span aria-hidden="true">↗</span></a>
-    <span class="snap" id="snap"></span>
-  </div>
-</nav>
-<nav class="subnav" id="subnav" aria-label="Test it" hidden>
-  <div class="wrap">
-    <a href="#simulation" data-view="simulation"><b>What if? · Play it out</b><span>forward: watch a rule play out, month by month</span></a>
-    <a href="#goal" data-view="goal"><b>What would it take?</b><span>set a goal, find the rules that reach it</span></a>
-    <a href="#stress" data-view="stress"><b>What could break it?</b><span>reverse: start from a failure, find the causes</span></a>
-    <div class="ckey" aria-label="Colour key"><span><i style="background:#8eaad6"></i>caught</span><span><i style="background:#c8841a"></i>shadow market</span><span><i style="background:#9b2f26"></i>lost or short</span><span><i style="background:#eef3fb;box-shadow:inset 0 0 0 1px #9aa6bb"></i>released</span><span><i style="background:#c9b6e4"></i>back in</span></div>
+    <div class="nav-side"><a class="side-link" href="#method" data-group="method">Method &amp; sources</a><a class="brief-btn" href="#brief" data-group="brief">Brief <span aria-hidden="true">↗</span></a></div>
   </div>
 </nav>
 
@@ -78,14 +70,8 @@
           <p class="lede" id="hero-lede"></p>
           <p class="hero-check" id="hero-check"></p>
         </div>
-        <div class="hero-stats" id="hero-stats"></div>
       </div>
-      <ol class="steps four">
-        <li><a href="#layers"><span class="n">01</span><b>See the gap</b><span>The rule on paper, in practice, and with full visibility of the supply chain.</span></a></li>
-        <li><a href="#simulation"><span class="n">02</span><b>Test the fallout</b><span>Simulate what tougher enforcement would do to America’s solar supply.</span></a></li>
-        <li><a href="#goal"><span class="n">03</span><b>What would it take?</b><span>Set a goal and find the rules that reach it without a shortage.</span></a></li>
-        <li><a href="#proposed"><span class="n">04</span><b>Test a new rule</b><span>Run a reported rule on AI data-centre optics before it exists.</span></a></li>
-      </ol>
+
       <p class="coverage" id="coverage"></p>
     </div>
   </header>
@@ -101,123 +87,60 @@
     </div>
   </section>
 
-  <nav class="pr-steps gap-steps" id="gap-steps" aria-label="Sections on this page">
-    <div class="wrap">
-      <a href="#findings" data-s="findings"><span>1</span>What we found</a>
-      <a href="#layers" data-s="layers"><span>2</span>Three readings</a>
-      <a href="#dials-section" data-s="dials-section"><span>3</span>Move the line</a>
-      <a href="#why" data-s="why"><span>4</span>Why it’s there</a>
-      <a href="#companies" data-s="companies"><span>5</span>The companies</a>
-    </div>
-  </nav>
 
   <!-- findings -->
   <section id="findings" class="findings pr-sec">
     <div class="wrap">
-      <div class="pr-sec-head"><p class="pr-num">1</p><div><h2 class="display">What we found</h2><p class="lede">Five findings from two years of US customs records for solar cells and panels, traced upstream with Sayari’s trade and company data. Each links to the part of the tool that shows it.</p></div></div>
-      <ol class="find-list" id="find-list"></ol>
-    </div>
-  </section>
-
-  <!-- three layers -->
-  <section id="layers" class="pr-sec">
-    <div class="wrap">
-      <div class="pr-sec-head"><p class="pr-num">2</p><div><h2 class="display">One rule, three readings</h2><p class="lede">What the law says, what customs actually acts on, and what the law would catch if every step of the supply chain were visible. The gap between the last two is the shadow market.</p></div></div>
+      <div class="pr-sec-head"><p class="pr-num">1</p><div><h2 class="display">What we found</h2><p class="lede">One law, three readings of it, from two years of US customs records for solar cells and panels traced upstream with Sayari’s trade and company data. The gap between the last two is the shadow market.</p></div></div>
       <div class="panel readings" id="readings"></div>
+      <ol class="find-list" id="find-list"></ol>
+      <details class="layers-more"><summary>How each reading is measured</summary>
       <div class="layers">
         <article class="panel layer" id="layer1"></article>
         <article class="panel layer" id="layer2"></article>
         <article class="panel layer accent" id="layer3"></article>
       </div>
+      </details>
     </div>
   </section>
 
   <!-- explorer -->
   <section class="dark pr-sec" id="dials-section">
     <div class="wrap">
-      <div class="pr-sec-head"><p class="pr-num">3</p><div><h2 class="display">Move the line</h2><p class="lede">A rule like this is a set of choices: how far back to look, which companies count, whether shared owners count. Change them and watch how much of America’s solar supply is flagged. Look for <b>jumps</b>, where one small change flags a lot more.</p></div></div>
+      <div class="pr-sec-head"><p class="pr-num">2</p><div><h2 class="display">Move the line</h2><p class="lede">A rule like this is a set of choices: how far back to look, which companies count, whether shared owners count. Change them and watch how much of America’s solar supply is flagged. Look for <b>jumps</b>, where one small change flags a lot more.</p></div></div>
       <div class="explorer-grid">
         <div class="controls" id="dials"></div>
         <div>
           <div class="readout instrument" id="readout"></div>
           <details class="more-measures"><summary>More measures: concentration and replacement time</summary><div class="readout instrument" id="readout-more"></div></details>
+          <div class="tabset panel" data-tabset="gapcharts">
+        <div class="tabs-row" role="tablist">
+          <button type="button" role="tab" data-t="curves" aria-selected="true">How the flagged share grows</button>
+          <button type="button" role="tab" data-t="flow" aria-selected="false">Where the flagged supply sits</button>
+          <button type="button" role="tab" data-t="enf" aria-selected="false">What customs has stopped</button>
+        </div>
+        <div class="panes">
+          <div class="pane on" data-p="curves" id="curve-panel"><p class="small panel-sub">One chart per choice, with the others held where you set them. The dot is your current setting. <span id="curve-note"></span></p><div id="curves"></div></div>
+          <div class="pane" data-p="flow" id="flow-panel"><p class="small panel-sub">From raw polysilicon (left) to what reaches the US (right), each band coloured by its strongest link under your settings.</p><div class="legend" id="flow-legend"></div><div id="flow"></div></div>
+          <div class="pane" data-p="enf" id="enf-panel"><p class="small panel-sub">US Customs (CBP) figures for shipments stopped under the law.</p><div id="enf"></div></div>
         </div>
       </div>
-      <div class="charts">
-        <div class="panel" id="flow-panel">
-          <div class="panel-title"><h4>Where the flagged supply sits</h4><div class="legend" id="flow-legend"></div></div>
-          <p class="small panel-sub">From raw polysilicon (left) to what reaches the US (right). Each band is coloured by its strongest link to forced-labour risk under your settings. Hover for numbers.</p>
-          <div id="flow"></div>
-        </div>
-        <div class="chart-row">
-          <div class="panel" id="curve-panel">
-            <div class="panel-title"><h4>How the flagged share grows</h4><span class="small" id="curve-note"></span></div>
-            <p class="small panel-sub">One chart per choice, with the others held where you set them. The dot is your current setting.</p>
-            <div id="curves"></div>
-          </div>
-          <div class="panel" id="enf-panel">
-            <div class="panel-title"><h4>What customs has actually stopped</h4><span class="small">US Customs (CBP) figures</span></div>
-            <div id="enf"></div>
-          </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- why the line is here -->
-  <section id="why" class="pr-sec">
-    <div class="wrap">
-      <div class="pr-sec-head"><p class="pr-num">4</p><div><h2 class="display">Why the line is where it is</h2><p class="lede">The data shows <em>where</em> the rule stops. The public record (the law, official guidance, hearings, lobbying, research) helps explain <em>why</em>. Every claim says how sure we are.</p></div></div>
-      <div class="chips" id="dial-chips" role="group" aria-label="Filter evidence by choice"></div>
-      <div class="why-grid">
-        <div class="panel flat">
-          <div class="panel-title"><h4>Timeline</h4><span class="small" id="tl-count"></span></div>
-          <ol class="timeline" id="timeline"></ol>
-        </div>
-        <div>
-          <p class="intent-note">A note on intent: when the data shows a jump <i>and</i> the record shows a boundary was argued over, we say only that the evidence is <b>consistent with a deliberate choice</b>. It is never treated as proof. Other explanations are shown with every claim.</p>
-          <div class="claims" id="claims"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- companies -->
-  <section class="mist pr-sec" id="companies">
-    <div class="wrap">
-      <div class="pr-sec-head"><p class="pr-num">5</p><div><h2 class="display">The companies behind the numbers</h2><p class="lede">A company is only named alongside how it is linked, how confident we are, and the source. A link means a supply chain connection, not proof that a product contains forced labour.</p></div></div>
-      <div class="panel" id="company-exposure"></div>
-      <div class="panel" style="margin-top:24px" id="company-cases"></div>
-    </div>
-  </section>
 </main>
 
 <!-- ============================================================ SIMULATION -->
 <main class="view" id="view-simulation">
-  <header class="hero sim-hero compact">
-    <div class="wrap">
-      <p class="kicker">Simulation · 10,000 possible futures</p>
-      <h1 class="sim-h1">What if customs <span class="soft">looked further?</span></h1>
-      <p class="lede">How much solar supply would America lose if customs blocked shipments linked to forced labour further up the supply chain? Nobody knows the inputs exactly, so each scenario is played out 10,000 times with slightly different assumptions. Change a setting and the results update straight away.</p>
-      <p class="hero-acts"><button type="button" class="btn accent" id="hero-story">▶ Walk me through it <span>2 minutes</span></button></p>
-      <ol class="chain row" aria-label="How the simulation works">
-        <li><b>1</b><span>The rule <em>flags</em> suppliers with a link to forced-labour risk</span></li>
-        <li><b>2</b><span>Customs <em>stops</em> some of their shipments</span></li>
-        <li><b>3</b><span>Some are <em>released</em> once importers show paperwork</span></li>
-        <li><b>4</b><span>Some blocked supply <em>gets back in</em> another way</span></li>
-        <li class="eq"><b>=</b><span>Supply <em>lost</em>. Can stock and new suppliers cover it?</span></li>
-      </ol>
-    </div>
-  </header>
 
   <section class="pi-sec" id="pi-sec" aria-label="Play it out">
     <div class="wrap">
-      <div class="pi-head">
-        <div><p class="kicker">Play it out</p><h2 class="display">Watch the rule play out, month by month</h2></div>
-        <p class="lede">Every dot is a shipment heading for the US. Customs stops some of the ones the rule flags and holds them while it checks the paperwork: most are released, the rest are kept out, and some of those find another way in. Pick a scenario and watch what happens to America’s solar supply.</p>
-      </div>
+      <p class="pi-intro"><b>Every dot is a shipment heading for the US.</b> Watch customs stop, hold, release or keep out the ones the rule flags. <button type="button" class="linkbtn" id="hero-story">Walk me through it (2 min)</button></p>
       <div class="pi-host" id="pi-host"></div>
-      <p class="pi-more">Change any setting below and it replays with your numbers · <a href="#sim-dash" id="pi-results">See the full results ↓</a></p>
+      <p class="pi-more"><a href="#sim-dash" id="pi-results">Change the settings and see the full results ↓</a></p>
     </div>
   </section>
 
@@ -259,14 +182,17 @@
               </div>
             </div>
           </div>
-          <article class="analysis" id="sim-analysis" aria-live="polite"></article>
-          <div class="panel">
-            <div class="panel-title"><h4>The same scenario at every reach</h4><span class="small">typical loss · line = 9 in 10 futures · click a bar to switch</span></div>
-            <div id="sim-reach"></div>
-          </div>
-          <div class="panel">
-            <div class="panel-title"><h4>What matters most</h4><span class="small">how far the typical loss moves if we’re wrong about each input</span></div>
-            <div id="sim-tornado"></div>
+          <div class="tabset panel" data-tabset="simmore" id="sim-more">
+            <div class="tabs-row" role="tablist">
+              <button type="button" role="tab" data-t="mean" aria-selected="true">What this means</button>
+              <button type="button" role="tab" data-t="reach" aria-selected="false">The same scenario at every reach</button>
+              <button type="button" role="tab" data-t="sens" aria-selected="false">What matters most</button>
+            </div>
+            <div class="panes">
+              <div class="pane on" data-p="mean"><article class="analysis flat" id="sim-analysis" aria-live="polite"></article></div>
+              <div class="pane" data-p="reach"><p class="small panel-sub">Typical loss at each reach · line = 9 in 10 futures · click a bar to switch.</p><div id="sim-reach"></div></div>
+              <div class="pane" data-p="sens" id="sim-sens-pane"><p class="small panel-sub">How far the typical loss moves if we’re wrong about each input.</p><div id="sim-tornado"></div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -292,11 +218,10 @@
 
 <!-- ============================================================ WHAT WOULD IT TAKE -->
 <main class="view" id="view-goal">
-  <header class="hero sim-hero compact">
+  <header class="wb-head">
     <div class="wrap">
-      <p class="kicker">Goal finder · works backwards from the outcome you want</p>
-      <h1 class="sim-h1">What would it take <span class="soft">to keep it out?</span></h1>
-      <p class="lede">Set a goal for how much forced-labour-linked solar supply to keep out of the US, and how much risk of a shortage you’ll accept. The tool tries every combination of the settings a government controls and keeps the ones that meet the goal. Everything it can’t control stays at our estimates.</p>
+      <div class="wb-switch" role="tablist" aria-label="Work backwards"><a href="#stress"><b>What could break it?</b><span>start from a failure, find its likely causes</span></a><a href="#goal" aria-current="page"><b>What would it take?</b><span>set a goal, find the rules that reach it</span></a></div>
+      <p class="wb-intro">Set a goal for how much forced-labour-linked solar supply to keep out and how much shortage risk you’ll accept. The tool tries every combination of the settings a government controls and keeps the ones that work.</p>
     </div>
   </header>
   <section class="sim-body">
@@ -325,14 +250,10 @@
 
 <!-- ============================================================ WHAT COULD BREAK IT (reverse stress test) -->
 <main class="view" id="view-stress">
-  <header class="hero sim-hero compact">
+  <header class="wb-head">
     <div class="wrap">
-      <p class="kicker">Reverse stress test · start from the failure</p>
-      <h1 class="sim-h1">What could break it? <span class="soft">Work back from the outcome.</span></h1>
-      <div class="rs-fr">
-        <div class="rs-dir"><p class="k">Forward · the What if? page</p><p class="q">“What happens if customs does this?”</p><div class="rs-flow"><span>Settings you choose</span><i>→</i><span>The model</span><i>→</i><span>Outcome</span></div><p class="rs-use">Useful for testing a rule you have in mind.</p></div>
-        <div class="rs-dir rev"><p class="k">Reverse · this page</p><p class="q">“What would have to be true for this to go wrong?”</p><div class="rs-flow"><span>The likely causes</span><i>←</i><span>The model</span><i>←</i><span>A failure you can’t accept</span></div><p class="rs-use">Useful for finding the combinations nobody thought to test, and what to watch for.</p></div>
-      </div>
+      <div class="wb-switch" role="tablist" aria-label="Work backwards"><a href="#stress" aria-current="page"><b>What could break it?</b><span>start from a failure, find its likely causes</span></a><a href="#goal"><b>What would it take?</b><span>set a goal, find the rules that reach it</span></a></div>
+      <p class="wb-intro"><b>Forward</b> (Play it out): choose the settings, see the outcome. <b>Backwards</b> (here): choose an outcome you can’t accept and ask what would have to be true for it to happen.</p>
     </div>
   </header>
   <section class="sim-body">
@@ -343,18 +264,10 @@
           <div class="rs-question" id="rs-question"></div>
           <div class="readout instrument" id="rs-readout" aria-live="polite"></div>
           <p class="rs-note" id="rs-note"></p>
-          <div class="sim-grid">
-            <div class="panel">
-              <div class="panel-title"><h4>100 possible futures</h4></div>
-              <div class="futures-wrap"><div id="rs-futures"></div><div class="legend col" id="rs-futures-legend"></div></div>
-            </div>
-            <div class="panel">
-              <div class="panel-title"><h4>Where the line falls</h4></div>
-              <p class="small panel-sub">How the outcome is spread across all futures. Red bars are the ones that fail.</p>
-              <div id="rs-hist"></div>
-            </div>
+          <div class="rs-pair">
+            <div class="panel rs-central" id="rs-central"></div>
+            <div class="panel"><div class="panel-title"><h4>Where the line falls</h4></div><p class="small panel-sub">The outcome across all 20,000 futures. Red bars fail.</p><div id="rs-hist"></div><div id="rs-futures" hidden></div><div id="rs-futures-legend" hidden></div></div>
           </div>
-          <div class="panel rs-central" id="rs-central"></div>
           <div class="panel">
             <div class="panel-title"><h4>What the world looks like when it fails</h4><span class="small">ranked by how far each input moves</span></div>
             <p class="small panel-sub">For each uncertain input: its spread across all futures (dashed) against the futures where the failure happens (red). Where the red sits away from the dashed line, that input helps cause the failure.</p>
@@ -397,7 +310,7 @@
       <p class="kicker">Proposed rule · Case 2 · Optical transceivers for AI data centres</p>
       <h1 class="sim-h1">What if the rule changes? <span class="soft">Testing a regulation before it exists.</span></h1>
       <div class="pr-hero-row">
-        <p class="lede">Case 1 asked what today’s rule misses. This case asks: if a reported US restriction on Chinese optical transceivers arrives, what would it cover, what would it leave out, and what would change for the people building AI data centres? The rule <b>has not been published</b>, so the page runs on reported parameters and illustrative supply figures, and every input says which it is.</p>
+        <p class="lede">If a reported US restriction on Chinese optical transceivers arrives, what would it cover, what would it miss, and what would change for the people building AI data centres? The rule <b>has not been published</b>: every input says whether it is reported or illustrative.</p>
         <p class="pr-banner" role="note"><b>Scenario, not forecast.</b> Anything marked <span class="tier medium">reported</span> has no official text yet. The tool takes no side on whether the rule is warranted.</p>
       </div>
     </div>
@@ -423,6 +336,8 @@
         <div class="panel-title"><h4>Signals so far</h4><span class="small"><span class="tier high">primary</span> official text · <span class="tier medium">reported</span> no official text yet</span></div>
         <div id="pr-timeline"></div>
       </div>
+      <details class="pr-cards-wrap" id="pr-cards-wrap">
+        <summary><b>Intelligence cards</b><span>each piece of reporting, what it sets, and how sure we are · apply or remove cards to change the rule</span></summary>
       <div class="pr-cards-head">
         <h4>Intelligence cards</h4>
         <p class="small">Applying a card sets part of the rule. Cards with less certain sourcing make that part vary across the simulated futures.</p>
@@ -430,6 +345,7 @@
       </div>
       <form class="panel pr-form" id="pr-form" hidden></form>
       <div class="pr-cards" id="pr-cards"></div>
+      </details>
     </div>
   </section>
 
@@ -437,7 +353,7 @@
     <div class="wrap">
       <div class="pr-sec-head"><p class="pr-num">2</p><div><h2 class="display">Who the rule reaches</h2>
         <p class="lede">Every square is 1% of the optical transceivers going into US AI data centres (illustrative shares), laid out by who makes them and where. The colour shows what this rule does to them in its first year.</p></div></div>
-      <div class="readout instrument" id="pr-gap-readout"></div>
+
       <div class="pr-gap-grid">
         <div class="panel pr-units-panel">
           <div class="panel-title"><h4>100 transceivers, by maker</h4><span class="small" id="pr-units-year"></span></div>
@@ -455,7 +371,7 @@
   <section class="sim-body pr-sec" id="pr-sim">
     <div class="wrap">
       <div class="pr-sec-head"><p class="pr-num">3</p><div><h2 class="display">What could happen to supply</h2>
-        <p class="lede">The scenario played out 10,000 times, year by year from 2026 to 2031. Each future draws the uncertain inputs from their ranges, and parts of the rule set by less certain cards sometimes take their next-most-likely value.</p></div></div>
+        <p class="lede">The scenario played out 10,000 times, year by year from 2026 to 2031.</p></div></div>
       <div class="sim-layout">
         <aside class="controls sim-controls" id="pr-sim-controls" aria-label="Simulation inputs"></aside>
         <div class="sim-results">
@@ -479,23 +395,19 @@
               <div class="legend" id="pr-years-legend"></div>
             </div>
           </div>
-          <div class="sim-grid">
-            <div class="panel">
-              <div class="panel-title"><h4>100 possible futures</h4></div>
-              <div class="futures-wrap"><div id="pr-futures"></div><div class="legend col" id="pr-futures-legend"></div></div>
-              <p class="small panel-sub" style="margin:10px 0 0">Each square is 100 of the 10,000 futures, by its worst year.</p>
+          <div class="tabset panel" data-tabset="prmore">
+            <div class="tabs-row" role="tablist">
+              <button type="button" role="tab" data-t="mean" aria-selected="true">What this means</button>
+              <button type="button" role="tab" data-t="trig" aria-selected="false">Company or factory?</button>
+              <button type="button" role="tab" data-t="sens" aria-selected="false">What matters most</button>
+              <button type="button" role="tab" data-t="fut" aria-selected="false">100 possible futures</button>
             </div>
-            <div class="panel">
-              <div class="panel-title"><h4>Company or factory?</h4><span class="small">click a bar to switch</span></div>
-              <p class="small panel-sub">The same scenario with each trigger: typical peak share of supply blocked, after some shifts to uncovered sources.</p>
-              <div id="pr-trigger"></div>
+            <div class="panes">
+              <div class="pane on" data-p="mean"><article class="analysis flat" id="pr-analysis" aria-live="polite"></article></div>
+              <div class="pane" data-p="trig"><p class="small panel-sub">The same scenario with each trigger: typical peak share of supply blocked, after some shifts to uncovered sources. Click a bar to switch.</p><div id="pr-trigger"></div></div>
+              <div class="pane" data-p="sens"><p class="small panel-sub">Inputs move between the low and high ends of their ranges; design choices switch to their next-most-likely option.</p><div id="pr-tornado"></div></div>
+              <div class="pane" data-p="fut"><div class="futures-wrap"><div id="pr-futures"></div><div class="legend col" id="pr-futures-legend"></div></div><p class="small panel-sub" style="margin:10px 0 0">Each square is 100 of the 10,000 futures, by its worst year.</p></div>
             </div>
-          </div>
-          <article class="analysis" id="pr-analysis" aria-live="polite"></article>
-          <div class="panel">
-            <div class="panel-title"><h4>What matters most</h4><span class="small">how far the typical peak blocked share moves</span></div>
-            <p class="small panel-sub">Inputs move between the low and high ends of their ranges; design choices switch to their next-most-likely option.</p>
-            <div id="pr-tornado"></div>
           </div>
           <details class="panel flat sim-details">
             <summary><h4>How the model works, and where each number comes from</h4></summary>
@@ -565,13 +477,48 @@
 
 <!-- ============================================================ METHOD -->
 <main class="view" id="view-method">
-  <section class="mist" style="padding-top:88px">
+  <section class="pr-sec">
     <div class="wrap">
-      <div class="sec-head">
-        <h2 class="display">Method &amp; limits</h2>
-        <p class="lede">What the numbers mean, where they come from, and what they cannot tell you.</p>
-      </div>
+      <div class="pr-sec-head"><p class="pr-num">1</p><div><h2 class="display">Method &amp; sources</h2><p class="lede">What the numbers mean, where they come from, and what they cannot tell you. The evidence behind the rule and the companies behind the numbers follow below.</p></div></div>
       <div class="method-grid" id="method"></div>
+      <div class="hero-stats light" id="hero-stats"></div>
+    </div>
+  </section>
+  <!-- why the line is here -->
+  <section id="why" class="pr-sec method-sec">
+    <div class="wrap">
+      <div class="pr-sec-head"><p class="pr-num">2</p><div><h2 class="display">Why the line is where it is</h2><p class="lede">The data shows <em>where</em> the rule stops. The public record (the law, official guidance, hearings, lobbying, research) helps explain <em>why</em>. Every claim says how sure we are.</p></div></div>
+      <div class="chips" id="dial-chips" role="group" aria-label="Filter evidence by choice"></div>
+      <div class="why-grid">
+        <div class="panel flat">
+          <div class="panel-title"><h4>Timeline</h4><span class="small" id="tl-count"></span></div>
+          <ol class="timeline" id="timeline"></ol>
+        </div>
+        <div>
+          <p class="intent-note">A note on intent: when the data shows a jump <i>and</i> the record shows a boundary was argued over, we say only that the evidence is <b>consistent with a deliberate choice</b>. It is never treated as proof. Other explanations are shown with every claim.</p>
+          <div class="claims" id="claims"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- companies -->
+  <section class="pr-sec method-sec" id="companies">
+    <div class="wrap">
+      <div class="pr-sec-head"><p class="pr-num">3</p><div><h2 class="display">The companies behind the numbers</h2><p class="lede">A company is only named alongside how it is linked, how confident we are, and the source. A link means a supply chain connection, not proof that a product contains forced labour.</p></div></div>
+      <div class="panel" id="company-exposure"></div>
+      <div class="panel" style="margin-top:24px" id="company-cases"></div>
+    </div>
+  </section>
+  <section class="pr-sec method-sec" id="sources">
+    <div class="wrap">
+      <div class="pr-sec-head"><p class="pr-num">4</p><div><h2 class="display">Every source</h2><p class="lede" id="src-lede">Every source the tool uses, across both cases, with where it is used.</p></div></div>
+      <div class="src-tools">
+        <input type="search" id="src-q" placeholder="Search sources: title, publisher, id, note" aria-label="Search sources">
+        <div class="chips" id="src-groups" role="group" aria-label="Filter sources"></div>
+      </div>
+      <ol class="src-list" id="src-list"></ol>
+      <p class="small src-files">The same registers as files: <a href="../data/evidence/sources.csv">sources.csv</a> · <a href="../data/evidence/sources_layer2.csv">sources_layer2.csv</a> · <a href="../data/evidence/sources_sim.csv">sources_sim.csv</a> · <a href="../data/evidence/sources_proposed.csv">sources_proposed.csv</a> · <a href="../data/evidence/sources_method.csv">sources_method.csv</a> · raw Sayari responses in <a href="../data/raw/">data/raw/</a></p>
     </div>
   </section>
 </main>
@@ -607,7 +554,7 @@
     </section>
 
     <section class="th-run" id="th-run" hidden>
-      <div class="th-scen" id="th-scen"></div>
+      <div class="th-scenbar" id="th-scen"></div>
       <div class="th-main">
         <div class="th-stage" id="th-stage"></div>
         <div class="th-side">

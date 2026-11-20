@@ -326,7 +326,7 @@
   /* ---------------- timeline ---------------- */
   function buildTimeline() {
     const box = $("th-timeline"); box.innerHTML = "";
-    const w = Math.max(280, box.clientWidth), nar = w < 560, h = nar ? 118 : 132, m = { l: nar ? 30 : 40, r: 10, t: 26, b: 24 };
+    const w = Math.max(280, box.clientWidth), nar = w < 560, h = nar ? 112 : inline ? 96 : 132, m = { l: nar ? 30 : 40, r: 10, t: 26, b: 24 };
     const s = SM.svg("svg", { width: w, height: h, viewBox: `0 0 ${w} ${h}`, role: "img", class: "th-tl", "aria-label": "Stock in US warehouses over time" }, box);
     const iw = w - m.l - m.r, ih = h - m.t - m.b, yMax = Math.max(1, M.stock0 / 100);
     const X = (t) => m.l + (t / M.T) * iw, Y = (v) => m.t + ih - (v / 100 / yMax) * ih;
@@ -368,7 +368,7 @@
   /* ---------------- loop ---------------- */
   function size() {
     const box = $("th-stage");
-    W = Math.max(300, box.clientWidth); H = W < 560 ? 300 : inline && W >= 820 ? 400 : 360;
+    W = Math.max(300, box.clientWidth); H = W < 560 ? 290 : inline ? 300 : 360;
     dpr = Math.min(2, window.devicePixelRatio || 1);
     cvs.width = W * dpr; cvs.height = H * dpr; cvs.style.width = W + "px"; cvs.style.height = H + "px";
     const g = geo(); yardSlots = slots(g.yard, g.nar ? 8 : 10); binSlots = slots(g.bin, g.nar ? 8 : 10);

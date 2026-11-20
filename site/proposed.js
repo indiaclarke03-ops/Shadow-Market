@@ -219,6 +219,7 @@
     $("pr-timeline").innerHTML = `<ol class="htl">${items.map((t) => `<li class="${t.tier === "primary" ? "p" : "r"}"><span class="d">${esc(t.date)}</span><i></i><div class="ev">${esc(t.event)}</div><div class="meta">${tierBadge(t.tier)} <span>${srcLinks(t.source_ids)}</span></div></li>`).join("")}</ol>`;
   }
   function renderCards() {
+    const sum = document.querySelector("#pr-cards-wrap summary b"); if (sum) sum.textContent = `Intelligence cards (${allCards().length}, ${st.applied.size} applied)`;
     $("pr-cards").innerHTML = allCards().map((c) => {
       const sets = Object.entries(c.sets || {});
       const on = st.applied.has(c.id);
@@ -304,7 +305,7 @@
     const g = gapRows();
     const none = L.trigger === "none";
     const m = (lbl, val, sub, cls = "") => `<div class="metric ${cls}"><div class="lbl">${lbl}</div><div class="num">${val}</div><div class="sub">${sub}</div></div>`;
-    $("pr-gap-readout").innerHTML = [
+    if ($("pr-gap-readout")) $("pr-gap-readout").innerHTML = [
       m("Covered by the rule in its first year", f1(g.covered) + "%", none ? "no transceiver rule in this scenario" : `of US AI data-centre transceiver supply, ${g.y}`, "key"),
       m("From Chinese-headquartered makers, outside the rule", f1(g.outside) + "%", `Chinese-headquartered makers supply ${f1(g.cnhq)}% in this illustration`),
       m("Equipment already installed", "Unaffected", none ? "no new rule" : "stays in place until normal refresh (PR-013)"),
@@ -352,7 +353,7 @@
     const pc = (i, v) => ((v - i.min) / (i.max - i.min)) * 100 + "%";
     $("pr-sim-controls").innerHTML = `<div class="ctl-group"><p class="kicker">Uncertain inputs</p><p class="small held" style="margin:0 0 12px">All are placeholders until sourced. Drag to see the results move.</p>${SUP.inputs.map((i) => {
       const step = i.unit === "share" ? 0.05 : i.unit === "index" ? 0.25 : i.unit === "pct" ? 0.5 : 1;
-      return `<div class="ctl"><label for="pin-${i.id}">${esc(i.label)}</label><div class="q">${esc(i.source)}</div>
+      return `<div class="ctl"><label for="pin-${i.id}">${esc(i.label)}</label><details class="q-more"><summary>Why this range</summary><div class="q">${esc(i.source)}</div></details>
         <div class="row"><input type="range" id="pin-${i.id}" min="${i.min}" max="${i.max}" step="${step}" value="${st.vals[i.id]}" style="--p:${pc(i, st.vals[i.id])}"><span class="val" id="pval-${i.id}">${fmtIn(i, st.vals[i.id])}</span></div>
         <div class="meta"><span>varies ± ${fmtIn(i, i.spread)}</span><span class="badge pend">${esc(i.status)}</span></div></div>`;
     }).join("")}</div>
@@ -458,7 +459,7 @@
   let yPick = null, playT = 0, playing = false;
   function flowChart(S) {
     const cont = $("pr-yflow"); cont.innerHTML = "";
-    const F = S.flow, w = Math.max(300, cont.clientWidth || 600), nar = w < 560, h = nar ? 230 : 270, m = { t: 24, r: 10, b: 30, l: 40 };
+    const F = S.flow, w = Math.max(300, cont.clientWidth || 600), nar = w < 560, h = nar ? 220 : 240, m = { t: 24, r: 10, b: 30, l: 40 };
     const iw = w - m.l - m.r, ih = h - m.t - m.b;
     const yMax = SM.niceMax(Math.max(4, ...F.map((d) => d.b)) * 1.15);
     const s = SM.svg("svg", { width: w, height: h, viewBox: `0 0 ${w} ${h}`, role: "img", class: "pr-yflow-svg", "aria-label": "Where blocked supply goes, by year: " + F.map((d) => `${d.y} blocked ${d.b.toFixed(1)}%, shortfall ${d.short.toFixed(1)}%`).join("; ") }, cont);
@@ -674,7 +675,9 @@
   function renderPositions() {
     const C = Object.fromEntries(P.evidence.claims.map((c) => [c.claim_id, c]));
     const who = { "CP-012": "FCC Chair", "CP-013": "Bill sponsors (S.5548)", "CP-014": "Hyperscalers (reported)", "CP-015": "Analysts and networking vendors", "CP-016": "Risk assessment caveat", "CP-017": "InnoLight", "CP-018": "Chinese government and Eoptolink" };
-    $("pr-positions").innerHTML = Object.keys(who).filter((k) => C[k]).map((k) => { const c = C[k]; return `<article class="pr-pos"><div class="who">${esc(who[k])} · <span class="conf ${c.confidence === "high" ? "high" : c.confidence === "low" ? "low" : "medium"}">${esc(c.confidence)}</span></div><p>${esc(c.claim_text)}</p>${c.counter_evidence ? `<div class="counter">${esc(c.counter_evidence)}</div>` : ""}<div class="srcs">Sources: ${srcLinks(c.sources.split(";").map((x) => x.trim()))}</div></article>`; }).join("");
+    const keys = Object.keys(who).filter((k) => C[k]), shown = st.posAll ? keys : keys.slice(0, 3);
+    $("pr-positions").innerHTML = shown.map((k) => { const c = C[k]; return `<article class="pr-pos"><div class="who">${esc(who[k])} · <span class="conf ${c.confidence === "high" ? "high" : c.confidence === "low" ? "low" : "medium"}">${esc(c.confidence)}</span></div><p>${esc(c.claim_text)}</p>${c.counter_evidence ? `<div class="counter">${esc(c.counter_evidence)}</div>` : ""}<div class="srcs">Sources: ${srcLinks(c.sources.split(";").map((x) => x.trim()))}</div></article>`; }).join("");
+    if (keys.length > 3) { $("pr-positions").insertAdjacentHTML("beforeend", `<button type="button" class="act more-btn" id="pos-more">${st.posAll ? "Show fewer" : `Show all ${keys.length} positions`}</button>`); $("pos-more").addEventListener("click", () => { st.posAll = !st.posAll; renderPositions(); }); }
     const d = C["CP-019"];
     $("pr-design-reading").innerHTML = d ? `<div class="panel-title"><h4>Reading the reported design</h4><span class="small">observation, not a finding of intent</span></div><p style="margin:0 0 10px">${esc(d.claim_text)}</p><div class="counter" style="font-size:15px;color:var(--ink-2);border-left:2px solid var(--accent);padding-left:12px"><b>Alternative explanations:</b> ${esc(d.counter_evidence)}</div><p class="small" style="margin-top:12px">Intent rule (as in Case 1): never more than “consistent with a deliberate choice”, and only where a source documents the boundary being argued over. Sources: ${srcLinks(d.sources.split(";"))}</p>` : "";
     bindSrc($("pr-why-line"));
@@ -696,7 +699,10 @@
     $("pr-tags").querySelectorAll(".chip").forEach((b) => b.addEventListener("click", () => { st.tag = b.dataset.t; renderChecklist(); }));
     renderRoadmap();
     const items = R.considerations.filter((c) => cond[c.when] && (st.tag === "all" || c.tags.includes(st.tag)));
-    $("pr-checklist").innerHTML = items.map((c) => `<div class="pr-item"><div class="tags">${c.tags.map((t) => `<span>${esc(t)}</span>`).join("")}</div><h5>${esc(c.title)}</h5><p>${esc(c.check)}</p><div class="why">${esc(WHY[c.when])}</div><div class="srcs">Related: ${srcLinks(c.source_ids)}</div></div>`).join("") || `<div class="pr-item"><p>No items for this filter.</p></div>`;
+    const ITEMS = items; const shownItems = st.chkAll ? ITEMS : ITEMS.slice(0, 4);
+    $("pr-checklist").innerHTML = shownItems.map((c) => `<div class="pr-item"><div class="tags">${c.tags.map((t) => `<span>${esc(t)}</span>`).join("")}</div><h5>${esc(c.title)}</h5><p>${esc(c.check)}</p><div class="why">${esc(WHY[c.when])}</div><div class="srcs">Related: ${srcLinks(c.source_ids)}</div></div>`).join("") || `<div class="pr-item"><p>No items for this filter.</p></div>`;
+    if (ITEMS.length > 4) { $("pr-checklist").insertAdjacentHTML("afterend", ""); const old = $("chk-more"); if (old) old.remove(); $("pr-checklist").insertAdjacentHTML("afterend", `<button type="button" class="act more-btn" id="chk-more">${st.chkAll ? "Show fewer" : `Show all ${ITEMS.length} questions`}</button>`); $("chk-more").addEventListener("click", () => { st.chkAll = !st.chkAll; renderChecklist(); }); }
+    else if ($("chk-more")) $("chk-more").remove();
     bindSrc($("pr-checklist"));
   }
   function renderStudent() {

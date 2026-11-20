@@ -136,7 +136,7 @@
     $("coverage").innerHTML = L3ok
       ? `Coverage: ${pct(L3.traced_share, 0)} of shipments can be traced upstream. The rest is shown in grey, not left out, because “no link found” can also mean “no data”. A link is a supply chain connection, not proof that a product contains forced labour.`
       : `Supply chain data (Layer 3) is waiting on the Sayari snapshot. Nothing on this page is estimated in its place.`;
-    $("snap").textContent = (D.snapshot ? "Data as of " + D.snapshot : "Sayari snapshot pending");
+    if ($("snap")) $("snap").textContent = (D.snapshot ? "Data as of " + D.snapshot : "Sayari snapshot pending");
     $("foot-built").textContent = "Data built " + D.built;
     if (D.fixture) {
       const b = h("div", { style: "position:fixed;left:0;right:0;bottom:0;z-index:99;background:#9b2f26;color:#fff;text-align:center;padding:8px;font-weight:600" }, "TEST FIXTURE: synthetic exporters for layout testing only. Not real data.");
@@ -163,7 +163,7 @@
   function initLanding() {
     if (!L3ok || MAP) return;
     const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    MAP = SM.SupplyMap($("map-host"), D, { reduced, height: (w) => (w < 560 ? 270 : Math.round(Math.min(430, Math.max(320, w * 0.34)))) });
+    MAP = SM.SupplyMap($("map-host"), D, { reduced, height: (w) => (w < 560 ? 260 : Math.round(Math.min(360, Math.max(300, w * 0.3)))) });
     MAP.onHover(mapTip);
     const sh = MAP.shares(CUR_T), aside = techShare("thin_film_cdte") + techShare("led_not_pv");
     const big = (v, l) => `<b>${v}</b><span>${l}</span>`;
@@ -248,11 +248,11 @@
     const ev = run("everything"), st = run("strict"), td = run("today");
     renderPlayBand({ today: td, everything: ev, strict: st });
     const items = [
-      [pct(full.exposed_share, 0), `of US solar cell and panel shipments come from suppliers with a <b>link to forced-labour risk</b> somewhere upstream: on the US blacklist, in Xinjiang, or named by independent researchers.`, "#layers", "See the three readings"],
-      [pct(full.not_detained_share, 0), `are linked but come from companies with <b>no public detention on record</b>. Customs has publicly acted against the groups behind ${pct(OBS.exposed_share, 0)} of shipments (${L3.detained_groups.length} groups). This is the shadow market.`, "#dials-section", "Move the line"],
-      [`${pct(direct.exposed_share, 0)} → ${pct(deep.exposed_share, 0)}`, `The links sit <b>2–3 steps back</b>, at the polysilicon and wafer stage. A check of direct suppliers alone flags ${pct(direct.exposed_share, 0)}; one step further flags ${pct(deep.exposed_share, 0)}.`, "#curve-panel", "See the jump"],
-      [pct(techShare("thin_film_cdte"), 0), `of shipments are First Solar’s <b>thin-film panels</b>, which use no polysilicon. Sayari links them to forced-labour risk anyway. Counted as given, the linked share would be ${pct(raw.exposed_share, 0)}, so <b>product-level checks matter</b> as much as company links.`, "#companies", "See the companies"],
-      [`${f1x(ev.p50)}% vs ${f1x(st.p50)}%`, `<b>Paperwork decides the outcome.</b> Customs releases ${rr ? pct(rr.value * 100, 0) : "most"} of the solar-and-chips value it stops. Enforcing at every link at today’s release rate removes about ${f1x(ev.p50)}% of supply in a typical simulated future; if customs rarely accepted the paperwork, about ${f1x(st.p50)}%.`, "#simulation?preset=strict", "Run the scenarios"],
+      [pct(full.exposed_share, 0), `of US solar shipments come from suppliers with a <b>link to forced-labour risk</b> somewhere upstream.`, "#dials-section", "Move the line"],
+      [pct(full.not_detained_share, 0), `are linked, from companies with <b>no public detention on record</b>: the shadow market.`, "#dials-section", "Move the line"],
+      [`${pct(direct.exposed_share, 0)} → ${pct(deep.exposed_share, 0)}`, `flagged when checking direct suppliers, then ${pct(deep.exposed_share, 0)} at <b>2–3 steps back</b>, where polysilicon and wafers are made.`, "#dials-section", "See the jump"],
+      [pct(techShare("thin_film_cdte"), 0), `of shipments are <b>thin-film panels</b> with no polysilicon. Counted as linked, the total would be ${pct(raw.exposed_share, 0)}: <b>product checks matter</b>.`, "#companies", "See the companies"],
+      [`${f1x(ev.p50)}% vs ${f1x(st.p50)}%`, `of supply lost if every link counts, first at today’s paperwork release rate, then if customs rarely accepted it: <b>paperwork decides the outcome</b>.`, "#simulation?preset=strict", "Run the scenarios"],
     ];
     FIND = { items, ev, st, full, direct, deep };
     $("find-list").innerHTML = items.map(([n, t, href, cta]) => `<li><span class="num">${n}</span><p>${t}</p><a href="${href}">${cta} →</a></li>`).join("");
@@ -1129,6 +1129,50 @@
         <p class="small">Data files: <a href="../data/cbp_uflpa_stats.csv">cbp_uflpa_stats.csv</a> · <a href="../data/cases.csv">cases.csv</a> · <a href="../data/evidence/sources.csv">sources.csv</a> · <a href="../data/evidence/claims.csv">claims.csv</a> · <a href="../data/evidence/timeline.csv">timeline.csv</a> · <a href="../data/derived/metrics.json">metrics.json</a> · <a href="../rules/uflpa.json">rules/uflpa.json</a></p></div>`;
   }
 
+  /* ---------------------------------------------------------------- every source (Method page) */
+  const SRC_GROUPS = [
+    ["all", "All"], ["EV", "The law and enforcement record"], ["L2", "Customs statistics"], ["SI", "Simulation inputs"], ["PR", "AI optics rule (Case 2)"], ["MR", "Data provider and method"],
+  ];
+  const srcState = { g: "all", q: "" };
+  let SRC_USE = null;
+  function sourceUses() {
+    // where each source is cited: scan each part of the build for its id
+    const P = window.SM_PROPOSED || { evidence: { sources: [], claims: [] }, rules: {}, supply: {} };
+    const parts = [
+      ["claims", EV.claims], ["timeline", EV.timeline], ["the product check (thin-film and LED set aside)", L3ok ? L3.product_sources : ""], ["customs cases and statistics", [L2.cases, L2.stats, L2.summary, L2.entity_list_history]],
+      ["simulation inputs", D.simulation], ["optics rule cards and signals", P.rules], ["optics supply figures", P.supply], ["optics positions", P.evidence.claims],
+    ].map(([k, v]) => [k, JSON.stringify(v || "")]);
+    const use = {};
+    [...EV.sources, ...P.evidence.sources].forEach((src) => {
+      const re = new RegExp("\\b" + src.source_id + "\\b");
+      use[src.source_id] = parts.filter(([, t]) => re.test(t)).map(([k]) => k);
+    });
+    // the data provider and method references are used across the tool
+    ["MR-001"].forEach((id) => (use[id] = ["the gap, the map, Move the line, simulations"]));
+    if (use["MR-002"] !== undefined) use["MR-002"] = ["Move the line: concentration measures"];
+    if (use["MR-003"] !== undefined) use["MR-003"] = ["Work backwards: What could break it?"];
+    return use;
+  }
+  function renderSources() {
+    const P = window.SM_PROPOSED, all = [...EV.sources, ...((P && P.evidence.sources) || [])];
+    if (!SRC_USE) SRC_USE = sourceUses();
+    const grp = (s) => s.source_id.split("-")[0];
+    $("src-lede").textContent = `Every one of the ${all.length} sources the tool uses, across both cases, with where it is used. Each has a link and the date it was checked.`;
+    $("src-groups").innerHTML = SRC_GROUPS.map(([k, l]) => `<button type="button" class="chip" data-g="${k}" aria-pressed="${srcState.g === k}">${esc(l)} <span style="opacity:.6">${k === "all" ? all.length : all.filter((s) => grp(s) === k).length}</span></button>`).join("");
+    $("src-groups").querySelectorAll(".chip").forEach((b) => b.addEventListener("click", () => { srcState.g = b.dataset.g; renderSources(); }));
+    const q = srcState.q.toLowerCase();
+    const rows = all.filter((s) => (srcState.g === "all" || grp(s) === srcState.g) && (!q || [s.source_id, s.title, s.publisher, s.notes, s.source_type].join(" ").toLowerCase().includes(q)));
+    const TYPE = { primary_official: "official", formal_submission: "formal submission", research: "research", research_teaching: "research (teaching)", news: "news", commercial: "commercial", commercial_data: "data provider", industry: "industry", advocacy: "advocacy", analyst: "analyst", vendor: "vendor" };
+    $("src-list").innerHTML = rows.map((s) => `<li id="src-${esc(s.source_id)}">
+      <span class="sid">${esc(s.source_id)}</span>
+      <div class="sbody"><a class="stitle" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>
+        <div class="smeta"><span>${esc(s.publisher || "")}</span>${s.date ? `<span>${esc(s.date)}</span>` : ""}<span class="stype">${esc(TYPE[s.source_type] || (s.source_type || "").replace(/_/g, " "))}</span>${s.partisan === "y" ? `<span class="stype adv">has a stake</span>` : ""}${s.accessed ? `<span>checked ${esc(s.accessed)}</span>` : ""}</div>
+        ${(SRC_USE[s.source_id] || []).length ? `<div class="suse">Used in: ${SRC_USE[s.source_id].map(esc).join(" · ")}</div>` : `<div class="suse bg">Background reading: in the register, not tied to a single figure</div>`}
+        ${s.notes ? `<details><summary>Note</summary><p>${esc(s.notes)}</p></details>` : ""}</div>
+    </li>`).join("") || `<li class="none">No sources match.</li>`;
+  }
+  $("src-q").addEventListener("input", (e) => { srcState.q = e.target.value; renderSources(); });
+
   /* ---------------------------------------------------------------- views */
   function refreshExplorer() {
     renderDials(); renderReadout(); renderFlow(); renderCurves(); renderEvidence(); renderCompanies();
@@ -1137,13 +1181,13 @@
   let simInited = false, piMounted = false, lastView = null;
   function route() {
     const v = (location.hash || "#explorer").slice(1).split("?")[0];
-    const view = ["explorer", "simulation", "goal", "stress", "proposed", "method", "brief"].includes(v) ? v : "explorer";
-    const group = ["simulation", "goal", "stress"].includes(view) ? "test" : view;
+    const VIEWS = ["explorer", "simulation", "goal", "stress", "proposed", "method", "brief"];
+    // a link to a section inside a page (e.g. #companies): open that page, then scroll to the section
+    let anchor = null, view = VIEWS.includes(v) ? v : "explorer";
+    if (!VIEWS.includes(v) && v) { const el = document.getElementById(v), host = el && el.closest(".view"); if (host) { view = host.id.replace("view-", ""); anchor = el; } }
+    const group = ["goal", "stress"].includes(view) ? "back" : view;
     document.querySelectorAll(".view").forEach((n) => n.classList.toggle("on", n.id === "view-" + view));
-    document.querySelectorAll(".tabs a, .brief-btn").forEach((a) => (a.dataset.group === group ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
-    $("subnav").hidden = group !== "test";
-    document.body.classList.toggle("has-subnav", group === "test");
-    $("subnav").querySelectorAll("a").forEach((a) => (a.dataset.view === view ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
+    document.querySelectorAll(".tabs a, .nav-side a").forEach((a) => (a.dataset.group === group ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
     document.querySelector(".nav").classList.remove("open"); $("menu-btn").setAttribute("aria-expanded", "false");
     if (sim.cur) syncLive();
     // charts drawn while a page was hidden have the wrong width: clear them so they redraw at the real size
@@ -1161,11 +1205,13 @@
     if (view === "brief") renderBrief();
     if (SM.storyRoute) SM.storyRoute(view);
     if (view === "proposed" && SM.renderProposed) { SM.renderProposed(); SM.renderProposed(true); }
-    if (["simulation", "goal", "stress", "proposed", "method", "brief"].includes(v) || v === "explorer" || !v) window.scrollTo(0, 0);
+    if (anchor) setTimeout(() => scrollTo({ top: anchor.getBoundingClientRect().top + scrollY - 76 }), 60);
+    else if (VIEWS.includes(v) || !v) window.scrollTo(0, 0);
   }
 
   // numbered step bar (gap page): smooth jumps and highlight the section in view
   function setupGapSteps() {
+    if (!$("gap-steps")) return;
     const links = [...$("gap-steps").querySelectorAll("a")];
     links.forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); const t = $(a.dataset.s); if (t) scrollTo({ top: t.getBoundingClientRect().top + scrollY - 108, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }));
     const io = new IntersectionObserver((ents) => ents.forEach((en) => {
@@ -1177,8 +1223,15 @@
     links.forEach((a) => { const t = $(a.dataset.s); if (t) io.observe(t); });
   }
   setupGapSteps();
-  renderHero(); renderFindings(); renderLayers(); renderDials(); renderReadout(); renderEvidence(); renderCompanies(); renderMethod();
+  renderHero(); renderFindings(); renderLayers(); renderDials(); renderReadout(); renderEvidence(); renderCompanies(); renderMethod(); renderSources();
   bindDeclared();
+  // tabbed panels: every pane is drawn in the same grid cell, so charts keep their real width while hidden
+  SM.showTab = (set, t) => {
+    const ts = document.querySelector(`[data-tabset="${set}"]`); if (!ts) return;
+    ts.querySelectorAll(".tabs-row [data-t]").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.t === t)));
+    ts.querySelectorAll(".panes > .pane").forEach((p) => p.classList.toggle("on", p.dataset.p === t));
+  };
+  document.querySelectorAll("[data-tabset]").forEach((ts) => ts.querySelectorAll(".tabs-row [data-t]").forEach((b) => b.addEventListener("click", () => SM.showTab(ts.dataset.tabset, b.dataset.t))));
   window.addEventListener("hashchange", route);
   $("brief-print").addEventListener("click", () => window.print());
   $("menu-btn").addEventListener("click", () => { const n = document.querySelector(".nav"), o = !n.classList.contains("open"); n.classList.toggle("open", o); $("menu-btn").setAttribute("aria-expanded", String(o)); });

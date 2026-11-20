@@ -4,7 +4,7 @@ Reads:   rules/uflpa.json
          data/derived/exporters.csv   (written by pipeline/extract_sayari.py from data/raw/)
          data/derived/tiers.json      (optional; upstream tracing for the flow diagram)
          data/cbp_uflpa_stats.csv, data/cases.csv
-         data/evidence/*.csv
+         data/evidence/*.csv (sources, sources_layer2, sources_sim, sources_method, claims, timeline)
 Writes:  data/derived/metrics.json
          site/data.js                 (same payload as window.SM_DATA, so the page works from file://)
 
@@ -89,6 +89,7 @@ def classify(exporters: list[dict], rules: dict) -> list[dict]:
             "product_relevant": relevant,
             "technology": pr["technology"] if pr else "",
             "product_note": pr["reason"] if pr else "",
+            "product_sources": [x.strip() for x in (pr.get("source_ids", "") if pr else "").split(";") if x.strip()],
             "detained_group": grp["group"] if grp else "",
             "detained_cases": grp["case_ids"].split(";") if grp else [],
             "name": e.get("name", ""),
@@ -287,7 +288,7 @@ def slim_for_site(payload: dict) -> dict:
         return payload
     def fl(flags):
         return [dict(t) for t in sorted({(("level", f["level"]), ("scope", f["scope"])) for f in flags})]
-    notes = {}
+    notes, psrc = {}, {}
     exs = []
     for i, e in enumerate(l3["exporters"]):
         x = {k: e[k] for k in ("id", "name", "country", "value", "shipments", "weight_t", "levels", "confidence", "traced",
@@ -297,9 +298,10 @@ def slim_for_site(payload: dict) -> dict:
             x["flags_all"] = fl(e["flags_all"])
         if e["product_note"]:
             notes[e["technology"]] = e["product_note"]
+            psrc[e["technology"]] = e["product_sources"]
         x["source_records"] = e["source_records"] if i < 60 else []
         exs.append(x)
-    return {**payload, "layer3": {**l3, "exporters": exs, "product_notes": notes}}
+    return {**payload, "layer3": {**l3, "exporters": exs, "product_notes": notes, "product_sources": psrc}}
 
 
 def main() -> int:
@@ -367,7 +369,7 @@ def main() -> int:
     tiers_path = DERIVED / "tiers.json"
     tiers = json.loads(tiers_path.read_text()) if tiers_path.exists() else {"status": "pending"}
 
-    sources = read_csv(EVID / "sources.csv") + read_csv(EVID / "sources_layer2.csv") + read_csv(EVID / "sources_sim.csv")
+    sources = read_csv(EVID / "sources.csv") + read_csv(EVID / "sources_layer2.csv") + read_csv(EVID / "sources_sim.csv") + read_csv(EVID / "sources_method.csv")
     payload = {
         "built": date.today().isoformat(),
         "snapshot": (exporters_raw[0].get("snapshot_date") if exporters_raw else None),

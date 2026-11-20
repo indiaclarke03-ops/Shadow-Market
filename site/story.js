@@ -14,7 +14,7 @@
       body: (S) => `Count every link to forced-labour risk the data can see and the rule flags <b>${f1(S.flagged.p50)}%</b>. Follow the flow: customs releases most stopped shipments once importers show paperwork, so only <b>${f1(S.lost.p50)}%</b> is lost for good.` },
     { title: "Now make customs strict", target: "sim-futures", go: (A) => A.preset("strict"),
       body: (S) => `Customs stops 90% of flagged shipments and accepts the paperwork only a quarter of the time. The US loses <b>${f1(S.lost.p50)}%</b> of its solar supply, and <b>${Math.round(S.lost.pOver)}</b> of these 100 futures are a serious disruption.` },
-    { title: "What decides the result", target: "sim-tornado", go: () => {},
+    { title: "What decides the result", target: "sim-more", go: () => SM.showTab && SM.showTab("simmore", "sens"),
       body: (S, A) => { const t = S.sens && S.sens.rows[0]; return t ? `In this scenario the result moves most with <b>${A.INP[t.id].label.toLowerCase()}</b>. Change it across its likely range and the typical loss moves by about ${f1(Math.abs(t.hi - t.lo))} points. The longest bar is where better evidence would matter most.` : "Nothing to test at this reach."; } },
     { title: "Watch it play out", target: "pi-host", next: "Play it out", go: () => {},
       body: () => "This is the heart of the tool. Press <b>Play it out</b> to watch this future month by month: shipments held at the border, stock in US warehouses running down, and new suppliers arriving.", after: (A) => A.play() },

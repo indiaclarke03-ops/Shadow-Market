@@ -103,3 +103,14 @@ Judgement calls made while building from `specification.md`. Spec §12 decisions
     - **One instance.** The same playback element moves into the overlay when it's opened from elsewhere and moves back on close, so the stage and the overlay always show the same thing.
     - **Links in.** The home page gains a band of three scenario cards (today, everywhere, everywhere and strict), each with its typical loss from the same quick runs as the findings. Each opens the stage playing that scenario. The walkthrough's playback step, the stress test's "Play this scenario" and the brief all lead to the stage.
     - **Chart redraw.** Charts drawn while a page was hidden are cleared when it becomes visible, so they redraw at the real width.
+45. **Focus pass: fewer tabs, one visual per screen.**
+    - **Navigation.** The top level is now four tabs (The gap · Play it out · Work backwards · New rules), with Method & sources and Brief as small links. "Work backwards" holds What could break it? and What would it take? behind a two-way switch. The Test it sub-bar is gone.
+    - **The gap.** It keeps the map, the play-it-out band, "What we found" (the three-readings chart plus five one-line findings, with the reading cards folded away) and Move the line (settings beside three headline measures and one tabbed chart panel).
+    - **What moved to Method & sources.** The evidence timeline, claims, company tables and hero statistics. Old links to those sections (#why, #companies) still open them there.
+    - **Play it out.** The page opens straight on the stage, sized to fit one screen. Its lower results are one tabbed panel.
+    - **New rules.** It has a shorter header. Intelligence cards are folded, the duplicate readout strip is gone, the lower results are one tabbed panel, input notes are folded, and positions and checklist items show "show all".
+    - **Tabbed panels.** Panes share one grid cell, so hidden charts keep their real width.
+44b. **Every source on the Method page.** A searchable library lists all 135 registered sources (case 1, customs statistics, simulation inputs, case 2, and a new `data/evidence/sources_method.csv` for references that were cited in the method but not registered: the Sayari data platform (MR-001), the US horizontal merger guidelines behind the HHI bands (MR-002), and the Resilience Atlas reverse-stress material (MR-003)).
+    - **Where each is used.** Each entry shows where in the build it is used. For the product check, the source ids now pass through from `pipeline/product_relevance.csv` (`product_sources`).
+    - **Background reading.** Four registered sources aren't tied to a single figure, so they are labelled "background reading" rather than given an invented use.
+    - **Check.** Every source id cited anywhere in the code, data and simulation inputs is in a register.
